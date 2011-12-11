@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>
+      wesleyhales.com: Replacing FacesMessages with Growl alerts
+    </title>
+    <link href='/stylesheets/global.css' media='screen, print' rel='stylesheet' type='text/css' />
+    <link href='/blog.atom' rel='alternate' type='application/atom+xml' />
+  </head>
+  <body>
+    <header>
+      <div class='header-box'>
+        <div class='logo-bold'>wesleyhales<span>.com</span></div>
+        <nav class='console'>
+          <ul class='menu'>
+            <li class='selected'>
+              <a href='/index.html'>Blog</a>
+            </li>
+            <li>
+              <a href='/projects/index.html'>Projects</a>
+            </li>
+            <li>
+              <a href='/contact/index.html'>Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <aside>
+      <div class='shadow-helper'>
+        <div class='left-toolbar'>
+          <section class='tags'>
+            <header>
+              <h1 class='tags-title'>
+                Tags
+              </h1>
+            </header>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/2.0/'>2.0</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/301/'>301</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/Design/'>Design</a>
+            </span>
+            <span class='tag tag-6'>
+              <a href='/blog/tags/Java/'>Java</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/Life/'>Life</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/Utils/'>Utils</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/ajax/'>ajax</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/ajaxworld/'>ajaxworld</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/anniversary/'>anniversary</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/ant/'>ant</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/anthem/'>anthem</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/bad/'>bad</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/balls/'>balls</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/blog/'>blog</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/bridge/'>bridge</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/cargo/'>cargo</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/cdi/'>cdi</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/conferences/'>conferences</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/container/'>container</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/css/'>css</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/demo/'>demo</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/design/'>design</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/drive/'>drive</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/enterprise/'>enterprise</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/facebook/'>facebook</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/file/'>file</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/firefox/'>firefox</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/flying/'>flying</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/forensics/'>forensics</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/framework/'>framework</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/god/'>god</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/growl/'>growl</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/hard/'>hard</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/hibernate/'>hibernate</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/hornetq/'>hornetq</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/html5/'>html5</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/infinispan/'>infinispan</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/innerhtml/'>innerhtml</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/java/'>java</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jazoon/'>jazoon</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/jboss/'>jboss</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jesus/'>jesus</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jms/'>jms</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jquery/'>jquery</a>
+            </span>
+            <span class='tag tag-2'>
+              <a href='/blog/tags/jsf/'>jsf</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jsr/'>jsr</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/kick/'>kick</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/lrd/'>lrd</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/maven/'>maven</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/mobile/'>mobile</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/modal/'>modal</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/opensocial/'>opensocial</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/pdf/'>pdf</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/portal/'>portal</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/portals/'>portals</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/portlet/'>portlet</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/portlets/'>portlets</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/recovery/'>recovery</a>
+            </span>
+            <span class='tag tag-2'>
+              <a href='/blog/tags/richfaces/'>richfaces</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/saucer/'>saucer</a>
+            </span>
+            <span class='tag tag-2'>
+              <a href='/blog/tags/seam/'>seam</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/theme/'>theme</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/tomcat/'>tomcat</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/trinidad/'>trinidad</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/undelete/'>undelete</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/vacation/'>vacation</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/web/'>web</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/weld/'>weld</a>
+            </span>
+          </section>
+          <section class='tweets'>
+            <header>
+              <h1 class='tweets-title'>
+                <a href='http://twitter.com/wesleyhales'>
+                  <img src='//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' />
+                  My Tweets
+                </a>
+              </h1>
+              <div id='twitter_div'>
+                <ul id='twitter_update_list'></ul>
+              </div>
+            </header>
+          </section>
+        </div>
+      </div>
+    </aside>
+    <div id='main'>
+      <div class='post-container rounded-5px'>
+        <div class='article-list'>
+          <div class='post_navigation'>
+            <div class='previous_post link'>
+              Previous:
+              <a href='/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks/'>
+                ul horizontal tab menus, cross browser, with no hacks
+              </a>
+            </div>
+            <div class='next_post link'>
+              Next:
+              <a href='/blog/2009/11/22/Creating-another-Firefox-Theme/'>
+                Creating (another) Firefox Theme
+              </a>
+            </div>
+            <div class='clearfix'></div>
+          </div>
+          <div class='post'>
+            <h2>
+              Replacing FacesMessages with Growl alerts
+            </h2>
+            <h3>
+              10 August 2009
+            </h3>
+            <h4>
+              <a href='/blog/tags/Java/'>
+                Java
+              </a>
+              <a href='/blog/tags/growl/'>
+                growl
+              </a>
+              <a href='/blog/tags/jsf/'>
+                jsf
+              </a>
+              <a href='/blog/tags/richfaces/'>
+                richfaces
+              </a>
+            </h4>
+            <div class='content'>
+              
+              
+              <p>I saw a tweet from(<a href="http://twitter.com/maxandersen">@maxandersen</a>) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.</p>
+              
+              
+              <p></p>
+              
+              <p>This is really just javascript on the front end and can be used with any backend message generating system.</p>
+              
+              
+              <p></p>
+              
+              <p class="pTitle">Code Used:</p>
+              
+              
+              <p></p>
+              
+              <p> 
+              <ul> 
+              <li><a href="http://jboss.org/jbossrichfaces/">RichFaces 3.3.1.GA</a></li> 
+              <li><a href="http://stanlemon.net/projects/jgrowl.html">jGrowl (latest)</a></li> 
+              </ul> 
+              </p>
+              
+              
+              <p></p>
+              
+              <p class="pTitle">Include the scripts in the head:</p>
+              
+              
+              <p></p>
+              
+              <p> 
+              Note the loading of jquery in the Richfaces page... 
+              <code><pre> &#x000A;<a name="l1"><span class="s0"> &#x000A;<a name="l5"> </span><span class="s1">&lt;</span><span class="s2">a4j:loadScript </span><span class="s3">src=</span><span class="s4">&quot;resource://jquery.js&quot;</span><span class="s1">/&gt;</span> &#x000A;</span><span class="s1">&lt;</span><span class="s2">link </span><span class="s3">rel=</span><span class="s4">&quot;stylesheet&quot; </span><span class="s3">href=</span><span class="s4">&quot;/css/jquery-plugins/jquery.jgrowl.css&quot; </span><span class="s3">type=</span><span class="s4">&quot;text/css&quot;</span><span class="s1">/&gt;</span><span class="s0"> &#x000A;<a name="l4"> </span><span class="s1">&lt;</span><span class="s2">script </span><span class="s3">type=</span><span class="s4">&quot;text/javascript&quot; </span><span class="s3">src=</span><span class="s4">&quot;/js/jquery-plugins/jquery.jgrowl.js&quot;</span><span class="s1">&gt;&lt;/</span><span class="s2">script</span><span class="s1">&gt;</span><span class="s0"> &#x000A;<span class="s0"> &#x000A;</span> </span></a> &#x000A;</pre></code> 
+              </p>
+              
+              
+              <p></p>
+              
+              <p class="pTitle">Write a simple script to extract the message:</p>
+              
+              
+              <p></p>
+              
+              <p> 
+              ... and add any customizations you may need to jGrowl. One thing to take note of here is that you cannot use the $ sign for jQuery in a Richfaces app. This is because of the RF framework using prototype.js by default and it too uses the $ sign. So every 3rd party jQuery script that you use, you must s/$/jQuery/g (find and replace all usages of '$' with 'jQuery') 
+              <code><pre> &#x000A;function showError() &#x000A;{ &#x000A;jQuery.jGrowl.defaults.position = 'center'; &#x000A;if (document.getElementById('errorMessage') != null) &#x000A;{ &#x000A;jQuery.jGrowl(jQuery('#errorMessage').html(), { &#x000A;sticky: false, &#x000A;life: 10000 &#x000A;}) &#x000A;} &#x000A;} &#x000A;</pre></code> 
+              </p>
+              
+              
+              <p></p>
+              
+              <p class="pTitle">And tell the script to run after page load:</p>
+              
+              
+              <p></p>
+              
+              <p> 
+              jQuery has a simple statement that checks the document and waits until it's ready to be manipulated, known as the ready event: 
+              <code><pre> &#x000A;$(document).ready(function(){ &#x000A;showError(); &#x000A;}); &#x000A;&#x000A;</pre></code> 
+              </p>
+              
+              
+              <p></p>
+              
+              <p>Here is a live screen shot of the script in action using a generate h:message. 
+              <img src="/images/jroller/jgrowl.gif" align="center"/></p>
+            </div>
+            <div class='comments'>
+              
+                          <div id="disqus_thread"></div>
+                          <script type="text/javascript">
+                          var disqus_shortname = 'wesleyhales';
+                          var disqus_url = "http://www.wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/";
+                          var disqus_developer = null;
+                          var disqus_identifier = null;
+                          (function() {
+                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                            dsq.src = "http://wesleyhales.disqus.com/embed.js";
+                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                          })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br class='clear' />
+    <script src='/js/modernizr.js' type='text/javascript'></script>
+    <script src='//platform.twitter.com/widgets.js' type='text/javascript'></script>
+    <script src='http://twitter.com/javascripts/blogger.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function twitterCallback3(twitters) {
+          var statusHTML = [];
+          for (var i=0; i<twitters.length; i++){
+            var username = twitters[i].user.screen_name;
+            var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
+              return '<a href="'+url+'">'+url+'</a>';
+            }).replace(/\B@([_a-z0-9]+)/ig, function(reply) {
+              return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+            });
+            statusHTML.push('<li><div>'+status+'</div><div class="actions"><a href="http://twitter.com/'+username+'/statuses/'+twitters[i].id_str+'">'+relative_time(twitters[i].created_at)+'</a>|<a class="tweet_action tweet_retweet" href="http://twitter.com/intent/retweet?tweet_id='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png">retweet</a>|<a class="tweet_action tweet_reply" href="http://twitter.com/intent/tweet?in_reply_to='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/reply.png">reply</a></div></li>');
+          }
+          document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
+        }
+      //]]>
+    </script>
+    <script src='http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;amp;count=2' type='text/javascript'></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-1241000-10");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+  </body>
+</html>
