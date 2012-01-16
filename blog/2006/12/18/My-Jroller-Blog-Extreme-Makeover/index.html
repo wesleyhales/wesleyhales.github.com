@@ -14,15 +14,18 @@
       <div class='header-box'>
         <div class='logo-bold'>wesleyhales<span>.com</span></div>
         <nav class='console'>
-          <ul class='menu'>
-            <li class='selected'>
+          <ul id='menu'>
+            <li id='home'>
               <a href='/index.html'>Blog</a>
             </li>
-            <li>
-              <a href='/projects/index.html'>Projects</a>
+            <li id='design'>
+              <a href='/design/?p=design'>Design</a>
             </li>
-            <li>
-              <a href='/contact/index.html'>Contact</a>
+            <li id='projects'>
+              <a href='/projects/?p=projects'>Projects</a>
+            </li>
+            <li id='contact'>
+              <a href='/contact/?p=contact'>Contact</a>
             </li>
           </ul>
         </nav>
@@ -31,6 +34,19 @@
     <aside>
       <div class='shadow-helper'>
         <div class='left-toolbar'>
+          <section class='tweets'>
+            <header>
+              <h1 class='tweets-title'>
+                <a href='http://twitter.com/wesleyhales'>
+                  <img src='//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' />
+                  My Tweets
+                </a>
+              </h1>
+              <div id='twitter_div'>
+                <ul id='twitter_update_list'></ul>
+              </div>
+            </header>
+          </section>
           <section class='tags'>
             <header>
               <h1 class='tags-title'>
@@ -248,19 +264,6 @@
               <a href='/blog/tags/weld/'>weld</a>
             </span>
           </section>
-          <section class='tweets'>
-            <header>
-              <h1 class='tweets-title'>
-                <a href='http://twitter.com/wesleyhales'>
-                  <img src='//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' />
-                  My Tweets
-                </a>
-              </h1>
-              <div id='twitter_div'>
-                <ul id='twitter_update_list'></ul>
-              </div>
-            </header>
-          </section>
         </div>
       </div>
     </aside>
@@ -357,6 +360,20 @@
             statusHTML.push('<li><div>'+status+'</div><div class="actions"><a href="http://twitter.com/'+username+'/statuses/'+twitters[i].id_str+'">'+relative_time(twitters[i].created_at)+'</a>|<a class="tweet_action tweet_retweet" href="http://twitter.com/intent/retweet?tweet_id='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png">retweet</a>|<a class="tweet_action tweet_reply" href="http://twitter.com/intent/tweet?in_reply_to='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/reply.png">reply</a></div></li>');
           }
           document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
+        }
+        
+        function getParameterByName(name) {
+          var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+          return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }      
+        if(getParameterByName("p") == "design"){
+          document.getElementById('design').className = 'selected';
+        } else if(getParameterByName("p") == "projects"){
+          document.getElementById('projects').className = 'selected';
+        } else if(getParameterByName("p") == "contact"){
+          document.getElementById('contact').className = 'selected';
+        } else {
+          document.getElementById('home').className = 'selected';
         }
       //]]>
     </script>

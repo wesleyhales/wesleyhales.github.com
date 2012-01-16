@@ -254,15 +254,15 @@ blockquote, q {
 /*@import "partials/brand";*/
 /*@import "partials/global";*/
 /* line 1, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu {
+#menu {
   margin: 0;
   line-height: 100%;
 }
 
 /* sub levels link hover */
 /* line 8, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul li:hover a,
-.menu li:hover li a {
+#menu ul li:hover a,
+#menu li:hover li a {
   background: none;
   border: none;
   /*color: #666;*/
@@ -271,7 +271,7 @@ blockquote, q {
 }
 
 /* line 16, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul a:hover {
+#menu ul a:hover {
   background: #f8f7de !important;
   /* for non-css3 browsers */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f6ec', endColorstr='#faf8cf');
@@ -288,7 +288,7 @@ blockquote, q {
 
 /* level 2 list */
 /* line 28, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul {
+#menu ul {
   background: #fff;
   /* for non-css3 browsers */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fff');
@@ -315,33 +315,33 @@ blockquote, q {
 
 /* dropdown */
 /* line 50, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu li:hover > ul {
+#menu li:hover > ul {
   display: block;
 }
 
 /* line 53, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul li {
+#menu ul li {
   float: none;
   margin: 0;
   padding: 0;
 }
 
 /* line 58, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul a {
+#menu ul a {
   font-weight: normal;
   /*text-shadow: 0 1px 1px rgba(255, 255, 255, .9);*/
 }
 
 /* level 3+ list */
 /* line 63, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul ul {
+#menu ul ul {
   left: 181px;
   top: -3px;
 }
 
 /* rounded corners for first and last child */
 /* line 68, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul li:first-child > a {
+#menu ul li:first-child > a {
   -webkit-border-top-left-radius: 9px;
   -moz-border-radius-topleft: 9px;
   -webkit-border-top-right-radius: 9px;
@@ -349,7 +349,7 @@ blockquote, q {
 }
 
 /* line 74, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
-.menu ul li:last-child > a {
+#menu ul li:last-child > a {
   -webkit-border-bottom-left-radius: 9px;
   -moz-border-radius-bottomleft: 9px;
   -webkit-border-bottom-right-radius: 9px;
@@ -520,13 +520,13 @@ div.header-box > nav {
 }
 
 /* line 146 */
-.menu > li {
+#menu > li {
   height: 30px;
   margin: 0 5px 0 0;
 }
 
 /* line 151 */
-.menu li {
+#menu li {
   float: left;
   position: relative;
   list-style: none;
@@ -534,33 +534,33 @@ div.header-box > nav {
 }
 
 /* line 158 */
-.menu a {
+#menu a {
   text-decoration: none;
   color: #bfe3f8;
   display: block;
-  padding: 8px 20px;
+  padding: 8px 14px;
   margin: 0;
   font-size: 1.4em;
 }
 
 /* main level link on hover and selected */
 /* line 171 */
-ul.menu li.selected > a,
-ul.menu li > a:focus,
-ul.menu li > a:hover,
-ul.menu li:hover > a {
+ul#menu li.selected > a,
+ul#menu li > a:focus,
+ul#menu li > a:hover,
+ul#menu li:hover > a {
   background-color: rgba(255, 255, 255, 0.17);
   color: #fff;
 }
 
 /* line 176 */
-ul.menu li ul li a {
+ul#menu li ul li a {
   color: #777;
 }
 
 /* line 181 */
-ul.menu li ul li a:hover,
-ul.menu li ul li a:focus {
+ul#menu li ul li a:hover,
+ul#menu li ul li a:focus {
   color: #000;
   font-weight: bold;
 }
@@ -730,4 +730,18 @@ div.post-container {
 /* line 328 */
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
+}
+
+/* line 332 */
+div.design-item {
+  border: 1px solid #ececec;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 15px;
+  width: 505px;
+  float: left;
+  text-align: center;
+  -moz-box-shadow: 0 0 5px 5px #ececec;
+  -webkit-box-shadow: 0 0 5px 5px#ececec;
+  box-shadow: 0 0 5px 5px #ececec;
 }
