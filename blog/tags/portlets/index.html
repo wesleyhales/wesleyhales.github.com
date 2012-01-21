@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
     <title>
@@ -31,7 +30,7 @@
         </nav>
       </div>
     </header>
-    <aside>
+    <aside id='rightcol'>
       <div class='shadow-helper'>
         <div class='left-toolbar'>
           <section class='tweets'>
@@ -104,7 +103,7 @@
             <span class='tag tag-0'>
               <a href='/blog/tags/cargo/'>cargo</a>
             </span>
-            <span class='tag tag-0'>
+            <span class='tag tag-1'>
               <a href='/blog/tags/cdi/'>cdi</a>
             </span>
             <span class='tag tag-0'>
@@ -181,6 +180,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jesus/'>jesus</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jetty/'>jetty</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jms/'>jms</a>
@@ -261,6 +263,9 @@
               <a href='/blog/tags/web/'>web</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/websocket/'>websocket</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/weld/'>weld</a>
             </span>
           </section>
@@ -268,7 +273,7 @@
       </div>
     </aside>
     <div id='main'>
-      <div class='post-container rounded-5px'>
+      <div id='post-container'>
         <div class='article-list'>
           <div class='post-preview'>
             <div class='post'>
@@ -497,6 +502,7 @@
           document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
         }
         
+        // my custom JS
         function getParameterByName(name) {
           var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
           return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
@@ -510,6 +516,30 @@
         } else {
           document.getElementById('home').className = 'selected';
         }
+        //trying to use responsive design on tablets and desktops
+        //ipads report 980 innerWidth in portrait and 981 in landscape
+        if(!Modernizr.touch || window.innerWidth > 980) {
+          try{
+            //todo need to handle orientation change here as well
+            window.onscroll = function(){
+              if(window.pageYOffset > 1000){
+                document.querySelector('#rightcol').className = 'hidden';
+                document.querySelector('#post-container').style.width = '100%';
+                document.querySelector('#post-container').className = 'transition';
+                document.querySelector('#main').style.margin = '154px 0 0 0';
+                document.querySelector('#main').className = 'transition';
+              }else{
+                document.querySelector('#rightcol').className = '';
+                document.querySelector('#post-container').style.width = '87%';
+                document.querySelector('#post-container').className = 'transition';
+                document.querySelector('#main').style.margin = '154px 364px 0 0';
+                document.querySelector('#main').className = 'transition';
+              }
+            }
+          }catch(e){
+            //problem onscroll
+          }
+        };
       //]]>
     </script>
     <script src='http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;amp;count=2' type='text/javascript'></script>

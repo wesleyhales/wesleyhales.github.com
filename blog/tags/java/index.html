@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
     <title>
@@ -31,7 +30,7 @@
         </nav>
       </div>
     </header>
-    <aside>
+    <aside id='rightcol'>
       <div class='shadow-helper'>
         <div class='left-toolbar'>
           <section class='tweets'>
@@ -104,7 +103,7 @@
             <span class='tag tag-0'>
               <a href='/blog/tags/cargo/'>cargo</a>
             </span>
-            <span class='tag tag-0'>
+            <span class='tag tag-1'>
               <a href='/blog/tags/cdi/'>cdi</a>
             </span>
             <span class='tag tag-0'>
@@ -181,6 +180,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jesus/'>jesus</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jetty/'>jetty</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jms/'>jms</a>
@@ -261,6 +263,9 @@
               <a href='/blog/tags/web/'>web</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/websocket/'>websocket</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/weld/'>weld</a>
             </span>
           </section>
@@ -268,43 +273,8 @@
       </div>
     </aside>
     <div id='main'>
-      <div class='post-container rounded-5px'>
+      <div id='post-container'>
         <div class='article-list'>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 id='post-title'>
-                  <a href='/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/'>
-                    Fixing Ajax on Mobile Devices (with HTML5)
-                  </a>
-                </h2>
-                <h3>
-                  29 August 2011
-                </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/ajax/'></a>
-                  ajax
-                  <a href='/blog/tags/html5/'></a>
-                  html5
-                  <a href='/blog/tags/innerhtml/'></a>
-                  innerhtml
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>&#8220;Not only is innerHTML bad, it is the root cause of many problems&#8230; from browser memory leaks (it destroys/replaces existing elements that may have event handlers attached) to failing completely on iOS’s Mobile Safari. Yes, that&#8216;s right, it just flakes out.&#8221;</p> 
-                
-                <p><a href="http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices">Read on...</a><br /> 
-                </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
           <div class='post-preview'>
             <div class='post'>
               <header>
@@ -462,196 +432,6 @@
             <div class='post'>
               <header>
                 <h2 id='post-title'>
-                  <a href='/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/'>
-                    Runtime Type Detection and Usage with Weld
-                  </a>
-                </h2>
-                <h3>
-                  04 May 2011
-                </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/cdi/'></a>
-                  cdi
-                  <a href='/blog/tags/hornetq/'></a>
-                  hornetq
-                  <a href='/blog/tags/infinispan/'></a>
-                  infinispan
-                  <a href='/blog/tags/jms/'></a>
-                  jms
-                  <a href='/blog/tags/jsf/'></a>
-                  jsf
-                  <a href='/blog/tags/richfaces/'></a>
-                  richfaces
-                  <a href='/blog/tags/seam/'></a>
-                  seam
-                  <a href='/blog/tags/weld/'></a>
-                  weld
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p><p class="pTitle">About TweetStream</p><br /> 
-                <img alt="tweetstream" align="right" width="200px" src="/images/jroller/tweetstream-phone.png"/>In developing the <a href="https://github.com/richfaces/tweetstream">TweetStream</a> demo for the JBoss World keynote and <span class="caps">JUD</span>Con presentation, I wanted to use <span class="caps">CDI</span> in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, <span class="caps">CDI</span> gives you the power to do this.<br /> 
-                A little bit about the usecase: The <a href="https://github.com/richfaces/tweetstream">TweetStream</a> application is an app that Jay Balunas and I developed over the past few months for our presentation at <span class="caps">JUD</span>Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile <span class="caps">HTML5</span> web application (which runs on Android and iOS devices) with things like scalable data grid, <span class="caps">JMS</span>, JSF2, <span class="caps">HTML5</span>/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.<br /> 
-                So, we had 2 scenarios &#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the <a href="https://github.com/richfaces/tweetstream">source code</a>, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.<br /> 
-                So we got our tweet data from the true source (twitter4j) during our <span class="caps">JUD</span>Con presentation, and then from the data grid during the keynote. We could have used <span class="caps">CDI</span> alternatives, but I wanted a true solution with no <span class="caps">XML</span> configuration and runtime detection.<br /> 
-                </p><br /> 
-                <p><p class="pTitle">The Code...</p><br /> 
-                So we have 2 Qualifier Types:<br /> 
-                @TwitterLocal for the <span class="caps">JUD</span>Con demo impl<br /> 
-                @TwitterServer for the keynote impl</p> 
-                
-                <p>We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.</p> 
-                
-                <p>Now that we have our types defined as follows&#8230;</p> 
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">@Qualifier<br /> 
-                <br /> 
-                @Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                @Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                <span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterServer<br /> 
-                <br /> 
-                <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                @Qualifier<br /> 
-                <br /> 
-                @Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                @Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                <span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterLocal<br /> 
-                <br /> 
-                <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <span style="color: #009900;">&#125;</span></div></p> 
-                
-                <p>We need not only an implementation of each, but also a deciding bean that tells us which type to use.</p> 
-                
-                <p>First, our implementation of each Type implements an interface:</p> 
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">interface</span> TwitterSource <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                …</div></p> 
-                
-                <p>And our implementations have a different usage of the init method. <code>TwitterLocal starts the stream coming from twitter and updates the infinispan cache. </code>TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&#8211;8 nodes.</p> 
-                
-                <p>So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:</p>
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> TweetStream <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @Inject<br /> 
-                <br /> 
-                &nbsp; @<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aany+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Any</span></a><br />
-                <br /> 
-                &nbsp; Instance<span style="color: #339933;"><</span>TwitterSource<span style="color: #339933;">></span> twitterSource<span style="color: #339933;">;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterLocalQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterLocal<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterLocal<br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterServerQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterServer<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterServer<br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @PostConstruct<br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #006633;">init</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @Produces<br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">public</span> TwitterSource getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>initialCheck<span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">try</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">Class</span>.<span style="color: #006633;">forName</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in JBW2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">catch</span> <span style="color: #009900;">&#40;</span><a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aclassnotfoundexception+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">ClassNotFoundException</span></a> ex<span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in local JUDCon2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aannotation+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Annotation</span></a> qualifier <span style="color: #339933;">=</span> demoexists <span style="color: #339933;">?</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">new</span> TwitterServerQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> <span style="color: #000000; font-weight: bold;">new</span> TwitterLocalQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">return</span> twitterSource.<span style="color: #006633;">select</span><span style="color: #009900;">&#40;</span>qualifier<span style="color: #009900;">&#41;</span>.<span style="color: #006633;">get</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span></div></p> 
-                
-                <p>This is all in the <a href="https://github.com/richfaces/tweetstream">source code</a>. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&#8230;<br /> 
-                </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 id='post-title'>
                   <a href='/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/'>
                     Does Developing Portlets Make You a Better Developer?
                   </a>
@@ -720,140 +500,6 @@
             <div class='post'>
               <header>
                 <h2 id='post-title'>
-                  <a href='/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/'>
-                    Going Mobile With RichFaces 4 - Part 1&#58; Drag and Drop
-                  </a>
-                </h2>
-                <h3>
-                  16 February 2011
-                </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/jquery/'></a>
-                  jquery
-                  <a href='/blog/tags/jsf/'></a>
-                  jsf
-                  <a href='/blog/tags/richfaces/'></a>
-                  richfaces
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p><a href="http://www.jboss.org/richfaces/">Richfaces 4</a> just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.<br /> 
-                First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>Today I am going to add touch support to the RF drag and drop component. We all know that touch events and gestures are not the same as a mouse click. So one must consider a couple of different approaches before implementing a final solution:</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>1) Override the default touch events with their mouse counterparts.<br /> 
-                This is easy since you are basically overriding the default functionality of touch and gesture events. There are 3 mouse events to replace to get this component working:<br /> 
-                touchstart,touchmove,touchend</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>2) Extend jQuery core components and add the “drag” functionality alongside “touch”<br /> 
-                A little more difficult and fortunately the jQuery team is working on the mobile upgrade to ui.draggable &#8211; so this should be available in the next few weeks/months.</p></p>
-                
-                
-                <p></p>
-                
-                <p><object width="480" height="390"><param name="movie" value="http://www.youtube.com/v/Exs1jumZ4yk?fs=1&hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Exs1jumZ4yk?fs=1&hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="390"></embed></object>(tested on live iPhone4 and iOS simulator iPad)</p>
-                
-                
-                <p></p>
-                
-                <p><p>I originally started out using the touch and gesture events to do the drag and drop. This allowed for a smoother UX but unfortunately, the internal plumbing of Richfaces required a complex extension/wrap of rf.ui.draggable (to add the new touch functions) and some custom bindings like rf.Event.bind(this.dragElement, &#8216;touchstart&#8216;+this.namespace&#8230;.) in dnd-draggable.js.<br /> 
-                In the end, it was just easier for me to use <a href="https://github.com/furf/jquery-ui-touch-punch/blob/master/jquery.ui.touch-punch.js">this script</a> and re-map the 3 main touch events.</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>I looked at many different approaches starting with SenchaTouch which btw is pointless if you are going to leverage existing jQuery, then moving to a few different jQuery utilities.<br /> 
-                The basic question here, which can be applied to any component framework, is “What’s the best mobile approach for supporting product xyz?” Every product out there that touches the UI has to cross this gap. Touch interfaces today&#8230; tangible UI’s tomorrow&#8230; and the vicious cycle continues. And majority of the time, the best way to get started is to build an emulator so that your product can work today. This will buy you the time to build the native functionality that takes full advantage of the target platform.<br /> 
-                Unfortunately the script I used here doesn’t always work and there are still a few more components in Richfaces that do not work with this duck punch approach. So I will try to make this a series and blog about &#38; fix the other components on mobile platforms.</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>The old days of drag and drop are not as simple as they used to be. With multi touch surfaces you have the ability to accelerate your drag and throw it across the page, rotate it, and auto scrolling when you drag the object off the page, etc... Just something to think about when designing a similar component.</p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 id='post-title'>
-                  <a href='/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/'>
-                    Replacing Photoshop With CSS3 - Creating Styles
-                  </a>
-                </h2>
-                <h3>
-                  05 February 2011
-                </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/html5/'></a>
-                  html5
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).<br /> 
-                This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with <span class="caps">CSS3</span>. Not only is it simple, but you can also create a sort of &#8220;gradient template&#8220; to be reused. Kind of like a &#8220;style&#8221; which can be applied to any element in Photoshop.</p><br />
-                <p class="pTitle">First off, this is how I would normally do it in Photoshop:</p><ol><li>Create the element &#8211; a button in this case:<br /> 
-                <img alt="" src="/images/jroller/css3post/button.PNG"/></li><br /> 
-                <li>Create your gradient. Gradients that are hardly gradients seem to give a nice appearance and body to the design. Meaning you start with a base color like #6c291f and move up the scale to #e42a00.<br /> 
-                <img alt="" src="/images/jroller/css3post/gardient-setup.PNG"/><br /> 
-                </li><br /> 
-                <li>Next you add an inner shadow to give it a glow like effect. Again this too is based on your gradient color.<br /> 
-                <img alt="" src="/images/jroller/css3post/innerglow.PNG"/><br /> 
-                </li><br /> 
-                <li>Here is the end result (from Photoshop):<br /> 
-                <img alt="" src="/images/jroller/css3post/red.button.photoshop.PNG"/><br /> 
-                </li></ol></p>
-                
-                
-                <p></p>
-                
-                <p><p class="pTitle">Now, let's do the exact same thing in CSS3 with 1 step.</p><p>This tested fine across all the latest browsers (Firefox 3.6+, Latest Safari, Latest Chrome, and who cares about IE <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /></p><ol><li>Simply use the brightest part of the gradient color from above (#e42a00) and substitute it as the background color below:<br /> 
-                <pre style="line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;"><span style="color:#800000;background-color:#f0f0f0;"> 1 </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">button</span><span style="background-color:#ffffff;">.</span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">red</span><span style="background-color:#ffffff;"> {<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 2 </span><span style="background-color:#ffffff;"> </span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">background</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">: </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">#e42a00</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;"><del>moz</del>linear-gradient</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">90</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">deg</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.3</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">) </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">33</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">%, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.1</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">) </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">123</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">%)</span></span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 3 </span><span style="background-color:#ffffff;"> </span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">background</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">: </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">#e42a00</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;"><del>webkit</del>gradient</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">linear</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">left</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">top</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">left</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">bottom</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">from</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.1</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">)), </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">to</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.3</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">)))</span></span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 4 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">border-radius</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">7</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 5 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>moz</del>border-radius</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">7</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 6 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>webkit</del>border-radius</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">7</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 7 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">border</span><span style="background-color:#ffffff;">: </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">none</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 8 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;"> 9 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>moz</del>box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;">10 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>webkit</del>box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;</span></pre><br /> 
-                </li><br /> 
-                <li>Here is the end result (from Firefox):<br /> 
-                <img alt="" src="/images/jroller/css3post/red.button.css.PNG"></li><br /> 
-                </ol></p>
-                
-                
-                <p></p>
-                
-                <p><p>Notice from the css code that we are only using one color? This is so we can easily create a super class that allows us to override its functionality. In the end all you would need is one line of code for background color to create a button for every color that exists with the same style from above applied to it.</p><br /> 
-                <p>Now to create a button using the same &#8220;style&#8221;, you would only have to create a class that defines the background color and inner shadow highlight. i.e&#8230;.<br /> 
-                <pre style="line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;"><span style="color:#800000;background-color:#f0f0f0;">1 </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">button</span><span style="background-color:#ffffff;">.</span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">lightblue</span><span style="background-color:#ffffff;"> {<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;">2 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">background-color</span><span style="background-color:#ffffff;">: </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">#41b6ff</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;">3 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>moz</del>box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">55</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">243</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;<br /> &#x000A;</span><span style="color:#800000;background-color:#f0f0f0;">4 </span><span style="background-color:#ffffff;">}</span></pre></p><br /> 
-                <p>This would give you a button like this:<br /> 
-                <img alt="" src="/images/jroller/css3post/blue.button.css.PNG"/></p><br /> 
-                <p>The only part that isn't really flexible is the inner shadow feathering. It is currently set to blur the shadow by a fixed pixel. It would be awesome if you could blur by percent as this would allow the gradient filled element to be resized dynamically and maintain the aspect of inner glow.</p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 id='post-title'>
                   <a href='/blog/2010/06/07/Jazoon-2010-Overview/'>
                     Jazoon 2010 Overview
                   </a>
@@ -912,191 +558,116 @@
             <div class='post'>
               <header>
                 <h2 id='post-title'>
-                  <a href='/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts/'>
-                    The Ultimate Guide For Developer Screencasts
+                  <a href='/blog/2007/08/01/My-first-Seam-20-app/'>
+                    My first Seam 2.0 app
                   </a>
                 </h2>
                 <h3>
-                  17 March 2010
+                  01 August 2007
                 </h3>
                 <h4>
                   <a href='/blog/tags/Java/'></a>
                   Java
+                  <a href='/blog/tags/flying/'></a>
+                  flying
+                  <a href='/blog/tags/hibernate/'></a>
+                  hibernate
+                  <a href='/blog/tags/java/'></a>
+                  java
+                  <a href='/blog/tags/jsf/'></a>
+                  jsf
+                  <a href='/blog/tags/saucer/'></a>
+                  saucer
+                  <a href='/blog/tags/seam/'></a>
+                  seam
+                  <a href='/blog/tags/trinidad/'></a>
+                  trinidad
                 </h4>
               </header>
               <div class='content'>
                 
                 
-                <p><img alt="JBoss Portlet Bridge Logo" align="right" src="/images/jroller/jbossportletbridge_logo.gif"/> About a year ago, I decided to start creating screen casts for the <a href="http://jboss.org/portletbridge" target="_blank">JBoss Portlet Bridge</a> open source project. As a manager of a relatively small, niche project, it is easy for me to try new things that can only improve the community around the project &#45; or serve as a learning lesson for myself. Screencasts are nothing new to the development scene, but my goal was to liven it up a bit and make the outcome seem more professional and well produced. At the same time, covering all the important facets of managing a community like community member recognition, to getting started, and so on.</p>
+                <p>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.</p>
                 
                 
                 <p></p>
                 
-                <p class="pTitle">Coming up with a topic</p>
-                
-                
-                <p></p>
-                
-                <p>This doesn't seem like a hard task, but it can make or break your idea. You don't want to base your topic on generic phrases or buzzwords. Of course, to get someone interested in your project, you may need to use a mainstream keyword in your title. But don't be untrue to your viewers. This is your name and reputation on the line, so give the community what they want by evaluating forum topics, in&#45;house support requests, wiki articles, or current blog posts about your project.</p>
-                
-                
-                <p></p>
-                
-                <p>Take a look at this: 
-                <img alt="Screencast Title" align="middle" src="/images/jroller/screencast-title.gif" /> 
-                You might say, "Why not just use the core topic and tag the basic stuff?" &#45; Well, tags are cool and all, but they are platform dependent, so I use a double&#45;fallback with the title. Of course I still use tags, but when you post the title in your blog, twitter and wherever else, you will need the all&#45;in&#45;one, "Google friendly" title. 
-                </p>
-                
-                
-                <p></p>
-                
-                <p>And lastly in choosing your topic, remember we all have roots as an end user of someone's framework or product, so I always envision myself as the user. This is best done by creating a screencast for a common customer support request or forum question, heck you could even use your FAQs as "season 1" for your screencasts <img src="http://www.jroller.com/images/smileys/smile.gif" class="smiley" alt=":)" title=":)" /></p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">The Introduction</p>
-                
-                
-                <p></p>
-                
-                <p><a href="http://www.vimeo.com/8752541"><img alt="Screencast Intro" align="right" src="/images/jroller/intro-ss.gif" style="padding:3px"/></a>As an open source project manager, developer, community promoter, marketer, designer, etc… we have many hats to wear. Since I have a design background, I like to fire up After Effects, Blender, and other cool video creation programs and make a kick&#45;ass intro. Most developers don't have this capability/luxury, so it's up to you on how far you want to take your intro. Typically, just some kind of view with your logo and a background image will do.</p>
-                
-                
-                <p></p>
-                
-                <p>If you know how to use After Effects, or want to use the intro I created for <a href="http://www.vimeo.com/8752541">this video</a>, I have uploaded the <a href="http://rapidshare.com/files/364251565/BridgeIntro.zip.html">source .aep</a> file for you. Feel free to use whatever parts from it you want.</p>
-                
-                
-                <p></p>
-                
-                <p>I also use music and different sound effects, (even extracting the vocals if necessary) to get the right effect. There are some great creative commons/open source music sources like: 
-                <ul> 
-                <li><a href="http://ccmixter.org">http://ccmixter.org</a></li>
-                <li><a href="http://www.jamendo.com">http://www.jamendo.com</a></li>
-                <li><a href="http://creativecommons.org/audio/">http://creativecommons.org/audio/</a></li>
-                <li><a href="http://opsound.org/music">http://opsound.org/music</a></li>
-                </ul> 
-                I have learned to limit my intro to 10&#45;15 seconds. Just something short and sweet to give your screencast some character.
-                </p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">The Audience</p>
-                
-                
-                <p></p>
-                
-                <p>Just like writing a book or article, this may be a first time user of your project, or it may be a seasoned developer. So know your target audience. If you plan on doing a series of ongoing screencasts, definitely make your first episode at a very beginner level. This will allow you to reference it in the future with more advanced screencasts.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Prerequisites</p>
-                
-                
-                <p></p>
-                
-                <p>Explain the preparation steps clearly &#45; environment variables, 3rd party downloads, utilities, etc.. Create a wiki or blog post listing all the requirements for users to follow along with. Show a screenshot of that article which you just created in your video before you get started.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Branding</p>
-                
-                
-                <p>I always start my screencast with a view of the project home page and a brief explanation of navigation and making your way around the project site. You want to drill this page into your users head and this is the best way to do it. You may have great forums and FAQs, but your users may have a hard time finding it... this is your chance to train the community on the hard work you have put into your project.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Be Realistic</p>
-                
-                
-                <p></p>
-                
-                <p>Go through a dry run, but don't make it "too" perfect. You are guaranteed that many viewers will have some kind of problem while running through your demo, so when it happens to you in the screencast, don't edit it out &#45; leave it. This is important because it's something every viewer can relate too. At the same time you want to keep in mind NOT to leave in your (or too many) mistakes. There is a fine line here of confusing your audience vs. letting them know that you are human and may face their same problems.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Create a script (if you need it)</p>
-                
-                
-                <p></p>
-                
-                <p>For some folks, adlib and free handing this kind of stuff comes natural. Not for me. While going through a dry&#45;run and making sure the screen cast is going to work as planned, jot down the notes that come to mind as you're working. This is important because you will often be too focused on speaking clearly and getting your point across during the actual recording. It's nice to have a set of reminders to look at.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Open Source and Commercial Tools</p>
-                
-                
-                <p></p>
-                
-                <p>Onto the fun stuff, so now you have everything prepared and you're ready to start the recording. First, you need to get yourself a screen recorder and depending on your OS, I have listed a few options below.</p>
-                
-                
-                <p></p>
-                
-                <dl> 
-                <dt>Mac</dt> 
-                <dd>If you are lucky enough to own/use a mac for your screen casting projects then I highly recommend using <a href="http://www.telestream.net/screen-flow/overview.htm">ScreenFlow</a>. The intuitive UI and ease of creating powerful animations make it worth the money. Amongst all the screen casting tools available, this is hands down the best one I have seen. A trial version is available, but it will watermark your video on export.<br/> 
-                However, the very kind folks at ScreenFlow hooked me up with a coupon code for the readers of this article. It will give you 10% off the original $99 price tag, saving you $10! Use discount code <strong>CPN9040717399</strong> to receive and extra 10% off your purchase. Thanks Christine!</dd> 
-                <dt>Windows</dt> 
-                <dd>I used CamStudio <a href="http://sourceforge.net/projects/camstudio/">http://sourceforge.net/projects/camstudio/</a> for a short project quite a few years ago, and I have no idea what is out there on the free & open source scene today.</dd> 
-                <dt>Linux</dt> 
-                <dd>A quick google search revealed a few (mostly ffmpeg based) but I'm sure there are more out there, so please let me know in the comments if you know of a good one. 
-                <ul> 
-                <li><a href="http://live.gnome.org/Istanbul">http://live.gnome.org/Istanbul</a></li>
-                <li><a href="http://xvidcap.sourceforge.net">http://xvidcap.sourceforge.net</a></li>
-                </ul> 
-                </dd> 
-                </dl>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Here are a few more tips and recommendations for recording and publishing:</p>
+                <p>This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn't have any requirements to start, I thought I would list a few of my own here ;)</p>
                 
                 
                 <p></p>
                 
                 <ul> 
-                <li>I bought a decent set of headphones with a microphone which seems to put me in "the zone" a bit more than using my built in laptop microphone.</li> 
-                <li><img alt="" align="right" src="/images/jroller/you-video.gif"/>I think it's cool to actually record video of yourself usually for the first introductory video or at the beginning when it is mostly you talking. People are not going to be watching you talk, they are watching your screen actions. Be sensible about when to use video of yourself talking.</li> 
-                <li>If you mess up or get tongue tied, don't stop the recording. Just take a deep breath and allow a few noticeable seconds to pass, then start over. You will see your pause in your wave form visualizer and you can go back and cut it out when you are doing your final editing.</li> 
-                <li>Keep your rate of speech just a bit above or at conversation level. I made the mistake of not keeping a script nearby in my first few videos and it is definitely noticeable that I am thinking about my next steps while I'm talking in the screencast. It's not fun to listen to and makes you sound like an amateur. 
-                </li> 
-                <li><img alt="" align="left" src="/images/jroller/waveform.gif" style="padding:0 20px 0 0"/>Cut out as much white space as you can when doing final editing and keep your screen transitions smooth when doing multiple takes or pausing while your wife screams at you to take out the trash or to answer the phone. Don't make your audience sit there while you wait for a server to start up. Cut out startups and any other tasks that are repetitive and boring. Every second counts and you don't want to end up with an hour&#45;long screencast. 
-                </li> 
-                <li>Make jokes and make fun of yourself. Sure you are offering value by allowing your viewers to get tips and tricks first hand from you &#45; the expert <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /> But simple entertainment and your character can increase your viewing audience, or simply make you more approachable when speaking at conferences, etc...</li> 
-                <li><img alt="" align="right" src="/images/jroller/timemark.gif"/>Use time&#45;bookmarking features in the comments. I think this is the greatest feature of screencasting and may even replace user guides or other documentation in the future. Unfortunately, the platform (vimeo) that I use limits this feature. Youtube does a great job at it and allows you to link to a specific time, down to the second, in a video &#45; even external linking is allowed. With vimeo, all you must do in the comments is find the minute/second you want to mark and insert it into the comments as (7:31) &#45; with the parentheses. This tells vimeo to render a link for that marker, but the big drawback is the entire video must load first, and you cannot access this marker with a GET parameter like youtube.</li> 
-                <li>And since youtube only allows 10 minutes or less for the length of your video, I have been using vimeo to publish all of my screencasts. Here are the export settings I use in <a href="http://www.telestream.net/screen-flow/overview.htm">ScreenFlow</a> to allow users to view my video in HD format: 
+                <li>JSF &amp; Seam 
                 <ul> 
-                <li>H.264 codec</li> 
-                <li>dimensions 1280×720</li> 
-                <li>bit rate 3000 kbits/sec (optimized for “download”),</li> 
-                <li> 
-                key frame every 30 frames (frame reordering on), using whatever frame rate you shot in.</li> 
+                <li>RESTful URL's</li> 
+                <li>EJB3/Hibernate</li> 
+                <li>Local, rapid, development</li> 
                 </ul> 
                 </li> 
-                <li>As for ScreenFlow tutorials, you can find out how to use all of the functions and features here <a href="http://www.telestream.net/screen-flow/demos.htm">http://www.telestream.net/screen-flow/demos.htm</a>.</li> 
+                <li>Maven 2</li> 
+                <li>Charts</li> 
+                <li>Html 2 PDF functionality</li> 
                 </ul>
                 
                 
                 <p></p>
                 
-                <p>The rest is up to you. Whatever tutorial or product review you are trying to get across to your audience, remember to be punctual, upbeat, and funny! As of this writing, you can view the following screencast where I attempted to apply the concepts mentioned here <a href="http://www.vimeo.com/8752541">http://www.vimeo.com/8752541</a>.</p>
+                <h2>JSF &amp; Seam </h2>
+                
+                
+                <p></p>
+                
+                <p>When I started development, Seam was at v.1.2, Embedded EJB (aka Embedded Jboss) was at RC9, and Jetty was being used for local dev and testing. I was able to get a jump start from the guys over at <a href="http://software.softeu.cz/archetypes/seam/">http://softeu.cz</a> for the jetty/ejb/war deployment and I found a rouge project on the seam boards called JBossSeamDVDStore that gave me the ejb Maven archetype ideas/best practice. </p>
+                
+                
+                <p></p>
+                
+                <p>I went through some good (and bad) code getting the embedded RC9 stuff working with Jetty. It boiled down to <a href="http://www.jboss.com/index.html?module=bb&op=viewtopic&t=110555">this post</a> showing why and what I did.</p>
+                
+                
+                <p></p>
+                
+                <p>The good and bad news now is that Embedded EJB3 is now Embedded Jboss and Embedded Jboss only works with Tomcat (for now) and here is <a href="http://wiki.jboss.org/wiki/Wiki.jsp?page=WhatRefactoringsWereDoneToEnableEmbeddedJBoss">a post explaining</a> why it's this way. But this could also be a blueprint for creating the same thing for Jetty, I just don't have the time to do it right now.</p>
+                
+                
+                <p></p>
+                
+                <p><a href="http://www.google.com/notebook/public/09243180899526162200/BDRKQSgoQ77rF_7Yi">Here is a list</a> of resources I found useful while researching.<p> 
+                
+                <h2>RESTful URL's</h2> 
+                <p>The #1 biggest complaint using JSF is no RESTful urls, and Seam does a great job of solving it. The only problem I have now is double execution when the user does a postback to a page that has a action mapped in pages.xml. The form I'm submitting calls the same action as the url I have mapped for REST support. I haven't spent alot of time with it and it may be total user error, but it would be nice if double action execution did NOT happen naturally.</p> 
+                
+                <h2>EJB3/Hibernate</h2> 
+                <p>Using seam-gen, in Oracle, a few tables had null id fields and no primary key - The generated entity bean was genned as a object with one member (an ID) and I guess it was considering the entire record (all columns) as a unique. Being new to EntityBean/Generated hibernate code, it took us a few hours to figure this out, but once we saw that the data model was screwed up and how seam-gen handled it, the fix was easy.</p> 
+                
+                <h2>Local, rapid, development</h2> 
+                <p>This was mentioned a little in the first paragraph. I wanted a faster, local build environment than what was currently offered by the company I'm working for. They are heavily tied to ant and there were 0 projects using Maven. So, being the completely crazy person that I am, I introduced a new build method with Maven 2, a new Framework wrapper (Seam), and a local build on the developers laptop with hot deploy. I know Jboss AS offers hot deploy, but I really wanted to use Jetty with Embedded Jboss. Since, that isn't currently implemented, I went with the next best thing and used Tomcat. My current company gives every developer a Solaris box to build on, all builds/projects are tied to building on Solaris. When one tries to use IntelliJ Idea over a Samba mount, you will quickly see how much it brings down overall performance and speed. There are other pluses that I could go into on local dev opposed to a remote *nix box, but I will stop here.</p> 
+                
+                <h2>Maven 2</h2> 
+                <p>When you have 100's of projects on Ant and everyone in the company is pro Ant because so much time has been invested into the current build environment, you really feel like your going against the grain. However, most of us in the open source world, that are consultants, have seen the light on other projects and we bring new things into whoever we are working for. This is what I did. I eventually gained a few supporters, because everyone knows what happens when you are close minded to innovation.</p> 
+                
+                <h2>Charts</h2> 
+                <p>I think using the Trinidad Charts are what WOW'd the upper management the most. Since this company has a distributed computing environment with no admin rights, we had to get the security/network folks on board with the Adobe SVG plugin. I heard the Renesis viewer is pretty good also and we will probably move to it later since Adobe is killing support on their plugin.</p> 
+                
+                <h2>Html 2 PDF functionality</h2> 
+                <p> 
+                PD4ML: I started with this HTML2PDF renderer. It was super easy to get hooked up to the app. I structured my xhtml and css for both screen and print media types, but due to lack of CSS 2.1 support and very limited subset of css and html support, the output was terrible and required alot of rework just for this PDF to render half way decent. And it costs money :( 
+                </p> 
+                <p> With the output coming out horrible in PD4ML, I took a look at <a href="https://xhtmlrenderer.dev.java.net/r7/feature-list.html">a pure xhtml renderer, Flying Saucer. </a></p> 
+                <p>FS Almost instantly rendered all of my XHTML correctly on the first render. I had to make a few adjustments for things like CSS page-break properties and border-collapse. And, before I could even get the page to render I had to clean up the legacy HTML that some <a href="https://issues.apache.org/jira/browse/TRINIDAD-111">JSF renderers output</a> (I ran tests with both Jtidy and NekoHTML) - both did the trick and I couldn't tell a difference. All the JSF folks that I have talked to welcome feature requests for XHTML compliance. 
+                </p> 
+                <p> 
+                <a href="http://www.pdoubleya.com/projects/flyingsaucer/demo/r7/browser/browser_demo.jnlp">This demo</a> shows some pretty cool stuff from Flying Saucer and what it can do. It is basically the same concept of iTunes web browser/desktop app. PDF isn't the end of the road either - they have examples on rendering the exact same XHTML content to PNG, SVG, and Excel - I'm sure there will be more. 
+                </p> 
+                <p>There are probably a million more things in Seam that I could talk about here, that I completely can't live without. This article just touches on the real world stuff that I encountered while developing. </p>
               </div>
               <div class='comments'>
                 
               </div>
             </div>
           </div>
-          <div class="pagination-links"><span class="current-page">1</span> <a href="/blog/tags/Java/page2/" class="page-link">2</a> <span class="skip">...</span><a href="/blog/tags/Java/page4/" class="page-link">4</a> <a href="/blog/tags/Java/page5/" class="page-link">5</a> <a href="/blog/tags/Java/page2/" class="next-link">Next</a> </div>
+          <div class="pagination-links"><span class="current-page">1</span> </div>
         </div>
       </div>
     </div>
@@ -1120,6 +691,7 @@
           document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
         }
         
+        // my custom JS
         function getParameterByName(name) {
           var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
           return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
@@ -1133,6 +705,30 @@
         } else {
           document.getElementById('home').className = 'selected';
         }
+        //trying to use responsive design on tablets and desktops
+        //ipads report 980 innerWidth in portrait and 981 in landscape
+        if(!Modernizr.touch || window.innerWidth > 980) {
+          try{
+            //todo need to handle orientation change here as well
+            window.onscroll = function(){
+              if(window.pageYOffset > 1000){
+                document.querySelector('#rightcol').className = 'hidden';
+                document.querySelector('#post-container').style.width = '100%';
+                document.querySelector('#post-container').className = 'transition';
+                document.querySelector('#main').style.margin = '154px 0 0 0';
+                document.querySelector('#main').className = 'transition';
+              }else{
+                document.querySelector('#rightcol').className = '';
+                document.querySelector('#post-container').style.width = '87%';
+                document.querySelector('#post-container').className = 'transition';
+                document.querySelector('#main').style.margin = '154px 364px 0 0';
+                document.querySelector('#main').className = 'transition';
+              }
+            }
+          }catch(e){
+            //problem onscroll
+          }
+        };
       //]]>
     </script>
     <script src='http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;amp;count=2' type='text/javascript'></script>
