@@ -556,13 +556,14 @@
         } else {
           document.getElementById('home').className = 'selected';
         }
+        
         //trying to use responsive design on tablets and desktops
         //ipads report 980 innerWidth in portrait and 981 in landscape
         if(!Modernizr.touch || window.innerWidth > 980) {
           try{
             //todo need to handle orientation change here as well
             window.onscroll = function(){
-              if(window.pageYOffset > 1000){
+              if(window.pageYOffset > 1050){
                 document.querySelector('#rightcol').className = 'hidden';
                 document.querySelector('#post-container').style.width = '100%';
                 document.querySelector('#post-container').style.padding = '15px 0 15px 15px';
