@@ -768,6 +768,33 @@ div.design-item {
 /* line 360 */
 .notes {
   border: 1px solid #ececec;
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+  /* IE6-9 */
+  padding: 10px;
+  margin: 15px;
+  width: 39%;
+  float: left;
+  text-align: center;
+  border-radius: 7px;
+}
+
+/* line 378 */
+.notif {
+  border: 1px solid #ececec;
   background: #ffff88;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ffff88 0%, #ffffc9 100%);
@@ -789,9 +816,18 @@ div.design-item {
   width: 39%;
   float: left;
   text-align: center;
+  border-radius: 7px;
 }
 
-/* line 377 */
+/* line 396 */
+.sticky-top-right {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  width: 250px;
+}
+
+/* line 403 */
 .download {
   padding: 10px;
   margin: 15px 15px 0 0;
@@ -805,86 +841,86 @@ Media queries
 *************************************************/
 /* iOS/android phone landscape screen width*/
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 391 */
+  /* line 417 */
   body > aside {
     display: none;
   }
 
-  /* line 395 */
+  /* line 421 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 399 */
+  /* line 425 */
   div#post-container {
     width: 100%;
   }
 
-  /* line 403 */
+  /* line 429 */
   div.header-box nav.console {
     top: 111px;
   }
 }
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-  /* line 409 */
+  /* line 435 */
   body > aside {
     display: none;
   }
 
-  /* line 413 */
+  /* line 439 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 417 */
+  /* line 443 */
   div#post-container {
     width: 100%;
   }
 
-  /* line 421 */
+  /* line 447 */
   div.header-box nav.console {
     top: 111px;
   }
 }
 @media screen and (min-device-width: 600px) and (orientation:portrait) {
-  /* line 427 */
+  /* line 453 */
   body > aside {
     display: none;
   }
 
-  /* line 431 */
+  /* line 457 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 435 */
+  /* line 461 */
   div#post-container {
     width: 100%;
   }
 
-  /* line 439 */
+  /* line 465 */
   div.header-box nav.console {
     top: 111px;
   }
 }
 /* iOS/android phone portrait screen width*/
 @media screen and (max-device-width: 320px) {
-  /* line 446 */
+  /* line 472 */
   body > aside {
     display: none;
   }
 
-  /* line 450 */
+  /* line 476 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 454 */
+  /* line 480 */
   div#post-container {
     width: 100%;
   }
 
-  /* line 458 */
+  /* line 484 */
   div.header-box nav.console {
     top: 111px;
   }
@@ -892,9 +928,29 @@ Media queries
 /*************************************************
 Utils
 *************************************************/
-/* line 466 */
+/* line 492 */
 .transition {
   -moz-transition-duration: .5s;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
+}
+
+/* line 498 */
+.none {
+  display: none;
+}
+
+/* line 502 */
+.notnone {
+  display: default;
+}
+
+/* line 506 */
+.hide {
+  opacity: 0;
+}
+
+/* line 510 */
+.show {
+  opacity: 100;
 }
