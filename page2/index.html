@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <div class='header-box'>
+      <div class='header-box' onclick="window.location = 'http://wesleyhales.com'">
         <div class='logo-bold'>wesleyhales<span>.com</span></div>
         <nav class='console'>
           <ul id='menu'>
@@ -65,6 +65,9 @@
             <span class='tag tag-1'>
               <a href='/blog/tags/Design/'>Design</a>
             </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/JSF/'>JSF</a>
+            </span>
             <span class='tag tag-6'>
               <a href='/blog/tags/Java/'>Java</a>
             </span>
@@ -73,6 +76,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/Utils/'>Utils</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/aerogear/'>aerogear</a>
             </span>
             <span class='tag tag-1'>
               <a href='/blog/tags/ajax/'>ajax</a>
@@ -165,13 +171,13 @@
               <a href='/blog/tags/html5/'>html5</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/html5e/'>html5e</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/infinispan/'>infinispan</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/innerhtml/'>innerhtml</a>
-            </span>
-            <span class='tag tag-1'>
-              <a href='/blog/tags/java/'>java</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jazoon/'>jazoon</a>
@@ -258,6 +264,9 @@
               <a href='/blog/tags/undelete/'>undelete</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/util/'>util</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/vacation/'>vacation</a>
             </span>
             <span class='tag tag-1'>
@@ -286,19 +295,105 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
+                  <a href='/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/'>
+                    Going Mobile With RichFaces 4 - Part 1&#58; Drag and Drop
+                  </a>
+                </h2>
+                <h3 class='date'>
+                  16 February 2011
+                </h3>
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/jquery/'>
+                    jquery
+                  </a>
+                  |
+                  <a href='/blog/tags/jsf/'>
+                    jsf
+                  </a>
+                  |
+                  <a href='/blog/tags/richfaces/'>
+                    richfaces
+                  </a>
+                  |
+                </h4>
+              </header>
+              <div class='content'>
+                
+                
+                <p><p><a href="http://www.jboss.org/richfaces/">Richfaces 4</a> just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.<br /> 
+                First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</p></p>
+                
+                
+                <p></p>
+                
+                <p><p>Today I am going to add touch support to the RF drag and drop component. We all know that touch events and gestures are not the same as a mouse click. So one must consider a couple of different approaches before implementing a final solution:</p></p>
+                
+                
+                <p></p>
+                
+                <p><p>1) Override the default touch events with their mouse counterparts.<br /> 
+                This is easy since you are basically overriding the default functionality of touch and gesture events. There are 3 mouse events to replace to get this component working:<br /> 
+                touchstart,touchmove,touchend</p></p>
+                
+                
+                <p></p>
+                
+                <p><p>2) Extend jQuery core components and add the “drag” functionality alongside “touch”<br /> 
+                A little more difficult and fortunately the jQuery team is working on the mobile upgrade to ui.draggable &#8211; so this should be available in the next few weeks/months.</p></p>
+                
+                
+                <p></p>
+                
+                <p><object width="480" height="390"><param name="movie" value="http://www.youtube.com/v/Exs1jumZ4yk?fs=1&hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Exs1jumZ4yk?fs=1&hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="390"></embed></object>(tested on live iPhone4 and iOS simulator iPad)</p>
+                
+                
+                <p></p>
+                
+                <p><p>I originally started out using the touch and gesture events to do the drag and drop. This allowed for a smoother UX but unfortunately, the internal plumbing of Richfaces required a complex extension/wrap of rf.ui.draggable (to add the new touch functions) and some custom bindings like rf.Event.bind(this.dragElement, &#8216;touchstart&#8216;+this.namespace&#8230;.) in dnd-draggable.js.<br /> 
+                In the end, it was just easier for me to use <a href="https://github.com/furf/jquery-ui-touch-punch/blob/master/jquery.ui.touch-punch.js">this script</a> and re-map the 3 main touch events.</p></p>
+                
+                
+                <p></p>
+                
+                <p><p>I looked at many different approaches starting with SenchaTouch which btw is pointless if you are going to leverage existing jQuery, then moving to a few different jQuery utilities.<br /> 
+                The basic question here, which can be applied to any component framework, is “What’s the best mobile approach for supporting product xyz?” Every product out there that touches the UI has to cross this gap. Touch interfaces today&#8230; tangible UI’s tomorrow&#8230; and the vicious cycle continues. And majority of the time, the best way to get started is to build an emulator so that your product can work today. This will buy you the time to build the native functionality that takes full advantage of the target platform.<br /> 
+                Unfortunately the script I used here doesn’t always work and there are still a few more components in Richfaces that do not work with this duck punch approach. So I will try to make this a series and blog about &#38; fix the other components on mobile platforms.</p></p>
+                
+                
+                <p></p>
+                
+                <p><p>The old days of drag and drop are not as simple as they used to be. With multi touch surfaces you have the ability to accelerate your drag and throw it across the page, rotate it, and auto scrolling when you drag the object off the page, etc... Just something to think about when designing a similar component.</p></p>
+              </div>
+              <div class='comments'>
+                
+              </div>
+            </div>
+          </div>
+          <div class='post-preview'>
+            <div class='post'>
+              <header>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/'>
                     Replacing Photoshop With CSS3 - Creating Styles
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   05 February 2011
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/html5/'></a>
-                  html5
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/html5/'>
+                    html5
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -346,23 +441,27 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2010/06/07/Jazoon-2010-Overview/'>
                     Jazoon 2010 Overview
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   07 June 2010
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/conferences/'></a>
-                  conferences
-                  <a href='/blog/tags/java/'></a>
-                  java
-                  <a href='/blog/tags/jazoon/'></a>
-                  jazoon
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/conferences/'>
+                    conferences
+                  </a>
+                  |
+                  <a href='/blog/tags/jazoon/'>
+                    jazoon
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -404,17 +503,19 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts/'>
                     The Ultimate Guide For Developer Screencasts
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   17 March 2010
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -592,23 +693,31 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/'>
                     Contextual PortletMode changes using the JBoss Portlet Bridge
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   10 December 2009
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/portal/'></a>
-                  portal
-                  <a href='/blog/tags/portlets/'></a>
-                  portlets
-                  <a href='/blog/tags/seam/'></a>
-                  seam
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/portal/'>
+                    portal
+                  </a>
+                  |
+                  <a href='/blog/tags/portlets/'>
+                    portlets
+                  </a>
+                  |
+                  <a href='/blog/tags/seam/'>
+                    seam
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -682,19 +791,23 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2009/11/22/Creating-another-Firefox-Theme/'>
                     Creating (another) Firefox Theme
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   22 November 2009
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/firefox/'></a>
-                  firefox
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/firefox/'>
+                    firefox
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -744,23 +857,31 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/'>
                     Replacing FacesMessages with Growl alerts
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   10 August 2009
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/growl/'></a>
-                  growl
-                  <a href='/blog/tags/jsf/'></a>
-                  jsf
-                  <a href='/blog/tags/richfaces/'></a>
-                  richfaces
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/growl/'>
+                    growl
+                  </a>
+                  |
+                  <a href='/blog/tags/jsf/'>
+                    jsf
+                  </a>
+                  |
+                  <a href='/blog/tags/richfaces/'>
+                    richfaces
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -841,17 +962,19 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks/'>
                     ul horizontal tab menus, cross browser, with no hacks
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   28 May 2009
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -891,25 +1014,35 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2009/03/01/Recovering-deleted-files-from-Windows-and-Linux-and-a-little-forensics/'>
                     Recovering deleted files from Windows and Linux... and a little forensics
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   01 March 2009
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Utils/'></a>
-                  Utils
-                  <a href='/blog/tags/file/'></a>
-                  file
-                  <a href='/blog/tags/forensics/'></a>
-                  forensics
-                  <a href='/blog/tags/recovery/'></a>
-                  recovery
-                  <a href='/blog/tags/undelete/'></a>
-                  undelete
+                <h4 class='tags'>
+                  <a href='/blog/tags/Utils/'>
+                    Utils
+                  </a>
+                  |
+                  <a href='/blog/tags/file/'>
+                    file
+                  </a>
+                  |
+                  <a href='/blog/tags/forensics/'>
+                    forensics
+                  </a>
+                  |
+                  <a href='/blog/tags/recovery/'>
+                    recovery
+                  </a>
+                  |
+                  <a href='/blog/tags/undelete/'>
+                    undelete
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -940,21 +1073,27 @@
           <div class='post-preview'>
             <div class='post'>
               <header>
-                <h2 id='post-title'>
+                <h2 class='title' id='post-title'>
                   <a href='/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not/'>
                     How to make money off of a Firefox theme (or not)
                   </a>
                 </h2>
-                <h3>
+                <h3 class='date'>
                   24 February 2009
                 </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/firefox/'></a>
-                  firefox
-                  <a href='/blog/tags/theme/'></a>
-                  theme
+                <h4 class='tags'>
+                  <a href='/blog/tags/Java/'>
+                    Java
+                  </a>
+                  |
+                  <a href='/blog/tags/firefox/'>
+                    firefox
+                  </a>
+                  |
+                  <a href='/blog/tags/theme/'>
+                    theme
+                  </a>
+                  |
                 </h4>
               </header>
               <div class='content'>
@@ -983,36 +1122,6 @@
                 <p></p>
                 
                 <p>I think I will either develop another skin much better than ANTHEM, or I may just work for free for the rest of my life and die a poor (but appreciated) man. I think it's easier to get into Heaven if we die poor, right? Ah, the life of open source. To me it really is worth it to use your talent and provide something that makes people's life better. I don't care what anybody says, you get it back (and usually doubled) at some point in your life.</p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 id='post-title'>
-                  <a href='/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released/'>
-                    JBoss Portlet Bridge Beta 6 Released!
-                  </a>
-                </h2>
-                <h3>
-                  25 January 2009
-                </h3>
-                <h4>
-                  <a href='/blog/tags/Java/'></a>
-                  Java
-                  <a href='/blog/tags/bridge/'></a>
-                  bridge
-                  <a href='/blog/tags/jsf/'></a>
-                  jsf
-                  <a href='/blog/tags/portlet/'></a>
-                  portlet
-                </h4>
-              </header>
-              <div class='content'>
-                <p>Read about it here: <a href="http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html">http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html</a></p>
               </div>
               <div class='comments'>
                 
