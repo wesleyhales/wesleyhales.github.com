@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
     <title>
       wesleyhales.com: 404
     </title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <link href='/stylesheets/global.css' media='screen, print' rel='stylesheet' type='text/css' />
     <link href='/blog.atom' rel='alternate' type='application/atom+xml' />
+    <script src='/js/modernizr.js' type='text/javascript'></script>
   </head>
   <body>
     <header>
-      <div class='header-box'>
+      <div class='header-box' onclick="window.location = 'http://wesleyhales.com'">
         <div class='logo-bold'>wesleyhales<span>.com</span></div>
         <nav class='console'>
-          <ul class='menu'>
-            <li class='selected'>
+          <ul id='menu'>
+            <li id='home'>
               <a href='/index.html'>Blog</a>
             </li>
-            <li>
-              <a href='/projects/index.html'>Projects</a>
+            <li id='design'>
+              <a href='/design/?p=design'>Design</a>
             </li>
-            <li>
-              <a href='/contact/index.html'>Contact</a>
+            <li id='projects'>
+              <a href='/projects/?p=projects'>Projects</a>
+            </li>
+            <li id='contact'>
+              <a href='/contact/?p=contact'>Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <aside>
+    <aside id='rightcol'>
       <div class='shadow-helper'>
         <div class='left-toolbar'>
+          <section class='tweets'>
+            <header>
+              <h1 class='tweets-title'>
+                <a href='http://twitter.com/wesleyhales'>
+                  <img src='//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' />
+                  My Tweets
+                </a>
+              </h1>
+              <div id='twitter_div'>
+                <ul id='twitter_update_list'></ul>
+              </div>
+            </header>
+          </section>
           <section class='tags'>
             <header>
               <h1 class='tags-title'>
@@ -40,10 +57,16 @@
               <a href='/blog/tags/2.0/'>2.0</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/2011/'>2011</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/301/'>301</a>
             </span>
             <span class='tag tag-1'>
               <a href='/blog/tags/Design/'>Design</a>
+            </span>
+            <span class='tag tag-1'>
+              <a href='/blog/tags/JSF/'>JSF</a>
             </span>
             <span class='tag tag-6'>
               <a href='/blog/tags/Java/'>Java</a>
@@ -53,6 +76,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/Utils/'>Utils</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/aerogear/'>aerogear</a>
             </span>
             <span class='tag tag-1'>
               <a href='/blog/tags/ajax/'>ajax</a>
@@ -84,7 +110,7 @@
             <span class='tag tag-0'>
               <a href='/blog/tags/cargo/'>cargo</a>
             </span>
-            <span class='tag tag-0'>
+            <span class='tag tag-1'>
               <a href='/blog/tags/cdi/'>cdi</a>
             </span>
             <span class='tag tag-0'>
@@ -145,13 +171,13 @@
               <a href='/blog/tags/html5/'>html5</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/html5e/'>html5e</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/infinispan/'>infinispan</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/innerhtml/'>innerhtml</a>
-            </span>
-            <span class='tag tag-1'>
-              <a href='/blog/tags/java/'>java</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jazoon/'>jazoon</a>
@@ -161,6 +187,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jesus/'>jesus</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/jetty/'>jetty</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/jms/'>jms</a>
@@ -176,6 +205,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/kick/'>kick</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/life/'>life</a>
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/lrd/'>lrd</a>
@@ -232,33 +264,33 @@
               <a href='/blog/tags/undelete/'>undelete</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/util/'>util</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/vacation/'>vacation</a>
             </span>
             <span class='tag tag-1'>
               <a href='/blog/tags/web/'>web</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/websocket/'>websocket</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/weld/'>weld</a>
             </span>
           </section>
-          <section class='tweets'>
-            <header>
-              <h1 class='tweets-title'>
-                <a href='http://twitter.com/wesleyhales'>
-                  <img src='//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' />
-                  My Tweets
-                </a>
-              </h1>
-              <div id='twitter_div'>
-                <ul id='twitter_update_list'></ul>
-              </div>
-            </header>
-          </section>
+          <div class='none' id='fillitkillit'>
+            Why waste this space?
+            <br />
+            <a href='javascript:fillit();void(0)'>fill</a>
+            |
+            <a href='javascript:killit();void(0)'>kill</a>
+          </div>
         </div>
       </div>
     </aside>
     <div id='main'>
-      <div class='post-container rounded-5px'>
+      <div id='post-container'>
         <div class='article-list'>
           <div class='projects'>
             <header>
@@ -271,6 +303,27 @@
             </p>
             <br />
             <div class='site-links'>
+              <ul>
+                <li>
+                  <a href='/blog/2012/02/08/Starting-a-New-Project-at-JBoss/'>
+                    AeroGear - Mobile, HTML5, and Auwesome
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href='/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets/'>
+                    Pushing CDI Events to the Browser with WebSockets
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href='/blog/2011/12/29/2011-Year-In-Review/'>
+                    2011 Year In Review
+                  </a>
+                </li>
+              </ul>
               <ul>
                 <li>
                   <a href='/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/'>
@@ -669,7 +722,6 @@
       </div>
     </div>
     <br class='clear' />
-    <script src='/js/modernizr.js' type='text/javascript'></script>
     <script src='//platform.twitter.com/widgets.js' type='text/javascript'></script>
     <script src='http://twitter.com/javascripts/blogger.js' type='text/javascript'></script>
     <script type='text/javascript'>
@@ -686,6 +738,89 @@
             statusHTML.push('<li><div>'+status+'</div><div class="actions"><a href="http://twitter.com/'+username+'/statuses/'+twitters[i].id_str+'">'+relative_time(twitters[i].created_at)+'</a>|<a class="tweet_action tweet_retweet" href="http://twitter.com/intent/retweet?tweet_id='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png">retweet</a>|<a class="tweet_action tweet_reply" href="http://twitter.com/intent/tweet?in_reply_to='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/reply.png">reply</a></div></li>');
           }
           document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
+        }
+        
+        // my custom JS
+        
+        //get a request pramaeter
+        function getParameterByName(name) {
+          var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+          return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }   
+        
+        //reckless abandon - adding querySelector as an option to getElementById
+        var orig = document.getElementById;
+        document.getElementById = function(){
+          if (document.querySelector){
+              return document.querySelector('#' + arguments[0]);
+          }else{
+              return orig(arguments[0]);
+          }
+        }   
+        
+        //navigation based on above method... could be better
+        if(getParameterByName("p") == "design"){
+          document.getElementById('design').className = 'selected';
+        } else if(getParameterByName("p") == "projects"){
+          document.getElementById('projects').className = 'selected';
+        } else if(getParameterByName("p") == "contact"){
+          document.getElementById('contact').className = 'selected';
+        } else {
+          document.getElementById('home').className = 'selected';
+        }
+        //-----------------------------------------/end nav
+        
+        var killed = false;
+        
+        if((!Modernizr.touch || window.innerWidth > 980)) {
+          try{
+            //todo need to handle orientation change here as well
+            window.onscroll = function(){
+              if(!killed){
+                if(typeof( window.pageYOffset ) == 'number'){
+                  if(window.pageYOffset > 1650) {
+                    showNotif();
+                  }else{
+                    document.getElementById("fillitkillit").className = 'sticky-top-right notif transition hide';
+                  }
+                }else{
+                  //lets deal with IE for the hell of it
+                  if(document.documentElement.scrollTop > 1650 ){
+                    showNotif();
+                  }else{
+                    document.getElementById("fillitkillit").className = 'none';
+                  }
+                }
+              }
+            }
+          }catch(e){
+            //swallow
+          }
+        }
+        
+        function showNotif(){
+          document.getElementById("fillitkillit").className = 'sticky-top-right notif transition show';
+        }
+        //
+        function fillit() {
+          document.getElementById('rightcol').className = 'hidden';
+          document.getElementById('post-container').style.width = '100%';
+          document.getElementById('post-container').style.padding = '15px 0 15px 15px';
+          document.getElementById('post-container').className = 'transition';
+          document.getElementById('main').style.margin = '154px 0 0 0';
+          document.getElementById('main').className = 'transition';
+          killit();
+        }
+        
+        function killit() {
+          if(document.documentElement){
+             //again, deal with IE
+             document.getElementById("fillitkillit").className = 'none'
+          }else{
+             document.getElementById("fillitkillit").className = 'sticky-top-right notif transition hide'  
+          }
+          
+          killed = true;
         }
       //]]>
     </script>
