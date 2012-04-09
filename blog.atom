@@ -182,102 +182,100 @@
     <updated>2011-12-29T00:00:00Z</updated>
     <link href='http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html' rel='alternate' type='text/html' />
     <summary>
-      
-      This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)  
+      This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)
       
       Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
-        
+      http://refcardz.dzone.com/refcardz/mastering-portals-portlet
       
       Learned that CSS3 is replacing Photoshop
-        
+      http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/
       
-      Watched the entire Battlestar Galactica series on Netflix.  
+      Watched the entire Battlestar Galactica series on Netflix.
       
-      Mourned the loss of Stargate Universe  
+      Mourned the loss of Stargate Universe
       
       Posted this blog entry and later joined the RichFaces team because of it
-        
+      http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/
       
       Realized that my motivation on the portlet bridge project was exhausted
-        
+      http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/
       
       However, I proudly took the project through passing the TCK
-        
+      http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck
       
-      Had a......
+      Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
+      http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/
+      
+      Presented at JBoss World for the......
     </summary>
     <content type='html'>
-      &lt;p&gt;
-      This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)  
+      &lt;p&gt;This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)&lt;/p&gt;
       
-      Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
-      &lt;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&gt;  
+      &lt;p&gt;Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
+      &lt;a href=&quot;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&quot;&gt;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&lt;/a&gt;&lt;/p&gt;
       
-      Learned that CSS3 is replacing Photoshop
-      &lt;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&gt;  
+      &lt;p&gt;Learned that CSS3 is replacing Photoshop
+      &lt;a href=&quot;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&quot;&gt;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&lt;/a&gt;&lt;/p&gt;
       
-      Watched the entire Battlestar Galactica series on Netflix.  
+      &lt;p&gt;Watched the entire Battlestar Galactica series on Netflix.&lt;/p&gt;
       
-      Mourned the loss of Stargate Universe  
+      &lt;p&gt;Mourned the loss of Stargate Universe&lt;/p&gt;
       
-      Posted this blog entry and later joined the RichFaces team because of it
-      &lt;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&gt;  
+      &lt;p&gt;Posted this blog entry and later joined the RichFaces team because of it
+      &lt;a href=&quot;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&quot;&gt;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&lt;/a&gt;&lt;/p&gt;
       
-      Realized that my motivation on the portlet bridge project was exhausted
-      &lt;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&gt;  
+      &lt;p&gt;Realized that my motivation on the portlet bridge project was exhausted
+      &lt;a href=&quot;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&quot;&gt;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&lt;/a&gt;&lt;/p&gt;
       
-      However, I proudly took the project through passing the TCK
-      &lt;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&gt;  
+      &lt;p&gt;However, I proudly took the project through passing the TCK
+      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&lt;/a&gt;&lt;/p&gt;
       
-      Had a lot of fun with @tech4j creating JBoss’ first mobile web demo 
-      &lt;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&gt;  
+      &lt;p&gt;Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
+      &lt;a href=&quot;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&quot;&gt;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&lt;/a&gt;&lt;/p&gt;
       
-      Presented at JBoss World for the first time
-      &lt;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&gt;  
+      &lt;p&gt;Presented at JBoss World for the first time
+      &lt;a href=&quot;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&quot;&gt;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&lt;/a&gt;&lt;/p&gt;
       
-      Read JavaScript The Good Parts (again)  
+      &lt;p&gt;Read JavaScript The Good Parts (again)&lt;/p&gt;
       
-      Dressed up like a white bunny and had some fun with @burrsutter
-      &lt;http://topsy.com/vimeo.com/27534958&gt;  
+      &lt;p&gt;Dressed up like a white bunny and had some fun with @burrsutter
+      &lt;a href=&quot;http://topsy.com/vimeo.com/27534958&quot;&gt;http://topsy.com/vimeo.com/27534958&lt;/a&gt;&lt;/p&gt;
       
-      Was in the right place at the right time at JBoss and took a new career path
-      &lt;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&gt;  
+      &lt;p&gt;Was in the right place at the right time at JBoss and took a new career path
+      &lt;a href=&quot;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&quot;&gt;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&lt;/a&gt;&lt;/p&gt;
       
-      My wife gave birth to the sweetest, most beautiful baby girl in the whole world.  
+      &lt;p&gt;My wife gave birth to the sweetest, most beautiful baby girl in the whole world.&lt;/p&gt;
       
-      Formed Atlanta’s first HTML5 User Group
-      &lt;http://www.meetup.com/AtlantaHTML5/&gt;  
+      &lt;p&gt;Formed Atlanta’s first HTML5 User Group
+      &lt;a href=&quot;http://www.meetup.com/AtlantaHTML5/&quot;&gt;http://www.meetup.com/AtlantaHTML5/&lt;/a&gt;&lt;/p&gt;
       
-      Presented at JavaOne for the first time
-      &lt;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&gt;  
+      &lt;p&gt;Presented at JavaOne for the first time
+      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&lt;/a&gt;&lt;/p&gt;
       
-      Proposed a new way to handle AJAX on mobile devices
-      &lt;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&gt;  
+      &lt;p&gt;Proposed a new way to handle AJAX on mobile devices
+      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&lt;/a&gt;&lt;/p&gt;
       
-      Wrote an article for HTML5Rocks.com
-      &lt;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&gt;  
+      &lt;p&gt;Wrote an article for HTML5Rocks.com
+      &lt;a href=&quot;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&quot;&gt;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&lt;/a&gt;&lt;/p&gt;
       
-      Watched all episodes of Breaking Bad on Netflix  
+      &lt;p&gt;Watched all episodes of Breaking Bad on Netflix&lt;/p&gt;
       
-      Lead the development of the RichFaces mobile effort
-      &lt;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&gt;
-      &lt;http://vimeo.com/31616425&gt;
+      &lt;p&gt;Lead the development of the RichFaces mobile effort
+      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&lt;/a&gt;
+      &lt;a href=&quot;http://vimeo.com/31616425&quot;&gt;http://vimeo.com/31616425&lt;/a&gt;&lt;/p&gt;
       
-      Helped form Atlanta’s first JBoss User Group with long time friends from @shadowsoftnews
-      &lt;http://vimeo.com/33795907&gt;  
+      &lt;p&gt;Helped form Atlanta’s first JBoss User Group with long time friends from @shadowsoftnews
+      &lt;a href=&quot;http://vimeo.com/33795907&quot;&gt;http://vimeo.com/33795907&lt;/a&gt;&lt;/p&gt;
       
-      Signed a contract with O’Reilly Media to write a book called “HTML5 Architecture”
-      *coming soon*... I hope ;)  
+      &lt;p&gt;Signed a contract with O’Reilly Media to write a book called “HTML5 Architecture”
+      &lt;em&gt;coming soon&lt;/em&gt;... I hope ;)&lt;/p&gt;
       
-      Joined the native web apps community group @W3C
-      &lt;http://www.w3.org/community/native-web-apps/&gt;  
-       
-      Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.  
+      &lt;p&gt;Joined the native web apps community group @W3C
+      &lt;a href=&quot;http://www.w3.org/community/native-web-apps/&quot;&gt;http://www.w3.org/community/native-web-apps/&lt;/a&gt;&lt;/p&gt;
       
-      2011 has been a mind blowing year and I’m looking forward to topping it in 2012.
-      &lt;p&gt;
+      &lt;p&gt;Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.&lt;/p&gt;
       
-      &lt;/p&gt;&lt;/p&gt;
+      &lt;p&gt;2011 has been a mind blowing year and I’m looking forward to topping it in 2012.&lt;/p&gt;
     </content>
   </entry>
   <entry>
