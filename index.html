@@ -123,6 +123,9 @@
               <a href='/blog/tags/css/'>css</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/css3/'>css3</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/demo/'>demo</a>
             </span>
             <span class='tag tag-1'>
@@ -180,6 +183,9 @@
               <a href='/blog/tags/innerhtml/'>innerhtml</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/iscroll/'>iscroll</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/jazoon/'>jazoon</a>
             </span>
             <span class='tag tag-1'>
@@ -226,6 +232,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/pdf/'>pdf</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/phonegap/'>phonegap</a>
             </span>
             <span class='tag tag-1'>
               <a href='/blog/tags/portal/'>portal</a>
@@ -292,6 +301,49 @@
     <div id='main'>
       <div id='post-container'>
         <div class='article-list'>
+          <div class='post-preview'>
+            <div class='post'>
+              <header>
+                <h2 class='title' id='post-title'>
+                  <a href='/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/'>
+                    Choppy scrolling on iOS with iscroll and PhoneGap
+                  </a>
+                </h2>
+                <h3 class='date'>
+                  09 April 2012
+                </h3>
+                <h4 class='tags'>
+                  <a href='/blog/tags/phonegap/'>
+                    phonegap
+                  </a>
+                  |
+                  <a href='/blog/tags/css3/'>
+                    css3
+                  </a>
+                  |
+                  <a href='/blog/tags/iscroll/'>
+                    iscroll
+                  </a>
+                  |
+                </h4>
+              </header>
+              <div class='content'>
+                <p>I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
+                Apparently, there is a problem with older browsers using CSS3 selectors like <code>div[style*='foo']</code> in combination with other DOM elements.
+                <a href="http://wesleyhales.com/iscroll"><img src="/images/iscroll.PNG" width=150 alt="iscroll" align="left" style="margin:20px"></a></p>
+                
+                <p>The <a href="http://wesleyhales.com/iscroll">test case</a> was a little tricky to create, seeing that pinpointing this problem required mucho testing.
+                However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
+                styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 <code>[style*='foo']</code> selector.
+                You must run the <a href="http://wesleyhales.com/iscroll">test</a> on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.</p>
+                
+                <br class="clear"/>
+              </div>
+              <div class='comments'>
+                
+              </div>
+            </div>
+          </div>
           <div class='post-preview'>
             <div class='post'>
               <header>
@@ -1035,80 +1087,6 @@
                 
                 <p>This is all in the <a href="https://github.com/richfaces/tweetstream">source code</a>. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&#8230;<br /> 
                 </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/'>
-                    Does Developing Portlets Make You a Better Developer?
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  05 April 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/portal/'>
-                    portal
-                  </a>
-                  |
-                  <a href='/blog/tags/portlets/'>
-                    portlets
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>Working with portlet technology is often discredited for it’s seemingly complex <span class="caps">API</span> and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.<br /> 
-                This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>What if you didn’t have to worry about portlet development gotchas anymore? What if you could develop portlets with the ease and hassle free life that you have with good ol’ servlets? Well, I’m here to tell you that this can be partly achieved with JSR-301 portlet bridge technology.</p></p>
-                
-                
-                <p></p>
-                
-                <p><p>I encourage (actually I dare you) to those who have never even touched a portal to take the JBoss Portlet Bridge for a test drive. It takes <a href="http://downloads.sourceforge.net/project/jboss/GateIn/Portal/3.1.0-FINAL/GateIn-3.1.0-FINAL-jbossas.zip">1 download (GateIn bundled with JBoss)</a> and one maven archetype to get started. You can choose from any combination of plain <span class="caps">JSF</span>, Richfaces, and Seam with<br /> 
-                <code style="color:white">mvn archetype:generate -DarchetypeCatalog=http://bit.ly/jbossportletbridge</code> from the command line.<br /> 
-                <img src="/images/jroller/jbw2011/archetype.gif" alt=""/></p></p>
-                
-                
-                <p></p>
-                
-                <p><p>If you run into any questions or special usecases, we have 7 videos which demo and walk you through just about anything you could think up.<br /> 
-                <a href="http://vimeo.com/wesleyhales/videos/sort:date"><img src="/images/jroller/jbw2011/vimeo.gif" alt="" align="center"/></a></p></p>
-                
-                
-                <p></p>
-                
-                <p><p><a href="http://refcardz.dzone.com/refcardz/mastering-portals-portlet"><img src="/images/jroller/jbw2011/refcard.gif" alt="" align="right"/></a>And for those that like to have a refcard by their side, you can get all the information you need about the story of portal technology and configuration drill downs here: </p><br /> 
-                <p>From <a href="http://refcardz.dzone.com/refcardz/mastering-portals-portlet">“Mastering Portals with a Portlet Bridge”</a> DZone Refcard:<br /> 
-                “A portlet bridge allows you to run application frameworks like <span class="caps">JSF</span> in a portal environment without needing to know anything about the underlying portlet <span class="caps">API</span> or portlet concepts.”<br /> 
-                </p><br /> 
-                <br/><br /> 
-                <p><br /> 
-                <a href="http://www.redhat.com/summit/sessions/jboss.html"><img src="/images/jroller/jbw2011/jbw-2011.gif" alt="" align="left" style="margin:0 15px 25px 0"/></a><br /> 
-                And if all that wasn’t enough, I will be giving a 50 minute talk at JBoss World titled <a href="http://www.redhat.com/summit/sessions/jboss.html">"Making Portals Cool: The Compelling Advantages of a Portlet Bridge"</a> where you can come and personally track me down and specifically tell me about your problems, pains, or happiness with the project or the world in general <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /> JBoss World will be located in Boston from May 3&#8211;6.<br /> 
-                I think <a href="http://www.redhat.com/summit/rates/">early bird pricing</a> ends this Friday (April 8th), so you better hurry if you want to save a little cash.</p> 
-                
-                <p></p></p>
               </div>
               <div class='comments'>
                 
