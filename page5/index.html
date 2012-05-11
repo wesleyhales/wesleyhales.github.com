@@ -19,13 +19,10 @@
               <a href='/index.html'>Blog</a>
             </li>
             <li id='design'>
-              <a href='/design/?p=design'>Design</a>
+              <a href='/design/?p=design'>Projects</a>
             </li>
             <li id='projects'>
-              <a href='/projects/?p=projects'>Projects</a>
-            </li>
-            <li id='contact'>
-              <a href='/contact/?p=contact'>Contact</a>
+              <a href='/contact/?p=contact'>Social Me</a>
             </li>
           </ul>
         </nav>
@@ -34,14 +31,24 @@
     <aside id='rightcol'>
       <div class='shadow-helper'>
         <div class='left-toolbar'>
+          <section class='recent-comments'>
+            <header>
+              <div class='dsq-widget' id='recentcomments'>
+                <h2 class='dsq-widget-title'>
+                  Recent Comments
+                </h2>
+                <script src='http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=24&amp;excerpt_length=200' type='text/javascript'></script>
+              </div>
+            </header>
+          </section>
           <section class='tweets'>
             <header>
-              <h1 class='tweets-title'>
+              <h2 class='tweets-title'>
                 <a href='http://twitter.com/wesleyhales'>
                   <img src='//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' />
-                  My Tweets
+                  Tweets
                 </a>
-              </h1>
+              </h2>
               <div id='twitter_div'>
                 <ul id='twitter_update_list'></ul>
               </div>
@@ -49,9 +56,9 @@
           </section>
           <section class='tags'>
             <header>
-              <h1 class='tags-title'>
+              <h2 class='tags-title'>
                 Tags
-              </h1>
+              </h2>
             </header>
             <span class='tag tag-0'>
               <a href='/blog/tags/2.0/'>2.0</a>
@@ -123,6 +130,9 @@
               <a href='/blog/tags/css/'>css</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/css3/'>css3</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/demo/'>demo</a>
             </span>
             <span class='tag tag-1'>
@@ -180,6 +190,9 @@
               <a href='/blog/tags/innerhtml/'>innerhtml</a>
             </span>
             <span class='tag tag-0'>
+              <a href='/blog/tags/iscroll/'>iscroll</a>
+            </span>
+            <span class='tag tag-0'>
               <a href='/blog/tags/jazoon/'>jazoon</a>
             </span>
             <span class='tag tag-1'>
@@ -226,6 +239,9 @@
             </span>
             <span class='tag tag-0'>
               <a href='/blog/tags/pdf/'>pdf</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/blog/tags/phonegap/'>phonegap</a>
             </span>
             <span class='tag tag-1'>
               <a href='/blog/tags/portal/'>portal</a>
@@ -292,6 +308,56 @@
     <div id='main'>
       <div id='post-container'>
         <div class='article-list'>
+          <div class='post-preview'>
+            <div class='post'>
+              <header>
+                <h2 class='title' id='post-title'>
+                  <a href='/blog/2007/10/29/Another-design/'>
+                    Another design
+                  </a>
+                </h2>
+                <h3 class='date'>
+                  29 October 2007
+                </h3>
+                <h4 class='tags'>
+                  <a href='/blog/tags/Design/'>
+                    Design
+                  </a>
+                  |
+                  <a href='/blog/tags/balls/'>
+                    balls
+                  </a>
+                  |
+                  <a href='/blog/tags/design/'>
+                    design
+                  </a>
+                  |
+                  <a href='/blog/tags/kick/'>
+                    kick
+                  </a>
+                  |
+                </h4>
+              </header>
+              <div class='content'>
+                
+                
+                <p>The designer inside me just won't give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn't going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. </p>
+                
+                
+                <p></p>
+                
+                <p>Some say it's easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)</p>
+                
+                
+                <p></p>
+                
+                <p>With that said, enjoy the new layout and be ready for another in a few months.</p>
+              </div>
+              <div class='comments'>
+                
+              </div>
+            </div>
+          </div>
           <div class='post-preview'>
             <div class='post'>
               <header>
@@ -1430,74 +1496,6 @@
               </div>
             </div>
           </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2007/01/07/JSF-AjaxSlider-Component/'>
-                    JSF AjaxSlider Component
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  07 January 2007
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>This is the first release of my AjaxSlider component. This version works with JSP and Facelets and also extends FacesEvent to provide it's own event/listener. Many thanks to Jonas Jacobi and John Fallows for putting together a great book (<a href="http://apress.com/book/bookDisplay.html?bID=10044">Pro JSF and Ajax</a>).</p>
-                
-                
-                <p></p>
-                
-                <p>I'm also using the <a href="http://wiki.script.aculo.us/scriptaculous/show/SliderDemo">slider functions</a> from the Script.aculo.us library</p>
-                
-                
-                <p></p>
-                
-                <p style="overflow:auto;"> 
-                <object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/Uy26gDkC3CQ"></param><embed src="http://www.youtube.com/v/Uy26gDkC3CQ" type="application/x-shockwave-flash" width="425" height="350"></embed></object></p>
-                
-                
-                <p></p>
-                
-                <br/> 
-                
-                
-                <p>This component in hardly complete and bug free, so any help in debugging is appreciated</p>
-                
-                
-                <p></p>
-                
-                <p>Download the component source, examples, and all necessary resources <a href="http://sourceforge.net/project/showfiles.php?group_id=137466">here</a>(I also included my Idea project file in the download). I will be adding this code to JSF-Comp repository hopefully within the next day or two.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Usage Option 1<p> 
-                <p>You can use AjaxSlider with the following options. This will only use listeners or submit the SliderEvent to a backing bean. It will give you more control in case you do not want to store the list, used in your datatable, in the session (described in option 2). Both listeners are not required, I just added them here to show examples on usage.</p> 
-                
-                <pre> &#x000A;<code> &#x000A;<a name="l10"> <span class="s2">xmlns:hc=</span><span class="s3">"http://www.halesconsulting.com/jsf"</span><span class="s0"> &#x000A;</span></a><a name="l11"> <span class="s2">xmlns:ac=</span><span class="s3">"http://ac"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l12"> &#x000A;</a><a name="l13"> <span class="s0">&lt;</span><span class="s1">style</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l14"> .<span class="s5">range</span><span class="s4">{ &#x000A;</span></a><a name="l15"> <span class="s6">width</span><span class="s4">: </span><span class="s7">200</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l16"> <span class="s6">background</span><span class="s4">: </span><span class="s8">transparent </span><span class="s5">url</span><span class="s4">(</span><span class="s8">"/facelet-sandbox/images/demo_bg.gif"</span><span class="s4">) </span><span class="s8">no-repeat </span><span class="s5">center</span><span class="s4">; &#x000A;</span></a><a name="l17"> <span class="s6">height</span><span class="s4">: </span><span class="s7">20</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l18"> } &#x000A;</a><a name="l19"> &#x000A;</a><a name="l20"> .<span class="s5">Mytest</span><span class="s4">{ &#x000A;</span></a><a name="l21"> <span class="s6">background-color</span><span class="s4">:</span><span class="s8">transparent</span><span class="s4">; &#x000A;</span></a><a name="l22"> } &#x000A;</a><a name="l23"> &#x000A;</a><a name="l24"> .<span class="s5">trailer</span><span class="s4">{ &#x000A;</span></a><a name="l25"> <span class="s6">background</span><span class="s4">: </span><span class="s8">transparent </span><span class="s5">url</span><span class="s4">(</span><span class="s8">"/facelet-sandbox/images/demo_bg_over.gif"</span><span class="s4">) </span><span class="s8">no-repeat </span><span class="s7">0 7</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l26"> <span class="s6">height</span><span class="s4">: </span><span class="s7">20</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l27"> <span class="s6">width</span><span class="s4">: </span><span class="s7">114</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l28"> } &#x000A;</a><a name="l29"> &#x000A;</a><a name="l30"> .<span class="s5">track</span><span class="s4">{ &#x000A;</span></a><a name="l31"> <span class="s6">width</span><span class="s4">: </span><span class="s7">200</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l32"> <span class="s6">height</span><span class="s4">: </span><span class="s7">20</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l33"> <span class="s6">position</span><span class="s4">: </span><span class="s8">absolute</span><span class="s4">; &#x000A;</span></a><a name="l34"> } &#x000A;</a><a name="l35"> &#x000A;</a><a name="l36"> .<span class="s5">handle</span><span class="s4">{ &#x000A;</span></a><a name="l37"> <span class="s6">position</span><span class="s4">: </span><span class="s8">absolute</span><span class="s4">; &#x000A;</span></a><a name="l38"> <span class="s6">width</span><span class="s4">: </span><span class="s7">10</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l39"> <span class="s6">height</span><span class="s4">: </span><span class="s7">25</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l40"> <span class="s6">background</span><span class="s4">:</span><span class="s5">url</span><span class="s4">(</span><span class="s8">"/facelet-sandbox/images/demo_arrow.gif"</span><span class="s4">) </span><span class="s8">no-repeat </span><span class="s5">center</span><span class="s4">; &#x000A;</span></a><a name="l41"> <span class="s6">cursor</span><span class="s4">: </span><span class="s5">col-resize</span><span class="s4">; &#x000A;</span></a><a name="l42"> <span class="s6">left</span><span class="s4">: </span><span class="s7">114</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l43"> } &#x000A;</a><a name="l44"> &#x000A;</a><a name="l45"> <span class="s0">&lt;/</span><span class="s1">style</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l46"> &#x000A;</a><a name="l47"> <span class="s0">&lt;</span><span class="s1">a4j:form </span><span class="s2">id=</span><span class="s3">"form1" </span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l48"> &#x000A;</a><a name="l49"> <span class="s0">&lt;</span><span class="s1">hc:ajaxSlider </span><span class="s2">sliderListener=</span><span class="s3">"&#35;{sliderBean.doShow}"</span><span class="s0"> &#x000A;</span></a><a name="l50"> <span class="s2">onSlide=</span><span class="s3">"</span><span class="s5">true</span><span class="s3">"</span><span class="s0"> &#x000A;</span></a><a name="l51"> <span class="s2">onChange=</span><span class="s3">"</span><span class="s5">true</span><span class="s3">"</span><span class="s0"> &#x000A;</span></a><a name="l52"> <span class="s2">storeResults=</span><span class="s3">"false"</span><span class="s0"> &#x000A;</span></a><a name="l53"> <span class="s2">trackStyleClass=</span><span class="s3">"track"</span><span class="s0"> &#x000A;</span></a><a name="l54"> <span class="s2">styleClass=</span><span class="s3">"Mytest"</span><span class="s0"> &#x000A;</span></a><a name="l55"> <span class="s2">startRange=</span><span class="s3">"0"</span><span class="s0"> &#x000A;</span></a><a name="l56"> <span class="s2">endRange=</span><span class="s3">"50000"</span><span class="s0"> &#x000A;</span></a><a name="l57"> <span class="s2">increment=</span><span class="s3">"10000"</span><span class="s0"> &#x000A;</span></a><a name="l58"> <span class="s2">rangeStyleClass=</span><span class="s3">"range"</span><span class="s0"> &#x000A;</span></a><a name="l59"> <span class="s2">trailer=</span><span class="s3">"true"</span><span class="s0"> &#x000A;</span></a><a name="l60"> <span class="s2">trailerStyleClass=</span><span class="s3">"trailer"</span><span class="s0"> &#x000A;</span></a><a name="l61"> <span class="s2">handleStyleClass=</span><span class="s3">"handle"</span><span class="s0"> &#x000A;</span></a><a name="l62"> <span class="s2">handleValue=</span><span class="s3">"1"</span><span class="s0"> &#x000A;</span></a><a name="l63"> <span class="s2">id=</span><span class="s3">"slider_1" </span><span class="s0">&gt;&lt;</span><span class="s1">hc:sliderListener </span><span class="s2">type=</span><span class="s3">"com.halesconsulting.web.action.MySliderListener" </span><span class="s0">/&gt;&lt;/</span><span class="s1">hc:ajaxSlider</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l64"> &#x000A;</a><a name="l65"> <span class="s0">&lt;/</span><span class="s1">a4j:form</span><span class="s0">&gt;</span> &#x000A;</span></a> &#x000A;</code> </pre> 
-                
-                <p class="pTitle">Usage Option 2<p> 
-                
-                <p>Here we store the list from the UIData object in the session by setting storeResults="true". Obviously, using this option will depend on your situation. But to get the best user experience out of the slider interaction, this was the only way.</p> 
-                
-                <pre> &#x000A;<code><a name="l10"> <span class="s2">xmlns:hc=</span><span class="s3">"http://www.halesconsulting.com/jsf"</span><span class="s0"> &#x000A;</span></a><a name="l11"> <span class="s2">xmlns:ac=</span><span class="s3">"http://ac"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l12"> &#x000A;</a><a name="l13"> <span class="s0">&lt;</span><span class="s1">style</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l14"> .<span class="s5">range</span><span class="s4">{ &#x000A;</span></a><a name="l15"> <span class="s6">width</span><span class="s4">: </span><span class="s7">200</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l16"> <span class="s6">background</span><span class="s4">: </span><span class="s8">transparent </span><span class="s5">url</span><span class="s4">(</span><span class="s8">"/facelet-sandbox/images/demo_bg.gif"</span><span class="s4">) </span><span class="s8">no-repeat </span><span class="s5">center</span><span class="s4">; &#x000A;</span></a><a name="l17"> <span class="s6">height</span><span class="s4">: </span><span class="s7">20</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l18"> } &#x000A;</a><a name="l19"> &#x000A;</a><a name="l20"> .<span class="s5">Mytest</span><span class="s4">{ &#x000A;</span></a><a name="l21"> <span class="s6">background-color</span><span class="s4">:</span><span class="s8">transparent</span><span class="s4">; &#x000A;</span></a><a name="l22"> } &#x000A;</a><a name="l23"> &#x000A;</a><a name="l24"> .<span class="s5">trailer</span><span class="s4">{ &#x000A;</span></a><a name="l25"> <span class="s6">background</span><span class="s4">: </span><span class="s8">transparent </span><span class="s5">url</span><span class="s4">(</span><span class="s8">"/facelet-sandbox/images/demo_bg_over.gif"</span><span class="s4">) </span><span class="s8">no-repeat </span><span class="s7">0 7</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l26"> <span class="s6">height</span><span class="s4">: </span><span class="s7">20</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l27"> <span class="s6">width</span><span class="s4">: </span><span class="s7">114</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l28"> } &#x000A;</a><a name="l29"> &#x000A;</a><a name="l30"> .<span class="s5">track</span><span class="s4">{ &#x000A;</span></a><a name="l31"> <span class="s6">width</span><span class="s4">: </span><span class="s7">200</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l32"> <span class="s6">height</span><span class="s4">: </span><span class="s7">20</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l33"> <span class="s6">position</span><span class="s4">: </span><span class="s8">absolute</span><span class="s4">; &#x000A;</span></a><a name="l34"> } &#x000A;</a><a name="l35"> &#x000A;</a><a name="l36"> .<span class="s5">handle</span><span class="s4">{ &#x000A;</span></a><a name="l37"> <span class="s6">position</span><span class="s4">: </span><span class="s8">absolute</span><span class="s4">; &#x000A;</span></a><a name="l38"> <span class="s6">width</span><span class="s4">: </span><span class="s7">10</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l39"> <span class="s6">height</span><span class="s4">: </span><span class="s7">25</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l40"> <span class="s6">background</span><span class="s4">:</span><span class="s5">url</span><span class="s4">(</span><span class="s8">"/facelet-sandbox/images/demo_arrow.gif"</span><span class="s4">) </span><span class="s8">no-repeat </span><span class="s5">center</span><span class="s4">; &#x000A;</span></a><a name="l41"> <span class="s6">cursor</span><span class="s4">: </span><span class="s5">col-resize</span><span class="s4">; &#x000A;</span></a><a name="l42"> <span class="s6">left</span><span class="s4">: </span><span class="s7">114</span><span class="s8">px</span><span class="s4">; &#x000A;</span></a><a name="l43"> } &#x000A;</a><a name="l44"> &#x000A;</a><a name="l45"> <span class="s0">&lt;/</span><span class="s1">style</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l46"> &#x000A;</a><a name="l47"> &#x000A;</a><a name="l48"> <span class="s0">&lt;</span><span class="s1">a4j:form </span><span class="s2">id=</span><span class="s3">"form1" </span><span class="s2">reRender=</span><span class="s3">"list-body" </span><span class="s2">ajaxSubmit=</span><span class="s3">"true"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l49"> &#x000A;</a><a name="l50"> <span class="s0">&lt;</span><span class="s1">a4j:region </span><span class="s2">id=</span><span class="s3">"stat1"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l51"> &#x000A;</a><a name="l52"> <span class="s0">&lt;</span><span class="s1">a4j:outputPanel </span><span class="s2">id=</span><span class="s3">"slider-body"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l53"> &#x000A;</a><a name="l54"> <span class="s0">&lt;</span><span class="s1">hc:ajaxSlider </span><span class="s2">sliderListener=</span><span class="s3">"&#35;{sliderBean.doShow}"</span><span class="s0"> &#x000A;</span></a><a name="l55"> <span class="s2">for=</span><span class="s3">"carList"</span><span class="s0"> &#x000A;</span></a><a name="l56"> <span class="s2">forValRef=</span><span class="s3">"inventoryList.carInventory"</span><span class="s0"> &#x000A;</span></a><a name="l57"> <span class="s2">filterBy=</span><span class="s3">"getMileage"</span><span class="s0"> &#x000A;</span></a><a name="l58"> <span class="s2">onSlide=</span><span class="s3">"</span><span class="s5">true</span><span class="s3">"</span><span class="s0"> &#x000A;</span></a><a name="l59"> <span class="s2">onChange=</span><span class="s3">"</span><span class="s5">true</span><span class="s3">"</span><span class="s0"> &#x000A;</span></a><a name="l60"> <span class="s2">storeResults=</span><span class="s3">"true"</span><span class="s0"> &#x000A;</span></a><a name="l61"> <span class="s2">trackStyleClass=</span><span class="s3">"track"</span><span class="s0"> &#x000A;</span></a><a name="l62"> <span class="s2">styleClass=</span><span class="s3">"Mytest"</span><span class="s0"> &#x000A;</span></a><a name="l63"> <span class="s2">startRange=</span><span class="s3">"0"</span><span class="s0"> &#x000A;</span></a><a name="l64"> <span class="s2">endRange=</span><span class="s3">"50000"</span><span class="s0"> &#x000A;</span></a><a name="l65"> <span class="s2">increment=</span><span class="s3">"10000"</span><span class="s0"> &#x000A;</span></a><a name="l66"> <span class="s2">rangeStyleClass=</span><span class="s3">"range"</span><span class="s0"> &#x000A;</span></a><a name="l67"> <span class="s2">trailer=</span><span class="s3">"true"</span><span class="s0"> &#x000A;</span></a><a name="l68"> <span class="s2">trailerStyleClass=</span><span class="s3">"trailer"</span><span class="s0"> &#x000A;</span></a><a name="l69"> <span class="s2">handleStyleClass=</span><span class="s3">"handle"</span><span class="s0"> &#x000A;</span></a><a name="l70"> <span class="s2">handleValue=</span><span class="s3">"1"</span><span class="s0"> &#x000A;</span></a><a name="l71"> <span class="s2">id=</span><span class="s3">"slider_1" </span><span class="s0">&gt;&lt;</span><span class="s1">hc:sliderListener </span><span class="s2">type=</span><span class="s3">"com.halesconsulting.web.action.MySliderListener" </span><span class="s0">/&gt;&lt;/</span><span class="s1">hc:ajaxSlider</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l72"> &#x000A;</a><a name="l73"> <span class="s0">&lt;/</span><span class="s1">a4j:outputPanel</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l74"> &#x000A;</a><a name="l75"> <span class="s0">&lt;</span><span class="s1">a4j:outputPanel </span><span class="s2">id=</span><span class="s3">"list-body"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l76"> &#x000A;</a><a name="l77"> <span class="s0">&lt;</span><span class="s1">t:dataTable </span><span class="s2">id=</span><span class="s3">"carIndex"</span><span class="s0"> &#x000A;</span></a><a name="l94"> &#x000A;</a><a name="l95"> <span class="s0">&lt;/</span><span class="s1">t:dataTable</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l96"> &#x000A;</a><a name="l97"> <span class="s0">&lt;</span><span class="s1">t:dataTable </span><span class="s2">id=</span><span class="s3">"carList"</span>&nbsp;<span class="s2">value=</span><span class="s3">&#35;{inventoryList.carInventory}</span><span class="s0"> &#x000A;</span></a><a name="l141"> &#x000A;</a><a name="l142"> <span class="s0">&lt;</span><span class="s1">ac:ajaxDataScroller </span><span class="s2">id=</span><span class="s3">"scroll_1"</span><span class="s0"> &#x000A;</span></a><a name="l146"> &#x000A;</a><a name="l147"> <span class="s0">&lt;/</span><span class="s1">a4j:outputPanel</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l148"> &#x000A;</a><a name="l149"> <span class="s0">&lt;</span><span class="s1">a4j:status </span><span class="s2">for=</span><span class="s3">"stat1" </span><span class="s2">forceId=</span><span class="s3">"true" </span><span class="s2">id=</span><span class="s3">"ajaxStatus"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l150"> <span class="s0">&lt;</span><span class="s1">f:facet </span><span class="s2">name=</span><span class="s3">"start"</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l151"> <span class="s0">&lt;</span><span class="s1">div </span><span class="s2">id=</span><span class="s3">"loading-modal"</span><span class="s0">&gt;&lt;/</span><span class="s1">div</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l152"> <span class="s0">&lt;/</span><span class="s1">f:facet</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l153"> <span class="s0">&lt;/</span><span class="s1">a4j:status</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l154"> &#x000A;</a><a name="l155"> <span class="s0">&lt;/</span><span class="s1">a4j:region</span><span class="s0">&gt;</span><span class="s4"> &#x000A;</span></a><a name="l156"> &#x000A;</a><a name="l157"> <span class="s0">&lt;/</span><span class="s1">a4j:form</span><span class="s0">&gt;</span> &#x000A;</code> </pre> 
-                
-                <p>All of the attribute descriptions are available in the faces-config.xml file if you have any questions. Feedback is more than welcomed and appreciated.</p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
           <div class="pagination-links"><a href="/page4/" class="previous-link">Previous</a> <a href="/" class="page-link">1</a> <a href="/page2/" class="page-link">2</a> <span class="skip">...</span><a href="/page4/" class="page-link">4</a> <span class="current-page">5</span> <a href="/page6/" class="page-link">6</a> <a href="/page6/" class="next-link">Next</a> </div>
         </div>
       </div>
@@ -1509,6 +1507,7 @@
       //<![CDATA[
         function twitterCallback3(twitters) {
           var statusHTML = [];
+          //var ls = 'localStorage' in window && window['localStorage'] !== null;
           for (var i=0; i<twitters.length; i++){
             var username = twitters[i].user.screen_name;
             var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
@@ -1549,9 +1548,10 @@
         } else {
           document.getElementById('home').className = 'selected';
         }
+        
         //-----------------------------------------/end nav
         
-        var killed = false;
+        /*var killed = false;
         
         if((!Modernizr.touch || window.innerWidth > 980)) {
           try{
@@ -1602,7 +1602,7 @@
           }
           
           killed = true;
-        }
+        }*/
       //]]>
     </script>
     <script src='http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;amp;count=2' type='text/javascript'></script>

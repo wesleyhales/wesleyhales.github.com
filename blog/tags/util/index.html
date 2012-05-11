@@ -19,13 +19,10 @@
               <a href='/index.html'>Blog</a>
             </li>
             <li id='design'>
-              <a href='/design/?p=design'>Design</a>
+              <a href='/design/?p=design'>Projects</a>
             </li>
             <li id='projects'>
-              <a href='/projects/?p=projects'>Projects</a>
-            </li>
-            <li id='contact'>
-              <a href='/contact/?p=contact'>Contact</a>
+              <a href='/contact/?p=contact'>Social Me</a>
             </li>
           </ul>
         </nav>
@@ -34,6 +31,16 @@
     <aside id='rightcol'>
       <div class='shadow-helper'>
         <div class='left-toolbar'>
+          <section class='recent-comments'>
+            <header>
+              <div class='dsq-widget' id='recentcomments'>
+                <h2 class='dsq-widget-title'>
+                  Recent Comments
+                </h2>
+                <script src='http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=24&amp;excerpt_length=200' type='text/javascript'></script>
+              </div>
+            </header>
+          </section>
           <section class='tweets'>
             <header>
               <h2 class='tweets-title'>
@@ -346,6 +353,7 @@
       //<![CDATA[
         function twitterCallback3(twitters) {
           var statusHTML = [];
+          //var ls = 'localStorage' in window && window['localStorage'] !== null;
           for (var i=0; i<twitters.length; i++){
             var username = twitters[i].user.screen_name;
             var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
@@ -386,9 +394,10 @@
         } else {
           document.getElementById('home').className = 'selected';
         }
+        
         //-----------------------------------------/end nav
         
-        var killed = false;
+        /*var killed = false;
         
         if((!Modernizr.touch || window.innerWidth > 980)) {
           try{
@@ -439,7 +448,7 @@
           }
           
           killed = true;
-        }
+        }*/
       //]]>
     </script>
     <script src='http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;amp;count=2' type='text/javascript'></script>

@@ -1,4 +1,4 @@
-/* line 8, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 8, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,43 +19,43 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 /* remember to define focus styles! */
-/* line 20, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 20, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 :focus {
   outline: 0;
 }
 
-/* line 23, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 23, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 body {
   /*	line-height: 1;*/
   color: black;
   background: white;
 }
 
-/* line 28, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 28, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 32, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 32, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
 }
 
-/* line 36, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 36, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
 }
 
-/* line 41, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 41, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: "";
 }
 
-/* line 44, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
+/* line 44, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_reset.scss */
 blockquote, q {
   quotes: "" "";
 }
@@ -64,187 +64,187 @@ blockquote, q {
 /*from http://wesleyhales.com/entry/css_framework*/
 /* used by legacy blog posts up to 10/29/2011    */
 /*************************************************/
-/* line 5, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 5, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 9, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 9, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-center-margin {
   margin: 0 auto 0 auto;
 }
 
-/* line 13, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 13, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .float-left {
   float: left;
 }
 
-/* line 17, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 17, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .float-right {
   float: right;
 }
 
-/* line 21, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 21, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-left {
   text-align: left !important;
 }
 
-/* line 25, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 25, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 29, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 29, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-top {
   vertical-align: top;
 }
 
-/* line 33, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 33, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .half-width {
   width: 49%;
 }
 
-/* line 37, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 37, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .quarter-width {
   width: 24.9%;
 }
 
-/* line 41, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 41, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .three-quarter-width {
   width: 74.9%;
 }
 
-/* line 45, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 45, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .full-width {
   width: 100%;
 }
 
-/* line 49, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 49, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .third-width {
   width: 32.9%;
 }
 
-/* line 53, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 53, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .two-third-width {
   width: 65.9%;
 }
 
-/* line 57, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 57, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .auto-width {
   width: auto;
   padding: 0 7px 0 0;
 }
 
-/* line 62, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 62, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .ten-percent-width {
   width: 10%;
 }
 
-/* line 67, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 67, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .third-width-pad5 {
   width: 32.5%;
   padding: 5px;
 }
 
-/* line 72, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 72, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .two-third-width-pad5 {
   width: 65.5%;
   padding: 5px;
 }
 
-/* line 77, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 77, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-top-bottom {
   margin: 10px 0 10px 0;
 }
 
-/* line 81, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 81, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-bottom {
   margin: 0 0 10px 0;
 }
 
-/* line 85, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 85, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-top {
   margin: 10px 0 0 0;
 }
 
-/* line 89, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 89, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .twentypx-top {
   margin: 20px 0 0 0;
 }
 
-/* line 93, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 93, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-right {
   margin: 0 10px 0 0;
 }
 
-/* line 97, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 97, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-left {
   margin: 0 0 0 10px;
 }
 
-/* line 101, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 101, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .clear {
   clear: both;
 }
 
-/* line 105, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 105, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 109, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 109, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 113, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 113, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .pad5 {
   padding: 5px;
 }
 
-/* line 117, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 117, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .pad10 {
   padding: 10px;
 }
 
-/* line 121, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 121, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .margin10 {
   margin: 10px;
 }
 
-/* line 125, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 125, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 129, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 129, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .relative {
   position: relative;
 }
 
-/* line 133, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 133, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .hidden {
   display: none;
 }
 
-/* line 137, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 137, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .inline {
   display: inline;
 }
 
-/* line 141, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 141, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .error {
   color: #b0241c;
 }
 
-/* line 145, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 145, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .bold {
   font-weight: bold;
   text-decoration: none;
 }
 
 /*rounded corners*/
-/* line 152, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
+/* line 152, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_base.scss */
 .rounded-5px {
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -253,14 +253,14 @@ blockquote, q {
 
 /*@import "partials/brand";*/
 /*@import "partials/global";*/
-/* line 1, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 1, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu {
   margin: 0;
   line-height: 100%;
 }
 
 /* sub levels link hover */
-/* line 8, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 8, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li:hover a,
 #menu li:hover li a {
   background: none;
@@ -270,7 +270,7 @@ blockquote, q {
   -moz-box-shadow: none;
 }
 
-/* line 16, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 16, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul a:hover {
   background: #f8f7de !important;
   /* for non-css3 browsers */
@@ -287,7 +287,7 @@ blockquote, q {
 }
 
 /* level 2 list */
-/* line 28, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 28, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul {
   background: #fff;
   /* for non-css3 browsers */
@@ -314,33 +314,33 @@ blockquote, q {
 }
 
 /* dropdown */
-/* line 50, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 50, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu li:hover > ul {
   display: block;
 }
 
-/* line 53, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 53, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li {
   float: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 58, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 58, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul a {
   font-weight: normal;
   /*text-shadow: 0 1px 1px rgba(255, 255, 255, .9);*/
 }
 
 /* level 3+ list */
-/* line 63, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 63, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul ul {
   left: 181px;
   top: -3px;
 }
 
 /* rounded corners for first and last child */
-/* line 68, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 68, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li:first-child > a {
   -webkit-border-top-left-radius: 9px;
   -moz-border-radius-topleft: 9px;
@@ -348,7 +348,7 @@ blockquote, q {
   -moz-border-radius-topright: 9px;
 }
 
-/* line 74, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
+/* line 74, /Users/wesleyhales/dev/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li:last-child > a {
   -webkit-border-bottom-left-radius: 9px;
   -moz-border-radius-bottomleft: 9px;
@@ -639,42 +639,43 @@ div.left-toolbar {
   width: 360px;
 }
 
-/* line 253 */
-div.left-toolbar > section > header > h2 {
+/* line 254 */
+div.left-toolbar > section > header > h2,
+div.left-toolbar > section > header > div > h2 {
   border-bottom: 1px solid #777;
   color: #777;
 }
 
-/* line 258 */
+/* line 259 */
 div.left-toolbar > section {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-/* line 264 */
+/* line 265 */
 section.tags a {
   font-size: 82%;
   color: #174e6e;
 }
 
-/* line 269 */
+/* line 270 */
 h2.tweets-title {
   position: relative;
 }
 
-/* line 273 */
+/* line 274 */
 h2.tweets-title > a > img {
   position: absolute;
   right: 5px;
 }
 
-/* line 278 */
+/* line 279 */
 h2.tweets-title > a:visited {
   color: #777;
 }
 
-/* line 282 */
+/* line 283 */
 section.tweets #twitter_div ul li {
   /* background: #f8f8f8 -moz-linear-gradient(90deg, rgba(0, 0, 0, .08) 2%, rgba(255, 255, 255, .1) 98%);
      background: #f8f8f8 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(0, 0, 0, .08)));*/
@@ -684,7 +685,7 @@ section.tweets #twitter_div ul li {
   margin: 5px;
 }
 
-/* line 291 */
+/* line 292 */
 section.tweets div.actions {
   font-size: 80%;
 }
@@ -692,7 +693,7 @@ section.tweets div.actions {
 /*************************************************
 Main Content
 *************************************************/
-/* line 299 */
+/* line 300 */
 div#main {
   display: block;
   position: absolute;
@@ -704,7 +705,7 @@ div#main {
   margin: 154px 364px 0 0;
 }
 
-/* line 310 */
+/* line 311 */
 div#post-container {
   /*   border: 3px solid #c7d4dc;*/
   width: 87%;
@@ -712,39 +713,39 @@ div#post-container {
   margin: 10px auto 0 auto;
 }
 
-/* line 317 */
+/* line 318 */
 .post-preview {
   width: 95%;
 }
 
-/* line 321 */
+/* line 322 */
 .post {
   padding-bottom: 2em;
   margin: 2em 2em 2em 0;
   border-bottom: 1px solid #888;
 }
-/* line 325 */
+/* line 326 */
 .post h2 {
   font-size: 170%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 331 */
+/* line 332 */
 .post h2.title {
   font-size: 170%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 337 */
+/* line 338 */
 .post h3 {
   font-size: 120%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 343 */
+/* line 344 */
 .post h3.date {
   font-size: 80%;
   font-weight: bold;
@@ -754,12 +755,12 @@ div#post-container {
   position: absolute;
   text-align: center;
 }
-/* line 352 */
+/* line 353 */
 .post h4 {
   font-size: 90%;
   font-weight: bold;
 }
-/* line 356 */
+/* line 357 */
 .post h4.tags {
   font-size: 90%;
   border-bottom: 1px dotted #999;
@@ -769,39 +770,39 @@ div#post-container {
   font-family: AvenirRegular;
   color: #999;
 }
-/* line 365 */
+/* line 366 */
 .post h4.tags a {
   color: #6D90BD;
 }
-/* line 368 */
+/* line 369 */
 .post .content {
   font-size: 1em;
 }
-/* line 370 */
+/* line 371 */
 .post .content p {
   padding: 5px 0 5px 0;
 }
-/* line 374 */
+/* line 375 */
 .post ul {
   list-style: circle;
   list-style-position: inside;
 }
-/* line 377 */
+/* line 378 */
 .post ul li {
   margin: 5px 0 5px 0;
 }
 
-/* line 383 */
+/* line 384 */
 .fontface .post header {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 386 */
+/* line 387 */
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
 }
 
-/* line 392 */
+/* line 393 */
 .notes {
   border: 1px solid #ececec;
   background: white;
@@ -828,7 +829,7 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 410 */
+/* line 411 */
 .notif {
   border: 1px solid #ececec;
   background: #ffff88;
@@ -855,7 +856,7 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 428 */
+/* line 429 */
 .sticky-top-right {
   position: fixed;
   top: 10px;
@@ -863,7 +864,7 @@ div#post-container {
   width: 250px;
 }
 
-/* line 435 */
+/* line 436 */
 .download {
   padding: 10px;
   margin: 15px 15px 0 0;
@@ -872,13 +873,13 @@ div#post-container {
   text-align: right;
 }
 
-/* line 443 */
+/* line 444 */
 .toc-list {
   margin: 10px 0 0 0;
   max-width: 300px;
 }
 
-/* line 448 */
+/* line 449 */
 .toc-list li {
   margin: 3px 0;
   padding: 8px 5px 5px 5px;
@@ -889,7 +890,7 @@ div#post-container {
 /*************************************************
 Design page
 *************************************************/
-/* line 458 */
+/* line 459 */
 div.design-item {
   border: 1px solid #ececec;
   border-radius: 7px;
@@ -907,106 +908,106 @@ Media queries
 *************************************************/
 /* iOS/android phone landscape screen width*/
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 476 */
+  /* line 477 */
   body > aside {
     display: none;
   }
 
-  /* line 480 */
+  /* line 481 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 484 */
+  /* line 485 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 488 */
+  /* line 489 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 492 */
+  /* line 493 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-  /* line 498 */
+  /* line 499 */
   body > aside {
     display: none;
   }
 
-  /* line 502 */
+  /* line 503 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 506 */
+  /* line 507 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 510 */
+  /* line 511 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 514 */
+  /* line 515 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (min-device-width: 600px) and (orientation:portrait) {
-  /* line 520 */
+  /* line 521 */
   body > aside {
     display: none;
   }
 
-  /* line 524 */
+  /* line 525 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 528 */
+  /* line 529 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 532 */
+  /* line 533 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 536 */
+  /* line 537 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 /* iOS/android phone portrait screen width*/
 @media screen and (max-device-width: 320px) {
-  /* line 543 */
+  /* line 544 */
   body > aside {
     display: none;
   }
 
-  /* line 547 */
+  /* line 548 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 551 */
+  /* line 552 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 555 */
+  /* line 556 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 559 */
+  /* line 560 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
@@ -1014,34 +1015,34 @@ Media queries
 /*************************************************
 Utils
 *************************************************/
-/* line 567 */
+/* line 568 */
 .transition {
   -moz-transition-duration: .5s;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
 }
 
-/* line 573 */
+/* line 574 */
 .none {
   display: none;
 }
 
-/* line 577 */
+/* line 578 */
 .notnone {
   display: default;
 }
 
-/* line 581 */
+/* line 582 */
 .hide {
   opacity: 0;
 }
 
-/* line 585 */
+/* line 586 */
 .show {
   opacity: 100;
 }
 
-/* line 589 */
+/* line 590 */
 .max-width-100 {
   max-width: 100%;
 }
