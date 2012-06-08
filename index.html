@@ -73,798 +73,637 @@
       <div id='post-container'>
         <div class='article-list'>
           <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/'>
-                    Choppy scrolling on iOS with iscroll and PhoneGap
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  09 April 2012
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/phonegap/'>
-                    phonegap
-                  </a>
-                  |
-                  <a href='/blog/tags/css3/'>
-                    css3
-                  </a>
-                  |
-                  <a href='/blog/tags/iscroll/'>
-                    iscroll
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                <p>I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
-                Apparently, there is a problem with older browsers using CSS3 selectors like <code>div[style*='foo']</code> in combination with other DOM elements.
-                <a href="http://wesleyhales.com/iscroll"><img src="/images/iscroll.PNG" width=150 alt="iscroll" align="left" style="margin:20px"></a></p>
-                
-                <p>The <a href="http://wesleyhales.com/iscroll">test case</a> was a little tricky to create, seeing that pinpointing this problem required mucho testing.
-                However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
-                styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 <code>[style*='foo']</code> selector.
-                You must run the <a href="http://wesleyhales.com/iscroll">test</a> on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.</p>
-                
-                <br class="clear"/>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2012/02/08/Starting-a-New-Project-at-JBoss/'>
-                    AeroGear - Mobile, HTML5, and Auwesome
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  08 February 2012
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/html5e/'>
-                    html5e
-                  </a>
-                  |
-                  <a href='/blog/tags/jboss/'>
-                    jboss
-                  </a>
-                  |
-                  <a href='/blog/tags/aerogear/'>
-                    aerogear
-                  </a>
-                  |
-                  <a href='/blog/tags/mobile/'>
-                    mobile
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>
-                The <a href="http://www.jboss.org/aerogear">AeroGear project</a> had it's official launch last week and I want to review what we're doing and where we're headed. For starters, AeroGear is focused on:
-                  <ul>
-                    <li><a href="https://community.jboss.org/wiki/AeroGearServerSideResources">Education</a> - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.</li>
-                    <li><a href="https://community.jboss.org/wiki/AeroGearHTML5ExtensionConcepts">Innovation</a> - Many of AeroGear's primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.</li>
-                    <li><a href="https://community.jboss.org/wiki/ContributingToAeroGear">Community</a> - We already have several community members contributing examples, demos, and other useful resources. We want to hear from <a href="https://community.jboss.org/en/aerogear?view=discussions">you</a>! We're here for the community.'</li>
-                  </ul>
-                </p>
-                
-                
-                <p>
-                  Most front-end developers are familiar with "jQuery callbacks and RESTful services", but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of <a href="https://community.jboss.org/wiki/POH5PlainOldHTML5Applications">"POH5" (Plain Old HTML5)</a>
-                </p>
-                
-                
-                <p><img src="/images/design/poh5.flow.expanded.png" alt="Poh5.Flow.Expanded" class="max-width-100"></p>
-                
-                <p>
-                So why another acronym? Why not just call it "Plain Old Open Web"? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or "gear" you need to get started quickly with the best possible solution.
-                </p>
-                
-                
-                <p>
-                We're just getting started... For now, we have a <a href="https://github.com/aerogear/as-quickstarts/tree/master/kitchensink-html5-mobile">quickstart application</a> which <a href"https://community.jboss.org/wiki/GetStartedWithHTML5MobileWebDevelopmentWithJBoss#Prerequisites">fully examines</a> each piece of the POH5 architecture. Take it for a spin with the <a href="http://poh5-aerogear.rhcloud.com/">live demo</a>.
-                </p>
-                
-                
-                <p>
-                <a href="https://community.jboss.org/en/aerogear?view=documents">Join Us</a>! or come hang out on <a href="irc://irc.freenode.net/aerogear">freenode #aerogear</a>.
-                </p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets/'>
-                    Pushing CDI Events to the Browser with WebSockets
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  20 January 2012
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/html5/'>
-                    html5
-                  </a>
-                  |
-                  <a href='/blog/tags/websocket/'>
-                    websocket
-                  </a>
-                  |
-                  <a href='/blog/tags/jboss/'>
-                    jboss
-                  </a>
-                  |
-                  <a href='/blog/tags/jetty/'>
-                    jetty
-                  </a>
-                  |
-                  <a href='/blog/tags/cdi/'>
-                    cdi
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <div class="notes" >
-                Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers <a href="http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/">here</a>.
-                </div>
-                
-                
-                <div class="download">
-                  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket" title="Fork me on github"><img src="/images/icons/github-icon.jpg" width="48" height="48" alt="Github Icon"></a>
-                  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war" title="download the .war"><img src="/images/icons/download.png" width="48" height="48" alt="Download"></a>
-                </div>
-                
-                
-                <div style="clear:both;"></div>
-                
-                
-                <p>
-                  
-                <p>Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</p>
-                <iframe src="http://player.vimeo.com/video/35433707?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                
-                <p>  
-                With WebSockets, we have a new development model for server side applications; event based programming. There are 3 out-of-box events associated with WebSockets: onopen, onmessage, and onclose. For starters, we must wire up these three listeners to utilize the core functionality that the WebSocket specification gives us. The open event is fired when the WebSocket connection is opened successfully. The message event is fired when the server sends data. The close event is fired when the WebSocket connection is closed.
-                </p>
-                
-                <script src="https://gist.github.com/1651079.js?file=websocketBasic.js"></script>
-                
-                <p>
-                But sending messages in the form of strings over raw WebSockets isn't very appealing when we're wanting to develop advanced web applications. Obviously, we're going to be using JSON to transfer data to and from the server. But how do we propagate our CDI events which are fired on the server and have them bubble up on the client?
-                </p>
-                <p>
-                First, we'll start with the server. I'm using the <a href="http://www.jboss.org/jbossas/downloads/">JBoss AS7 application server</a> and embedding <a href="http://eclipse.org/jetty/">Jetty</a> within my web application. Thanks to <a href="http://angelozerr.wordpress.com/2011/07/26/websockets_jetty_step4/">this article</a>, I was able to easily add the latest Jetty server to my maven project (dependencies below) to get everything up and running in a few minutes.
-                </p>
-                <p>
-                A few things worth noting:
-                </p>
-                <ul>
-                <li>Security: Since our WebSocket server is running on a different port (8081) than our AS7 server (8080), we must account for not having the ability to share cookies, etc...</li>
-                <li>Proxies: As if proxy servers weren't already a huge problem for running WebSockets and HTTP over the same port, we are now running the separately (but I have a semi-solution for this below)</li>
-                <li>Threading: Since we're observing/listening for CDI events, we must perform some thread same operations and connection sharing.</li>
-                </ul>
-                <p>
-                So, if you're still reading ;) let's get on with the code.
-                </p>
-                <p>
-                Download the latest <a href="http://www.jboss.org/jbossas/downloads/">JBoss AS7 (7.1.0.CR1b as of this writing)</a>
-                </p>
-                <p>
-                Add the Jetty maven dependencies to your project. This demo is based off of the <a href="https://github.com/jbossas/quickstart/tree/master/html5-mobile">original html5-mobile quickstart for JBoss AS7</a>.
-                </p>
-                <script src="https://gist.github.com/1651079.js?file=pom.xml"></script>
-                
-                <p>
-                Next we setup the WebSocket server using Jetty's WebSocketHandler and embedding it inside a ServletContextListener.
-                Here we're sharing a synchronized set of WebSocket connections across threads. Using the synchronized keyword, we ensure that only a single thread can execute a method or block at one time. The ChatWebSocketHandler contains a global Set of webSocket connections and adds each new connection as it's made within the Jetty server
-                <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/tree/master/src/main/java/org/jboss/as/quickstarts/html5_mobile/websockets">View complete source here.</a>
-                </p>
-                <script src="https://gist.github.com/1651079.js?file=ChatWebSocketHandler.java"></script>
-                <script src="https://gist.github.com/1651079.js?file=ChatServerServletContextListener.java"></script>
-                
-                <p>
-                Now we'll create a method to observe CDI events and send the fired "Member" events to all active connections.
-                </p>
-                <script src="https://gist.github.com/1651079.js?file=ChatWebSocketHandler-observer.java"></script>
-                
-                <p>
-                The above code will observe the following event when a new Member is registered through the web interface.
-                </p>
-                <script src="https://gist.github.com/1651079.js?file=MemberService.java"></script>
-                
-                <p>
-                Finally, we setup our WebSocket JavaScript client and safely avoid using the eval() method to execute the received JavaScript.
-                </p>
-                <script src="https://gist.github.com/1651079.js?file=websocketclient.js"></script>
-                
-                <p>
-                Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code. (This is the alert popup seen in the video above.)
-                </p>
-                <script src="https://gist.github.com/1651079.js?file=cdiJavascriptListener.js"></script> 
-                
-                <p>One additional piece I added to this approach is the use of HAProxy. This gives us a reverse-proxy on the WebSocket port (8081), in the end allowing all traffic (HTTP and ws/wss) to be sent across a central port - 8080 in this case. </p>
-                <script src="https://gist.github.com/1651079.js?file=haproxy.config"></script>
-                
-                <p>
-                As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol. There's probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
-                </p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/12/29/2011-Year-In-Review/'>
-                    2011 Year In Review
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  29 December 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/life/'>
-                    life
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                <p>This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)</p>
-                
-                <p>Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
-                <a href="http://refcardz.dzone.com/refcardz/mastering-portals-portlet">http://refcardz.dzone.com/refcardz/mastering-portals-portlet</a></p>
-                
-                <p>Learned that CSS3 is replacing Photoshop
-                <a href="http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/">http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</a></p>
-                
-                <p>Watched the entire Battlestar Galactica series on Netflix.</p>
-                
-                <p>Mourned the loss of Stargate Universe</p>
-                
-                <p>Posted this blog entry and later joined the RichFaces team because of it
-                <a href="http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/">http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/</a></p>
-                
-                <p>Realized that my motivation on the portlet bridge project was exhausted
-                <a href="http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/">http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</a></p>
-                
-                <p>However, I proudly took the project through passing the TCK
-                <a href="http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck">http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck</a></p>
-                
-                <p>Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
-                <a href="http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/">http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</a></p>
-                
-                <p>Presented at JBoss World for the first time
-                <a href="http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge">http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge</a></p>
-                
-                <p>Read JavaScript The Good Parts (again)</p>
-                
-                <p>Dressed up like a white bunny and had some fun with @burrsutter
-                <a href="http://topsy.com/vimeo.com/27534958">http://topsy.com/vimeo.com/27534958</a></p>
-                
-                <p>Was in the right place at the right time at JBoss and took a new career path
-                <a href="http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/">http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</a></p>
-                
-                <p>My wife gave birth to the sweetest, most beautiful baby girl in the whole world.</p>
-                
-                <p>Formed Atlanta’s first HTML5 User Group
-                <a href="http://www.meetup.com/AtlantaHTML5/">http://www.meetup.com/AtlantaHTML5/</a></p>
-                
-                <p>Presented at JavaOne for the first time
-                <a href="http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011">http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011</a></p>
-                
-                <p>Proposed a new way to handle AJAX on mobile devices
-                <a href="http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices">http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices</a></p>
-                
-                <p>Wrote an article for HTML5Rocks.com
-                <a href="http://www.html5rocks.com/en/mobile/optimization-and-performance.html">http://www.html5rocks.com/en/mobile/optimization-and-performance.html</a></p>
-                
-                <p>Watched all episodes of Breaking Bad on Netflix</p>
-                
-                <p>Lead the development of the RichFaces mobile effort
-                <a href="http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile">http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile</a>
-                <a href="http://vimeo.com/31616425">http://vimeo.com/31616425</a></p>
-                
-                <p>Helped form Atlanta’s first JBoss User Group with long time friends from @shadowsoftnews
-                <a href="http://vimeo.com/33795907">http://vimeo.com/33795907</a></p>
-                
-                <p>Signed a contract with O’Reilly Media to write a book called “HTML5 Architecture”
-                <em>coming soon</em>... I hope ;)</p>
-                
-                <p>Joined the native web apps community group @W3C
-                <a href="http://www.w3.org/community/native-web-apps/">http://www.w3.org/community/native-web-apps/</a></p>
-                
-                <p>Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.</p>
-                
-                <p>2011 has been a mind blowing year and I’m looking forward to topping it in 2012.</p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/'>
-                    Fixing Ajax on Mobile Devices (with HTML5)
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  29 August 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/ajax/'>
-                    ajax
-                  </a>
-                  |
-                  <a href='/blog/tags/html5/'>
-                    html5
-                  </a>
-                  |
-                  <a href='/blog/tags/innerhtml/'>
-                    innerhtml
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>&#8220;Not only is innerHTML bad, it is the root cause of many problems&#8230; from browser memory leaks (it destroys/replaces existing elements that may have event handlers attached) to failing completely on iOS’s Mobile Safari. Yes, that&#8216;s right, it just flakes out.&#8221;</p> 
-                
-                <p><a href="http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices">Read on...</a><br /> 
-                </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/'>
-                    RichFaces Mobile Designs - Day 3
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  03 August 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/mobile/'>
-                    mobile
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.</p><p><br /> 
-                <p class="pTitle">Day 3: About The Design</p><br /> 
-                Here we have another phone based design broke out into 3 pages.<br /> 
-                <a href="/images/jroller/rf.phone.day3.page1.JPG">The first page</a> is a standard menu so not much to say there. The bottom menu bar is a little different from <a href="http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we">my first design</a> &#8211; following the lead of the native twitter iPhone app.<br /> 
-                <a href="/images/jroller/rf.phone.day3.page1.JPG"><img alt="RichFace Mobile Skin1" src="/images/jroller/rf.phone.day3.page1.JPG"/></a><br /> 
-                </p><br /> 
-                <p><br /> 
-                As you can see with the <a href="/images/jroller/rf.phone.day3.page2.JPG">second page</a> (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&#8216;t make a ton of sense to me on limited screen real estate.<br /> 
-                <a href="/images/jroller/rf.phone.day3.page2.JPG"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" src="/images/jroller/rf.phone.day3.page2.JPG"/></a><br /> 
-                </p><br /> 
-                <p><br /> 
-                So after you go through the menu options and decide on a component, you are taken to the <a href="/images/jroller/rf.phone.day3.page3.JPG">detail/demo screen</a>(below) where you can play around with your component of choice.</p> 
-                
-                <p>Note the small orange page marker dots at the bottom. The user would have the ability to flip through each component in the given section by swiping horizontally.<br /> 
-                <a href="/images/jroller/rf.phone.day3.page3.JPG"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" src="/images/jroller/rf.phone.day3.page3.JPG"/></a><br /> 
-                <br/><br/><br/><br /> 
-                </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/'>
-                    Going Mobile With RichFaces! Design Proposals - Day2
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  02 August 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/mobile/'>
-                    mobile
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/web/'>
-                    web
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:</p> 
-                
-                <p>1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)</p> 
-                
-                <p>2) Similar to the iPad Mail.app, it&#8216;s almost like you are designing 2 different UI&#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.</p><br /> 
-                <p><a href="/images/jroller/rf.tablet.day2.page1.jpg"><img alt="RichFace Mobile Skin1" align="right" width="225px" src="/images/jroller/rf.tablet.day2.page1-small.JPG"/></a><br /> 
-                <p class="pTitle">Day 2: About The Design</p><br /> 
-                Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&#8216;t all that exciting.</p> 
-                
-                <p>Notice how, unlike the <a href="http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we">iphone design from Day 1</a>, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user's attention focused on the app itself.</p><br /> 
-                <p><br /> 
-                <a href="/images/jroller/rf.tablet.day2.page2.jpg"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" align="left" width="225px" src="/images/jroller/rf.tablet.day2.page2-small.JPG"/></a></p> 
-                
-                <p><br/><br/><br/><br /> 
-                The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.</p> 
-                
-                <p>To the right of the title you see the secondary menu represented by rounded rectangles. Next is the main content of the page broken out into content and actionable panels.</p>
-                
-                <p>And finally you have the big arrows to the right and left. These arrows are &#8220;thumb reachable&#8221; which is a common usability pattern in portrait mode tablets. It provides an easy page flip access to all of the RichFaces components within the top level category.<br /> 
-                </p><br /> 
-                <p>The great thing about CSS3 transitions is that you can really make a UI like this scream and flow seamlessly. So you can imagine how tapping an arrow with your thumb will slide in a new component demo and gracefully highlight the secondary menu option at the top.</p><br /> 
-                <p>So this concludes our design for Day 2. As I said earlier, this is more of a use case driven design. WE could spawn a very minimalistic skin and component look and feel from this. However, It would be more to display the power behind RichFaces ajax and templating features as the user moves through the app.</p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/'>
-                    Going Mobile With RichFaces! Design Proposals - Day1
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  01 August 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/mobile/'>
-                    mobile
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/web/'>
-                    web
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>Today marks an important day in the <a href="http://www.jboss.org/richfaces">RichFaces project</a> as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.<br /> 
-                So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. </p><p>I will announce each new design (both for tablet and phone) via <a href="https://twitter.com/#!/richfaces">twitter</a> with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....</p><br /> 
-                <p><a href="/images/jroller/rf-mobile-skin1.JPG"><img alt="RichFace Mobile Skin1" align="right" width="200px" src="/images/jroller/rf-mobile-skin1-small.jpg"/></a>Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.<br /> 
-                <p class="pTitle">Day 1: About The Design</p><br /> 
-                Here we have what could be the RichFaces component showcase skin. This is what I will be posting a new version of each day this week.</p> 
-                
-                <p>In this design we have the standard browser “functionality take over” at the top header. The custom back button is essential to mobile web design and must be overridden here &#8211; following the pattern of previous designs.</p> 
-                
-                <p>Nothing too different about the standard menu options and detail options (center stage). Following convention here as well. One thing I am adhering too are the usability guidelines set forth by Jakob Nielsen&#8216;s <a href="http://www.nngroup.com/reports/mobile/ipad/">Usability of iPad Apps and Websites</a></p> 
-                
-                <p>To get the full tab bar at the bottom (and to replicate the native feel) the user must bookmark the application. I think it makes sense for this menu to be contextual to the app and provide other alternate routes.<br /> 
-                </p><br /> 
-                <br/><br/></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/'>
-                    My New Career Choice at Red Hat
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  04 July 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Life/'>
-                    Life
-                  </a>
-                  |
-                  <a href='/blog/tags/jboss/'>
-                    jboss
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p>July 1st marked my first day on the <a href="http://www.jboss.org/richfaces">JBoss RichFaces</a> team. I've decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.</p><p>I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company. It’s usually the other way around - as you are either picked for your skills and talent to work on a specific team or for whatever reason you are just told to move to another team.</p><p>As for my new position, I have been designated to serve on JBoss’ mobile working group (see <a href="http://en.wikipedia.org/wiki/Tiger_team">Tiger Team</a>). I will be part time on the actual RichFaces project (making the project work on mobile devices) and the other part heavily focused on HTML5 and the <a href="http://en.wikipedia.org/wiki/Mobile_Web">Mobile Web</a>. This is a new frontier for developers as we try to create HTML5/CSS3 based web apps that not only match the native app feel but also answer the question “How can we make the mobile web faster using JBoss middleware?”.</p><p>As things grow, so will the project and the team. I find excitement in bringing grass roots projects <a href="http://www.jboss.org/portletbridge">from nothing into full blown enterprise supported products</a> <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /> Luckily I was in the right place at the right time and I must say that it was quite an honor to be allowed to make such a move. I’m looking forward to making good stuff happen.</p></p>
-                
-                
-                <p></p>
-                
-                <p>Stay tuned&#8230;</p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/'>
-                    Runtime Type Detection and Usage with Weld
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  04 May 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/cdi/'>
-                    cdi
-                  </a>
-                  |
-                  <a href='/blog/tags/hornetq/'>
-                    hornetq
-                  </a>
-                  |
-                  <a href='/blog/tags/infinispan/'>
-                    infinispan
-                  </a>
-                  |
-                  <a href='/blog/tags/jms/'>
-                    jms
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                  <a href='/blog/tags/weld/'>
-                    weld
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p><p class="pTitle">About TweetStream</p><br /> 
-                <img alt="tweetstream" align="right" width="200px" src="/images/jroller/tweetstream-phone.png"/>In developing the <a href="https://github.com/richfaces/tweetstream">TweetStream</a> demo for the JBoss World keynote and <span class="caps">JUD</span>Con presentation, I wanted to use <span class="caps">CDI</span> in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, <span class="caps">CDI</span> gives you the power to do this.<br /> 
-                A little bit about the usecase: The <a href="https://github.com/richfaces/tweetstream">TweetStream</a> application is an app that Jay Balunas and I developed over the past few months for our presentation at <span class="caps">JUD</span>Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile <span class="caps">HTML5</span> web application (which runs on Android and iOS devices) with things like scalable data grid, <span class="caps">JMS</span>, JSF2, <span class="caps">HTML5</span>/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.<br /> 
-                So, we had 2 scenarios &#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the <a href="https://github.com/richfaces/tweetstream">source code</a>, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.<br /> 
-                So we got our tweet data from the true source (twitter4j) during our <span class="caps">JUD</span>Con presentation, and then from the data grid during the keynote. We could have used <span class="caps">CDI</span> alternatives, but I wanted a true solution with no <span class="caps">XML</span> configuration and runtime detection.<br /> 
-                </p><br /> 
-                <p><p class="pTitle">The Code...</p><br /> 
-                So we have 2 Qualifier Types:<br /> 
-                @TwitterLocal for the <span class="caps">JUD</span>Con demo impl<br /> 
-                @TwitterServer for the keynote impl</p> 
-                
-                <p>We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.</p> 
-                
-                <p>Now that we have our types defined as follows&#8230;</p> 
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">@Qualifier<br /> 
-                <br /> 
-                @Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                @Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                <span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterServer<br /> 
-                <br /> 
-                <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                @Qualifier<br /> 
-                <br /> 
-                @Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                @Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                <span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterLocal<br /> 
-                <br /> 
-                <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <span style="color: #009900;">&#125;</span></div></p> 
-                
-                <p>We need not only an implementation of each, but also a deciding bean that tells us which type to use.</p> 
-                
-                <p>First, our implementation of each Type implements an interface:</p> 
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">interface</span> TwitterSource <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                …</div></p> 
-                
-                <p>And our implementations have a different usage of the init method. <code>TwitterLocal starts the stream coming from twitter and updates the infinispan cache. </code>TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&#8211;8 nodes.</p> 
-                
-                <p>So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:</p>
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> TweetStream <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @Inject<br /> 
-                <br /> 
-                &nbsp; @<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aany+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Any</span></a><br />
-                <br /> 
-                &nbsp; Instance<span style="color: #339933;"><</span>TwitterSource<span style="color: #339933;">></span> twitterSource<span style="color: #339933;">;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterLocalQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterLocal<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterLocal<br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterServerQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterServer<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterServer<br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @PostConstruct<br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #006633;">init</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @Produces<br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">public</span> TwitterSource getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>initialCheck<span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">try</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">Class</span>.<span style="color: #006633;">forName</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in JBW2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">catch</span> <span style="color: #009900;">&#40;</span><a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aclassnotfoundexception+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">ClassNotFoundException</span></a> ex<span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in local JUDCon2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aannotation+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Annotation</span></a> qualifier <span style="color: #339933;">=</span> demoexists <span style="color: #339933;">?</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">new</span> TwitterServerQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> <span style="color: #000000; font-weight: bold;">new</span> TwitterLocalQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">return</span> twitterSource.<span style="color: #006633;">select</span><span style="color: #009900;">&#40;</span>qualifier<span style="color: #009900;">&#41;</span>.<span style="color: #006633;">get</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span></div></p> 
-                
-                <p>This is all in the <a href="https://github.com/richfaces/tweetstream">source code</a>. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&#8230;<br /> 
-                </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class="pagination-links"><span class="current-page">1</span> <a href="/page/2/" class="page-link">2</a> <span class="skip">...</span><a href="/page/5/" class="page-link">5</a> <a href="/page/6/" class="page-link">6</a> <a href="/page/2/" class="next-link">Next</a> </div>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/'>
+          Sniffing IE9 features while in compatibility mode
+        </a>
+      </h2>
+      <h3 class='date'>
+        08 June 2012
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/ie/'>
+          ie
+        </a>
+        |
+        <a href='/blog/tags/features/'>
+          features
+        </a>
+        |
+        <a href='/blog/tags/sniffing/'>
+          sniffing
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      <p>Getting the browser version from the User Agent string is one thing. But, when you
+force compatibility mode in IE, you get whatever version you're forcing to. e.g...
+<code><pre>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EmulateIE8&quot;/&gt;</pre><code></p>&#x000A;&#x000A;<p>in IE9 will cause jQuery's</p>&#x000A;&#x000A;<p><code><pre>($.browser.version, 10)</pre></code></p>
+
+<p>to return "8" :(</p>
+
+<p>I started digging through some <a href="http://blogs.msdn.com/b/ie/archive/2011/03/24/ie9-s-document-modes-and-javascript.aspx">msdn docs</a> to find various
+ways of sniffing the actual browser we're using, even when compatibility mode is forced. This led me to <a href="http://msdn.microsoft.com/en-us/library/ie/gg622938.aspx">this doc</a>
+Which talks about how IE9's Chakra JavaScript engine processes math precision differently (and faster) than the old IE8 JScript engine.</p>
+
+<p>So using the following bit of code, we are able to detect the true browser version no matter what compatibility mode it's in.
+<code><pre>&#x000A;if ($.browser.msie &amp;&amp; parseInt($.browser.version, 10) &lt;= 8) {&#x000A;var x = 6.28318530717958620000;&#x000A;var val = Math.sin(x);&#x000A;  if(Math.abs(val) === 2.4492127076447545e-16){&#x000A;  //do your IE6,7,8 shit here&#x000A;  }&#x000A;</pre></code></p>
+
+<p>Easier/better way?</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/'>
+          Choppy scrolling on iOS with iscroll and PhoneGap
+        </a>
+      </h2>
+      <h3 class='date'>
+        09 April 2012
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/phonegap/'>
+          phonegap
+        </a>
+        |
+        <a href='/blog/tags/css3/'>
+          css3
+        </a>
+        |
+        <a href='/blog/tags/iscroll/'>
+          iscroll
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      <p>I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
+Apparently, there is a problem with older browsers using CSS3 selectors like <code>div[style*='foo']</code> in combination with other DOM elements.
+<a href="http://wesleyhales.com/iscroll"><img src="/images/iscroll.PNG" width=150 alt="iscroll" align="left" style="margin:20px"></a></p>
+
+<p>The <a href="http://wesleyhales.com/iscroll">test case</a> was a little tricky to create, seeing that pinpointing this problem required mucho testing.
+However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
+styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 <code>[style*='foo']</code> selector.
+You must run the <a href="http://wesleyhales.com/iscroll">test</a> on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.</p>
+
+<br class="clear"/>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2012/02/08/Starting-a-New-Project-at-JBoss/'>
+          AeroGear - Mobile, HTML5, and Auwesome
+        </a>
+      </h2>
+      <h3 class='date'>
+        08 February 2012
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/html5e/'>
+          html5e
+        </a>
+        |
+        <a href='/blog/tags/jboss/'>
+          jboss
+        </a>
+        |
+        <a href='/blog/tags/aerogear/'>
+          aerogear
+        </a>
+        |
+        <a href='/blog/tags/mobile/'>
+          mobile
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p>
+The <a href="http://www.jboss.org/aerogear">AeroGear project</a> had it's official launch last week and I want to review what we're doing and where we're headed. For starters, AeroGear is focused on:
+  <ul>
+    <li><a href="https://community.jboss.org/wiki/AeroGearServerSideResources">Education</a> - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.</li>
+    <li><a href="https://community.jboss.org/wiki/AeroGearHTML5ExtensionConcepts">Innovation</a> - Many of AeroGear's primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.</li>
+    <li><a href="https://community.jboss.org/wiki/ContributingToAeroGear">Community</a> - We already have several community members contributing examples, demos, and other useful resources. We want to hear from <a href="https://community.jboss.org/en/aerogear?view=discussions">you</a>! We're here for the community.'</li>
+  </ul>
+</p>
+
+
+<p>
+  Most front-end developers are familiar with "jQuery callbacks and RESTful services", but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of <a href="https://community.jboss.org/wiki/POH5PlainOldHTML5Applications">"POH5" (Plain Old HTML5)</a>
+</p>
+
+
+<p><img src="/images/design/poh5.flow.expanded.png" alt="Poh5.Flow.Expanded" class="max-width-100"></p>
+
+<p>
+So why another acronym? Why not just call it "Plain Old Open Web"? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or "gear" you need to get started quickly with the best possible solution.
+</p>
+
+
+<p>
+We're just getting started... For now, we have a <a href="https://github.com/aerogear/as-quickstarts/tree/master/kitchensink-html5-mobile">quickstart application</a> which <a href"https://community.jboss.org/wiki/GetStartedWithHTML5MobileWebDevelopmentWithJBoss#Prerequisites">fully examines</a> each piece of the POH5 architecture. Take it for a spin with the <a href="http://poh5-aerogear.rhcloud.com/">live demo</a>.
+</p>
+
+
+<p>
+<a href="https://community.jboss.org/en/aerogear?view=documents">Join Us</a>! or come hang out on <a href="irc://irc.freenode.net/aerogear">freenode #aerogear</a>.
+</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets/'>
+          Pushing CDI Events to the Browser with WebSockets
+        </a>
+      </h2>
+      <h3 class='date'>
+        20 January 2012
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/html5/'>
+          html5
+        </a>
+        |
+        <a href='/blog/tags/websocket/'>
+          websocket
+        </a>
+        |
+        <a href='/blog/tags/jboss/'>
+          jboss
+        </a>
+        |
+        <a href='/blog/tags/jetty/'>
+          jetty
+        </a>
+        |
+        <a href='/blog/tags/cdi/'>
+          cdi
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<div class="notes" >
+Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers <a href="http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/">here</a>.
+</div>
+
+
+<div class="download">
+  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket" title="Fork me on github"><img src="/images/icons/github-icon.jpg" width="48" height="48" alt="Github Icon"></a>
+  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war" title="download the .war"><img src="/images/icons/download.png" width="48" height="48" alt="Download"></a>
+</div>
+
+
+<div style="clear:both;"></div>
+
+
+<p>
+  
+<p>Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</p>
+<iframe src="http://player.vimeo.com/video/35433707?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<p>  
+With WebSockets, we have a new development model for server side applications; event based programming. There are 3 out-of-box events associated with WebSockets: onopen, onmessage, and onclose. For starters, we must wire up these three listeners to utilize the core functionality that the WebSocket specification gives us. The open event is fired when the WebSocket connection is opened successfully. The message event is fired when the server sends data. The close event is fired when the WebSocket connection is closed.
+</p>
+
+<script src="https://gist.github.com/1651079.js?file=websocketBasic.js"></script>
+
+<p>
+But sending messages in the form of strings over raw WebSockets isn't very appealing when we're wanting to develop advanced web applications. Obviously, we're going to be using JSON to transfer data to and from the server. But how do we propagate our CDI events which are fired on the server and have them bubble up on the client?
+</p>
+<p>
+First, we'll start with the server. I'm using the <a href="http://www.jboss.org/jbossas/downloads/">JBoss AS7 application server</a> and embedding <a href="http://eclipse.org/jetty/">Jetty</a> within my web application. Thanks to <a href="http://angelozerr.wordpress.com/2011/07/26/websockets_jetty_step4/">this article</a>, I was able to easily add the latest Jetty server to my maven project (dependencies below) to get everything up and running in a few minutes.
+</p>
+<p>
+A few things worth noting:
+</p>
+<ul>
+<li>Security: Since our WebSocket server is running on a different port (8081) than our AS7 server (8080), we must account for not having the ability to share cookies, etc...</li>
+<li>Proxies: As if proxy servers weren't already a huge problem for running WebSockets and HTTP over the same port, we are now running the separately (but I have a semi-solution for this below)</li>
+<li>Threading: Since we're observing/listening for CDI events, we must perform some thread same operations and connection sharing.</li>
+</ul>
+<p>
+So, if you're still reading ;) let's get on with the code.
+</p>
+<p>
+Download the latest <a href="http://www.jboss.org/jbossas/downloads/">JBoss AS7 (7.1.0.CR1b as of this writing)</a>
+</p>
+<p>
+Add the Jetty maven dependencies to your project. This demo is based off of the <a href="https://github.com/jbossas/quickstart/tree/master/html5-mobile">original html5-mobile quickstart for JBoss AS7</a>.
+</p>
+<script src="https://gist.github.com/1651079.js?file=pom.xml"></script>
+
+<p>
+Next we setup the WebSocket server using Jetty's WebSocketHandler and embedding it inside a ServletContextListener.
+Here we're sharing a synchronized set of WebSocket connections across threads. Using the synchronized keyword, we ensure that only a single thread can execute a method or block at one time. The ChatWebSocketHandler contains a global Set of webSocket connections and adds each new connection as it's made within the Jetty server
+<a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/tree/master/src/main/java/org/jboss/as/quickstarts/html5_mobile/websockets">View complete source here.</a>
+</p>
+<script src="https://gist.github.com/1651079.js?file=ChatWebSocketHandler.java"></script>
+<script src="https://gist.github.com/1651079.js?file=ChatServerServletContextListener.java"></script>
+
+<p>
+Now we'll create a method to observe CDI events and send the fired "Member" events to all active connections.
+</p>
+<script src="https://gist.github.com/1651079.js?file=ChatWebSocketHandler-observer.java"></script>
+
+<p>
+The above code will observe the following event when a new Member is registered through the web interface.
+</p>
+<script src="https://gist.github.com/1651079.js?file=MemberService.java"></script>
+
+<p>
+Finally, we setup our WebSocket JavaScript client and safely avoid using the eval() method to execute the received JavaScript.
+</p>
+<script src="https://gist.github.com/1651079.js?file=websocketclient.js"></script>
+
+<p>
+Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code. (This is the alert popup seen in the video above.)
+</p>
+<script src="https://gist.github.com/1651079.js?file=cdiJavascriptListener.js"></script> 
+
+<p>One additional piece I added to this approach is the use of HAProxy. This gives us a reverse-proxy on the WebSocket port (8081), in the end allowing all traffic (HTTP and ws/wss) to be sent across a central port - 8080 in this case. </p>
+<script src="https://gist.github.com/1651079.js?file=haproxy.config"></script>
+
+<p>
+As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol. There's probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
+</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/12/29/2011-Year-In-Review/'>
+          2011 Year In Review
+        </a>
+      </h2>
+      <h3 class='date'>
+        29 December 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/life/'>
+          life
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      <p>This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)</p>
+
+<p>Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
+<a href="http://refcardz.dzone.com/refcardz/mastering-portals-portlet">http://refcardz.dzone.com/refcardz/mastering-portals-portlet</a></p>
+
+<p>Learned that CSS3 is replacing Photoshop
+<a href="http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/">http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</a></p>
+
+<p>Watched the entire Battlestar Galactica series on Netflix.</p>
+
+<p>Mourned the loss of Stargate Universe</p>
+
+<p>Posted this blog entry and later joined the RichFaces team because of it
+<a href="http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/">http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/</a></p>
+
+<p>Realized that my motivation on the portlet bridge project was exhausted
+<a href="http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/">http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</a></p>
+
+<p>However, I proudly took the project through passing the TCK
+<a href="http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck">http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck</a></p>
+
+<p>Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
+<a href="http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/">http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</a></p>
+
+<p>Presented at JBoss World for the first time
+<a href="http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge">http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge</a></p>
+
+<p>Read JavaScript The Good Parts (again)</p>
+
+<p>Dressed up like a white bunny and had some fun with @burrsutter
+<a href="http://topsy.com/vimeo.com/27534958">http://topsy.com/vimeo.com/27534958</a></p>
+
+<p>Was in the right place at the right time at JBoss and took a new career path
+<a href="http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/">http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</a></p>
+
+<p>My wife gave birth to the sweetest, most beautiful baby girl in the whole world.</p>
+
+<p>Formed Atlanta’s first HTML5 User Group
+<a href="http://www.meetup.com/AtlantaHTML5/">http://www.meetup.com/AtlantaHTML5/</a></p>
+
+<p>Presented at JavaOne for the first time
+<a href="http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011">http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011</a></p>
+
+<p>Proposed a new way to handle AJAX on mobile devices
+<a href="http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices">http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices</a></p>
+
+<p>Wrote an article for HTML5Rocks.com
+<a href="http://www.html5rocks.com/en/mobile/optimization-and-performance.html">http://www.html5rocks.com/en/mobile/optimization-and-performance.html</a></p>
+
+<p>Watched all episodes of Breaking Bad on Netflix</p>
+
+<p>Lead the development of the RichFaces mobile effort
+<a href="http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile">http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile</a>
+<a href="http://vimeo.com/31616425">http://vimeo.com/31616425</a></p>
+
+<p>Helped form Atlanta’s first JBoss User Group with long time friends from @shadowsoftnews
+<a href="http://vimeo.com/33795907">http://vimeo.com/33795907</a></p>
+
+<p>Signed a contract with O’Reilly Media to write a book called “HTML5 Architecture”
+<em>coming soon</em>... I hope ;)</p>
+
+<p>Joined the native web apps community group @W3C
+<a href="http://www.w3.org/community/native-web-apps/">http://www.w3.org/community/native-web-apps/</a></p>
+
+<p>Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.</p>
+
+<p>2011 has been a mind blowing year and I’m looking forward to topping it in 2012.</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/'>
+          Fixing Ajax on Mobile Devices (with HTML5)
+        </a>
+      </h2>
+      <h3 class='date'>
+        29 August 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/ajax/'>
+          ajax
+        </a>
+        |
+        <a href='/blog/tags/html5/'>
+          html5
+        </a>
+        |
+        <a href='/blog/tags/innerhtml/'>
+          innerhtml
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+      
+      <p><p>&#8220;Not only is innerHTML bad, it is the root cause of many problems&#8230; from browser memory leaks (it destroys/replaces existing elements that may have event handlers attached) to failing completely on iOS’s Mobile Safari. Yes, that&#8216;s right, it just flakes out.&#8221;</p> 
+      
+      <p><a href="http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices">Read on...</a><br /> 
+      </p></p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/'>
+          RichFaces Mobile Designs - Day 3
+        </a>
+      </h2>
+      <h3 class='date'>
+        03 August 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/mobile/'>
+          mobile
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+      
+      <p><p>So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.</p><p><br /> 
+      <p class="pTitle">Day 3: About The Design</p><br /> 
+      Here we have another phone based design broke out into 3 pages.<br /> 
+      <a href="/images/jroller/rf.phone.day3.page1.JPG">The first page</a> is a standard menu so not much to say there. The bottom menu bar is a little different from <a href="http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we">my first design</a> &#8211; following the lead of the native twitter iPhone app.<br /> 
+      <a href="/images/jroller/rf.phone.day3.page1.JPG"><img alt="RichFace Mobile Skin1" src="/images/jroller/rf.phone.day3.page1.JPG"/></a><br /> 
+      </p><br /> 
+      <p><br /> 
+      As you can see with the <a href="/images/jroller/rf.phone.day3.page2.JPG">second page</a> (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&#8216;t make a ton of sense to me on limited screen real estate.<br /> 
+      <a href="/images/jroller/rf.phone.day3.page2.JPG"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" src="/images/jroller/rf.phone.day3.page2.JPG"/></a><br /> 
+      </p><br /> 
+      <p><br /> 
+      So after you go through the menu options and decide on a component, you are taken to the <a href="/images/jroller/rf.phone.day3.page3.JPG">detail/demo screen</a>(below) where you can play around with your component of choice.</p> 
+      
+      <p>Note the small orange page marker dots at the bottom. The user would have the ability to flip through each component in the given section by swiping horizontally.<br /> 
+      <a href="/images/jroller/rf.phone.day3.page3.JPG"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" src="/images/jroller/rf.phone.day3.page3.JPG"/></a><br /> 
+      <br/><br/><br/><br /> 
+      </p></p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/'>
+          Going Mobile With RichFaces! Design Proposals - Day2
+        </a>
+      </h2>
+      <h3 class='date'>
+        02 August 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/jsf/'>
+          jsf
+        </a>
+        |
+        <a href='/blog/tags/mobile/'>
+          mobile
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+        <a href='/blog/tags/web/'>
+          web
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p><p>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:</p> 
+
+<p>1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)</p> 
+
+<p>2) Similar to the iPad Mail.app, it&#8216;s almost like you are designing 2 different UI&#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.</p><br /> 
+<p><a href="/images/jroller/rf.tablet.day2.page1.jpg"><img alt="RichFace Mobile Skin1" align="right" width="225px" src="/images/jroller/rf.tablet.day2.page1-small.JPG"/></a><br /> 
+<p class="pTitle">Day 2: About The Design</p><br /> 
+Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&#8216;t all that exciting.</p> 
+
+<p>Notice how, unlike the <a href="http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we">iphone design from Day 1</a>, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user's attention focused on the app itself.</p><br /> 
+<p><br /> 
+<a href="/images/jroller/rf.tablet.day2.page2.jpg"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" align="left" width="225px" src="/images/jroller/rf.tablet.day2.page2-small.JPG"/></a></p> 
+
+<p><br/><br/><br/><br /> 
+The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.</p> 
+
+<p>To the right of the title you see the secondary menu represented by rounded rectangles. Next is the main content of the page broken out into content and actionable panels.</p>
+
+<p>And finally you have the big arrows to the right and left. These arrows are &#8220;thumb reachable&#8221; which is a common usability pattern in portrait mode tablets. It provides an easy page flip access to all of the RichFaces components within the top level category.<br /> 
+</p><br /> 
+<p>The great thing about CSS3 transitions is that you can really make a UI like this scream and flow seamlessly. So you can imagine how tapping an arrow with your thumb will slide in a new component demo and gracefully highlight the secondary menu option at the top.</p><br /> 
+<p>So this concludes our design for Day 2. As I said earlier, this is more of a use case driven design. WE could spawn a very minimalistic skin and component look and feel from this. However, It would be more to display the power behind RichFaces ajax and templating features as the user moves through the app.</p></p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/'>
+          Going Mobile With RichFaces! Design Proposals - Day1
+        </a>
+      </h2>
+      <h3 class='date'>
+        01 August 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/jsf/'>
+          jsf
+        </a>
+        |
+        <a href='/blog/tags/mobile/'>
+          mobile
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+        <a href='/blog/tags/web/'>
+          web
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p><p>Today marks an important day in the <a href="http://www.jboss.org/richfaces">RichFaces project</a> as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.<br /> 
+So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. </p><p>I will announce each new design (both for tablet and phone) via <a href="https://twitter.com/#!/richfaces">twitter</a> with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....</p><br /> 
+<p><a href="/images/jroller/rf-mobile-skin1.JPG"><img alt="RichFace Mobile Skin1" align="right" width="200px" src="/images/jroller/rf-mobile-skin1-small.jpg"/></a>Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.<br /> 
+<p class="pTitle">Day 1: About The Design</p><br /> 
+Here we have what could be the RichFaces component showcase skin. This is what I will be posting a new version of each day this week.</p> 
+
+<p>In this design we have the standard browser “functionality take over” at the top header. The custom back button is essential to mobile web design and must be overridden here &#8211; following the pattern of previous designs.</p> 
+
+<p>Nothing too different about the standard menu options and detail options (center stage). Following convention here as well. One thing I am adhering too are the usability guidelines set forth by Jakob Nielsen&#8216;s <a href="http://www.nngroup.com/reports/mobile/ipad/">Usability of iPad Apps and Websites</a></p> 
+
+<p>To get the full tab bar at the bottom (and to replicate the native feel) the user must bookmark the application. I think it makes sense for this menu to be contextual to the app and provide other alternate routes.<br /> 
+</p><br /> 
+<br/><br/></p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/'>
+          My New Career Choice at Red Hat
+        </a>
+      </h2>
+      <h3 class='date'>
+        04 July 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Life/'>
+          Life
+        </a>
+        |
+        <a href='/blog/tags/jboss/'>
+          jboss
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+      
+      <p><p>July 1st marked my first day on the <a href="http://www.jboss.org/richfaces">JBoss RichFaces</a> team. I've decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.</p><p>I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company. It’s usually the other way around - as you are either picked for your skills and talent to work on a specific team or for whatever reason you are just told to move to another team.</p><p>As for my new position, I have been designated to serve on JBoss’ mobile working group (see <a href="http://en.wikipedia.org/wiki/Tiger_team">Tiger Team</a>). I will be part time on the actual RichFaces project (making the project work on mobile devices) and the other part heavily focused on HTML5 and the <a href="http://en.wikipedia.org/wiki/Mobile_Web">Mobile Web</a>. This is a new frontier for developers as we try to create HTML5/CSS3 based web apps that not only match the native app feel but also answer the question “How can we make the mobile web faster using JBoss middleware?”.</p><p>As things grow, so will the project and the team. I find excitement in bringing grass roots projects <a href="http://www.jboss.org/portletbridge">from nothing into full blown enterprise supported products</a> <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /> Luckily I was in the right place at the right time and I must say that it was quite an honor to be allowed to make such a move. I’m looking forward to making good stuff happen.</p></p>
+      
+      
+      <p></p>
+      
+      <p>Stay tuned&#8230;</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class="pagination-links"><span class="current-page">1</span> <a href="/page/2/" class="page-link">2</a> <span class="skip">...</span><a href="/page/6/" class="page-link">6</a> <a href="/page/7/" class="page-link">7</a> <a href="/page/2/" class="next-link">Next</a> </div>
         </div>
       </div>
     </div>

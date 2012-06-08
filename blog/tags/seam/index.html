@@ -73,876 +73,876 @@
       <div id='post-container'>
         <div class='article-list'>
           <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/'>
-                    Runtime Type Detection and Usage with Weld
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  04 May 2011
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/cdi/'>
-                    cdi
-                  </a>
-                  |
-                  <a href='/blog/tags/hornetq/'>
-                    hornetq
-                  </a>
-                  |
-                  <a href='/blog/tags/infinispan/'>
-                    infinispan
-                  </a>
-                  |
-                  <a href='/blog/tags/jms/'>
-                    jms
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                  <a href='/blog/tags/weld/'>
-                    weld
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p><p><p class="pTitle">About TweetStream</p><br /> 
-                <img alt="tweetstream" align="right" width="200px" src="/images/jroller/tweetstream-phone.png"/>In developing the <a href="https://github.com/richfaces/tweetstream">TweetStream</a> demo for the JBoss World keynote and <span class="caps">JUD</span>Con presentation, I wanted to use <span class="caps">CDI</span> in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, <span class="caps">CDI</span> gives you the power to do this.<br /> 
-                A little bit about the usecase: The <a href="https://github.com/richfaces/tweetstream">TweetStream</a> application is an app that Jay Balunas and I developed over the past few months for our presentation at <span class="caps">JUD</span>Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile <span class="caps">HTML5</span> web application (which runs on Android and iOS devices) with things like scalable data grid, <span class="caps">JMS</span>, JSF2, <span class="caps">HTML5</span>/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.<br /> 
-                So, we had 2 scenarios &#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the <a href="https://github.com/richfaces/tweetstream">source code</a>, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.<br /> 
-                So we got our tweet data from the true source (twitter4j) during our <span class="caps">JUD</span>Con presentation, and then from the data grid during the keynote. We could have used <span class="caps">CDI</span> alternatives, but I wanted a true solution with no <span class="caps">XML</span> configuration and runtime detection.<br /> 
-                </p><br /> 
-                <p><p class="pTitle">The Code...</p><br /> 
-                So we have 2 Qualifier Types:<br /> 
-                @TwitterLocal for the <span class="caps">JUD</span>Con demo impl<br /> 
-                @TwitterServer for the keynote impl</p> 
-                
-                <p>We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.</p> 
-                
-                <p>Now that we have our types defined as follows&#8230;</p> 
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">@Qualifier<br /> 
-                <br /> 
-                @Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                @Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                <span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterServer<br /> 
-                <br /> 
-                <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                @Qualifier<br /> 
-                <br /> 
-                @Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                @Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                <span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterLocal<br /> 
-                <br /> 
-                <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <span style="color: #009900;">&#125;</span></div></p> 
-                
-                <p>We need not only an implementation of each, but also a deciding bean that tells us which type to use.</p> 
-                
-                <p>First, our implementation of each Type implements an interface:</p> 
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">interface</span> TwitterSource <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                …</div></p> 
-                
-                <p>And our implementations have a different usage of the init method. <code>TwitterLocal starts the stream coming from twitter and updates the infinispan cache. </code>TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&#8211;8 nodes.</p> 
-                
-                <p>So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:</p>
-                
-                <p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> TweetStream <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @Inject<br /> 
-                <br /> 
-                &nbsp; @<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aany+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Any</span></a><br />
-                <br /> 
-                &nbsp; Instance<span style="color: #339933;"><</span>TwitterSource<span style="color: #339933;">></span> twitterSource<span style="color: #339933;">;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterLocalQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterLocal<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterLocal<br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterServerQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterServer<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterServer<br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @PostConstruct<br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #006633;">init</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; @Produces<br /> 
-                <br /> 
-                &nbsp; <span style="color: #000000; font-weight: bold;">public</span> TwitterSource getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>initialCheck<span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">try</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">Class</span>.<span style="color: #006633;">forName</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in JBW2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">catch</span> <span style="color: #009900;">&#40;</span><a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aclassnotfoundexception+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">ClassNotFoundException</span></a> ex<span style="color: #009900;">&#41;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in local JUDCon2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#125;</span><br /> 
-                <br /> 
-                <br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aannotation+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Annotation</span></a> qualifier <span style="color: #339933;">=</span> demoexists <span style="color: #339933;">?</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">new</span> TwitterServerQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> <span style="color: #000000; font-weight: bold;">new</span> TwitterLocalQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">return</span> twitterSource.<span style="color: #006633;">select</span><span style="color: #009900;">&#40;</span>qualifier<span style="color: #009900;">&#41;</span>.<span style="color: #006633;">get</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
-                <br /> 
-                &nbsp; <span style="color: #009900;">&#125;</span></div></p> 
-                
-                <p>This is all in the <a href="https://github.com/richfaces/tweetstream">source code</a>. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&#8230;<br /> 
-                </p></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/'>
-                    Contextual PortletMode changes using the JBoss Portlet Bridge
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  10 December 2009
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/portal/'>
-                    portal
-                  </a>
-                  |
-                  <a href='/blog/tags/portlets/'>
-                    portlets
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>By default, the JSR-301/329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet "view" mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">Why use portlet modes instead of javascript widgets?</p>
-                
-                
-                <p></p>
-                
-                <p>First I would like to give you a little justification of the beauty of this feature. Some people will argue the point of "Why do you need different modes like, Help and Edit?", when you could add some cool "javascript of the week" that would dynamically display what you intended to present in one of the given modes. Well, you could develop your interactions either way but it really isn't a question of why. It's a question of "How?". How do you want users to interact with your applications? And since you have already made the decision to invest in a portal solution, why not use the features that are built in and that stay consistent across the entire UI? Any UI Developer or Interaction Designer will tell you that adding cool javascript widgets adds another layer of complexity and maintenance, thus adding to developer time and bottom line ROI. In addition, when you develop any servlet based application to work within a portal environment, you are properly separating your concerns when you use these modes (without even realizing it in most cases). You are presenting distinguished flows for different trains of thought and making it easier for users to accomplish the task at hand.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">The Usecase</p>
-                
-                
-                <p></p>
-                
-                <p>Ok, off the soap box and onto the use case. Let's say your user is filling out a beloved expense report. It's probably one of his top 5 things that he loves most about his job <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /> Seriously, his IT department just launched a new intranet portal using the latest and greatest <a href="http://jboss.org/gatein">GateIn</a> platform and they completely revamped their old Seam application that was used for expense report submissions to run as a portlet.</p>
-                
-                
-                <p></p>
-                
-                <p> 
-                So, Joe User starts to fill out his expense report in a 6 step wizard. He gets through the first few steps and arrives at a screen asking for his cost center and other details that he has no idea about. Behold the beautiful question mark(help mode) in the top right hand corner of his portlet window! Joe clicks the button and sees exactly the information he needs, and he also sees a link at the bottom of the screen that says &#8220;add this to the form&#8221;. Joe clicks it, and is returned to his expense report with all of the details pre-populated in his form. Not only was the help screen easy to understand, but it was just a basic .xhtml page that can be templated and maintained by any UI developer without any special javascript kung fu. 
-                </p>
-                
-                
-                <p></p>
-                
-                <p>The next screen (in view mode), asks him to itemize each receipt and expense. Since he took a trip to Euro-land, all of his receipts are in Euros. And since he recently just got his internet privileges suspended (and no, he won't tell us why) he has no idea what the current conversion rates are. Once again, Joe clicks the help button and is presented with a clickable table of currency options. Not only that, but the finance department has placed some important notifications on this page via CMS. Joe reads the notifications and clicks on "Euros" and is taken back to a modified input table that auto converts his itemized euro(€) values to USD($).</p>
-                
-                
-                <p></p>
-                
-                <p>As you can see, these are just random examples of possibilities of detecting PortletMode changes with GateIn, Seam, and RichFaces. The real beauty of this code is detecting the actual mode change and providing contextual help. This is not currently provided by the bridge as a default behavior, so here is the code to do it:</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">The Code</p>
-                
-                
-                <p></p>
-                
-                <p>First create a simple session bean with the following code. This will allow us to get a handle on the current mode.</p>
-                
-                
-                <p>
-                <code><pre></p>&#x000A;&#x000A;<p><a name="l46"> <span class="s2">private </span><span class="s1">String mode;&#x000A;</span></a><a name="l47">&#x000A;</a><a name="l48"> <span class="s2">public </span><span class="s1">String getMode()&#x000A;</span></a><a name="l49"> {&#x000A;</a><a name="l50"> Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest();&#x000A;</a><a name="l51"> <span class="s2">if </span><span class="s1">(responseObject </span><span class="s2">instanceof </span><span class="s1">RenderRequest) {</p>&#x000A;&#x000A;<p></span></a><a name="l52"> RenderRequest renderRequest = (RenderRequest)responseObject;&#x000A;</a><a name="l53"> <span class="s2">if</span><span class="s1">(renderRequest.getPortletMode().toString().equals(mode)){&#x000A;</span></a><a name="l54"> mode = <span class="s2">null</span><span class="s1">;&#x000A;</span></a><a name="l55"> }<span class="s2">else</span><span class="s1">{&#x000A;</span></a><a name="l56"> mode = renderRequest.getPortletMode().toString();&#x000A;</a><a name="l57"> }</p>&#x000A;&#x000A;<p></a><a name="l58"> }&#x000A;</a><a name="l59"> <span class="s2">return </span><span class="s1">mode;&#x000A;</span></a><a name="l60"> }&#x000A;</a><a name="l61">&#x000A;</a><a name="l62"> <span class="s2">public </span><span class="s1">String getFromView() {&#x000A;</span></a><a name="l63"> PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(<span class="s2">false</span><span class="s1">);&#x000A;</span></a><a name="l64"> String viewId = (String)portletSession.getAttribute(<span class="s4">"javax.portlet.faces.viewIdHistory.view"</span><span class="s1">);</p>&#x000A;&#x000A;<p></span></a><a name="l65"> viewId = viewId.substring(<span class="s5">0</span><span class="s1">,viewId.indexOf(</span><span class="s4">"?"</span><span class="s1">));&#x000A;</span></a><a name="l66"> <span class="s2">return </span><span class="s1">viewId;&#x000A;</span></a><a name="l67"> }&#x000A;</a><a name="l68">&#x000A;</a><a name="l69"> <span class="s2">public void </span><span class="s1">setMode(String mode)&#x000A;</span></a><a name="l70"> {</p>&#x000A;&#x000A;<p></a><a name="l71"> <span class="s2">this</span><span class="s1">.mode = mode;&#x000A;</span></a><a name="l72"> }&#x000A;</a></p>&#x000A;&#x000A;<p></pre></code></p>
-                
-                <p class="pTitle">Next add something similar to this in pages.xml</p>
-                
-                
-                <p></p>
-                
-                <pre><code> &#x000A;<a name="l8"> <span class="s2"><</span><span class="s5">page </span><span class="s1">view-id=</span><span class="s3">"/expenseWizard/*" </span><span class="s1">action=</span><span class="s3">"&#35;{mode.getMode()}"</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l9"> <span class="s2"><</span><span class="s5">navigation</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l10"> <span class="s2"><</span><span class="s5">rule </span><span class="s1">if-outcome=</span><span class="s3">"help" </span><span class="s1">if=</span><span class="s3">"&#35;{mode.getFromView() == '/expenseWizard/step3.xhtml'}"</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l11"> <span class="s2"><</span><span class="s5">render </span><span class="s1">view-id=</span><span class="s3">"/helpPages/step3help.xhtml"</span><span class="s2">/></span><span class="s4"> &#x000A;</span></a><a name="l12"> <span class="s2"></</span><span class="s5">rule</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l13"> <span class="s2"><</span><span class="s5">rule </span><span class="s1">if-outcome=</span><span class="s3">"help" </span><span class="s1">if=</span><span class="s3">"&#35;{mode.getFromView() == '/expenseWizard/step4.xhtml'}"</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l14"> <span class="s2"><</span><span class="s5">render </span><span class="s1">view-id=</span><span class="s3">"/helpPages/step4help.xhtml"</span><span class="s2">/></span><span class="s4"> &#x000A;</span></a><a name="l15"> <span class="s2"></</span><span class="s5">rule</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l16"> <span class="s2"></</span><span class="s5">navigation</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l17"> <span class="s2"></</span><span class="s5">page</span><span class="s2">></span><span class="s4"> &#x000A;</span></a> &#x000A;</code></pre>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/'>
-                    JBoss Portlet Bridge Beta2 Released!
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  11 April 2008
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/bridge/'>
-                    bridge
-                  </a>
-                  |
-                  <a href='/blog/tags/portlet/'>
-                    portlet
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.</p>
-                
-                
-                <p></p>
-                
-                <p><a href="http://blog.jboss-portal.org/2008/04/jboss-portlet-bridge-beta2-released.html">Read more about what is included in this release.</a></p>
-                
-                
-                <p></p>
-                
-                <p><a href="http://www.jboss.org/portletbridge/">JBoss Portlet Bridge project page.</a></p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/'>
-                    JBoss Portlet Bridge with Seam support released
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  14 February 2008
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/bridge/'>
-                    bridge
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/portlet/'>
-                    portlet
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.</p>
-                
-                
-                <p></p>
-                
-                <p>The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.</p>
-                
-                
-                <p></p>
-                
-                <p><a href="http://labs.jboss.com/portletbridge/">See the project page</a> for more details and a live demo.</p>
-                
-                
-                <p></p>
-                
-                <br/>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/'>
-                    XHTML to PDF with a Seam filter
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  17 December 2007
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/pdf/'>
-                    pdf
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>After reading <a href="http://today.java.net/pub/a/today/2006/10/31/combine-facelets-and-flying-saucer-renderer.html">this article</a> showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.</p>
-                
-                
-                <p></p>
-                
-                <p>First off, generated markup from any given JSF component is not guaranteed to be good markup. So I had to make use of cyberneko html parser. The servlet filter parses the generated response and then neko cleans up any non standard xhtml elements.</p>
-                
-                
-                <p></p>
-                
-                <p>One huge css tip is make sure you declare <code>media="print"</code> or <code>media="screen,print"</code> on your xhmtl css reference. Naturally it would be good to split the 2 style sheets but laziness forced me to use one for both.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">An Example Application</p>
-                
-                
-                <p></p>
-                
-                <p><a href="http://www.littlebear-canton.com"><img src="/images/jroller/Picture-1.jpg" align="right"/></a>A few months ago, I wrote a simple website for the neighborhood I live in using Seam. I tried to start out writing this site using Ruby on Rails but I just wasn't impressed compared to what Seam offers. (Even for a small one-off website)</p>
-                
-                
-                <p></p>
-                
-                <p>So below are 2 live links that show the code in action and parsing a real world example. Enjoy...</p>
-                
-                
-                <p></p>
-                
-                <p> 
-                <ul> 
-                <li><a href="http://www.littlebear-canton.com/littlebear/index.seam?RenderOutputType=pdf">View the front page as PDF</a></li> 
-                <li><a href="http://www.littlebear-canton.com/littlebear/index.seam?RenderOutputType=image&height=900&width=800">View the front page as PNG</a></li> 
-                </ul> 
-                </p>
-                
-                
-                <p></p>
-                
-                <br/> 
-                
-                
-                <p class="pTitle">The Code</p>
-                
-                
-                <p></p>
-                
-                <p>It's pretty cool not having to define a servlet filter in your web.xml. Just add the @Filter annotation to the top of the class and wala. I had to add the <code>within="org.jboss.seam.web.ajax4jsfFilter"</code> attribute to the annotation so FS could render the RichFaces images/resources. 
-                <ul> 
-                <li><a href="/wesleyhales/resource/xhtml2pdf.zip.jar">Flying Saucer Seam component (source)</a></li> 
-                <li>Dependencies 
-                <ul> 
-                <li>nekohtml</li> 
-                <li>All flying saucer jars</li></ul> 
-                </li> 
-                </ul> 
-                </p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2007/12/03/Writing-a-FaceBook-app/'>
-                    Writing a FaceBook app
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  03 December 2007
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/facebook/'>
-                    facebook
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven't really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven't followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next. Linking people to each other in some way, shape, or form based on interests, work , hobbies, etc. has been going since modern civilization began and the social internet is just one of the many channels to do it.</p>
-                
-                
-                <p></p>
-                
-                <p>Now with the advent of <a href="http://code.google.com/apis/opensocial/">Open Social</a> I'm thinking that broadcasting to all of the different social networks is kind of riding the coat-tails of the fad, but is sure to bring out some interesting mutations in the social scene.</p>
-                
-                
-                <p></p>
-                
-                <p>Open Social is supporting quite a few different scenes (Engage.com, Friendster, hi5, Hyves, imeem, LinkedIn, MySpace, Ning, Oracle, orkut, Plaxo, Salesforce.com, Six Apart, Tianji, Viadeo, and XING) but not FaceBook. I wonder why this is?</p>
-                
-                
-                <p></p>
-                
-                <p>This is interesting stuff, but like I said, what is to come after "Social"? The basic concept won't change, people will always want to hook up and network. Anyway, the whole point of this article is just to explain how and why I wrote a FaceBook application.</p>
-                
-                
-                <p></p>
-                
-                <p class="pTitle">iProject</p>
-                
-                
-                <p></p>
-                
-                <p>As I browsed through the available apps on Facebook, there were few that actually did anything useful for the professional minded. There are some that let you manage contacts and business card type things, but nothing that really stood out. All I wanted to do is extend the built in Group application so that I could put a summary of my group or project on my profile page, but also add links to things that pertain to the product or service my project represents along with other custom features that a professional group would want.</p>
-                
-                
-                <p></p>
-                
-                <p>This led me to the iProject application(I'm still trying to think of a better name). It basically uses the Facebook api to gather information on a group, then it let's you extend the group by adding members, blog feeds, etc. It currently supports Jroller, Blogger(atom/feedburner), and Wordpress blogs. It "will" also be capable of adding members as "core members" of the project along with other features.</p>
-                
-                
-                <p></p>
-                
-                <p>So basically, if you are a member of an existing group on Facebook, you can extend it and make it better on your profile page. You can preview the beta on <a href="http://www.facebook.com/profile.php?id=534666343">my profile</a><p> 
-                <p>I used Seam and the Facebook java api along with commons httpclient to get the blog feeds. For the ui, I had to use a provided FBML (facebook markup language) dtd that's buried on Facebook's wiki so that I could use Facelets for the view. It was easy for me to use Seam just because I'm so used to getting things done quickly with it. Furthermore, these types of extensions to the framework could bring in some interesting new advantages.</p><img align="center" src="/images/jroller/Picture4.jpg" alt=""/>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2007/11/15/Seam-20GA-in-JBoss-Portal-in-5-minutes/'>
-                    Seam 2.0GA in JBoss Portal (in 5 minutes)
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  15 November 2007
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/jboss/'>
-                    jboss
-                  </a>
-                  |
-                  <a href='/blog/tags/portal/'>
-                    portal
-                  </a>
-                  |
-                  <a href='/blog/tags/richfaces/'>
-                    richfaces
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>**Update - See <a href="http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam">this article</a> for more info.</p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2007/10/12/Running-Seam-20-on-TomcatEJB3-using-Maven-and-Cargo/'>
-                    Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  12 October 2007
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/cargo/'>
-                    cargo
-                  </a>
-                  |
-                  <a href='/blog/tags/maven/'>
-                    maven
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                  <a href='/blog/tags/tomcat/'>
-                    tomcat
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. </p>
-                
-                
-                <p></p>
-                
-                <p>It's great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user's life a little easier also.</p>
-                
-                
-                <p></p>
-                
-                <p class="listTitle">The following is included in this sample app:</p>
-                
-                
-                <p></p>
-                
-                <ul> 
-                <li>Trinidad 1.0.2</li> 
-                <li>JBoss RichFaces</li> 
-                <li>JAAS</li> 
-                <li>Drools</li> 
-                <li>JBPM</li> 
-                <li>And everything else that seam and Embedded/EJB3 provides out of box.</li> 
-                </ul>
-                
-                
-                <p></p>
-                
-                <p>All you need to have is Maven 2.0.x installed. The rest is cake. During the installation Cargo will download a zip file from the JBoss Maven repository. This is the Tomcat 6.0.13 distro with Embedded already installed and setup. Nothing else has been added to it.</p>
-                
-                
-                <p></p>
-                
-                <h2>Directions</h2>
-                
-                
-                <p></p>
-                
-                <ol> 
-                <li>Checkout the project and getting started directions <a href="http://code.google.com/p/seam-2-sandbox/">Here</a></li> 
-                </ol>
-                
-                
-                <p></p>
-                
-                <p>*Note - I used a stub for the datasource in TOMCAT_HOME/lib/deploy. Don't forget that this deploy directory is supposed to be the same as JBoss AS deploy directory.</p>
-                
-                
-                <p></p>
-                
-                <p class="listTitle">I used a few cool things in the maven pom setup:</p>
-                
-                
-                <p></p>
-                
-                <ul> 
-                <li>It seems you can trick cargo into using the latest version of tomcat. The documentation says Tomcat5x is only supported for the container, but I didn't have any problems using 6.0.x with the Tomcat5x containerId</li> 
-                <li>The <code>cargo.container.url</code> can be local, there is an example in the web/pom.xml (at the bottom)...So once you have this downloaded in you target dir, I would copy it somewhere outside of target and change the <code>cargo.container.url</code> to point to it. It will save time from downloading and bandwidth. It would be cool to add it as a dependency and then unzip from your local maven repo, but I haven't tried it yet.</li> 
-                <li>Like I mentioned earlier, if you want to disable auto start of the Tomcat server you should disable this section of the cargo plugin in web/pom.xml 
-                <code> &#x000A;<pre> &#x000A;<a name="l510"> <span class="s0">&lt;</span><span class="s4">executions</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l511"> <span class="s0">&lt;</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l512"> <span class="s0">&lt;</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s5">start</span><span class="s0">&lt;/</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l513"> <span class="s0">&lt;</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s5">install</span><span class="s0">&lt;/</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l514"> <span class="s0">&lt;</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l515"> <span class="s0">&lt;</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s5">start</span><span class="s0">&lt;/</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l516"> <span class="s0">&lt;/</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l517"> <span class="s0">&lt;/</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l518"> <span class="s0">&lt;</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l519"> <span class="s0">&lt;</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s5">deploy-app</span><span class="s0">&lt;/</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l520"> <span class="s0">&lt;</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s5">install</span><span class="s0">&lt;/</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l521"> <span class="s0">&lt;</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l522"> <span class="s0">&lt;</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s5">deployer-deploy</span><span class="s0">&lt;/</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l523"> <span class="s0">&lt;/</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l524"> <span class="s0">&lt;/</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l525"> <span class="s0">&lt;/</span><span class="s4">executions</span><span class="s0">&gt;</span> &#x000A;</a> &#x000A;</pre> </code></li> 
-                <li>I have another version of this sample app that uses profiles to build either an EAR for JBoss or a WAR for Tomcat+Embedded. Michael Yuan recently touched on <a href="http://www.michaelyuan.com/blog/2007/10/09/jboss-seam-project-setup-with-maven-%e2%80%94-part-2-ear-deployment/">this subject</a> about the EAR+Seam maven impl and did a great job breaking it down. I will try to post the sample app that lets you build a war for Tomcat or an EAR for JBoss all based on the maven profile i.e... 
-                <code>mvn install -Ptomcat</code> 
-                or 
-                <code>mvn install -Pjboss</code> 
-                This is the power of Maven2 and there is soo much more you can do with it.</li> 
-                </ul>
-                
-                
-                <p></p>
-                
-                <p>btw, I haven't blogged since I've become an employee for JBoss, a division of Red Hat. I'm working on the <a href="http://jbossportal.blogspot.com/">JBoss Portal Team</a> and I must say that the company is awesome, my team is awesome, and everyone I have met and talked to have been, you guessed it, AWESOME!</p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class='post-preview'>
-            <div class='post'>
-              <header>
-                <h2 class='title' id='post-title'>
-                  <a href='/blog/2007/08/01/My-first-Seam-20-app/'>
-                    My first Seam 2.0 app
-                  </a>
-                </h2>
-                <h3 class='date'>
-                  01 August 2007
-                </h3>
-                <h4 class='tags'>
-                  <a href='/blog/tags/Java/'>
-                    Java
-                  </a>
-                  |
-                  <a href='/blog/tags/flying/'>
-                    flying
-                  </a>
-                  |
-                  <a href='/blog/tags/hibernate/'>
-                    hibernate
-                  </a>
-                  |
-                  <a href='/blog/tags/jsf/'>
-                    jsf
-                  </a>
-                  |
-                  <a href='/blog/tags/saucer/'>
-                    saucer
-                  </a>
-                  |
-                  <a href='/blog/tags/seam/'>
-                    seam
-                  </a>
-                  |
-                  <a href='/blog/tags/trinidad/'>
-                    trinidad
-                  </a>
-                  |
-                </h4>
-              </header>
-              <div class='content'>
-                
-                
-                <p>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.</p>
-                
-                
-                <p></p>
-                
-                <p>This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn't have any requirements to start, I thought I would list a few of my own here ;)</p>
-                
-                
-                <p></p>
-                
-                <ul> 
-                <li>JSF &amp; Seam 
-                <ul> 
-                <li>RESTful URL's</li> 
-                <li>EJB3/Hibernate</li> 
-                <li>Local, rapid, development</li> 
-                </ul> 
-                </li> 
-                <li>Maven 2</li> 
-                <li>Charts</li> 
-                <li>Html 2 PDF functionality</li> 
-                </ul>
-                
-                
-                <p></p>
-                
-                <h2>JSF &amp; Seam </h2>
-                
-                
-                <p></p>
-                
-                <p>When I started development, Seam was at v.1.2, Embedded EJB (aka Embedded Jboss) was at RC9, and Jetty was being used for local dev and testing. I was able to get a jump start from the guys over at <a href="http://software.softeu.cz/archetypes/seam/">http://softeu.cz</a> for the jetty/ejb/war deployment and I found a rouge project on the seam boards called JBossSeamDVDStore that gave me the ejb Maven archetype ideas/best practice. </p>
-                
-                
-                <p></p>
-                
-                <p>I went through some good (and bad) code getting the embedded RC9 stuff working with Jetty. It boiled down to <a href="http://www.jboss.com/index.html?module=bb&op=viewtopic&t=110555">this post</a> showing why and what I did.</p>
-                
-                
-                <p></p>
-                
-                <p>The good and bad news now is that Embedded EJB3 is now Embedded Jboss and Embedded Jboss only works with Tomcat (for now) and here is <a href="http://wiki.jboss.org/wiki/Wiki.jsp?page=WhatRefactoringsWereDoneToEnableEmbeddedJBoss">a post explaining</a> why it's this way. But this could also be a blueprint for creating the same thing for Jetty, I just don't have the time to do it right now.</p>
-                
-                
-                <p></p>
-                
-                <p><a href="http://www.google.com/notebook/public/09243180899526162200/BDRKQSgoQ77rF_7Yi">Here is a list</a> of resources I found useful while researching.<p> 
-                
-                <h2>RESTful URL's</h2> 
-                <p>The #1 biggest complaint using JSF is no RESTful urls, and Seam does a great job of solving it. The only problem I have now is double execution when the user does a postback to a page that has a action mapped in pages.xml. The form I'm submitting calls the same action as the url I have mapped for REST support. I haven't spent alot of time with it and it may be total user error, but it would be nice if double action execution did NOT happen naturally.</p> 
-                
-                <h2>EJB3/Hibernate</h2> 
-                <p>Using seam-gen, in Oracle, a few tables had null id fields and no primary key - The generated entity bean was genned as a object with one member (an ID) and I guess it was considering the entire record (all columns) as a unique. Being new to EntityBean/Generated hibernate code, it took us a few hours to figure this out, but once we saw that the data model was screwed up and how seam-gen handled it, the fix was easy.</p> 
-                
-                <h2>Local, rapid, development</h2> 
-                <p>This was mentioned a little in the first paragraph. I wanted a faster, local build environment than what was currently offered by the company I'm working for. They are heavily tied to ant and there were 0 projects using Maven. So, being the completely crazy person that I am, I introduced a new build method with Maven 2, a new Framework wrapper (Seam), and a local build on the developers laptop with hot deploy. I know Jboss AS offers hot deploy, but I really wanted to use Jetty with Embedded Jboss. Since, that isn't currently implemented, I went with the next best thing and used Tomcat. My current company gives every developer a Solaris box to build on, all builds/projects are tied to building on Solaris. When one tries to use IntelliJ Idea over a Samba mount, you will quickly see how much it brings down overall performance and speed. There are other pluses that I could go into on local dev opposed to a remote *nix box, but I will stop here.</p> 
-                
-                <h2>Maven 2</h2> 
-                <p>When you have 100's of projects on Ant and everyone in the company is pro Ant because so much time has been invested into the current build environment, you really feel like your going against the grain. However, most of us in the open source world, that are consultants, have seen the light on other projects and we bring new things into whoever we are working for. This is what I did. I eventually gained a few supporters, because everyone knows what happens when you are close minded to innovation.</p> 
-                
-                <h2>Charts</h2> 
-                <p>I think using the Trinidad Charts are what WOW'd the upper management the most. Since this company has a distributed computing environment with no admin rights, we had to get the security/network folks on board with the Adobe SVG plugin. I heard the Renesis viewer is pretty good also and we will probably move to it later since Adobe is killing support on their plugin.</p> 
-                
-                <h2>Html 2 PDF functionality</h2> 
-                <p> 
-                PD4ML: I started with this HTML2PDF renderer. It was super easy to get hooked up to the app. I structured my xhtml and css for both screen and print media types, but due to lack of CSS 2.1 support and very limited subset of css and html support, the output was terrible and required alot of rework just for this PDF to render half way decent. And it costs money :( 
-                </p> 
-                <p> With the output coming out horrible in PD4ML, I took a look at <a href="https://xhtmlrenderer.dev.java.net/r7/feature-list.html">a pure xhtml renderer, Flying Saucer. </a></p> 
-                <p>FS Almost instantly rendered all of my XHTML correctly on the first render. I had to make a few adjustments for things like CSS page-break properties and border-collapse. And, before I could even get the page to render I had to clean up the legacy HTML that some <a href="https://issues.apache.org/jira/browse/TRINIDAD-111">JSF renderers output</a> (I ran tests with both Jtidy and NekoHTML) - both did the trick and I couldn't tell a difference. All the JSF folks that I have talked to welcome feature requests for XHTML compliance. 
-                </p> 
-                <p> 
-                <a href="http://www.pdoubleya.com/projects/flyingsaucer/demo/r7/browser/browser_demo.jnlp">This demo</a> shows some pretty cool stuff from Flying Saucer and what it can do. It is basically the same concept of iTunes web browser/desktop app. PDF isn't the end of the road either - they have examples on rendering the exact same XHTML content to PNG, SVG, and Excel - I'm sure there will be more. 
-                </p> 
-                <p>There are probably a million more things in Seam that I could talk about here, that I completely can't live without. This article just touches on the real world stuff that I encountered while developing. </p>
-              </div>
-              <div class='comments'>
-                
-              </div>
-            </div>
-          </div>
-          <div class="pagination-links"><span class="current-page">1</span> </div>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/'>
+          Runtime Type Detection and Usage with Weld
+        </a>
+      </h2>
+      <h3 class='date'>
+        04 May 2011
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/cdi/'>
+          cdi
+        </a>
+        |
+        <a href='/blog/tags/hornetq/'>
+          hornetq
+        </a>
+        |
+        <a href='/blog/tags/infinispan/'>
+          infinispan
+        </a>
+        |
+        <a href='/blog/tags/jms/'>
+          jms
+        </a>
+        |
+        <a href='/blog/tags/jsf/'>
+          jsf
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+        <a href='/blog/tags/weld/'>
+          weld
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p><p><p class="pTitle">About TweetStream</p><br /> 
+<img alt="tweetstream" align="right" width="200px" src="/images/jroller/tweetstream-phone.png"/>In developing the <a href="https://github.com/richfaces/tweetstream">TweetStream</a> demo for the JBoss World keynote and <span class="caps">JUD</span>Con presentation, I wanted to use <span class="caps">CDI</span> in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, <span class="caps">CDI</span> gives you the power to do this.<br /> 
+A little bit about the usecase: The <a href="https://github.com/richfaces/tweetstream">TweetStream</a> application is an app that Jay Balunas and I developed over the past few months for our presentation at <span class="caps">JUD</span>Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile <span class="caps">HTML5</span> web application (which runs on Android and iOS devices) with things like scalable data grid, <span class="caps">JMS</span>, JSF2, <span class="caps">HTML5</span>/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.<br /> 
+So, we had 2 scenarios &#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the <a href="https://github.com/richfaces/tweetstream">source code</a>, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.<br /> 
+So we got our tweet data from the true source (twitter4j) during our <span class="caps">JUD</span>Con presentation, and then from the data grid during the keynote. We could have used <span class="caps">CDI</span> alternatives, but I wanted a true solution with no <span class="caps">XML</span> configuration and runtime detection.<br /> 
+</p><br /> 
+<p><p class="pTitle">The Code...</p><br /> 
+So we have 2 Qualifier Types:<br /> 
+@TwitterLocal for the <span class="caps">JUD</span>Con demo impl<br /> 
+@TwitterServer for the keynote impl</p> 
+
+<p>We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.</p> 
+
+<p>Now that we have our types defined as follows&#8230;</p> 
+
+<p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">@Qualifier<br /> 
+<br /> 
+@Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+@Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+<span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterServer<br /> 
+<br /> 
+<span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+<span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+@Qualifier<br /> 
+<br /> 
+@Retention<span style="color: #009900;">&#40;</span>RetentionPolicy.<span style="color: #006633;">RUNTIME</span><span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+@Target<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>ElementType.<span style="color: #006633;">TYPE</span>, ElementType.<span style="color: #006633;">METHOD</span>, ElementType.<span style="color: #006633;">FIELD</span>, ElementType.<span style="color: #006633;">PARAMETER</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+<span style="color: #000000; font-weight: bold;">public</span> @<span style="color: #000000; font-weight: bold;">interface</span> TwitterLocal<br /> 
+<br /> 
+<span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+<span style="color: #009900;">&#125;</span></div></p> 
+
+<p>We need not only an implementation of each, but also a deciding bean that tells us which type to use.</p> 
+
+<p>First, our implementation of each Type implements an interface:</p> 
+
+<p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">interface</span> TwitterSource <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+…</div></p> 
+
+<p>And our implementations have a different usage of the init method. <code>TwitterLocal starts the stream coming from twitter and updates the infinispan cache. </code>TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&#8211;8 nodes.</p> 
+
+<p>So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:</p>
+
+<p><div class="java" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> TweetStream <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; @Inject<br /> 
+<br /> 
+&nbsp; @<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aany+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Any</span></a><br />
+<br /> 
+&nbsp; Instance<span style="color: #339933;"><</span>TwitterSource<span style="color: #339933;">></span> twitterSource<span style="color: #339933;">;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterLocalQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterLocal<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterLocal<br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; <span style="color: #000000; font-weight: bold;">class</span> TwitterServerQualifier <span style="color: #000000; font-weight: bold;">extends</span> AnnotationLiteral<span style="color: #339933;"><</span>TwitterServer<span style="color: #339933;">></span> <span style="color: #000000; font-weight: bold;">implements</span> TwitterServer<br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #000066; font-weight: bold;">boolean</span> demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; @PostConstruct<br /> 
+<br /> 
+&nbsp; <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000066; font-weight: bold;">void</span> init<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp;getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #006633;">init</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; @Produces<br /> 
+<br /> 
+&nbsp; <span style="color: #000000; font-weight: bold;">public</span> TwitterSource getTwitterSource<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>initialCheck<span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">try</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">Class</span>.<span style="color: #006633;">forName</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in JBW2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;demoexists <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">true</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">catch</span> <span style="color: #009900;">&#40;</span><a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aclassnotfoundexception+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">ClassNotFoundException</span></a> ex<span style="color: #009900;">&#41;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#123;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;log.<span style="color: #006633;">info</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;Running in local JUDCon2011 Demo Mode.&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; initialCheck <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp;<span style="color: #009900;">&#125;</span><br /> 
+<br /> 
+<br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp;<a style="color: #000060;" href="http://www.google.com/search?hl=en&q=allinurl%3Aannotation+java.sun.com&btnI=I%27m%20Feeling%20Lucky"><span style="color: #003399;">Annotation</span></a> qualifier <span style="color: #339933;">=</span> demoexists <span style="color: #339933;">?</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000; font-weight: bold;">new</span> TwitterServerQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> <span style="color: #000000; font-weight: bold;">new</span> TwitterLocalQualifier<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; &nbsp; &nbsp;<span style="color: #000000; font-weight: bold;">return</span> twitterSource.<span style="color: #006633;">select</span><span style="color: #009900;">&#40;</span>qualifier<span style="color: #009900;">&#41;</span>.<span style="color: #006633;">get</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span><br /> 
+<br /> 
+&nbsp; <span style="color: #009900;">&#125;</span></div></p> 
+
+<p>This is all in the <a href="https://github.com/richfaces/tweetstream">source code</a>. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&#8230;<br /> 
+</p></p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/'>
+          Contextual PortletMode changes using the JBoss Portlet Bridge
+        </a>
+      </h2>
+      <h3 class='date'>
+        10 December 2009
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/portal/'>
+          portal
+        </a>
+        |
+        <a href='/blog/tags/portlets/'>
+          portlets
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p>By default, the JSR-301/329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet "view" mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</p>
+
+
+<p></p>
+
+<p class="pTitle">Why use portlet modes instead of javascript widgets?</p>
+
+
+<p></p>
+
+<p>First I would like to give you a little justification of the beauty of this feature. Some people will argue the point of "Why do you need different modes like, Help and Edit?", when you could add some cool "javascript of the week" that would dynamically display what you intended to present in one of the given modes. Well, you could develop your interactions either way but it really isn't a question of why. It's a question of "How?". How do you want users to interact with your applications? And since you have already made the decision to invest in a portal solution, why not use the features that are built in and that stay consistent across the entire UI? Any UI Developer or Interaction Designer will tell you that adding cool javascript widgets adds another layer of complexity and maintenance, thus adding to developer time and bottom line ROI. In addition, when you develop any servlet based application to work within a portal environment, you are properly separating your concerns when you use these modes (without even realizing it in most cases). You are presenting distinguished flows for different trains of thought and making it easier for users to accomplish the task at hand.</p>
+
+
+<p></p>
+
+<p class="pTitle">The Usecase</p>
+
+
+<p></p>
+
+<p>Ok, off the soap box and onto the use case. Let's say your user is filling out a beloved expense report. It's probably one of his top 5 things that he loves most about his job <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /> Seriously, his IT department just launched a new intranet portal using the latest and greatest <a href="http://jboss.org/gatein">GateIn</a> platform and they completely revamped their old Seam application that was used for expense report submissions to run as a portlet.</p>
+
+
+<p></p>
+
+<p> 
+So, Joe User starts to fill out his expense report in a 6 step wizard. He gets through the first few steps and arrives at a screen asking for his cost center and other details that he has no idea about. Behold the beautiful question mark(help mode) in the top right hand corner of his portlet window! Joe clicks the button and sees exactly the information he needs, and he also sees a link at the bottom of the screen that says &#8220;add this to the form&#8221;. Joe clicks it, and is returned to his expense report with all of the details pre-populated in his form. Not only was the help screen easy to understand, but it was just a basic .xhtml page that can be templated and maintained by any UI developer without any special javascript kung fu. 
+</p>
+
+
+<p></p>
+
+<p>The next screen (in view mode), asks him to itemize each receipt and expense. Since he took a trip to Euro-land, all of his receipts are in Euros. And since he recently just got his internet privileges suspended (and no, he won't tell us why) he has no idea what the current conversion rates are. Once again, Joe clicks the help button and is presented with a clickable table of currency options. Not only that, but the finance department has placed some important notifications on this page via CMS. Joe reads the notifications and clicks on "Euros" and is taken back to a modified input table that auto converts his itemized euro(€) values to USD($).</p>
+
+
+<p></p>
+
+<p>As you can see, these are just random examples of possibilities of detecting PortletMode changes with GateIn, Seam, and RichFaces. The real beauty of this code is detecting the actual mode change and providing contextual help. This is not currently provided by the bridge as a default behavior, so here is the code to do it:</p>
+
+
+<p></p>
+
+<p class="pTitle">The Code</p>
+
+
+<p></p>
+
+<p>First create a simple session bean with the following code. This will allow us to get a handle on the current mode.</p>
+
+
+<p>
+<code><pre></p>&#x000A;&#x000A;<p><a name="l46"> <span class="s2">private </span><span class="s1">String mode;&#x000A;</span></a><a name="l47">&#x000A;</a><a name="l48"> <span class="s2">public </span><span class="s1">String getMode()&#x000A;</span></a><a name="l49"> {&#x000A;</a><a name="l50"> Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest();&#x000A;</a><a name="l51"> <span class="s2">if </span><span class="s1">(responseObject </span><span class="s2">instanceof </span><span class="s1">RenderRequest) {</p>&#x000A;&#x000A;<p></span></a><a name="l52"> RenderRequest renderRequest = (RenderRequest)responseObject;&#x000A;</a><a name="l53"> <span class="s2">if</span><span class="s1">(renderRequest.getPortletMode().toString().equals(mode)){&#x000A;</span></a><a name="l54"> mode = <span class="s2">null</span><span class="s1">;&#x000A;</span></a><a name="l55"> }<span class="s2">else</span><span class="s1">{&#x000A;</span></a><a name="l56"> mode = renderRequest.getPortletMode().toString();&#x000A;</a><a name="l57"> }</p>&#x000A;&#x000A;<p></a><a name="l58"> }&#x000A;</a><a name="l59"> <span class="s2">return </span><span class="s1">mode;&#x000A;</span></a><a name="l60"> }&#x000A;</a><a name="l61">&#x000A;</a><a name="l62"> <span class="s2">public </span><span class="s1">String getFromView() {&#x000A;</span></a><a name="l63"> PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(<span class="s2">false</span><span class="s1">);&#x000A;</span></a><a name="l64"> String viewId = (String)portletSession.getAttribute(<span class="s4">"javax.portlet.faces.viewIdHistory.view"</span><span class="s1">);</p>&#x000A;&#x000A;<p></span></a><a name="l65"> viewId = viewId.substring(<span class="s5">0</span><span class="s1">,viewId.indexOf(</span><span class="s4">"?"</span><span class="s1">));&#x000A;</span></a><a name="l66"> <span class="s2">return </span><span class="s1">viewId;&#x000A;</span></a><a name="l67"> }&#x000A;</a><a name="l68">&#x000A;</a><a name="l69"> <span class="s2">public void </span><span class="s1">setMode(String mode)&#x000A;</span></a><a name="l70"> {</p>&#x000A;&#x000A;<p></a><a name="l71"> <span class="s2">this</span><span class="s1">.mode = mode;&#x000A;</span></a><a name="l72"> }&#x000A;</a></p>&#x000A;&#x000A;<p></pre></code></p>
+
+<p class="pTitle">Next add something similar to this in pages.xml</p>
+
+
+<p></p>
+
+<pre><code> &#x000A;<a name="l8"> <span class="s2"><</span><span class="s5">page </span><span class="s1">view-id=</span><span class="s3">"/expenseWizard/*" </span><span class="s1">action=</span><span class="s3">"&#35;{mode.getMode()}"</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l9"> <span class="s2"><</span><span class="s5">navigation</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l10"> <span class="s2"><</span><span class="s5">rule </span><span class="s1">if-outcome=</span><span class="s3">"help" </span><span class="s1">if=</span><span class="s3">"&#35;{mode.getFromView() == '/expenseWizard/step3.xhtml'}"</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l11"> <span class="s2"><</span><span class="s5">render </span><span class="s1">view-id=</span><span class="s3">"/helpPages/step3help.xhtml"</span><span class="s2">/></span><span class="s4"> &#x000A;</span></a><a name="l12"> <span class="s2"></</span><span class="s5">rule</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l13"> <span class="s2"><</span><span class="s5">rule </span><span class="s1">if-outcome=</span><span class="s3">"help" </span><span class="s1">if=</span><span class="s3">"&#35;{mode.getFromView() == '/expenseWizard/step4.xhtml'}"</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l14"> <span class="s2"><</span><span class="s5">render </span><span class="s1">view-id=</span><span class="s3">"/helpPages/step4help.xhtml"</span><span class="s2">/></span><span class="s4"> &#x000A;</span></a><a name="l15"> <span class="s2"></</span><span class="s5">rule</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l16"> <span class="s2"></</span><span class="s5">navigation</span><span class="s2">></span><span class="s4"> &#x000A;</span></a><a name="l17"> <span class="s2"></</span><span class="s5">page</span><span class="s2">></span><span class="s4"> &#x000A;</span></a> &#x000A;</code></pre>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/'>
+          JBoss Portlet Bridge Beta2 Released!
+        </a>
+      </h2>
+      <h3 class='date'>
+        11 April 2008
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/bridge/'>
+          bridge
+        </a>
+        |
+        <a href='/blog/tags/portlet/'>
+          portlet
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+      
+      <p>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.</p>
+      
+      
+      <p></p>
+      
+      <p><a href="http://blog.jboss-portal.org/2008/04/jboss-portlet-bridge-beta2-released.html">Read more about what is included in this release.</a></p>
+      
+      
+      <p></p>
+      
+      <p><a href="http://www.jboss.org/portletbridge/">JBoss Portlet Bridge project page.</a></p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/'>
+          JBoss Portlet Bridge with Seam support released
+        </a>
+      </h2>
+      <h3 class='date'>
+        14 February 2008
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/bridge/'>
+          bridge
+        </a>
+        |
+        <a href='/blog/tags/jsf/'>
+          jsf
+        </a>
+        |
+        <a href='/blog/tags/portlet/'>
+          portlet
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+      
+      <p>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.</p>
+      
+      
+      <p></p>
+      
+      <p>The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.</p>
+      
+      
+      <p></p>
+      
+      <p><a href="http://labs.jboss.com/portletbridge/">See the project page</a> for more details and a live demo.</p>
+      
+      
+      <p></p>
+      
+      <br/>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/'>
+          XHTML to PDF with a Seam filter
+        </a>
+      </h2>
+      <h3 class='date'>
+        17 December 2007
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/pdf/'>
+          pdf
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p>After reading <a href="http://today.java.net/pub/a/today/2006/10/31/combine-facelets-and-flying-saucer-renderer.html">this article</a> showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.</p>
+
+
+<p></p>
+
+<p>First off, generated markup from any given JSF component is not guaranteed to be good markup. So I had to make use of cyberneko html parser. The servlet filter parses the generated response and then neko cleans up any non standard xhtml elements.</p>
+
+
+<p></p>
+
+<p>One huge css tip is make sure you declare <code>media="print"</code> or <code>media="screen,print"</code> on your xhmtl css reference. Naturally it would be good to split the 2 style sheets but laziness forced me to use one for both.</p>
+
+
+<p></p>
+
+<p class="pTitle">An Example Application</p>
+
+
+<p></p>
+
+<p><a href="http://www.littlebear-canton.com"><img src="/images/jroller/Picture-1.jpg" align="right"/></a>A few months ago, I wrote a simple website for the neighborhood I live in using Seam. I tried to start out writing this site using Ruby on Rails but I just wasn't impressed compared to what Seam offers. (Even for a small one-off website)</p>
+
+
+<p></p>
+
+<p>So below are 2 live links that show the code in action and parsing a real world example. Enjoy...</p>
+
+
+<p></p>
+
+<p> 
+<ul> 
+<li><a href="http://www.littlebear-canton.com/littlebear/index.seam?RenderOutputType=pdf">View the front page as PDF</a></li> 
+<li><a href="http://www.littlebear-canton.com/littlebear/index.seam?RenderOutputType=image&height=900&width=800">View the front page as PNG</a></li> 
+</ul> 
+</p>
+
+
+<p></p>
+
+<br/> 
+
+
+<p class="pTitle">The Code</p>
+
+
+<p></p>
+
+<p>It's pretty cool not having to define a servlet filter in your web.xml. Just add the @Filter annotation to the top of the class and wala. I had to add the <code>within="org.jboss.seam.web.ajax4jsfFilter"</code> attribute to the annotation so FS could render the RichFaces images/resources. 
+<ul> 
+<li><a href="/wesleyhales/resource/xhtml2pdf.zip.jar">Flying Saucer Seam component (source)</a></li> 
+<li>Dependencies 
+<ul> 
+<li>nekohtml</li> 
+<li>All flying saucer jars</li></ul> 
+</li> 
+</ul> 
+</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2007/12/03/Writing-a-FaceBook-app/'>
+          Writing a FaceBook app
+        </a>
+      </h2>
+      <h3 class='date'>
+        03 December 2007
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/facebook/'>
+          facebook
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven't really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven't followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next. Linking people to each other in some way, shape, or form based on interests, work , hobbies, etc. has been going since modern civilization began and the social internet is just one of the many channels to do it.</p>
+
+
+<p></p>
+
+<p>Now with the advent of <a href="http://code.google.com/apis/opensocial/">Open Social</a> I'm thinking that broadcasting to all of the different social networks is kind of riding the coat-tails of the fad, but is sure to bring out some interesting mutations in the social scene.</p>
+
+
+<p></p>
+
+<p>Open Social is supporting quite a few different scenes (Engage.com, Friendster, hi5, Hyves, imeem, LinkedIn, MySpace, Ning, Oracle, orkut, Plaxo, Salesforce.com, Six Apart, Tianji, Viadeo, and XING) but not FaceBook. I wonder why this is?</p>
+
+
+<p></p>
+
+<p>This is interesting stuff, but like I said, what is to come after "Social"? The basic concept won't change, people will always want to hook up and network. Anyway, the whole point of this article is just to explain how and why I wrote a FaceBook application.</p>
+
+
+<p></p>
+
+<p class="pTitle">iProject</p>
+
+
+<p></p>
+
+<p>As I browsed through the available apps on Facebook, there were few that actually did anything useful for the professional minded. There are some that let you manage contacts and business card type things, but nothing that really stood out. All I wanted to do is extend the built in Group application so that I could put a summary of my group or project on my profile page, but also add links to things that pertain to the product or service my project represents along with other custom features that a professional group would want.</p>
+
+
+<p></p>
+
+<p>This led me to the iProject application(I'm still trying to think of a better name). It basically uses the Facebook api to gather information on a group, then it let's you extend the group by adding members, blog feeds, etc. It currently supports Jroller, Blogger(atom/feedburner), and Wordpress blogs. It "will" also be capable of adding members as "core members" of the project along with other features.</p>
+
+
+<p></p>
+
+<p>So basically, if you are a member of an existing group on Facebook, you can extend it and make it better on your profile page. You can preview the beta on <a href="http://www.facebook.com/profile.php?id=534666343">my profile</a><p> 
+<p>I used Seam and the Facebook java api along with commons httpclient to get the blog feeds. For the ui, I had to use a provided FBML (facebook markup language) dtd that's buried on Facebook's wiki so that I could use Facelets for the view. It was easy for me to use Seam just because I'm so used to getting things done quickly with it. Furthermore, these types of extensions to the framework could bring in some interesting new advantages.</p><img align="center" src="/images/jroller/Picture4.jpg" alt=""/>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2007/11/15/Seam-20GA-in-JBoss-Portal-in-5-minutes/'>
+          Seam 2.0GA in JBoss Portal (in 5 minutes)
+        </a>
+      </h2>
+      <h3 class='date'>
+        15 November 2007
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/jboss/'>
+          jboss
+        </a>
+        |
+        <a href='/blog/tags/portal/'>
+          portal
+        </a>
+        |
+        <a href='/blog/tags/richfaces/'>
+          richfaces
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+      
+      <p>**Update - See <a href="http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam">this article</a> for more info.</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2007/10/12/Running-Seam-20-on-TomcatEJB3-using-Maven-and-Cargo/'>
+          Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo
+        </a>
+      </h2>
+      <h3 class='date'>
+        12 October 2007
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/cargo/'>
+          cargo
+        </a>
+        |
+        <a href='/blog/tags/maven/'>
+          maven
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+        <a href='/blog/tags/tomcat/'>
+          tomcat
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. </p>
+
+
+<p></p>
+
+<p>It's great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user's life a little easier also.</p>
+
+
+<p></p>
+
+<p class="listTitle">The following is included in this sample app:</p>
+
+
+<p></p>
+
+<ul> 
+<li>Trinidad 1.0.2</li> 
+<li>JBoss RichFaces</li> 
+<li>JAAS</li> 
+<li>Drools</li> 
+<li>JBPM</li> 
+<li>And everything else that seam and Embedded/EJB3 provides out of box.</li> 
+</ul>
+
+
+<p></p>
+
+<p>All you need to have is Maven 2.0.x installed. The rest is cake. During the installation Cargo will download a zip file from the JBoss Maven repository. This is the Tomcat 6.0.13 distro with Embedded already installed and setup. Nothing else has been added to it.</p>
+
+
+<p></p>
+
+<h2>Directions</h2>
+
+
+<p></p>
+
+<ol> 
+<li>Checkout the project and getting started directions <a href="http://code.google.com/p/seam-2-sandbox/">Here</a></li> 
+</ol>
+
+
+<p></p>
+
+<p>*Note - I used a stub for the datasource in TOMCAT_HOME/lib/deploy. Don't forget that this deploy directory is supposed to be the same as JBoss AS deploy directory.</p>
+
+
+<p></p>
+
+<p class="listTitle">I used a few cool things in the maven pom setup:</p>
+
+
+<p></p>
+
+<ul> 
+<li>It seems you can trick cargo into using the latest version of tomcat. The documentation says Tomcat5x is only supported for the container, but I didn't have any problems using 6.0.x with the Tomcat5x containerId</li> 
+<li>The <code>cargo.container.url</code> can be local, there is an example in the web/pom.xml (at the bottom)...So once you have this downloaded in you target dir, I would copy it somewhere outside of target and change the <code>cargo.container.url</code> to point to it. It will save time from downloading and bandwidth. It would be cool to add it as a dependency and then unzip from your local maven repo, but I haven't tried it yet.</li> 
+<li>Like I mentioned earlier, if you want to disable auto start of the Tomcat server you should disable this section of the cargo plugin in web/pom.xml 
+<code> &#x000A;<pre> &#x000A;<a name="l510"> <span class="s0">&lt;</span><span class="s4">executions</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l511"> <span class="s0">&lt;</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l512"> <span class="s0">&lt;</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s5">start</span><span class="s0">&lt;/</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l513"> <span class="s0">&lt;</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s5">install</span><span class="s0">&lt;/</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l514"> <span class="s0">&lt;</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l515"> <span class="s0">&lt;</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s5">start</span><span class="s0">&lt;/</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l516"> <span class="s0">&lt;/</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l517"> <span class="s0">&lt;/</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l518"> <span class="s0">&lt;</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l519"> <span class="s0">&lt;</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s5">deploy-app</span><span class="s0">&lt;/</span><span class="s4">id</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l520"> <span class="s0">&lt;</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s5">install</span><span class="s0">&lt;/</span><span class="s4">phase</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l521"> <span class="s0">&lt;</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l522"> <span class="s0">&lt;</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s5">deployer-deploy</span><span class="s0">&lt;/</span><span class="s4">goal</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l523"> <span class="s0">&lt;/</span><span class="s4">goals</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l524"> <span class="s0">&lt;/</span><span class="s4">execution</span><span class="s0">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l525"> <span class="s0">&lt;/</span><span class="s4">executions</span><span class="s0">&gt;</span> &#x000A;</a> &#x000A;</pre> </code></li> 
+<li>I have another version of this sample app that uses profiles to build either an EAR for JBoss or a WAR for Tomcat+Embedded. Michael Yuan recently touched on <a href="http://www.michaelyuan.com/blog/2007/10/09/jboss-seam-project-setup-with-maven-%e2%80%94-part-2-ear-deployment/">this subject</a> about the EAR+Seam maven impl and did a great job breaking it down. I will try to post the sample app that lets you build a war for Tomcat or an EAR for JBoss all based on the maven profile i.e... 
+<code>mvn install -Ptomcat</code> 
+or 
+<code>mvn install -Pjboss</code> 
+This is the power of Maven2 and there is soo much more you can do with it.</li> 
+</ul>
+
+
+<p></p>
+
+<p>btw, I haven't blogged since I've become an employee for JBoss, a division of Red Hat. I'm working on the <a href="http://jbossportal.blogspot.com/">JBoss Portal Team</a> and I must say that the company is awesome, my team is awesome, and everyone I have met and talked to have been, you guessed it, AWESOME!</p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class='post-preview'>
+  <div class='post'>
+    <header>
+      <h2 class='title' id='post-title'>
+        <a href='/blog/2007/08/01/My-first-Seam-20-app/'>
+          My first Seam 2.0 app
+        </a>
+      </h2>
+      <h3 class='date'>
+        01 August 2007
+      </h3>
+      <h4 class='tags'>
+        <a href='/blog/tags/Java/'>
+          Java
+        </a>
+        |
+        <a href='/blog/tags/flying/'>
+          flying
+        </a>
+        |
+        <a href='/blog/tags/hibernate/'>
+          hibernate
+        </a>
+        |
+        <a href='/blog/tags/jsf/'>
+          jsf
+        </a>
+        |
+        <a href='/blog/tags/saucer/'>
+          saucer
+        </a>
+        |
+        <a href='/blog/tags/seam/'>
+          seam
+        </a>
+        |
+        <a href='/blog/tags/trinidad/'>
+          trinidad
+        </a>
+        |
+      </h4>
+    </header>
+    <div class='content'>
+      
+
+<p>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.</p>
+
+
+<p></p>
+
+<p>This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn't have any requirements to start, I thought I would list a few of my own here ;)</p>
+
+
+<p></p>
+
+<ul> 
+<li>JSF &amp; Seam 
+<ul> 
+<li>RESTful URL's</li> 
+<li>EJB3/Hibernate</li> 
+<li>Local, rapid, development</li> 
+</ul> 
+</li> 
+<li>Maven 2</li> 
+<li>Charts</li> 
+<li>Html 2 PDF functionality</li> 
+</ul>
+
+
+<p></p>
+
+<h2>JSF &amp; Seam </h2>
+
+
+<p></p>
+
+<p>When I started development, Seam was at v.1.2, Embedded EJB (aka Embedded Jboss) was at RC9, and Jetty was being used for local dev and testing. I was able to get a jump start from the guys over at <a href="http://software.softeu.cz/archetypes/seam/">http://softeu.cz</a> for the jetty/ejb/war deployment and I found a rouge project on the seam boards called JBossSeamDVDStore that gave me the ejb Maven archetype ideas/best practice. </p>
+
+
+<p></p>
+
+<p>I went through some good (and bad) code getting the embedded RC9 stuff working with Jetty. It boiled down to <a href="http://www.jboss.com/index.html?module=bb&op=viewtopic&t=110555">this post</a> showing why and what I did.</p>
+
+
+<p></p>
+
+<p>The good and bad news now is that Embedded EJB3 is now Embedded Jboss and Embedded Jboss only works with Tomcat (for now) and here is <a href="http://wiki.jboss.org/wiki/Wiki.jsp?page=WhatRefactoringsWereDoneToEnableEmbeddedJBoss">a post explaining</a> why it's this way. But this could also be a blueprint for creating the same thing for Jetty, I just don't have the time to do it right now.</p>
+
+
+<p></p>
+
+<p><a href="http://www.google.com/notebook/public/09243180899526162200/BDRKQSgoQ77rF_7Yi">Here is a list</a> of resources I found useful while researching.<p> 
+
+<h2>RESTful URL's</h2> 
+<p>The #1 biggest complaint using JSF is no RESTful urls, and Seam does a great job of solving it. The only problem I have now is double execution when the user does a postback to a page that has a action mapped in pages.xml. The form I'm submitting calls the same action as the url I have mapped for REST support. I haven't spent alot of time with it and it may be total user error, but it would be nice if double action execution did NOT happen naturally.</p> 
+
+<h2>EJB3/Hibernate</h2> 
+<p>Using seam-gen, in Oracle, a few tables had null id fields and no primary key - The generated entity bean was genned as a object with one member (an ID) and I guess it was considering the entire record (all columns) as a unique. Being new to EntityBean/Generated hibernate code, it took us a few hours to figure this out, but once we saw that the data model was screwed up and how seam-gen handled it, the fix was easy.</p> 
+
+<h2>Local, rapid, development</h2> 
+<p>This was mentioned a little in the first paragraph. I wanted a faster, local build environment than what was currently offered by the company I'm working for. They are heavily tied to ant and there were 0 projects using Maven. So, being the completely crazy person that I am, I introduced a new build method with Maven 2, a new Framework wrapper (Seam), and a local build on the developers laptop with hot deploy. I know Jboss AS offers hot deploy, but I really wanted to use Jetty with Embedded Jboss. Since, that isn't currently implemented, I went with the next best thing and used Tomcat. My current company gives every developer a Solaris box to build on, all builds/projects are tied to building on Solaris. When one tries to use IntelliJ Idea over a Samba mount, you will quickly see how much it brings down overall performance and speed. There are other pluses that I could go into on local dev opposed to a remote *nix box, but I will stop here.</p> 
+
+<h2>Maven 2</h2> 
+<p>When you have 100's of projects on Ant and everyone in the company is pro Ant because so much time has been invested into the current build environment, you really feel like your going against the grain. However, most of us in the open source world, that are consultants, have seen the light on other projects and we bring new things into whoever we are working for. This is what I did. I eventually gained a few supporters, because everyone knows what happens when you are close minded to innovation.</p> 
+
+<h2>Charts</h2> 
+<p>I think using the Trinidad Charts are what WOW'd the upper management the most. Since this company has a distributed computing environment with no admin rights, we had to get the security/network folks on board with the Adobe SVG plugin. I heard the Renesis viewer is pretty good also and we will probably move to it later since Adobe is killing support on their plugin.</p> 
+
+<h2>Html 2 PDF functionality</h2> 
+<p> 
+PD4ML: I started with this HTML2PDF renderer. It was super easy to get hooked up to the app. I structured my xhtml and css for both screen and print media types, but due to lack of CSS 2.1 support and very limited subset of css and html support, the output was terrible and required alot of rework just for this PDF to render half way decent. And it costs money :( 
+</p> 
+<p> With the output coming out horrible in PD4ML, I took a look at <a href="https://xhtmlrenderer.dev.java.net/r7/feature-list.html">a pure xhtml renderer, Flying Saucer. </a></p> 
+<p>FS Almost instantly rendered all of my XHTML correctly on the first render. I had to make a few adjustments for things like CSS page-break properties and border-collapse. And, before I could even get the page to render I had to clean up the legacy HTML that some <a href="https://issues.apache.org/jira/browse/TRINIDAD-111">JSF renderers output</a> (I ran tests with both Jtidy and NekoHTML) - both did the trick and I couldn't tell a difference. All the JSF folks that I have talked to welcome feature requests for XHTML compliance. 
+</p> 
+<p> 
+<a href="http://www.pdoubleya.com/projects/flyingsaucer/demo/r7/browser/browser_demo.jnlp">This demo</a> shows some pretty cool stuff from Flying Saucer and what it can do. It is basically the same concept of iTunes web browser/desktop app. PDF isn't the end of the road either - they have examples on rendering the exact same XHTML content to PNG, SVG, and Excel - I'm sure there will be more. 
+</p> 
+<p>There are probably a million more things in Seam that I could talk about here, that I completely can't live without. This article just touches on the real world stuff that I encountered while developing. </p>
+    </div>
+    <div class='comments'>
+      
+    </div>
+  </div>
+</div>
+<div class="pagination-links"><span class="current-page">1</span> </div>
         </div>
       </div>
     </div>
