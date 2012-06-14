@@ -80,36 +80,38 @@
           Choppy scrolling on iOS with iscroll and PhoneGap
         </a>
       </h2>
-      <h3 class='date'>
-        09 April 2012
-      </h3>
-      <h4 class='tags'>
-        <a href='/blog/tags/phonegap/'>
-          phonegap
-        </a>
-        |
-        <a href='/blog/tags/css3/'>
-          css3
-        </a>
-        |
-        <a href='/blog/tags/iscroll/'>
-          iscroll
-        </a>
-        |
-      </h4>
     </header>
     <div class='content'>
-      <p>I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
-Apparently, there is a problem with older browsers using CSS3 selectors like <code>div[style*='foo']</code> in combination with other DOM elements.
-<a href="http://wesleyhales.com/iscroll"><img src="/images/iscroll.PNG" width=150 alt="iscroll" align="left" style="margin:20px"></a></p>
-
-<p>The <a href="http://wesleyhales.com/iscroll">test case</a> was a little tricky to create, seeing that pinpointing this problem required mucho testing.
-However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
-styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 <code>[style*='foo']</code> selector.
-You must run the <a href="http://wesleyhales.com/iscroll">test</a> on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.</p>
-
-<br class="clear"/>
+      <div class='date-box'>
+        <div class='date-month'>
+          Apr
+        </div>
+        <div class='date-day'>
+          9
+        </div>
+        <div class='date-year'>
+          2012
+        </div>
+      </div>
+      Using certain CSS selectors yields bad performance, especially on mobile devices. This is a problem recently faces by the Wikipedia mobile iOS app which I helped troubleshoot.
+      <a href='/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/'>
+        [read more]
+      </a>
     </div>
+    <h4 class='tags clear'>
+      <a href='/blog/tags/phonegap/'>
+        phonegap
+      </a>
+      |
+      <a href='/blog/tags/css3/'>
+        css3
+      </a>
+      |
+      <a href='/blog/tags/iscroll/'>
+        iscroll
+      </a>
+      |
+    </h4>
     <div class='comments'>
       
     </div>

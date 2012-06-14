@@ -80,42 +80,30 @@
           JSF Chart Creator - now with ImageMaps!
         </a>
       </h2>
-      <h3 class='date'>
-        16 December 2006
-      </h3>
-      <h4 class='tags'>
-        <a href='/blog/tags/Java/'>
-          Java
-        </a>
-        |
-      </h4>
     </header>
     <div class='content'>
+      <div class='date-box'>
+        <div class='date-month'>
+          Dec
+        </div>
+        <div class='date-day'>
+          16
+        </div>
+        <div class='date-year'>
+          2006
+        </div>
+      </div>
       
-
-<p>I recently updated the <a href="http://jsf-comp.sourceforge.net">JSF-Comp</a> Chart Creator component to include image map support. All charts now have capabilties for custom links on each section of the chart. All customization can be handled through the tag atributes.</p>
-
-
-
-
-<p>New attributes:<p>
-<ul>
-<li>action</li>
-<li>series</li>
-<li>section</li>
-</ul>
-
-<p>The usemap attribute must start with a # (i.e. usemap="#myMap"). For action, just input the page to link to, section and series are just parameters that are built into jfreeChart. I am currently working on drill downs, along with a few other attributes (like the abiltiy to set the range), for next release.<p>
-
-<p class="pTitle">Usage<p>
-<p>Besides the new attributes and an h:output tag for your imagemap string, there is nothing else you need to know apart from <a href="http://jsf-comp.sourceforge.net/components/chartcreator/index.html">this documentation</a>
-
-</p>
-
-<p>Download the jar <a href="src="http://www.wesleyhales.com/jroller/resource/chartcreator-1.2.0-RC1-imagemap.jar">here</a></p>
-
-<pre><code>&#x000A;</span></a><a name="l43">        <span class="s1">&lt;</span><span class="s5">ad:chart </span><span class="s2">id=</span><span class="s4">"chart2"</span><span class="s1"> &#x000A;</span></a><a name="l44">                  <span class="s2">datasource=</span><span class="s4">"&#35;{chartCreator.cellBar}"</span><span class="s1"> &#x000A;</span></a><a name="l45">                  <span class="s2">type=</span><span class="s4">"bar"</span><span class="s1"> &#x000A;</span></a><a name="l46">                  <span class="s2">height=</span><span class="s4">"100"</span><span class="s1"> &#x000A;&#x000A;</span></a><a name="l47">                  <span class="s2">is3d=</span><span class="s4">"false"</span><span class="s1"> &#x000A;</span></a><a name="l48">                  <span class="s2">orientation=</span><span class="s4">"horizontal"</span><span class="s1"> &#x000A;</span></a><a name="l49">                  <span class="s2">width=</span><span class="s4">"300"</span><span class="s1"> &#x000A;</span></a><a name="l50">                  <span class="s2">antialias=</span><span class="s4">"true"</span><span class="s1"> &#x000A;</span></a><a name="l51">                  <span class="s2">title=</span><span class="s4">""</span><span class="s1"> &#x000A;&#x000A;</span></a><a name="l52">                  <span class="s2">xlabel=</span><span class="s4">""</span><span class="s1"> &#x000A;</span></a><a name="l53">                  <span class="s2">ylabel=</span><span class="s4">""</span><span class="s1"> &#x000A;</span></a><a name="l54">                  <span class="s2">legend=</span><span class="s4">"false"</span><span class="s1"> &#x000A;</span></a><a name="l55">                  <span class="s2">usemap=</span><span class="s4">"#chart2_map"</span><span class="s1"> &#x000A;</span></a><a name="l56">                  <span class="s2">action=</span><span class="s4">"this.jsf"</span><span class="s1"> &#x000A;&#x000A;</span></a><a name="l57">                  <span class="s2">series=</span><span class="s4">"wes1"</span><span class="s1"> &#x000A;</span></a><a name="l58">                  <span class="s2">section=</span><span class="s4">"wes2"</span><span class="s1"> &#x000A;</span></a><a name="l59">                  <span class="s2">styleClass=</span><span class="s4">"wesChart"</span><span class="s1">&gt;&lt;/</span><span class="s5">ad:chart</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l60">        <span class="s1">&lt;</span><span class="s5">h:outputText </span><span class="s2">escape=</span><span class="s4">"false" </span><span class="s2">value=</span><span class="s4">"&#35;{chart1_map}"</span><span class="s1">/&gt;</span><span class="s3"> &#x000A;&#x000A;&#x000A;&#x000A;</code></pre>
+      <a href='/blog/2006/12/16/JSF-Chart-Creator-now-with-ImageMaps/'>
+        [read more]
+      </a>
     </div>
+    <h4 class='tags clear'>
+      <a href='/blog/tags/Java/'>
+        Java
+      </a>
+      |
+    </h4>
     <div class='comments'>
       
     </div>
@@ -129,38 +117,30 @@
           Maven 2 vs Ant - Which is better for commercial apps
         </a>
       </h2>
-      <h3 class='date'>
-        10 December 2006
-      </h3>
-      <h4 class='tags'>
-        <a href='/blog/tags/Java/'>
-          Java
-        </a>
-        |
-      </h4>
     </header>
     <div class='content'>
+      <div class='date-box'>
+        <div class='date-month'>
+          Dec
+        </div>
+        <div class='date-day'>
+          10
+        </div>
+        <div class='date-year'>
+          2006
+        </div>
+      </div>
       
-
-<p>Currently I am working on a extreme RIA which is to use the code base of an existing project and rewrite were needed. Because of the strict time line, no one is attempting to rewrite the existing code base, and we are looking over problems that need to be fixed just to get things working.
-</p>
-
-
-<p>However, we have made the appropriate steps to create a Maven archetype for the new part of the app, and to get the ball rolling away from the old ant build. What I'm wondering is:</p>
-
-
-<ol>
-<li>Is Maven really better suited for open source projects and not commercial?</li>
-<li>There are a ton of threads talking about how you have to be a Maven expert once the project grows past a certain point and something breaks.</li>
-<li>By googling "Maven vs. Ant" I find many threads but most are dated. I'm interested in how commercial projects are doing with the latest version of Maven today.</li>
-</ol>
-
-
-<p> I came across <a href="http://raibledesigns.com/page/rd?entry=selenium_plugin_for_maven">a Selenium article </a>on Matt Raible's blog that got the wheels turning. Since (it seems)everyone is moving towards Maven 2, will an existing ant project be better off ported to Maven?</p>
-
-
-<p>Selenium is becoming fairly mainstream and now that <a href="http://mavenium.sourceforge.net/usage.html">Mavenium</a> is up and coming it makes me wonder if Maven is really the way to go.</p>
+      <a href='/blog/2006/12/10/Maven-2-vs-Ant-Which-is-better-for-commercial-apps/'>
+        [read more]
+      </a>
     </div>
+    <h4 class='tags clear'>
+      <a href='/blog/tags/Java/'>
+        Java
+      </a>
+      |
+    </h4>
     <div class='comments'>
       
     </div>
@@ -174,69 +154,30 @@
           Ajax4Jsf vs AjaxAnywhere&#58; The t&#58;dataTable and t&#58;dataScroller
         </a>
       </h2>
-      <h3 class='date'>
-        07 December 2006
-      </h3>
-      <h4 class='tags'>
-        <a href='/blog/tags/Java/'>
-          Java
-        </a>
-        |
-      </h4>
     </header>
     <div class='content'>
+      <div class='date-box'>
+        <div class='date-month'>
+          Dec
+        </div>
+        <div class='date-day'>
+          7
+        </div>
+        <div class='date-year'>
+          2006
+        </div>
+      </div>
       
-
-<p class="pTitle">Submitting with Ajax4Jsf</p>
-
-
-
-
-<p>On Dec 6, Ajax4Jsf released a maintenance release (ajax4jsf-1.0.4MR1.jar which fixed an IE javascript problem not in this post) - But the framework is still a little buggy dealing with the datascroller components. On a good note, Adrian Mitev gave his custom <a href="https://ajax4jsf.dev.java.net/servlets/ProjectDocumentList?folderID=6510&expandFolder=6510&folderID=5320">ajaxDataScroller </a> to the A4J project and will hopefully get everything working in both browsers. ***UPDATE - Here is the <a href="http://www.jroller.comsrc="http://www.wesleyhales.com/jroller/resource/datascroller.jar">latest version</a> of the datascroller from Adrian. I had to rename the extension to .jar instead of .zip for upload reasons. If you have trouble extracting, just rename the file to .zip. Adrian says <quote>"Actually the attributes of ac:ajaxDataScroller tag differs from the attributes of t:dataScroller. You don't have paginatorMaxPages="9", the attribute is maxPages."</quote></p>
-
-
-<p></p>
-
-<pre>&#x000A;<span class="s1">&lt;</span><span class="s5">a4j:form </span><span class="s2">ajaxSubmit=</span><span class="s4">"true" </span><span class="s2">reRender=</span><span class="s4">"carList,carIndex,scroll_1"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l41"> &#x000A;</a><a name="l42">            <span class="s1">&lt;</span><span class="s5">a4j:region </span><span class="s2">id=</span><span class="s4">"stat1"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l43"> &#x000A;</a><a name="l44">                <span class="s1">&lt;</span><span class="s5">a4j:outputPanel </span><span class="s2">id=</span><span class="s4">"list-body"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l45"> &#x000A;</a><a name="l46">                    <span class="s1">&lt;</span><span class="s5">t:dataTable </span><span class="s2">id=</span><span class="s4">"carIndex"</span><span class="s10">...&gt;</span><span class="s3"> &#x000A;</span></a><a name="l47"> &#x000A;</a><a name="l48">                    <span class="s1">&lt;</span><span class="s5">t:dataTable </span><span class="s2">id=</span><span class="s4">"carList"</span><span class="s10">...&gt;</span><span class="s3"> &#x000A;</span></a><a name="l49"> &#x000A;</a><a name="l50">                <span class="s1">&lt;/</span><span class="s5">a4j:outputPanel</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l51"> &#x000A;</a><a name="l52">                <span class="s1">&lt;</span><span class="s5">t:dataScroller </span><span class="s2">id=</span><span class="s4">"scroll_1"</span><span class="s1"> &#x000A;</span></a><a name="l53">                        <span class="s2">for=</span><span class="s4">"carList"</span><span class="s1"> &#x000A;</span></a><a name="l54">                        <span class="s2">fastStep=</span><span class="s4">"10"</span><span class="s1"> &#x000A;</span></a><a name="l55">                        <span class="s2">pageCountVar=</span><span class="s4">"pageCount"</span><span class="s1"> &#x000A;</span></a><a name="l56">                        <span class="s2">pageIndexVar=</span><span class="s4">"pageIndex"</span><span class="s1"> &#x000A;</span></a><a name="l57">                        <span class="s2">styleClass=</span><span class="s4">"scroller"</span><span class="s1"> &#x000A;</span></a><a name="l58">                        <span class="s2">paginator=</span><span class="s4">"true"</span><span class="s1"> &#x000A;</span></a><a name="l59">                        <span class="s2">paginatorMaxPages=</span><span class="s4">"9"</span><span class="s1"> &#x000A;</span></a><a name="l60">                        <span class="s2">paginatorTableClass=</span><span class="s4">"paginator"</span><span class="s1"> &#x000A;</span></a><a name="l61">                        <span class="s2">paginatorActiveColumnStyle=</span><span class="s4">"font-weight:bold;"</span><span class="s1"> &#x000A;</span></a><a name="l62">                        <span class="s2">actionListener=</span><span class="s4">"&#35;{inventoryList.scrollerAction}"</span><span class="s1"> &#x000A;</span></a><a name="l63">                        &gt;<span class="s3"> &#x000A;</span></a><a name="l64">                <span class="s1">&lt;/</span><span class="s5">t:dataScroller</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l65"> &#x000A;</a><a name="l66">                <span class="s1">&lt;</span><span class="s5">a4j:status </span><span class="s2">for=</span><span class="s4">"stat1" </span><span class="s2">forceId=</span><span class="s4">"true" </span><span class="s2">id=</span><span class="s4">"ajaxStatus"</span><span class="s10">...&gt;</span><span class="s3"> &#x000A;</span></a><a name="l67"> &#x000A;</a><a name="l68">             <span class="s1">&lt;/</span><span class="s5">a4j:region</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l69"> &#x000A;</a><a name="l70"> &#x000A;</a><a name="l71">        <span class="s1">&lt;/</span><span class="s5">a4j:form</span><span class="s1">&gt;</span><span class="s3"> </a></pre>
-
-
-
-
-<p>The above code is functional in Firefox 1.5+ but not in IE 6+. The only bug in Firefox (that I've seen so far) is that a selected status/style on the page number link, once it has been clicked, does not appear. It looks like the component itself is not being reRendered, although it is specified in the a4j:form tag. Other than that, Sergey, Alex, and crew have been doing an awesome job answering posts and getting the maintenance releases out... keep em' coming guys!</p>
-
-
-<p></p>
-
-<p>The paging doesn't work at all in IE - it has to be something small...</p>
-
-
-
-
-<p class="pTitle">Submitting with AjaxAnywhere</p>
-
-
-
-
-<p>
-As much as I would love to stick with one ajax framework across the entire app, we have to have a fallback plan. AjaxAnywhere has been a life saver getting the Tomahawk components submitting. The only downfall with this framework is that you are limited no partial page updates, and nowhere near the capabilities/enhancements that A4J has...
-</p>
-
-
-<p>
-The following code does the Ajax submit in both browser with all components working like they should. Using the A4J:status together with a custom "loading..." window with aa took some hackery, but I was able to get both working (in next post I will explain) 
-</p>
-
-
-<pre>&#x000A;<span class="s1">&lt;</span><span class="s5">h:form </span><span class="s2">id=</span><span class="s4">"mainForm"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l42"> &#x000A;</a><a name="l43">                <span class="s1">&lt;</span><span class="s5">aa:zoneJSF </span><span class="s2">id=</span><span class="s4">"dataTableZone"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l44">                         &#x000A;</a><a name="l45">                <span class="s1">&lt;</span><span class="s5">a4j:region </span><span class="s2">id=</span><span class="s4">"stat1"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l46">     &#x000A;</a><a name="l47">                <span class="s1">&lt;</span><span class="s5">a4j:outputPanel </span><span class="s2">id=</span><span class="s4">"list-body"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l48">                <span class="s1">&lt;</span><span class="s5">t:dataTable...</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l49">                <span class="s1">&lt;/</span><span class="s5">a4j:outputPanel</span><span class="s1">&gt;</span><span class="s3"> &#x000A;&#x000A;</span></a><a name="l50">     &#x000A;</a><a name="l51">                        <span class="s1">&lt;</span><span class="s5">a4j:status </span><span class="s2">for=</span><span class="s4">"stat1" </span><span class="s2">forceId=</span><span class="s4">"true" </span><span class="s2">id=</span><span class="s4">"ajaxStatus"</span><span class="s10">...&gt;</span><span class="s3"> &#x000A;</span></a><a name="l52">     &#x000A;</a><a name="l53">                 <span class="s1">&lt;/</span><span class="s5">a4j:region</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l54">     &#x000A;&#x000A;</a><a name="l55">                <span class="s1">&lt;</span><span class="s5">t:dataScroller </span><span class="s2">id=</span><span class="s4">"scroll_1"</span><span class="s10">...&gt;</span><span class="s3"> &#x000A;</span></a><a name="l56"> &#x000A;</a><a name="l57">            <span class="s1">&lt;/</span><span class="s5">aa:zoneJSF</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l58"> &#x000A;</a><a name="l59">        <span class="s1">&lt;/</span><span class="s5">h:form</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l60"> &#x000A;&#x000A;</a><a name="l61">        <span class="s1">&lt;</span><span class="s5">script </span><span class="s2">type=</span><span class="s4">"text/JavaScript" </span><span class="s2">src=</span><span class="s4">"/facelet-sandbox/aa.js"</span><span class="s1">/&gt;</span><span class="s3"> &#x000A;</span></a><a name="l62"> &#x000A;</a><a name="l63">         <span class="s1">&lt;</span><span class="s5">script </span><span class="s2">type=</span><span class="s4">"text/JavaScript"</span><span class="s1">&gt;</span><span class="s3"> &#x000A;</span></a><a name="l64"> &#x000A;</a><a name="l65">            ajaxAnywhere.getZonesToReload = <span class="s6">function</span><span class="s3">(url, submitButton) { &#x000A;&#x000A;</span></a><a name="l66">                <span class="s6">return </span><span class="s9">'dataTableZone'</span><span class="s3">; &#x000A;</span></a><a name="l67">            } &#x000A;</a><a name="l68"> &#x000A;</a><a name="l69">            ajaxAnywhere.formName = <span class="s9">'mainForm'</span><span class="s3">; &#x000A;</span></a><a name="l70">            ajaxAnywhere.substituteFormSubmitFunction(); &#x000A;</a><a name="l71">            ajaxAnywhere.substituteSubmitButtonsBehavior(<span class="s6">true</span><span class="s3">); &#x000A;&#x000A;</span></a><a name="l72">           &#x000A;</a><a name="l73">        <span class="s1">&lt;/</span><span class="s5">script</span><span class="s1">&gt;</span><span class="s3"></a> </pre>
-
-
-
-
-<p>One more thing, the reason I am nesting an a4j:outputPanel in the above code is for a4j:commandLinks inside the form. So far I haven't had any problems with both frameworks playing nicely together</p>
-
-
-<p></p>
+      <a href='/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere-The-tdataTable-and-tdataScroller/'>
+        [read more]
+      </a>
     </div>
+    <h4 class='tags clear'>
+      <a href='/blog/tags/Java/'>
+        Java
+      </a>
+      |
+    </h4>
     <div class='comments'>
       
     </div>
@@ -250,305 +191,34 @@ The following code does the Ajax submit in both browser with all components work
           JSF Component Library Integration
         </a>
       </h2>
-      <h3 class='date'>
-        06 December 2006
-      </h3>
-      <h4 class='tags'>
-        <a href='/blog/tags/JSF/'>
-          JSF
-        </a>
-        |
-        <a href='/blog/tags/Java/'>
-          Java
-        </a>
-        |
-      </h4>
     </header>
     <div class='content'>
+      <div class='date-box'>
+        <div class='date-month'>
+          Dec
+        </div>
+        <div class='date-day'>
+          6
+        </div>
+        <div class='date-year'>
+          2006
+        </div>
+      </div>
       
-
-<p>
-Integrating multiple component libraries can provide a project many advantages but can also be a challenge to make all components live and work in harmony. This article explains how to integrate many popular component libraries into one app. Combining libraries gives developers an array of components to pick and choose from. But, knowing which components play well together and which ones don?t, will save you time and I will explain the pros and cons of each here. The following component libraries were used:
-</p>
-
-
-<br/>
-
-
-<p class="listTitle">Libs</p>
-
-
-<ul>
-<li>Myfaces 1.1.4</li>
-<li>Tomahawk 1.1.4</li>
-<li>Ajax4JSF 1.0.3</li>
-<li>Trinidad m1 Nightly Build</li>
-<li>IceFaces 1.0.1</li>
-<li>Facelets 1.0.11</li>
-</ul>
-
-
-
-
-<p class="listTitle">Environment</p>
-
-
-<ul>
-<li>JDK 1.5 +</li>
-<li>Jboss 4.0.4 (or Tomcat is better/lighter)</li>
-<li>IntelliJ Idea</li>
-</ul>
-
-
-
-
-<p class="listTitle">Software Needed</p>
-
-
-<ul>
-<li>Subversion</li>
-<li>CVS</li>
-<li>Maven 2</li>
-</ul>
-
-
-
-
-<p>
-It's worth the effort to go ahead and get yourself acquainted with downloading the source for most of your component libraries, starting with Myfaces. I use Tortoise SVN or you can download the binaries using the command line. Once you have Subversion setup, checkout Myfaces <a href="http://svn.apache.org/repos/asf/myfaces">here</a>. After that, this guide <a href="http://wiki.apache.org/myfaces/Building_With_Maven">This</a> will give you a quick how to on compiling the libraries with Maven 2. If you use IntelliJ Idea you can get a plugin that will generate your project files. This will allow you to edit the source and change things around if needed, it also helps when you are trying to follow <a href="http://wiki.apache.org/myfaces/StudyGuide">this guide</a>.
-</p>
-
-
-
-
-<p class="pTitle">For the impatient, the short and sweet steps are:</p>
-
-
-<ol>
-<li>Download Maven 2 and add bin dir to path</li>
-<li>checkout code for project</li>
-<li>navigate to root dir (or dir with pom.xml file)</li>
-<li>run <code>mvn install</code></li>
-<li>This will build the target directory for the project which will contain compiled jars, examples wars, etc.</li>
-</ol>
-
-
-
-
-<p class="pTitle">Myfaces</p>
-
-
-<p>Checkout: <code>http://svn.apache.org/repos/asf/myfaces</p>&#x000A;&#x000A;&#x000A;<p>Each servlet container has its own configuration in which details can be found <a href="http://wiki.apache.org/myfaces/Installation_and_Configuration">here</a>. Overall the latest version of Tomcat and Jboss had no major issues with the out-of-box Myfaces configuration. If you are integrating Myfaces with an existing JSF RI, there are steps with the ExtensionsFilter that must be taken located on the Myfaces wiki.</p>&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;<p>Viewing this up to date <a href="http://wiki.apache.org/myfaces/CompatibilityMatrix">compatibility matrix</a>, will ensure you are working with compatible libraries.</p>&#x000A;&#x000A;&#x000A;<p>There are a number of performance settings you can make with Myfaces, but with integration of components being the focus for this article, performance tuning will be discussed in part 2 of this series.</p>&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;<p class="pTitle">Tomahawk</p>&#x000A;&#x000A;&#x000A;<p>Checkout: <code>Checkout: http://svn.apache.org/repos/asf/myfaces/tomahawk</code></p>
-
-
-<p>Once you have the latest Tomahawk build checked out, you can find almost all of the Myfaces and Tomahawk configuration and performance settings in the sandbox/examples/src/main/webapp/WEB-INF/web.xml file. All of the settings are applicable to this article, and it is a great starting point that is well commented.</p>
-
-
-
-
-<p>When using Facelets, each project requires its own tag library. Unfortunately Tomahawk does not include Facelet integration built into their jar(as of 1.1.4). This requires you to put together <a href="http://wiki.apache.org/myfaces/Use_Facelets_with_Tomahawk">tomahawk.taglib.xml</a> and point to it from settings in your web.xml.</p>
-
-
-
-
-<pre>&#x000A;&lt;context-param&gt;&#x000A;&lt;param-name&gt;facelets.LIBRARIES&lt;/param-name&gt;&#x000A;&lt;param-value&gt;/WEB-INF/tomahawk.taglib.xml&lt;/param-value&gt;&#x000A;&lt;/context-param&gt;</pre>
-
-
-
-
-<p>
-This provides pass-through getters and setters to the tomahawk library.
-You can write a *.taglib.xml for any library, but you may need to write a Facelets TagHandler.
-</p>
-
-
-
-
-<p class="pTitle">Ajax4jsf</p>
-
-
-<p>Checkout (use cvs):<code> cvs -d :pserver:yourName@cvs.dev.java.net:/cvs checkout ajax4jsf</code></p>
-
-
-<p>One of the largest hurdles with this library was integration with Trinidad. Trinidad and Ajax4JSF use their own ViewHandler with Facelets and both are very picky about how and where they are loaded.</p></p>
-
-<p><code>Web.xml</code></p>
-
-<pre>&#x000A;&lt;filter&gt;&#x000A;&lt;display-name&gt;Ajax4jsf Filter&lt;/display-name&gt;&#x000A;&lt;filter-name&gt;ajax4jsf&lt;/filter-name&gt;&#x000A;&lt;filter-class&gt;org.ajax4jsf.Filter&lt;/filter-class&gt;&#x000A;&lt;/filter&gt;&#x000A;&#x000A;&lt;filter-mapping&gt;&#x000A;&lt;filter-name&gt;ajax4jsf&lt;/filter-name&gt;&#x000A;&lt;servlet-name&gt;FacesServlet&lt;/servlet-name&gt;&#x000A;&lt;/filter-mapping&gt;</pre>
-
-
-<p><code>faces-config.xml</code></p>
-
-<pre>&#x000A;&lt;application&gt;&#x000A;&lt;default-render-kit-id&gt;org.apache.myfaces.trinidad.core&lt;/default-render-kit-id&gt;&#x000A;&lt;view-handler&gt;org.ajax4jsf.framework.ajax.AjaxViewHandler&lt;/view-handler&gt;&#x000A;&lt;/application&gt;</pre>
-
-
-
-
-<p>Initially I tried to use Neko HTML for the component XML rendering and had to abandon it because of one extra </span> tag at the end of the response. Neko is known for not trying to "over" correct the code, but in this case it did not work. With the default Ajax4Jsf filter, you get Tidy cleaning up the response and that seemed to work just fine. Tidy is also configurable through a .properties file with various parser settings.</p>
-
-
-
-
-<p>As of version 1.0.3, there have been many improvements and I was able to get everything working together from the settings above. This version also includes the integration jar for working with Trininad released after September 29, 2006.</p>
-
-
-
-
-<p>One very nice debugging helper for this library is the logConsole div:</p>
-
-
-
-
-<pre>&#x000A;&lt;div style="padding: 5px; overflow: auto; font-size: 9px; height: 150px; width: 100%;" id="logConsole"&gt;&lt;/div&gt;</pre>
-
-
-
-
-<p>This allows you to see the entire Ajax request/response going and coming back from the server. One thing you may want to create is a Facelets debugging template and add this along with the facelets debugging options into it.</p>
-
-
-
-
-<p class="pTitle">Trinidad</p>
-
-
-<p>Checkout: <code>http://svn.apache.org/repos/asf/incubator/adffaces</code></p>
-
-
-
-
-<p>Here we have the basic settings for Trinidad to integrate with your application. Because we are integrating with Ajax4Jsf, Trinidad is the only ViewHandler defined in the web.xml. In the a4j example above you see how the ViewHandler for Ajax4Jsf is defined in the faces-config.xml. Again, if you are not using these two libraries together then you need to follow the documentation from the libraries corresponding websites.</p>
-
-
-<p><code>Web.xml</code></p>
-
-<pre>&#x000A;&lt;context-param&gt;&#x000A;&lt;param-name&gt;org.apache.myfaces.trinidad.ALTERNATE_VIEW_HANDLER&lt;/param-name&gt;&#x000A;&lt;param-value&gt;com.sun.facelets.FaceletViewHandler&lt;/param-value&gt;&#x000A;&lt;/context-param&gt;&#x000A;&#x000A;&lt;filter&gt;&#x000A;&lt;filter-name&gt;trinidad&lt;/filter-name&gt;&#x000A;&lt;filter-class&gt;org.apache.myfaces.trinidad.webapp.TrinidadFilter&lt;/filter-class&gt;&#x000A;&lt;/filter&gt;&#x000A;&#x000A;&lt;filter-mapping&gt;&#x000A;&lt;filter-name&gt;trinidad&lt;/filter-name&gt;&#x000A;&lt;servlet-name&gt;FacesServlet&lt;/servlet-name&gt;&#x000A;&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;&#x000A;&lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;&#x000A;&lt;dispatcher&gt;INCLUDE&lt;/dispatcher&gt;&#x000A;&lt;/filter-mapping&gt;</pre>
-
-
-
-
-<p>
-One important topic I would like to touch on is client-side state saving vs. server-side.
-Trinidad offers a unique strategy for JSF state saving which will allow tokens to be sent to the client allowing minimal performance drag. The default client-side state saving only saves a token to the client, and saves the real state in the HttpSession. MyFaces tells users to use server-side and Trinidad prefers client-side, but they are basically the same thing in terms of HttpSession. Also, failover is supported with the Trinidad state saving method.
-</p>
-
-
-
-
-<p>As for components, Trinidad starts with more than 100 components which have already been documented and thoroughly tested. Now we have tags from 3-4 different libraries that overlap each other. We must decide which one to use where, why we are using them, and what is best for performance. Tag usage, along with state saving, will be discussed in part 2 of this series.</p>
-
-
-
-
-<p class="pTitle">IceFaces</p>
-
-
-<p>TODO - Update this section</p>
-
-
-<p>**Note, since the writing of this article, Icefaces has been open sourced*** If you wish to make use of clustering and advanced asynchronous HTTP handling in a large-scale application, they want you to move up to the Enterprise Edition.</p>
-
-
-
-
-<p>As of ICEfaces v1.0.1 release, they now have support for JSF integration. You can view  configuration instructions <a href="http://www.icesoft.com/developer_guides/icefaces/htmlguide/devguide/keyConcepts12.html#1043744">here</a>. In short, you can use the just-ice.jar, instead of the icefaces.jar, and use other JSF servlet mappings (ie. Faces Servlet) to handle non-ICEfaces pages. If you do this, you must use **only** standard JSF tags (f:) and ICEfaces tags (ice:) in you JSF pages.</p>
-
-
-
-
-<p>ICEFaces doesn't have the same approach as ajax4jsf and DynaFaces have. You will have to follow their component-model to get the benefits of the Direct2Dom technology, so hooking up components of other libraries together with the ICEFaces components isn't possible (as of now), as they cannot re-render arbitrary components through their renderkit.</p>
-
-
-
-
-<p>If you need to combine components from an open source library with IceFaces, one option is to use an iframe within an icefaces page. The iframe could point to the other JSF framework Servlet/ViewHandler. I haven't tried this yet myself, but according to the IceFaces support staff, it's worth a try.</p>
-
-
-
-
-<p>For Facelets integration, along with the core jars, you will need icefaces-facelets.jar. There are minimal settings that take place for Facelet integration. The steps are located <a href="http://www.icesoft.com/developer_guides/icefaces/htmlguide/gettingstarted/TimezoneTutorial29.html">here</a></p>
-
-
-
-
-<p class="pTitle">Facelets</p>
-
-
-<p>The facelets ViewHandler configuration placement is critical to your application.
-If you are ONLY integrating Ajax4Jsf with Facelets, you should have you settings in web.xml as follows:</p>
-
-
-
-
-<pre>&#x000A;&lt;context-param&gt;&#x000A;&lt;param-name&gt;org.ajax4jsf.VIEW_HANDLERS&lt;/param-name&gt;&#x000A;&lt;param-value&gt;com.sun.facelets.FaceletViewHandler&lt;/param-value&gt;&#x000A;&lt;/context-param&gt;</pre>
-
-
-
-
-<p>You need the above defined only if using Ajax4Jsf along with all other libraries besides Trinidad. If using Trinidad along with Ajax4Jsf and Facelets then follow the steps from the Trinidad section above.</p>
-
-
-
-
-<p>One quick performance tip that will impact the foundational templating is the StreamingAddResource.</p>
-
-
-
-
-<p>By adding:</p>
-
-
-
-
-<pre>&#x000A;&lt;context-param&gt;&#x000A;&lt;param-name&gt;org.apache.myfaces.ADD_RESOURCE_CLASS&lt;/param-name&gt;&#x000A;&lt;param-value&gt;org.apache.myfaces.component.html.util.StreamingAddResource&lt;/param-value&gt;&#x000A;&lt;/context-param&gt;</pre>
-
-
-
-
-<p>...to the web.xml and using...</p>
-
-
-
-
-<ul>
-<li>t:document as replacement for html</li>
-<li>t:documentHead as replacement for head</li>
-<li>t:documentBody as replacement for body</li>
-</ul>
-
-
-
-
-<p>...this will allow the pages to be streamed which will result in faster page delivery.</p>
-
-
-
-
-<p>For debugging Facelets, add the following to your web.xml:</p>
-
-
-
-
-<pre><samp>&#x000A;&#x000A;&lt;context-param&gt;&#x000A;&lt;param-name&gt;facelets.DEVELOPMENT&lt;/param-name&gt;&#x000A;&lt;param-value&gt;true&lt;/param-value&gt;&#x000A;&lt;/context-param&gt;&#x000A;&#x000A;</samp></pre>
-
-
-
-
-<p>
-Setting this to true will cause the FaceletViewHandler to print out debug information in an easy to use screen when an error occurs during the rendering process.
-Probably one of the coolest features for debugging is the <ui:debug> tag. Of course you can?t have ?cool? without an expense, so be careful when using this option because of overhead. You can use the UIComponent rendered property to turn debugging on or off based on some expression. In this example, debugging is backed by an entry in the web.xml.
-</p>
-
-
-
-
-<pre>&#x000A;&lt;ui:debug hotkey="d" rendered="&#35;{initParam.debugMode}"/&gt;</pre>
-
-
-
-
-<p>The debug tag will capture the component tree and variables when it is encoded, storing the data for retrieval later. You may launch the debug window at any time from your browser by pressing 'CTRL' + 'SHIFT' + 'D' (by default).  Like I said earlier the best place to put this tag is in your site's main template, or in some kind of debugging template, where it can be enabled/disabled across your whole application.</p>
+      <a href='/blog/2006/12/06/JSF-Component-Library-Integration/'>
+        [read more]
+      </a>
     </div>
+    <h4 class='tags clear'>
+      <a href='/blog/tags/JSF/'>
+        JSF
+      </a>
+      |
+      <a href='/blog/tags/Java/'>
+        Java
+      </a>
+      |
+    </h4>
     <div class='comments'>
       
     </div>

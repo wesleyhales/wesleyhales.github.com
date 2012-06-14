@@ -361,29 +361,29 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 1.0em;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+  font-size: .9em;
+  font-family: proxima-nova-extra-condensed,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Arial,sans-serif;
   position: relative;
   /*width:100%;*/
 }
 
-/* line 17 */
-.fontface body {
+/* line 18 */
+.fontface body h1, .fontface body h2, .fontface body h3 {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 22 */
+/* line 24 */
 a, a:visited {
   text-decoration: none;
   color: #39C;
 }
 
-/* line 27 */
+/* line 29 */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 31 */
+/* line 33 */
 h1 {
   font-size: 1.8em;
   font-weight: normal;
@@ -392,7 +392,7 @@ h1 {
   margin: 0 auto 0 auto;
 }
 
-/* line 39 */
+/* line 41 */
 h2 {
   font-size: 1.3em;
   font-weight: normal;
@@ -401,7 +401,7 @@ h2 {
   margin: 0 auto 0 auto;
 }
 
-/* line 47 */
+/* line 49 */
 p {
   margin: 7px 0 0 0;
 }
@@ -409,72 +409,72 @@ p {
 /*************************************************
 Specific Awestruct extension style
 *************************************************/
-/* line 54 */
+/* line 56 */
 pre {
   font-family: courier;
 }
 
-/* line 58 */
+/* line 60 */
 .tag-0 {
   font-size: 100%;
 }
 
-/* line 61 */
+/* line 63 */
 .tag-1 {
   font-size: 140%;
 }
 
-/* line 64 */
+/* line 66 */
 .tag-2 {
   font-size: 180%;
 }
 
-/* line 67 */
+/* line 69 */
 .tag-3 {
   font-size: 220%;
 }
 
-/* line 70 */
+/* line 72 */
 .tag-4 {
   font-size: 260%;
 }
 
-/* line 73 */
+/* line 75 */
 .tag-5 {
   font-size: 300%;
 }
 
-/* line 76 */
+/* line 78 */
 .tag-6 {
   font-size: 300%;
 }
 
-/* line 82 */
+/* line 84 */
 .pagination-links {
   font-size: 90%;
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 86 */
+/* line 88 */
 .pagination-links .page-link, .pagination-links a, .pagination-links .current-page, .pagination-links span {
   padding: .6ex;
 }
-/* line 89 */
+/* line 91 */
 .pagination-links .page-link, .pagination-links a, .pagination-links .current-page {
   border: 1px solid #888;
 }
-/* line 92 */
+/* line 94 */
 .pagination-links .current-page {
   border: 1px solid #555;
   background-color: #ddd;
   font-weight: bold;
 }
-/* line 97 */
+/* line 99 */
 .pagination-links .previous-link, .pagination-links .next-link {
   font-weight: bold;
 }
 
-/* line 102 */
+/* line 104 */
 em {
   font-weight: bold;
 }
@@ -499,12 +499,12 @@ Defined fonts
 /*************************************************
 Site Navigation
 *************************************************/
-/* line 129 */
+/* line 131 */
 body > header {
   background: url(../images/skin/renewal/header-bg-pattern.gif) top left repeat-x;
 }
 
-/* line 132 */
+/* line 134 */
 div.header-box {
   background: url(../images/skin/renewal/header-bg2.gif) top center no-repeat;
   height: 155px;
@@ -513,7 +513,7 @@ div.header-box {
 }
 
 /*making logo absolute to stay aligned with toolbar*/
-/* line 141 */
+/* line 143 */
 div.header-box > .logo-bold {
   position: absolute;
   top: 10px;
@@ -523,19 +523,19 @@ div.header-box > .logo-bold {
   color: #fff;
 }
 
-/* line 150 */
+/* line 152 */
 div.header-box > .logo-bold span {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 154 */
+/* line 156 */
 div.header-box > nav {
   right: 3%;
   top: 62px;
   position: absolute;
 }
 
-/* line 161 */
+/* line 163 */
 .borderradius nav.site a,
 .borderradius nav.console a {
   opacity: 1.0;
@@ -544,23 +544,23 @@ div.header-box > nav {
   -webkit-border-radius: 5px;
 }
 
-/* line 168 */
+/* line 170 */
 .borderradius nav.site a {
   background: #f6f6f6;
 }
 
-/* line 172 */
+/* line 174 */
 .borderradius nav.console a {
   /*background: #e8e8e8;*/
 }
 
-/* line 176 */
+/* line 178 */
 #menu > li {
   height: 30px;
   margin: 0 5px;
 }
 
-/* line 181 */
+/* line 183 */
 #menu li {
   float: left;
   position: relative;
@@ -568,7 +568,7 @@ div.header-box > nav {
   z-index: 10;
 }
 
-/* line 188 */
+/* line 190 */
 #menu a {
   text-decoration: none;
   color: #bfe3f8;
@@ -579,7 +579,7 @@ div.header-box > nav {
 }
 
 /* main level link on hover and selected */
-/* line 201 */
+/* line 203 */
 ul#menu li.selected > a,
 ul#menu li > a:focus,
 ul#menu li > a:hover,
@@ -588,12 +588,12 @@ ul#menu li:hover > a {
   color: #fff;
 }
 
-/* line 206 */
+/* line 208 */
 ul#menu li ul li a {
   color: #777;
 }
 
-/* line 211 */
+/* line 213 */
 ul#menu li ul li a:hover,
 ul#menu li ul li a:focus {
   color: #000;
@@ -601,7 +601,7 @@ ul#menu li ul li a:focus {
 }
 
 /*transition*/
-/* line 217 */
+/* line 219 */
 nav a {
   padding: 5px 10px;
   /*background: #9c3;*/
@@ -614,7 +614,7 @@ nav a {
 /*************************************************
 Left Toolbar/Column
 *************************************************/
-/* line 229 */
+/* line 231 */
 body aside {
   padding: 7px 0 7px 0;
   display: block;
@@ -624,7 +624,7 @@ body aside {
   width: 389px;
 }
 
-/* line 239 */
+/* line 241 */
 body aside .shadow-helper {
   overflow: hidden;
   /*	margin: 0 -16px;*/
@@ -633,50 +633,50 @@ body aside .shadow-helper {
   min-height: 800px;
 }
 
-/* line 247 */
+/* line 249 */
 div.left-toolbar {
   border-radius: 5px;
   background-color: #fff;
   width: 360px;
 }
 
-/* line 255 */
+/* line 257 */
 div.left-toolbar > section > header > h2,
 div.left-toolbar > section > header > div > h2 {
   border-bottom: 1px solid #777;
   color: #777;
 }
 
-/* line 260 */
+/* line 262 */
 div.left-toolbar > section {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-/* line 266 */
+/* line 268 */
 section.tags a {
   font-size: 82%;
   color: #174e6e;
 }
 
-/* line 271 */
+/* line 273 */
 h2.tweets-title {
   position: relative;
 }
 
-/* line 275 */
+/* line 277 */
 h2.tweets-title > a > img {
   position: absolute;
   right: 5px;
 }
 
-/* line 280 */
+/* line 282 */
 h2.tweets-title > a:visited {
   color: #777;
 }
 
-/* line 284 */
+/* line 286 */
 section.tweets #twitter_div ul li {
   /* background: #f8f8f8 -moz-linear-gradient(90deg, rgba(0, 0, 0, .08) 2%, rgba(255, 255, 255, .1) 98%);
      background: #f8f8f8 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(0, 0, 0, .08)));*/
@@ -686,12 +686,12 @@ section.tweets #twitter_div ul li {
   margin: 5px;
 }
 
-/* line 293 */
+/* line 295 */
 section.tweets div.actions {
   font-size: 80%;
 }
 
-/* line 297 */
+/* line 299 */
 .book-container {
   width: 100%;
   text-align: center;
@@ -701,7 +701,7 @@ section.tweets div.actions {
 /*************************************************
 Main Content
 *************************************************/
-/* line 307 */
+/* line 309 */
 div#main {
   display: block;
   position: absolute;
@@ -713,7 +713,7 @@ div#main {
   margin: 154px 364px 0 0;
 }
 
-/* line 318 */
+/* line 320 */
 div#post-container {
   /*   border: 3px solid #c7d4dc;*/
   width: 87%;
@@ -721,39 +721,62 @@ div#post-container {
   margin: 10px auto 0 auto;
 }
 
-/* line 325 */
+/* line 327 */
 .post-preview {
   width: 95%;
 }
-
 /* line 329 */
+.post-preview header {
+  border-bottom: 1px dotted #999;
+  margin: 0 0 10px 0;
+}
+/* line 334 */
+.post-preview .post {
+  border: none;
+  padding: 0;
+}
+/* line 337 */
+.post-preview .post h2.title {
+  font-size: 149%;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+/* line 348 */
+.post-preview .post h4.tags {
+  margin: 10px 0 7px 0;
+  background-color: #FAFAFA;
+}
+
+/* line 355 */
 .post {
   padding-bottom: 2em;
-  margin: 2em 2em 2em 0;
+  margin: 2em 2em 2.5em 0;
   border-bottom: 1px solid #888;
 }
-/* line 333 */
+/* line 359 */
 .post h2 {
-  font-size: 170%;
+  font-size: 149%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 339 */
+/* line 365 */
 .post h2.title {
-  font-size: 170%;
+  font-size: 149%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 345 */
+/* line 371 */
 .post h3 {
   font-size: 120%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 351 */
+/* line 377 */
 .post h3.date {
   font-size: 80%;
   font-weight: bold;
@@ -763,54 +786,77 @@ div#post-container {
   position: absolute;
   text-align: center;
 }
-/* line 360 */
+/* line 387 */
+.post .date-box {
+  float: left;
+  margin: 0 10px 0 0;
+}
+/* line 392 */
+.post .date-box .date-day,
+.post .date-box .date-month,
+.post .date-box .date-year {
+  margin: 0px;
+  padding: 0px;
+  color: #999;
+  text-align: center;
+  font-size: 90%;
+}
+/* line 400 */
+.post .date-box .date-day {
+  font-size: 150%;
+}
+/* line 404 */
+.post .date-box .date-year {
+  font-size: 50%;
+}
+/* line 409 */
 .post h4 {
   font-size: 90%;
   font-weight: bold;
 }
-/* line 364 */
+/* line 413 */
 .post h4.tags {
   font-size: 90%;
   border-bottom: 1px dotted #999;
-  margin: 0 0 15px 0;
+  margin: 0 0 7px 0;
   text-align: right;
   font-weight: normal;
   font-family: AvenirRegular;
   color: #999;
 }
-/* line 373 */
+/* line 422 */
 .post h4.tags a {
   color: #6D90BD;
 }
-/* line 376 */
+/* line 425 */
 .post .content {
   font-size: 1em;
 }
-/* line 378 */
+/* line 427 */
 .post .content p {
   padding: 5px 0 5px 0;
 }
-/* line 382 */
+/* line 431 */
 .post ul {
   list-style: circle;
   list-style-position: inside;
 }
-/* line 385 */
+/* line 434 */
 .post ul li {
   margin: 5px 0 5px 0;
 }
 
-/* line 391 */
+/* line 440 */
 .fontface .post header {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 394 */
+/* line 443 */
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
 }
 
-/* line 400 */
+/* line 449 */
 .notes {
   border: 1px solid #ececec;
   background: white;
@@ -837,7 +883,7 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 418 */
+/* line 467 */
 .notif {
   border: 1px solid #ececec;
   background: #ffff88;
@@ -864,7 +910,7 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 436 */
+/* line 485 */
 .sticky-top-right {
   position: fixed;
   top: 10px;
@@ -872,7 +918,7 @@ div#post-container {
   width: 250px;
 }
 
-/* line 443 */
+/* line 492 */
 .download {
   padding: 10px;
   margin: 15px 15px 0 0;
@@ -881,13 +927,13 @@ div#post-container {
   text-align: right;
 }
 
-/* line 451 */
+/* line 500 */
 .toc-list {
   margin: 10px 0 0 0;
   max-width: 300px;
 }
 
-/* line 456 */
+/* line 505 */
 .toc-list li {
   margin: 3px 0;
   padding: 8px 5px 5px 5px;
@@ -898,7 +944,7 @@ div#post-container {
 /*************************************************
 Design page
 *************************************************/
-/* line 466 */
+/* line 515 */
 div.design-item {
   border: 1px solid #ececec;
   border-radius: 7px;
@@ -916,106 +962,106 @@ Media queries
 *************************************************/
 /* iOS/android phone landscape screen width*/
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 484 */
+  /* line 534 */
   body > aside {
     display: none;
   }
 
-  /* line 488 */
+  /* line 538 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 492 */
+  /* line 542 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 496 */
+  /* line 546 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 500 */
+  /* line 550 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-  /* line 506 */
+  /* line 557 */
   body > aside {
     display: none;
   }
 
-  /* line 510 */
+  /* line 561 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 514 */
+  /* line 565 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 518 */
+  /* line 569 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 522 */
+  /* line 573 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (min-device-width: 600px) and (orientation:portrait) {
-  /* line 528 */
+  /* line 580 */
   body > aside {
     display: none;
   }
 
-  /* line 532 */
+  /* line 584 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 536 */
+  /* line 588 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 540 */
+  /* line 592 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 544 */
+  /* line 596 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 /* iOS/android phone portrait screen width*/
 @media screen and (max-device-width: 320px) {
-  /* line 551 */
+  /* line 604 */
   body > aside {
     display: none;
   }
 
-  /* line 555 */
+  /* line 608 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 559 */
+  /* line 612 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 563 */
+  /* line 616 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 567 */
+  /* line 620 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
@@ -1023,51 +1069,51 @@ Media queries
 /*************************************************
 Utils
 *************************************************/
-/* line 575 */
+/* line 628 */
 .transition {
   -moz-transition-duration: .5s;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
 }
 
-/* line 581 */
+/* line 634 */
 .none {
   display: none;
 }
 
-/* line 585 */
+/* line 638 */
 .notnone {
   display: default;
 }
 
-/* line 589 */
+/* line 642 */
 .hide {
   opacity: 0;
 }
 
-/* line 593 */
+/* line 646 */
 .show {
   opacity: 100;
 }
 
-/* line 597 */
+/* line 650 */
 .max-width-100 {
   max-width: 100%;
 }
 
 /*DISQUS*/
-/* line 602 */
+/* line 655 */
 .dsq-widget-list {
   font-size: 90%;
 }
 
-/* line 606 */
+/* line 659 */
 a.dsq-widget-user {
   font-weight: bold;
   color: #1670A3;
 }
 
-/* line 611 */
+/* line 664 */
 .gist {
   font-size: 80%;
 }
