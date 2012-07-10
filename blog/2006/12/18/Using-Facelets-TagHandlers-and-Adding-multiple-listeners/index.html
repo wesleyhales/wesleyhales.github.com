@@ -73,88 +73,88 @@
       <div id='post-container'>
         <div class='article-list'>
           <div class='post_navigation'>
-  <div class='previous_post link'>
-    Previous:
-    <a href='/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover/'>
-      My Jroller Blog Extreme Makeover
-    </a>
-  </div>
-  <div class='next_post link'>
-    Next:
-    <a href='/blog/2006/12/26/Ajax4Jsf-Modal-Loading-Windows/'>
-      Ajax4Jsf Modal Loading Windows
-    </a>
-  </div>
-  <div class='clearfix'></div>
-</div>
-<div class='post'>
-  <h2 class='title'>
-    Using Facelets TagHandlers and Adding multiple listeners
-  </h2>
-  <h3 class='date'>
-    18 December 2006
-  </h3>
-  <h4 class='tags'>
-    <a href='/blog/tags/Java/'>
-      Java
-    </a>
-    |
-  </h4>
-  <div class='content'>
-    
-
-<p>
-ComponentHandler, HtmlComponentHandler, or TagHandler. So I think I finally have a handle on what each of these are used for. Okay the first 2 are easy, HtmlComponentHandler extends ComponentHandler. But what is a MetaRuleset and what can it do for my components? It looks to mee like it is just a method binding passthrough for the component when you call <code>MetaRuleset.addRule(typeTagRule);</code>?
-</p>
-
-
-<p>
-TagHandler ended up saving the day for me, and after spending hours/days trying to get the first 2 to do what I was wanting, this one took me like 5 minutes. I was trying to add a handler to a component which turned out to be the wrong thing to do in facelets. Now, All one has to do is declare a tag in the *taglib.xml file and point it to the new handler class (as explained on Facelets docs). 
-</p>
-
-
-<p><code></p>&#x000A;&#x000A;<pre>&#x000A;</span><a name="l41">    <span class="s2">&lt;</span><span class="s5">tag</span><span class="s2">&gt;</span><span class="s0"> &#x000A;</span></a><a name="l42">        <span class="s2">&lt;</span><span class="s5">tag-name</span><span class="s2">&gt;</span><span class="s6">sliderListener</span><span class="s2">&lt;/</span><span class="s5">tag-name</span><span class="s2">&gt;</span><span class="s0"> &#x000A;</span></a><a name="l43">        <span class="s2">&lt;</span><span class="s5">handler-class</span><span class="s2">&gt;</span><span class="s6">com.halesconsulting.web.jsf.handler.SliderTagHandler</span><span class="s2">&lt;/</span><span class="s5">handler-class</span><span class="s2">&gt;</span><span class="s0"> &#x000A;</span></a><a name="l44">    <span class="s2">&lt;/</span><span class="s5">tag</span><span class="s2">&gt;</span><span class="s0"> </a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code></p>
-
-<p>
-Next is defining the required and not-required attributes for your tag in the class.
-</p>
-
-
-<p><code></p>&#x000A;&#x000A;<pre>&#x000A;</span></a><a name="l27">  <span class="s0">private final </span><span class="s1">TagAttribute test; &#x000A;</span></a><a name="l28">  <span class="s0">private final </span><span class="s1">TagAttribute var; </a></a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code>
-<code></p>&#x000A;&#x000A;<pre>&#x000A;</span></a><a name="l35">  <span class="s0">public </span><span class="s1">SliderTagHandler(TagConfig config) { &#x000A;</span></a><a name="l36">      <span class="s0">super</span><span class="s1">(config); &#x000A;</span></a><a name="l37"> &#x000A;</a><a name="l38">      <span class="s2">// helper method for getting a required attribute</span><span class="s1"> &#x000A;</span></a><a name="l39">      <span class="s0">this</span><span class="s1">.test = </span><span class="s0">this</span><span class="s1">.getRequiredAttribute(</span><span class="s4">"type"</span><span class="s1">); &#x000A;&#x000A;</span></a><a name="l40"> &#x000A;</a><a name="l41">      <span class="s2">// helper method</span><span class="s1"> &#x000A;</span></a><a name="l42">      <span class="s0">this</span><span class="s1">.var = </span><span class="s0">this</span><span class="s1">.getAttribute(</span><span class="s4">"var"</span><span class="s1">); &#x000A;</span></a><a name="l43">  } </a></a></a></a></a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code></p>
-
-<p>Next, in the apply method, I was able to get this tags parent component instance (just like in JSP component development where you call <code>UIComponentTag tag = UIComponentTag.getParentUIComponentTag(pageContext);</code> It took me a while to figure out where I needed to do this, but after this worked, you should have seen the excitement! Nothing like figuring shit out on your own when no documentation could be found on what you are trying to do!</p>
-
-
-<p></p>
-
-<p>I had to add a HashMap to keep track of what listeners had already been added. Otherwise, each render added a new listener...</p>
-
-
-<p><code></p>&#x000A;&#x000A;<pre>&#x000A;</a><a name="l45">  <span class="s2">/** &#x000A;&#x000A;</span></a><a name="l46">   * Threadsafe Method for controlling evaluation of &#x000A;</a><a name="l47">   * its child tags, represented by "nextHandler" &#x000A;</a><a name="l48">   */<span class="s1"> &#x000A;</span></a><a name="l49">  <span class="s0">public void </span><span class="s1">apply(FaceletContext ctx, UIComponent parent) </span><span class="s0">throws </span><span class="s1">IOException, FacesException, ELException { &#x000A;</span></a><a name="l50"> &#x000A;</a><a name="l51">      <span class="s0">boolean </span><span class="s1">b = </span><span class="s0">this</span><span class="s1">.test.getBoolean(ctx); &#x000A;&#x000A;</span></a><a name="l52"> &#x000A;</a><a name="l53">      <span class="s0">if </span><span class="s1">(!addedMap.containsKey(test.getValue())){ &#x000A;</span></a><a name="l54">          SliderSource sliderSource = (SliderSource)parent; &#x000A;</a><a name="l55">          SliderListener listener = createSliderListener(test.getValue()); &#x000A;</a><a name="l56">          addedMap.put(test.getValue(),<span class="s0">true</span><span class="s1">); &#x000A;</span></a><a name="l57">          sliderSource.addSliderListener(listener); &#x000A;</a><a name="l58">      } &#x000A;</a><a name="l59">       &#x000A;&#x000A;</a><a name="l60">      <span class="s0">if </span><span class="s1">(</span><span class="s0">this</span><span class="s1">.var != </span><span class="s0">null</span><span class="s1">) { &#x000A;</span></a><a name="l61">          ctx.setAttribute(var.getValue(ctx), <span class="s0">new </span><span class="s1">Boolean(b)); &#x000A;</span></a><a name="l62">      } &#x000A;</a><a name="l63">      <span class="s0">if </span><span class="s1">(b) { &#x000A;</span></a><a name="l64">          <span class="s0">this</span><span class="s1">.nextHandler.apply(ctx, parent); &#x000A;&#x000A;</span></a><a name="l65">      } &#x000A;</a><a name="l66">  } </a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code></p>
-
-<p>I still need to do a little more digging on the details of the nextHandler stuff. But I was happy to get it working the "right way"</p>
-
-
-<p></p>
-  </div>
-  <div class='comments'>
-    
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                var disqus_shortname = 'wesleyhales';
-                var disqus_url = "http://www.wesleyhales.com/blog/2006/12/18/Using-Facelets-TagHandlers-and-Adding-multiple-listeners/";
-                var disqus_developer = null;
-                var disqus_identifier = null;
-                (function() {
-                  var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
-                  dsq.src = "http://wesleyhales.disqus.com/embed.js";
-                  (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
-                })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
-  </div>
-</div>
+            <div class='previous_post link'>
+              Previous:
+              <a href='/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover/'>
+                My Jroller Blog Extreme Makeover
+              </a>
+            </div>
+            <div class='next_post link'>
+              Next:
+              <a href='/blog/2006/12/26/Ajax4Jsf-Modal-Loading-Windows/'>
+                Ajax4Jsf Modal Loading Windows
+              </a>
+            </div>
+            <div class='clearfix'></div>
+          </div>
+          <div class='post'>
+            <h2 class='title'>
+              Using Facelets TagHandlers and Adding multiple listeners
+            </h2>
+            <h3 class='date'>
+              18 December 2006
+            </h3>
+            <h4 class='tags'>
+              <a href='/blog/tags/Java/'>
+                Java
+              </a>
+              |
+            </h4>
+            <div class='content'>
+              
+              
+              <p>
+              ComponentHandler, HtmlComponentHandler, or TagHandler. So I think I finally have a handle on what each of these are used for. Okay the first 2 are easy, HtmlComponentHandler extends ComponentHandler. But what is a MetaRuleset and what can it do for my components? It looks to mee like it is just a method binding passthrough for the component when you call <code>MetaRuleset.addRule(typeTagRule);</code>?
+              </p>
+              
+              
+              <p>
+              TagHandler ended up saving the day for me, and after spending hours/days trying to get the first 2 to do what I was wanting, this one took me like 5 minutes. I was trying to add a handler to a component which turned out to be the wrong thing to do in facelets. Now, All one has to do is declare a tag in the *taglib.xml file and point it to the new handler class (as explained on Facelets docs). 
+              </p>
+              
+              
+              <p><code></p>&#x000A;&#x000A;<pre>&#x000A;</span><a name="l41">    <span class="s2">&lt;</span><span class="s5">tag</span><span class="s2">&gt;</span><span class="s0"> &#x000A;</span></a><a name="l42">        <span class="s2">&lt;</span><span class="s5">tag-name</span><span class="s2">&gt;</span><span class="s6">sliderListener</span><span class="s2">&lt;/</span><span class="s5">tag-name</span><span class="s2">&gt;</span><span class="s0"> &#x000A;</span></a><a name="l43">        <span class="s2">&lt;</span><span class="s5">handler-class</span><span class="s2">&gt;</span><span class="s6">com.halesconsulting.web.jsf.handler.SliderTagHandler</span><span class="s2">&lt;/</span><span class="s5">handler-class</span><span class="s2">&gt;</span><span class="s0"> &#x000A;</span></a><a name="l44">    <span class="s2">&lt;/</span><span class="s5">tag</span><span class="s2">&gt;</span><span class="s0"> </a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code></p>
+              
+              <p>
+              Next is defining the required and not-required attributes for your tag in the class.
+              </p>
+              
+              
+              <p><code></p>&#x000A;&#x000A;<pre>&#x000A;</span></a><a name="l27">  <span class="s0">private final </span><span class="s1">TagAttribute test; &#x000A;</span></a><a name="l28">  <span class="s0">private final </span><span class="s1">TagAttribute var; </a></a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code>
+              <code></p>&#x000A;&#x000A;<pre>&#x000A;</span></a><a name="l35">  <span class="s0">public </span><span class="s1">SliderTagHandler(TagConfig config) { &#x000A;</span></a><a name="l36">      <span class="s0">super</span><span class="s1">(config); &#x000A;</span></a><a name="l37"> &#x000A;</a><a name="l38">      <span class="s2">// helper method for getting a required attribute</span><span class="s1"> &#x000A;</span></a><a name="l39">      <span class="s0">this</span><span class="s1">.test = </span><span class="s0">this</span><span class="s1">.getRequiredAttribute(</span><span class="s4">"type"</span><span class="s1">); &#x000A;&#x000A;</span></a><a name="l40"> &#x000A;</a><a name="l41">      <span class="s2">// helper method</span><span class="s1"> &#x000A;</span></a><a name="l42">      <span class="s0">this</span><span class="s1">.var = </span><span class="s0">this</span><span class="s1">.getAttribute(</span><span class="s4">"var"</span><span class="s1">); &#x000A;</span></a><a name="l43">  } </a></a></a></a></a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code></p>
+              
+              <p>Next, in the apply method, I was able to get this tags parent component instance (just like in JSP component development where you call <code>UIComponentTag tag = UIComponentTag.getParentUIComponentTag(pageContext);</code> It took me a while to figure out where I needed to do this, but after this worked, you should have seen the excitement! Nothing like figuring shit out on your own when no documentation could be found on what you are trying to do!</p>
+              
+              
+              <p></p>
+              
+              <p>I had to add a HashMap to keep track of what listeners had already been added. Otherwise, each render added a new listener...</p>
+              
+              
+              <p><code></p>&#x000A;&#x000A;<pre>&#x000A;</a><a name="l45">  <span class="s2">/** &#x000A;&#x000A;</span></a><a name="l46">   * Threadsafe Method for controlling evaluation of &#x000A;</a><a name="l47">   * its child tags, represented by "nextHandler" &#x000A;</a><a name="l48">   */<span class="s1"> &#x000A;</span></a><a name="l49">  <span class="s0">public void </span><span class="s1">apply(FaceletContext ctx, UIComponent parent) </span><span class="s0">throws </span><span class="s1">IOException, FacesException, ELException { &#x000A;</span></a><a name="l50"> &#x000A;</a><a name="l51">      <span class="s0">boolean </span><span class="s1">b = </span><span class="s0">this</span><span class="s1">.test.getBoolean(ctx); &#x000A;&#x000A;</span></a><a name="l52"> &#x000A;</a><a name="l53">      <span class="s0">if </span><span class="s1">(!addedMap.containsKey(test.getValue())){ &#x000A;</span></a><a name="l54">          SliderSource sliderSource = (SliderSource)parent; &#x000A;</a><a name="l55">          SliderListener listener = createSliderListener(test.getValue()); &#x000A;</a><a name="l56">          addedMap.put(test.getValue(),<span class="s0">true</span><span class="s1">); &#x000A;</span></a><a name="l57">          sliderSource.addSliderListener(listener); &#x000A;</a><a name="l58">      } &#x000A;</a><a name="l59">       &#x000A;&#x000A;</a><a name="l60">      <span class="s0">if </span><span class="s1">(</span><span class="s0">this</span><span class="s1">.var != </span><span class="s0">null</span><span class="s1">) { &#x000A;</span></a><a name="l61">          ctx.setAttribute(var.getValue(ctx), <span class="s0">new </span><span class="s1">Boolean(b)); &#x000A;</span></a><a name="l62">      } &#x000A;</a><a name="l63">      <span class="s0">if </span><span class="s1">(b) { &#x000A;</span></a><a name="l64">          <span class="s0">this</span><span class="s1">.nextHandler.apply(ctx, parent); &#x000A;&#x000A;</span></a><a name="l65">      } &#x000A;</a><a name="l66">  } </a>&#x000A;</pre>&#x000A;&#x000A;&#x000A;<p></code></p>
+              
+              <p>I still need to do a little more digging on the details of the nextHandler stuff. But I was happy to get it working the "right way"</p>
+              
+              
+              <p></p>
+            </div>
+            <div class='comments'>
+              
+                          <div id="disqus_thread"></div>
+                          <script type="text/javascript">
+                          var disqus_shortname = 'wesleyhales';
+                          var disqus_url = "http://www.wesleyhales.com/blog/2006/12/18/Using-Facelets-TagHandlers-and-Adding-multiple-listeners/";
+                          var disqus_developer = null;
+                          var disqus_identifier = null;
+                          (function() {
+                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                            dsq.src = "http://wesleyhales.disqus.com/embed.js";
+                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                          })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
         </div>
       </div>
     </div>
