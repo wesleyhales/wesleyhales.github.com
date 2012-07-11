@@ -559,11 +559,16 @@ div.header-box > nav {
 #menu li {
   float: left;
   position: relative;
-  list-style: none;
   z-index: 10;
 }
 
-/* line 190 */
+/* line 191 */
+#twitter_update_list li,
+#menu li, .toc-list li {
+  list-style: none;
+}
+
+/* line 196 */
 #menu a {
   text-decoration: none;
   color: #bfe3f8;
@@ -574,7 +579,7 @@ div.header-box > nav {
 }
 
 /* main level link on hover and selected */
-/* line 203 */
+/* line 209 */
 ul#menu li.selected > a,
 ul#menu li > a:focus,
 ul#menu li > a:hover,
@@ -583,12 +588,12 @@ ul#menu li:hover > a {
   color: #fff;
 }
 
-/* line 208 */
+/* line 214 */
 ul#menu li ul li a {
   color: #777;
 }
 
-/* line 213 */
+/* line 219 */
 ul#menu li ul li a:hover,
 ul#menu li ul li a:focus {
   color: #000;
@@ -596,7 +601,7 @@ ul#menu li ul li a:focus {
 }
 
 /*transition*/
-/* line 219 */
+/* line 225 */
 nav a {
   padding: 5px 10px;
   /*background: #9c3;*/
@@ -609,7 +614,7 @@ nav a {
 /*************************************************
 Left Toolbar/Column
 *************************************************/
-/* line 231 */
+/* line 237 */
 body aside {
   padding: 7px 0 7px 0;
   display: block;
@@ -619,7 +624,7 @@ body aside {
   width: 389px;
 }
 
-/* line 241 */
+/* line 247 */
 body aside .shadow-helper {
   overflow: hidden;
   /*	margin: 0 -16px;*/
@@ -628,50 +633,50 @@ body aside .shadow-helper {
   min-height: 800px;
 }
 
-/* line 249 */
+/* line 255 */
 div.left-toolbar {
   border-radius: 5px;
   background-color: #fff;
   width: 360px;
 }
 
-/* line 257 */
+/* line 263 */
 div.left-toolbar > section > header > h2,
 div.left-toolbar > section > header > div > h2 {
   border-bottom: 1px solid #777;
   color: #777;
 }
 
-/* line 262 */
+/* line 268 */
 div.left-toolbar > section {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-/* line 268 */
+/* line 274 */
 section.tags a {
   font-size: 82%;
   color: #174e6e;
 }
 
-/* line 273 */
+/* line 279 */
 h2.tweets-title {
   position: relative;
 }
 
-/* line 277 */
+/* line 283 */
 h2.tweets-title > a > img {
   position: absolute;
   right: 5px;
 }
 
-/* line 282 */
+/* line 288 */
 h2.tweets-title > a:visited {
   color: #777;
 }
 
-/* line 286 */
+/* line 292 */
 section.tweets #twitter_div ul li {
   /* background: #f8f8f8 -moz-linear-gradient(90deg, rgba(0, 0, 0, .08) 2%, rgba(255, 255, 255, .1) 98%);
      background: #f8f8f8 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(0, 0, 0, .08)));*/
@@ -681,12 +686,12 @@ section.tweets #twitter_div ul li {
   margin: 5px;
 }
 
-/* line 295 */
+/* line 301 */
 section.tweets div.actions {
   font-size: 80%;
 }
 
-/* line 299 */
+/* line 305 */
 .book-container {
   width: 100%;
   text-align: center;
@@ -696,7 +701,7 @@ section.tweets div.actions {
 /*************************************************
 Main Content
 *************************************************/
-/* line 309 */
+/* line 315 */
 div#main {
   display: block;
   position: absolute;
@@ -708,7 +713,7 @@ div#main {
   margin: 154px 364px 0 0;
 }
 
-/* line 320 */
+/* line 326 */
 div#post-container {
   /*   border: 3px solid #c7d4dc;*/
   width: 87%;
@@ -716,21 +721,21 @@ div#post-container {
   margin: 10px auto 0 auto;
 }
 
-/* line 327 */
+/* line 333 */
 .post-preview {
   width: 95%;
 }
-/* line 329 */
+/* line 335 */
 .post-preview header {
   border-bottom: 1px dotted #999;
   margin: 0 0 10px 0;
 }
-/* line 334 */
+/* line 340 */
 .post-preview .post {
   border: none;
   padding: 0;
 }
-/* line 337 */
+/* line 343 */
 .post-preview .post h2.title {
   font-size: 149%;
   font-weight: bold;
@@ -738,40 +743,40 @@ div#post-container {
   padding: 0px;
   width: auto;
 }
-/* line 348 */
+/* line 354 */
 .post-preview .post h4.tags {
   margin: 10px 0 7px 0;
   background-color: #FAFAFA;
 }
 
-/* line 355 */
+/* line 361 */
 .post {
   padding-bottom: 2em;
   margin: 2em 2em 2.5em 0;
   border-bottom: 1px solid #888;
 }
-/* line 359 */
+/* line 365 */
 .post h2 {
   font-size: 149%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 365 */
+/* line 371 */
 .post h2.title {
   font-size: 149%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 371 */
+/* line 377 */
 .post h3 {
   font-size: 120%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 377 */
+/* line 383 */
 .post h3.date {
   font-size: 80%;
   font-weight: bold;
@@ -781,12 +786,12 @@ div#post-container {
   position: absolute;
   text-align: center;
 }
-/* line 387 */
+/* line 393 */
 .post .date-box {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 392 */
+/* line 398 */
 .post .date-box .date-day,
 .post .date-box .date-month,
 .post .date-box .date-year {
@@ -796,20 +801,20 @@ div#post-container {
   text-align: center;
   font-size: 90%;
 }
-/* line 400 */
+/* line 406 */
 .post .date-box .date-day {
   font-size: 150%;
 }
-/* line 404 */
+/* line 410 */
 .post .date-box .date-year {
   font-size: 50%;
 }
-/* line 409 */
+/* line 415 */
 .post h4 {
   font-size: 90%;
   font-weight: bold;
 }
-/* line 413 */
+/* line 419 */
 .post h4.tags {
   font-size: 90%;
   border-bottom: 1px dotted #999;
@@ -819,42 +824,42 @@ div#post-container {
   font-family: AvenirRegular;
   color: #999;
 }
-/* line 422 */
+/* line 428 */
 .post h4.tags a {
   color: #6D90BD;
 }
-/* line 425 */
+/* line 431 */
 .post .content {
   font-size: 1em;
 }
-/* line 427 */
+/* line 433 */
 .post .content p {
   padding: 5px 0 5px 0;
 }
-/* line 431 */
+/* line 437 */
 .post ul {
   list-style: circle;
 }
-/* line 434 */
+/* line 440 */
 .post ol, .post ul {
   list-style-position: inside;
 }
-/* line 436 */
+/* line 442 */
 .post ol li, .post ul li {
   margin: 5px 0 5px 0;
 }
 
-/* line 442 */
+/* line 448 */
 .fontface .post header {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 445 */
+/* line 451 */
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
 }
 
-/* line 451 */
+/* line 457 */
 .notes {
   border: 1px solid #ececec;
   background: white;
@@ -881,7 +886,7 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 469 */
+/* line 475 */
 .notif {
   border: 1px solid #ececec;
   background: #ffff88;
@@ -908,7 +913,7 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 487 */
+/* line 493 */
 .sticky-top-right {
   position: fixed;
   top: 10px;
@@ -916,7 +921,7 @@ div#post-container {
   width: 250px;
 }
 
-/* line 494 */
+/* line 500 */
 .download {
   padding: 10px;
   margin: 15px 15px 0 0;
@@ -925,13 +930,13 @@ div#post-container {
   text-align: right;
 }
 
-/* line 502 */
+/* line 508 */
 .toc-list {
   margin: 10px 0 0 0;
   max-width: 300px;
 }
 
-/* line 507 */
+/* line 513 */
 .toc-list li {
   margin: 3px 0;
   padding: 8px 5px 5px 5px;
@@ -942,7 +947,7 @@ div#post-container {
 /*************************************************
 Design page
 *************************************************/
-/* line 517 */
+/* line 523 */
 div.design-item {
   border: 1px solid #ececec;
   border-radius: 7px;
@@ -960,106 +965,106 @@ Media queries
 *************************************************/
 /* iOS/android phone landscape screen width*/
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 536 */
+  /* line 542 */
   body > aside {
     display: none;
   }
 
-  /* line 540 */
+  /* line 546 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 544 */
+  /* line 550 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 548 */
+  /* line 554 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 552 */
+  /* line 558 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-  /* line 559 */
+  /* line 565 */
   body > aside {
     display: none;
   }
 
-  /* line 563 */
+  /* line 569 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 567 */
+  /* line 573 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 571 */
+  /* line 577 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 575 */
+  /* line 581 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (min-device-width: 600px) and (orientation:portrait) {
-  /* line 582 */
+  /* line 588 */
   body > aside {
     display: none;
   }
 
-  /* line 586 */
+  /* line 592 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 590 */
+  /* line 596 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 594 */
+  /* line 600 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 598 */
+  /* line 604 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 /* iOS/android phone portrait screen width*/
 @media screen and (max-device-width: 320px) {
-  /* line 606 */
+  /* line 612 */
   body > aside {
     display: none;
   }
 
-  /* line 610 */
+  /* line 616 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 614 */
+  /* line 620 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 618 */
+  /* line 624 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 622 */
+  /* line 628 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
@@ -1067,51 +1072,51 @@ Media queries
 /*************************************************
 Utils
 *************************************************/
-/* line 630 */
+/* line 636 */
 .transition {
   -moz-transition-duration: .5s;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
 }
 
-/* line 636 */
+/* line 642 */
 .none {
   display: none;
 }
 
-/* line 640 */
+/* line 646 */
 .notnone {
   display: default;
 }
 
-/* line 644 */
+/* line 650 */
 .hide {
   opacity: 0;
 }
 
-/* line 648 */
+/* line 654 */
 .show {
   opacity: 100;
 }
 
-/* line 652 */
+/* line 658 */
 .max-width-100 {
   max-width: 100%;
 }
 
 /*DISQUS*/
-/* line 657 */
+/* line 663 */
 .dsq-widget-list {
   font-size: 90%;
 }
 
-/* line 661 */
+/* line 667 */
 a.dsq-widget-user {
   font-weight: bold;
   color: #1670A3;
 }
 
-/* line 666 */
+/* line 672 */
 .gist {
   font-size: 80%;
 }
