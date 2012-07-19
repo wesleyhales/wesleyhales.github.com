@@ -73,74 +73,74 @@
       <div id='post-container'>
         <div class='article-list'>
           <div class='post_navigation'>
-            <div class='previous_post link'>
-              Previous:
-              <a href='/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/'>
-                Choppy scrolling on iOS with iscroll and PhoneGap
-              </a>
-            </div>
-            <div class='next_post link'>
-              Next:
-              <a href='/blog/2012/07/11/Sharing-With-Web-Intents-Today/'>
-                Sharing Content with Web Intents
-              </a>
-            </div>
-            <div class='clearfix'></div>
-          </div>
-          <div class='post'>
-            <h2 class='title'>
-              Sniffing IE9 features while in compatibility mode
-            </h2>
-            <h3 class='date'>
-              08 June 2012
-            </h3>
-            <h4 class='tags'>
-              <a href='/blog/tags/ie/'>
-                ie
-              </a>
-              |
-              <a href='/blog/tags/features/'>
-                features
-              </a>
-              |
-              <a href='/blog/tags/sniffing/'>
-                sniffing
-              </a>
-              |
-            </h4>
-            <div class='content'>
-              <p>Getting the browser version from the User Agent string is one thing. But, when you
-              force compatibility mode in IE, you get whatever version you're forcing to. e.g...
-              <code><pre>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EmulateIE8&quot;/&gt;</pre><code></p>&#x000A;&#x000A;<p>in IE9 will cause jQuery's</p>&#x000A;&#x000A;<p><code><pre>($.browser.version, 10)</pre></code></p>
-              
-              <p>to return "8" :(</p>
-              
-              <p>I started digging through some <a href="http://blogs.msdn.com/b/ie/archive/2011/03/24/ie9-s-document-modes-and-javascript.aspx">msdn docs</a> to find various
-              ways of sniffing the actual browser we're using, even when compatibility mode is forced. This led me to <a href="http://msdn.microsoft.com/en-us/library/ie/gg622938.aspx">this doc</a>
-              Which talks about how IE9's Chakra JavaScript engine processes math precision differently (and faster) than the old IE8 JScript engine.</p>
-              
-              <p>So using the following bit of code, we are able to detect the true browser version no matter what compatibility mode it's in.
-              <code><pre>&#x000A;if ($.browser.msie &amp;&amp; parseInt($.browser.version, 10) &lt;= 8) {&#x000A;var x = 6.28318530717958620000;&#x000A;var val = Math.sin(x);&#x000A;  if(Math.abs(val) === 2.4492127076447545e-16){&#x000A;  //do your IE6,7,8 shit here&#x000A;  }&#x000A;</pre></code></p>
-              
-              <p>Easier/better way?</p>
-            </div>
-            <div class='comments'>
-              
-                          <div id="disqus_thread"></div>
-                          <script type="text/javascript">
-                          var disqus_shortname = 'wesleyhales';
-                          var disqus_url = "http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/";
-                          var disqus_developer = null;
-                          var disqus_identifier = null;
-                          (function() {
-                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
-                            dsq.src = "http://wesleyhales.disqus.com/embed.js";
-                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
-                          })();
-                          </script>
-                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
-            </div>
-          </div>
+  <div class='previous_post link'>
+    Previous:
+    <a href='/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/'>
+      Choppy scrolling on iOS with iscroll and PhoneGap
+    </a>
+  </div>
+  <div class='next_post link'>
+    Next:
+    <a href='/blog/2012/07/11/Sharing-With-Web-Intents-Today/'>
+      Sharing Content with Web Intents
+    </a>
+  </div>
+  <div class='clearfix'></div>
+</div>
+<div class='post'>
+  <h2 class='title'>
+    Sniffing IE9 features while in compatibility mode
+  </h2>
+  <h3 class='date'>
+    08 June 2012
+  </h3>
+  <h4 class='tags'>
+    <a href='/blog/tags/ie/'>
+      ie
+    </a>
+    |
+    <a href='/blog/tags/features/'>
+      features
+    </a>
+    |
+    <a href='/blog/tags/sniffing/'>
+      sniffing
+    </a>
+    |
+  </h4>
+  <div class='content'>
+    <p>Getting the browser version from the User Agent string is one thing. But, when you
+force compatibility mode in IE, you get whatever version you're forcing to. e.g...
+<code><pre>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EmulateIE8&quot;/&gt;</pre><code></p>&#x000A;&#x000A;<p>in IE9 will cause jQuery's</p>&#x000A;&#x000A;<p><code><pre>($.browser.version, 10)</pre></code></p>
+
+<p>to return "8" :(</p>
+
+<p>I started digging through some <a href="http://blogs.msdn.com/b/ie/archive/2011/03/24/ie9-s-document-modes-and-javascript.aspx">msdn docs</a> to find various
+ways of sniffing the actual browser we're using, even when compatibility mode is forced. This led me to <a href="http://msdn.microsoft.com/en-us/library/ie/gg622938.aspx">this doc</a>
+Which talks about how IE9's Chakra JavaScript engine processes math precision differently (and faster) than the old IE8 JScript engine.</p>
+
+<p>So using the following bit of code, we are able to detect the true browser version no matter what compatibility mode it's in.
+<code><pre>&#x000A;if ($.browser.msie &amp;&amp; parseInt($.browser.version, 10) &lt;= 8) {&#x000A;var x = 6.28318530717958620000;&#x000A;var val = Math.sin(x);&#x000A;  if(Math.abs(val) === 2.4492127076447545e-16){&#x000A;  //do your IE6,7,8 shit here&#x000A;  }&#x000A;</pre></code></p>
+
+<p>Easier/better way?</p>
+  </div>
+  <div class='comments'>
+    
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                var disqus_shortname = 'wesleyhales';
+                var disqus_url = "http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/";
+                var disqus_developer = null;
+                var disqus_identifier = null;
+                (function() {
+                  var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                  dsq.src = "http://wesleyhales.disqus.com/embed.js";
+                  (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
+  </div>
+</div>
         </div>
       </div>
     </div>
