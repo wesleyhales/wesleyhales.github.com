@@ -2,9 +2,76 @@
 <feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2012-07-19T00:00:00Z</updated>
+  <updated>2012-08-16T00:00:00Z</updated>
   <link href='http://www.wesleyhales.com/blog.atom' rel='self' type='application/atom+xml' />
   <link href='http://www.wesleyhales.com/' rel='alternate' type='text/html' />
+  <entry>
+    <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
+    <title>Web Performance Testing With PhantomJS</title>
+    <updated>2012-08-16T00:00:00Z</updated>
+    <link href='http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html' rel='alternate' type='text/html' />
+    <summary>
+      
+      
+      HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
+      are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
+      rankings, higher conversion rates, and an overall reduction in bandwidth costs.
+      
+      I recently took on the task of coming up with an accurate way to measure all the aforementioned things, in an effort to understand
+      which performance tweaks improved page load times and which ones didn't. But first, we needed a baseline to test how fast the page loads with both a clear-cache......
+    </summary>
+    <content type='html'>
+      &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/icons/phantomjs.png&quot; alt=&quot;phantomjs&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
+are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
+rankings, higher conversion rates, and an overall reduction in bandwidth costs.&lt;/p&gt;
+
+&lt;p&gt;I recently took on the task of coming up with an accurate way to measure all the aforementioned things, in an effort to understand
+which performance tweaks improved page load times and which ones didn't. But first, we needed a baseline to test how fast the page loads with both a clear-cache and primed-cache state; Enter PhantomJS.
+PhantomJS gives us a way to headlessly test page performance, and also gives us the automation we need for integration with any build system.
+For this article, I will explain the reporting tool I used and try to give you a starting point for testing your own site(s).&lt;/p&gt;
+
+&lt;p&gt;First off, I started with James Pierce's &lt;a href=&quot;https://github.com/jamesgpearce/confess/&quot;&gt;confess.js&lt;/a&gt; which gives us the elapsed load
+time of a web page, the slowest and fastest resources, along with many other cool things like automatic generation of an appcache manifest. However, it did not give us
+the document.readyState=interactive/complete or window.onload times. Another thing I wanted to measure was before and after cache. So If at first,
+we have resources which are not far-future cached, what happens after we future cache these things? Also, how fast does our page load after
+ being cached?&lt;/p&gt;
+
+&lt;p&gt;With a few performance focused modifications to confess.js, we are able to gather the following results:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;document.readyState&lt;/li&gt;
+&lt;li&gt;image filmstrip (how the page looks over load time)&lt;/li&gt;
+&lt;li&gt;page and resource load times after the user has a primed cache.&lt;/li&gt;
+&lt;li&gt;pretty effin cool charts with sparklines fed by knockout.js&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;This script is running live at &lt;a href=&quot;http://loadreport.wesleyhales.com/report.html&quot;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
+&lt;img src=&quot;http://www.wesleyhales.com/images/loadreport.js.png&quot; alt=&quot;loadreport.js&quot; align=&quot;left&quot; class=&quot;max-width-100&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We're running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&quot;http://twitter.com/ryanbridges&quot;&gt;@ryanbridges&lt;/a&gt; put together
+some awesome sparkline charts backed by knockout.js. Just click on the &quot;Show Me Some Charts!&quot; button to see 'em.
+&lt;img src=&quot;http://www.wesleyhales.com/images/loadreport-charts.png&quot; alt=&quot;loadreport-charts&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Regarding cache performance, phantomjs has a --disk-cahe=yes switch which is supposed to enable caching, but the results on the number
+of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with --disk-cahe=yes, phantom returns
+over 2MB of resources, but if we run it with the same switch set to &quot;no&quot;, we get 858KB of resources - and both modes report the same number
+of resources being loaded (around 150).
+To bypass this bug, I've created my own caching mechanism which basically loads the same page twice (in the same phantom instance)
+ and returns more accurate results when compared with Chrome's developer tools.&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&quot;http://phantomjs.org/&quot;&gt;phantomjs&lt;/a&gt; 1.6+, &lt;a href=&quot;https://github.com/wesleyhales/loadreport&quot;&gt;Get the script here&lt;/a&gt; and run this on your own build servers to make sure your UI screams.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/wesleyhales&quot;&gt;@wesleyhales&lt;/a&gt;&lt;/p&gt;
+
+&lt;br /&gt;
+
+
+&lt;br /&gt;
+    </content>
+  </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
@@ -1381,62 +1448,6 @@ So we have 2 Qualifier Types:&lt;br /&gt;
 
 &lt;p&gt;This is all in the &lt;a href=&quot;https://github.com/richfaces/tweetstream&quot;&gt;source code&lt;/a&gt;. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&amp;#8230;&lt;br /&gt; 
 &lt;/p&gt;&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer.html</id>
-    <title>Does Developing Portlets Make You a Better Developer?</title>
-    <updated>2011-04-05T00:00:00Z</updated>
-    <link href='http://www.wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer.html' rel='alternate' type='text/html' />
-    <summary>
-      
-      
-      Working with portlet technology is often discredited for it’s seemingly complex API and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier. 
-      This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.
-      
-      
-      
-      
-      What if you didn’t have to worry about portlet development gotchas anymore? What if you could develop portlets with the......
-    </summary>
-    <content type='html'>
-      
-
-&lt;p&gt;&lt;p&gt;Working with portlet technology is often discredited for it’s seemingly complex &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.&lt;br /&gt; 
-This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;What if you didn’t have to worry about portlet development gotchas anymore? What if you could develop portlets with the ease and hassle free life that you have with good ol’ servlets? Well, I’m here to tell you that this can be partly achieved with JSR-301 portlet bridge technology.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;I encourage (actually I dare you) to those who have never even touched a portal to take the JBoss Portlet Bridge for a test drive. It takes &lt;a href=&quot;http://downloads.sourceforge.net/project/jboss/GateIn/Portal/3.1.0-FINAL/GateIn-3.1.0-FINAL-jbossas.zip&quot;&gt;1 download (GateIn bundled with JBoss)&lt;/a&gt; and one maven archetype to get started. You can choose from any combination of plain &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt;, Richfaces, and Seam with&lt;br /&gt; 
-&lt;code style=&quot;color:white&quot;&gt;mvn archetype:generate -DarchetypeCatalog=http://bit.ly/jbossportletbridge&lt;/code&gt; from the command line.&lt;br /&gt; 
-&lt;img src=&quot;http://www.wesleyhales.com/images/jroller/jbw2011/archetype.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;If you run into any questions or special usecases, we have 7 videos which demo and walk you through just about anything you could think up.&lt;br /&gt; 
-&lt;a href=&quot;http://vimeo.com/wesleyhales/videos/sort:date&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/jroller/jbw2011/vimeo.gif&quot; alt=&quot;&quot; align=&quot;center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href=&quot;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/jroller/jbw2011/refcard.gif&quot; alt=&quot;&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;And for those that like to have a refcard by their side, you can get all the information you need about the story of portal technology and configuration drill downs here: &lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;From &lt;a href=&quot;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&quot;&gt;“Mastering Portals with a Portlet Bridge”&lt;/a&gt; DZone Refcard:&lt;br /&gt; 
-“A portlet bridge allows you to run application frameworks like &lt;span class=&quot;caps&quot;&gt;JSF&lt;/span&gt; in a portal environment without needing to know anything about the underlying portlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; or portlet concepts.”&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;br /&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;br /&gt; 
-&lt;a href=&quot;http://www.redhat.com/summit/sessions/jboss.html&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/jroller/jbw2011/jbw-2011.gif&quot; alt=&quot;&quot; align=&quot;left&quot; style=&quot;margin:0 15px 25px 0&quot; /&gt;&lt;/a&gt;&lt;br /&gt; 
-And if all that wasn’t enough, I will be giving a 50 minute talk at JBoss World titled &lt;a href=&quot;http://www.redhat.com/summit/sessions/jboss.html&quot;&gt;&quot;Making Portals Cool: The Compelling Advantages of a Portlet Bridge&quot;&lt;/a&gt; where you can come and personally track me down and specifically tell me about your problems, pains, or happiness with the project or the world in general &lt;img src=&quot;http://www.jroller.com/images/smileys/wink.gif&quot; class=&quot;smiley&quot; alt=&quot;;)&quot; title=&quot;;)&quot; /&gt; JBoss World will be located in Boston from May 3&amp;#8211;6.&lt;br /&gt; 
-I think &lt;a href=&quot;http://www.redhat.com/summit/rates/&quot;&gt;early bird pricing&lt;/a&gt; ends this Friday (April 8th), so you better hurry if you want to save a little cash.&lt;/p&gt; 
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
     </content>
   </entry>
 </feed>
