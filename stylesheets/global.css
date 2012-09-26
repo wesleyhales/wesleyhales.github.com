@@ -1,4 +1,3 @@
-/* line 8, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,12 +18,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 /* remember to define focus styles! */
-/* line 20, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 :focus {
   outline: 0;
 }
 
-/* line 23, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 body {
   /*	line-height: 1;*/
   color: black;
@@ -32,25 +29,21 @@ body {
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 32, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
 }
 
-/* line 36, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
 }
 
-/* line 41, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: "";
 }
 
-/* line 44, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_reset.scss */
 blockquote, q {
   quotes: "" "";
 }
@@ -59,201 +52,163 @@ blockquote, q {
 /*from http://wesleyhales.com/entry/css_framework*/
 /* used by legacy blog posts up to 10/29/2011    */
 /*************************************************/
-/* line 5, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 9, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-center-margin {
   margin: 0 auto 0 auto;
 }
 
-/* line 13, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .float-left {
   float: left;
 }
 
-/* line 17, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .float-right {
   float: right;
 }
 
-/* line 21, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-left {
   text-align: left !important;
 }
 
-/* line 25, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 29, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .align-top {
   vertical-align: top;
 }
 
-/* line 33, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .half-width {
   width: 49%;
 }
 
-/* line 37, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .quarter-width {
   width: 24.9%;
 }
 
-/* line 41, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .three-quarter-width {
   width: 74.9%;
 }
 
-/* line 45, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .full-width {
   width: 100%;
 }
 
-/* line 49, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .third-width {
   width: 32.9%;
 }
 
-/* line 53, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .two-third-width {
   width: 65.9%;
 }
 
-/* line 57, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .auto-width {
   width: auto;
   padding: 0 7px 0 0;
 }
 
-/* line 62, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .ten-percent-width {
   width: 10%;
 }
 
-/* line 67, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .third-width-pad5 {
   width: 32.5%;
   padding: 5px;
 }
 
-/* line 72, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .two-third-width-pad5 {
   width: 65.5%;
   padding: 5px;
 }
 
-/* line 77, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-top-bottom {
   margin: 10px 0 10px 0;
 }
 
-/* line 81, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-bottom {
   margin: 0 0 10px 0;
 }
 
-/* line 85, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-top {
   margin: 10px 0 0 0;
 }
 
-/* line 89, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .twentypx-top {
   margin: 20px 0 0 0;
 }
 
-/* line 93, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-right {
   margin: 0 10px 0 0;
 }
 
-/* line 97, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .tenpx-left {
   margin: 0 0 0 10px;
 }
 
-/* line 101, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .clear {
   clear: both;
 }
 
-/* line 105, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 109, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 113, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .pad5 {
   padding: 5px;
 }
 
-/* line 117, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .pad10 {
   padding: 10px;
 }
 
-/* line 121, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .margin10 {
   margin: 10px;
 }
 
-/* line 125, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 129, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .relative {
   position: relative;
 }
 
-/* line 133, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .hidden {
   display: none;
 }
 
-/* line 137, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .inline {
   display: inline;
 }
 
-/* line 141, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .error {
   color: #b0241c;
 }
 
-/* line 145, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .bold {
   font-weight: bold;
   text-decoration: none;
 }
 
 /*rounded corners*/
-/* line 152, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_base.scss */
 .rounded-5px {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 }
 
-/* line 1, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu {
   margin: 0;
   line-height: 100%;
 }
 
 /* sub levels link hover */
-/* line 8, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li:hover a,
 #menu li:hover li a {
   background: none;
@@ -263,7 +218,6 @@ blockquote, q {
   -moz-box-shadow: none;
 }
 
-/* line 16, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul a:hover {
   background: #f8f7de !important;
   /* for non-css3 browsers */
@@ -280,7 +234,6 @@ blockquote, q {
 }
 
 /* level 2 list */
-/* line 28, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul {
   background: #fff;
   /* for non-css3 browsers */
@@ -307,33 +260,28 @@ blockquote, q {
 }
 
 /* dropdown */
-/* line 50, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu li:hover > ul {
   display: block;
 }
 
-/* line 53, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li {
   float: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 58, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul a {
   font-weight: normal;
   /*text-shadow: 0 1px 1px rgba(255, 255, 255, .9);*/
 }
 
 /* level 3+ list */
-/* line 63, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul ul {
   left: 181px;
   top: -3px;
 }
 
 /* rounded corners for first and last child */
-/* line 68, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li:first-child > a {
   -webkit-border-top-left-radius: 9px;
   -moz-border-radius-topleft: 9px;
@@ -341,7 +289,6 @@ blockquote, q {
   -moz-border-radius-topright: 9px;
 }
 
-/* line 74, /Users/wesleyhales/dev/wesleyhales/wesleyhales.com/stylesheets/partials/_navmenu.scss */
 #menu ul li:last-child > a {
   -webkit-border-bottom-left-radius: 9px;
   -moz-border-radius-bottomleft: 9px;
@@ -349,7 +296,6 @@ blockquote, q {
   -moz-border-radius-bottomright: 9px;
 }
 
-/* line 5 */
 body {
   margin: 0;
   padding: 0;
@@ -360,23 +306,19 @@ body {
   /*width:100%;*/
 }
 
-/* line 16 */
 .fontface body h1, .fontface body h2, .fontface body h3 {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 22 */
 a, a:visited {
   text-decoration: none;
   color: #39C;
 }
 
-/* line 27 */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 31 */
 h1 {
   font-size: 1.8em;
   font-weight: normal;
@@ -385,7 +327,6 @@ h1 {
   margin: 0 auto 0 auto;
 }
 
-/* line 39 */
 h2 {
   font-size: 1.3em;
   font-weight: normal;
@@ -394,7 +335,6 @@ h2 {
   margin: 0 auto 0 auto;
 }
 
-/* line 47 */
 p {
   margin: 7px 0 0 0;
 }
@@ -402,72 +342,58 @@ p {
 /*************************************************
 Specific Awestruct extension style
 *************************************************/
-/* line 54 */
 pre {
   font-family: courier;
 }
 
-/* line 58 */
 .tag-0 {
   font-size: 100%;
 }
 
-/* line 61 */
 .tag-1 {
   font-size: 140%;
 }
 
-/* line 64 */
 .tag-2 {
   font-size: 180%;
 }
 
-/* line 67 */
 .tag-3 {
   font-size: 220%;
 }
 
-/* line 70 */
 .tag-4 {
   font-size: 260%;
 }
 
-/* line 73 */
 .tag-5 {
   font-size: 300%;
 }
 
-/* line 76 */
 .tag-6 {
   font-size: 300%;
 }
 
-/* line 82 */
 .pagination-links {
   font-size: 90%;
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 86 */
 .pagination-links .page-link, .pagination-links a, .pagination-links .current-page, .pagination-links span {
   padding: .6ex;
 }
-/* line 89 */
 .pagination-links .page-link, .pagination-links a, .pagination-links .current-page {
   border: 1px solid #888;
 }
-/* line 92 */
 .pagination-links .current-page {
   border: 1px solid #555;
   background-color: #ddd;
   font-weight: bold;
 }
-/* line 97 */
 .pagination-links .previous-link, .pagination-links .next-link {
   font-weight: bold;
 }
 
-/* line 102 */
 em {
   font-weight: bold;
 }
@@ -492,12 +418,10 @@ Defined fonts
 /*************************************************
 Site Navigation
 *************************************************/
-/* line 129 */
 body > header {
   background: url(../images/skin/renewal/header-bg-pattern.gif) top left repeat-x;
 }
 
-/* line 132 */
 div.header-box {
   background: url(../images/skin/renewal/header-bg2.gif) top center no-repeat;
   height: 155px;
@@ -506,7 +430,6 @@ div.header-box {
 }
 
 /*making logo absolute to stay aligned with toolbar*/
-/* line 141 */
 div.header-box > .logo-bold {
   position: absolute;
   top: 10px;
@@ -516,19 +439,16 @@ div.header-box > .logo-bold {
   color: #fff;
 }
 
-/* line 150 */
 div.header-box > .logo-bold span {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 154 */
 div.header-box > nav {
   right: 3%;
   top: 62px;
   position: absolute;
 }
 
-/* line 161 */
 .borderradius nav.site a,
 .borderradius nav.console a {
   opacity: 1.0;
@@ -537,36 +457,30 @@ div.header-box > nav {
   -webkit-border-radius: 5px;
 }
 
-/* line 168 */
 .borderradius nav.site a {
   background: #f6f6f6;
 }
 
-/* line 172 */
 .borderradius nav.console a {
   /*background: #e8e8e8;*/
 }
 
-/* line 176 */
 #menu > li {
   height: 30px;
   margin: 0 5px;
 }
 
-/* line 181 */
 #menu li {
   float: left;
   position: relative;
   z-index: 10;
 }
 
-/* line 189 */
 #twitter_update_list li,
 #menu li, .toc-list li {
   list-style: none;
 }
 
-/* line 194 */
 #menu a {
   text-decoration: none;
   color: #bfe3f8;
@@ -577,7 +491,6 @@ div.header-box > nav {
 }
 
 /* main level link on hover and selected */
-/* line 207 */
 ul#menu li.selected > a,
 ul#menu li > a:focus,
 ul#menu li > a:hover,
@@ -586,12 +499,10 @@ ul#menu li:hover > a {
   color: #fff;
 }
 
-/* line 212 */
 ul#menu li ul li a {
   color: #777;
 }
 
-/* line 217 */
 ul#menu li ul li a:hover,
 ul#menu li ul li a:focus {
   color: #000;
@@ -599,7 +510,6 @@ ul#menu li ul li a:focus {
 }
 
 /*transition*/
-/* line 223 */
 nav a {
   padding: 5px 10px;
   /*background: #9c3;*/
@@ -612,7 +522,6 @@ nav a {
 /*************************************************
 Left Toolbar/Column
 *************************************************/
-/* line 235 */
 body aside {
   padding: 7px 0 7px 0;
   display: block;
@@ -622,7 +531,6 @@ body aside {
   width: 389px;
 }
 
-/* line 245 */
 body aside .shadow-helper {
   overflow: hidden;
   /*	margin: 0 -16px;*/
@@ -631,50 +539,42 @@ body aside .shadow-helper {
   min-height: 800px;
 }
 
-/* line 253 */
 div.left-toolbar {
   border-radius: 5px;
   background-color: #fff;
   width: 360px;
 }
 
-/* line 261 */
 div.left-toolbar > section > header > h2,
 div.left-toolbar > section > header > div > h2 {
   border-bottom: 1px solid #777;
   color: #777;
 }
 
-/* line 266 */
 div.left-toolbar > section {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-/* line 272 */
 section.tags a {
   font-size: 82%;
   color: #174e6e;
 }
 
-/* line 277 */
 h2.tweets-title {
   position: relative;
 }
 
-/* line 281 */
 h2.tweets-title > a > img {
   position: absolute;
   right: 5px;
 }
 
-/* line 286 */
 h2.tweets-title > a:visited {
   color: #777;
 }
 
-/* line 290 */
 section.tweets #twitter_div ul li {
   /* background: #f8f8f8 -moz-linear-gradient(90deg, rgba(0, 0, 0, .08) 2%, rgba(255, 255, 255, .1) 98%);
      background: #f8f8f8 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(0, 0, 0, .08)));*/
@@ -684,19 +584,16 @@ section.tweets #twitter_div ul li {
   margin: 5px;
 }
 
-/* line 299 */
 section.tweets div.actions {
   font-size: 80%;
 }
 
-/* line 303 */
 .book-container {
   width: 100%;
   text-align: center;
   padding: 10px;
 }
 
-/* line 309 */
 .book-container img {
   border: 1px solid #777;
 }
@@ -704,7 +601,6 @@ section.tweets div.actions {
 /*************************************************
 Main Content
 *************************************************/
-/* line 317 */
 div#main {
   display: block;
   position: absolute;
@@ -716,7 +612,6 @@ div#main {
   margin: 154px 364px 0 0;
 }
 
-/* line 328 */
 div#post-container {
   /*   border: 3px solid #c7d4dc;*/
   width: 87%;
@@ -724,21 +619,17 @@ div#post-container {
   margin: 10px auto 0 auto;
 }
 
-/* line 335 */
 .post-preview {
   width: 95%;
 }
-/* line 337 */
 .post-preview header {
   border-bottom: 1px dotted #999;
   margin: 0 0 10px 0;
 }
-/* line 342 */
 .post-preview .post {
   border: none;
   padding: 0;
 }
-/* line 345 */
 .post-preview .post h2.title {
   font-size: 149%;
   font-weight: bold;
@@ -746,40 +637,34 @@ div#post-container {
   padding: 0px;
   width: auto;
 }
-/* line 356 */
 .post-preview .post h4.tags {
   margin: 10px 0 7px 0;
   background-color: #FAFAFA;
 }
 
-/* line 363 */
 .post {
   padding-bottom: 2em;
   margin: 2em 2em 2.5em 0;
   border-bottom: 1px solid #888;
 }
-/* line 367 */
 .post h2 {
   font-size: 149%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 373 */
 .post h2.title {
   font-size: 149%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 379 */
 .post h3 {
   font-size: 120%;
   font-weight: bold;
   margin: 0px;
   padding: 0px;
 }
-/* line 385 */
 .post h3.date {
   font-size: 80%;
   font-weight: bold;
@@ -789,12 +674,10 @@ div#post-container {
   position: absolute;
   text-align: center;
 }
-/* line 395 */
 .post .date-box {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 400 */
 .post .date-box .date-day,
 .post .date-box .date-month,
 .post .date-box .date-year {
@@ -804,20 +687,16 @@ div#post-container {
   text-align: center;
   font-size: 90%;
 }
-/* line 408 */
 .post .date-box .date-day {
   font-size: 150%;
 }
-/* line 412 */
 .post .date-box .date-year {
   font-size: 50%;
 }
-/* line 417 */
 .post h4 {
   font-size: 90%;
   font-weight: bold;
 }
-/* line 421 */
 .post h4.tags {
   font-size: 90%;
   border-bottom: 1px dotted #999;
@@ -827,42 +706,33 @@ div#post-container {
   font-family: AvenirRegular;
   color: #999;
 }
-/* line 430 */
 .post h4.tags a {
   color: #6D90BD;
 }
-/* line 433 */
 .post .content {
   font-size: 1em;
 }
-/* line 435 */
 .post .content p {
   padding: 5px 0 5px 0;
 }
-/* line 439 */
 .post ul {
   list-style: circle;
 }
-/* line 442 */
 .post ol, .post ul {
   list-style-position: inside;
 }
-/* line 444 */
 .post ol li, .post ul li {
   margin: 5px 0 5px 0;
 }
 
-/* line 450 */
 .fontface .post header {
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
-/* line 453 */
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
 }
 
-/* line 459 */
 .notes {
   border: 1px solid #ececec;
   background: white;
@@ -889,7 +759,6 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 477 */
 .notif {
   border: 1px solid #ececec;
   background: #ffff88;
@@ -916,7 +785,6 @@ div#post-container {
   border-radius: 7px;
 }
 
-/* line 495 */
 .sticky-top-right {
   position: fixed;
   top: 10px;
@@ -924,7 +792,6 @@ div#post-container {
   width: 250px;
 }
 
-/* line 502 */
 .download {
   padding: 10px;
   margin: 15px 15px 0 0;
@@ -933,12 +800,10 @@ div#post-container {
   text-align: right;
 }
 
-/* line 510 */
 .toc-list {
   margin: 10px 0 0 0;
 }
 
-/* line 514 */
 .toc-list li {
   margin: 3px 0;
   padding: 8px 15px 5px 15px;
@@ -947,7 +812,6 @@ div#post-container {
   display: inline-block;
 }
 
-/* line 522 */
 .toc-list li a {
   color: #fff;
 }
@@ -955,7 +819,6 @@ div#post-container {
 /*************************************************
 Design page
 *************************************************/
-/* line 529 */
 div.design-item {
   border: 1px solid #ececec;
   border-radius: 7px;
@@ -973,106 +836,86 @@ Media queries
 *************************************************/
 /* iOS/android phone landscape screen width*/
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 548 */
   body > aside {
     display: none;
   }
 
-  /* line 552 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 556 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 560 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 564 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-  /* line 571 */
   body > aside {
     display: none;
   }
 
-  /* line 575 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 579 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 583 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 587 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 @media screen and (min-device-width: 600px) and (orientation:portrait) {
-  /* line 594 */
   body > aside {
     display: none;
   }
 
-  /* line 598 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 602 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 606 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 610 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
 }
 /* iOS/android phone portrait screen width*/
 @media screen and (max-device-width: 320px) {
-  /* line 618 */
   body > aside {
     display: none;
   }
 
-  /* line 622 */
   div#main {
     margin: 154px 0 0 0;
   }
 
-  /* line 626 */
   div#post-container {
     width: 90%;
   }
 
-  /* line 630 */
   div.header-box nav.console {
     top: 111px;
   }
 
-  /* line 634 */
   div.post {
     margin: 2em 1em 2em 1.5em;
   }
@@ -1080,51 +923,42 @@ Media queries
 /*************************************************
 Utils
 *************************************************/
-/* line 642 */
 .transition {
   -moz-transition-duration: .5s;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
 }
 
-/* line 648 */
 .none {
   display: none;
 }
 
-/* line 652 */
 .notnone {
   display: default;
 }
 
-/* line 656 */
 .hide {
   opacity: 0;
 }
 
-/* line 660 */
 .show {
   opacity: 100;
 }
 
-/* line 664 */
 .max-width-100 {
   max-width: 100%;
 }
 
 /*DISQUS*/
-/* line 669 */
 .dsq-widget-list {
   font-size: 90%;
 }
 
-/* line 673 */
 a.dsq-widget-user {
   font-weight: bold;
   color: #1670A3;
 }
 
-/* line 678 */
 .gist {
   font-size: 80%;
 }
