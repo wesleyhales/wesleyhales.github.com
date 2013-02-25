@@ -2,15 +2,15 @@
 <feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2013-02-24T22:16:52-05:00</updated>
+  <updated>2013-02-25T07:31:59-05:00</updated>
   <link href='http://www.wesleyhales.com/blog.atom' rel='self' type='application/atom+xml' />
   <link href='http://www.wesleyhales.com/' rel='alternate' type='text/html' />
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
+    <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2013-02-25T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/' rel='alternate' type='text/html' />
     <summary>
       
 
@@ -180,11 +180,11 @@ This blog post is serving as the documentation for the project until I get some 
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
+    <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger/</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2013-02-18T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger/' rel='alternate' type='text/html' />
     <summary>
       
       
@@ -248,11 +248,11 @@ Happy debugging!&lt;/p&gt;
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die/</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-11-01T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die/' rel='alternate' type='text/html' />
     <summary>
       The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book,
 gave up a secure job, and changed jobs 4 times. All to push myself, get uncomfortable, and better understand the challenges
@@ -430,11 +430,11 @@ I can sleep pretty well after a couple of beers, and I won’t have to pay for m
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-08-16T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/' rel='alternate' type='text/html' />
     <summary>
       
       
@@ -498,11 +498,11 @@ To bypass this bug, I've created my own caching mechanism which basically loads 
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta/</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-07-19T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta/' rel='alternate' type='text/html' />
     <summary>
       So, all I can say is that the Atlanta HTML5 community is awesome. Today the @atlhtml5 user group has reached it's 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser...
     </summary>
@@ -538,11 +538,11 @@ To bypass this bug, I've created my own caching mechanism which basically loads 
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-07-11T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/' rel='alternate' type='text/html' />
     <summary>
       
       
@@ -753,11 +753,11 @@ Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&qu
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-06-08T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/' rel='alternate' type='text/html' />
     <summary>
       Getting the browser version from the User Agent string is one thing. But, when you
 force compatibility mode in IE, you get whatever version you're forcing to. e.g...
@@ -793,11 +793,11 @@ Which talks about how IE9's Chakra JavaScript engine processes math precision di
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-04-09T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/' rel='alternate' type='text/html' />
     <summary>
       I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
 Apparently, there is a problem with older browsers using CSS3 selectors like div[style*='foo'] in combination with other DOM elements.
@@ -822,11 +822,11 @@ You must run the &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test&l
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss/</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-02-08T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss/' rel='alternate' type='text/html' />
     <summary>
       
       
@@ -873,11 +873,11 @@ We're just getting started... For now, we have a &lt;a href=&quot;https://github
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
+    <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets/</id>
     <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2012-01-20T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets/' rel='alternate' type='text/html' />
     <summary>
       
       
@@ -995,11 +995,11 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html</id>
+    <id>http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/</id>
     <title>2011 Year In Review</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2011-12-29T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/' rel='alternate' type='text/html' />
     <summary>
       This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)
 
@@ -1098,11 +1098,11 @@ Presented at JBoss World for the...
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html</id>
+    <id>http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</id>
     <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2011-08-29T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/' rel='alternate' type='text/html' />
     <summary>
       Update: @_boye has created a perf test which shows the performance of this solution. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.
       
@@ -1224,11 +1224,11 @@ Presented at JBoss World for the...
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3.html</id>
+    <id>http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</id>
     <title>RichFaces Mobile Designs - Day 3</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2011-08-03T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/' rel='alternate' type='text/html' />
     <summary>
       
       
@@ -1264,11 +1264,11 @@ Presented at JBoss World for the...
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2.html</id>
+    <id>http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</id>
     <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-    <updated>2013-02-24T22:16:52-05:00</updated>
+    <updated>2013-02-25T07:31:59-05:00</updated>
     <published>2011-08-02T00:00:00Z</published>
-    <link href='http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2.html' rel='alternate' type='text/html' />
+    <link href='http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/' rel='alternate' type='text/html' />
     <summary>
       
       
