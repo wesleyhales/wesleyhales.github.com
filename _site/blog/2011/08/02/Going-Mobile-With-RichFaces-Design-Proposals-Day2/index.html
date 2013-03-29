@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      wesleyhales.com: Going Mobile With RichFaces! Design Proposals - Day2
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/stylesheets/global.css?v30" media="screen, print" rel="stylesheet" type="text/css">
+    <link href="/blog.atom" rel="alternate" type="application/atom+xml">
+    <script defer="defer" src="/js/modernizr.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-box" onclick="window.location = 'http://wesleyhales.com'">
+        <div class="logo-bold">wesleyhales<span>.com</span></div>
+        <nav class="console">
+          <ul id="menu">
+            <li id="home">
+              <a href="/index.html">Blog</a>
+            </li>
+            <li id="design">
+              <a href="/design/?p=design">Projects</a>
+            </li>
+            <li id="projects">
+              <a href="/contact/?p=contact">Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <aside id="rightcol">
+      <div class="shadow-helper">
+        <div class="left-toolbar">
+          <section class="recent-comments">
+            <header>
+              <div class="dsq-widget" id="recentcomments">
+                <h2 class="dsq-widget-title">
+                  Recent Comments
+                </h2>
+                <script src="http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=24&amp;excerpt_length=200" type="text/javascript"></script>
+              </div>
+            </header>
+          </section>
+          <section class="tags">
+            <header>
+              <h2 class="tags-title">
+                My Book
+              </h2>
+              <div class="book-container">
+                <a href="http://shop.oreilly.com/product/0636920024088.do">
+                  <img src="/images/icons/mybook.png">
+                </a>
+              </div>
+            </header>
+          </section>
+          <section class="tweets">
+            <header>
+              <h2 class="tweets-title">
+                <a href="http://twitter.com/wesleyhales">
+                  <img src="//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png">
+                  My Tweets
+                </a>
+              </h2>
+              <div id="twitter_div">
+                <ul id="twitter_update_list"></ul>
+              </div>
+            </header>
+          </section>
+        </div>
+      </div>
+    </aside>
+    <div id="main">
+      <div id="post-container">
+        <div class="article-list">
+          <div class="post_navigation">
+            <div class="previous_post link">
+              Previous:
+              <a href="/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/">
+                Going Mobile With RichFaces! Design Proposals - Day1
+              </a>
+            </div>
+            <div class="next_post link">
+              Next:
+              <a href="/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/">
+                RichFaces Mobile Designs - Day 3
+              </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="post">
+            <h2 class="title">
+              Going Mobile With RichFaces! Design Proposals - Day2
+            </h2>
+            <h3 class="date">
+              02 August 2011
+            </h3>
+            <h4 class="tags">
+              <a href="/blog/tags/Java/">
+                Java
+              </a>
+              |
+              <a href="/blog/tags/jsf/">
+                jsf
+              </a>
+              |
+              <a href="/blog/tags/mobile/">
+                mobile
+              </a>
+              |
+              <a href="/blog/tags/richfaces/">
+                richfaces
+              </a>
+              |
+              <a href="/blog/tags/web/">
+                web
+              </a>
+              |
+            </h4>
+            <div class="content">
+              
+              
+              <p><p>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:</p> 
+              
+              <p>1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)</p> 
+              
+              <p>2) Similar to the iPad Mail.app, it&#8216;s almost like you are designing 2 different UI&#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.</p><br /> 
+              <p><a href="/images/jroller/rf.tablet.day2.page1.jpg"><img alt="RichFace Mobile Skin1" align="right" width="225px" src="/images/jroller/rf.tablet.day2.page1-small.JPG"/></a><br /> 
+              <p class="pTitle">Day 2: About The Design</p><br /> 
+              Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&#8216;t all that exciting.</p> 
+              
+              <p>Notice how, unlike the <a href="http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we">iphone design from Day 1</a>, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user's attention focused on the app itself.</p><br /> 
+              <p><br /> 
+              <a href="/images/jroller/rf.tablet.day2.page2.jpg"><img style="margin:0 7px 0 0;" alt="RichFace Mobile Skin1" align="left" width="225px" src="/images/jroller/rf.tablet.day2.page2-small.JPG"/></a></p> 
+              
+              <p><br/><br/><br/><br /> 
+              The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.</p> 
+              
+              <p>To the right of the title you see the secondary menu represented by rounded rectangles. Next is the main content of the page broken out into content and actionable panels.</p>
+              
+              <p>And finally you have the big arrows to the right and left. These arrows are &#8220;thumb reachable&#8221; which is a common usability pattern in portrait mode tablets. It provides an easy page flip access to all of the RichFaces components within the top level category.<br /> 
+              </p><br /> 
+              <p>The great thing about CSS3 transitions is that you can really make a UI like this scream and flow seamlessly. So you can imagine how tapping an arrow with your thumb will slide in a new component demo and gracefully highlight the secondary menu option at the top.</p><br /> 
+              <p>So this concludes our design for Day 2. As I said earlier, this is more of a use case driven design. WE could spawn a very minimalistic skin and component look and feel from this. However, It would be more to display the power behind RichFaces ajax and templating features as the user moves through the app.</p></p>
+            </div>
+            <div class="comments">
+              
+                          <div id="disqus_thread"></div>
+                          <script type="text/javascript">
+                          var disqus_shortname = 'wesleyhales';
+                          var disqus_url = "http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/";
+                          var disqus_developer = null;
+                          var disqus_identifier = null;
+                          (function() {
+                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                            dsq.src = "http://wesleyhales.disqus.com/embed.js";
+                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                          })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br class="clear">
+    <script defer="defer" src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <script defer="defer" src="http://twitter.com/javascripts/blogger.js" type="text/javascript"></script>
+    <script defer="defer" src="/js/site.js" type="text/javascript"></script>
+    <script defer="defer" src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=wesleyhales&amp;callback=twitterCallback3&amp;count=10" type="text/javascript"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-1241000-10");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+  </body>
+</html>
