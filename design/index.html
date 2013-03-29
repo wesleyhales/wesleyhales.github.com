@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      wesleyhales.com: Design
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/stylesheets/global.css?v30" media="screen, print" rel="stylesheet" type="text/css">
+    <link href="/blog.atom" rel="alternate" type="application/atom+xml">
+    <script defer="defer" src="/js/modernizr.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-box" onclick="window.location = 'http://wesleyhales.com'">
+        <div class="logo-bold">wesleyhales<span>.com</span></div>
+        <nav class="console">
+          <ul id="menu">
+            <li id="home">
+              <a href="/index.html">Blog</a>
+            </li>
+            <li id="design">
+              <a href="/design/?p=design">Projects</a>
+            </li>
+            <li id="projects">
+              <a href="/contact/?p=contact">Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <aside id="rightcol">
+      <div class="shadow-helper">
+        <div class="left-toolbar">
+          <section class="recent-comments">
+            <header>
+              <div class="dsq-widget" id="recentcomments">
+                <h2 class="dsq-widget-title">
+                  Recent Comments
+                </h2>
+                <script src="http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=24&amp;excerpt_length=200" type="text/javascript"></script>
+              </div>
+            </header>
+          </section>
+          <section class="tags">
+            <header>
+              <h2 class="tags-title">
+                My Book
+              </h2>
+              <div class="book-container">
+                <a href="http://shop.oreilly.com/product/0636920024088.do">
+                  <img src="/images/icons/mybook.png">
+                </a>
+              </div>
+            </header>
+          </section>
+          <section class="tweets">
+            <header>
+              <h2 class="tweets-title">
+                <a href="http://twitter.com/wesleyhales">
+                  <img src="//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png">
+                  My Tweets
+                </a>
+              </h2>
+              <div id="twitter_div">
+                <ul id="twitter_update_list"></ul>
+              </div>
+            </header>
+          </section>
+        </div>
+      </div>
+    </aside>
+    <div id="main">
+      <div id="post-container">
+        <div class="article-list">
+          <div class="design">
+            <header>
+              <h1>
+                Projects
+              </h1>
+              <p></p>
+              Throughout my entire professional career, I've served in the following roles. This is a brief look at things I've worked on past and present.
+            </header>
+            <ul class="toc-list">
+              <li onclick="hideSections('#user-experience',this);_gaq.push(['Projects', 'primary-nav', 'User Experience']);">
+                <a href="#user-experience-1">
+                  User Experience
+                </a>
+              </li>
+              <li onclick="hideSections('#user-interface',this);_gaq.push(['Projects', 'primary-nav', 'User Interface']);">
+                <a href="#user-interface-1">
+                  User Interface
+                </a>
+              </li>
+              <li onclick="hideSections('#graphic-design',this);_gaq.push(['Projects', 'primary-nav', 'Graphic Design']);">
+                <a href="#graphic-design-1">
+                  Graphic Design
+                </a>
+              </li>
+              <li onclick="hideSections('#code',this);_gaq.push(['Projects', 'primary-nav', 'Open Source']);">
+                <a href="#code-1">
+                  Open Source
+                </a>
+              </li>
+            </ul>
+            <div id="design-content">
+              <div id="code">
+                <h2>
+                  Open Source
+                </h2>
+                <p>
+                  I started writing code on an Apple IIe when I was 9. We used to get magazines that had coding examples in the back written in Basic and I would sit for hours copying line-by-line, each GOTO and IF/THEN conditional. That was my first open source experience.
+                  Over the last decade
+                  <a href="http://github.com/wesleyhales/">I've worked with a few languages.</a>
+                  Mostly Java, Ruby, and other related server-side frameworks, along with scripting in perl, php, and anything else required to accomplish the task at hand... I've seen a lot of shit come and go.
+                  As a UI developer, I consider JavaScript, CSS, and HTML as my strengths.
+                </p>
+                <div class="design-item">
+                  <a href="http://www.ohloh.net/accounts/wesleyhales">
+                    <img class="max-width-100" src="/images/design/first-post/ohloh.png">
+                  </a>
+                  Projects I was involved in or founded prior to that new-fangled github octocat thingy
+                </div>
+                <div class="design-item">
+                  <a href="http://slidfast.github.com/slidfast/">
+                    <img class="max-width-100" src="/images/design/first-post/slidfast-small.png">
+                  </a>
+                  Slidfast - A project I created around HTML5 in enterprise environments.
+                </div>
+              </div>
+              <div id="graphic-design">
+                <h2>
+                  Graphic Design
+                </h2>
+                <p>
+                  My designs usually start out with a rough draft on a sheet of paper. From there, I use the pen tool to redraw in Photoshop. Design work is a creative outlet for me and I try to design something at least every few months.
+                </p>
+                <div class="design-item">
+                  <a href="/images/design/first-post/layout1-mod.png">
+                    <img class="max-width-100" src="/images/design/first-post/layout1-mod-small.png">
+                  </a>
+                  Rough draft of a mobile analytics concept home page graphic.
+                </div>
+              </div>
+              <div id="user-interface">
+                <h2>
+                  User Interface
+                </h2>
+                <p>
+                  I try to adhere to a few principals when dealing with both User Interface design and development. For design it's simple - Make the user's interaction as simple and efficient as possible. All while making it look cool of course. Good User Interface design puts emphasis on goals and completing tasks without drawing too much attention to itself.
+                </p>
+                <p>
+                  Here we have a fully implemented Firefox theme circa 2009. Over 1.2 million installs and 300k active daily users. During the Firefox 3.6 era, this theme was hot and I received quite a few generous donations from random, kind-hearted people. A very worth while open source effort for me.
+                </p>
+                <div class="design-item">
+                  <a href="/images/design/first-post/ff3-anthem.png">
+                    <img class="max-width-100" src="/images/design/first-post/ff3-anthem-small.png">
+                  </a>
+                </div>
+                <p>
+                  This next theme just ended up being a creative experiment. I never made it to publishing the actual theme on Mozilla's website. After Firefox 4 came along, things began moving so freakin' fast in the browser scene and I couldn't keep up with porting my themes to the new versions.
+                </p>
+                <div class="design-item">
+                  <a href="/images/design/first-post/ff-recovery.png">
+                    <img class="max-width-100" src="/images/design/first-post/ff-recovery-small.png">
+                  </a>
+                </div>
+                <p>
+                  Cormada is a project I thought of back in 2010.
+                  <a href="http://techcrunch.com/2011/08/29/yc-funded-bushido-an-app-store-for-the-web-that-can-kickstart-your-side-projects/">Bushido</a>
+                  came along shortly after I stalled on the idea. The basic idea was: upload any POC or example project you have written and let others run or use it. If it's good, turn it into an OSS project. No idea if it could make money :)
+                </p>
+                <div class="design-item">
+                  <a href="/images/design/first-post/cormada-home.png">
+                    <img class="max-width-100" src="/images/design/first-post/cormada-home-small.png">
+                  </a>
+                </div>
+                <p>Cormada app detail page</p>
+                <div class="design-item">
+                  <a href="/images/design/first-post/cormada-detail.png">
+                    <img class="max-width-100" src="/images/design/first-post/cormada-detail.png">
+                  </a>
+                </div>
+              </div>
+              <div id="user-experience">
+                <h2>
+                  User Experience
+                </h2>
+                <p>
+                  This is a side project (later startup) I worked on with 2 other founders. I did all the design in Photoshop, but the User Experience was my true focus here. The main question I kept asking myself is "How can I make users fall in love with this product".
+                </p>
+                <p>
+                  <a href="http://blog.apigee.com/apigee_acquires_instaops_embracing_the_apps_everywhere_world">
+                    This startup was acquired in mid-2012 by apigee.
+                  </a>
+                  I'm proud to say I was one of the original 3!
+                </p>
+                <div class="design-item">
+                  <a href="/images/design/first-post/demo-charts-2.png">
+                    <img class="max-width-100" src="/images/design/first-post/demo-charts-2-small.png">
+                  </a>
+                </div>
+                <div class="design-item">
+                  <a href="/images/design/first-post/demo-charts-1.png">
+                    <img class="max-width-100" src="/images/design/first-post/demo-charts-1-small.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="comments">
+              <div id="disqus_thread"></div>
+              <script>
+                var loc = location.hash, hidden, shown, menu, forEach = Array.prototype.forEach;
+                function hideSections(except,ele){
+                  loc = except;
+                  menu = document.querySelectorAll('.toc-list li')
+                  forEach.call(menu, function(item){
+                    item.style.backgroundColor = '#777';
+                  });
+                  if(ele){
+                    ele.style.backgroundColor = '#000';
+                  }else{
+                    document.querySelector('.toc-list li').style.backgroundColor = '#000';
+                  }
+                  shown = document.querySelectorAll('#design-content > div');
+                  hidden = document.querySelectorAll('#design-content > div:not(' + except + ')');
+                  forEach.call(shown, function(section){
+                    section.style.display = '';
+                  });
+                  forEach.call(hidden, function(section){
+                    section.style.display = 'none';
+                  });
+                }
+                (function(loc){
+                   //catch onload scenario
+                   if(loc === '#code-1'){
+                     hideSections('#code');
+                   }else if(loc === '#user-interface-1'){
+                     hideSections('#user-interface');
+                   }else if(loc === '#graphic-design-1'){
+                     hideSections('#graphic-design');
+                   }else if(loc === '#user-experience-1'){
+                     hideSections('#user-experience');
+                   }else{
+                     hideSections('#user-experience');
+                   }
+                })(loc);
+                var disqus_shortname = 'wesleyhales';
+                var disqus_url = "http://www.wesleyhales.com/design/";
+                var disqus_developer = null;
+                var disqus_identifier = null;
+                (function() {
+                var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                dsq.src = "http://wesleyhales.disqus.com/embed.js";
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+              </script>
+              <noscript>
+                Please enable JavaScript to view the
+                <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a>
+              </noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br class="clear">
+    <script defer="defer" src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <script defer="defer" src="http://twitter.com/javascripts/blogger.js" type="text/javascript"></script>
+    <script defer="defer" src="/js/site.js" type="text/javascript"></script>
+    <script defer="defer" src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=wesleyhales&amp;callback=twitterCallback3&amp;count=10" type="text/javascript"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-1241000-10");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+  </body>
+</html>
