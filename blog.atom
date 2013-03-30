@@ -2,13 +2,98 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2013-03-29T19:41:22+00:00</updated>
+  <updated>2013-03-30T23:37:43+00:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
+    <id>http://www.wesleyhales.com/blog/2013/03/29/Build-Fun-with-Travis-CI-Awestruct-and-loadreportjs.html</id>
+    <title>Build Fun with Travis CI, Awestruct, and loadreport.js</title>
+    <updated>2013-03-30T23:37:43+00:00</updated>
+    <published>2013-03-29T00:00:00+00:00</published>
+    <link href="http://www.wesleyhales.com/blog/2013/03/29/Build-Fun-with-Travis-CI-Awestruct-and-loadreportjs.html" rel="alternate" type="text/html" />
+    <category term="preprocessor"></category>
+    <category term="travisci"></category>
+    <category term="awestruct"></category>
+    <category term="loadreportjs"></category>
+    <summary>
+      
+      
+      
+      Overview
+      
+      If you use a static website generator, then you're aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.
+      
+      The manual workflow goes something like this:
+      
+      code your site using asciidoc/markdown/haml/sass/less/etc -> preprocessor (or build) generates static site -> copy static site to your local gh-pages or username.github.com repo/branch -> git push new site -> done
+      
+      Now, with a little scripting we can have:
+      
+      code your site using asciidoc/markdown/haml/sass/less/etc -> git push to source repo -> done
+      
+      With the new workflow, we let Travis CI do the work for us in a bash script. This opens...
+    </summary>
+    <content type="html">
+      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      
+      &lt;p&gt;If you use a static website generator, then you're aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.&lt;/p&gt;
+      
+      &lt;p&gt;The manual workflow goes something like this:&lt;/p&gt;
+      
+      &lt;p&gt;code your site using asciidoc/markdown/haml/sass/less/etc -&amp;gt; preprocessor (or build) generates static site -&amp;gt; copy static site to your local gh-pages or username.github.com repo/branch -&amp;gt; git push new site -&amp;gt; done&lt;/p&gt;
+      
+      &lt;p&gt;Now, with a little scripting we can have:&lt;/p&gt;
+      
+      &lt;p&gt;code your site using asciidoc/markdown/haml/sass/less/etc -&amp;gt; git push to source repo -&amp;gt; done&lt;/p&gt;
+      
+      &lt;p&gt;With the new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation coolness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
+      to test how each new commit loads (over time) in a web browser - giving us a baseline for site performance.&lt;/p&gt;
+      
+      &lt;p&gt;This post is going to review the basics of setting up your github OAuth token, encryption with travis, and finally pushing your website to github pages with an automated travisci build.
+      We'll top it all off with running &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; after each check in to understand how a single commit can affect site performance. So let's go...&lt;/p&gt;
+      
+      &lt;br&gt;&lt;h2&gt;Github hosting setup&lt;/h2&gt;
+      
+      &lt;p&gt;If you're unfamiliar with github pages or how to host your own top-level domain (yourdomain.com) under your github account, then read &lt;a href=&quot;https://help.github.com/articles/what-are-github-pages&quot;&gt;this&lt;/a&gt;, &lt;a href=&quot;https://help.github.com/articles/creating-project-pages-manually&quot;&gt;then this&lt;/a&gt; first.&lt;/p&gt;
+      
+      &lt;br&gt;&lt;h2&gt;Github, Travis, and OAuth&lt;/h2&gt;
+      
+      &lt;p&gt;First off, you must login to &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt; with your github username and enable the travis service hook on the repository you wish to automate.
+      For me, this is where my haml/sass/etc... source is located.
+      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/travisci1.png&quot; alt=&quot;travis&quot; class=&quot;margin10&quot;&gt;
+      Next, we'll create an OAuth token for your repository access :&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274538.js&quot;&gt;&lt;/script&gt;&lt;p&gt;Pluck the &lt;b&gt;&quot;token&quot;:&lt;/b&gt; string value from the generated json and encrypt it. Pro tip: this token is basically the same thing as your password. So don't push it out to a public repository.&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274559.js&quot;&gt;&lt;/script&gt;&lt;p&gt;To encrypt, we must install the travis gem and encrypt the token string from above with:&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274580.js&quot;&gt;&lt;/script&gt;&lt;p&gt;..this will creat a string in your console and we'll paste it below, so keep it close by...&lt;/p&gt;
+      
+      &lt;p&gt;Now, we can create the gh-pages branch for this repository &lt;a href=&quot;https://help.github.com/articles/creating-project-pages-manually&quot;&gt;following these instructions&lt;/a&gt;. This gh-pages branch can host your generated site or artifacts. Since I have a TLD mapped to my wesleyhales.github.com
+      repository, I'm using the gh-pages branch under my source account for load testing reports. For my blog, I'm mapping a domain name over by simply forwarding a TLD like wesleyhales.com, with an A record pointing to 204.232.175.78.
+      Then I added a &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.github.com/blob/master/CNAME&quot;&gt;CNAME file&lt;/a&gt; to the repo so github DNS knows where to forward to.&lt;/p&gt;
+      
+      &lt;br&gt;&lt;h2&gt;The Build Config&lt;/h2&gt;
+      
+      &lt;p&gt;Finally, we're ready to update our .travis.yml.&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274500.js&quot;&gt;&lt;/script&gt;&lt;p&gt;Awestruct is a ruby based preprocessor, so this project is setup with the travis ruby config (above).&lt;/p&gt;
+      
+      &lt;p&gt;Note the &lt;b&gt;before_script&lt;/b&gt; and &lt;b&gt;script&lt;/b&gt; configs:&lt;/p&gt;
+      
+      &lt;p&gt;&lt;b&gt;before_script&lt;/b&gt; runs the awestruct build and then the post_build.sh script. post_build.sh pushes our newly generated public facing website to github pages. This is where github kindly serves up our static content at username.github.com (for free).&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274512.js&quot;&gt;&lt;/script&gt;&lt;p&gt;And finally, &lt;b&gt;script&lt;/b&gt; will run gh-pages-report.sh. This allows us to run &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; and send the generated report to our souce gh-pages branch.
+      Travis CI provides an instance of phantomjs during our build, so all we have to do is call it. This is basically a build report (or artifact from the build). It measures how long
+      it takes our site to load after each commit is made. This gives us a baseline for measuring performance.&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274517.js&quot;&gt;&lt;/script&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -157,7 +242,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -216,7 +301,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -399,7 +484,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -464,7 +549,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -499,7 +584,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -710,7 +795,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -765,7 +850,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
@@ -797,7 +882,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-02-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html" rel="alternate" type="text/html" />
     <category term="html5e"></category>
@@ -851,7 +936,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
     <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2012-01-20T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -960,7 +1045,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html</id>
     <title>2011 Year In Review</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2011-12-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -1065,7 +1150,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html</id>
     <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2011-08-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html" rel="alternate" type="text/html" />
     <category term="Java"></category>
@@ -1195,7 +1280,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3.html</id>
     <title>RichFaces Mobile Designs - Day 3</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
+    <updated>2013-03-30T23:37:43+00:00</updated>
     <published>2011-08-03T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3.html" rel="alternate" type="text/html" />
     <category term="Java"></category>
@@ -1222,46 +1307,6 @@
       So after you go through the menu options and decide on a component, you are taken to the &lt;a href=&quot;http://www.wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&quot;&gt;detail/demo screen&lt;/a&gt;(below) where you can play around with your component of choice.&lt;/p&gt; 
       
       &lt;p&gt;Note the small orange page marker dots at the bottom. The user would have the ability to flip through each component in the given section by swiping horizontally.&lt;br&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&quot;&gt;&lt;img style=&quot;margin:0 7px 0 0;&quot; alt=&quot;RichFace Mobile Skin1&quot; src=&quot;http://www.wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2.html</id>
-    <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-    <updated>2013-03-29T19:41:22+00:00</updated>
-    <published>2011-08-02T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2.html" rel="alternate" type="text/html" />
-    <category term="Java"></category>
-    <category term="jsf"></category>
-    <category term="mobile"></category>
-    <category term="richfaces"></category>
-    <category term="web"></category>
-    <summary>
-      
-      
-      Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons: 
-      
-      1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2) 
-      
-      2) Similar to the iPad Mail.app, it&#8216;s almost like you are designing 2 different UI&#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape...
-    </summary>
-    <content type="html">
-      
-      
-      &lt;p&gt;&lt;/p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
-      
-      &lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
-      
-      &lt;p&gt;2) Similar to the iPad Mail.app, it&amp;#8216;s almost like you are designing 2 different UI&amp;#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/jroller/rf.tablet.day2.page1.jpg&quot;&gt;&lt;img alt=&quot;RichFace Mobile Skin1&quot; align=&quot;right&quot; width=&quot;225px&quot; src=&quot;http://www.wesleyhales.com/images/jroller/rf.tablet.day2.page1-small.JPG&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;pTitle&quot;&gt;Day 2: About The Design&lt;/p&gt;&lt;br&gt; 
-      Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&amp;#8216;t all that exciting. 
-      
-      &lt;p&gt;Notice how, unlike the &lt;a href=&quot;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&quot;&gt;iphone design from Day 1&lt;/a&gt;, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user's attention focused on the app itself.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;br&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/jroller/rf.tablet.day2.page2.jpg&quot;&gt;&lt;img style=&quot;margin:0 7px 0 0;&quot; alt=&quot;RichFace Mobile Skin1&quot; align=&quot;left&quot; width=&quot;225px&quot; src=&quot;http://www.wesleyhales.com/images/jroller/rf.tablet.day2.page2-small.JPG&quot;&gt;&lt;/a&gt;&lt;/p&gt; 
-      
-      &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; 
-      The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.&lt;/p&gt; 
-      
-      &lt;p&gt;To the right of the title you see the secondary menu represented by rounded rectangles. Next is the main content of the page broken out into content and actionable panels.&lt;/p&gt;
-      
-      &lt;p&gt;And finally you have the big arrows to the right and left. These arrows are &amp;#8220;thumb reachable&amp;#8221; which is a common usability pattern in portrait mode tablets. It provides an easy page flip access to all of the RichFaces components within the top level category.&lt;br&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;The great thing about CSS3 transitions is that you can really make a UI like this scream and flow seamlessly. So you can imagine how tapping an arrow with your thumb will slide in a new component demo and gracefully highlight the secondary menu option at the top.&lt;/p&gt;&lt;br&gt;&lt;p&gt;So this concludes our design for Day 2. As I said earlier, this is more of a use case driven design. WE could spawn a very minimalistic skin and component look and feel from this. However, It would be more to display the power behind RichFaces ajax and templating features as the user moves through the app.&lt;/p&gt;
     </content>
   </entry>
 </feed>
