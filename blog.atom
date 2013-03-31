@@ -2,15 +2,15 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2013-03-30T23:37:43+00:00</updated>
+  <updated>2013-03-31T01:58:18+00:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/03/29/Build-Fun-with-Travis-CI-Awestruct-and-loadreportjs.html</id>
-    <title>Build Fun with Travis CI, Awestruct, and loadreport.js</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <id>http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
+    <title>Fun with Static Site Generators and Travis</title>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/03/29/Build-Fun-with-Travis-CI-Awestruct-and-loadreportjs.html" rel="alternate" type="text/html" />
+    <link href="http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
     <category term="travisci"></category>
     <category term="awestruct"></category>
@@ -21,32 +21,50 @@
       
       Overview
       
-      If you use a static website generator, then you're aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.
+      If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.
       
       The manual workflow goes something like this:
       
-      code your site using asciidoc/markdown/haml/sass/less/etc -> preprocessor (or build) generates static site -> copy static site to your local gh-pages or username.github.com repo/branch -> git push new site -> done
+      
+      code your site using asciidoc/markdown/haml/sass/less/etc
+      preprocessor (or build) generates static site (locally on your machine)
+      copy static site to your local gh-pages or username.github.com repo/branch
+      git push new site
+      done
+      
+      
       
       Now, with a little scripting we can have:
       
-      code your site using asciidoc/markdown/haml/sass/less/etc -> git push to source repo -> done
       
-      With the new workflow, we let Travis CI do the work for us in a bash script. This opens...
+      code your site using asciidoc/markdown/haml/sass/less/etc
+      git push to source repo
+      done (with so many other cool features at our fingertips)
+      
+      
+      
+      With our new workflow, we let Travis CI do the work for us in a bash...
     </summary>
     <content type="html">
       &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
       
-      &lt;p&gt;If you use a static website generator, then you're aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.&lt;/p&gt;
+      &lt;p&gt;If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.&lt;/p&gt;
       
       &lt;p&gt;The manual workflow goes something like this:&lt;/p&gt;
       
-      &lt;p&gt;code your site using asciidoc/markdown/haml/sass/less/etc -&amp;gt; preprocessor (or build) generates static site -&amp;gt; copy static site to your local gh-pages or username.github.com repo/branch -&amp;gt; git push new site -&amp;gt; done&lt;/p&gt;
+      &lt;ol&gt;
+      &lt;li&gt;code your site using asciidoc/markdown/haml/sass/less/etc&lt;/li&gt;
+      &lt;li&gt;preprocessor (or build) generates static site (locally on your machine)&lt;/li&gt;
+      &lt;li&gt;copy static site to your local gh-pages or username.github.com repo/branch&lt;/li&gt;
+      &lt;li&gt;git push new site&lt;/li&gt;
+      &lt;li&gt;done&lt;/li&gt;
+      &lt;/ol&gt;&lt;p&gt;Now, with a little scripting we can have:&lt;/p&gt;
       
-      &lt;p&gt;Now, with a little scripting we can have:&lt;/p&gt;
-      
-      &lt;p&gt;code your site using asciidoc/markdown/haml/sass/less/etc -&amp;gt; git push to source repo -&amp;gt; done&lt;/p&gt;
-      
-      &lt;p&gt;With the new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation coolness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
+      &lt;ol&gt;
+      &lt;li&gt;code your site using asciidoc/markdown/haml/sass/less/etc&lt;/li&gt;
+      &lt;li&gt;git push to source repo&lt;/li&gt;
+      &lt;li&gt;done (with so many other cool features at our fingertips)&lt;/li&gt;
+      &lt;/ol&gt;&lt;p&gt;With our new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation greatness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
       to test how each new commit loads (over time) in a web browser - giving us a baseline for site performance.&lt;/p&gt;
       
       &lt;p&gt;This post is going to review the basics of setting up your github OAuth token, encryption with travis, and finally pushing your website to github pages with an automated travisci build.
@@ -67,7 +85,7 @@
       
       &lt;script src=&quot;https://gist.github.com/wesleyhales/5274559.js&quot;&gt;&lt;/script&gt;&lt;p&gt;To encrypt, we must install the travis gem and encrypt the token string from above with:&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274580.js&quot;&gt;&lt;/script&gt;&lt;p&gt;..this will creat a string in your console and we'll paste it below, so keep it close by...&lt;/p&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274580.js&quot;&gt;&lt;/script&gt;&lt;p&gt;..this will create a string in your console and we'll paste it below, so keep it close by...&lt;/p&gt;
       
       &lt;p&gt;Now, we can create the gh-pages branch for this repository &lt;a href=&quot;https://help.github.com/articles/creating-project-pages-manually&quot;&gt;following these instructions&lt;/a&gt;. This gh-pages branch can host your generated site or artifacts. Since I have a TLD mapped to my wesleyhales.github.com
       repository, I'm using the gh-pages branch under my source account for load testing reports. For my blog, I'm mapping a domain name over by simply forwarding a TLD like wesleyhales.com, with an A record pointing to 204.232.175.78.
@@ -77,23 +95,38 @@
       
       &lt;p&gt;Finally, we're ready to update our .travis.yml.&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274500.js&quot;&gt;&lt;/script&gt;&lt;p&gt;Awestruct is a ruby based preprocessor, so this project is setup with the travis ruby config (above).&lt;/p&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274500.js&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;a href=&quot;http://awestruct.org/getting_started/&quot;&gt;Awestruct&lt;/a&gt; is a ruby based preprocessor, so this project is setup with the travis ruby config (above).&lt;/p&gt;
       
       &lt;p&gt;Note the &lt;b&gt;before_script&lt;/b&gt; and &lt;b&gt;script&lt;/b&gt; configs:&lt;/p&gt;
       
       &lt;p&gt;&lt;b&gt;before_script&lt;/b&gt; runs the awestruct build and then the post_build.sh script. post_build.sh pushes our newly generated public facing website to github pages. This is where github kindly serves up our static content at username.github.com (for free).&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274512.js&quot;&gt;&lt;/script&gt;&lt;p&gt;And finally, &lt;b&gt;script&lt;/b&gt; will run gh-pages-report.sh. This allows us to run &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; and send the generated report to our souce gh-pages branch.
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274512.js&quot;&gt;&lt;/script&gt;&lt;p&gt;And finally, &lt;b&gt;script&lt;/b&gt; will run gh-pages-report.sh. This allows us to run &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; and send the generated report to our source gh-pages branch.
       Travis CI provides an instance of phantomjs during our build, so all we have to do is call it. This is basically a build report (or artifact from the build). It measures how long
       it takes our site to load after each commit is made. This gives us a baseline for measuring performance.&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274517.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274517.js&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;h2&gt;The Results&lt;/h2&gt;
+      
+      &lt;p&gt;The source for this blog you are reading is stored on github &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.com&quot;&gt;here&lt;/a&gt;. When I do
+      a git push, everything is automatically built with travis and pushed again to the &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.github.com&quot;&gt;github repo&lt;/a&gt; that is specially named to handle the
+      mapping of my TLD (wesleyhales.com) to my username on github.
+      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/blog-ss.png&quot; class=&quot;margin10&quot; width=&quot;400px&quot;&gt;&lt;/p&gt;
+      
+      &lt;p&gt;Since I have 2 repositories, one for the preprocessor source and the other for the TLD mapping, I'm using the gh-pages branch on my
+       source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
+       The results of this test are automatically pushed and I can view them &lt;a href=&quot;http://wesleyhales.com/wesleyhales.com/&quot;&gt;here&lt;/a&gt;.
+       &lt;a href=&quot;http://wesleyhales.com/wesleyhales.com/&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/perf-test.png&quot; class=&quot;margin10&quot; width=&quot;400px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt; From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
+       documentation along with other reports and assets. I'd eventually like to write a script to do a diff on only test the pages that were changed on the commit.&lt;/p&gt;
+      
+      &lt;p&gt; &lt;br&gt;&lt;br&gt;&lt;/p&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -242,7 +275,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -301,7 +334,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -484,7 +517,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -549,7 +582,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -584,7 +617,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -795,7 +828,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -850,7 +883,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
@@ -882,7 +915,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-02-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html" rel="alternate" type="text/html" />
     <category term="html5e"></category>
@@ -936,7 +969,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
     <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2012-01-20T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -1045,7 +1078,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html</id>
     <title>2011 Year In Review</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2011-12-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -1150,7 +1183,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html</id>
     <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2011-08-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html" rel="alternate" type="text/html" />
     <category term="Java"></category>
@@ -1280,7 +1313,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3.html</id>
     <title>RichFaces Mobile Designs - Day 3</title>
-    <updated>2013-03-30T23:37:43+00:00</updated>
+    <updated>2013-03-31T01:58:18+00:00</updated>
     <published>2011-08-03T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3.html" rel="alternate" type="text/html" />
     <category term="Java"></category>

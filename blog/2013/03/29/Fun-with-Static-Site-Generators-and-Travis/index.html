@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      wesleyhales.com: Fun with Static Site Generators and Travis
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="/stylesheets/global.css?v30" media="screen, print" rel="stylesheet" type="text/css">
+    <link href="/blog.atom" rel="alternate" type="application/atom+xml">
+    <script defer="defer" src="/js/modernizr.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-box" onclick="window.location = 'http://wesleyhales.com'">
+        <div class="logo-bold">wesleyhales<span>.com</span></div>
+        <nav class="console">
+          <ul id="menu">
+            <li id="home">
+              <a href="/index.html">Blog</a>
+            </li>
+            <li id="design">
+              <a href="/design/?p=design">Projects</a>
+            </li>
+            <li id="projects">
+              <a href="/contact/?p=contact">Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <aside id="rightcol">
+      <div class="shadow-helper">
+        <div class="left-toolbar">
+          <section class="recent-comments">
+            <header>
+              <div class="dsq-widget" id="recentcomments">
+                <h2 class="dsq-widget-title">
+                  Recent Comments
+                </h2>
+                <script src="http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=24&amp;excerpt_length=200" type="text/javascript"></script>
+              </div>
+            </header>
+          </section>
+          <section class="tags">
+            <header>
+              <h2 class="tags-title">
+                My Book
+              </h2>
+              <div class="book-container">
+                <a href="http://shop.oreilly.com/product/0636920024088.do">
+                  <img src="/images/icons/mybook.png">
+                </a>
+              </div>
+            </header>
+          </section>
+          <section class="tweets">
+            <header>
+              <h2 class="tweets-title">
+                <a href="http://twitter.com/wesleyhales">
+                  <img src="//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png">
+                  My Tweets
+                </a>
+              </h2>
+              <div id="twitter_div">
+                <ul id="twitter_update_list"></ul>
+              </div>
+            </header>
+          </section>
+        </div>
+      </div>
+    </aside>
+    <div id="main">
+      <div id="post-container">
+        <div class="article-list">
+          <div class="post_navigation">
+            <div class="previous_post link">
+              Previous:
+              <a href="/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/">
+                How Collective Wisdom Shapes a Talk
+              </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="post">
+            <h2 class="title">
+              Fun with Static Site Generators and Travis
+            </h2>
+            <h3 class="date">
+              29 March 2013
+            </h3>
+            <h4 class="tags">
+              <a href="/blog/tags/preprocessor/">
+                preprocessor
+              </a>
+              |
+              <a href="/blog/tags/travisci/">
+                travisci
+              </a>
+              |
+              <a href="/blog/tags/awestruct/">
+                awestruct
+              </a>
+              |
+              <a href="/blog/tags/loadreportjs/">
+                loadreportjs
+              </a>
+              |
+            </h4>
+            <div class="content">
+              <br/>
+              
+              
+              <h2>Overview</h2>
+              
+              <p>If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.</p>
+              
+              <p>The manual workflow goes something like this:</p>
+              
+              <ol>
+              <li>code your site using asciidoc/markdown/haml/sass/less/etc</li>
+              <li>preprocessor (or build) generates static site (locally on your machine)</li>
+              <li>copy static site to your local gh-pages or username.github.com repo/branch</li>
+              <li>git push new site</li>
+              <li>done</li>
+              </ol>
+              
+              
+              <p>Now, with a little scripting we can have:</p>
+              
+              <ol>
+              <li>code your site using asciidoc/markdown/haml/sass/less/etc</li>
+              <li>git push to source repo</li>
+              <li>done (with so many other cool features at our fingertips)</li>
+              </ol>
+              
+              
+              <p>With our new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation greatness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
+              to test how each new commit loads (over time) in a web browser - giving us a baseline for site performance.</p>
+              
+              <p>This post is going to review the basics of setting up your github OAuth token, encryption with travis, and finally pushing your website to github pages with an automated travisci build.
+              We'll top it all off with running <a href="http://loadreport.wesleyhales.com">loadreport.js</a> after each check in to understand how a single commit can affect site performance. So let's go...</p>
+              
+              <br/>
+              
+              
+              <h2>Github hosting setup</h2>
+              
+              <p>If you're unfamiliar with github pages or how to host your own top-level domain (yourdomain.com) under your github account, then read <a href="https://help.github.com/articles/what-are-github-pages">this</a>, <a href="https://help.github.com/articles/creating-project-pages-manually">then this</a> first.</p>
+              
+              <br/>
+              
+              
+              <h2>Github, Travis, and OAuth</h2>
+              
+              <p>First off, you must login to <a href="https://travis-ci.org">Travis CI</a> with your github username and enable the travis service hook on the repository you wish to automate.
+              For me, this is where my haml/sass/etc... source is located.
+              <img src="/images/posts/2013-03-29/travisci1.png" alt="travis" class="margin10"/>
+              Next, we'll create an OAuth token for your repository access :</p>
+              
+              <script src="https://gist.github.com/wesleyhales/5274538.js"></script>
+              
+              
+              <p>Pluck the <b>"token":</b> string value from the generated json and encrypt it. Pro tip: this token is basically the same thing as your password. So don't push it out to a public repository.</p>
+              
+              <script src="https://gist.github.com/wesleyhales/5274559.js"></script>
+              
+              
+              <p>To encrypt, we must install the travis gem and encrypt the token string from above with:</p>
+              
+              <script src="https://gist.github.com/wesleyhales/5274580.js"></script>
+              
+              
+              <p>..this will create a string in your console and we'll paste it below, so keep it close by...</p>
+              
+              <p>Now, we can create the gh-pages branch for this repository <a href="https://help.github.com/articles/creating-project-pages-manually">following these instructions</a>. This gh-pages branch can host your generated site or artifacts. Since I have a TLD mapped to my wesleyhales.github.com
+              repository, I'm using the gh-pages branch under my source account for load testing reports. For my blog, I'm mapping a domain name over by simply forwarding a TLD like wesleyhales.com, with an A record pointing to 204.232.175.78.
+              Then I added a <a href="https://github.com/wesleyhales/wesleyhales.github.com/blob/master/CNAME">CNAME file</a> to the repo so github DNS knows where to forward to.</p>
+              
+              <br/>
+              
+              
+              <h2>The Build Config</h2>
+              
+              <p>Finally, we're ready to update our .travis.yml.</p>
+              
+              <script src="https://gist.github.com/wesleyhales/5274500.js"></script>
+              
+              
+              <p><a href="http://awestruct.org/getting_started/">Awestruct</a> is a ruby based preprocessor, so this project is setup with the travis ruby config (above).</p>
+              
+              <p>Note the <b>before_script</b> and <b>script</b> configs:</p>
+              
+              <p><b>before_script</b> runs the awestruct build and then the post_build.sh script. post_build.sh pushes our newly generated public facing website to github pages. This is where github kindly serves up our static content at username.github.com (for free).</p>
+              
+              <script src="https://gist.github.com/wesleyhales/5274512.js"></script>
+              
+              
+              <p>And finally, <b>script</b> will run gh-pages-report.sh. This allows us to run <a href="http://loadreport.wesleyhales.com">loadreport.js</a> and send the generated report to our source gh-pages branch.
+              Travis CI provides an instance of phantomjs during our build, so all we have to do is call it. This is basically a build report (or artifact from the build). It measures how long
+              it takes our site to load after each commit is made. This gives us a baseline for measuring performance.</p>
+              
+              <script src="https://gist.github.com/wesleyhales/5274517.js"></script>
+              
+              
+              
+              
+              <br/>
+              
+              
+              <h2>The Results</h2>
+              
+              <p>The source for this blog you are reading is stored on github <a href="https://github.com/wesleyhales/wesleyhales.com">here</a>. When I do
+              a git push, everything is automatically built with travis and pushed again to the <a href="https://github.com/wesleyhales/wesleyhales.github.com">github repo</a> that is specially named to handle the
+              mapping of my TLD (wesleyhales.com) to my username on github.
+              <img src="/images/posts/2013-03-29/blog-ss.png" class="margin10" width="400px"></p>
+              
+              <p>Since I have 2 repositories, one for the preprocessor source and the other for the TLD mapping, I'm using the gh-pages branch on my
+               source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
+               The results of this test are automatically pushed and I can view them <a href="http://wesleyhales.com/wesleyhales.com/">here</a>.
+               <a href="http://wesleyhales.com/wesleyhales.com/"><img src="/images/posts/2013-03-29/perf-test.png" class="margin10" width="400px"></a></p>
+              
+              <p> From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
+               documentation along with other reports and assets. I'd eventually like to write a script to do a diff on only test the pages that were changed on the commit.</p>
+              
+              <p> <br/>
+               <br/></p>
+            </div>
+            <div class="comments">
+              
+                          <div id="disqus_thread"></div>
+                          <script type="text/javascript">
+                          var disqus_shortname = 'wesleyhales';
+                          var disqus_url = "http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis/";
+                          var disqus_developer = null;
+                          var disqus_identifier = null;
+                          (function() {
+                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                            dsq.src = "http://wesleyhales.disqus.com/embed.js";
+                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                          })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=wesleyhales">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br class="clear">
+    <script defer="defer" src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <script defer="defer" src="http://twitter.com/javascripts/blogger.js" type="text/javascript"></script>
+    <script defer="defer" src="/js/site.js" type="text/javascript"></script>
+    <script defer="defer" src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=wesleyhales&amp;callback=twitterCallback3&amp;count=10" type="text/javascript"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-1241000-10");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+  </body>
+</html>
