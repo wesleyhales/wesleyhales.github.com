@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      wesleyhales.com: Basic Screen Updates with Angular and requestAnimationFrame
+      wesleyhales.com: Jank Busting Apple's Home Page
     </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link href="/stylesheets/global.css?v31" media="screen, print" rel="stylesheet" type="text/css">
@@ -87,50 +87,20 @@
           <div class="post_navigation">
             <div class="previous_post link">
               Previous:
-              <a href="/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis/">
-                Fun with Static Site Generators and Travis
-              </a>
-            </div>
-            <div class="next_post link">
-              Next:
-              <a href="/blog/2013/10/26/Jank-Busting-Apples-Home-Page/">
-                Jank Busting Apple's Home Page
+              <a href="/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/">
+                Basic Screen Updates with Angular and requestAnimationFrame
               </a>
             </div>
             <div class="clearfix"></div>
           </div>
           <div class="post">
             <h2 class="title">
-              Basic Screen Updates with Angular and requestAnimationFrame
+              Jank Busting Apple's Home Page
             </h2>
             <h3 class="date">
-              23 October 2013
+              26 October 2013
             </h3>
             <h4 class="tags">
-              <a href="/blog/tags/rAF/">
-                rAF
-              </a>
-              |
-              <a href="/blog/tags/requestAnimationFrame/">
-                requestAnimationFrame
-              </a>
-              |
-              <a href="/blog/tags/angular/">
-                angular
-              </a>
-              |
-              <a href="/blog/tags/angularjs/">
-                angularjs
-              </a>
-              |
-              <a href="/blog/tags/setinterval/">
-                setinterval
-              </a>
-              |
-              <a href="/blog/tags/settimeout/">
-                settimeout
-              </a>
-              |
               <a href="/blog/tags/jank/">
                 jank
               </a>
@@ -142,57 +112,43 @@
               
               <h2>Overview</h2>
               
-              <p>Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using <a href="http://jsfiddle.net/IgorMinar/ZSBhg/2/">setInterval</a> and
-              Angular's builtin <a href="http://jsfiddle.net/ganarajpr/LQGE2/">$timeout</a>.</p>
+              <p>Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote <a href="/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/">this article</a> the other day which examines the
+              performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
+              Jake Archibald's <a href="http://jakearchibald.github.io/jank-invaders/">Jank Invaders</a> to hone my skills and save the universe from jank :)</p>
               
-              <iframe width="100%" height="300" src="http://jsfiddle.net/IgorMinar/ZSBhg/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+              <p>So, I was on <a href="http://apple.com">Apple's home page</a> the other day and noticed some jank in their main carousel animation.
+              <a href="/images/posts/2013-10-26/apple.home.PNG"><img src="/images/posts/2013-10-26/apple.home.PNG" alt="apple home page" style="width:50%" class="margin10"></a>
+              It wasn't anything huge, but the
+              animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
+              Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a <a href="https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events">paint</a> within chrome.
+              <a href="/images/posts/2013-10-26/apple.com.jank.PNG"><img src="/images/posts/2013-10-26/apple.com.jank.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a></p>
               
+              <p>Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
+               handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka <a href="http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/">null transform hack</a>).
+               The problem with Apple's site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
+               <img src="/images/posts/2013-10-26/composite.PNG" alt="layer composite time" class="margin10 max-width-100"/>
+               <br/>
+               I wrote about this <a href="http://www.html5rocks.com/en/mobile/optimization-and-performance/">a while ago</a>, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
+               applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.</p>
               
-              <p>Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change
-              is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout).
-              If you want to read more about $scope.$apply check out <a href="http://jimhoskins.com/2012/12/17/angularjs-and-apply.html">this article</a>.</p>
+              <p> The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
+               If we turn on "<a href="http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode">Continuous Page Repainting</a>" in dev tools, we can see how the page is being painted and how many composited layers we have.
+               <a href="/images/posts/2013-10-26/apple-paint.PNG"><img src="/images/posts/2013-10-26/apple-paint.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a></p>
               
-              <p>For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
-              the user know when it's about to refresh the data.</p>
+              <p> By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
+               From there, I just disabled all the null transform hacks that were applied to nested elements.
+               <a href="/images/posts/2013-10-26/apple.markup.PNG"><img src="/images/posts/2013-10-26/apple.markup.PNG" alt="apple home page markup" class="marginTop10 max-width-100"></a></p>
               
-              <p><a href="https://apigee.com/usergrid/dash/app/index-ma.html"><img src="/images/posts/2013-10-23/dashboard.PNG" alt="apigee app services dashboard" class="marginTop10 max-width-100"></a></p>
+              <p> After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
+               below timeline.
+               <a href="/images/posts/2013-10-26/apple.com.no.jank.PNG"><img src="/images/posts/2013-10-26/apple.com.no.jank.PNG" alt="apple home page markup" class="marginTop10 max-width-100"></a></p>
               
-              <p>I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn't believe how much jank it was causing.
-              There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
-               check it out <a href="http://www.youtube.com/watch?v=mSK70FwUz2A">here</a>.</p>
+              <p> The yellow bars are the 7 second timer before each transition occurs, so this is expected.</p>
               
-              <p>If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
-              <a href="/images/posts/2013-10-23/bad-fps.PNG"><img src="/images/posts/2013-10-23/bad-fps.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a>
-              Yep, That's 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.</p>
+              <p> The animation on Apple.com isn't terrible as it stands in its current state, but as I stated at the beginning of this article, it's fun to fix jank :)</p>
               
-              <p>Also, if you look at the memory being consumed, we're taking quite a hit for this little counter.
-              <a href="/images/posts/2013-10-23/bad-memory.PNG"><img src="/images/posts/2013-10-23/bad-memory.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a>
-              We maintain around 25MB and then shoot up to 34 when the page does its refresh.</p>
-              
-              <br/>
-              
-              
-              <br/>
-              
-              
-              <h2>rAF to the rescue!</h2>
-              
-              <p>I'm still trying to bring requestAnimationFrame into my dev thought process, and this was a fine chance to see if it could save the day.
-              Here's the code I put together:</p>
-              
-              <iframe width="100%" height="300" src="http://jsfiddle.net/wesleyhales/59SeE/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-              
-              
-              <p>And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
-              <a href="/images/posts/2013-10-23/good-fps.PNG"><img src="/images/posts/2013-10-23/good-fps.PNG" alt="good fps" class="marginTop10 max-width-100"></a></p>
-              
-              <p>Also the memory footprint is greatly reduced:
-              <a href="/images/posts/2013-10-23/good-memory.PNG"><img src="/images/posts/2013-10-23/good-memory.PNG" alt="good fps" class="marginTop10 max-width-100"></a>
-              Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.</p>
-              
-              <p>A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the
-              framework lifecycle. I need to get a baseline on the AngularJS runtime before I can make any assumptions (or point fingers).
-              This is my first perf analysis of the framework and I plan on doing much more in the coming months.</p>
+              <p> <br/>
+               <br/></p>
               
               <br/>
               
@@ -204,7 +160,7 @@
                           <div id="disqus_thread"></div>
                           <script type="text/javascript">
                           var disqus_shortname = 'wesleyhales';
-                          var disqus_url = "http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/";
+                          var disqus_url = "http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page/";
                           var disqus_developer = null;
                           var disqus_identifier = null;
                           (function() {

@@ -2,13 +2,78 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2013-10-24T16:27:49+00:00</updated>
+  <updated>2013-10-27T01:49:31+00:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
+    <id>http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
+    <title>Jank Busting Apple's Home Page</title>
+    <updated>2013-10-27T01:49:31+00:00</updated>
+    <published>2013-10-26T00:00:00+00:00</published>
+    <link href="http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
+    <category term="jank"></category>
+    <summary>
+      
+      
+      
+      Overview
+      
+      Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote this article the other day which examines the
+      performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
+      Jake Archibald's Jank Invaders to hone my skills and save the universe from jank :)
+      
+      So, I was on Apple's home page the other day and noticed some jank in their main carousel animation.
+      
+      It wasn't anything huge, but the
+      animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
+      Apple products. You can see this in...
+    </summary>
+    <content type="html">
+      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      
+      &lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&quot;http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&quot;&gt;this article&lt;/a&gt; the other day which examines the
+      performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
+      Jake Archibald's &lt;a href=&quot;http://jakearchibald.github.io/jank-invaders/&quot;&gt;Jank Invaders&lt;/a&gt; to hone my skills and save the universe from jank :)&lt;/p&gt;
+      
+      &lt;p&gt;So, I was on &lt;a href=&quot;http://apple.com&quot;&gt;Apple's home page&lt;/a&gt; the other day and noticed some jank in their main carousel animation.
+      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&quot; alt=&quot;apple home page&quot; style=&quot;width:50%&quot; class=&quot;margin10&quot;&gt;&lt;/a&gt;
+      It wasn't anything huge, but the
+      animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
+      Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a &lt;a href=&quot;https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events&quot;&gt;paint&lt;/a&gt; within chrome.
+      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
+       handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka &lt;a href=&quot;http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/&quot;&gt;null transform hack&lt;/a&gt;).
+       The problem with Apple's site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
+       &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/composite.PNG&quot; alt=&quot;layer composite time&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;br&gt;
+       I wrote about this &lt;a href=&quot;http://www.html5rocks.com/en/mobile/optimization-and-performance/&quot;&gt;a while ago&lt;/a&gt;, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
+       applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.&lt;/p&gt;
+      
+      &lt;p&gt; The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
+       If we turn on &quot;&lt;a href=&quot;http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode&quot;&gt;Continuous Page Repainting&lt;/a&gt;&quot; in dev tools, we can see how the page is being painted and how many composited layers we have.
+       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt; By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
+       From there, I just disabled all the null transform hacks that were applied to nested elements.
+       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&quot; alt=&quot;apple home page markup&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt; After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
+       below timeline.
+       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&quot; alt=&quot;apple home page markup&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt; The yellow bars are the 7 second timer before each transition occurs, so this is expected.&lt;/p&gt;
+      
+      &lt;p&gt; The animation on Apple.com isn't terrible as it stands in its current state, but as I stated at the beginning of this article, it's fun to fix jank :)&lt;/p&gt;
+      
+      &lt;p&gt; &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
@@ -96,7 +161,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
@@ -216,7 +281,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -365,7 +430,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -424,7 +489,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -607,7 +672,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -672,7 +737,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -707,7 +772,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -918,7 +983,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -973,7 +1038,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
@@ -1005,7 +1070,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-02-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html" rel="alternate" type="text/html" />
     <category term="html5e"></category>
@@ -1059,7 +1124,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
     <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2012-01-20T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -1168,7 +1233,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html</id>
     <title>2011 Year In Review</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
+    <updated>2013-10-27T01:49:31+00:00</updated>
     <published>2011-12-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -1268,136 +1333,6 @@
       &lt;p&gt;Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.&lt;/p&gt;
       
       &lt;p&gt;2011 has been a mind blowing year and I’m looking forward to topping it in 2012.&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html</id>
-    <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-    <updated>2013-10-24T16:27:49+00:00</updated>
-    <published>2011-08-29T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5.html" rel="alternate" type="text/html" />
-    <category term="Java"></category>
-    <category term="ajax"></category>
-    <category term="html5"></category>
-    <category term="innerhtml"></category>
-    <summary>
-      Update: @_boye has created a perf test which shows the performance of this solution. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.
-      
-      
-      The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it's still being recommended and used not only on desktop browsers but mobile ones as well.
-      
-      
-      3 or 4 years have passed since many folks raised their concerns with innerHTML:
-      
-      
-      From Javascript The Good...
-    </summary>
-    <content type="html">
-      &lt;p&gt;&lt;strong&gt;Update: &lt;a href=&quot;https://twitter.com/#!/_boye/&quot;&gt;@_boye&lt;/a&gt; has created &lt;a href=&quot;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&quot;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
-      
-      
-      &lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it's still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
-      
-      
-      &lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
-      
-      
-      &lt;p&gt;From Javascript The Good Parts:&lt;/p&gt;
-      
-      
-      &lt;p&gt;&amp;#8220;If the HTML text contains a &amp;lt;script&amp;gt; tag or its equivalent, then an evil script will run. .. This danger is a direct consequence of JavaScript&amp;#8217;s global object which is far and away the worst part of JavaScript&amp;#8217;s many bad parts.&amp;#8221;&lt;/p&gt;
-      
-      
-      &lt;p&gt;Not only is innerHTML bad, it is the root cause of many problems... from &lt;a href=&quot;http://www.julienlecomte.net/blog/2007/12/38/&quot;&gt;browser memory leaks&lt;/a&gt; (it destroys/replaces existing elements that may have event handlers attached) to &lt;a href=&quot;http://martinkou.blogspot.com/2011/05/alternative-workaround-for-mobile.html&quot;&gt;failing completely&lt;/a&gt; on iOS&amp;#8217;s Mobile Safari. Yes, that's right, it just flakes out.&lt;/p&gt;
-      
-      
-      &lt;p&gt;So even if you use &lt;a href=&quot;http://javascript.crockford.com/memory/leak.html&quot;&gt;Crockford&amp;#8217;s purge&lt;/a&gt; method to fix the memory leaks and sanitize your response string returned from the server, you still have a showstopping flaw when running any mobile web solution that uses innerHTML on iOS devices &lt;/p&gt;
-      
-      
-      
-      
-      &lt;p&gt;Just to name a few mobile frameworks that use this flawed innerHTML approach:&lt;/p&gt;
-      
-      
-      &lt;p&gt;&lt;a href=&quot;http://api.jquery.com/html/&quot;&gt;JQuery Mobile&lt;/a&gt; (uses jQuery&amp;#8217;s .html() wich is a wrapper for innerHTML)&lt;/p&gt;
-      
-      
-      &lt;p&gt;&lt;a class=&quot;active_link&quot; href=&quot;http://wiki.phonegap.com/w/page/42450600/PhoneGap%20Ajax%20Sample&quot;&gt;Phone Gap&lt;/a&gt;&lt;/p&gt;
-      
-      
-      &lt;p&gt;&lt;a href=&quot;http://www.sencha.com/forum/showthread.php?122591-List-rendering-race-condition&quot;&gt;Sencha&lt;/a&gt;&lt;/p&gt;
-      
-      
-      
-      
-      &lt;p&gt;&lt;strong&gt;A possible solution:&lt;/strong&gt;&lt;/p&gt;
-      
-      
-      &lt;p&gt;We all know that innerHTML is a favorite for it&amp;#8217;s speed and ease of use but speed doesn&amp;#8217;t really matter when it doesn&amp;#8217;t work at all. So one solution is through use of some new features in HTML5 and the DOM api:&lt;/p&gt;
-      
-      
-      
-      
-      &lt;p&gt;Let's start with the scenario that you've made your XHR and received the responseText. &lt;/p&gt;
-      
-      
-      &lt;p&gt;First thing we'll do is create a temporary iFrame element. This isn't any ordinary iframe, it received a major security enhancement with HTML5 and we have some new sanitizing features with the &quot;sandbox&quot; attribute. &lt;/p&gt;
-      
-      
-      
-      
-      &lt;p&gt;From the &lt;a href=&quot;http://dev.w3.org/html5/spec-author-view/the-iframe-element.html#attr-iframe-sandbox&quot;&gt;spec&lt;/a&gt;:&lt;/p&gt;
-      
-      
-      &lt;p&gt;&lt;span style=&quot;color: #808080;&quot;&gt;The sandbox attribute, when specified, enables a set of extra restrictions on any content hosted by the iframe. Its value must be an unordered set of unique space-separated tokens that are ASCII case-insensitive. The allowed values are allow-forms, allow-same-origin, allow-scripts, and allow-top-navigation. When the attribute is set, the content is treated as being from a unique origin, forms and scripts are disabled, links are prevented from targeting other browsing contexts, and plugins are disabled. &lt;/span&gt;&lt;/p&gt;
-      
-      
-      &lt;p&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;To limit the damage that can be caused by hostile HTML content, it should be served using the &lt;strong&gt;text/html-sandboxed&lt;/strong&gt; MIME type.&lt;/span&gt;&lt;/p&gt;
-      
-      
-      
-      
-      &lt;pre class=&quot;jive_text_macro jive_macro_code&quot; jivemacro=&quot;code&quot; ___default_attr=&quot;java&quot;&gt;&lt;p&gt;function getFrame() {&lt;/p&gt;&lt;p&gt;    var frame = document.getElementById(&quot;temp-frame&quot;);&lt;/p&gt;&lt;p&gt;    if (!frame) {&lt;/p&gt;&lt;p&gt;        // create frame&lt;/p&gt;&lt;p&gt;        frame = document.createElement(&quot;iframe&quot;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&quot;id&quot;, &quot;temp-frame&quot;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&quot;name&quot;, &quot;temp-frame&quot;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&quot;seamless&quot;, &quot;&quot;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&quot;sandbox&quot;, &quot;&quot;);&lt;/p&gt;&lt;p&gt;        frame.style.display = 'none';&lt;/p&gt;&lt;p&gt;        document.documentElement.appendChild(frame);&lt;/p&gt;&lt;p&gt;    }&lt;/p&gt;&lt;p&gt;    return frame.contentDocument;&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;/pre&gt;
-      
-      
-      
-      
-      &lt;p&gt;Now, we get our ajax response and write it to the iframe:&lt;/p&gt;
-      
-      
-      
-      
-      &lt;pre class=&quot;jive_text_macro jive_macro_code&quot; jivemacro=&quot;code&quot; ___default_attr=&quot;java&quot;&gt;&lt;p&gt;var frame = getFrame();&lt;/p&gt;&lt;p&gt;frame.write(responseText);&lt;/p&gt;&lt;/pre&gt;
-      
-      
-      
-      
-      &lt;p&gt;The beauty of this solution is the fact that we don't have to deal with a &lt;a href=&quot;http://ejohn.org/blog/pure-javascript-html-parser&quot;&gt;javascript text to DOM parser&lt;/a&gt;. We're allowing the browser to do what it does best... parse the HTML and build a DOM. And we don't have to worry about parsing the response and removing a blacklist of prohibited security risk elements and other XSS hacking pitas.&lt;/p&gt;
-      
-      
-      
-      
-      &lt;p&gt;After writing the response to the iframe, you now have a ready to use sanitized DOM. Next you can use the DOM API to grab any part of the new document.&lt;/p&gt;
-      
-      
-      
-      
-      &lt;pre class=&quot;jive_text_macro jive_macro_code&quot; jivemacro=&quot;code&quot; ___default_attr=&quot;java&quot;&gt;&lt;p&gt; var incomingElements = frame.getElementsByClassName('elementClassName');&lt;/p&gt;&lt;/pre&gt;
-      
-      
-      
-      
-      &lt;p&gt;Safari correctly refuses to implicitly move a node from one document to another. An error is raised if the new child node was created in a different document. So here we use adoptNode to add the incomingElements to our existing page.&lt;/p&gt;
-      
-      
-      
-      
-      &lt;pre class=&quot;jive_text_macro jive_macro_code&quot; jivemacro=&quot;code&quot; ___default_attr=&quot;java&quot;&gt;&lt;p&gt; document.getElementById(elementId).appendChild(document.adoptNode(incomingElements));&lt;/p&gt;&lt;/pre&gt;
-      
-      
-      
-      
-      &lt;p&gt;The only thing left to do now is benchmarking. As I said earlier, working with the DOM has been notably slower than using innerHTML in the past. So there may be a derivative of this proposed solution that is faster? or there may not be a huge difference in execution time? Let me know....&lt;/p&gt;
     </content>
   </entry>
 </feed>
