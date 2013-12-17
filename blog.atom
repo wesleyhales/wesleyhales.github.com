@@ -2,13 +2,133 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2013-12-04T14:31:43+00:00</updated>
+  <updated>2013-12-17T20:00:13+00:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
+    <id>http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html</id>
+    <title>From Startup to Enterprise</title>
+    <updated>2013-12-17T20:00:13+00:00</updated>
+    <published>2013-12-17T00:00:00+00:00</published>
+    <link href="http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html" rel="alternate" type="text/html" />
+    <category term="design"></category>
+    <category term="develop"></category>
+    <category term="angularjs"></category>
+    <summary>
+      
+      
+      
+      Overview
+      
+      At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee.
+      For the past year I've been heads down on merging Apigee's Usergrid and Mobile Analytics products using AngularJS.
+      
+      For those interested: Usergrid, a
+      Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.
+      Developers use it to create a backend for their mobile apps amongst many other things like managing users, roles and permissions.
+      The Mobile Analytics product is something I...
+    </summary>
+    <content type="html">
+      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      
+      &lt;p&gt;At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee.
+      For the past year I've been heads down on merging Apigee's Usergrid and Mobile Analytics products using AngularJS.&lt;/p&gt;
+      
+      &lt;p&gt;For those interested: Usergrid, a
+      Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.
+      Developers use it to create a backend for their mobile apps amongst many other things like managing users, roles and permissions.
+      The Mobile Analytics product is something I was partial to since I created the original UI - before it was acquired by Apigee. I wanted to carry it past
+      the acquisition and endure the process of turning it into a full fledged enterprise offering.&lt;/p&gt;
+      
+      &lt;p&gt;This is a retrospective - carrying an idea from startup to enterprise product.&lt;/p&gt;
+      
+      &lt;br&gt;&lt;h2&gt;Let's start with the design&lt;/h2&gt;
+      
+      &lt;p&gt;We started brainstorming for the new UI on February 1st. Originally we set out to only deliver a new analytics dashboard, but were soon asked to merge
+      the existing UserGrid project into the fold.&lt;/p&gt;
+      
+      &lt;p&gt;Here are the first designs and wireframes we came up with. I purposely left everything greyscale to allow for a pure focus on the page data and layout.&lt;/p&gt;
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-a-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-a.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-b-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-b.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-c-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-c.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;br class=&quot;clear-left&quot;&gt;&lt;p&gt;The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
+      reformatting the data to appear more readable.&lt;/p&gt;
+      
+      &lt;p&gt;After the team was in agreement on how the pages should be structured, we then went into the finer design details. It's kind of weird (and welcomed) being the designer
+      AND developer for a given project. I mean, that's what startups are all about - doing everything and playing all the roles - but when you get into larger
+      companies and work with larger teams, people start to look at you a little funny and the criticism is a little heavier. And that's totally expected and
+      understandable, because as companies grow it only makes sense to hire these things out to design firms that are doing this stuff day in and day out.&lt;/p&gt;
+      
+      &lt;p&gt;So navigation design is always a fun topic amongst developers and designers. Especially when some products use a horizontal design and others choose vertical.
+      It really depends on the usecase on which way you should go. We went with the vertical menu in this case because the end user (developers) would be
+      building an app with our UI. It only made sense to see and understand each tool we were providing on a visual level, and not hidden away in a horizontal menu with
+      drop downs.&lt;/p&gt;
+      
+      &lt;p&gt;This is the evolution of our menu design in chronological order from left to right. Design is an iterative process for me and
+      I never get it right on the first go. And it really helps to have good feedback from other &quot;design minded&quot; folks.&lt;/p&gt;
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/menus-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/menus-large.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;I wanted to leave a lot of the original grey design from the mockups and not get too heavy handed with the colors. After all, we were
+      building an analytics dashboard that needed to put heavy emphasis on errors, warnings, and other alerts.&lt;/p&gt;
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/app-erros.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/app-erros.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
+      
+      &lt;br&gt;&lt;h2&gt;The Code&lt;/h2&gt;
+      
+      &lt;p&gt;By mid-April, we had most of the feedback implemented into the wireframes and were ready to move forward with development. During
+      this month and in between feedback rounds, I was evaluating both Ember and AngularJS. I'm not going to turn this into
+      a discussion of which framework I think is better - they both have their strengths and weaknesses - but I will tell you why I
+      went with Angular.&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;Community - When I opt for a framework, it has to be strongly backed by the community.&lt;/li&gt;
+      &lt;li&gt;Components - I like the web components approach that Angular has going with directives. And putting heavy emphasis on this from the start was a good move by the
+      Angular team. Directives, love or hate, are a huge win for gaining community support and contributions. I've also recently seen a few conference speakers focus their entire
+      session on directives. Sure, there's a bit of a learning curve, but the concept is well received by most front-end devs.&lt;/li&gt;
+      &lt;li&gt;Productivity - I liked being productive. This post is a testament to being productive, seeing that two developers could stand up an entire analytics and BaaS dashboard within 6 months.&lt;/li&gt;
+      &lt;li&gt;Architecture - Angular sets forth the idea of a loosely coupled architecture for building large apps. The mechanisms for dependency injection and scope management were attractive to me.&lt;/li&gt;
+      &lt;/ul&gt;&lt;p&gt;On May 1st I had the markup and a beginning on the Angular architecture all pushed to github. From May into the late summer months we were
+      busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
+      one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/github.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/github.png&quot; style=&quot;width: 500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;On August 9th we had our first C-Level review of the beta version of the product. This is pretty significant seeing that two developers were
+      able to produce a massive SPA in a little over 3 months. Not to mention managing vacation schedules and other things that arose. Of course,
+      We still had a ways to go in polishing the application and not to mention testing, but overall we were able to get a lot done in a short
+      amount of time.&lt;/p&gt;
+      
+      &lt;p&gt;Here are a couple of projects and articles that resulted from this work:
+      &lt;/p&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/wesleyhales/angular-charts&quot;&gt;Angular Charts&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&quot;&gt;Basic Screen Updates with Angular and requestAnimationFrame&lt;/a&gt;&lt;/li&gt;
+      
+      &lt;h2&gt;Conclusion&lt;/h2&gt;
+      
+      &lt;p&gt;There are many reasons I like Angular for 2013, 2014, and maybe even 2015. But another framework will come in &amp;lt;= 3 years time, and it will be even more productive and we'll
+       be rewriting a new product all over again. That's the nature of the beast and it's very similar to many other 3 year life cycles we see in the tech industry. Bottom line: Don't religiously buy into
+       any web framework. Use it at face value and always be prepared for the next one.&lt;/p&gt;
+      
+      &lt;p&gt;Along the way, I had brilliant input and help from many awesome folks. The product manager for this effort was &lt;a href=&quot;https://twitter.com/karlunho&quot;&gt;Alan Ho&lt;/a&gt;, and I would not
+      have been able to forge a usable product without his vision of how things should come together. &lt;a href=&quot;https://twitter.com/edanuff&quot;&gt;Ed Anuff&lt;/a&gt;, the founder of Usergrid, was truly a pleasure
+      to work with/for and receive guidance from during many frustrating times. &lt;a href=&quot;https://twitter.com/prabhatjha&quot;&gt;Prabhat Jha&lt;/a&gt;, my long time pal worked tirelessly to setup the RESTful
+      endpoints I needed to get the job done (along with countless other backend pieces). And last but not least, &lt;a href=&quot;https://twitter.com/rockerston&quot;&gt;Rod Simpson&lt;/a&gt; who stepped in to help with the
+      Backbone-to-Angular rewrite of the existing UserGrid product. Rod also has an impressive design background and helped/pushed me to design a better product
+      when I hit blocks.&lt;/p&gt;
+      
+      &lt;p&gt;You can try the dashboard out for yourself &lt;a href=&quot;https://apigee.com/usergrid&quot;&gt;here&lt;/a&gt;. Lemme know what you think!&lt;/p&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
     <title>Jank Busting Apple's Home Page</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2013-10-26T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
     <category term="jank"></category>
@@ -73,7 +193,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
@@ -161,7 +281,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
@@ -281,7 +401,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -430,7 +550,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -489,7 +609,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -672,7 +792,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -737,7 +857,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -772,7 +892,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -983,7 +1103,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -1038,7 +1158,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
@@ -1070,7 +1190,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-02-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html" rel="alternate" type="text/html" />
     <category term="html5e"></category>
@@ -1124,7 +1244,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
     <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
+    <updated>2013-12-17T20:00:13+00:00</updated>
     <published>2012-01-20T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -1228,111 +1348,6 @@
       &lt;script src=&quot;https://gist.github.com/1651079.js?file=haproxy.config&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
       As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol. There's probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
       &lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html</id>
-    <title>2011 Year In Review</title>
-    <updated>2013-12-04T14:31:43+00:00</updated>
-    <published>2011-12-29T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2011/12/29/2011-Year-In-Review.html" rel="alternate" type="text/html" />
-    <category term="life"></category>
-    <category term="2011"></category>
-    <summary>
-      This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)
-      
-      Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
-      http://refcardz.dzone.com/refcardz/mastering-portals-portlet
-      
-      Learned that CSS3 is replacing Photoshop
-      http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/
-      
-      Watched the entire Battlestar Galactica series on Netflix.
-      
-      Mourned the loss of Stargate Universe
-      
-      Posted this blog entry and later joined the RichFaces team because of it
-      http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/
-      
-      Realized that my motivation on the portlet bridge project was exhausted
-      http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/
-      
-      However, I proudly took the project through passing the TCK
-      http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck
-      
-      Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
-      http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/
-      
-      Presented at JBoss World for the...
-    </summary>
-    <content type="html">
-      &lt;p&gt;This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)&lt;/p&gt;
-      
-      &lt;p&gt;Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
-      &lt;a href=&quot;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&quot;&gt;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Learned that CSS3 is replacing Photoshop
-      &lt;a href=&quot;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&quot;&gt;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Watched the entire Battlestar Galactica series on Netflix.&lt;/p&gt;
-      
-      &lt;p&gt;Mourned the loss of Stargate Universe&lt;/p&gt;
-      
-      &lt;p&gt;Posted this blog entry and later joined the RichFaces team because of it
-      &lt;a href=&quot;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&quot;&gt;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Realized that my motivation on the portlet bridge project was exhausted
-      &lt;a href=&quot;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&quot;&gt;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;However, I proudly took the project through passing the TCK
-      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
-      &lt;a href=&quot;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&quot;&gt;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Presented at JBoss World for the first time
-      &lt;a href=&quot;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&quot;&gt;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Read JavaScript The Good Parts (again)&lt;/p&gt;
-      
-      &lt;p&gt;Dressed up like a white bunny and had some fun with @burrsutter
-      &lt;a href=&quot;http://topsy.com/vimeo.com/27534958&quot;&gt;http://topsy.com/vimeo.com/27534958&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Was in the right place at the right time at JBoss and took a new career path
-      &lt;a href=&quot;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&quot;&gt;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;My wife gave birth to the sweetest, most beautiful baby girl in the whole world.&lt;/p&gt;
-      
-      &lt;p&gt;Formed Atlanta’s first HTML5 User Group
-      &lt;a href=&quot;http://www.meetup.com/AtlantaHTML5/&quot;&gt;http://www.meetup.com/AtlantaHTML5/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Presented at JavaOne for the first time
-      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Proposed a new way to handle AJAX on mobile devices
-      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Wrote an article for HTML5Rocks.com
-      &lt;a href=&quot;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&quot;&gt;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Watched all episodes of Breaking Bad on Netflix&lt;/p&gt;
-      
-      &lt;p&gt;Lead the development of the RichFaces mobile effort
-      &lt;a href=&quot;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&quot;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&lt;/a&gt;
-      &lt;a href=&quot;http://vimeo.com/31616425&quot;&gt;http://vimeo.com/31616425&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Helped form Atlanta’s first JBoss User Group with long time friends from @shadowsoftnews
-      &lt;a href=&quot;http://vimeo.com/33795907&quot;&gt;http://vimeo.com/33795907&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Signed a contract with O’Reilly Media to write a book called “HTML5 Architecture”
-      &lt;em&gt;coming soon&lt;/em&gt;... I hope ;)&lt;/p&gt;
-      
-      &lt;p&gt;Joined the native web apps community group @W3C
-      &lt;a href=&quot;http://www.w3.org/community/native-web-apps/&quot;&gt;http://www.w3.org/community/native-web-apps/&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.&lt;/p&gt;
-      
-      &lt;p&gt;2011 has been a mind blowing year and I’m looking forward to topping it in 2012.&lt;/p&gt;
     </content>
   </entry>
 </feed>
