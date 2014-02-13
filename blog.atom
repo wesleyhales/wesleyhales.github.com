@@ -2,13 +2,13 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2014-02-13T21:42:38+00:00</updated>
+  <updated>2014-02-13T21:49:36+00:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html</id>
     <title>From Startup to Enterprise</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2013-12-17T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html" rel="alternate" type="text/html" />
     <category term="design"></category>
@@ -128,7 +128,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
     <title>Jank Busting Apple's Home Page</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2013-10-26T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
     <category term="jank"></category>
@@ -193,7 +193,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
@@ -281,7 +281,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
@@ -401,7 +401,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -550,7 +550,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -609,7 +609,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -792,7 +792,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -857,7 +857,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -892,7 +892,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -1103,7 +1103,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -1158,7 +1158,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
@@ -1190,7 +1190,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-02-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html" rel="alternate" type="text/html" />
     <category term="html5e"></category>
@@ -1244,7 +1244,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
     <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2014-02-13T21:42:38+00:00</updated>
+    <updated>2014-02-13T21:49:36+00:00</updated>
     <published>2012-01-20T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
