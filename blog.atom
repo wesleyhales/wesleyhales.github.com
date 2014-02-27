@@ -2,13 +2,175 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2014-02-14T00:36:09+00:00</updated>
+  <updated>2014-02-27T10:23:08-08:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
+    <id>http://www.wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience.html</id>
+    <title>A More Better Conference Experience</title>
+    <updated>2014-02-27T10:23:08-08:00</updated>
+    <published>2014-02-26T00:00:00+00:00</published>
+    <link href="http://www.wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience.html" rel="alternate" type="text/html" />
+    <category term="devnexus"></category>
+    <category term="onslyde"></category>
+    <category term="raspberry pi"></category>
+    <category term="rpi"></category>
+    <summary>
+      
+      
+      
+      Overview
+      
+      I've been working on an open source project called Onslyde for almost 2 years. If you want to know the
+      details behind it you can read articles here, here or watch a recent interview.
+      
+      This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to
+      ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and
+      didn't create a web interface for reserving sponsored slots. I simply created a spreadsheet with speaker name, session title,
+      and time. Sponsors could then choose a time and I would reserve it on a...
+    </summary>
+    <content type="html">
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
+      
+      &lt;p&gt;I've been working on an open source project called &lt;a href=&quot;https://www.onslyde.com/&quot;&gt;Onslyde&lt;/a&gt; for almost 2 years. If you want to know the
+      details behind it you can read articles &lt;a href=&quot;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&quot;&gt;here&lt;/a&gt;, &lt;a href=&quot;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&quot;&gt;here&lt;/a&gt; or &lt;a href=&quot;http://eventtech.co/2014/01/24/wesley-hales-creator-of-onslyde/&quot;&gt;watch a recent interview&lt;/a&gt;.&lt;/p&gt;
+      
+      &lt;p&gt;This year, at &lt;a href=&quot;http://devnexus.com/&quot;&gt;Devnexus 2014&lt;/a&gt;, I wanted to take Onslyde a bit further by offering a way for sponsors to
+      ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and
+      didn't create a web interface for reserving sponsored slots. I simply created a &lt;a href=&quot;https://docs.google.com/spreadsheet/ccc?key=0AnSCILK6XyYLdHVEdndSY1VCM2NSOFowNzZrb284a3c&amp;amp;usp=drive_web#gid=0&quot;&gt;spreadsheet&lt;/a&gt; with speaker name, session title,
+      and time. Sponsors could then choose a time and I would reserve it on a first-come-first-serve basis.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;The Idea&lt;/h2&gt;
+      
+      &lt;p&gt;At it's core, Onslyde is a tool that allows people to connect and give their opinion within seconds. Now,
+      attendees can vote on seeded questions that will allow sponsors to connect to those who are truly interested
+      in their product or what they have to say.&lt;/p&gt;
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&quot; class=&quot;margin10 max-width-50 float-right&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;I've already written about &lt;a href=&quot;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&quot;&gt;the disconnect between speakers and attendees&lt;/a&gt;, but what about the disconnect
+      between sponsors and attendees? After all, these are the companies that shell out massive amounts of cash, setup up
+      a booth, and wait for attendees to visit them in hopes of gaining a lead, recruiting a new employee, or making a sell.
+      Why not proactively give them true leads that don't require a stop by the ol' exhibit floor booth?&lt;/p&gt;
+      
+      &lt;p&gt;This all sounds great in theory, but I had no idea how hard this would be to put together and manage throughout
+      a 2 day conference with around 1200 attendees. So let's look at the details behind the implementation and
+      challenges that were faced.&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;&lt;p&gt;Devnexus had around 30 sponsors this year. This included Red Hat, GitHub, Twilio, and many others. I wanted a
+      way for them to communicate with attendees who are interested in what they have to say on the screen.&lt;/p&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;p&gt;We started out by allowing each sponsor to ask one question, and then charging a fee for additional questions.
+      However, and I'm happy about it now, zero paid slots were sold. But almost all the sponsors took advantage of their one free question, so a week before the
+      conference we ended up giving all the slots away for free.
+      I quickly learned that trying to sell the empty slots was the wrong approach - mainly because it requires up front sales.
+      Either myself or someone else would need to try and up sell sponsors on question slots. It was too much selling without proven results.&lt;/p&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;In hindsight, I should've given sponsors a limit of 10 questions/slots and then found a way to expose the voting
+      data in a freemium model.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;The Hardware&lt;/h2&gt;
+      
+      &lt;p&gt;I used a fairly cheap hardware setup powered by Raspberry Pis (or RPi). For around $80, we had a complete Onslyde powered device
+      that could be placed in any of the rooms. Devnexus had 10 simultaneous tracks, or rooms where someone was speaking, plus
+      a workshop track. So we needed 10 rooms to be setup with the RPis for live voting.&lt;/p&gt;
+      
+      &lt;p&gt;The hardware setup consisted of the following:&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;Raspberry Pi (model B)&lt;/li&gt;
+      &lt;li&gt;16GB SD Card&lt;/li&gt;
+      &lt;li&gt;Edimax wifi USB device&lt;/li&gt;
+      &lt;li&gt;HDMI to VGA converter dongle&lt;/li&gt;
+      &lt;li&gt;3ft VGA cable&lt;/li&gt;
+      &lt;li&gt;VGA 2 way push-button splitter&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image.jpeg&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image.jpeg&quot; class=&quot;margin10 max-width-50 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;The last item in the list above is what caused me a lot of trouble. Ultimately the hardware setup was solid and worked
+      really well. But physically pushing the button to switch between voting and speakers ready to present was impossible to
+      handle manually.&lt;/p&gt;
+      
+      &lt;p&gt;Remember we're talking about 10 tracks spread throughout a very large conference center, so after each session the
+      halls would be packed with people and I was weaving in and out of a stream of attendees trying to get to the next room. I would
+      have literally needed a volunteer in each room pressing buttons as sessions rotate.&lt;/p&gt;
+      
+      &lt;p&gt;The next section will go over all the challenges I faced, but the main point I want to make here is that it's pretty incredible
+      to power one of the largest developer conferences in the South East with a $45 piece of hardware and a little bit of open source.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Challenges&lt;/h2&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;As I just mentioned, the physical aspect of pushing a button to switch video streams limited how many sponsored questions
+      were actually seen and voted on. The only way around this would be to create a video switcher that would automatically detect the video
+      current from the speaker and override the secondary Onslyde RPi signal. This is definitely doable and if something doesn't exist that already
+      handles this case, then I'm assuming it wouldn't be hard to break out the soldering iron and rig something together.&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;&lt;p&gt;The Raspberry Pi's boot to a stripped down Debian based operating system that goes straight into full screen Chromium. The browser then
+      loads a unique onslyde address with the RPis network interface (wlan0) mac address as a query parameter. This was the most generic
+      way of identifying the device from my server and keeping track of its location. So, this obviously requires internet access but the conference
+      center required authentication before making it out to the internet.
+      Overall the staff at this particular venue were super helpful, so I asked if I could have the 10 mac addresses for the RPis whitelisted. This
+      would allow them to access the internet without authentication. It was totally doable, but they wanted $200 per mac address to do it! I luckily
+      talked them into doing it for $200 for all 10, but it's crazy to see the hoops that conference organizers have to jump through at the last minute.&lt;/p&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;p&gt;Working with the A/V team wasn't too much of a challenge, but I had to prepare ahead of time for longer VGA cables. They ran
+      extra long VGA cables from the projector and the podium to the back of the room. This allowed easy access to each Onslyde device as I ran
+      in each room switching the projector to the Onslyde screen, and then switching it back 15 minutes later to the presenter.&lt;/p&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;p&gt;One thing that would've been nice is a web UI to handle the scheduling and input of sponsored questions. Since I was trying to prove the
+      idea, there wasn't much of a reason to invest in the development until I knew it worked. But, if sponsors could come to a page, login,
+      and see documentation and videos about the advantages of the product, then it would've prevented any doubt and probably would've secured more
+      interest and questions.&lt;/p&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Conclusion&lt;/h2&gt;
+      
+      &lt;p&gt;Overall, I can honestly say that I learned a ton from this experience. We all have these grand ideas of how something should work and
+       how cool it will be, but until you get out and actually try it, you have no idea.&lt;/p&gt;
+      
+      &lt;p&gt;Below are &lt;a href=&quot;https://www.onslyde.com/#!/analytics?sessionID=555&quot;&gt;the results&lt;/a&gt; from one of the polls that was asked during a morning session:
+      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;
+      You can probably imagine, at this point, what you would do with this data as a sponsor. When each user votes they are required to oauth with their G+
+      account. So we have names and email addresses that can be contacted after the fact.&lt;/p&gt;
+      
+      &lt;p&gt;My plans for the future are to investigate if this is worth continuing and make the bootable Onslyde Debian image freely available.
+      Feel free to &lt;a href=&quot;https://docs.google.com/document/d/1STZ6gzOBLPnUypwHtFGZQY9ME7lYK__DpoQcKFzeLV0/edit#heading=h.hnil29ggb4vc&quot;&gt;review my notes&lt;/a&gt; on the exact hardware I used and how I setup
+      the devices to boot into full screen Chromium and run Onslyde.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html</id>
     <title>From Startup to Enterprise</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2013-12-17T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html" rel="alternate" type="text/html" />
     <category term="design"></category>
@@ -29,7 +191,10 @@
       The Mobile Analytics product is something I...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
       
       &lt;p&gt;At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee.
       For the past year I've been heads down on merging Apigee's Usergrid and Mobile Analytics products using AngularJS.&lt;/p&gt;
@@ -42,7 +207,10 @@
       
       &lt;p&gt;This is a retrospective - carrying an idea from startup to enterprise product.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h2&gt;Let's start with the design&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Let's start with the design&lt;/h2&gt;
       
       &lt;p&gt;We started brainstorming for the new UI on February 1st. Originally we set out to only deliver a new analytics dashboard, but were soon asked to merge
       the existing UserGrid project into the fold.&lt;/p&gt;
@@ -53,7 +221,10 @@
       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-b-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-b.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-c-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-c.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
-      &lt;br class=&quot;clear-left&quot;&gt;&lt;p&gt;The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
+      &lt;br class=&quot;clear-left&quot;&gt;
+      
+      
+      &lt;p&gt;The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
       reformatting the data to appear more readable.&lt;/p&gt;
       
       &lt;p&gt;After the team was in agreement on how the pages should be structured, we then went into the finer design details. It's kind of weird (and welcomed) being the designer
@@ -78,7 +249,10 @@
       
       &lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h2&gt;The Code&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;The Code&lt;/h2&gt;
       
       &lt;p&gt;By mid-April, we had most of the feedback implemented into the wireframes and were ready to move forward with development. During
       this month and in between feedback rounds, I was evaluating both Ember and AngularJS. I'm not going to turn this into
@@ -92,7 +266,10 @@
       session on directives. Sure, there's a bit of a learning curve, but the concept is well received by most front-end devs.&lt;/li&gt;
       &lt;li&gt;Productivity - I liked being productive. This post is a testament to being productive, seeing that two developers could stand up an entire analytics and BaaS dashboard within 6 months.&lt;/li&gt;
       &lt;li&gt;Architecture - Angular sets forth the idea of a loosely coupled architecture for building large apps. The mechanisms for dependency injection and scope management were attractive to me.&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;On May 1st I had the markup and a beginning on the Angular architecture all pushed to github. From May into the late summer months we were
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;On May 1st I had the markup and a beginning on the Angular architecture all pushed to github. From May into the late summer months we were
       busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
       one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
       
@@ -122,13 +299,16 @@
       
       &lt;p&gt;You can try the dashboard out for yourself &lt;a href=&quot;https://apigee.com/usergrid&quot;&gt;here&lt;/a&gt;. Lemme know what you think!&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
     <title>Jank Busting Apple's Home Page</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2013-10-26T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
     <category term="jank"></category>
@@ -149,7 +329,10 @@
       Apple products. You can see this in...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
       
       &lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&quot;http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&quot;&gt;this article&lt;/a&gt; the other day which examines the
       performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
@@ -165,7 +348,8 @@
       &lt;p&gt;Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
        handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka &lt;a href=&quot;http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/&quot;&gt;null transform hack&lt;/a&gt;).
        The problem with Apple's site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
-       &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/composite.PNG&quot; alt=&quot;layer composite time&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;br&gt;
+       &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/composite.PNG&quot; alt=&quot;layer composite time&quot; class=&quot;margin10 max-width-100&quot;&gt;
+       &lt;br&gt;
        I wrote about this &lt;a href=&quot;http://www.html5rocks.com/en/mobile/optimization-and-performance/&quot;&gt;a while ago&lt;/a&gt;, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
        applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.&lt;/p&gt;
       
@@ -185,15 +369,19 @@
       
       &lt;p&gt; The animation on Apple.com isn't terrible as it stands in its current state, but as I stated at the beginning of this article, it's fun to fix jank :)&lt;/p&gt;
       
-      &lt;p&gt; &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+      &lt;p&gt; &lt;br&gt;
+       &lt;br&gt;&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
@@ -227,7 +415,10 @@
       I...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
       
       &lt;p&gt;Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using &lt;a href=&quot;http://jsfiddle.net/IgorMinar/ZSBhg/2/&quot;&gt;setInterval&lt;/a&gt; and
       Angular's builtin &lt;a href=&quot;http://jsfiddle.net/ganarajpr/LQGE2/&quot;&gt;$timeout&lt;/a&gt;.&lt;/p&gt;
@@ -256,7 +447,13 @@
       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
       We maintain around 25MB and then shoot up to 34 when the page does its refresh.&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;&lt;h2&gt;rAF to the rescue!&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;rAF to the rescue!&lt;/h2&gt;
       
       &lt;p&gt;I'm still trying to bring requestAnimationFrame into my dev thought process, and this was a fine chance to see if it could save the day.
       Here's the code I put together:&lt;/p&gt;
@@ -275,13 +472,16 @@
       framework lifecycle. I need to get a baseline on the AngularJS runtime before I can make any assumptions (or point fingers).
       This is my first perf analysis of the framework and I plan on doing much more in the coming months.&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
@@ -319,7 +519,10 @@
       Most preprocessor tools do have some kind of built in function for this workflow, but when...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
       
       &lt;p&gt;If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.&lt;/p&gt;
       
@@ -331,13 +534,19 @@
       &lt;li&gt;copy static site to your local gh-pages or username.github.com repo/branch&lt;/li&gt;
       &lt;li&gt;git push new site&lt;/li&gt;
       &lt;li&gt;done&lt;/li&gt;
-      &lt;/ol&gt;&lt;p&gt;Now, with a little scripting we can have:&lt;/p&gt;
+      &lt;/ol&gt;
+      
+      
+      &lt;p&gt;Now, with a little scripting we can have:&lt;/p&gt;
       
       &lt;ol&gt;
       &lt;li&gt;code your site using asciidoc/markdown/haml/sass/less/etc&lt;/li&gt;
       &lt;li&gt;git push to source repo&lt;/li&gt;
       &lt;li&gt;done (with so many other cool features at our fingertips)&lt;/li&gt;
-      &lt;/ol&gt;&lt;p&gt;Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.&lt;/p&gt;
+      &lt;/ol&gt;
+      
+      
+      &lt;p&gt;Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.&lt;/p&gt;
       
       &lt;p&gt;With our new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation greatness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
       to test how each new commit loads (over time) in a web browser - giving us a baseline for site performance.&lt;/p&gt;
@@ -345,42 +554,74 @@
       &lt;p&gt;This post is going to review the basics of setting up your github OAuth token, encryption with travis, and finally pushing your website to github pages with an automated travisci build.
       We'll top it all off with running &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; after each check in to understand how a single commit can affect site performance. So let's go...&lt;/p&gt;
       
-      &lt;br&gt;&lt;h2&gt;Github hosting setup&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Github hosting setup&lt;/h2&gt;
       
       &lt;p&gt;If you're unfamiliar with github pages or how to host your own top-level domain (yourdomain.com) under your github account, then read &lt;a href=&quot;https://help.github.com/articles/what-are-github-pages&quot;&gt;this&lt;/a&gt;, &lt;a href=&quot;https://help.github.com/articles/creating-project-pages-manually&quot;&gt;then this&lt;/a&gt; first.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h2&gt;Github, Travis, and OAuth&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Github, Travis, and OAuth&lt;/h2&gt;
       
       &lt;p&gt;First off, you must login to &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt; with your github username and enable the travis service hook on the repository you wish to automate.
       For me, this is where my haml/sass/etc... source is located.
       &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/travisci1.png&quot; alt=&quot;travis&quot; class=&quot;margin10&quot;&gt;
       Next, we'll create an OAuth token for your repository access :&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274538.js&quot;&gt;&lt;/script&gt;&lt;p&gt;Pluck the &lt;b&gt;&quot;token&quot;:&lt;/b&gt; string value from the generated json and encrypt it. Pro tip: this token is basically the same thing as your password. So don't push it out to a public repository.&lt;/p&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274538.js&quot;&gt;&lt;/script&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274559.js&quot;&gt;&lt;/script&gt;&lt;p&gt;To encrypt, we must install the travis gem and encrypt the token string from above with:&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274580.js&quot;&gt;&lt;/script&gt;&lt;p&gt;..this will create a string in your console and we'll paste it below, so keep it close by...&lt;/p&gt;
+      &lt;p&gt;Pluck the &lt;b&gt;&quot;token&quot;:&lt;/b&gt; string value from the generated json and encrypt it. Pro tip: this token is basically the same thing as your password. So don't push it out to a public repository.&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274559.js&quot;&gt;&lt;/script&gt;
+      
+      
+      &lt;p&gt;To encrypt, we must install the travis gem and encrypt the token string from above with:&lt;/p&gt;
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274580.js&quot;&gt;&lt;/script&gt;
+      
+      
+      &lt;p&gt;..this will create a string in your console and we'll paste it below, so keep it close by...&lt;/p&gt;
       
       &lt;p&gt;Now, we can create the gh-pages branch for this repository &lt;a href=&quot;https://help.github.com/articles/creating-project-pages-manually&quot;&gt;following these instructions&lt;/a&gt;. This gh-pages branch can host your generated site or artifacts. Since I have a TLD mapped to my wesleyhales.github.com
       repository, I'm using the gh-pages branch under my source account for load testing reports. For my blog, I'm mapping a domain name over by simply forwarding a TLD like wesleyhales.com, with an A record pointing to 204.232.175.78.
       Then I added a &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.github.com/blob/master/CNAME&quot;&gt;CNAME file&lt;/a&gt; to the repo so github DNS knows where to forward to.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h2&gt;The Build Config&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;The Build Config&lt;/h2&gt;
       
       &lt;p&gt;Finally, we're ready to update our .travis.yml.&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274500.js&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;a href=&quot;http://awestruct.org/getting_started/&quot;&gt;Awestruct&lt;/a&gt; is a ruby based preprocessor, so this project is setup with the travis ruby config (above).&lt;/p&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274500.js&quot;&gt;&lt;/script&gt;
+      
+      
+      &lt;p&gt;&lt;a href=&quot;http://awestruct.org/getting_started/&quot;&gt;Awestruct&lt;/a&gt; is a ruby based preprocessor, so this project is setup with the travis ruby config (above).&lt;/p&gt;
       
       &lt;p&gt;Note the &lt;b&gt;before_script&lt;/b&gt; and &lt;b&gt;script&lt;/b&gt; configs:&lt;/p&gt;
       
       &lt;p&gt;&lt;b&gt;before_script&lt;/b&gt; runs the awestruct build and then the post_build.sh script. post_build.sh pushes our newly generated public facing website to github pages. This is where github kindly serves up our static content at username.github.com (for free).&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274512.js&quot;&gt;&lt;/script&gt;&lt;p&gt;And finally, &lt;b&gt;script&lt;/b&gt; will run gh-pages-report.sh. This allows us to run &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; and send the generated report to our source gh-pages branch.
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274512.js&quot;&gt;&lt;/script&gt;
+      
+      
+      &lt;p&gt;And finally, &lt;b&gt;script&lt;/b&gt; will run gh-pages-report.sh. This allows us to run &lt;a href=&quot;http://loadreport.wesleyhales.com&quot;&gt;loadreport.js&lt;/a&gt; and send the generated report to our source gh-pages branch.
       Travis CI provides an instance of phantomjs during our build, so all we have to do is call it. This is basically a build report (or artifact from the build). It measures how long
       it takes our site to load after each commit is made. This gives us a baseline for measuring performance.&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274517.js&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;h2&gt;The Results&lt;/h2&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5274517.js&quot;&gt;&lt;/script&gt;
+      
+      
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;The Results&lt;/h2&gt;
       
       &lt;p&gt;The source for this blog you are reading is stored on github &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.com&quot;&gt;here&lt;/a&gt;. When I do
       a git push, everything is automatically built with travis and pushed again to the &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.github.com&quot;&gt;github repo&lt;/a&gt; that is specially named to handle the
@@ -395,13 +636,14 @@
       &lt;p&gt; From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
        documentation along with other reports and assets. I'd eventually like to write a script to do a diff on only test the pages that were changed on the commit.&lt;/p&gt;
       
-      &lt;p&gt; &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+      &lt;p&gt; &lt;br&gt;
+       &lt;br&gt;&lt;/p&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -420,7 +662,10 @@
       this tool which I named "onslyde". The following video is a talk I gave...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h2&gt;Overview&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
       
       &lt;p&gt;Exactly one year ago, I started working on a WebSocket prototype that would give audiences the power to control
       my talks. I &lt;a href=&quot;http://wesleyhales.com/images/posts/2012-11-01/c70jx.jpg&quot;&gt;used it for the first time&lt;/a&gt; at DevNexus 2012 in Atlanta, GA and it produced great engagement results. At that time,
@@ -434,7 +679,10 @@
       &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/n-7Xu75T2bU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
       
       
-      &lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;em&gt;Points in the talk where the audience voted:&lt;/em&gt;&lt;/p&gt;
+      &lt;br&gt;&lt;br&gt;
+      
+      
+      &lt;p&gt;&lt;em&gt;Points in the talk where the audience voted:&lt;/em&gt;&lt;/p&gt;
       
       &lt;p&gt;&lt;/p&gt;&lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=101s&quot;&gt;Vote 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=583s&quot;&gt;Vote 2&lt;/a&gt;&lt;/li&gt;
@@ -454,7 +702,16 @@
       talk to the &quot;collective wisdom&quot; of the audience. So, the presenter has the ability of forking their slides and providing 2 tracks of
       content based on the audience vote. The poll and tracks are setup declaratively as follows:&lt;/p&gt;
       
-      &lt;br&gt;&lt;br style=&quot;clear:left&quot;&gt;&lt;script src=&quot;https://gist.github.com/wesleyhales/5014482.js&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;ul&gt;
+      &lt;br&gt;&lt;br style=&quot;clear:left&quot;&gt;
+      
+      
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/5014482.js&quot;&gt;&lt;/script&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;ul&gt;
       &lt;li&gt;
       &lt;em&gt;data-option=&quot;master&quot;&lt;/em&gt; : denotes a master slide where the bar graph will be displayed&lt;/li&gt;
       &lt;li&gt;
@@ -464,7 +721,10 @@
       in order if &quot;Red&quot; wins the audience vote.&lt;/li&gt;
       &lt;li&gt;
       &lt;em&gt;class=&quot;send&quot;&lt;/em&gt; : specifies that we want to send this content to each connected remote&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;So, the above markup sets up the following slide deck and remote control options:
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;So, the above markup sets up the following slide deck and remote control options:
       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;After all the votes are placed, the winning track is chosen based on the majority vote:
@@ -477,12 +737,18 @@
       with JavaScript. The deck can work without an internet connection as a fallback, or you could run the server on your laptop and bring
       a router/hotspot for the audience to connect to.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h2&gt;Analytics&lt;/h2&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Analytics&lt;/h2&gt;
       
       &lt;p&gt;Mid last year, I started capturing audience data into a database. I also added Google analytics (with custom events) to the remotes so I could get a
       good understaning on audience devices and usage. The following data is from the video above.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h3&gt;From MySQL&lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;From MySQL&lt;/h3&gt;
       
       &lt;p&gt;Here, we're capturing votes on the options and how many times the &quot;Nice&quot; and &quot;WTF&quot; buttons were pressed during this track. One thing that
       Google Analytics does not give us are timestamps, or when events occured at a fine grained level. By capturing the time when each &quot;Nice&quot;
@@ -528,7 +794,10 @@
        a huge advantage by allowing for impulse buys and fine grained sales throughout my talk. Basically, content would be spoon fed and the
        chance of missed opportunities would be slim.&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;&lt;h2&gt;Open Source&lt;/h2&gt;
+      &lt;br&gt;&lt;br&gt;
+      
+      
+      &lt;h2&gt;Open Source&lt;/h2&gt;
       
       &lt;p&gt;This presentation tool is open source. If you'd like to signup for the beta and give it a spin, I would greatly appreciate your feedback.
       This blog post is serving as the documentation for the project until I get some time to improve.&lt;/p&gt;
@@ -540,17 +809,23 @@
       &lt;li&gt;Go to line 317 in the HTML file you just saved and replace the current sessionID value (103) with the one from your signup.&lt;/li&gt;
       &lt;li&gt;You now have a private session for your presentation.&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://github.com/wesleyhales/onslyde&quot;&gt;Come help out with the project&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;If you run into bugs, report them &lt;a href=&quot;https://github.com/wesleyhales/onslyde/issues&quot;&gt;here&lt;/a&gt; please.&lt;/p&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;If you run into bugs, report them &lt;a href=&quot;https://github.com/wesleyhales/onslyde/issues&quot;&gt;here&lt;/a&gt; please.&lt;/p&gt;
       
       &lt;p&gt;Thanks!!&lt;/p&gt;
       
-      &lt;br style=&quot;clear:left&quot;&gt;&lt;br&gt;&lt;br&gt;
+      &lt;br style=&quot;clear:left&quot;&gt;
+      
+      
+      &lt;br&gt;&lt;br&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -570,7 +845,10 @@
       If you haven’t watched this video, I recommend you take a few minutes and watch the first part to understand the context of why the Skia debugger was mentioned and where it might be useful. For the impatient, there was a...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h3&gt;Debugging jank, reflows, etc...&lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Debugging jank, reflows, etc...&lt;/h3&gt;
       
       
       &lt;p&gt;The &lt;a href=&quot;https://sites.google.com/site/skiadocs/developer-documentation/skia-debugger&quot;&gt;Skia debugger&lt;/a&gt; was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.&lt;/p&gt;
@@ -585,14 +863,25 @@
       &lt;p&gt;Although the Skia debugger doesn't give us a nice video with animations (like shown above), it does give some really good info on how graphics are drawn into the browser.
       This &lt;a href=&quot;http://blog.mozilla.org/gen/2009/04/09/how-to-make-your-own-gecko-reflow-video/&quot;&gt;blog post&lt;/a&gt; explains how the above video was created with FF 3.1, but I’m not sure if anyone has attempted it with the latest Firefox build... and there is no visual debugger afaik. I did hear one of the panel members mention a Firefox “jank mode” but a short Google search turned up little results that don’t work on the latest version.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h3&gt;Building the debugger from source&lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Building the debugger from source&lt;/h3&gt;
       
       
       &lt;p&gt;I will state upfront that there was a lot of pain that went into building both the debugger and chromium from source, but as you will see, it was worth it.&lt;/p&gt;
       
       &lt;p&gt;Here are my build notes for OSX 10.7.5:&lt;/p&gt;
       
-      &lt;script src=&quot;https://gist.github.com/wesleyhales/4980385.js&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;h3&gt;Using the Debugger&lt;/h3&gt;
+      &lt;script src=&quot;https://gist.github.com/wesleyhales/4980385.js&quot;&gt;&lt;/script&gt;
+      
+      
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Using the Debugger&lt;/h3&gt;
       
       
       &lt;p&gt;The debugger is fairly straightforward to use once a picture is loaded in. You can step through different commands via the up and down keys and clicking on the command in the list. You can also pause execution of commands with the pause button in order to inspect the details of the command in the inspector tabs down below.
@@ -609,7 +898,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -792,7 +1081,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -833,7 +1122,10 @@
       &lt;li&gt;image filmstrip (how the page looks over load time)&lt;/li&gt;
       &lt;li&gt;page and resource load times after the user has a primed cache.&lt;/li&gt;
       &lt;li&gt;pretty effin cool charts with sparklines fed by knockout.js&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;This script is running live at &lt;a href=&quot;http://loadreport.wesleyhales.com/report.html&quot;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;This script is running live at &lt;a href=&quot;http://loadreport.wesleyhales.com/report.html&quot;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
       &lt;img src=&quot;http://www.wesleyhales.com/images/loadreport.js.png&quot; alt=&quot;loadreport.js&quot; align=&quot;left&quot; class=&quot;max-width-100&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;We're running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&quot;http://twitter.com/ryanbridges&quot;&gt;@ryanbridges&lt;/a&gt; put together
@@ -851,13 +1143,16 @@
       
       &lt;p&gt;&lt;a href=&quot;http://twitter.com/wesleyhales&quot;&gt;@wesleyhales&lt;/a&gt;&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -868,9 +1163,13 @@
     <content type="html">
       &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/icons/atlhtml5.jpg&quot; alt=&quot;atlanta html5&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&quot;http://twitter.com/atlhtml5&quot;&gt;@atlhtml5&lt;/a&gt; user group has reached it's 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don't fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.&lt;/p&gt;
       
-      &lt;br&gt;&lt;div style=&quot;width:540px;margin: 0 auto&quot;&gt;
+      &lt;br&gt;
+      
+      
+      &lt;div style=&quot;width:540px;margin: 0 auto&quot;&gt;
       &lt;a href=&quot;http://www.indeed.com/jobtrends&quot; title=&quot;HTML5 Job Trends&quot;&gt;
-      &lt;img width=&quot;540&quot; height=&quot;300&quot; src=&quot;http://www.indeed.com/trendgraph/jobgraph.png?q=HTML5&quot; border=&quot;0&quot; alt=&quot;HTML5 Job Trends graph&quot;&gt;&lt;/a&gt;
+      &lt;img width=&quot;540&quot; height=&quot;300&quot; src=&quot;http://www.indeed.com/trendgraph/jobgraph.png?q=HTML5&quot; border=&quot;0&quot; alt=&quot;HTML5 Job Trends graph&quot;&gt;
+      &lt;/a&gt;
       &lt;table width=&quot;100%&quot; cellpadding=&quot;6&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:80%&quot;&gt;&lt;tr&gt;
       &lt;td&gt;&lt;a href=&quot;http://www.indeed.com/jobtrends&quot;&gt;HTML5 Job Trends&lt;/a&gt;&lt;/td&gt;
       &lt;td align=&quot;right&quot;&gt;&lt;a href=&quot;http://www.indeed.com/jobs?q=Html5&quot;&gt;Html5 jobs&lt;/a&gt;&lt;/td&gt;
@@ -886,13 +1185,16 @@
       
       &lt;p&gt;&lt;a href=&quot;http://twitter.com/wesleyhales&quot;&gt;@wesleyhales&lt;/a&gt;&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -915,7 +1217,10 @@
       I recently took a job working on CNN.com and I'm...
     </summary>
     <content type="html">
-      &lt;br&gt;&lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
       
       
       &lt;p&gt;If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
@@ -927,7 +1232,10 @@
       &lt;p&gt;I recently took a job working on &lt;a href=&quot;http://cnn.com&quot;&gt;CNN.com&lt;/a&gt; and I'm sure you can imagine that the weight and performance of social sharing is pretty serious 'round these parts.
       So I will break down the current state of sharing as it exists today, then jump into an examination of Web Intents.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h3&gt;Why do we need Web Intents? &lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Why do we need Web Intents? &lt;/h3&gt;
       
       
       &lt;p&gt;In today's world of sharing we have limited options.
@@ -943,7 +1251,10 @@
       &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/google/&quot;&gt;Google+&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/fb/&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/linkedin/&quot;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;First, I wanted a true measurement on all the resources and page load times without anything in the cache.
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;First, I wanted a true measurement on all the resources and page load times without anything in the cache.
       So I cleared the browser cache and loaded a single test page (from the list above) for each share service provider. Here are the results:&lt;/p&gt;
       
       &lt;div id=&quot;container&quot; class=&quot;max-width-100&quot;&gt;&lt;/div&gt;
@@ -984,7 +1295,10 @@
       those resources are doing and they come at a high cost. Aside from the issues of resource weight, back doors, and inefficient architecture of sharing services, there are many other issues
        with the current ways we handle the sharing of data.&lt;/p&gt;
       
-      &lt;br&gt;&lt;h3&gt;Alternatives&lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Alternatives&lt;/h3&gt;
       
       
       &lt;p&gt;The best alternative that works across browsers today is a simple share URL. Throw in some kick ass, responsive &lt;a href=&quot;http://gregoryloucas.github.com/Font-Awesome-More/#all-icons&quot;&gt;font icons&lt;/a&gt;
@@ -996,7 +1310,10 @@
       news sites and blogs.&lt;/li&gt;
       &lt;li&gt;We don't have any way of receiving a callback on whether the post/share was successful or not. The only way to get this data is through async analytics
       by emedding a unique identifier in the URL. Then hope the referrer surfaces in next months usage reports.&lt;/li&gt;
-      &lt;/ol&gt;&lt;p&gt;Here are the corresponding share URLs from the providers analyzed above.&lt;/p&gt;
+      &lt;/ol&gt;
+      
+      
+      &lt;p&gt;Here are the corresponding share URLs from the providers analyzed above.&lt;/p&gt;
       
       &lt;ul&gt;
       &lt;li&gt;
@@ -1008,7 +1325,13 @@
       &lt;a href=&quot;https://dev.twitter.com/docs/intents&quot;&gt;Facebook:&lt;/a&gt; http://www.facebook.com/sharer.php?u={url to share}&amp;amp;t={title of content}&lt;/li&gt;
       &lt;li&gt;
       &lt;a href=&quot;https://dev.twitter.com/docs/intents&quot;&gt;Google+:&lt;/a&gt; https://plus.google.com/share?url={articleURL}&lt;/li&gt;
-      &lt;/ul&gt;&lt;br&gt;&lt;h3&gt;Web Intents&lt;/h3&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Web Intents&lt;/h3&gt;
       
       
       &lt;p&gt;If you're still struggling to wrap your head around Web Intents, you're not alone. I had to sit down and run through the latest &lt;a href=&quot;http://intentlab-io12.appspot.com/&quot;&gt;Google IO 2012 code exercises&lt;/a&gt;, &lt;a href=&quot;http://www.youtube.com/watch?v=O1YjdKh-rPg&amp;amp;feature=player_embedded#!&quot;&gt;videos&lt;/a&gt;, and &lt;a href=&quot;http://www.smartjava.org/content/html5-web-intents-share-information-between-web-apps&quot;&gt;articles&lt;/a&gt; on Web Intents to really see how it is currently implemented and what it takes to make it work. As of this writing, the only
@@ -1084,7 +1407,13 @@
       &lt;p&gt;For a full example on how to create a Web Intent Chrome extension, run through the examples in &lt;a href=&quot;http://intentlab-io12.appspot.com/&quot;&gt;this Google IO lab at #IO12&lt;/a&gt;.
       Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/intent/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;&lt;h3&gt;Other references and good reads:&lt;/h3&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;Other references and good reads:&lt;/h3&gt;
       
       
       &lt;p&gt;&lt;a href=&quot;http://benlog.com/articles/2012/02/09/a-simpler-webbier-approach-to-web-intents-or-activities/&quot;&gt;Web Activities&lt;/a&gt;&lt;/p&gt;
@@ -1097,13 +1426,28 @@
       
       &lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=O1YjdKh-rPg&amp;amp;feature=player_embedded#!&quot;&gt;Intro video from Google IO 2012&lt;/a&gt;&lt;/p&gt;
       
-      &lt;br&gt;&lt;br&gt;&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot; type=&quot;text/javascript&quot; defer&gt;&lt;/script&gt;&lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot; defer&gt;&lt;/script&gt;&lt;script src=&quot;http://code.highcharts.com/modules/exporting.js&quot; defer&gt;&lt;/script&gt;&lt;script src=&quot;/js/sharing-web-intents-charts.js&quot; defer&gt;&lt;/script&gt;
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot; type=&quot;text/javascript&quot; defer&gt;&lt;/script&gt;
+      
+      
+      &lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot; defer&gt;&lt;/script&gt;
+      
+      
+      &lt;script src=&quot;http://code.highcharts.com/modules/exporting.js&quot; defer&gt;&lt;/script&gt;
+      
+      
+      &lt;script src=&quot;/js/sharing-web-intents-charts.js&quot; defer&gt;&lt;/script&gt;
     </content>
   </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -1158,7 +1502,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
@@ -1190,7 +1534,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html</id>
     <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
+    <updated>2014-02-13T13:28:10-08:00</updated>
     <published>2012-02-08T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss.html" rel="alternate" type="text/html" />
     <category term="html5e"></category>
@@ -1213,13 +1557,17 @@
       &lt;p&gt;
       The &lt;a href=&quot;http://www.jboss.org/aerogear&quot;&gt;AeroGear project&lt;/a&gt; had it's official launch last week and I want to review what we're doing and where we're headed. For starters, AeroGear is focused on:
         &lt;/p&gt;&lt;ul&gt;
-      &lt;li&gt;
+          &lt;li&gt;
       &lt;a href=&quot;https://community.jboss.org/wiki/AeroGearServerSideResources&quot;&gt;Education&lt;/a&gt; - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.&lt;/li&gt;
           &lt;li&gt;
       &lt;a href=&quot;https://community.jboss.org/wiki/AeroGearHTML5ExtensionConcepts&quot;&gt;Innovation&lt;/a&gt; - Many of AeroGear's primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.&lt;/li&gt;
           &lt;li&gt;
       &lt;a href=&quot;https://community.jboss.org/wiki/ContributingToAeroGear&quot;&gt;Community&lt;/a&gt; - We already have several community members contributing examples, demos, and other useful resources. We want to hear from &lt;a href=&quot;https://community.jboss.org/en/aerogear?view=discussions&quot;&gt;you&lt;/a&gt;! We're here for the community.'&lt;/li&gt;
-        &lt;/ul&gt;&lt;p&gt;
+        &lt;/ul&gt;
+      
+      
+      
+      &lt;p&gt;
         Most front-end developers are familiar with &quot;jQuery callbacks and RESTful services&quot;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&quot;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&quot;&gt;&quot;POH5&quot; (Plain Old HTML5)&lt;/a&gt;
       &lt;/p&gt;
       
@@ -1238,115 +1586,6 @@
       
       &lt;p&gt;
       &lt;a href=&quot;https://community.jboss.org/en/aerogear?view=documents&quot;&gt;Join Us&lt;/a&gt;! or come hang out on &lt;a href=&quot;irc://irc.freenode.net/aerogear&quot;&gt;freenode #aerogear&lt;/a&gt;.
-      &lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html</id>
-    <title>Pushing CDI Events to the Browser with WebSockets</title>
-    <updated>2014-02-14T00:36:09+00:00</updated>
-    <published>2012-01-20T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/01/20/Sending-CDI-events-to-the-browser-with-websockets.html" rel="alternate" type="text/html" />
-    <category term="html5"></category>
-    <category term="websocket"></category>
-    <category term="jboss"></category>
-    <category term="jetty"></category>
-    <category term="cdi"></category>
-    <summary>
-      
-      
-      
-      Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers here.
-      
-      
-      
-      
-        
-        
-      
-      
-      
-      
-      
-      
-      
-      
-      Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.
-      
-      
-      
-      With WebSockets, we have a new development model for server side applications; event based programming. There are...
-    </summary>
-    <content type="html">
-      
-      
-      &lt;div class=&quot;notes&quot;&gt;
-      Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&quot;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&quot;&gt;here&lt;/a&gt;.
-      &lt;/div&gt;
-      
-      
-      &lt;div class=&quot;download&quot;&gt;
-        &lt;a href=&quot;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&quot; title=&quot;Fork me on github&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/icons/github-icon.jpg&quot; width=&quot;48&quot; height=&quot;48&quot; alt=&quot;Github Icon&quot;&gt;&lt;/a&gt;
-        &lt;a href=&quot;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&quot; title=&quot;download the .war&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/icons/download.png&quot; width=&quot;48&quot; height=&quot;48&quot; alt=&quot;Download&quot;&gt;&lt;/a&gt;
-      &lt;/div&gt;
-      
-      
-      &lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-      
-      
-      &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-      
-      &lt;p&gt;&lt;/p&gt;&lt;p&gt;Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.&lt;/p&gt;
-      &lt;iframe src=&quot;http://player.vimeo.com/video/35433707?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;400&quot; height=&quot;300&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-      
-      &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;
-      With WebSockets, we have a new development model for server side applications; event based programming. There are 3 out-of-box events associated with WebSockets: onopen, onmessage, and onclose. For starters, we must wire up these three listeners to utilize the core functionality that the WebSocket specification gives us. The open event is fired when the WebSocket connection is opened successfully. The message event is fired when the server sends data. The close event is fired when the WebSocket connection is closed.
-      &lt;/p&gt;
-      
-      &lt;p&gt;&lt;script src=&quot;https://gist.github.com/1651079.js?file=websocketBasic.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-      
-      &lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      But sending messages in the form of strings over raw WebSockets isn't very appealing when we're wanting to develop advanced web applications. Obviously, we're going to be using JSON to transfer data to and from the server. But how do we propagate our CDI events which are fired on the server and have them bubble up on the client?
-      &lt;/p&gt;
-      &lt;p&gt;
-      First, we'll start with the server. I'm using the &lt;a href=&quot;http://www.jboss.org/jbossas/downloads/&quot;&gt;JBoss AS7 application server&lt;/a&gt; and embedding &lt;a href=&quot;http://eclipse.org/jetty/&quot;&gt;Jetty&lt;/a&gt; within my web application. Thanks to &lt;a href=&quot;http://angelozerr.wordpress.com/2011/07/26/websockets_jetty_step4/&quot;&gt;this article&lt;/a&gt;, I was able to easily add the latest Jetty server to my maven project (dependencies below) to get everything up and running in a few minutes.
-      &lt;/p&gt;
-      &lt;p&gt;
-      A few things worth noting:
-      &lt;/p&gt;
-      &lt;ul&gt;
-      &lt;li&gt;Security: Since our WebSocket server is running on a different port (8081) than our AS7 server (8080), we must account for not having the ability to share cookies, etc...&lt;/li&gt;
-      &lt;li&gt;Proxies: As if proxy servers weren't already a huge problem for running WebSockets and HTTP over the same port, we are now running the separately (but I have a semi-solution for this below)&lt;/li&gt;
-      &lt;li&gt;Threading: Since we're observing/listening for CDI events, we must perform some thread same operations and connection sharing.&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;
-      So, if you're still reading ;) let's get on with the code.
-      &lt;/p&gt;
-      &lt;p&gt;
-      Download the latest &lt;a href=&quot;http://www.jboss.org/jbossas/downloads/&quot;&gt;JBoss AS7 (7.1.0.CR1b as of this writing)&lt;/a&gt;
-      &lt;/p&gt;
-      &lt;p&gt;
-      Add the Jetty maven dependencies to your project. This demo is based off of the &lt;a href=&quot;https://github.com/jbossas/quickstart/tree/master/html5-mobile&quot;&gt;original html5-mobile quickstart for JBoss AS7&lt;/a&gt;.
-      &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=pom.xml&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      Next we setup the WebSocket server using Jetty's WebSocketHandler and embedding it inside a ServletContextListener.
-      Here we're sharing a synchronized set of WebSocket connections across threads. Using the synchronized keyword, we ensure that only a single thread can execute a method or block at one time. The ChatWebSocketHandler contains a global Set of webSocket connections and adds each new connection as it's made within the Jetty server
-      &lt;a href=&quot;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/tree/master/src/main/java/org/jboss/as/quickstarts/html5_mobile/websockets&quot;&gt;View complete source here.&lt;/a&gt;
-      &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=ChatWebSocketHandler.java&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://gist.github.com/1651079.js?file=ChatServerServletContextListener.java&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      Now we'll create a method to observe CDI events and send the fired &quot;Member&quot; events to all active connections.
-      &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=ChatWebSocketHandler-observer.java&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      The above code will observe the following event when a new Member is registered through the web interface.
-      &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=MemberService.java&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      Finally, we setup our WebSocket JavaScript client and safely avoid using the eval() method to execute the received JavaScript.
-      &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=websocketclient.js&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code. (This is the alert popup seen in the video above.)
-      &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=cdiJavascriptListener.js&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;One additional piece I added to this approach is the use of HAProxy. This gives us a reverse-proxy on the WebSocket port (8081), in the end allowing all traffic (HTTP and ws/wss) to be sent across a central port - 8080 in this case. &lt;/p&gt;
-      &lt;script src=&quot;https://gist.github.com/1651079.js?file=haproxy.config&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;
-      As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol. There's probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
       &lt;/p&gt;
     </content>
   </entry>
