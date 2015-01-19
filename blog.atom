@@ -2,13 +2,13 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2015-01-18T16:23:22-08:00</updated>
+  <updated>2015-01-19T06:37:06-08:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
   <entry>
     <id>http://www.wesleyhales.com/blog/2015/01/18/Moving-On-To-Better-Things.html</id>
     <title>Moving On To Better Things</title>
-    <updated>2015-01-18T16:23:22-08:00</updated>
+    <updated>2015-01-19T06:37:06-08:00</updated>
     <published>2015-01-18T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2015/01/18/Moving-On-To-Better-Things.html" rel="alternate" type="text/html" />
     <category term="shapesecurity"></category>
@@ -51,15 +51,27 @@
       
       &lt;p&gt;For some people, this might be super easy to do. Maybe you’re young and don’t have any responsibilities. Maybe you’ve moved around your entire life and can deal with uprooting well. Things can be a bit more complex when you have a family and small children. But rest assured, many people out here are doing the same thing and dealing with the same problems.&lt;/p&gt;
       
-      &lt;p&gt;We’re all paying a price to be educated and move to the next level.&lt;/p&gt;
+      &lt;p&gt;This is all coming from a guy who worked remote for 6 years. You can do that too at some startups, but it's a handicap and now I see why. We’re all paying a price to be educated and move to the next level.&lt;/p&gt;
       
       &lt;br&gt;
       
       
+      &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;
+      &lt;p&gt;All our big furniture has been sold, rest of the stuff shipped. We are making our way from ATL to Mtn. View! &lt;a href=&quot;http://t.co/9XMzYUa5pQ&quot;&gt;pic.twitter.com/9XMzYUa5pQ&lt;/a&gt;&lt;/p&gt;— Wesley Hales (@wesleyhales) &lt;a href=&quot;https://twitter.com/wesleyhales/status/432265167175708672&quot;&gt;February 8, 2014&lt;/a&gt;
+      &lt;/blockquote&gt;
+      
+      
+      &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+      
+      
       &lt;h2&gt;You must be willing to work without a title&lt;/h2&gt;
       
-      &lt;p&gt;Speaking of next level… Do you have a “career” level up plan? From an engineering perspective, maybe you want to become a team lead or work your way up the ladder to middle management. At Shape and many other companies like Twitter, Airbnb, and Google, engineering is a &lt;a href=&quot;http://www.kpcb.com/blog/how-to-mix-engineering-and-management-at-a-fast-growing-company&quot;&gt;battlefield of respect&lt;/a&gt;.
-      At Shape, we're all doing cool things and pushing those around us to test their limits - so titles really don’t matter. From individual contributors to VPs to &lt;a href=&quot;https://twitter.com/lpingree/status/555521047127412736&quot;&gt;advisors&lt;/a&gt;, we all code and are in the trenches of open source.&lt;/p&gt;
+      &lt;p&gt;Speaking of next level… Do you have a “career” level up plan? From an engineering perspective, maybe you want to become a team lead or work your way up the ladder to middle management. At Shape and many other companies like Twitter, Airbnb, and Google, engineering is a &lt;a href=&quot;http://www.kpcb.com/blog/how-to-mix-engineering-and-management-at-a-fast-growing-company&quot;&gt;battlefield of respect&lt;/a&gt;.&lt;/p&gt;
+      
+      &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/2Y5EqZLVyUE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+      
+      
+      &lt;p&gt;We're all doing cool things and pushing those around us to test their limits - so titles really don’t matter. From individual contributors to VPs to &lt;a href=&quot;https://twitter.com/lpingree/status/555521047127412736&quot;&gt;advisors&lt;/a&gt;, we all code and are in the trenches of open source.&lt;/p&gt;
       
       &lt;p&gt;Having the day-to-day ability to learn from people you respect, admire, or just those who aspire to be better is a very rare thing.&lt;/p&gt;
       
@@ -68,7 +80,8 @@
       
       &lt;h2&gt;You must be willing to work hard&lt;/h2&gt;
       
-      &lt;p&gt;Shape Security is in a unique scenario because this company really does have the opportunity to go from &lt;a href=&quot;http://www.amazon.com/gp/product/B00J6YBOFQ?btkr=1&quot;&gt;zero to one&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;Shape Security is in a unique scenario because this company really does have the opportunity to go from &lt;a href=&quot;http://www.amazon.com/gp/product/B00J6YBOFQ?btkr=1&quot;&gt;zero to one&lt;/a&gt;.
+      &lt;a href=&quot;http://www.amazon.com/gp/product/B00J6YBOFQ?btkr=1&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/41PZRSHF-NL._BO2,204,203,200_PIsitb-sticker-v3-big,TopRight,0,-55_SX278_SY278_PIkin4,BottomRight,1,22_AA300_SH20_OU01_.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;In the 80s through early 90s, the firewall &quot;product&quot; was just coming into the market and would soon become the centerpiece of network security. With everyone making their first Internet connections, the threat landscape was just developing. Fast forward to 2015, and you have a very similar scenario but instead of packet level detection, we're doing the detection with JavaScript. We now have a network appliance that is capable of rewriting web content on every request.&lt;/p&gt;
       
