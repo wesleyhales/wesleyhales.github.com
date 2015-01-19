@@ -2,13 +2,13 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4242/</id>
   <title>http://localhost:4242</title>
-  <updated>2015-01-18T16:17:42-08:00</updated>
+  <updated>2015-01-18T16:23:22-08:00</updated>
   <link href="http://localhost:4242/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4242/" rel="alternate" type="text/html" />
   <entry>
     <id>http://localhost:4242/blog/2015/01/18/Moving-On-To-Better-Things.html</id>
     <title>Moving On To Better Things</title>
-    <updated>2015-01-18T16:17:42-08:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2015-01-18T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2015/01/18/Moving-On-To-Better-Things.html" rel="alternate" type="text/html" />
     <category term="shapesecurity"></category>
@@ -95,7 +95,7 @@
   <entry>
     <id>http://localhost:4242/blog/2014/02/26/A-More-Better-Conference-Experience.html</id>
     <title>A More Better Conference Experience</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2014-02-26T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2014/02/26/A-More-Better-Conference-Experience.html" rel="alternate" type="text/html" />
     <category term="devnexus"></category>
@@ -257,7 +257,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html</id>
     <title>From Startup to Enterprise</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2013-12-17T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html" rel="alternate" type="text/html" />
     <category term="design"></category>
@@ -395,7 +395,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
     <title>Jank Busting Apple's Home Page</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2013-10-26T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
     <category term="jank"></category>
@@ -468,7 +468,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
@@ -568,7 +568,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
@@ -730,7 +730,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -912,7 +912,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -985,7 +985,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -1168,7 +1168,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -1239,7 +1239,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -1281,7 +1281,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -1534,7 +1534,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -1589,7 +1589,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2014-07-03T08:52:05-07:00</updated>
+    <updated>2015-01-18T16:23:22-08:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
