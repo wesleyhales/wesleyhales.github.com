@@ -1,16 +1,103 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
-  <id>http://www.wesleyhales.com/</id>
-  <title>http://www.wesleyhales.com</title>
-  <updated>2014-08-22T08:23:02-07:00</updated>
-  <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
-  <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
+  <id>http://localhost:4242/</id>
+  <title>http://localhost:4242</title>
+  <updated>2015-01-18T16:17:42-08:00</updated>
+  <link href="http://localhost:4242/blog.atom" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4242/" rel="alternate" type="text/html" />
   <entry>
-    <id>http://www.wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/</id>
+    <id>http://localhost:4242/blog/2015/01/18/Moving-On-To-Better-Things.html</id>
+    <title>Moving On To Better Things</title>
+    <updated>2015-01-18T16:17:42-08:00</updated>
+    <published>2015-01-18T00:00:00+00:00</published>
+    <link href="http://localhost:4242/blog/2015/01/18/Moving-On-To-Better-Things.html" rel="alternate" type="text/html" />
+    <category term="shapesecurity"></category>
+    <category term="career"></category>
+    <summary>
+      
+      
+      
+      Overview
+      
+      I came to work at Shape Security exactly one year ago. I jumped at the opportunity to work with Ariya Hidayat, Michael Coates,
+      Sumit Agarwal, and a ridiculous amount of talented engineers and good people. It has truly been an educational experience to jump into a
+      small, well-funded startup and observe how things work.
+      
+      However, this type of education comes at a cost. This post is more of a personal story about what I've learned as a mid-30 year old
+      engineer moving out to the Valley and putting all my chips on the table for a startup. It's fun, exciting and incredibly challenging.
+      
+      
+      
+      
+      You must...
+    </summary>
+    <content type="html">
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Overview&lt;/h2&gt;
+      
+      &lt;p&gt;I came to work at Shape Security exactly one year ago. I jumped at the opportunity to work with &lt;a href=&quot;http://ariya.ofilabs.com/&quot;&gt;Ariya Hidayat&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/_mwc&quot;&gt;Michael Coates&lt;/a&gt;,
+      &lt;a href=&quot;http://www.kpcb.com/blog/five-easy-steps-to-secure-your-startup-right-now&quot;&gt;Sumit Agarwal&lt;/a&gt;, and a ridiculous amount of &lt;a href=&quot;http://engineering.shapesecurity.com/&quot;&gt;talented engineers&lt;/a&gt; and good people. It has truly been an educational experience to jump into a
+      small, &lt;a href=&quot;https://www.shapesecurity.com/investors/&quot;&gt;well-funded&lt;/a&gt; startup and observe how things work.&lt;/p&gt;
+      
+      &lt;p&gt;However, this type of education comes at a cost. This post is more of a personal story about what I've learned as a mid-30 year old
+      engineer moving out to the Valley and putting all my chips on the table for a startup. It's fun, exciting and incredibly challenging.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;You must uproot your family (or life) and move to the Valley&lt;/h2&gt;
+      
+      &lt;p&gt;For some people, this might be super easy to do. Maybe you’re young and don’t have any responsibilities. Maybe you’ve moved around your entire life and can deal with uprooting well. Things can be a bit more complex when you have a family and small children. But rest assured, many people out here are doing the same thing and dealing with the same problems.&lt;/p&gt;
+      
+      &lt;p&gt;We’re all paying a price to be educated and move to the next level.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;You must be willing to work without a title&lt;/h2&gt;
+      
+      &lt;p&gt;Speaking of next level… Do you have a “career” level up plan? From an engineering perspective, maybe you want to become a team lead or work your way up the ladder to middle management. At Shape and many other companies like Twitter, Airbnb, and Google, engineering is a &lt;a href=&quot;http://www.kpcb.com/blog/how-to-mix-engineering-and-management-at-a-fast-growing-company&quot;&gt;battlefield of respect&lt;/a&gt;.
+      At Shape, we're all doing cool things and pushing those around us to test their limits - so titles really don’t matter. From individual contributors to VPs to &lt;a href=&quot;https://twitter.com/lpingree/status/555521047127412736&quot;&gt;advisors&lt;/a&gt;, we all code and are in the trenches of open source.&lt;/p&gt;
+      
+      &lt;p&gt;Having the day-to-day ability to learn from people you respect, admire, or just those who aspire to be better is a very rare thing.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;You must be willing to work hard&lt;/h2&gt;
+      
+      &lt;p&gt;Shape Security is in a unique scenario because this company really does have the opportunity to go from &lt;a href=&quot;http://www.amazon.com/gp/product/B00J6YBOFQ?btkr=1&quot;&gt;zero to one&lt;/a&gt;.&lt;/p&gt;
+      
+      &lt;p&gt;In the 80s through early 90s, the firewall &quot;product&quot; was just coming into the market and would soon become the centerpiece of network security. With everyone making their first Internet connections, the threat landscape was just developing. Fast forward to 2015, and you have a very similar scenario but instead of packet level detection, we're doing the detection with JavaScript. We now have a network appliance that is capable of rewriting web content on every request.&lt;/p&gt;
+      
+      &lt;p&gt;But there are many problems left to solve and there's a lot more work to do.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;You must be willing to stay the course&lt;/h2&gt;
+      
+      &lt;p&gt;I recently encountered the shiniest object of my career and I turned it down to stay at Shape. You see, if you have a decent side project on &lt;a href=&quot;https://github.com/onslyde&quot;&gt;github&lt;/a&gt;, &lt;a href=&quot;http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/&quot;&gt;align it with the market&lt;/a&gt;, and &lt;a href=&quot;http://www.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&quot;&gt;push it hard&lt;/a&gt; enough, some large company will shower you with riches to come work for them - it's called an acquihire and it happens all the time in Silicon Valley.&lt;/p&gt;
+      
+      &lt;p&gt;Turning down the acquihire was an extremely tough decision. But after I came to the realization that many of the people I work with encounter these types of &quot;shiny objects&quot; much more than I do, it really opened my eyes. At Shape, you're not working with average run of the mill people. Everyone here is at the top of their game. This is not college ball anymore, we are in the majors.
+      I honestly didn't want to quit what I was working on at Shape, and I think it's the first time I've felt that way about a company &amp;lt;3. It's more than a company, it's the people and the idea that will keep me there for the long term.&lt;/p&gt;
+      
+      &lt;p&gt;Are you ready to work at Shape Security? Think you have what it takes? Send me an &lt;a href=&quot;mailto:wesley@shapesecurity.com&quot;&gt;email&lt;/a&gt;.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>http://localhost:4242/blog/2014/02/26/A-More-Better-Conference-Experience.html</id>
     <title>A More Better Conference Experience</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2014-02-26T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2014/02/26/A-More-Better-Conference-Experience.html" rel="alternate" type="text/html" />
     <category term="devnexus"></category>
     <category term="onslyde"></category>
     <category term="raspberry pi"></category>
@@ -52,7 +139,7 @@
       attendees can vote on seeded questions that will allow sponsors to connect to those who are truly interested
       in their product or what they have to say.&lt;/p&gt;
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&quot; class=&quot;margin10 max-width-50 float-right&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2014-02-26/image_3.jpeg&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2014-02-26/image_3.jpeg&quot; class=&quot;margin10 max-width-50 float-right&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;I've already written about &lt;a href=&quot;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&quot;&gt;the disconnect between speakers and attendees&lt;/a&gt;, but what about the disconnect
       between sponsors and attendees? After all, these are the companies that shell out massive amounts of cash, setup up
@@ -98,7 +185,7 @@
       &lt;/ul&gt;
       
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image.jpeg&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image.jpeg&quot; class=&quot;margin10 max-width-50 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2014-02-26/image.jpeg&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2014-02-26/image.jpeg&quot; class=&quot;margin10 max-width-50 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;The last item in the list above is what caused me a lot of trouble. Ultimately the hardware setup was solid and worked
       really well. But physically pushing the button to switch between voting and speakers ready to present was impossible to
@@ -124,7 +211,7 @@
       &lt;/ul&gt;
       
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2014-02-26/image_9.jpeg&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2014-02-26/image_9.jpeg&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;ul&gt;
       &lt;li&gt;&lt;p&gt;The Raspberry Pi's boot to a stripped down Debian based operating system that goes straight into full screen Chromium. The browser then
@@ -153,7 +240,7 @@
        how cool it will be, but until you get out and actually try it, you have no idea.&lt;/p&gt;
       
       &lt;p&gt;Below are &lt;a href=&quot;https://www.onslyde.com/#!/analytics?sessionID=555&quot;&gt;the results&lt;/a&gt; from one of the polls that was asked during a morning session:
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2014-02-26/devnexus-voting.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2014-02-26/devnexus-voting.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;
       You can probably imagine, at this point, what you would do with this data as a sponsor. When each user votes they are required to oauth with their G+
       account. So we have names and email addresses that can be contacted after the fact.&lt;/p&gt;
       
@@ -168,11 +255,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard/</id>
+    <id>http://localhost:4242/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html</id>
     <title>From Startup to Enterprise</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2013-12-17T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html" rel="alternate" type="text/html" />
     <category term="design"></category>
     <category term="develop"></category>
     <category term="angularjs"></category>
@@ -217,9 +304,9 @@
       
       &lt;p&gt;Here are the first designs and wireframes we came up with. I purposely left everything greyscale to allow for a pure focus on the page data and layout.&lt;/p&gt;
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-a-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-a.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-b-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-b.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-c-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/first-design-c.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2013-12-17/first-design-a-large.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-12-17/first-design-a.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-12-17/first-design-b-large.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-12-17/first-design-b.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-12-17/first-design-c-large.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-12-17/first-design-c.png&quot; class=&quot;margin10 max-width-100 float-left&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;br class=&quot;clear-left&quot;&gt;
       
@@ -240,12 +327,12 @@
       &lt;p&gt;This is the evolution of our menu design in chronological order from left to right. Design is an iterative process for me and
       I never get it right on the first go. And it really helps to have good feedback from other &quot;design minded&quot; folks.&lt;/p&gt;
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/menus-large.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/menus-large.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2013-12-17/menus-large.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-12-17/menus-large.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;I wanted to leave a lot of the original grey design from the mockups and not get too heavy handed with the colors. After all, we were
       building an analytics dashboard that needed to put heavy emphasis on errors, warnings, and other alerts.&lt;/p&gt;
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/app-erros.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/app-erros.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2013-12-17/app-erros.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-12-17/app-erros.png&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
       
@@ -273,7 +360,7 @@
       busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
       one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/github.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-12-17/github.png&quot; style=&quot;width: 500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2013-12-17/github.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-12-17/github.png&quot; style=&quot;width: 500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;On August 9th we had our first C-Level review of the beta version of the product. This is pretty significant seeing that two developers were
       able to produce a massive SPA in a little over 3 months. Not to mention managing vacation schedules and other things that arose. Of course,
@@ -306,11 +393,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page/</id>
+    <id>http://localhost:4242/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
     <title>Jank Busting Apple's Home Page</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2013-10-26T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
     <category term="jank"></category>
     <summary>
       
@@ -334,36 +421,36 @@
       
       &lt;h2&gt;Overview&lt;/h2&gt;
       
-      &lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&quot;http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&quot;&gt;this article&lt;/a&gt; the other day which examines the
+      &lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&quot;http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&quot;&gt;this article&lt;/a&gt; the other day which examines the
       performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
       Jake Archibald's &lt;a href=&quot;http://jakearchibald.github.io/jank-invaders/&quot;&gt;Jank Invaders&lt;/a&gt; to hone my skills and save the universe from jank :)&lt;/p&gt;
       
       &lt;p&gt;So, I was on &lt;a href=&quot;http://apple.com&quot;&gt;Apple's home page&lt;/a&gt; the other day and noticed some jank in their main carousel animation.
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&quot; alt=&quot;apple home page&quot; style=&quot;width:50%&quot; class=&quot;margin10&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-26/apple.home.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-26/apple.home.PNG&quot; alt=&quot;apple home page&quot; style=&quot;width:50%&quot; class=&quot;margin10&quot;&gt;&lt;/a&gt;
       It wasn't anything huge, but the
       animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
       Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a &lt;a href=&quot;https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events&quot;&gt;paint&lt;/a&gt; within chrome.
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-26/apple.com.jank.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-26/apple.com.jank.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
        handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka &lt;a href=&quot;http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/&quot;&gt;null transform hack&lt;/a&gt;).
        The problem with Apple's site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
-       &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/composite.PNG&quot; alt=&quot;layer composite time&quot; class=&quot;margin10 max-width-100&quot;&gt;
+       &lt;img src=&quot;http://localhost:4242/images/posts/2013-10-26/composite.PNG&quot; alt=&quot;layer composite time&quot; class=&quot;margin10 max-width-100&quot;&gt;
        &lt;br&gt;
        I wrote about this &lt;a href=&quot;http://www.html5rocks.com/en/mobile/optimization-and-performance/&quot;&gt;a while ago&lt;/a&gt;, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
        applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.&lt;/p&gt;
       
       &lt;p&gt; The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
        If we turn on &quot;&lt;a href=&quot;http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode&quot;&gt;Continuous Page Repainting&lt;/a&gt;&quot; in dev tools, we can see how the page is being painted and how many composited layers we have.
-       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+       &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-26/apple-paint.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-26/apple-paint.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt; By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
        From there, I just disabled all the null transform hacks that were applied to nested elements.
-       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&quot; alt=&quot;apple home page markup&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+       &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-26/apple.markup.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-26/apple.markup.PNG&quot; alt=&quot;apple home page markup&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt; After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
        below timeline.
-       &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&quot; alt=&quot;apple home page markup&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+       &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-26/apple.com.no.jank.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-26/apple.com.no.jank.PNG&quot; alt=&quot;apple home page markup&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt; The yellow bars are the 7 second timer before each transition occurs, so this is expected.&lt;/p&gt;
       
@@ -379,11 +466,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</id>
+    <id>http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
     <category term="requestAnimationFrame"></category>
     <category term="angular"></category>
@@ -433,18 +520,18 @@
       &lt;p&gt;For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
       the user know when it's about to refresh the data.&lt;/p&gt;
       
-      &lt;p&gt;&lt;a href=&quot;https://apigee.com/usergrid/dash/app/index-ma.html&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/dashboard.PNG&quot; alt=&quot;apigee app services dashboard&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://apigee.com/usergrid/dash/app/index-ma.html&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-23/dashboard.PNG&quot; alt=&quot;apigee app services dashboard&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn't believe how much jank it was causing.
       There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
        check it out &lt;a href=&quot;http://www.youtube.com/watch?v=mSK70FwUz2A&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
       
       &lt;p&gt;If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-23/bad-fps.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-23/bad-fps.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
       Yep, That's 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.&lt;/p&gt;
       
       &lt;p&gt;Also, if you look at the memory being consumed, we're taking quite a hit for this little counter.
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-23/bad-memory.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-23/bad-memory.PNG&quot; alt=&quot;bad fps jank&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
       We maintain around 25MB and then shoot up to 34 when the page does its refresh.&lt;/p&gt;
       
       &lt;br&gt;
@@ -462,10 +549,10 @@
       
       
       &lt;p&gt;And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&quot; alt=&quot;good fps&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-23/good-fps.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-23/good-fps.PNG&quot; alt=&quot;good fps&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;Also the memory footprint is greatly reduced:
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&quot; alt=&quot;good fps&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-10-23/good-memory.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-10-23/good-memory.PNG&quot; alt=&quot;good fps&quot; class=&quot;marginTop10 max-width-100&quot;&gt;&lt;/a&gt;
       Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.&lt;/p&gt;
       
       &lt;p&gt;A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the
@@ -479,11 +566,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis/</id>
+    <id>http://localhost:4242/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
     <category term="travisci"></category>
     <category term="awestruct"></category>
@@ -568,7 +655,7 @@
       
       &lt;p&gt;First off, you must login to &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt; with your github username and enable the travis service hook on the repository you wish to automate.
       For me, this is where my haml/sass/etc... source is located.
-      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/travisci1.png&quot; alt=&quot;travis&quot; class=&quot;margin10&quot;&gt;
+      &lt;img src=&quot;http://localhost:4242/images/posts/2013-03-29/travisci1.png&quot; alt=&quot;travis&quot; class=&quot;margin10&quot;&gt;
       Next, we'll create an OAuth token for your repository access :&lt;/p&gt;
       
       &lt;script src=&quot;https://gist.github.com/wesleyhales/5274538.js&quot;&gt;&lt;/script&gt;
@@ -626,12 +713,12 @@
       &lt;p&gt;The source for this blog you are reading is stored on github &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.com&quot;&gt;here&lt;/a&gt;. When I do
       a git push, everything is automatically built with travis and pushed again to the &lt;a href=&quot;https://github.com/wesleyhales/wesleyhales.github.com&quot;&gt;github repo&lt;/a&gt; that is specially named to handle the
       mapping of my TLD (wesleyhales.com) to my username on github.
-      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/blog-ss.png&quot; class=&quot;margin10&quot; width=&quot;400px&quot;&gt;&lt;/p&gt;
+      &lt;img src=&quot;http://localhost:4242/images/posts/2013-03-29/blog-ss.png&quot; class=&quot;margin10&quot; width=&quot;400px&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;Since I have 2 repositories, one for the preprocessor source and the other for the TLD mapping, I'm using the gh-pages branch on my
        source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
        The results of this test are automatically pushed and I can view them &lt;a href=&quot;http://wesleyhales.com/wesleyhales.com/&quot;&gt;here&lt;/a&gt;.
-       &lt;a href=&quot;http://wesleyhales.com/wesleyhales.com/&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-03-29/perf-test.png&quot; class=&quot;margin10&quot; width=&quot;400px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+       &lt;a href=&quot;http://wesleyhales.com/wesleyhales.com/&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-03-29/perf-test.png&quot; class=&quot;margin10&quot; width=&quot;400px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt; From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
        documentation along with other reports and assets. I'd eventually like to write a script to do a diff on only test the pages that were changed on the commit.&lt;/p&gt;
@@ -641,11 +728,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</id>
+    <id>http://localhost:4242/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
     <category term="speaking"></category>
     <category term="audience engagement"></category>
@@ -692,7 +779,7 @@
       
       &lt;h2&gt;Details of onslyde&lt;/h2&gt;
       
-      &lt;p&gt;&lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;200px&quot; align=&quot;left&quot;&gt;&lt;/a&gt;
+      &lt;p&gt;&lt;a href=&quot;http://localhost:4242/images/posts/2013-02-25/onslyde.arch.png&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-02-25/onslyde.arch.png&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;200px&quot; align=&quot;left&quot;&gt;&lt;/a&gt;
       At its core, the concept is simple. Attendees connect to a WebSocket server, the presenter sends them vote options at certain points during her
        presentation and whoever decides to connect can have anonymous interactions with the presenter. Participants may also give a
       &quot;thumb up&quot; or &quot;thumb down&quot; during any slide to show that they approve or disapprove of the content on a given slide. This allows for a
@@ -725,10 +812,10 @@
       
       
       &lt;p&gt;So, the above markup sets up the following slide deck and remote control options:
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-02-25/onslyde-1.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-02-25/onslyde-1.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;After all the votes are placed, the winning track is chosen based on the majority vote:
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-02-25/onslyde-2.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-02-25/onslyde-2.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10&quot; width=&quot;500px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;After the fork occurs, the presenter can choose to present slides in linear fashion, or ask another poll question. The framework is
       limited by only allowing for 2 options to be given and slides can only be forked once per question.&lt;/p&gt;
@@ -755,13 +842,13 @@
        or &quot;WTF&quot; button is pressed, I can see exactly which slide was being shown and when the button was pressed. There is a bit of a latency
        issue from the time the button is pressed until the time it actually shows up on the presenters screen, so capturing the TS at the server
        level gives a more accurate picture of how you performed on each slide, if the content made sense, etc.
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-02-25/hypevreality.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-02-25/hypevreality.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;h3&gt;From GA and Custom Events&lt;/h3&gt;
       
       &lt;p&gt;This is an overview of the device analytics. I didn't want to reinvent the wheel on User Agent detection and keeping track of sessions, so I leveraged GA.
       The following data is from my talk, in the video above, given on February 18th.
-      &lt;a href=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://localhost:4242/images/posts/2013-02-25/feb18Devnexus.PNG&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2013-02-25/feb18Devnexus.PNG&quot; alt=&quot;onslyde architecture&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;h2&gt;Conclusion&lt;/h2&gt;
       
@@ -823,11 +910,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger/</id>
+    <id>http://localhost:4242/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2013/02/18/Adventures-With-the-Skia-Debugger/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
     <category term="html"></category>
     <category term="css"></category>
@@ -885,9 +972,9 @@
       
       
       &lt;p&gt;The debugger is fairly straightforward to use once a picture is loaded in. You can step through different commands via the up and down keys and clicking on the command in the list. You can also pause execution of commands with the pause button in order to inspect the details of the command in the inspector tabs down below.
-      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-18/skia-ss.PNG&quot; alt=&quot;skia&quot; class=&quot;margin10 max-width-100&quot;&gt;
+      &lt;img src=&quot;http://localhost:4242/images/posts/2013-02-18/skia-ss.PNG&quot; alt=&quot;skia&quot; class=&quot;margin10 max-width-100&quot;&gt;
       Here are the available keyboard shortcuts for the debugger:
-      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2013-02-18/skia-commands.PNG&quot; alt=&quot;skia&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/p&gt;
+      &lt;img src=&quot;http://localhost:4242/images/posts/2013-02-18/skia-commands.PNG&quot; alt=&quot;skia&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;After playing around with the debugger, it’s nice to get a very low level snapshot of how long it takes a specific browser to draw the pictures necessary to present a web page.&lt;/p&gt;
       
@@ -896,11 +983,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die/</id>
+    <id>http://localhost:4242/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/11/01/I-Will-Sleep-When-I-Die/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
     <summary>
       The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book,
@@ -977,7 +1064,7 @@
       opportunities didn’t work out for whatever reason, but honestly, putting myself out there and going through these grueling
       interview processes helped me out tremendously - as you will see.&lt;/p&gt;
       
-      &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2012-11-01/543116336.jpg&quot; alt=&quot;devnexus&quot; class=&quot;margin10&quot; style=&quot;max-width:50%&quot; align=&quot;left&quot;&gt;
+      &lt;p&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2012-11-01/543116336.jpg&quot; alt=&quot;devnexus&quot; class=&quot;margin10&quot; style=&quot;max-width:50%&quot; align=&quot;left&quot;&gt;
       On a side note and speaking of &quot;putting myself out there&quot;, on March 21st I had agreed to do a talk at a local conference
       here in Atlanta called &lt;a href=&quot;http://www.devnexus.com/&quot;&gt;DevNexus&lt;/a&gt;. As I was creating the slides for my presentation, I kept thinking
       about how I would verbally survey the audience at certain points to get a feel for what their experience level was.
@@ -992,7 +1079,7 @@
       through whoever would hire me at a specified hourly rate. I was able to speak at conferences on organic, community topics and
       I wasn’t giving a sales pitch for a specific product or platform. I was a hired gun and making it on my own, paying high insurance
       costs for my family (and business), and making one hell of a commute.
-      &lt;a href=&quot;http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2012-11-01/onslyde.jpg&quot; alt=&quot;devnexus&quot; class=&quot;margin10&quot; align=&quot;right&quot; style=&quot;max-width:50%&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2012-11-01/onslyde.jpg&quot; alt=&quot;devnexus&quot; class=&quot;margin10&quot; align=&quot;right&quot; style=&quot;max-width:50%&quot;&gt;&lt;/a&gt;
       So, my next bright idea was to enter Atlanta Startup Weekend in April of 2012, form a team of volunteers and pitch the presentation
       tool that I used at DevNexus as a startup idea.
       Unfortunately, the idea didn’t get picked, but I met 3 awesome developers who joined my team and those connections were huge wins. I
@@ -1027,7 +1114,7 @@
       &lt;a href=&quot;http://wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/&quot;&gt;My findings&lt;/a&gt; were interesting enough to get some of the top
       developers/authors/speakers in the industry to comment on my post. It really is motivating when you see your blog spike
       from roughly 100 unique visitors a week to 1000's. I even got a &lt;a href=&quot;https://twitter.com/TwitterOSS/status/240912782000795649&quot;&gt;shout out&lt;/a&gt; on TwitterOSS :)
-      &lt;img src=&quot;http://www.wesleyhales.com/images/posts/2012-11-01/blogstats.png&quot; alt=&quot;devnexus&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/p&gt;
+      &lt;img src=&quot;http://localhost:4242/images/posts/2012-11-01/blogstats.png&quot; alt=&quot;devnexus&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;Next thing I worked on at CNN was page load performance. We started having meetings with CNN’s best and brightest to see what
       we could do to add performance improvements to CNN’s home page. The problem with making changes like these in most large
@@ -1068,7 +1155,7 @@
       &lt;p&gt;On November 1st (today), the idea that I helped create and shape got it’s first &lt;a href=&quot;http://finance.yahoo.com/news/apigee-launches-first-real-time-120000461.html&quot;&gt;press release&lt;/a&gt;
       and &lt;a href=&quot;http://apigee.com/about/mobile-analytics&quot;&gt;official public launch&lt;/a&gt;.&lt;/p&gt;
       
-      &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/posts/2012-11-01/apigee.png&quot; alt=&quot;apigee mobile analytics&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://localhost:4242/images/posts/2012-11-01/apigee.png&quot; alt=&quot;apigee mobile analytics&quot; class=&quot;margin10 max-width-100&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;I’ll be speaking at a few more conferences in November, &lt;a href=&quot;http://www.devoxx.com/display/DV12/Wesley+Hales&quot;&gt;Devoxx&lt;/a&gt;
       and &lt;a href=&quot;http://therichwebexperience.com/conference/speaker/wesley_hales&quot;&gt;RWX&lt;/a&gt;, and after that I’m going to lay low for a while.
@@ -1079,11 +1166,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/</id>
+    <id>http://localhost:4242/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
     <category term="web performance"></category>
     <category term="testing"></category>
@@ -1098,7 +1185,7 @@
       which performance tweaks improved page load times and which ones didn't. But first, we needed a baseline to test how fast the page loads with both a clear-cache...
     </summary>
     <content type="html">
-      &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/icons/phantomjs.png&quot; alt=&quot;phantomjs&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://localhost:4242/images/icons/phantomjs.png&quot; alt=&quot;phantomjs&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
       are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
@@ -1126,11 +1213,11 @@
       
       
       &lt;p&gt;This script is running live at &lt;a href=&quot;http://loadreport.wesleyhales.com/report.html&quot;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
-      &lt;img src=&quot;http://www.wesleyhales.com/images/loadreport.js.png&quot; alt=&quot;loadreport.js&quot; align=&quot;left&quot; class=&quot;max-width-100&quot;&gt;&lt;/p&gt;
+      &lt;img src=&quot;http://localhost:4242/images/loadreport.js.png&quot; alt=&quot;loadreport.js&quot; align=&quot;left&quot; class=&quot;max-width-100&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;We're running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&quot;http://twitter.com/ryanbridges&quot;&gt;@ryanbridges&lt;/a&gt; put together
       some awesome sparkline charts backed by knockout.js. Just click on the &quot;Show Me Some Charts!&quot; button to see 'em.
-      &lt;img src=&quot;http://www.wesleyhales.com/images/loadreport-charts.png&quot; alt=&quot;loadreport-charts&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;&lt;/p&gt;
+      &lt;img src=&quot;http://localhost:4242/images/loadreport-charts.png&quot; alt=&quot;loadreport-charts&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;Regarding cache performance, phantomjs has a --disk-cahe=yes switch which is supposed to enable caching, but the results on the number
       of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with --disk-cahe=yes, phantom returns
@@ -1150,18 +1237,18 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta/</id>
+    <id>http://localhost:4242/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
     <category term="atlanta"></category>
     <summary>
       So, all I can say is that the Atlanta HTML5 community is awesome. Today the @atlhtml5 user group has reached it's 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser...
     </summary>
     <content type="html">
-      &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/icons/atlhtml5.jpg&quot; alt=&quot;atlanta html5&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&quot;http://twitter.com/atlhtml5&quot;&gt;@atlhtml5&lt;/a&gt; user group has reached it's 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don't fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://localhost:4242/images/icons/atlhtml5.jpg&quot; alt=&quot;atlanta html5&quot; align=&quot;left&quot; class=&quot;max-width-100 margin10&quot;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&quot;http://twitter.com/atlhtml5&quot;&gt;@atlhtml5&lt;/a&gt; user group has reached it's 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don't fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.&lt;/p&gt;
       
       &lt;br&gt;
       
@@ -1192,11 +1279,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/</id>
+    <id>http://localhost:4242/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
     <category term="html5"></category>
     <category term="share"></category>
@@ -1247,10 +1334,10 @@
       their specific resources to display a share button for the given service:&lt;/p&gt;
       
       &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/twitter/&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/google/&quot;&gt;Google+&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/fb/&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/linkedin/&quot;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://localhost:4242/_examples/shares/twitter/&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://localhost:4242/_examples/shares/google/&quot;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://localhost:4242/_examples/shares/fb/&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://localhost:4242/_examples/shares/linkedin/&quot;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
       
       
@@ -1261,7 +1348,7 @@
       
       
       &lt;p&gt;I know... seems pretty crazy that Facebook would have 11 HTTP requests and a 135KB payload (after compress/GZIP) for a share/like button.
-      &lt;img src=&quot;http://www.wesleyhales.com/images/design/share-buttons/facebook.PNG&quot; alt=&quot;Facebook resources&quot; class=&quot;max-width-100 margin10&quot;&gt;
+      &lt;img src=&quot;http://localhost:4242/images/design/share-buttons/facebook.PNG&quot; alt=&quot;Facebook resources&quot; class=&quot;max-width-100 margin10&quot;&gt;
       LinkedIn is delivering 80KB of stuff, Twitter comes in right at 40KB, and although Google only serves up 2KB of resources, the data is broken up over 10 HTTP requests.&lt;/p&gt;
       
       &lt;p&gt;Keep in mind that we are on a desktop browser, so worrying about all the HTTP requests may be a little nonsensical. But, on a mobile
@@ -1338,8 +1425,8 @@
       browser supporting the &lt;code&gt;WebKitIntent&lt;/code&gt; api is, you guessed it, WebKit. This includes Chrome versions &amp;gt;= 19. But, even though the tag is supported, you must install
       a Chrome extension to actually fulfill the intent.&lt;/p&gt;
       
-      &lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/intent/&quot;&gt;here&lt;/a&gt;.
-      &lt;img src=&quot;http://www.wesleyhales.com/images/design/webintent-pick.PNG&quot; alt=&quot;web intent pick&quot; class=&quot;max-width-100 margin10&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&quot;http://localhost:4242/_examples/shares/intent/&quot;&gt;here&lt;/a&gt;.
+      &lt;img src=&quot;http://localhost:4242/images/design/webintent-pick.PNG&quot; alt=&quot;web intent pick&quot; class=&quot;max-width-100 margin10&quot;&gt;&lt;/p&gt;
       
       &lt;p&gt;At this point you are probably wondering: How do we get the dialogue to show up in teh browser? How can we register an application to handle this request?
       The plan is to allow web applications to register themselves through a provided JavaScript api or HTML tag when the specification is
@@ -1405,7 +1492,7 @@
       &lt;p&gt;*Note - Twitter has made the best attempt at an early implementation of Web Intents. The best thing service providers can do today, is follow &lt;a href=&quot;https://dev.twitter.com/docs/intents&quot;&gt;Twitter's implementation&lt;/a&gt;.&lt;/p&gt;
       
       &lt;p&gt;For a full example on how to create a Web Intent Chrome extension, run through the examples in &lt;a href=&quot;http://intentlab-io12.appspot.com/&quot;&gt;this Google IO lab at #IO12&lt;/a&gt;.
-      Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&quot;http://www.wesleyhales.com/_examples/shares/intent/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+      Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&quot;http://localhost:4242/_examples/shares/intent/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
       
       &lt;br&gt;
       
@@ -1445,11 +1532,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/</id>
+    <id>http://localhost:4242/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
     <category term="features"></category>
     <category term="sniffing"></category>
@@ -1500,11 +1587,11 @@
     </content>
   </entry>
   <entry>
-    <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/</id>
+    <id>http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
     <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
+    <updated>2014-07-03T08:52:05-07:00</updated>
     <published>2012-04-09T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness/" rel="alternate" type="text/html" />
+    <link href="http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
     <category term="phonegap"></category>
     <category term="css3"></category>
     <category term="iscroll"></category>
@@ -1521,7 +1608,7 @@
     <content type="html">
       &lt;p&gt;I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
       Apparently, there is a problem with older browsers using CSS3 selectors like &lt;code&gt;div[style*='foo']&lt;/code&gt; in combination with other DOM elements.
-      &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/iscroll.PNG&quot; width=&quot;150&quot; alt=&quot;iscroll&quot; align=&quot;left&quot; style=&quot;margin:20px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/iscroll.PNG&quot; width=&quot;150&quot; alt=&quot;iscroll&quot; align=&quot;left&quot; style=&quot;margin:20px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
       
       &lt;p&gt;The &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test case&lt;/a&gt; was a little tricky to create, seeing that pinpointing this problem required mucho testing.
       However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
@@ -1529,64 +1616,6 @@
       You must run the &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test&lt;/a&gt; on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.&lt;/p&gt;
       
       &lt;br class=&quot;clear&quot;&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss/</id>
-    <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-    <updated>2014-08-22T08:23:02-07:00</updated>
-    <published>2012-02-08T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/02/08/Starting-a-New-Project-at-JBoss/" rel="alternate" type="text/html" />
-    <category term="html5e"></category>
-    <category term="jboss"></category>
-    <category term="aerogear"></category>
-    <category term="mobile"></category>
-    <summary>
-      
-      
-      
-      The AeroGear project had it's official launch last week and I want to review what we're doing and where we're headed. For starters, AeroGear is focused on:
-        
-          Education - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.
-          Innovation - Many of AeroGear's primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.
-          Community - We already have several community members contributing examples, demos, and other useful resources. We want to hear from you! We're...
-    </summary>
-    <content type="html">
-      
-      
-      &lt;p&gt;
-      The &lt;a href=&quot;http://www.jboss.org/aerogear&quot;&gt;AeroGear project&lt;/a&gt; had it's official launch last week and I want to review what we're doing and where we're headed. For starters, AeroGear is focused on:
-        &lt;/p&gt;&lt;ul&gt;
-          &lt;li&gt;
-      &lt;a href=&quot;https://community.jboss.org/wiki/AeroGearServerSideResources&quot;&gt;Education&lt;/a&gt; - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.&lt;/li&gt;
-          &lt;li&gt;
-      &lt;a href=&quot;https://community.jboss.org/wiki/AeroGearHTML5ExtensionConcepts&quot;&gt;Innovation&lt;/a&gt; - Many of AeroGear's primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.&lt;/li&gt;
-          &lt;li&gt;
-      &lt;a href=&quot;https://community.jboss.org/wiki/ContributingToAeroGear&quot;&gt;Community&lt;/a&gt; - We already have several community members contributing examples, demos, and other useful resources. We want to hear from &lt;a href=&quot;https://community.jboss.org/en/aerogear?view=discussions&quot;&gt;you&lt;/a&gt;! We're here for the community.'&lt;/li&gt;
-        &lt;/ul&gt;
-      
-      
-      
-      &lt;p&gt;
-        Most front-end developers are familiar with &quot;jQuery callbacks and RESTful services&quot;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&quot;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&quot;&gt;&quot;POH5&quot; (Plain Old HTML5)&lt;/a&gt;
-      &lt;/p&gt;
-      
-      
-      &lt;p&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/design/poh5.flow.expanded.png&quot; alt=&quot;Poh5.Flow.Expanded&quot; class=&quot;max-width-100&quot;&gt;&lt;/p&gt;
-      
-      &lt;p&gt;
-      So why another acronym? Why not just call it &quot;Plain Old Open Web&quot;? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or &quot;gear&quot; you need to get started quickly with the best possible solution.
-      &lt;/p&gt;
-      
-      
-      &lt;p&gt;
-      We're just getting started... For now, we have a &lt;a href=&quot;https://github.com/aerogear/as-quickstarts/tree/master/kitchensink-html5-mobile&quot;&gt;quickstart application&lt;/a&gt; which &lt;a href=&quot;&quot;&gt;fully examines&lt;/a&gt; each piece of the POH5 architecture. Take it for a spin with the &lt;a href=&quot;http://poh5-aerogear.rhcloud.com/&quot;&gt;live demo&lt;/a&gt;.
-      &lt;/p&gt;
-      
-      
-      &lt;p&gt;
-      &lt;a href=&quot;https://community.jboss.org/en/aerogear?view=documents&quot;&gt;Join Us&lt;/a&gt;! or come hang out on &lt;a href=&quot;irc://irc.freenode.net/aerogear&quot;&gt;freenode #aerogear&lt;/a&gt;.
-      &lt;/p&gt;
     </content>
   </entry>
 </feed>
