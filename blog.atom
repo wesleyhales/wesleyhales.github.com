@@ -2,9 +2,265 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.wesleyhales.com/</id>
   <title>http://www.wesleyhales.com</title>
-  <updated>2015-01-19T06:37:06-08:00</updated>
+  <updated>2015-04-24T15:17:08-07:00</updated>
   <link href="http://www.wesleyhales.com/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://www.wesleyhales.com/" rel="alternate" type="text/html" />
+  <entry>
+    <id>http://www.wesleyhales.com/blog/2015/04/24/Speedgun.html</id>
+    <title>Simulated RUM testing with PhantomJS 2</title>
+    <updated>2015-04-24T15:17:08-07:00</updated>
+    <published>2015-04-24T00:00:00+00:00</published>
+    <link href="http://www.wesleyhales.com/blog/2015/04/24/Speedgun.html" rel="alternate" type="text/html" />
+    <category term="web performance"></category>
+    <category term="speedgun"></category>
+    <summary>
+      
+      
+      
+      
+      Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.
+      
+      The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.
+      
+      
+      Loadreport data from 2012-2013 for CNN.com
+      
+      
+      I started the Loadreport project while working on the CNN homepage in 2012. It was one of the first PhantomJS scripts that was built solely to collect as...
+    </summary>
+    <content type="html">
+      &lt;br&gt;
+      
+      
+      &lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;&quot;&gt;&lt;/a&gt;
+      Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
+      
+      &lt;p&gt;The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using &lt;a href=&quot;https://github.com/wesleyhales/loadreport&quot;&gt;Loadreport.js&lt;/a&gt;.
+      &lt;a href=&quot;https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs&quot;&gt;&lt;img style=&quot;max-width:90%&quot; src=&quot;http://www.wesleyhales.com/images/posts/2015-15-24/image05.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;div style=&quot;width:100%;text-align:center;font-style:italic;&quot;&gt;Loadreport data from 2012-2013 for CNN.com&lt;/div&gt;
+      
+      
+      &lt;p&gt;I started the Loadreport project while working on the CNN homepage in 2012. It was one of the first PhantomJS scripts that was built solely to collect as many perf numbers from the DOM as possible. &lt;br&gt;
+      However, the performance numbers collected from events like DOMContentLoaded, onload, and others are all based around old, inaccurate or poorly measured JavaScript APIs provided by the DOM.&lt;/p&gt;
+      
+      &lt;p&gt;These measurements were a great start and gave us some kind of baseline, but as the Web Performance industry has grown over the last several years, more understanding has been gained and better tools and dashboards are being written.&lt;br&gt;
+      Now, &lt;a href=&quot;http://en.wikipedia.org/wiki/Real_user_monitoring&quot;&gt;Real User Monitoring (RUM)&lt;/a&gt;, &lt;a href=&quot;http://en.wikipedia.org/wiki/Synthetic_monitoring&quot;&gt;Synthetic Monitoring&lt;/a&gt;, &lt;a href=&quot;https://www.google.com/search?q=client+side+performance&amp;amp;oq=client+side+performance&amp;amp;aqs=chrome..69i57j0l5.347j0j7&amp;amp;sourceid=chrome&amp;amp;es_sm=91&amp;amp;ie=UTF-8&quot;&gt;Client Side Performance&lt;/a&gt; and many more terms seek to describe this way of capturing web performance and providing some kind of actionable insights around the data.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Enter Speedgun&lt;/h2&gt;
+      
+      &lt;p&gt;PhantomJS 2, released this year with a newer version of WebKit, implements the &lt;a href=&quot;http://www.w3.org/TR/2012/REC-navigation-timing-20121217/#sec-navigation-timing-interface&quot;&gt;Navigation Timing API&lt;/a&gt; specification giving us the ability to measure page performance in an automated fashion. Now we have microsecond precision around a much more robust set of APIs. This is why I rewrote Loadreport.js and named it Speedgun - to utilize the newer APIs and refactor a lot of things that didn’t work quite right… and because the Loadreport name was not super cool. It’s the classic story of rebranding an open source project :)
+      The rest of this article reviews the details of how speedgun.js extracts and stores performance data across many different regions and nodes to achieve a Simulated RUM environment.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;What is Simulated RUM?&lt;/h2&gt;
+      
+      &lt;p&gt;I don’t know. It’s a frankenstein term where I’m trying to depict a remote control environment that represents real users. This environment should have:&lt;/p&gt;
+      
+      &lt;ol&gt;
+      &lt;li&gt;The ability to execute a script (PhantomJS in this case) in a controlled, one at a time manner.&lt;/li&gt;
+      &lt;li&gt;A REST api that allows master/slave communication and is publicly accessible.&lt;/li&gt;
+      &lt;li&gt;A beacon that sends it’s availability to a centralized(parent) server.&lt;/li&gt;
+      &lt;li&gt;Data storage of reports in a db that treats JSON as a first class citizen.&lt;/li&gt;
+      &lt;/ol&gt;
+      
+      
+      &lt;p&gt;All of these requirements have been built into &lt;a href=&quot;http://speedgun.io&quot;&gt;speedgun.io&lt;/a&gt;.&lt;/p&gt;
+      
+      &lt;p&gt;After starting development of speedgun with Docker I realized that this could be easily distributed to any geographic region as a virtualized RUM node. I wanted to execute on the idea that this testing tool could be setup on an old mac mini at grandma’s house with a DSL connection.
+      &lt;img style=&quot;max-width:90%&quot; src=&quot;http://www.wesleyhales.com/images/posts/2015-15-24/image00.png&quot;&gt;&lt;/p&gt;
+      
+      &lt;p&gt;Or, with a &lt;a href=&quot;https://github.com/wesleyhales/speedgun/blob/master/server/README.md&quot;&gt;simple git clone and execution of one command&lt;/a&gt;, it can be run on Digital Ocean, AWS, and more environments in every region.
+      &lt;img style=&quot;max-width:90%&quot; src=&quot;http://www.wesleyhales.com/images/posts/2015-15-24/image01.png&quot;&gt;&lt;/p&gt;
+      
+      &lt;p&gt;Today, there are 2 available nodes to run a Speedgun report, DigitalOcean SF and NY. Hopefully there will be more in the list by the time you read this ;)
+      &lt;a href=&quot;http://speedgun.io&quot;&gt;&lt;img style=&quot;max-width:90%&quot; src=&quot;http://www.wesleyhales.com/images/posts/2015-15-24/image04.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;h2&gt;The Speedgun API&lt;/h2&gt;
+      
+      &lt;p&gt;There are 2 parts to the speedgun REST API...&lt;/p&gt;
+      
+      &lt;p&gt;1) Creating and retrieving reports&lt;/p&gt;
+      
+      &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;table&quot;&gt;
+          &lt;tbody&gt;
+          &lt;tr class=&quot;c13&quot;&gt;
+              &lt;td class=&quot;c15&quot; colspan=&quot;2&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c17 c14&quot;&gt;Start a report&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Method&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;
+      &lt;p class=&quot;c2&quot;&gt;&lt;span&gt;http://localhost:8081/rest/performance/go&lt;/span&gt;&lt;/p&gt;
+      
+                  
+      
+                  &lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;Parameters:&lt;/span&gt;&lt;/p&gt;
+      
+                  &lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;url, cached, email&lt;/span&gt;&lt;/p&gt;
+      &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Example&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;
+      &lt;p class=&quot;c5 c0&quot;&gt;&lt;span&gt;http://localhost:8081/rest/performance/go?cached=false&amp;amp;email=&amp;amp;url=http:%2F%2Fwww.google.com&lt;/span&gt;&lt;/p&gt;
+      
+                  &lt;p class=&quot;c5 c0 c4&quot;&gt;&lt;span class=&quot;c8&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/td&gt;
+          &lt;/tr&gt; 
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Response&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8&quot;&gt;JSON - with uuid and status of where this report is in the queue&lt;/span&gt;
+              &lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c13&quot;&gt;
+              &lt;td class=&quot;c15&quot; colspan=&quot;2&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c17 c14&quot;&gt;Retrieve a report&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Method&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;
+      &lt;p class=&quot;c5 c0&quot;&gt;&lt;span&gt;http://localhost:8081/rest/performance/report&lt;/span&gt;&lt;/p&gt;
+      
+                  &lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;Parameters&lt;/span&gt;&lt;/p&gt;
+      
+                  &lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;uuid (returned from “Start a report”)&lt;/span&gt;&lt;/p&gt;
+      &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Example&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span&gt;http://localhost:8081/rest/performance/report?uuid=62990112-48fc-4a95-bf32-2a09acf67dcd&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Response&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8&quot;&gt;JSON - All speedgun report data (except screenshots)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+      
+      
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;p&gt;2) Beacon service&lt;/p&gt;
+      
+      &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;table&quot;&gt;
+          &lt;tbody&gt;
+          &lt;tr class=&quot;c13&quot;&gt;
+              &lt;td class=&quot;c15&quot; colspan=&quot;2&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c14 c17&quot;&gt;Start the beacon&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2 c10&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Method&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;
+      &lt;p class=&quot;c0 c5&quot;&gt;&lt;span class=&quot;c8&quot;&gt;http://localhost:8081/rest/beacon/init&lt;/span&gt;&lt;/p&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2 c10&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Response&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;text/plain Notification message&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c13&quot;&gt;
+              &lt;td class=&quot;c15&quot; colspan=&quot;2&quot; rowspan=&quot;1&quot;&gt;
+      &lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c17 c14&quot;&gt;Retrieve list of available RUM nodes&lt;/span&gt;&lt;/p&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Method&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c5 c0&quot;&gt;&lt;span&gt;http://speedgun.io/rest/beacon/&lt;/span&gt;&lt;span class=&quot;c8&quot;&gt;getlist&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr class=&quot;c3&quot;&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8a&quot;&gt;Response&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+              &lt;td class=&quot;c9&quot; colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;&lt;p class=&quot;c2&quot;&gt;&lt;span class=&quot;c8&quot;&gt;JSON - This gives us the JSON data for displaying available clients on the UI.&lt;/span&gt;
+              &lt;/p&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+      
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      
+      &lt;h3&gt;About the beacon service&lt;/h3&gt;
+      
+      &lt;p&gt;By default this is turned off. To start sending your beacon with system information to the central speedgun.io server, you only have to curl or load this url in your browser http://localhost:8081/rest/beacon/init.&lt;/p&gt;
+      
+      &lt;p&gt;The beacon sends the following data to the speedgun server every 60 seconds.
+      &lt;img style=&quot;max-width:90%&quot; src=&quot;http://www.wesleyhales.com/images/posts/2015-15-24/image03.png&quot;&gt;&lt;/p&gt;
+      
+      &lt;p&gt;The only caveat to this working correctly is opening the required port on the firewall of the client machine’s network. You don’t have to open the port to send the beacon, only to allow speedgun reports to be ran by the centralized server.&lt;/p&gt;
+      
+      &lt;p&gt;Here’s a netgear router admin UI example:
+      &lt;img style=&quot;max-width:90%&quot; src=&quot;http://www.wesleyhales.com/images/posts/2015-15-24/image02.png&quot;&gt;&lt;/p&gt;
+      
+      &lt;p&gt;After you open up port 8081 on your firewall, speedgun reports can be remotely ran from anywhere. Currently the speedgun.io URL is hardcoded as the centralized server, this will soon be broken out to a configuration file.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Why?&lt;/h2&gt;
+      
+      &lt;p&gt;Why on earth would I want to set this up or standup a speedgun node? A few good reasons…. First, having a consistent and stable environment to run browser performance testing is a must. Second, having the ability to run multiple tests from many different geographic locations with varying connections speeds is hard to simulate.
+      Speedgun gives us both of these.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Futures&lt;/h2&gt;
+      
+      &lt;p&gt;&lt;a href=&quot;https://github.com/wesleyhales/speedgun/issues&quot;&gt;The issues list&lt;/a&gt; will give you an idea of where the project is heading. If you have any ideas or input feel free to leave them there.&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Contributors&lt;/h2&gt;
+      
+      &lt;p&gt;It was also an honor to have a few performance gurus from the community helping out with this. Thanks goes to:
+      Peter Hedgenskog who created &lt;a href=&quot;http://www.sitespeed.io/&quot;&gt;sitespeed.io&lt;/a&gt; and speaks at a ton of conferences about web performance. And Jarrod Overson author of &lt;a href=&quot;http://jsoverson.github.io/plato/examples/jquery/&quot;&gt;Plato&lt;/a&gt; and the new O’Reilly &lt;a href=&quot;http://www.amazon.com/Developing-Web-Components-jQuery-Polymer/dp/1491949023&quot;&gt;Web Components book&lt;/a&gt;!&lt;/p&gt;
+      
+      &lt;br&gt;
+      
+      
+      &lt;h2&gt;Other Page Testing Services&lt;/h2&gt;
+      
+      &lt;p&gt;I also want to give a quick shout out to all the other page testing services.&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://speedcurve.com/&quot;&gt;Speedcurve&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org/&quot;&gt;WebPageTest.org&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.sitespeed.io/&quot;&gt;Sitespeed.io&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;and many others...&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;h3&gt;References:&lt;/h3&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;Nav timing 2012 &lt;a href=&quot;http://www.w3.org/TR/2012/REC-navigation-timing-20121217/#sec-navigation-timing-interface&quot;&gt;http://www.w3.org/TR/2012/REC-navigation-timing-20121217/#sec-navigation-timing-interface&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now&quot;&gt;http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;HR Time (2012) &lt;a href=&quot;http://www.w3.org/TR/hr-time/#dom-performance-now&quot;&gt;http://www.w3.org/TR/hr-time/#dom-performance-now&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;MDN Nav timing &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Navigation_timing&quot;&gt;https://developer.mozilla.org/en-US/docs/Navigation_timing&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Resource timing confusion &lt;a href=&quot;http://www.stevesouders.com/blog/2014/11/25/serious-confusion-with-resource-timing/&quot;&gt;http://www.stevesouders.com/blog/2014/11/25/serious-confusion-with-resource-timing/&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+    </content>
+  </entry>
   <entry>
     <id>http://www.wesleyhales.com/blog/2015/01/18/Moving-On-To-Better-Things.html</id>
     <title>Moving On To Better Things</title>
@@ -108,7 +364,7 @@
   <entry>
     <id>http://www.wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience.html</id>
     <title>A More Better Conference Experience</title>
-    <updated>2015-01-18T16:23:22-08:00</updated>
+    <updated>2015-04-24T14:33:47-07:00</updated>
     <published>2014-02-26T00:00:00+00:00</published>
     <link href="http://www.wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience.html" rel="alternate" type="text/html" />
     <category term="devnexus"></category>
@@ -1597,38 +1853,6 @@
       &lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
       
       &lt;p&gt;Easier/better way?&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
-    <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2015-01-18T16:23:22-08:00</updated>
-    <published>2012-04-09T00:00:00+00:00</published>
-    <link href="http://www.wesleyhales.com/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
-    <category term="phonegap"></category>
-    <category term="css3"></category>
-    <category term="iscroll"></category>
-    <summary>
-      I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
-      Apparently, there is a problem with older browsers using CSS3 selectors like div[style*='foo'] in combination with other DOM elements.
-      
-      
-      The test case was a little tricky to create, seeing that pinpointing this problem required mucho testing.
-      However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
-      styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 [style*='foo'] selector.
-      You must...
-    </summary>
-    <content type="html">
-      &lt;p&gt;I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
-      Apparently, there is a problem with older browsers using CSS3 selectors like &lt;code&gt;div[style*='foo']&lt;/code&gt; in combination with other DOM elements.
-      &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;&lt;img src=&quot;http://www.wesleyhales.com/images/iscroll.PNG&quot; width=&quot;150&quot; alt=&quot;iscroll&quot; align=&quot;left&quot; style=&quot;margin:20px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;The &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test case&lt;/a&gt; was a little tricky to create, seeing that pinpointing this problem required mucho testing.
-      However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
-      styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 &lt;code&gt;[style*='foo']&lt;/code&gt; selector.
-      You must run the &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test&lt;/a&gt; on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.&lt;/p&gt;
-      
-      &lt;br class=&quot;clear&quot;&gt;
     </content>
   </entry>
 </feed>
