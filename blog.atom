@@ -2,13 +2,13 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4242/</id>
   <title>http://localhost:4242</title>
-  <updated>2015-10-27T09:41:37-04:00</updated>
+  <updated>2015-10-27T10:57:22-04:00</updated>
   <link href="http://localhost:4242/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4242/" rel="alternate" type="text/html" />
   <entry>
     <id>http://localhost:4242/blog/2015/04/24/Speedgun.html</id>
     <title>Simulated RUM testing with PhantomJS 2</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2015-04-24T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2015/04/24/Speedgun.html" rel="alternate" type="text/html" />
     <category term="web performance"></category>
@@ -254,109 +254,9 @@
     </content>
   </entry>
   <entry>
-    <id>http://localhost:4242/blog/2015/01/18/Moving-On-To-Better-Things.html</id>
-    <title>Moving On To Better Things</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
-    <published>2015-01-18T00:00:00+00:00</published>
-    <link href="http://localhost:4242/blog/2015/01/18/Moving-On-To-Better-Things.html" rel="alternate" type="text/html" />
-    <category term="shapesecurity"></category>
-    <category term="career"></category>
-    <summary>
-      
-      
-      
-      Overview
-      
-      I came to work at Shape Security exactly one year ago. I jumped at the opportunity to work with Ariya Hidayat, Michael Coates,
-      Sumit Agarwal, and a ridiculous amount of talented engineers and good people. It has truly been an educational experience to jump into a
-      small, well-funded startup and observe how things work.
-      
-      However, this type of education comes at a cost. This post is more of a personal story about what I've learned as a mid-30 year old
-      engineer moving out to the Valley and putting all my chips on the table for a startup. It's fun, exciting and incredibly challenging.
-      
-      
-      
-      
-      You must...
-    </summary>
-    <content type="html">
-      &lt;br&gt;
-      
-      
-      &lt;h2&gt;Overview&lt;/h2&gt;
-      
-      &lt;p&gt;I came to work at Shape Security exactly one year ago. I jumped at the opportunity to work with &lt;a href=&quot;http://ariya.ofilabs.com/&quot;&gt;Ariya Hidayat&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/_mwc&quot;&gt;Michael Coates&lt;/a&gt;,
-      &lt;a href=&quot;http://www.kpcb.com/blog/five-easy-steps-to-secure-your-startup-right-now&quot;&gt;Sumit Agarwal&lt;/a&gt;, and a ridiculous amount of &lt;a href=&quot;http://engineering.shapesecurity.com/&quot;&gt;talented engineers&lt;/a&gt; and good people. It has truly been an educational experience to jump into a
-      small, &lt;a href=&quot;https://www.shapesecurity.com/investors/&quot;&gt;well-funded&lt;/a&gt; startup and observe how things work.&lt;/p&gt;
-      
-      &lt;p&gt;However, this type of education comes at a cost. This post is more of a personal story about what I've learned as a mid-30 year old
-      engineer moving out to the Valley and putting all my chips on the table for a startup. It's fun, exciting and incredibly challenging.&lt;/p&gt;
-      
-      &lt;br&gt;
-      
-      
-      &lt;h2&gt;You must uproot your family (or life) and move to the Valley&lt;/h2&gt;
-      
-      &lt;p&gt;For some people, this might be super easy to do. Maybe you’re young and don’t have any responsibilities. Maybe you’ve moved around your entire life and can deal with uprooting well. Things can be a bit more complex when you have a family and small children. But rest assured, many people out here are doing the same thing and dealing with the same problems.&lt;/p&gt;
-      
-      &lt;p&gt;This is all coming from a guy who worked remote for 6 years. You can do that too at some startups, but it's a handicap and now I see why. We’re all paying a price to be educated and move to the next level.&lt;/p&gt;
-      
-      &lt;br&gt;
-      
-      
-      &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;
-      &lt;p&gt;All our big furniture has been sold, rest of the stuff shipped. We are making our way from ATL to Mtn. View! &lt;a href=&quot;http://t.co/9XMzYUa5pQ&quot;&gt;pic.twitter.com/9XMzYUa5pQ&lt;/a&gt;&lt;/p&gt;— Wesley Hales (@wesleyhales) &lt;a href=&quot;https://twitter.com/wesleyhales/status/432265167175708672&quot;&gt;February 8, 2014&lt;/a&gt;
-      &lt;/blockquote&gt;
-      
-      
-      &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-      
-      
-      &lt;h2&gt;You must be willing to work without a title&lt;/h2&gt;
-      
-      &lt;p&gt;Speaking of next level… Do you have a “career” level up plan? From an engineering perspective, maybe you want to become a team lead or work your way up the ladder to middle management. At Shape and many other companies like Twitter, Airbnb, and Google, engineering is a &lt;a href=&quot;http://www.kpcb.com/blog/how-to-mix-engineering-and-management-at-a-fast-growing-company&quot;&gt;battlefield of respect&lt;/a&gt;.&lt;/p&gt;
-      
-      &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/2Y5EqZLVyUE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-      
-      
-      &lt;p&gt;We're all doing cool things and pushing those around us to test their limits - so titles really don’t matter. From individual contributors to VPs to &lt;a href=&quot;https://twitter.com/lpingree/status/555521047127412736&quot;&gt;advisors&lt;/a&gt;, we all code and are in the trenches of open source.&lt;/p&gt;
-      
-      &lt;p&gt;Having the day-to-day ability to learn from people you respect, admire, or just those who aspire to be better is a very rare thing.&lt;/p&gt;
-      
-      &lt;br&gt;
-      
-      
-      &lt;h2&gt;You must be willing to work hard&lt;/h2&gt;
-      
-      &lt;p&gt;Shape Security is in a unique scenario because this company really does have the opportunity to go from &lt;a href=&quot;http://www.amazon.com/gp/product/B00J6YBOFQ?btkr=1&quot;&gt;zero to one&lt;/a&gt;.
-      &lt;a href=&quot;http://www.amazon.com/gp/product/B00J6YBOFQ?btkr=1&quot;&gt;&lt;img src=&quot;http://ecx.images-amazon.com/images/I/41PZRSHF-NL._BO2,204,203,200_PIsitb-sticker-v3-big,TopRight,0,-55_SX278_SY278_PIkin4,BottomRight,1,22_AA300_SH20_OU01_.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;In the 80s through early 90s, the firewall &quot;product&quot; was just coming into the market and would soon become the centerpiece of network security. With everyone making their first Internet connections, the threat landscape was just developing. Fast forward to 2015, and you have a very similar scenario but instead of packet level detection, we're doing the detection with JavaScript. We now have a network appliance that is capable of rewriting web content on every request.&lt;/p&gt;
-      
-      &lt;p&gt;But there are many problems left to solve and there's a lot more work to do.&lt;/p&gt;
-      
-      &lt;br&gt;
-      
-      
-      &lt;h2&gt;You must be willing to stay the course&lt;/h2&gt;
-      
-      &lt;p&gt;I recently encountered the shiniest object of my career and I turned it down to stay at Shape. You see, if you have a decent side project on &lt;a href=&quot;https://github.com/onslyde&quot;&gt;github&lt;/a&gt;, &lt;a href=&quot;http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/&quot;&gt;align it with the market&lt;/a&gt;, and &lt;a href=&quot;http://www.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&quot;&gt;push it hard&lt;/a&gt; enough, some large company will shower you with riches to come work for them - it's called an acquihire and it happens all the time in Silicon Valley.&lt;/p&gt;
-      
-      &lt;p&gt;Turning down the acquihire was an extremely tough decision. But after I came to the realization that many of the people I work with encounter these types of &quot;shiny objects&quot; much more than I do, it really opened my eyes. At Shape, you're not working with average run of the mill people. Everyone here is at the top of their game. This is not college ball anymore, we are in the majors.
-      I honestly didn't want to quit what I was working on at Shape, and I think it's the first time I've felt that way about a company &amp;lt;3. It's more than a company, it's the people and the idea that will keep me there for the long term.&lt;/p&gt;
-      
-      &lt;p&gt;Are you ready to work at Shape Security? Think you have what it takes? Send me an &lt;a href=&quot;mailto:wesley@shapesecurity.com&quot;&gt;email&lt;/a&gt;.&lt;/p&gt;
-      
-      &lt;br&gt;
-      
-      
-      &lt;br&gt;
-    </content>
-  </entry>
-  <entry>
     <id>http://localhost:4242/blog/2014/02/26/A-More-Better-Conference-Experience.html</id>
     <title>A More Better Conference Experience</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2014-02-26T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2014/02/26/A-More-Better-Conference-Experience.html" rel="alternate" type="text/html" />
     <category term="devnexus"></category>
@@ -518,7 +418,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html</id>
     <title>From Startup to Enterprise</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2013-12-17T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/12/17/Designing-and-Implementing-an-Angular-Dashboard.html" rel="alternate" type="text/html" />
     <category term="design"></category>
@@ -656,7 +556,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html</id>
     <title>Jank Busting Apple's Home Page</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2013-10-26T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/10/26/Jank-Busting-Apples-Home-Page.html" rel="alternate" type="text/html" />
     <category term="jank"></category>
@@ -729,7 +629,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html</id>
     <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2013-10-23T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame.html" rel="alternate" type="text/html" />
     <category term="rAF"></category>
@@ -829,7 +729,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html</id>
     <title>Fun with Static Site Generators and Travis</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2013-03-29T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis.html" rel="alternate" type="text/html" />
     <category term="preprocessor"></category>
@@ -991,7 +891,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html</id>
     <title>How Collective Wisdom Shapes a Talk</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2013-02-25T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk.html" rel="alternate" type="text/html" />
     <category term="websockets"></category>
@@ -1173,7 +1073,7 @@
   <entry>
     <id>http://localhost:4242/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html</id>
     <title>Adventures with the Skia Debugger</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2013-02-18T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2013/02/18/Adventures-With-the-Skia-Debugger.html" rel="alternate" type="text/html" />
     <category term="frontend"></category>
@@ -1246,7 +1146,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/11/01/I-Will-Sleep-When-I-Die.html</id>
     <title>I'll Sleep When I Die - All for HTML5</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2012-11-01T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/11/01/I-Will-Sleep-When-I-Die.html" rel="alternate" type="text/html" />
     <category term="life"></category>
@@ -1429,7 +1329,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html</id>
     <title>Web Performance Testing With PhantomJS</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2012-08-16T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS.html" rel="alternate" type="text/html" />
     <category term="phantomjs"></category>
@@ -1500,7 +1400,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/07/19/HTML5-in-Atlanta.html</id>
     <title>HTML5 is Booming in Atlanta</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2012-07-19T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/07/19/HTML5-in-Atlanta.html" rel="alternate" type="text/html" />
     <category term="html5"></category>
@@ -1542,7 +1442,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/07/11/Sharing-With-Web-Intents-Today.html</id>
     <title>Sharing Content with Web Intents</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2012-07-11T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/07/11/Sharing-With-Web-Intents-Today.html" rel="alternate" type="text/html" />
     <category term="web intents"></category>
@@ -1795,7 +1695,7 @@
   <entry>
     <id>http://localhost:4242/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html</id>
     <title>Sniffing IE9 features while in compatibility mode</title>
-    <updated>2015-10-27T09:41:37-04:00</updated>
+    <updated>2015-10-27T10:57:22-04:00</updated>
     <published>2012-06-08T00:00:00+00:00</published>
     <link href="http://localhost:4242/blog/2012/06/08/Sniffing-IE9-while-in-compatibility-mode.html" rel="alternate" type="text/html" />
     <category term="ie"></category>
@@ -1845,6 +1745,38 @@
       &lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
       
       &lt;p&gt;Easier/better way?&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
+    <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
+    <updated>2015-10-27T10:57:22-04:00</updated>
+    <published>2012-04-09T00:00:00+00:00</published>
+    <link href="http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
+    <category term="phonegap"></category>
+    <category term="css3"></category>
+    <category term="iscroll"></category>
+    <summary>
+      I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
+      Apparently, there is a problem with older browsers using CSS3 selectors like div[style*='foo'] in combination with other DOM elements.
+      
+      
+      The test case was a little tricky to create, seeing that pinpointing this problem required mucho testing.
+      However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
+      styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 [style*='foo'] selector.
+      You must...
+    </summary>
+    <content type="html">
+      &lt;p&gt;I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
+      Apparently, there is a problem with older browsers using CSS3 selectors like &lt;code&gt;div[style*='foo']&lt;/code&gt; in combination with other DOM elements.
+      &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/iscroll.PNG&quot; width=&quot;150&quot; alt=&quot;iscroll&quot; align=&quot;left&quot; style=&quot;margin:20px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      
+      &lt;p&gt;The &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test case&lt;/a&gt; was a little tricky to create, seeing that pinpointing this problem required mucho testing.
+      However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
+      styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 &lt;code&gt;[style*='foo']&lt;/code&gt; selector.
+      You must run the &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test&lt;/a&gt; on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.&lt;/p&gt;
+      
+      &lt;br class=&quot;clear&quot;&gt;
     </content>
   </entry>
 </feed>
