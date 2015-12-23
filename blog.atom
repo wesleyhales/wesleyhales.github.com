@@ -2,9 +2,72 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4242/</id>
   <title>http://localhost:4242</title>
-  <updated>2015-10-27T10:57:22-04:00</updated>
+  <updated>2015-12-23T14:00:44-05:00</updated>
   <link href="http://localhost:4242/blog.atom" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4242/" rel="alternate" type="text/html" />
+  <entry>
+    <id>http://localhost:4242/blog/2015/12/23/The-Decommissioning-of-Onslyde.html</id>
+    <title>The Decommissioning of Onslyde</title>
+    <updated>2015-12-23T14:00:44-05:00</updated>
+    <published>2015-12-23T00:00:00+00:00</published>
+    <link href="http://localhost:4242/blog/2015/12/23/The-Decommissioning-of-Onslyde.html" rel="alternate" type="text/html" />
+    <category term="oss management"></category>
+    <summary>
+      As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012,
+      I started a web based, real-time feedback project called Onslyde.
+      
+      
+      
+      To me the project was a huge success with many measurable results:
+      
+      
+      Massive amount of research with WebSockets and mobile devices.
+      Based on the code and research I was able to craft many talks for speaking engagements at conferences around the globe.
+      The Onslyde service was used at some of the most popular software engineering conferences. (e.g. EdgeConf 2013-2014)
+      I received an incredible job offer that I unfortunately had to...
+    </summary>
+    <content type="html">
+      &lt;p&gt;As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012,
+      I started a web based, real-time feedback project called &lt;a href=&quot;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&quot;&gt;Onslyde&lt;/a&gt;.&lt;/p&gt;
+      
+      &lt;p&gt;&lt;img style=&quot;max-width:90%&quot; src=&quot;http://localhost:4242/images/posts/2015-12-23/edge1-panel-detail-large-opt.png&quot;&gt;&lt;/p&gt;
+      
+      &lt;p&gt;To me the project was a huge success with many measurable results:&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;Massive amount of research with WebSockets and mobile devices.&lt;/li&gt;
+      &lt;li&gt;Based on the code and research I was able to craft many talks for speaking engagements at conferences around the globe.&lt;/li&gt;
+      &lt;li&gt;The Onslyde service was used at some of the most popular software engineering conferences. (e.g. EdgeConf 2013-2014)&lt;/li&gt;
+      &lt;li&gt;I received an incredible job offer that I unfortunately had to turn down this time last year. massive salary, director title, bonus, everything...&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;p&gt;All of the above and much more were the result of an open source side project on github. Of course, I had a few big fails
+       along the way but overall I feel the project did something special that no one else was doing. It connected the audience with the
+       conversation that has always been a one way lecture.&lt;/p&gt;
+      
+      &lt;p&gt;Anywho, here's to a great (almost) 4 year run for a project that I actually enjoyed working on. I may take the wisdom and lessons
+      learned to a new similar project in 2016, so stay tuned.&lt;/p&gt;
+      
+      &lt;p&gt;Further Reading and Videos:&lt;/p&gt;
+      
+      &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&quot;&gt;Smashing Magazine Article&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&quot;&gt;Research on Audience Interaction&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://labs.ft.com/2013/10/thoughts-from-edge-2/&quot;&gt;Onslyde in use at EdgeConf 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/&quot;&gt;Onslyde in use at Devnexus 2014&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.christianheilmann.com/2014/03/22/edgeconf-3-just-be-there-next-time-trust-me/&quot;&gt;Onslyde in use at EdgeConf 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+      &lt;a href=&quot;http://eventtech.co/2014/01/24/wesley-hales-creator-of-onslyde/&quot;&gt;EventTech podcast interview&lt;/a&gt;.&lt;/li&gt;
+      &lt;/ul&gt;
+      
+      
+      &lt;br&gt;
+      
+      
+      &lt;br&gt;
+    </content>
+  </entry>
   <entry>
     <id>http://localhost:4242/blog/2015/04/24/Speedgun.html</id>
     <title>Simulated RUM testing with PhantomJS 2</title>
@@ -1745,38 +1808,6 @@
       &lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
       
       &lt;p&gt;Easier/better way?&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html</id>
-    <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-    <updated>2015-10-27T10:57:22-04:00</updated>
-    <published>2012-04-09T00:00:00+00:00</published>
-    <link href="http://localhost:4242/blog/2012/04/09/PhoneGap-iscroll-css3-choppiness.html" rel="alternate" type="text/html" />
-    <category term="phonegap"></category>
-    <category term="css3"></category>
-    <category term="iscroll"></category>
-    <summary>
-      I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
-      Apparently, there is a problem with older browsers using CSS3 selectors like div[style*='foo'] in combination with other DOM elements.
-      
-      
-      The test case was a little tricky to create, seeing that pinpointing this problem required mucho testing.
-      However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
-      styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 [style*='foo'] selector.
-      You must...
-    </summary>
-    <content type="html">
-      &lt;p&gt;I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
-      Apparently, there is a problem with older browsers using CSS3 selectors like &lt;code&gt;div[style*='foo']&lt;/code&gt; in combination with other DOM elements.
-      &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/iscroll.PNG&quot; width=&quot;150&quot; alt=&quot;iscroll&quot; align=&quot;left&quot; style=&quot;margin:20px&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-      
-      &lt;p&gt;The &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test case&lt;/a&gt; was a little tricky to create, seeing that pinpointing this problem required mucho testing.
-      However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline
-      styles, an ordered list, a table with a lot of rows, and the use of the specific CSS3 &lt;code&gt;[style*='foo']&lt;/code&gt; selector.
-      You must run the &lt;a href=&quot;http://wesleyhales.com/iscroll&quot;&gt;test&lt;/a&gt; on an older iPhone to see the choppiness of the scroll. This happens on both Mobile Safari and within PhoneGap's webview.&lt;/p&gt;
-      
-      &lt;br class=&quot;clear&quot;&gt;
     </content>
   </entry>
 </feed>
