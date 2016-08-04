@@ -686,6 +686,8 @@
 
           log('domContentLoadedEventEnd ' + (timings.domContentLoadedEventEnd - timings.navigationStart));
           log('domComplete ' + (timings.domComplete - timings.navigationStart));
+          log('DNS ' + (window.performance.timing.domainLookupEnd - window.performance.timing.domainLookupStart));
+          log('Response ' + (window.performance.timing.responseEnd - window.performance.timing.responseStart));
 
 //          for (var timing in timings) {
 //            log(timing + ' ' + (timings[timing]))
