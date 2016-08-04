@@ -673,11 +673,7 @@
     <script defer="defer" src="/js/site.js" type="text/javascript"></script>
     <script>
       if(navigator.userAgent.indexOf('Catchpoint') >= 0){
-        log(window.label + ' start blocking ui thread with document.write ' + (getTime() - window.xtime) + 'ms')
-        for(var i = 0;i < 100; i++){
-          console.log(window.label + ' block ui');
-          document.write('block ui thread' + i + '<br/>');
-        }
+
 
         log(window.label + ' ui thread blocked for ' + (getTime() - window.xtime) + 'ms');
 
@@ -691,6 +687,12 @@
         },1000)
 
         document.body.appendChild(domConsole);
+
+        log(window.label + ' start blocking ui thread with document.write ' + (getTime() - window.xtime) + 'ms')
+        for(var i = 0;i < 100; i++){
+          console.log(window.label + ' block ui');
+          document.write('block ui thread' + i + '<br/>');
+        }
       }
     </script>
   </body>
