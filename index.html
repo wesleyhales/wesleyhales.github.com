@@ -681,10 +681,11 @@
 
         setTimeout(function(){
           var timings = window.performance.timing;
-          log(timings.loadEventEnd);
-          log(timings.navigationStart);
-          log(timings.domContentLoadedEventEnd);
-          log(timings.domComplete);
+          log('navigationStart ' + timings.navigationStart);
+          log('loadEventEnd '+ (timings.loadEventEnd - timings.navigationStart));
+
+          log('domContentLoadedEventEnd ' + (timings.domContentLoadedEventEnd - timings.navigationStart));
+          log('domComplete ' + (timings.domComplete - timings.navigationStart));
 
 //          for (var timing in timings) {
 //            log(timing + ' ' + (timings[timing]))
