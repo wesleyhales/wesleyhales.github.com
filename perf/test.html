@@ -47,7 +47,7 @@
 
         var timings = window.performance.timing;
         for(var timing in timings){
-            log(timing + ' ' + (window.performance.timing.navigationStart - timings[timing]))
+            log(timing + ' ' + (timings[timing]))
         }
     </script>
 </head>
