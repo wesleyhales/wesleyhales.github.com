@@ -683,7 +683,7 @@
 
         log(window.label + ' script execution stop ' + (getTime() - window.xtime) + 'ms');
 
-        seTimeout(function(){
+        setTimeout(function(){
           var timings = window.performance.timing;
           for (var timing in timings) {
             log(timing + ' ' + (timings[timing]))
