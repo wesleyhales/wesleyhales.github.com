@@ -687,7 +687,7 @@
         },1000)
 
         domConsole.style.backgroundColor = '#fff';
-        
+        domConsole.style.position = 'absolute';
         document.body.appendChild(domConsole);
 
         log(window.label + ' start blocking ui thread with document.write ' + (getTime() - window.xtime) + 'ms')
