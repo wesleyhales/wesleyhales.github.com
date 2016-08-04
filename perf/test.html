@@ -1,0 +1,71 @@
+
+<html>
+<head>
+
+    <script>
+        window.xtime = new Date().getTime();
+        var now = 0;
+        window.label = '[inline page]';
+
+
+
+        var domConsole = document.createElement('div');
+        domConsole.id = 'domConsole';
+
+        function log(msg){
+            domConsole.innerHTML += msg + '<hr/>'
+        }
+
+        window.getTime = function(){
+            return new Date().getTime();
+        };
+
+        log(window.label + ' script execution start ' + (getTime() - window.xtime) + 'ms' + '- according to the HRT + ' + performance.now() + 'ms has elapsed');
+
+        window.addEventListener('load', function (event) {
+            log(window.label + ' [event fired]: load ' + (getTime() - window.xtime) + 'ms');
+        });
+
+        document.addEventListener('DOMContentLoaded', function (event) {
+            log(window.label + ' [event fired]: DOMContentLoaded ' + (getTime() - window.xtime) + 'ms');
+        });
+
+
+        document.onreadystatechange = function () {
+            if (document.readyState == "interactive") {
+                log(window.label + ' [readyStateChange] interactive ' + (getTime() - window.xtime) + 'ms');
+            }else if (document.readyState == "loading") {
+                log(window.label + ' [readyStateChange] loading ' + (getTime() - window.xtime) + 'ms');
+            }else if (document.readyState == "complete") {
+                log(window.label + ' [readyStateChange] complete ' + (getTime() - window.xtime) + 'ms');
+            }
+        };
+
+        function bodyload() {
+            log(window.label + ' body onload method called through \'onload=\' attribute' + (getTime() - window.xtime) + 'ms');
+        }
+
+        var timings = window.performance.timing;
+        for(var timing in timings){
+            log(timing + ' ' + (window.performance.timing.navigationStart - timings[timing]))
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+<img src="http://lovelace-media.imgix.net/uploads/752/9182cf50-f75d-0132-f409-0e18518aac2f.jpg"/>
+<div id="domConsole"></div>
+<script>
+    console.log(window.label + ' start blocking ui thread with document.write', getTime() - window.xtime + 'ms')
+    for(var i = 0;i < 100; i++){
+        console.log(window.label + ' block ui');
+        document.write('block ui thread' + i + '<br/>');
+    }
+
+    log(window.label + ' ui thread blocked for ' + (getTime() - window.xtime) + 'ms');
+
+    log(window.label + ' script execution stop ' + (getTime() - window.xtime) + 'ms');
+    document.body.appendChild(domConsole);
+
+</script>
+</body>
+</html>
