@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2008-01-20T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+        <title>Page and Component Modal with a4j&amp;#58;status &middot; Wesley Hales </title>
+        <link rel="canonical" href="http://wesleyhales.com/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    </head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">Page and Component Modal with a4j&amp;#58;status</h3>
+    </header>
+
+    <section class="post-content">
+        <p>I haven't really had a chance to look at RichFaces OOB modal, but I had written <a href="http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and">this one</a> over a year ago when Ajax4JSF was still on java.net</p> 
+
+<p><a href="/images/jroller/page-modal.gif"><img src="/images/jroller/page-modal-small.gif" alt="" align="right"/></a></p>
+
+<p>Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website. The cool thing about a modal window is that the user doesn't feel like they are being redirected to another page. They can still keep their focus on the content at hand while multitasking and spawning another workflow.</p> 
+
+<p>So what about component based modals? We know good and well what a <a href="/images/jroller/page-modal.gif">page-locking modal</a> is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
+</p> 
+
+<p> 
+This is a component based modal. It basically blocks out the activated component per ajax request.<br/> 
+<a href="/images/jroller/component-modal.gif"><img src="/images/jroller/component-modal-small.gif" alt="" align="left"/></a><br/> 
+This demo is already setup and ready to go, check it out <a href="http://code.google.com/p/seam-2-sandbox/">here</a> and the instructions on getting it running are in the home page description. This is the same demo I used in my previous <a href="http://www.jroller.com/wesleyhales/entry/running_seam_2_0_on">Running Seam on Tomcat...</a> article - now updated to the latest version of Seam and cleaned up a bit (and also put it under Google code vcs).</p> 
+
+<p>And that's not all! To make life even easier I wrapped the modal(s) up in a nice and neat Facelets component. The modals also allow for unlimited modals-per-page. Meaning that you can have 10000 modals on one page without conflicts ;). Here's how you use it:</p> 
+
+<p><pre>
+<a name="l65">
+</a><a name="l66"><span class="s0">&lt;</span><span class="s1">hc:modal </span><span class="s2">modalId=</span><span class="s3">&ldquo;loading-modal&rdquo; </span><span class="s2">modalContainerId=</span><span class="s3">&ldquo;loading-modal-msg&rdquo; </span><span class="s2">hidden=</span><span class="s3">&ldquo;true&rdquo; </span><span class="s2">width=</span><span class="s3">&ldquo;129px&rdquo;</span><span class="s0">&gt;</span><span class="s4"></p>
+
+<p></span></a><a name="l67"> <span class="s9">Content that you want in the modal goes here&hellip;</span><span class="s4">
+</span></a><a name="l68"><span class="s0">&lt;/</span><span class="s1">hc:modal</span><span class="s0">&gt;</span><span class="s4">
+</span></a><a name="l69">
+</a>
+</pre>
+<br/>
+<p>&hellip; then put the a4j:status tag inside of an a4j:region. Note the javascript methods being called. You could use these in any onclick event that needs to present a modal.
+</p>
+<br/></p>
+
+<p><code>
+<pre>
+<a name="l141"> <span class="s0">&lt;</span><span class="s1">a4j:status </span><span class="s2">for=</span><span class="s3">&ldquo;stat1&rdquo; </span><span class="s2">forceId=</span><span class="s3">&ldquo;true&rdquo; </span><span class="s2">id=</span><span class="s3">&ldquo;ajaxStatus&rdquo;</span><span class="s0"></p>
+
+<p></span></a><a name="l142"> <span class="s2">onstart=</span><span class="s3">&ldquo;</span><span class="s4">alertModal(</span><span class="s8">&lsquo;loading-modal&rsquo;</span><span class="s4">,</span><span class="s8">&lsquo;loading-modal-msg&rsquo;</span><span class="s4">);</span><span class="s3">&ldquo;</span><span class="s0">
+</span></a><a name="l143"> <span class="s2">onstop=</span><span class="s3">&ldquo;</span><span class="s4">hideContentModal(</span><span class="s8">&lsquo;loading-modal&rsquo;</span><span class="s4">,</span><span class="s8">&lsquo;loading-modal-msg&rsquo;</span><span class="s4">);</span><span class="s3">&ldquo;</span><span class="s0">&gt;</span><span class="s4"></p>
+
+<p></span></a><a name="l144"> <span class="s0">&lt;</span><span class="s1">f:facet </span><span class="s2">name=</span><span class="s3">&ldquo;start&rdquo;</span><span class="s0">&gt;</span><span class="s4">
+</span></a><a name="l145">
+</a><a name="l146"> <span class="s0">&lt;/</span><span class="s1">f:facet</span><span class="s0">&gt;</span><span class="s4">
+</span></a><a name="l147"> <span class="s0">&lt;/</span><span class="s1">a4j:status</span><span class="s0">&gt;</span><span class="s4">
+</span></a>
+</pre>
+</code>
+<br/>
+<p>This is a work in progress and maybe some day I will cleanup my js, explain why I did things the way I did them, and package this up in a component jar. For now this is it.</p></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2008-01-20T00:00:00Z">January 20, 2008</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Page%20and%20Component%20Modal%20with%20a4j%26%2358%3bstatus&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2008%2f01%2f20%2fPage-and-Component-Modal-with-a4j"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2008%2f01%2f20%2fPage-and-Component-Modal-with-a4j"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2008%2f01%2f20%2fPage-and-Component-Modal-with-a4j"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	Java, demo, jboss, modal, richfaces
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2016 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1241000-10', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+</body>
+</html>

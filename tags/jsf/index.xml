@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jsf on Wesley Hales</title>
+    <link>http://wesleyhales.com/tags/jsf/</link>
+    <description>Recent content in Jsf on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Aug 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://wesleyhales.com/tags/jsf/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
+      <link>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
+      <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
+      <description>&lt;p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
+
+&lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
+
+&lt;p&gt;2) Similar to the iPad Mail.app, it&amp;#8216;s almost like you are designing 2 different UI&amp;#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1.jpg&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1-small.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;p class=&#34;pTitle&#34;&gt;Day 2: About The Design&lt;/p&gt;&lt;br /&gt; 
+Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&amp;#8216;t all that exciting.&lt;/p&gt; 
+
+&lt;p&gt;Notice how, unlike the &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;iphone design from Day 1&lt;/a&gt;, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user&#39;s attention focused on the app itself.&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2.jpg&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; align=&#34;left&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2-small.JPG&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
+The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.&lt;/p&gt; 
+
+&lt;p&gt;To the right of the title you see the secondary menu represented by rounded rectangles. Next is the main content of the page broken out into content and actionable panels.&lt;/p&gt;
+
+&lt;p&gt;And finally you have the big arrows to the right and left. These arrows are &amp;#8220;thumb reachable&amp;#8221; which is a common usability pattern in portrait mode tablets. It provides an easy page flip access to all of the RichFaces components within the top level category.&lt;br /&gt; 
+&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;The great thing about CSS3 transitions is that you can really make a UI like this scream and flow seamlessly. So you can imagine how tapping an arrow with your thumb will slide in a new component demo and gracefully highlight the secondary menu option at the top.&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;So this concludes our design for Day 2. As I said earlier, this is more of a use case driven design. WE could spawn a very minimalistic skin and component look and feel from this. However, It would be more to display the power behind RichFaces ajax and templating features as the user moves through the app.&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
+      <link>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
+      <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
+      <description>&lt;p&gt;&lt;p&gt;Today marks an important day in the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;RichFaces project&lt;/a&gt; as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.&lt;br /&gt; 
+So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. &lt;/p&gt;&lt;p&gt;I will announce each new design (both for tablet and phone) via &lt;a href=&#34;https://twitter.com/#!/richfaces&#34;&gt;twitter&lt;/a&gt; with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
+&lt;p class=&#34;pTitle&#34;&gt;Day 1: About The Design&lt;/p&gt;&lt;br /&gt; 
+Here we have what could be the RichFaces component showcase skin. This is what I will be posting a new version of each day this week.&lt;/p&gt; 
+
+&lt;p&gt;In this design we have the standard browser “functionality take over” at the top header. The custom back button is essential to mobile web design and must be overridden here &amp;#8211; following the pattern of previous designs.&lt;/p&gt; 
+
+&lt;p&gt;Nothing too different about the standard menu options and detail options (center stage). Following convention here as well. One thing I am adhering too are the usability guidelines set forth by Jakob Nielsen&amp;#8216;s &lt;a href=&#34;http://www.nngroup.com/reports/mobile/ipad/&#34;&gt;Usability of iPad Apps and Websites&lt;/a&gt;&lt;/p&gt; 
+
+&lt;p&gt;To get the full tab bar at the bottom (and to replicate the native feel) the user must bookmark the application. I think it makes sense for this menu to be contextual to the app and provide other alternate routes.&lt;br /&gt; 
+&lt;/p&gt;&lt;br /&gt; 
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Runtime Type Detection and Usage with Weld</title>
+      <link>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
+      <description>&lt;p&gt;&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;About TweetStream&lt;/p&gt;&lt;br /&gt; 
+&lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
+A little bit about the usecase: The &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; application is an app that Jay Balunas and I developed over the past few months for our presentation at &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt; web application (which runs on Android and iOS devices) with things like scalable data grid, &lt;span class=&#34;caps&#34;&gt;JMS&lt;/span&gt;, JSF2, &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt;/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.&lt;br /&gt; 
+So, we had 2 scenarios &amp;#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.&lt;br /&gt; 
+So we got our tweet data from the true source (twitter4j) during our &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, and then from the data grid during the keynote. We could have used &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; alternatives, but I wanted a true solution with no &lt;span class=&#34;caps&#34;&gt;XML&lt;/span&gt; configuration and runtime detection.&lt;br /&gt; 
+&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;The Code...&lt;/p&gt;&lt;br /&gt; 
+So we have 2 Qualifier Types:&lt;br /&gt; 
+@TwitterLocal for the &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con demo impl&lt;br /&gt; 
+@TwitterServer for the keynote impl&lt;/p&gt; 
+
+&lt;p&gt;We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.&lt;/p&gt; 
+
+&lt;p&gt;Now that we have our types defined as follows&amp;#8230;&lt;/p&gt; 
+
+&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;@Qualifier&lt;br /&gt; 
+&lt;br /&gt; 
+@Retention&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;RetentionPolicy.&lt;span style=&#34;color: #006633;&#34;&gt;RUNTIME&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+@Target&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;PARAMETER&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; @&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterServer&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+@Qualifier&lt;br /&gt; 
+&lt;br /&gt; 
+@Retention&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;RetentionPolicy.&lt;span style=&#34;color: #006633;&#34;&gt;RUNTIME&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+@Target&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;PARAMETER&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; @&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterLocal&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;We need not only an implementation of each, but also a deciding bean that tells us which type to use.&lt;/p&gt; 
+
+&lt;p&gt;First, our implementation of each Type implements an interface:&lt;/p&gt; 
+
+&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterSource &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;void&lt;/span&gt; init&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+…&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;And our implementations have a different usage of the init method. &lt;code&gt;TwitterLocal starts the stream coming from twitter and updates the infinispan cache. &lt;/code&gt;TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&amp;#8211;8 nodes.&lt;/p&gt; 
+
+&lt;p&gt;So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TweetStream &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @Inject&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aany+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;Any&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt; 
+&amp;nbsp; Instance&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterSource&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; twitterSource&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TwitterLocalQualifier &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;extends&lt;/span&gt; AnnotationLiteral&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterLocal&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;implements&lt;/span&gt; TwitterLocal&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TwitterServerQualifier &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;extends&lt;/span&gt; AnnotationLiteral&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterServer&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;implements&lt;/span&gt; TwitterServer&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;boolean&lt;/span&gt; initialCheck &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;boolean&lt;/span&gt; demoexists &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @PostConstruct&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;void&lt;/span&gt; init&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;getTwitterSource&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;init&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @Produces&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; TwitterSource getTwitterSource&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;initialCheck&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;try&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;Class&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;forName&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;log.&lt;span style=&#34;color: #006633;&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;Running in JBW2011 Demo Mode.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;demoexists &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aclassnotfoundexception+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;ClassNotFoundException&lt;/span&gt;&lt;/a&gt; ex&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;log.&lt;span style=&#34;color: #006633;&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;Running in local JUDCon2011 Demo Mode.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; initialCheck &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aannotation+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;Annotation&lt;/span&gt;&lt;/a&gt; qualifier &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; demoexists &lt;span style=&#34;color: #339933;&#34;&gt;?&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;new&lt;/span&gt; TwitterServerQualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&#34;color: #339933;&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;new&lt;/span&gt; TwitterLocalQualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;return&lt;/span&gt; twitterSource.&lt;span style=&#34;color: #006633;&#34;&gt;select&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;qualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;This is all in the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&amp;#8230;&lt;br /&gt; 
+&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Does Developing Portlets Make You a Better Developer?</title>
+      <link>http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer</link>
+      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer</guid>
+      <description>&lt;p&gt;&lt;p&gt;Working with portlet technology is often discredited for it’s seemingly complex &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.&lt;br /&gt; 
+This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;What if you didn’t have to worry about portlet development gotchas anymore? What if you could develop portlets with the ease and hassle free life that you have with good ol’ servlets? Well, I’m here to tell you that this can be partly achieved with JSR-301 portlet bridge technology.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;I encourage (actually I dare you) to those who have never even touched a portal to take the JBoss Portlet Bridge for a test drive. It takes &lt;a href=&#34;http://downloads.sourceforge.net/project/jboss/GateIn/Portal/3.1.0-FINAL/GateIn-3.1.0-FINAL-jbossas.zip&#34;&gt;1 download (GateIn bundled with JBoss)&lt;/a&gt; and one maven archetype to get started. You can choose from any combination of plain &lt;span class=&#34;caps&#34;&gt;JSF&lt;/span&gt;, Richfaces, and Seam with&lt;br /&gt; 
+&lt;code style=&#34;color:white&#34;&gt;mvn archetype:generate -DarchetypeCatalog=http://bit.ly/jbossportletbridge&lt;/code&gt; from the command line.&lt;br /&gt; 
+&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/archetype.gif&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;If you run into any questions or special usecases, we have 7 videos which demo and walk you through just about anything you could think up.&lt;br /&gt; 
+&lt;a href=&#34;http://vimeo.com/wesleyhales/videos/sort:date&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/vimeo.gif&#34; alt=&#34;&#34; align=&#34;center&#34;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/refcard.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;And for those that like to have a refcard by their side, you can get all the information you need about the story of portal technology and configuration drill downs here: &lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;From &lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;“Mastering Portals with a Portlet Bridge”&lt;/a&gt; DZone Refcard:&lt;br /&gt; 
+“A portlet bridge allows you to run application frameworks like &lt;span class=&#34;caps&#34;&gt;JSF&lt;/span&gt; in a portal environment without needing to know anything about the underlying portlet &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; or portlet concepts.”&lt;br /&gt; 
+&lt;/p&gt;&lt;br /&gt; 
+&lt;br/&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/jbw-2011.gif&#34; alt=&#34;&#34; align=&#34;left&#34; style=&#34;margin:0 15px 25px 0&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+And if all that wasn’t enough, I will be giving a 50 minute talk at JBoss World titled &lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&#34;Making Portals Cool: The Compelling Advantages of a Portlet Bridge&#34;&lt;/a&gt; where you can come and personally track me down and specifically tell me about your problems, pains, or happiness with the project or the world in general &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; JBoss World will be located in Boston from May 3&amp;#8211;6.&lt;br /&gt; 
+I think &lt;a href=&#34;http://www.redhat.com/summit/rates/&#34;&gt;early bird pricing&lt;/a&gt; ends this Friday (April 8th), so you better hurry if you want to save a little cash.&lt;/p&gt; 
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
+      <link>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</link>
+      <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</guid>
+      <description>&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/richfaces/&#34;&gt;Richfaces 4&lt;/a&gt; just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.&lt;br /&gt; 
+First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;Today I am going to add touch support to the RF drag and drop component. We all know that touch events and gestures are not the same as a mouse click. So one must consider a couple of different approaches before implementing a final solution:&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;1) Override the default touch events with their mouse counterparts.&lt;br /&gt; 
+This is easy since you are basically overriding the default functionality of touch and gesture events. There are 3 mouse events to replace to get this component working:&lt;br /&gt; 
+touchstart,touchmove,touchend&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;2) Extend jQuery core components and add the “drag” functionality alongside “touch”&lt;br /&gt; 
+A little more difficult and fortunately the jQuery team is working on the mobile upgrade to ui.draggable &amp;#8211; so this should be available in the next few weeks/months.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;object width=&#34;480&#34; height=&#34;390&#34;&gt;&lt;param name=&#34;movie&#34; value=&#34;http://www.youtube.com/v/Exs1jumZ4yk?fs=1&amp;hl=en_US&#34;&gt;&lt;/param&gt;&lt;param name=&#34;allowFullScreen&#34; value=&#34;true&#34;&gt;&lt;/param&gt;&lt;param name=&#34;allowscriptaccess&#34; value=&#34;always&#34;&gt;&lt;/param&gt;&lt;embed src=&#34;http://www.youtube.com/v/Exs1jumZ4yk?fs=1&amp;hl=en_US&#34; type=&#34;application/x-shockwave-flash&#34; allowscriptaccess=&#34;always&#34; allowfullscreen=&#34;true&#34; width=&#34;480&#34; height=&#34;390&#34;&gt;&lt;/embed&gt;&lt;/object&gt;(tested on live iPhone4 and iOS simulator iPad)&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;I originally started out using the touch and gesture events to do the drag and drop. This allowed for a smoother UX but unfortunately, the internal plumbing of Richfaces required a complex extension/wrap of rf.ui.draggable (to add the new touch functions) and some custom bindings like rf.Event.bind(this.dragElement, &amp;#8216;touchstart&amp;#8216;+this.namespace&amp;#8230;.) in dnd-draggable.js.&lt;br /&gt; 
+In the end, it was just easier for me to use &lt;a href=&#34;https://github.com/furf/jquery-ui-touch-punch/blob/master/jquery.ui.touch-punch.js&#34;&gt;this script&lt;/a&gt; and re-map the 3 main touch events.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;I looked at many different approaches starting with SenchaTouch which btw is pointless if you are going to leverage existing jQuery, then moving to a few different jQuery utilities.&lt;br /&gt; 
+The basic question here, which can be applied to any component framework, is “What’s the best mobile approach for supporting product xyz?” Every product out there that touches the UI has to cross this gap. Touch interfaces today&amp;#8230; tangible UI’s tomorrow&amp;#8230; and the vicious cycle continues. And majority of the time, the best way to get started is to build an emulator so that your product can work today. This will buy you the time to build the native functionality that takes full advantage of the target platform.&lt;br /&gt; 
+Unfortunately the script I used here doesn’t always work and there are still a few more components in Richfaces that do not work with this duck punch approach. So I will try to make this a series and blog about &amp;#38; fix the other components on mobile platforms.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;The old days of drag and drop are not as simple as they used to be. With multi touch surfaces you have the ability to accelerate your drag and throw it across the page, rotate it, and auto scrolling when you drag the object off the page, etc... Just something to think about when designing a similar component.&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Replacing FacesMessages with Growl alerts</title>
+      <link>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
+      <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
+      <description>&lt;p&gt;I saw a tweet from(&lt;a href=&#34;http://twitter.com/maxandersen&#34;&gt;@maxandersen&lt;/a&gt;) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.&lt;/p&gt; 
+&lt;p&gt;This is really just javascript on the front end and can be used with any backend message generating system.&lt;/p&gt; 
+
+&lt;p class=&#34;pTitle&#34;&gt;Code Used:&lt;/p&gt; 
+&lt;p&gt; 
+&lt;ul&gt; 
+&lt;li&gt;&lt;a href=&#34;http://jboss.org/jbossrichfaces/&#34;&gt;RichFaces 3.3.1.GA&lt;/a&gt;&lt;/li&gt; 
+&lt;li&gt;&lt;a href=&#34;http://stanlemon.net/projects/jgrowl.html&#34;&gt;jGrowl (latest)&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;/p&gt; 
+
+&lt;p class=&#34;pTitle&#34;&gt;Include the scripts in the head:&lt;/p&gt; 
+&lt;p&gt; 
+Note the loading of jquery in the Richfaces page... 
+&lt;code&gt;&lt;pre&gt; 
+&lt;a name=&#34;l1&#34;&gt;&lt;span class=&#34;s0&#34;&gt; 
+&lt;a name=&#34;l5&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;a4j:loadScript &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;src=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;resource://jquery.js&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;/&amp;gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;link &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;rel=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;stylesheet&amp;quot; &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;/css/jquery-plugins/jquery.jgrowl.css&amp;quot; &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;type=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt; 
+&lt;a name=&#34;l4&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;script &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;type=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;text/javascript&amp;quot; &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;src=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;/js/jquery-plugins/jquery.jgrowl.js&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt; 
+&lt;span class=&#34;s0&#34;&gt; 
+&lt;/span&gt; &lt;/span&gt;&lt;/a&gt; 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;/p&gt; 
+
+&lt;p class=&#34;pTitle&#34;&gt;Write a simple script to extract the message:&lt;/p&gt; 
+&lt;p&gt; 
+... and add any customizations you may need to jGrowl. One thing to take note of here is that you cannot use the $ sign for jQuery in a Richfaces app. This is because of the RF framework using prototype.js by default and it too uses the $ sign. So every 3rd party jQuery script that you use, you must s/$/jQuery/g (find and replace all usages of &#39;$&#39; with &#39;jQuery&#39;) 
+&lt;code&gt;&lt;pre&gt; 
+function showError() 
+{ 
+jQuery.jGrowl.defaults.position = &#39;center&#39;; 
+if (document.getElementById(&#39;errorMessage&#39;) != null) 
+{ 
+jQuery.jGrowl(jQuery(&#39;#errorMessage&#39;).html(), { 
+sticky: false, 
+life: 10000 
+}) 
+} 
+} 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;/p&gt; 
+
+&lt;p class=&#34;pTitle&#34;&gt;And tell the script to run after page load:&lt;/p&gt; 
+&lt;p&gt; 
+jQuery has a simple statement that checks the document and waits until it&#39;s ready to be manipulated, known as the ready event: 
+&lt;code&gt;&lt;pre&gt; 
+$(document).ready(function(){ 
+showError(); 
+}); 
+
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;/p&gt; 
+
+&lt;p&gt;Here is a live screen shot of the script in action using a generate h:message. 
+&lt;img src=&#34;http://wesleyhales.com/images/jroller/jgrowl.gif&#34; align=&#34;center&#34;/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge Beta 6 Released!</title>
+      <link>http://wesleyhales.com/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released</link>
+      <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released</guid>
+      <description>&lt;p&gt;Read about it here: &lt;a href=&#34;http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html&#34;&gt;http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
+      <link>http://wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</link>
+      <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</guid>
+      <description>&lt;p&gt;InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!&lt;/p&gt; 
+&lt;br/&gt; 
+&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
+
+&lt;p&gt;This first part is about basic JSF development with an easy to follow tutorial and real world development tips. The next one will be about RichFaces and the final (about Seam) will be published right after the release of Beta 4 in early September.&lt;/p&gt; 
+
+&lt;p&gt;Enjoy!&lt;br/&gt; 
+&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&lt;/a&gt; 
+&lt;br/&gt;&lt;br/&gt;&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-2&#34;&gt;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-2&lt;/a&gt; 
+&lt;br/&gt; 
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JSF in a portlet has never been this easy!</title>
+      <link>http://wesleyhales.com/blog/2008/07/07/JSF-in-a-portlet-has-never-been-this-easy</link>
+      <pubDate>Mon, 07 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2008/07/07/JSF-in-a-portlet-has-never-been-this-easy</guid>
+      <description>&lt;p&gt;We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects. &lt;a href=&#34;http://www.jboss.org/files/portletbridge/docs/1.0.0.B3/en/html_single/index.html&#34;&gt;See the documentation for full details&lt;/a&gt;. 
+
+&lt;p&gt;For those that want to jump right in, you can run the following archetype and have it deployed on JBoss AS + Portal in minutes: 
+&lt;br&gt; 
+&lt;code&gt;&lt;pre&gt; 
+mvn archetype:generate -DarchetypeGroupId=org.jboss.portletbridge.archetypes -DarchetypeArtifactId=1.2-basic -DarchetypeVersion=1.0.0.B3 -DgroupId=org.whatever.project -DartifactId=myprojectname -DarchetypeRepository=http://repository.jboss.org/maven2/ -Dversion=1.0.0.B3 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;br/&gt; 
+&lt;code&gt;&lt;pre&gt; 
+mvn install cargo:start -Premote-portal -Dpc20 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;br/&gt; 
+&lt;code&gt;&lt;pre&gt; 
+mvn cargo:deploy -Premote-portal -Dpc20 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;br/&gt; 
+Visit &lt;a href=&#34;http://localhost:8080/simple-portal/demo/jsr-301.jsp&#34;&gt;http://localhost:8080/simple-portal/demo/jsr-301.jsp&lt;/a&gt; 
+&lt;/p&gt; 
+&lt;br/&gt; 
+&lt;br/&gt; 
+The majority of the code written for this release is internal to the portlet bridge project (refactoring, 301 spec updates and enhancements, bug fixes...). The next release (Beta 4 - early Sept) will be huge for the portlet bridge for the following reasons: 
+&lt;ul&gt;&lt;li&gt;The EG is currently discussing a lot of significant clarifications and improvements. For example, working with the JSF 2.0 EG to allow certain needs and working on Portlet 2.0 areas of the spec. 
+&lt;/li&gt;&lt;li&gt;There is currently a lot of discussion about navigation between portlet modes. Once this is nailed down in the spec, we will implement it. 
+&lt;/li&gt;&lt;li&gt;The Portlet 1.0 version should be getting close to public review.&lt;/li&gt;&lt;/ul&gt;Other than the spec related reasons for release schedule, we must work in unison with the latest Seam and RichFaces relases, make sure that we squash any bugs concerning the 3 integration points, handle features/improvements/refactorings, and try to test and give feedback to the 301 EG. And, of course we can&#39;t forget about JBoss Portal 2.7+! 
+
+There are soo many cool things going on right now within the JBoss Portal project, I would like to tell you about all of them but then this post wouldn&#39;t be about JBPB anymore. Just stay tuned to this blog... 
+
+With that said, here are a few tips for JSF portlet developers that concern this release: 
+&lt;ul&gt;&lt;li&gt;&lt;b id=&#34;lwur&#34;&gt;Namespacing&lt;/b&gt; 
+In situations where you need to use the id of an element in your JSF/xhtml markup, you would normally see something like &#39;form1:myBtn&#39; in the rendered markup. But now with the bridge namespacing you will see something similar to: &lt;p id=&#34;d0j41&#34;&gt;jbpns_2fdefault_2fNews_2fStories_2fStoryTemplateWindow12snpbj:_viewRoot:form1:myBtn&lt;/p&gt;&lt;p id=&#34;mxo:1&#34;&gt;To overcome this, you can use the following expression in your Facelets page to prepend the namespace to your javascript code: &lt;/p&gt;&lt;p&gt;document.getElementById(&#39;&amp;#35;{facesContext.externalContext.response.namespace}the_rest_of_JSF_ID&lt;/p&gt; since this uses the portletResponse, once you try to view this page on the servlet application side, you will get an exception. To avoid this, you need to check for the type of response in your backing bean and assign a new &#34;safe&#34; namespace variable for the UI. 
+
+&lt;/li&gt;&lt;li&gt;&lt;b id=&#34;lwur1&#34;&gt;Excluding Attributes from the Bridge Request Scope&lt;/b&gt; 
+When your application uses request attributes on a per request basis and you do not want that particular attribute to be managed in the extended bridge request scope, you must use the following configuration in your faces-config.xml. Below you will see that any attribute namespaced as foo.bar or any attribute beginning with foo.baz(wildcard) will be excluded from the bridge request scope and only be used per that application&#39;s request. 
+&lt;pre&gt;&lt;code&gt; 
+&amp;lt;application&amp;gt; 
+&amp;lt;application-extension&amp;gt; 
+&amp;lt;bridge:excluded-attributes&amp;gt; 
+&amp;lt;bridge:excluded-attribute&amp;gt;foo.bar&amp;lt;/bridge:excluded-attribute&amp;gt; 
+&amp;lt;bridge:excluded-attribute&amp;gt;foo.baz.*&amp;lt;/bridge:excluded-attribute&amp;gt; 
+&amp;lt;/bridge:excluded-attributes&amp;gt; 
+&amp;lt;/application-extension&amp;gt; 
+&amp;lt;/application&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ul&gt;For more information on this release or to find out more about the project, visit the &lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;project page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge with Seam support released</title>
+      <link>http://wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</link>
+      <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</guid>
+      <description>&lt;p&gt;It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.&lt;/p&gt; 
+&lt;p&gt;The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://labs.jboss.com/portletbridge/&#34;&gt;See the project page&lt;/a&gt; for more details and a live demo.&lt;/p&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My first Seam 2.0 app</title>
+      <link>http://wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app</link>
+      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app</guid>
+      <description>&lt;p&gt;Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.&lt;/p&gt; 
+
+&lt;p&gt;This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)&lt;/p&gt; 
+&lt;ul&gt; 
+&lt;li&gt;JSF &amp;amp; Seam 
+&lt;ul&gt; 
+&lt;li&gt;RESTful URL&#39;s&lt;/li&gt; 
+&lt;li&gt;EJB3/Hibernate&lt;/li&gt; 
+&lt;li&gt;Local, rapid, development&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;/li&gt; 
+&lt;li&gt;Maven 2&lt;/li&gt; 
+&lt;li&gt;Charts&lt;/li&gt; 
+&lt;li&gt;Html 2 PDF functionality&lt;/li&gt; 
+&lt;/ul&gt; 
+
+&lt;h2&gt;JSF &amp;amp; Seam &lt;/h2&gt; 
+&lt;p&gt;When I started development, Seam was at v.1.2, Embedded EJB (aka Embedded Jboss) was at RC9, and Jetty was being used for local dev and testing. I was able to get a jump start from the guys over at &lt;a href=&#34;http://software.softeu.cz/archetypes/seam/&#34;&gt;http://softeu.cz&lt;/a&gt; for the jetty/ejb/war deployment and I found a rouge project on the seam boards called JBossSeamDVDStore that gave me the ejb Maven archetype ideas/best practice. &lt;/p&gt; 
+
+&lt;p&gt;I went through some good (and bad) code getting the embedded RC9 stuff working with Jetty. It boiled down to &lt;a href=&#34;http://www.jboss.com/index.html?module=bb&amp;op=viewtopic&amp;t=110555&#34;&gt;this post&lt;/a&gt; showing why and what I did.&lt;/p&gt; 
+
+&lt;p&gt;The good and bad news now is that Embedded EJB3 is now Embedded Jboss and Embedded Jboss only works with Tomcat (for now) and here is &lt;a href=&#34;http://wiki.jboss.org/wiki/Wiki.jsp?page=WhatRefactoringsWereDoneToEnableEmbeddedJBoss&#34;&gt;a post explaining&lt;/a&gt; why it&#39;s this way. But this could also be a blueprint for creating the same thing for Jetty, I just don&#39;t have the time to do it right now.&lt;/p&gt; 
+
+&lt;p&gt;&lt;a href=&#34;http://www.google.com/notebook/public/09243180899526162200/BDRKQSgoQ77rF_7Yi&#34;&gt;Here is a list&lt;/a&gt; of resources I found useful while researching.&lt;p&gt; 
+
+&lt;h2&gt;RESTful URL&#39;s&lt;/h2&gt; 
+&lt;p&gt;The #1 biggest complaint using JSF is no RESTful urls, and Seam does a great job of solving it. The only problem I have now is double execution when the user does a postback to a page that has a action mapped in pages.xml. The form I&#39;m submitting calls the same action as the url I have mapped for REST support. I haven&#39;t spent alot of time with it and it may be total user error, but it would be nice if double action execution did NOT happen naturally.&lt;/p&gt; 
+
+&lt;p&gt;&lt;h2&gt;EJB3/Hibernate&lt;/h2&gt;
+&lt;p&gt;Using seam-gen, in Oracle, a few tables had null id fields and no primary key - The generated entity bean was genned as a object with one member (an ID) and I guess it was considering the entire record (all columns) as a unique. Being new to EntityBean/Generated hibernate code, it took us a few hours to figure this out, but once we saw that the data model was screwed up and how seam-gen handled it, the fix was easy.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Local, rapid, development&lt;/h2&gt;
+&lt;p&gt;This was mentioned a little in the first paragraph. I wanted a faster, local build environment than what was currently offered by the company I&amp;rsquo;m working for. They are heavily tied to ant and there were 0 projects using Maven. So, being the completely crazy person that I am, I introduced a new build method with Maven 2, a new Framework wrapper (Seam), and a local build on the developers laptop with hot deploy. I know Jboss AS offers hot deploy, but I really wanted to use Jetty with Embedded Jboss. Since, that isn&amp;rsquo;t currently implemented, I went with the next best thing and used Tomcat. My current company gives every developer a Solaris box to build on, all builds/projects are tied to building on Solaris. When one tries to use IntelliJ Idea over a Samba mount, you will quickly see how much it brings down overall performance and speed. There are other pluses that I could go into on local dev opposed to a remote *nix box, but I will stop here.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Maven 2&lt;/h2&gt;
+&lt;p&gt;When you have 100&amp;rsquo;s of projects on Ant and everyone in the company is pro Ant because so much time has been invested into the current build environment, you really feel like your going against the grain. However, most of us in the open source world, that are consultants, have seen the light on other projects and we bring new things into whoever we are working for. This is what I did. I eventually gained a few supporters, because everyone knows what happens when you are close minded to innovation.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Charts&lt;/h2&gt;
+&lt;p&gt;I think using the Trinidad Charts are what WOW&amp;rsquo;d the upper management the most. Since this company has a distributed computing environment with no admin rights, we had to get the security/network folks on board with the Adobe SVG plugin. I heard the Renesis viewer is pretty good also and we will probably move to it later since Adobe is killing support on their plugin.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Html 2 PDF functionality&lt;/h2&gt;
+&lt;p&gt;
+PD4ML: I started with this HTML2PDF renderer. It was super easy to get hooked up to the app. I structured my xhtml and css for both screen and print media types, but due to lack of CSS 2.1 support and very limited subset of css and html support, the output was terrible and required alot of rework just for this PDF to render half way decent. And it costs money :(
+&lt;/p&gt;
+&lt;p&gt; With the output coming out horrible in PD4ML, I took a look at &lt;a href=&#34;https://xhtmlrenderer.dev.java.net/r7/feature-list.html&#34;&gt;a pure xhtml renderer, Flying Saucer. &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;FS Almost instantly rendered all of my XHTML correctly on the first render. I had to make a few adjustments for things like CSS page-break properties and border-collapse. And, before I could even get the page to render I had to clean up the legacy HTML that some &lt;a href=&#34;https://issues.apache.org/jira/browse/TRINIDAD-111&#34;&gt;JSF renderers output&lt;/a&gt; (I ran tests with both Jtidy and NekoHTML) - both did the trick and I couldn&amp;rsquo;t tell a difference. All the JSF folks that I have talked to welcome feature requests for XHTML compliance.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.pdoubleya.com/projects/flyingsaucer/demo/r7/browser/browser_demo.jnlp&#34;&gt;This demo&lt;/a&gt; shows some pretty cool stuff from Flying Saucer and what it can do. It is basically the same concept of iTunes web browser/desktop app. PDF isn&amp;rsquo;t the end of the road either - they have examples on rendering the exact same XHTML content to PNG, SVG, and Excel - I&amp;rsquo;m sure there will be more.
+&lt;/p&gt;
+&lt;p&gt;There are probably a million more things in Seam that I could talk about here, that I completely can&amp;rsquo;t live without. This article just touches on the real world stuff that I encountered while developing. &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JSF Component Library Integration</title>
+      <link>http://wesleyhales.com/blog/2006/12/06/JSF-Component-Library-Integration</link>
+      <pubDate>Wed, 06 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2006/12/06/JSF-Component-Library-Integration</guid>
+      <description>&lt;p&gt;
+Integrating multiple component libraries can provide a project many advantages but can also be a challenge to make all components live and work in harmony. This article explains how to integrate many popular component libraries into one app. Combining libraries gives developers an array of components to pick and choose from. But, knowing which components play well together and which ones don?t, will save you time and I will explain the pros and cons of each here. The following component libraries were used:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p class=&#34;listTitle&#34;&gt;Libs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Myfaces 1.1.4&lt;/li&gt;
+&lt;li&gt;Tomahawk 1.1.4&lt;/li&gt;
+&lt;li&gt;Ajax4JSF 1.0.3&lt;/li&gt;
+&lt;li&gt;Trinidad m1 Nightly Build&lt;/li&gt;
+&lt;li&gt;IceFaces 1.0.1&lt;/li&gt;
+&lt;li&gt;Facelets 1.0.11&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&#34;listTitle&#34;&gt;Environment&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JDK 1.5 +&lt;/li&gt;
+&lt;li&gt;Jboss 4.0.4 (or Tomcat is better/lighter)&lt;/li&gt;
+&lt;li&gt;IntelliJ Idea&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&#34;listTitle&#34;&gt;Software Needed&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subversion&lt;/li&gt;
+&lt;li&gt;CVS&lt;/li&gt;
+&lt;li&gt;Maven 2&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;
+It&#39;s worth the effort to go ahead and get yourself acquainted with downloading the source for most of your component libraries, starting with Myfaces. I use Tortoise SVN or you can download the binaries using the command line. Once you have Subversion setup, checkout Myfaces &lt;a href=&#34;http://svn.apache.org/repos/asf/myfaces&#34;&gt;here&lt;/a&gt;. After that, this guide &lt;a href=&#34;http://wiki.apache.org/myfaces/Building_With_Maven&#34;&gt;This&lt;/a&gt; will give you a quick how to on compiling the libraries with Maven 2. If you use IntelliJ Idea you can get a plugin that will generate your project files. This will allow you to edit the source and change things around if needed, it also helps when you are trying to follow &lt;a href=&#34;http://wiki.apache.org/myfaces/StudyGuide&#34;&gt;this guide&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p class=&#34;pTitle&#34;&gt;For the impatient, the short and sweet steps are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Maven 2 and add bin dir to path&lt;/li&gt;
+&lt;li&gt;checkout code for project&lt;/li&gt;
+&lt;li&gt;navigate to root dir (or dir with pom.xml file)&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;mvn install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;This will build the target directory for the project which will contain compiled jars, examples wars, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p class=&#34;pTitle&#34;&gt;Myfaces&lt;/p&gt;
+&lt;p&gt;Checkout: &lt;code&gt;http://svn.apache.org/repos/asf/myfaces&lt;/p&gt;
+&lt;p&gt;Each servlet container has its own configuration in which details can be found &lt;a href=&#34;http://wiki.apache.org/myfaces/Installation_and_Configuration&#34;&gt;here&lt;/a&gt;. Overall the latest version of Tomcat and Jboss had no major issues with the out-of-box Myfaces configuration. If you are integrating Myfaces with an existing JSF RI, there are steps with the ExtensionsFilter that must be taken located on the Myfaces wiki.&lt;/p&gt;
+
+&lt;p&gt;Viewing this up to date &lt;a href=&#34;http://wiki.apache.org/myfaces/CompatibilityMatrix&#34;&gt;compatibility matrix&lt;/a&gt;, will ensure you are working with compatible libraries.&lt;/p&gt;
+&lt;p&gt;There are a number of performance settings you can make with Myfaces, but with integration of components being the focus for this article, performance tuning will be discussed in part 2 of this series.&lt;/p&gt;
+
+&lt;p class=&#34;pTitle&#34;&gt;Tomahawk&lt;/p&gt;
+&lt;p&gt;Checkout: &lt;code&gt;Checkout: http://svn.apache.org/repos/asf/myfaces/tomahawk&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Once you have the latest Tomahawk build checked out, you can find almost all of the Myfaces and Tomahawk configuration and performance settings in the sandbox/examples/src/main/webapp/WEB-INF/web.xml file. All of the settings are applicable to this article, and it is a great starting point that is well commented.&lt;/p&gt;
+
+&lt;p&gt;When using Facelets, each project requires its own tag library. Unfortunately Tomahawk does not include Facelet integration built into their jar(as of 1.1.4). This requires you to put together &lt;a href=&#34;http://wiki.apache.org/myfaces/Use_Facelets_with_Tomahawk&#34;&gt;tomahawk.taglib.xml&lt;/a&gt; and point to it from settings in your web.xml.&lt;/p&gt;
+
+&lt;pre&gt;
+&amp;lt;context-param&amp;gt;
+&amp;lt;param-name&amp;gt;facelets.LIBRARIES&amp;lt;/param-name&amp;gt;
+&amp;lt;param-value&amp;gt;/WEB-INF/tomahawk.taglib.xml&amp;lt;/param-value&amp;gt;
+&amp;lt;/context-param&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;
+This provides pass-through getters and setters to the tomahawk library.
+You can write a *.taglib.xml for any library, but you may need to write a Facelets TagHandler.
+&lt;/p&gt;
+
+&lt;p class=&#34;pTitle&#34;&gt;Ajax4jsf&lt;/p&gt;
+&lt;p&gt;Checkout (use cvs):&lt;code&gt; cvs -d :pserver:yourName@cvs.dev.java.net:/cvs checkout ajax4jsf&lt;/code&gt;&lt;/p&gt;
+One of the largest hurdles with this library was integration with Trinidad. Trinidad and Ajax4JSF use their own ViewHandler with Facelets and both are very picky about how and where they are loaded.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Web.xml&lt;/code&gt;
+&lt;pre&gt;
+&amp;lt;filter&amp;gt;
+&amp;lt;display-name&amp;gt;Ajax4jsf Filter&amp;lt;/display-name&amp;gt;
+&amp;lt;filter-name&amp;gt;ajax4jsf&amp;lt;/filter-name&amp;gt;
+&amp;lt;filter-class&amp;gt;org.ajax4jsf.Filter&amp;lt;/filter-class&amp;gt;
+&amp;lt;/filter&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;filter-mapping&amp;gt;
+&amp;lt;filter-name&amp;gt;ajax4jsf&amp;lt;/filter-name&amp;gt;
+&amp;lt;servlet-name&amp;gt;FacesServlet&amp;lt;/servlet-name&amp;gt;
+&amp;lt;/filter-mapping&amp;gt;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;faces-config.xml&lt;/code&gt;
+&lt;pre&gt;
+&amp;lt;application&amp;gt;
+&amp;lt;default-render-kit-id&amp;gt;org.apache.myfaces.trinidad.core&amp;lt;/default-render-kit-id&amp;gt;
+&amp;lt;view-handler&amp;gt;org.ajax4jsf.framework.ajax.AjaxViewHandler&amp;lt;/view-handler&amp;gt;
+&amp;lt;/application&amp;gt;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Initially I tried to use Neko HTML for the component XML rendering and had to abandon it because of one extra &lt;/span&gt; tag at the end of the response. Neko is known for not trying to &#34;over&#34; correct the code, but in this case it did not work. With the default Ajax4Jsf filter, you get Tidy cleaning up the response and that seemed to work just fine. Tidy is also configurable through a .properties file with various parser settings.&lt;/p&gt;
+
+&lt;p&gt;As of version 1.0.3, there have been many improvements and I was able to get everything working together from the settings above. This version also includes the integration jar for working with Trininad released after September 29, 2006.&lt;/p&gt;
+
+&lt;p&gt;One very nice debugging helper for this library is the logConsole div:&lt;/p&gt;
+
+&lt;pre&gt;
+&amp;lt;div style=&#34;padding: 5px; overflow: auto; font-size: 9px; height: 150px; width: 100%;&#34; id=&#34;logConsole&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;This allows you to see the entire Ajax request/response going and coming back from the server. One thing you may want to create is a Facelets debugging template and add this along with the facelets debugging options into it.&lt;/p&gt;
+
+&lt;p class=&#34;pTitle&#34;&gt;Trinidad&lt;/p&gt;
+&lt;p&gt;Checkout: &lt;code&gt;http://svn.apache.org/repos/asf/incubator/adffaces&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we have the basic settings for Trinidad to integrate with your application. Because we are integrating with Ajax4Jsf, Trinidad is the only ViewHandler defined in the web.xml. In the a4j example above you see how the ViewHandler for Ajax4Jsf is defined in the faces-config.xml. Again, if you are not using these two libraries together then you need to follow the documentation from the libraries corresponding websites.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Web.xml&lt;/code&gt;
+&lt;pre&gt;
+&amp;lt;context-param&amp;gt;
+&amp;lt;param-name&amp;gt;org.apache.myfaces.trinidad.ALTERNATE_VIEW_HANDLER&amp;lt;/param-name&amp;gt;
+&amp;lt;param-value&amp;gt;com.sun.facelets.FaceletViewHandler&amp;lt;/param-value&amp;gt;
+&amp;lt;/context-param&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;filter&amp;gt;
+&amp;lt;filter-name&amp;gt;trinidad&amp;lt;/filter-name&amp;gt;
+&amp;lt;filter-class&amp;gt;org.apache.myfaces.trinidad.webapp.TrinidadFilter&amp;lt;/filter-class&amp;gt;
+&amp;lt;/filter&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;filter-mapping&amp;gt;
+&amp;lt;filter-name&amp;gt;trinidad&amp;lt;/filter-name&amp;gt;
+&amp;lt;servlet-name&amp;gt;FacesServlet&amp;lt;/servlet-name&amp;gt;
+&amp;lt;dispatcher&amp;gt;REQUEST&amp;lt;/dispatcher&amp;gt;
+&amp;lt;dispatcher&amp;gt;FORWARD&amp;lt;/dispatcher&amp;gt;
+&amp;lt;dispatcher&amp;gt;INCLUDE&amp;lt;/dispatcher&amp;gt;
+&amp;lt;/filter-mapping&amp;gt;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;
+One important topic I would like to touch on is client-side state saving vs. server-side.
+Trinidad offers a unique strategy for JSF state saving which will allow tokens to be sent to the client allowing minimal performance drag. The default client-side state saving only saves a token to the client, and saves the real state in the HttpSession. MyFaces tells users to use server-side and Trinidad prefers client-side, but they are basically the same thing in terms of HttpSession. Also, failover is supported with the Trinidad state saving method.
+&lt;/p&gt;
+
+&lt;p&gt;As for components, Trinidad starts with more than 100 components which have already been documented and thoroughly tested. Now we have tags from 3-4 different libraries that overlap each other. We must decide which one to use where, why we are using them, and what is best for performance. Tag usage, along with state saving, will be discussed in part 2 of this series.&lt;/p&gt;
+
+&lt;p class=&#34;pTitle&#34;&gt;IceFaces&lt;/p&gt;
+&lt;p&gt;TODO - Update this section&lt;/p&gt;
+&lt;p&gt;**Note, since the writing of this article, Icefaces has been open sourced*** If you wish to make use of clustering and advanced asynchronous HTTP handling in a large-scale application, they want you to move up to the Enterprise Edition.&lt;/p&gt;
+
+&lt;p&gt;As of ICEfaces v1.0.1 release, they now have support for JSF integration. You can view  configuration instructions &lt;a href=&#34;http://www.icesoft.com/developer_guides/icefaces/htmlguide/devguide/keyConcepts12.html#1043744&#34;&gt;here&lt;/a&gt;. In short, you can use the just-ice.jar, instead of the icefaces.jar, and use other JSF servlet mappings (ie. Faces Servlet) to handle non-ICEfaces pages. If you do this, you must use **only** standard JSF tags (f:) and ICEfaces tags (ice:) in you JSF pages.&lt;/p&gt;
+
+&lt;p&gt;ICEFaces doesn&#39;t have the same approach as ajax4jsf and DynaFaces have. You will have to follow their component-model to get the benefits of the Direct2Dom technology, so hooking up components of other libraries together with the ICEFaces components isn&#39;t possible (as of now), as they cannot re-render arbitrary components through their renderkit.&lt;/p&gt;
+
+&lt;p&gt;If you need to combine components from an open source library with IceFaces, one option is to use an iframe within an icefaces page. The iframe could point to the other JSF framework Servlet/ViewHandler. I haven&#39;t tried this yet myself, but according to the IceFaces support staff, it&#39;s worth a try.&lt;/p&gt;
+
+&lt;p&gt;For Facelets integration, along with the core jars, you will need icefaces-facelets.jar. There are minimal settings that take place for Facelet integration. The steps are located &lt;a href=&#34;http://www.icesoft.com/developer_guides/icefaces/htmlguide/gettingstarted/TimezoneTutorial29.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&#34;pTitle&#34;&gt;Facelets&lt;/p&gt;
+&lt;p&gt;The facelets ViewHandler configuration placement is critical to your application.
+If you are ONLY integrating Ajax4Jsf with Facelets, you should have you settings in web.xml as follows:&lt;/p&gt;
+
+&lt;pre&gt;
+&amp;lt;context-param&amp;gt;
+&amp;lt;param-name&amp;gt;org.ajax4jsf.VIEW_HANDLERS&amp;lt;/param-name&amp;gt;
+&amp;lt;param-value&amp;gt;com.sun.facelets.FaceletViewHandler&amp;lt;/param-value&amp;gt;
+&amp;lt;/context-param&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;You need the above defined only if using Ajax4Jsf along with all other libraries besides Trinidad. If using Trinidad along with Ajax4Jsf and Facelets then follow the steps from the Trinidad section above.&lt;/p&gt;
+
+&lt;p&gt;One quick performance tip that will impact the foundational templating is the StreamingAddResource.&lt;/p&gt;
+
+&lt;p&gt;By adding:&lt;/p&gt;
+
+&lt;pre&gt;
+&amp;lt;context-param&amp;gt;
+&amp;lt;param-name&amp;gt;org.apache.myfaces.ADD_RESOURCE_CLASS&amp;lt;/param-name&amp;gt;
+&amp;lt;param-value&amp;gt;org.apache.myfaces.component.html.util.StreamingAddResource&amp;lt;/param-value&amp;gt;
+&amp;lt;/context-param&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;...to the web.xml and using...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;t:document as replacement for html&lt;/li&gt;
+&lt;li&gt;t:documentHead as replacement for head&lt;/li&gt;
+&lt;li&gt;t:documentBody as replacement for body&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;...this will allow the pages to be streamed which will result in faster page delivery.&lt;/p&gt;
+
+&lt;p&gt;For debugging Facelets, add the following to your web.xml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;samp&gt;
+
+&amp;lt;context-param&amp;gt;
+&amp;lt;param-name&amp;gt;facelets.DEVELOPMENT&amp;lt;/param-name&amp;gt;
+&amp;lt;param-value&amp;gt;true&amp;lt;/param-value&amp;gt;
+&amp;lt;/context-param&amp;gt;
+
+&lt;/samp&gt;&lt;/pre&gt;
+
+&lt;p&gt;
+Setting this to true will cause the FaceletViewHandler to print out debug information in an easy to use screen when an error occurs during the rendering process.
+Probably one of the coolest features for debugging is the &lt;ui:debug&gt; tag. Of course you can?t have ?cool? without an expense, so be careful when using this option because of overhead. You can use the UIComponent rendered property to turn debugging on or off based on some expression. In this example, debugging is backed by an entry in the web.xml.
+&lt;/p&gt;
+
+&lt;pre&gt;
+&amp;lt;ui:debug hotkey=&#34;d&#34; rendered=&#34;&amp;#35;{initParam.debugMode}&#34;/&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;The debug tag will capture the component tree and variables when it is encoded, storing the data for retrieval later. You may launch the debug window at any time from your browser by pressing &#39;CTRL&#39; + &#39;SHIFT&#39; + &#39;D&#39; (by default).  Like I said earlier the best place to put this tag is in your site&#39;s main template, or in some kind of debugging template, where it can be enabled/disabled across your whole application.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

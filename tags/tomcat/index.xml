@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tomcat on Wesley Hales</title>
+    <link>http://wesleyhales.com/tags/tomcat/</link>
+    <description>Recent content in Tomcat on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Oct 2007 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://wesleyhales.com/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo</title>
+      <link>http://wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</link>
+      <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</guid>
+      <description>&lt;p&gt;In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. &lt;/p&gt; 
+
+&lt;p&gt;It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.&lt;/p&gt; 
+
+&lt;p class=&#34;listTitle&#34;&gt;The following is included in this sample app:&lt;/p&gt; 
+&lt;ul&gt; 
+&lt;li&gt;Trinidad 1.0.2&lt;/li&gt; 
+&lt;li&gt;JBoss RichFaces&lt;/li&gt; 
+&lt;li&gt;JAAS&lt;/li&gt; 
+&lt;li&gt;Drools&lt;/li&gt; 
+&lt;li&gt;JBPM&lt;/li&gt; 
+&lt;li&gt;And everything else that seam and Embedded/EJB3 provides out of box.&lt;/li&gt; 
+&lt;/ul&gt; 
+
+
+&lt;p&gt;All you need to have is Maven 2.0.x installed. The rest is cake. During the installation Cargo will download a zip file from the JBoss Maven repository. This is the Tomcat 6.0.13 distro with Embedded already installed and setup. Nothing else has been added to it.&lt;/p&gt; 
+
+&lt;p&gt;&lt;h2&gt;Directions&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Checkout the project and getting started directions &lt;a href=&#34;http://code.google.com/p/seam-2-sandbox/&#34;&gt;Here&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*Note - I used a stub for the datasource in TOMCAT_HOME/lib/deploy. Don&amp;rsquo;t forget that this deploy directory is supposed to be the same as JBoss AS deploy directory.&lt;/p&gt;
+&lt;p class=&#34;listTitle&#34;&gt;I used a few cool things in the maven pom setup:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It seems you can trick cargo into using the latest version of tomcat. The documentation says Tomcat5x is only supported for the container, but I didn&amp;rsquo;t have any problems using 6.0.x with the Tomcat5x containerId&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;cargo.container.url&lt;/code&gt; can be local, there is an example in the web/pom.xml (at the bottom)&amp;hellip;So once you have this downloaded in you target dir, I would copy it somewhere outside of target and change the &lt;code&gt;cargo.container.url&lt;/code&gt; to point to it. It will save time from downloading and bandwidth. It would be cool to add it as a dependency and then unzip from your local maven repo, but I haven&amp;rsquo;t tried it yet.&lt;/li&gt;
+&lt;li&gt;Like I mentioned earlier, if you want to disable auto start of the Tomcat server you should disable this section of the cargo plugin in web/pom.xml
+&lt;code&gt;
+&lt;pre&gt;
+&lt;a name=&#34;l510&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;executions&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l511&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;execution&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l512&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l513&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l514&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goals&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l515&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l516&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goals&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l517&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;execution&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l518&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;execution&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l519&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;deploy-app&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l520&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l521&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goals&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l522&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;deployer-deploy&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l523&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;goals&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l524&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;execution&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;
+&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l525&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;executions&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/pre&gt;
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;I have another version of this sample app that uses profiles to build either an EAR for JBoss or a WAR for Tomcat+Embedded. Michael Yuan recently touched on &lt;a href=&#34;http://www.michaelyuan.com/blog/2007/10/09/jboss-seam-project-setup-with-maven-%e2%80%94-part-2-ear-deployment/&#34;&gt;this subject&lt;/a&gt; about the EAR+Seam maven impl and did a great job breaking it down. I will try to post the sample app that lets you build a war for Tomcat or an EAR for JBoss all based on the maven profile i.e&amp;hellip;
+&lt;code&gt;mvn install -Ptomcat&lt;/code&gt;
+or
+&lt;code&gt;mvn install -Pjboss&lt;/code&gt;
+This is the power of Maven2 and there is soo much more you can do with it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;btw, I haven&#39;t blogged since I&#39;ve become an employee for JBoss, a division of Red Hat. I&#39;m working on the &lt;a href=&#34;http://jbossportal.blogspot.com/&#34;&gt;JBoss Portal Team&lt;/a&gt; and I must say that the company is awesome, my team is awesome, and everyone I have met and talked to have been, you guessed it, AWESOME!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weld on Wesley Hales</title>
+    <link>http://wesleyhales.com/tags/weld/</link>
+    <description>Recent content in Weld on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 May 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://wesleyhales.com/tags/weld/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Runtime Type Detection and Usage with Weld</title>
+      <link>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
+      <description>&lt;p&gt;&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;About TweetStream&lt;/p&gt;&lt;br /&gt; 
+&lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
+A little bit about the usecase: The &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; application is an app that Jay Balunas and I developed over the past few months for our presentation at &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt; web application (which runs on Android and iOS devices) with things like scalable data grid, &lt;span class=&#34;caps&#34;&gt;JMS&lt;/span&gt;, JSF2, &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt;/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.&lt;br /&gt; 
+So, we had 2 scenarios &amp;#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.&lt;br /&gt; 
+So we got our tweet data from the true source (twitter4j) during our &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, and then from the data grid during the keynote. We could have used &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; alternatives, but I wanted a true solution with no &lt;span class=&#34;caps&#34;&gt;XML&lt;/span&gt; configuration and runtime detection.&lt;br /&gt; 
+&lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;The Code...&lt;/p&gt;&lt;br /&gt; 
+So we have 2 Qualifier Types:&lt;br /&gt; 
+@TwitterLocal for the &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con demo impl&lt;br /&gt; 
+@TwitterServer for the keynote impl&lt;/p&gt; 
+
+&lt;p&gt;We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.&lt;/p&gt; 
+
+&lt;p&gt;Now that we have our types defined as follows&amp;#8230;&lt;/p&gt; 
+
+&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;@Qualifier&lt;br /&gt; 
+&lt;br /&gt; 
+@Retention&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;RetentionPolicy.&lt;span style=&#34;color: #006633;&#34;&gt;RUNTIME&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+@Target&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;PARAMETER&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; @&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterServer&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+@Qualifier&lt;br /&gt; 
+&lt;br /&gt; 
+@Retention&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;RetentionPolicy.&lt;span style=&#34;color: #006633;&#34;&gt;RUNTIME&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+@Target&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;PARAMETER&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; @&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterLocal&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;We need not only an implementation of each, but also a deciding bean that tells us which type to use.&lt;/p&gt; 
+
+&lt;p&gt;First, our implementation of each Type implements an interface:&lt;/p&gt; 
+
+&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterSource &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;void&lt;/span&gt; init&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+…&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;And our implementations have a different usage of the init method. &lt;code&gt;TwitterLocal starts the stream coming from twitter and updates the infinispan cache. &lt;/code&gt;TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&amp;#8211;8 nodes.&lt;/p&gt; 
+
+&lt;p&gt;So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TweetStream &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @Inject&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aany+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;Any&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt; 
+&amp;nbsp; Instance&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterSource&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; twitterSource&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TwitterLocalQualifier &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;extends&lt;/span&gt; AnnotationLiteral&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterLocal&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;implements&lt;/span&gt; TwitterLocal&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TwitterServerQualifier &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;extends&lt;/span&gt; AnnotationLiteral&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterServer&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;implements&lt;/span&gt; TwitterServer&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;boolean&lt;/span&gt; initialCheck &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;boolean&lt;/span&gt; demoexists &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @PostConstruct&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;void&lt;/span&gt; init&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;getTwitterSource&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;init&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; @Produces&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; TwitterSource getTwitterSource&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;initialCheck&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;try&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;Class&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;forName&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;log.&lt;span style=&#34;color: #006633;&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;Running in JBW2011 Demo Mode.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;demoexists &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aclassnotfoundexception+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;ClassNotFoundException&lt;/span&gt;&lt;/a&gt; ex&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;log.&lt;span style=&#34;color: #006633;&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;Running in local JUDCon2011 Demo Mode.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; initialCheck &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aannotation+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;Annotation&lt;/span&gt;&lt;/a&gt; qualifier &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; demoexists &lt;span style=&#34;color: #339933;&#34;&gt;?&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;new&lt;/span&gt; TwitterServerQualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&#34;color: #339933;&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;new&lt;/span&gt; TwitterLocalQualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;return&lt;/span&gt; twitterSource.&lt;span style=&#34;color: #006633;&#34;&gt;select&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;qualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
+&lt;br /&gt; 
+&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;This is all in the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&amp;#8230;&lt;br /&gt; 
+&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

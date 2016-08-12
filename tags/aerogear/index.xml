@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aerogear on Wesley Hales</title>
+    <link>http://wesleyhales.com/tags/aerogear/</link>
+    <description>Recent content in Aerogear on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://wesleyhales.com/tags/aerogear/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AeroGear - Mobile, HTML5, and Auwesome</title>
+      <link>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
+      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
+      <description>&lt;p&gt;
+The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a&gt; had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;https://community.jboss.org/wiki/AeroGearServerSideResources&#34;&gt;Education&lt;/a&gt; - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;https://community.jboss.org/wiki/AeroGearHTML5ExtensionConcepts&#34;&gt;Innovation&lt;/a&gt; - Many of AeroGear&#39;s primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;https://community.jboss.org/wiki/ContributingToAeroGear&#34;&gt;Community&lt;/a&gt; - We already have several community members contributing examples, demos, and other useful resources. We want to hear from &lt;a href=&#34;https://community.jboss.org/en/aerogear?view=discussions&#34;&gt;you&lt;/a&gt;! We&#39;re here for the community.&#39;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  Most front-end developers are familiar with &#34;jQuery callbacks and RESTful services&#34;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&#34;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&#34;&gt;&#34;POH5&#34; (Plain Old HTML5)&lt;/a&gt;
+&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
+&lt;p&gt;
+So why another acronym? Why not just call it &#34;Plain Old Open Web&#34;? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or &#34;gear&#34; you need to get started quickly with the best possible solution.
+&lt;/p&gt;
+&lt;p&gt;
+We&#39;re just getting started... For now, we have a &lt;a href=&#34;https://github.com/aerogear/as-quickstarts/tree/master/kitchensink-html5-mobile&#34;&gt;quickstart application&lt;/a&gt; which &lt;a href&#34;https://community.jboss.org/wiki/GetStartedWithHTML5MobileWebDevelopmentWithJBoss#Prerequisites&#34;&gt;fully examines&lt;/a&gt; each piece of the POH5 architecture. Take it for a spin with the &lt;a href=&#34;http://poh5-aerogear.rhcloud.com/&#34;&gt;live demo&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://community.jboss.org/en/aerogear?view=documents&#34;&gt;Join Us&lt;/a&gt;! or come hang out on &lt;a href=&#34;irc://irc.freenode.net/aerogear&#34;&gt;freenode #aerogear&lt;/a&gt;.
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

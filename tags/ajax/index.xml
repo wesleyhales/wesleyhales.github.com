@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ajax on Wesley Hales</title>
+    <link>http://wesleyhales.com/tags/ajax/</link>
+    <description>Recent content in Ajax on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Aug 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://wesleyhales.com/tags/ajax/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
+      <link>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
+      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://twitter.com/#!/_boye/&#34;&gt;@_boye&lt;/a&gt; has created &lt;a href=&#34;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&#34;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
+&lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
+&lt;p&gt;From Javascript The Good Parts:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;If the HTML text contains a &amp;lt;script&amp;gt; tag or its equivalent, then an evil script will run. .. This danger is a direct consequence of JavaScript&amp;rsquo;s global object which is far and away the worst part of JavaScript&amp;rsquo;s many bad parts.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Not only is innerHTML bad, it is the root cause of many problems... from &lt;a href=&#34;http://www.julienlecomte.net/blog/2007/12/38/&#34;&gt;browser memory leaks&lt;/a&gt; (it destroys/replaces existing elements that may have event handlers attached) to &lt;a href=&#34;http://martinkou.blogspot.com/2011/05/alternative-workaround-for-mobile.html&#34;&gt;failing completely&lt;/a&gt; on iOS&amp;rsquo;s Mobile Safari. Yes, that&#39;s right, it just flakes out.&lt;/p&gt;
+&lt;p&gt;So even if you use &lt;a href=&#34;http://javascript.crockford.com/memory/leak.html&#34;&gt;Crockford&amp;rsquo;s purge&lt;/a&gt; method to fix the memory leaks and sanitize your response string returned from the server, you still have a showstopping flaw when running any mobile web solution that uses innerHTML on iOS devices &lt;/p&gt;
+
+&lt;p&gt;Just to name a few mobile frameworks that use this flawed innerHTML approach:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://api.jquery.com/html/&#34;&gt;JQuery Mobile&lt;/a&gt; (uses jQuery&amp;rsquo;s .html() wich is a wrapper for innerHTML)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;active_link&#34; href=&#34;http://wiki.phonegap.com/w/page/42450600/PhoneGap%20Ajax%20Sample&#34;&gt;Phone Gap&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.sencha.com/forum/showthread.php?122591-List-rendering-race-condition&#34;&gt;Sencha&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A possible solution:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We all know that innerHTML is a favorite for it&amp;rsquo;s speed and ease of use but speed doesn&amp;rsquo;t really matter when it doesn&amp;rsquo;t work at all. So one solution is through use of some new features in HTML5 and the DOM api:&lt;/p&gt;
+
+&lt;p&gt;Let&#39;s start with the scenario that you&#39;ve made your XHR and received the responseText. &lt;/p&gt;
+&lt;p&gt;First thing we&#39;ll do is create a temporary iFrame element. This isn&#39;t any ordinary iframe, it received a major security enhancement with HTML5 and we have some new sanitizing features with the &#34;sandbox&#34; attribute. &lt;/p&gt;
+
+&lt;p&gt;From the &lt;a href=&#34;http://dev.w3.org/html5/spec-author-view/the-iframe-element.html#attr-iframe-sandbox&#34;&gt;spec&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #808080;&#34;&gt;The sandbox attribute, when specified, enables a set of extra restrictions on any content hosted by the iframe. Its value must be an unordered set of unique space-separated tokens that are ASCII case-insensitive. The allowed values are allow-forms, allow-same-origin, allow-scripts, and allow-top-navigation. When the attribute is set, the content is treated as being from a unique origin, forms and scripts are disabled, links are prevented from targeting other browsing contexts, and plugins are disabled. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color: #ff0000;&#34;&gt;To limit the damage that can be caused by hostile HTML content, it should be served using the &lt;strong&gt;text/html-sandboxed&lt;/strong&gt; MIME type.&lt;/span&gt;&lt;/p&gt;
+
+&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt;function getFrame() {&lt;/p&gt;&lt;p&gt;    var frame = document.getElementById(&#34;temp-frame&#34;);&lt;/p&gt;&lt;p&gt;    if (!frame) {&lt;/p&gt;&lt;p&gt;        // create frame&lt;/p&gt;&lt;p&gt;        frame = document.createElement(&#34;iframe&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;id&#34;, &#34;temp-frame&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;name&#34;, &#34;temp-frame&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;seamless&#34;, &#34;&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;sandbox&#34;, &#34;&#34;);&lt;/p&gt;&lt;p&gt;        frame.style.display = &#39;none&#39;;&lt;/p&gt;&lt;p&gt;        document.documentElement.appendChild(frame);&lt;/p&gt;&lt;p&gt;    }&lt;/p&gt;&lt;p&gt;    return frame.contentDocument;&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, we get our ajax response and write it to the iframe:&lt;/p&gt;
+
+&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt;var frame = getFrame();&lt;/p&gt;&lt;p&gt;frame.write(responseText);&lt;/p&gt;&lt;/pre&gt;
+
+&lt;p&gt;The beauty of this solution is the fact that we don&#39;t have to deal with a &lt;a href=&#34;http://ejohn.org/blog/pure-javascript-html-parser&#34;&gt;javascript text to DOM parser&lt;/a&gt;. We&#39;re allowing the browser to do what it does best... parse the HTML and build a DOM. And we don&#39;t have to worry about parsing the response and removing a blacklist of prohibited security risk elements and other XSS hacking pitas.&lt;/p&gt;
+
+&lt;p&gt;After writing the response to the iframe, you now have a ready to use sanitized DOM. Next you can use the DOM API to grab any part of the new document.&lt;/p&gt;
+
+&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt; var incomingElements = frame.getElementsByClassName(&#39;elementClassName&#39;);&lt;/p&gt;&lt;/pre&gt;
+
+&lt;p&gt;Safari correctly refuses to implicitly move a node from one document to another. An error is raised if the new child node was created in a different document. So here we use adoptNode to add the incomingElements to our existing page.&lt;/p&gt;
+
+&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt; document.getElementById(elementId).appendChild(document.adoptNode(incomingElements));&lt;/p&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only thing left to do now is benchmarking. As I said earlier, working with the DOM has been notably slower than using innerHTML in the past. So there may be a derivative of this proposed solution that is faster? or there may not be a huge difference in execution time? Let me know....&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AJAX in Enterprise Portals at AjaxWorld</title>
+      <link>http://wesleyhales.com/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld</link>
+      <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld</guid>
+      <description>&lt;p&gt;I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don&#39;t be a stranger! 
+&lt;br/&gt; 
+Check out the sessions &lt;a href=&#34;http://ajaxworld.com/general/sessions1008.htm&#34;&gt;here&lt;/a&gt;.
+&lt;/p&gt; 
+&lt;p&gt;**Update with slides: 
+&lt;div style=&#34;width:425px;text-align:left&#34; id=&#34;__ss_679314&#34;&gt;&lt;object style=&#34;margin:0px&#34; width=&#34;425&#34; height=&#34;355&#34;&gt;&lt;param name=&#34;movie&#34; value=&#34;http://static.slideshare.net/swf/ssplayer2.swf?doc=ajax-in-enterprise-portals-1224644054575411-8&amp;stripped_title=ajax-in-enterprise-portals-presentation&#34; /&gt;&lt;param name=&#34;allowFullScreen&#34; value=&#34;true&#34;/&gt;&lt;param name=&#34;allowScriptAccess&#34; value=&#34;always&#34;/&gt;&lt;embed src=&#34;http://static.slideshare.net/swf/ssplayer2.swf?doc=ajax-in-enterprise-portals-1224644054575411-8&amp;stripped_title=ajax-in-enterprise-portals-presentation&#34; type=&#34;application/x-shockwave-flash&#34; allowscriptaccess=&#34;always&#34; allowfullscreen=&#34;true&#34; width=&#34;425&#34; height=&#34;355&#34;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

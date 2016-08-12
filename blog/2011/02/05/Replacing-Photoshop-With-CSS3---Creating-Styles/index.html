@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2011-02-05T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+        <title>Replacing Photoshop With CSS3 - Creating Styles &middot; Wesley Hales </title>
+        <link rel="canonical" href="http://wesleyhales.com/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    </head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">Replacing Photoshop With CSS3 - Creating Styles</h3>
+    </header>
+
+    <section class="post-content">
+        <p><p>One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).<br /> 
+This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with <span class="caps">CSS3</span>. Not only is it simple, but you can also create a sort of &#8220;gradient template&#8220; to be reused. Kind of like a &#8220;style&#8221; which can be applied to any element in Photoshop.</p><br />
+<p class="pTitle">First off, this is how I would normally do it in Photoshop:</p><ol><li>Create the element &#8211; a button in this case:<br /> 
+<img alt="" src="/images/jroller/css3post/button.PNG"/></li><br /> 
+<li>Create your gradient. Gradients that are hardly gradients seem to give a nice appearance and body to the design. Meaning you start with a base color like #6c291f and move up the scale to #e42a00.<br /> 
+<img alt="" src="/images/jroller/css3post/gardient-setup.PNG"/><br /> 
+</li><br /> 
+<li>Next you add an inner shadow to give it a glow like effect. Again this too is based on your gradient color.<br /> 
+<img alt="" src="/images/jroller/css3post/innerglow.PNG"/><br /> 
+</li><br /> 
+<li>Here is the end result (from Photoshop):<br /> 
+<img alt="" src="/images/jroller/css3post/red.button.photoshop.PNG"/><br /> 
+</li></ol></p> 
+<p><p class="pTitle">Now, let's do the exact same thing in CSS3 with 1 step.</p><p>This tested fine across all the latest browsers (Firefox 3.6+, Latest Safari, Latest Chrome, and who cares about IE <img src="http://www.jroller.com/images/smileys/wink.gif" class="smiley" alt=";)" title=";)" /></p><ol><li>Simply use the brightest part of the gradient color from above (#e42a00) and substitute it as the background color below:<br /> 
+<pre style="line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;"><span style="color:#800000;background-color:#f0f0f0;"> 1 </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">button</span><span style="background-color:#ffffff;">.</span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">red</span><span style="background-color:#ffffff;"> {<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 2 </span><span style="background-color:#ffffff;"> </span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">background</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">: </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">#e42a00</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;"><del>moz</del>linear-gradient</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">90</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">deg</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.3</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">) </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">33</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">%, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.1</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">) </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">123</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">%)</span></span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 3 </span><span style="background-color:#ffffff;"> </span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">background</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">: </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">#e42a00</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;"><del>webkit</del>gradient</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">linear</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">left</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">top</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">left</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;"> </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#008000;background-color:#ffffff;font-weight:bold;">bottom</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">from</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">255</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.1</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">)), </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">to</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">(</span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">0</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">, </span></span><span style="text-decoration:underline;color:#cccccc"><span style="color:#0000ff;background-color:#ffffff;">.3</span></span><span style="text-decoration:underline;color:#cccccc"><span style="background-color:#ffffff;">)))</span></span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 4 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">border-radius</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">7</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 5 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>moz</del>border-radius</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">7</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 6 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>webkit</del>border-radius</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">7</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 7 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">border</span><span style="background-color:#ffffff;">: </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">none</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 8 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;"> 9 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>moz</del>box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;">10 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>webkit</del>box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">102</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;</span></pre><br /> 
+</li><br /> 
+<li>Here is the end result (from Firefox):<br /> 
+<img alt="" src="/images/jroller/css3post/red.button.css.PNG"></li><br /> 
+</ol></p> 
+<p><p>Notice from the css code that we are only using one color? This is so we can easily create a super class that allows us to override its functionality. In the end all you would need is one line of code for background color to create a button for every color that exists with the same style from above applied to it.</p><br /> 
+<p>Now to create a button using the same &#8220;style&#8221;, you would only have to create a class that defines the background color and inner shadow highlight. i.e&#8230;.<br /> 
+<pre style="line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;"><span style="color:#800000;background-color:#f0f0f0;">1 </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">button</span><span style="background-color:#ffffff;">.</span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">lightblue</span><span style="background-color:#ffffff;"> {<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;">2 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;">background-color</span><span style="background-color:#ffffff;">: </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">#41b6ff</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;">3 </span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;font-weight:bold;"><del>moz</del>box-shadow</span><span style="background-color:#ffffff;">: </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">0</span><span style="background-color:#ffffff;"> </span><span style="color:#0000ff;background-color:#ffffff;">6</span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">px</span><span style="background-color:#ffffff;"> </span><span style="color:#000080;background-color:#ffffff;font-weight:bold;">rgba</span><span style="background-color:#ffffff;">(</span><span style="color:#0000ff;background-color:#ffffff;">55</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">243</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">255</span><span style="background-color:#ffffff;">,</span><span style="color:#0000ff;background-color:#ffffff;">1</span><span style="background-color:#ffffff;">) </span><span style="color:#008000;background-color:#ffffff;font-weight:bold;">inset</span><span style="background-color:#ffffff;">;<br /> 
+</span><span style="color:#800000;background-color:#f0f0f0;">4 </span><span style="background-color:#ffffff;">}</span></pre></p><br /> 
+<p>This would give you a button like this:<br /> 
+<img alt="" src="/images/jroller/css3post/blue.button.css.PNG"/></p><br /> 
+<p>The only part that isn't really flexible is the inner shadow feathering. It is currently set to blur the shadow by a fixed pixel. It would be awesome if you could blur by percent as this would allow the gradient filled element to be resized dynamically and maintain the aspect of inner glow.</p></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2011-02-05T00:00:00Z">February 5, 2011</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Replacing%20Photoshop%20With%20CSS3%20-%20Creating%20Styles&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2011%2f02%2f05%2fReplacing-Photoshop-With-CSS3---Creating-Styles"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2011%2f02%2f05%2fReplacing-Photoshop-With-CSS3---Creating-Styles"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2011%2f02%2f05%2fReplacing-Photoshop-With-CSS3---Creating-Styles"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	Java, html5
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2016 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1241000-10', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+</body>
+</html>

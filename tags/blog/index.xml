@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Wesley Hales</title>
+    <link>http://wesleyhales.com/tags/blog/</link>
+    <description>Recent content in Blog on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Dec 2007 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://wesleyhales.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>1 year of blogging</title>
+      <link>http://wesleyhales.com/blog/2007/12/05/1-year-of-blogging</link>
+      <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/blog/2007/12/05/1-year-of-blogging</guid>
+      <description>&lt;p&gt;Today marks my 1 year anniversary of blogging. I started this blog to basically express my views and opinions, to give back to the open source community of whom so much has been taken, and for job credibility.&lt;/p&gt; 
+&lt;p&gt;Trying to write good articles is a lot of work. Sure anybody can write about a few buzzwords and get some hits, but an article with substance and that actually helps someone through a use case or problem is where the satisfaction comes from.&lt;/p&gt; 
+&lt;p&gt;I started using Google analytics on this blog around the first of October, and here are my stats since then: 
+&lt;ul&gt; 
+&lt;li&gt;4,835 Visits&lt;/li&gt; 
+&lt;li&gt;2,493 Absolute Unique Visitors&lt;/li&gt; 
+&lt;li&gt;7,112 Pageviews&lt;/li&gt; 
+&lt;li&gt;1.47 Average Pageviews&lt;/li&gt; 
+&lt;li&gt;00:01:39 Time on Site&lt;/li&gt; 
+&lt;li&gt;79.23% Bounce Rate&lt;/li&gt; 
+&lt;li&gt;47.22% New Visits&lt;/li&gt; 
+&lt;/ul&gt; 
+
+Not too bad for a 2 month time span, but what really matters is getting comments that ask questions or suggestions that add to the article&#39;s value. 
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
