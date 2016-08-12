@@ -11,10 +11,10 @@
     
     <item>
       <title>XHTML to PDF with a Seam filter</title>
-      <link>http://wesleyhales.com/blog/2007/12/17/xhtml-to-pdf-with-a-seam-filter</link>
+      <link>http://wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter</link>
       <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/12/17/xhtml-to-pdf-with-a-seam-filter</guid>
+      <guid>http://wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter</guid>
       <description>&lt;p&gt;After reading &lt;a href=&#34;http://today.java.net/pub/a/today/2006/10/31/combine-facelets-and-flying-saucer-renderer.html&#34;&gt;this article&lt;/a&gt; showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.&lt;/p&gt; 
 &lt;p&gt;First off, generated markup from any given JSF component is not guaranteed to be good markup. So I had to make use of cyberneko html parser. The servlet filter parses the generated response and then neko cleans up any non standard xhtml elements.&lt;/p&gt; 
 &lt;p&gt;One huge css tip is make sure you declare &lt;code&gt;media=&#34;print&#34;&lt;/code&gt; or &lt;code&gt;media=&#34;screen,print&#34;&lt;/code&gt; on your xhmtl css reference. Naturally it would be good to split the 2 style sheets but laziness forced me to use one for both.&lt;/p&gt; 

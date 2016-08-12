@@ -11,10 +11,10 @@
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://wesleyhales.com/blog/2011/08/02/going-mobile-with-richfaces-design-proposals---day2</link>
+      <link>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/02/going-mobile-with-richfaces-design-proposals---day2</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
       <description>&lt;p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
 
 &lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
@@ -42,10 +42,10 @@ The second page is what you see after selecting a menu item from page 1 (click t
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://wesleyhales.com/blog/2011/08/01/going-mobile-with-richfaces-design-proposals---day1</link>
+      <link>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/01/going-mobile-with-richfaces-design-proposals---day1</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
       <description>&lt;p&gt;&lt;p&gt;Today marks an important day in the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;RichFaces project&lt;/a&gt; as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.&lt;br /&gt; 
 So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. &lt;/p&gt;&lt;p&gt;I will announce each new design (both for tablet and phone) via &lt;a href=&#34;https://twitter.com/#!/richfaces&#34;&gt;twitter&lt;/a&gt; with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 

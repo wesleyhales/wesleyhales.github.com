@@ -11,10 +11,10 @@
     
     <item>
       <title>Runtime Type Detection and Usage with Weld</title>
-      <link>http://wesleyhales.com/blog/2011/05/04/runtime-type-detection-and-usage-with-weld</link>
+      <link>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/05/04/runtime-type-detection-and-usage-with-weld</guid>
+      <guid>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
       <description>&lt;p&gt;&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;About TweetStream&lt;/p&gt;&lt;br /&gt; 
 &lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
 A little bit about the usecase: The &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; application is an app that Jay Balunas and I developed over the past few months for our presentation at &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt; web application (which runs on Android and iOS devices) with things like scalable data grid, &lt;span class=&#34;caps&#34;&gt;JMS&lt;/span&gt;, JSF2, &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt;/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.&lt;br /&gt; 
@@ -169,10 +169,10 @@ So we have 2 Qualifier Types:&lt;br /&gt;
     
     <item>
       <title>Contextual PortletMode changes using the JBoss Portlet Bridge</title>
-      <link>http://wesleyhales.com/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</link>
+      <link>http://wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge</link>
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</guid>
+      <guid>http://wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge</guid>
       <description>&lt;p&gt;&lt;p&gt;By default, the JSR-&lt;sup&gt;301&lt;/sup&gt;&amp;frasl;&lt;sub&gt;329&lt;/sub&gt; portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.&lt;/p&gt;
 &lt;p class=&#34;pTitle&#34;&gt;Why use portlet modes instead of javascript widgets?&lt;/p&gt;
 &lt;p&gt;First I would like to give you a little justification of the beauty of this feature. Some people will argue the point of &amp;ldquo;Why do you need different modes like, Help and Edit?&amp;rdquo;, when you could add some cool &amp;ldquo;javascript of the week&amp;rdquo; that would dynamically display what you intended to present in one of the given modes. Well, you could develop your interactions either way but it really isn&amp;rsquo;t a question of why. It&amp;rsquo;s a question of &amp;ldquo;How?&amp;rdquo;. How do you want users to interact with your applications? And since you have already made the decision to invest in a portal solution, why not use the features that are built in and that stay consistent across the entire UI? Any UI Developer or Interaction Designer will tell you that adding cool javascript widgets adds another layer of complexity and maintenance, thus adding to developer time and bottom line ROI. In addition, when you develop any servlet based application to work within a portal environment, you are properly separating your concerns when you use these modes (without even realizing it in most cases). You are presenting distinguished flows for different trains of thought and making it easier for users to accomplish the task at hand.&lt;/p&gt;
@@ -240,10 +240,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>JBoss Portlet Bridge Beta2 Released!</title>
-      <link>http://wesleyhales.com/blog/2008/04/11/jboss-portlet-bridge-beta2-released</link>
+      <link>http://wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released</link>
       <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/04/11/jboss-portlet-bridge-beta2-released</guid>
+      <guid>http://wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released</guid>
       <description>&lt;p&gt;The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.&lt;/p&gt; 
 &lt;p&gt;&lt;a href=&#34;http://blog.jboss-portal.org/2008/04/jboss-portlet-bridge-beta2-released.html&#34;&gt;Read more about what is included in this release.&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;&lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge project page.&lt;/a&gt;&lt;/p&gt;
@@ -252,10 +252,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>JBoss Portlet Bridge with Seam support released</title>
-      <link>http://wesleyhales.com/blog/2008/02/14/jboss-portlet-bridge-with-seam-support-released</link>
+      <link>http://wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</link>
       <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/02/14/jboss-portlet-bridge-with-seam-support-released</guid>
+      <guid>http://wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</guid>
       <description>&lt;p&gt;It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.&lt;/p&gt; 
 &lt;p&gt;The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.&lt;/p&gt; 
 
@@ -266,10 +266,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>XHTML to PDF with a Seam filter</title>
-      <link>http://wesleyhales.com/blog/2007/12/17/xhtml-to-pdf-with-a-seam-filter</link>
+      <link>http://wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter</link>
       <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/12/17/xhtml-to-pdf-with-a-seam-filter</guid>
+      <guid>http://wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter</guid>
       <description>&lt;p&gt;After reading &lt;a href=&#34;http://today.java.net/pub/a/today/2006/10/31/combine-facelets-and-flying-saucer-renderer.html&#34;&gt;this article&lt;/a&gt; showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.&lt;/p&gt; 
 &lt;p&gt;First off, generated markup from any given JSF component is not guaranteed to be good markup. So I had to make use of cyberneko html parser. The servlet filter parses the generated response and then neko cleans up any non standard xhtml elements.&lt;/p&gt; 
 &lt;p&gt;One huge css tip is make sure you declare &lt;code&gt;media=&#34;print&#34;&lt;/code&gt; or &lt;code&gt;media=&#34;screen,print&#34;&lt;/code&gt; on your xhmtl css reference. Naturally it would be good to split the 2 style sheets but laziness forced me to use one for both.&lt;/p&gt; 
@@ -300,10 +300,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Writing a FaceBook app</title>
-      <link>http://wesleyhales.com/blog/2007/12/03/writing-a-facebook-app</link>
+      <link>http://wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app</link>
       <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/12/03/writing-a-facebook-app</guid>
+      <guid>http://wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app</guid>
       <description>&lt;p&gt;I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven&#39;t really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven&#39;t followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next. Linking people to each other in some way, shape, or form based on interests, work , hobbies, etc. has been going since modern civilization began and the social internet is just one of the many channels to do it.&lt;/p&gt; 
 &lt;p&gt;Now with the advent of &lt;a href=&#34;http://code.google.com/apis/opensocial/&#34;&gt;Open Social&lt;/a&gt; I&#39;m thinking that broadcasting to all of the different social networks is kind of riding the coat-tails of the fad, but is sure to bring out some interesting mutations in the social scene.&lt;/p&gt; 
 &lt;p&gt;Open Social is supporting quite a few different scenes (Engage.com, Friendster, hi5, Hyves, imeem, LinkedIn, MySpace, Ning, Oracle, orkut, Plaxo, Salesforce.com, Six Apart, Tianji, Viadeo, and XING) but not FaceBook. I wonder why this is?&lt;/p&gt; 
@@ -319,20 +319,20 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://wesleyhales.com/blog/2007/11/15/seam-2.0ga-in-jboss-portal-in-5-minutes</link>
+      <link>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/11/15/seam-2.0ga-in-jboss-portal-in-5-minutes</guid>
+      <guid>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</guid>
       <description>&lt;p&gt;**Update - See &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam&#34;&gt;this article&lt;/a&gt; for more info.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo</title>
-      <link>http://wesleyhales.com/blog/2007/10/12/running-seam-2.0-on-tomcatejb3-using-maven-and-cargo</link>
+      <link>http://wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</link>
       <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/10/12/running-seam-2.0-on-tomcatejb3-using-maven-and-cargo</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</guid>
       <description>&lt;p&gt;In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. &lt;/p&gt; 
 
 &lt;p&gt;It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.&lt;/p&gt; 
@@ -397,10 +397,10 @@ This is the power of Maven2 and there is soo much more you can do with it.&lt;/l
     
     <item>
       <title>My first Seam 2.0 app</title>
-      <link>http://wesleyhales.com/blog/2007/08/01/my-first-seam-2.0-app</link>
+      <link>http://wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app</link>
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/08/01/my-first-seam-2.0-app</guid>
+      <guid>http://wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app</guid>
       <description>&lt;p&gt;Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.&lt;/p&gt; 
 
 &lt;p&gt;This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)&lt;/p&gt; 

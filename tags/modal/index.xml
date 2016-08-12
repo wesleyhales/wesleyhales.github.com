@@ -11,10 +11,10 @@
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://wesleyhales.com/blog/2008/01/20/page-and-component-modal-with-a4j</link>
+      <link>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/01/20/page-and-component-modal-with-a4j</guid>
+      <guid>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
       <description>&lt;p&gt;I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and&#34;&gt;this one&lt;/a&gt; over a year ago when Ajax4JSF was still on java.net&lt;/p&gt; 
 
 &lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;

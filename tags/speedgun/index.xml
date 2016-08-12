@@ -11,10 +11,10 @@
     
     <item>
       <title>Simulated RUM testing with PhantomJS 2</title>
-      <link>http://wesleyhales.com/blog/2014/04/24/simulated-rum-testing-with-phantomjs-2</link>
+      <link>http://wesleyhales.com/blog/2014/04/24/Simulated-RUM-testing-with-PhantomJS-2</link>
       <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2014/04/24/simulated-rum-testing-with-phantomjs-2</guid>
+      <guid>http://wesleyhales.com/blog/2014/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
       <description>&lt;p&gt;Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
 
 &lt;p&gt;The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using &lt;a href=&#34;https://github.com/wesleyhales/loadreport&#34;&gt;Loadreport.js&lt;/a&gt;.

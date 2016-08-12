@@ -11,10 +11,10 @@
     
     <item>
       <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-      <link>http://wesleyhales.com/blog/2011/08/29/fixing-ajax-on-mobile-devices-with-html5</link>
+      <link>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/29/fixing-ajax-on-mobile-devices-with-html5</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://twitter.com/#!/_boye/&#34;&gt;@_boye&lt;/a&gt; has created &lt;a href=&#34;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&#34;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
 &lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>RichFaces Mobile Designs - Day 3</title>
-      <link>http://wesleyhales.com/blog/2011/08/03/richfaces-mobile-designs---day-3</link>
+      <link>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</link>
       <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/03/richfaces-mobile-designs---day-3</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</guid>
       <description>&lt;p&gt;&lt;p&gt;So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.&lt;/p&gt;&lt;p&gt;&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 3: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have another phone based design broke out into 3 pages.&lt;br /&gt; 
@@ -86,10 +86,10 @@ So after you go through the menu options and decide on a component, you are take
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://wesleyhales.com/blog/2011/08/02/going-mobile-with-richfaces-design-proposals---day2</link>
+      <link>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/02/going-mobile-with-richfaces-design-proposals---day2</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
       <description>&lt;p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
 
 &lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
@@ -117,10 +117,10 @@ The second page is what you see after selecting a menu item from page 1 (click t
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://wesleyhales.com/blog/2011/08/01/going-mobile-with-richfaces-design-proposals---day1</link>
+      <link>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/01/going-mobile-with-richfaces-design-proposals---day1</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
       <description>&lt;p&gt;&lt;p&gt;Today marks an important day in the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;RichFaces project&lt;/a&gt; as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.&lt;br /&gt; 
 So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. &lt;/p&gt;&lt;p&gt;I will announce each new design (both for tablet and phone) via &lt;a href=&#34;https://twitter.com/#!/richfaces&#34;&gt;twitter&lt;/a&gt; with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
@@ -139,10 +139,10 @@ Here we have what could be the RichFaces component showcase skin. This is what I
     
     <item>
       <title>Runtime Type Detection and Usage with Weld</title>
-      <link>http://wesleyhales.com/blog/2011/05/04/runtime-type-detection-and-usage-with-weld</link>
+      <link>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/05/04/runtime-type-detection-and-usage-with-weld</guid>
+      <guid>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
       <description>&lt;p&gt;&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;About TweetStream&lt;/p&gt;&lt;br /&gt; 
 &lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
 A little bit about the usecase: The &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; application is an app that Jay Balunas and I developed over the past few months for our presentation at &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt; web application (which runs on Android and iOS devices) with things like scalable data grid, &lt;span class=&#34;caps&#34;&gt;JMS&lt;/span&gt;, JSF2, &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt;/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.&lt;br /&gt; 
@@ -297,10 +297,10 @@ So we have 2 Qualifier Types:&lt;br /&gt;
     
     <item>
       <title>Does Developing Portlets Make You a Better Developer?</title>
-      <link>http://wesleyhales.com/blog/2011/04/05/does-developing-portlets-make-you-a-better-developer</link>
+      <link>http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer</link>
       <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/04/05/does-developing-portlets-make-you-a-better-developer</guid>
+      <guid>http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer</guid>
       <description>&lt;p&gt;&lt;p&gt;Working with portlet technology is often discredited for it’s seemingly complex &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.&lt;br /&gt; 
 This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.&lt;/p&gt;&lt;/p&gt; 
 
@@ -329,10 +329,10 @@ I think &lt;a href=&#34;http://www.redhat.com/summit/rates/&#34;&gt;early bird p
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>http://wesleyhales.com/blog/2011/02/16/going-mobile-with-richfaces-4---part-1</link>
+      <link>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/16/going-mobile-with-richfaces-4---part-1</guid>
+      <guid>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</guid>
       <description>&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/richfaces/&#34;&gt;Richfaces 4&lt;/a&gt; just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.&lt;br /&gt; 
 First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.&lt;/p&gt;&lt;/p&gt; 
 
@@ -360,10 +360,10 @@ Unfortunately the script I used here doesn’t always work and there are still a
     
     <item>
       <title>Replacing Photoshop With CSS3 - Creating Styles</title>
-      <link>http://wesleyhales.com/blog/2011/02/05/replacing-photoshop-with-css3---creating-styles</link>
+      <link>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</link>
       <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/05/replacing-photoshop-with-css3---creating-styles</guid>
+      <guid>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</guid>
       <description>&lt;p&gt;&lt;p&gt;One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).&lt;br /&gt; 
 This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with &lt;span class=&#34;caps&#34;&gt;CSS3&lt;/span&gt;. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused. Kind of like a &amp;#8220;style&amp;#8221; which can be applied to any element in Photoshop.&lt;/p&gt;&lt;br /&gt;
 &lt;p class=&#34;pTitle&#34;&gt;First off, this is how I would normally do it in Photoshop:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create the element &amp;#8211; a button in this case:&lt;br /&gt; 
@@ -406,10 +406,10 @@ This used to be a pain in the royal ass to implement with html/css2, but now is 
     
     <item>
       <title>Jazoon 2010 Overview</title>
-      <link>http://wesleyhales.com/blog/2010/06/07/jazoon-2010-overview</link>
+      <link>http://wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview</link>
       <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2010/06/07/jazoon-2010-overview</guid>
+      <guid>http://wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview</guid>
       <description>&lt;p&gt;&lt;p&gt;I&#39;ve always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&amp;#45;up of talented speakers/developers.&lt;/p&gt;&lt;/p&gt; 
 
 &lt;p&gt;&lt;p&gt;I was pleasantly surprised to see soo many talks about portal technologies. And people weren&#39;t talking about the spec or the technology itself, but about specific usecases &amp;#45; which is really cool. However, Andy Bosch did an excellent job of explaining the JSR&amp;#45;301/329 portlet bridge. &lt;a href=&#34;http://www.slideshare.net/wesleyhales/if-you-know-jsf-you-know-portals-and-portlets&#34;&gt;My talk&lt;/a&gt; was more vendor specific on the &lt;a href=&#34;http://jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; and the features that we offer with Seam and RichFaces, so it was great to have someone there to explain the spec in detail and give a non&amp;#45;vendor specific view.&lt;/p&gt;&lt;/p&gt; 
@@ -427,10 +427,10 @@ Overall, I had a great time and met a lot of people whom I have only talked to t
     
     <item>
       <title>The Ultimate Guide For Developer Screencasts</title>
-      <link>http://wesleyhales.com/blog/2010/03/17/the-ultimate-guide-for-developer-screencasts</link>
+      <link>http://wesleyhales.com/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts</link>
       <pubDate>Wed, 17 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2010/03/17/the-ultimate-guide-for-developer-screencasts</guid>
+      <guid>http://wesleyhales.com/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts</guid>
       <description>&lt;p&gt;&lt;img alt=&#34;JBoss Portlet Bridge Logo&#34; align=&#34;right&#34; src=&#34;http://wesleyhales.com/images/jroller/jbossportletbridge_logo.gif&#34;/&gt; About a year ago, I decided to start creating screen casts for the &lt;a href=&#34;http://jboss.org/portletbridge&#34; target=&#34;_blank&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; open source project. As a manager of a relatively small, niche project, it is easy for me to try new things that can only improve the community around the project &amp;#45; or serve as a learning lesson for myself. Screencasts are nothing new to the development scene, but my goal was to liven it up a bit and make the outcome seem more professional and well produced. At the same time, covering all the important facets of managing a community like community member recognition, to getting started, and so on.&lt;/p&gt; 
 
 &lt;p class=&#34;pTitle&#34;&gt;Coming up with a topic&lt;/p&gt; 
@@ -517,10 +517,10 @@ key frame every 30 frames (frame reordering on), using whatever frame rate you s
     
     <item>
       <title>Contextual PortletMode changes using the JBoss Portlet Bridge</title>
-      <link>http://wesleyhales.com/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</link>
+      <link>http://wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge</link>
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</guid>
+      <guid>http://wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge</guid>
       <description>&lt;p&gt;&lt;p&gt;By default, the JSR-&lt;sup&gt;301&lt;/sup&gt;&amp;frasl;&lt;sub&gt;329&lt;/sub&gt; portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.&lt;/p&gt;
 &lt;p class=&#34;pTitle&#34;&gt;Why use portlet modes instead of javascript widgets?&lt;/p&gt;
 &lt;p&gt;First I would like to give you a little justification of the beauty of this feature. Some people will argue the point of &amp;ldquo;Why do you need different modes like, Help and Edit?&amp;rdquo;, when you could add some cool &amp;ldquo;javascript of the week&amp;rdquo; that would dynamically display what you intended to present in one of the given modes. Well, you could develop your interactions either way but it really isn&amp;rsquo;t a question of why. It&amp;rsquo;s a question of &amp;ldquo;How?&amp;rdquo;. How do you want users to interact with your applications? And since you have already made the decision to invest in a portal solution, why not use the features that are built in and that stay consistent across the entire UI? Any UI Developer or Interaction Designer will tell you that adding cool javascript widgets adds another layer of complexity and maintenance, thus adding to developer time and bottom line ROI. In addition, when you develop any servlet based application to work within a portal environment, you are properly separating your concerns when you use these modes (without even realizing it in most cases). You are presenting distinguished flows for different trains of thought and making it easier for users to accomplish the task at hand.&lt;/p&gt;
@@ -588,10 +588,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Creating (another) Firefox Theme</title>
-      <link>http://wesleyhales.com/blog/2009/11/22/creating-another-firefox-theme</link>
+      <link>http://wesleyhales.com/blog/2009/11/22/Creating-another-Firefox-Theme</link>
       <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/11/22/creating-another-firefox-theme</guid>
+      <guid>http://wesleyhales.com/blog/2009/11/22/Creating-another-Firefox-Theme</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-h-small.jpg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-h-small.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
 &lt;p&gt;I started laying down ideas for a new Firefox theme a few months ago and this is what emerged. I&amp;rsquo;m not sure why I can&amp;rsquo;t stay away from the darker themes. Maybe it&amp;rsquo;s the richness that black (and darker colors) allows on a monitor, but I tried to stay as far away from mainstream design on this as I could. I have already coded this into a downloadable theme, but I am still working out some glitches. Then I have to let it sit in the Mozilla incubator, as I did with ANTHEM.&lt;/p&gt;
 &lt;p&gt;Speaking of ANTHEM, I&amp;rsquo;m quite surprised that it has done so well. 780k downloads and counting in 1 year. But it is all in vain if I can&amp;rsquo;t &amp;ldquo;supply more blood&amp;rdquo; to this living organ (As &lt;a href=&#34;http://www.jroller.com/robwilliams/&#34;&gt;Rob W.&lt;/a&gt; likes to put it.) With that said, I&amp;rsquo;m thinking about starting an open source project for these themes, because quite honestly, I don&amp;rsquo;t have time to &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/creating_a_firefox_3_theme&#34;&gt;fix the bugs&lt;/a&gt;. Anybody wanna help? Comment with your email&amp;hellip;&lt;/p&gt;
@@ -610,10 +610,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Replacing FacesMessages with Growl alerts</title>
-      <link>http://wesleyhales.com/blog/2009/08/10/replacing-facesmessages-with-growl-alerts</link>
+      <link>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/08/10/replacing-facesmessages-with-growl-alerts</guid>
+      <guid>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
       <description>&lt;p&gt;I saw a tweet from(&lt;a href=&#34;http://twitter.com/maxandersen&#34;&gt;@maxandersen&lt;/a&gt;) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.&lt;/p&gt; 
 &lt;p&gt;This is really just javascript on the front end and can be used with any backend message generating system.&lt;/p&gt; 
 
@@ -815,10 +815,10 @@ showError();
     
     <item>
       <title>How to make money off of a Firefox theme (or not)</title>
-      <link>http://wesleyhales.com/blog/2009/02/24/how-to-make-money-off-of-a-firefox-theme-or-not</link>
+      <link>http://wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</link>
       <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/02/24/how-to-make-money-off-of-a-firefox-theme-or-not</guid>
+      <guid>http://wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</guid>
       <description>&lt;p&gt;This weekend was quite an eye opener for me. Since the first public release of &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;ANTHEM&lt;/a&gt; (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.&lt;/p&gt; 
 &lt;p&gt;I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted. Then, I got the idea of adding a sponsor logo somewhere in the top banner like this (see top right corner):&lt;a href=&#34;http://wesleyhales.com/images/jroller/anthem-sponsor-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/anthem-sponsor-small.png&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;So I made the change and uploaded the new theme to the Mozilla Developer area. The next morning I awake to tons of emails and reviews on the Mozilla site with some seriously pissed off users. I knew I may get a little fallout, but not quite this bad. I guess I am guilty of falling prey to the big company mindset of caring about $$ more than the users of my product. But like I said on the Mozilla site, this was purely an experiment and the advertisement has been removed per the latest version (1.5.2).&lt;/p&gt; 

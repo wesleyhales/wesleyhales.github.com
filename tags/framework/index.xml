@@ -11,10 +11,10 @@
     
     <item>
       <title>CSS Framework</title>
-      <link>http://wesleyhales.com/blog/2007/08/14/css-framework</link>
+      <link>http://wesleyhales.com/blog/2007/08/14/CSS-Framework</link>
       <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/08/14/css-framework</guid>
+      <guid>http://wesleyhales.com/blog/2007/08/14/CSS-Framework</guid>
       <description>&lt;p&gt;There are several possible ways to go about building a CSS framework. The framework I mention here is suited for myself and the group of developers I work with. It has proven successful on the past 3 projects I have been on. 
 Once everyone knows about a base set of styles it&#39;s amazing how much more productive the team is. Not only do you have a &#34;master&#34; type of stylesheet to work from, everyone can edit the code and make changes faster because they are aware of the framework in use.&lt;/p&gt; 
 

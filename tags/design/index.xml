@@ -11,10 +11,10 @@
     
     <item>
       <title>From Startup to Enterprise</title>
-      <link>http://wesleyhales.com/blog/2013/12/17/from-startup-to-enterprise</link>
+      <link>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</link>
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/12/17/from-startup-to-enterprise</guid>
+      <guid>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -124,10 +124,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Creating a Firefox 3 theme</title>
-      <link>http://wesleyhales.com/blog/2008/08/26/creating-a-firefox-3-theme</link>
+      <link>http://wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme</link>
       <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/08/26/creating-a-firefox-3-theme</guid>
+      <guid>http://wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme</guid>
       <description>&lt;p&gt;&lt;div style=&#34;padding:5px; margin:5px; background-color:#f9f5ae; border:1px solid #b2ac4f;&#34;&gt;**UPDATE - This theme is now available on Mozilla.org here: &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34; style=&#34;color:#20aa30&#34;&gt;&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;https://addons.mozilla.org/en-US/firefox/addon/9627/&lt;/a&gt;&lt;/a&gt;&lt;/div&gt;
 &lt;a href=&#34;http://wesleyhales.com/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/ff3-themeclose.gif&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
 &lt;p&gt;I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.&lt;/p&gt;
@@ -145,10 +145,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Another design</title>
-      <link>http://wesleyhales.com/blog/2007/10/29/another-design</link>
+      <link>http://wesleyhales.com/blog/2007/10/29/Another-design</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/10/29/another-design</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/29/Another-design</guid>
       <description>&lt;p&gt;The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. &lt;/p&gt; 
 
 &lt;p&gt;Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)&lt;/p&gt; 
@@ -159,10 +159,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Another design</title>
-      <link>http://wesleyhales.com/blog/2007/10/29/another-design</link>
+      <link>http://wesleyhales.com/blog/2007/10/29/Another-design</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/10/29/another-design</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/29/Another-design</guid>
       <description>&lt;p&gt;The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. &lt;/p&gt; 
 
 &lt;p&gt;Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)&lt;/p&gt; 
@@ -173,10 +173,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Another blog layout</title>
-      <link>http://wesleyhales.com/blog/2007/03/11/another-blog-layout</link>
+      <link>http://wesleyhales.com/blog/2007/03/11/Another-blog-layout</link>
       <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/03/11/another-blog-layout</guid>
+      <guid>http://wesleyhales.com/blog/2007/03/11/Another-blog-layout</guid>
       <description>&lt;p&gt;&lt;p&gt;So my current design is serving the purpose, but it seems a little &amp;ldquo;bland&amp;rdquo;. I finally nailed down a design that is a little more frameworked. What I mean is, most of the time websites are designed to serve the content at hand. Which is fine in most cases, but I am looking for something more than just a &amp;ldquo;nice look&amp;rdquo; out of my designs. For some reason I can&amp;rsquo;t get away from grey and other neutral colors. Maybe cause it&amp;rsquo;s just the trend right now, but it seems to work and no matter what other colors I try in my designs, I always come back to grey. Also, the graphite pattern on the banner is kind of in style now (although it has been for the past 6 months), but by the time I code the css for this and integrate it into jroller - it will be time to do another design ?!?!&lt;/p&gt;
 &lt;div style=&#34;width:100%; text-align:center;&#34;&gt;
 &lt;a href=&#34;src=&#34;/images/jroller/new-layout2.jpg&#34;&gt;&lt;img src=&#34;src=&#34;/images/jroller/new-layout2_small.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt;
@@ -186,10 +186,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>My Jroller Blog Extreme Makeover</title>
-      <link>http://wesleyhales.com/blog/2006/12/18/my-jroller-blog-extreme-makeover</link>
+      <link>http://wesleyhales.com/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover</link>
       <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2006/12/18/my-jroller-blog-extreme-makeover</guid>
+      <guid>http://wesleyhales.com/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover</guid>
       <description>&lt;p&gt;I need a new design badly (the little British car in the tunnel is getting old, quick), and after coding for x number of months, I feel like my design skillz are getting a little stale. So here are the candidates for my new look.&lt;/p&gt; 
 
 &lt;p class=&#34;pTitle&#34;&gt;Layout #1&lt;/p&gt; 

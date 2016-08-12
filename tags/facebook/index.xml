@@ -11,10 +11,10 @@
     
     <item>
       <title>Writing a FaceBook app</title>
-      <link>http://wesleyhales.com/blog/2007/12/03/writing-a-facebook-app</link>
+      <link>http://wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app</link>
       <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/12/03/writing-a-facebook-app</guid>
+      <guid>http://wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app</guid>
       <description>&lt;p&gt;I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven&#39;t really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven&#39;t followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next. Linking people to each other in some way, shape, or form based on interests, work , hobbies, etc. has been going since modern civilization began and the social internet is just one of the many channels to do it.&lt;/p&gt; 
 &lt;p&gt;Now with the advent of &lt;a href=&#34;http://code.google.com/apis/opensocial/&#34;&gt;Open Social&lt;/a&gt; I&#39;m thinking that broadcasting to all of the different social networks is kind of riding the coat-tails of the fad, but is sure to bring out some interesting mutations in the social scene.&lt;/p&gt; 
 &lt;p&gt;Open Social is supporting quite a few different scenes (Engage.com, Friendster, hi5, Hyves, imeem, LinkedIn, MySpace, Ning, Oracle, orkut, Plaxo, Salesforce.com, Six Apart, Tianji, Viadeo, and XING) but not FaceBook. I wonder why this is?&lt;/p&gt; 

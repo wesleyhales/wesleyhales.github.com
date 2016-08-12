@@ -11,10 +11,10 @@
     
     <item>
       <title>Maven 2 vs. Ant (revisited)</title>
-      <link>http://wesleyhales.com/blog/2007/10/30/maven-2-vs.-ant-revisited</link>
+      <link>http://wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited</link>
       <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/10/30/maven-2-vs.-ant-revisited</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited</guid>
       <description>&lt;p&gt;Almost a year since I made &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/maven_2_vs_ant_which&#34;&gt;this entry&lt;/a&gt; and I think Maven is great for open source and commercial apps. Sure, there may be &lt;a href=&#34;http://blog.thomas.heute.name/2007/10/ant-vs-maven-round-2.html&#34;&gt;a few things&lt;/a&gt; you want to do that don&#39;t fit into the &#34;Maven way&#34; but for the most part, it is a great build system. 
 Also, any one that uses IntelliJ Idea will fall in love with Maven on first use (I guess it handles Eclipse project files just as well).&lt;/p&gt; 
 &lt;/p&gt; 

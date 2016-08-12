@@ -11,10 +11,10 @@
     
     <item>
       <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-      <link>http://wesleyhales.com/blog/2011/08/29/fixing-ajax-on-mobile-devices-with-html5</link>
+      <link>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/29/fixing-ajax-on-mobile-devices-with-html5</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://twitter.com/#!/_boye/&#34;&gt;@_boye&lt;/a&gt; has created &lt;a href=&#34;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&#34;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
 &lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>AJAX in Enterprise Portals at AjaxWorld</title>
-      <link>http://wesleyhales.com/blog/2008/10/19/ajax-in-enterprise-portals-at-ajaxworld</link>
+      <link>http://wesleyhales.com/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld</link>
       <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/10/19/ajax-in-enterprise-portals-at-ajaxworld</guid>
+      <guid>http://wesleyhales.com/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld</guid>
       <description>&lt;p&gt;I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don&#39;t be a stranger! 
 &lt;br/&gt; 
 Check out the sessions &lt;a href=&#34;http://ajaxworld.com/general/sessions1008.htm&#34;&gt;here&lt;/a&gt;.

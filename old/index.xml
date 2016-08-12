@@ -11,10 +11,10 @@
     
     <item>
       <title>The Decommissioning of Onslyde</title>
-      <link>http://wesleyhales.com/blog/2015/12/23/the-decommissioning-of-onslyde</link>
+      <link>http://wesleyhales.com/blog/2015/12/23/The-Decommissioning-of-Onslyde</link>
       <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2015/12/23/the-decommissioning-of-onslyde</guid>
+      <guid>http://wesleyhales.com/blog/2015/12/23/The-Decommissioning-of-Onslyde</guid>
       <description>&lt;p&gt;As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012,
 I started a web based, real-time feedback project called &lt;a href=&#34;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&#34;&gt;Onslyde&lt;/a&gt;.&lt;/p&gt;
 
@@ -54,10 +54,10 @@ learned to a new similar project in 2016, so stay tuned.&lt;/p&gt;
     
     <item>
       <title>Simulated RUM testing with PhantomJS 2</title>
-      <link>http://wesleyhales.com/blog/2014/04/24/simulated-rum-testing-with-phantomjs-2</link>
+      <link>http://wesleyhales.com/blog/2014/04/24/Simulated-RUM-testing-with-PhantomJS-2</link>
       <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2014/04/24/simulated-rum-testing-with-phantomjs-2</guid>
+      <guid>http://wesleyhales.com/blog/2014/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
       <description>&lt;p&gt;Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
 
 &lt;p&gt;The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using &lt;a href=&#34;https://github.com/wesleyhales/loadreport&#34;&gt;Loadreport.js&lt;/a&gt;.
@@ -229,10 +229,10 @@ I also want to give a quick shout out to all the other page testing services.&lt
     
     <item>
       <title>A More Better Conference Experience</title>
-      <link>http://wesleyhales.com/blog/2014/02/26/a-more-better-conference-experience</link>
+      <link>http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2014/02/26/a-more-better-conference-experience</guid>
+      <guid>http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -364,10 +364,10 @@ the devices to boot into full screen Chromium and run Onslyde.&lt;/p&gt;
     
     <item>
       <title>From Startup to Enterprise</title>
-      <link>http://wesleyhales.com/blog/2013/12/17/from-startup-to-enterprise</link>
+      <link>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</link>
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/12/17/from-startup-to-enterprise</guid>
+      <guid>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -477,10 +477,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Jank Busting Apple&#39;s Home Page</title>
-      <link>http://wesleyhales.com/blog/2013/10/26/jank-busting-apples-home-page</link>
+      <link>http://wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/10/26/jank-busting-apples-home-page</guid>
+      <guid>http://wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -532,10 +532,10 @@ Apple products. You can see this in the Frame analysis below. Each green line sh
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://wesleyhales.com/blog/2013/10/23/basic-screen-updates-with-angular-and-requestanimationframe</link>
+      <link>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/10/23/basic-screen-updates-with-angular-and-requestanimationframe</guid>
+      <guid>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -593,10 +593,10 @@ This is my first perf analysis of the framework and I plan on doing much more in
     
     <item>
       <title>Fun with Static Site Generators and Travis</title>
-      <link>http://wesleyhales.com/blog/2013/03/29/fun-with-static-site-generators-and-travis</link>
+      <link>http://wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</link>
       <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/03/29/fun-with-static-site-generators-and-travis</guid>
+      <guid>http://wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -698,10 +698,10 @@ mapping of my TLD (wesleyhales.com) to my username on github.
     
     <item>
       <title>How Collective Wisdom Shapes a Talk</title>
-      <link>http://wesleyhales.com/blog/2013/02/25/how-collective-wisdom-shapes-a-talk</link>
+      <link>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</link>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/02/25/how-collective-wisdom-shapes-a-talk</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -837,10 +837,10 @@ This blog post is serving as the documentation for the project until I get some 
     
     <item>
       <title>Adventures with the Skia Debugger</title>
-      <link>http://wesleyhales.com/blog/2013/02/18/adventures-with-the-skia-debugger</link>
+      <link>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/02/18/adventures-with-the-skia-debugger</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;Debugging jank, reflows, etc&amp;hellip;&lt;/h3&gt;
 The &lt;a href=&#34;https://sites.google.com/site/skiadocs/developer-documentation/skia-debugger&#34;&gt;Skia debugger&lt;/a&gt; was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.&lt;/p&gt;
@@ -876,10 +876,10 @@ Happy debugging!&lt;/p&gt;
     
     <item>
       <title>I&#39;ll Sleep When I Die - All for HTML5</title>
-      <link>http://wesleyhales.com/blog/2012/11/01/ill-sleep-when-i-die---all-for-html5</link>
+      <link>http://wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die---All-for-HTML5</link>
       <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/11/01/ill-sleep-when-i-die---all-for-html5</guid>
+      <guid>http://wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die---All-for-HTML5</guid>
       <description>&lt;p&gt;The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book,
 gave up a secure job, and changed jobs 4 times. All to push myself, get uncomfortable, and better understand the challenges
 that front-end developers are facing in 2012 and beyond. I gained more than I ever thought possible.&lt;/p&gt;
@@ -1048,10 +1048,10 @@ I can sleep pretty well after a couple of beers, and I won’t have to pay for m
     
     <item>
       <title>Web Performance Testing With PhantomJS</title>
-      <link>http://wesleyhales.com/blog/2012/08/16/web-performance-testing-with-phantomjs</link>
+      <link>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/08/16/web-performance-testing-with-phantomjs</guid>
+      <guid>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
@@ -1101,10 +1101,10 @@ To bypass this bug, I&amp;rsquo;ve created my own caching mechanism which basica
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://wesleyhales.com/blog/2012/07/19/html5-is-booming-in-atlanta</link>
+      <link>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/07/19/html5-is-booming-in-atlanta</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
 &lt;br/&gt;
 &lt;div style=&#34;width:540px;margin: 0 auto&#34;&gt;
@@ -1131,10 +1131,10 @@ To bypass this bug, I&amp;rsquo;ve created my own caching mechanism which basica
     
     <item>
       <title>Sharing Content with Web Intents</title>
-      <link>http://wesleyhales.com/blog/2012/07/11/sharing-content-with-web-intents</link>
+      <link>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/07/11/sharing-content-with-web-intents</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
 If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
@@ -1304,10 +1304,10 @@ Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#3
     
     <item>
       <title>Sniffing IE9 features while in compatibility mode</title>
-      <link>http://wesleyhales.com/blog/2012/06/08/sniffing-ie9-features-while-in-compatibility-mode</link>
+      <link>http://wesleyhales.com/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode</link>
       <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/06/08/sniffing-ie9-features-while-in-compatibility-mode</guid>
+      <guid>http://wesleyhales.com/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode</guid>
       <description>&lt;p&gt;Getting the browser version from the User Agent string is one thing. But, when you
 force compatibility mode in IE, you get whatever version you&amp;rsquo;re forcing to. e.g&amp;hellip;
 &lt;code&gt;&lt;pre&gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=EmulateIE8&amp;quot;/&amp;gt;&lt;/pre&gt;&lt;code&gt;&lt;/p&gt;
@@ -1338,10 +1338,10 @@ var val = Math.sin(x);
     
     <item>
       <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-      <link>http://wesleyhales.com/blog/2012/04/09/choppy-scrolling-on-ios-with-iscroll-and-phonegap</link>
+      <link>http://wesleyhales.com/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap</link>
       <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/04/09/choppy-scrolling-on-ios-with-iscroll-and-phonegap</guid>
+      <guid>http://wesleyhales.com/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap</guid>
       <description>&lt;p&gt;I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
 Apparently, there is a problem with older browsers using CSS3 selectors like &lt;code&gt;div[style*=&amp;lsquo;foo&amp;rsquo;]&lt;/code&gt; in combination with other DOM elements.
 &lt;a href=&#34;http://wesleyhales.com/iscroll&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/iscroll.PNG&#34; width=150 alt=&#34;iscroll&#34; align=&#34;left&#34; style=&#34;margin:20px&#34;&gt;&lt;/a&gt;&lt;/p&gt;

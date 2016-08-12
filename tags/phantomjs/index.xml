@@ -11,10 +11,10 @@
     
     <item>
       <title>Web Performance Testing With PhantomJS</title>
-      <link>http://wesleyhales.com/blog/2012/08/16/web-performance-testing-with-phantomjs</link>
+      <link>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/08/16/web-performance-testing-with-phantomjs</guid>
+      <guid>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These

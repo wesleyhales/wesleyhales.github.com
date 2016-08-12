@@ -11,10 +11,10 @@
     
     <item>
       <title>Adventures with the Skia Debugger</title>
-      <link>http://wesleyhales.com/blog/2013/02/18/adventures-with-the-skia-debugger</link>
+      <link>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/02/18/adventures-with-the-skia-debugger</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;Debugging jank, reflows, etc&amp;hellip;&lt;/h3&gt;
 The &lt;a href=&#34;https://sites.google.com/site/skiadocs/developer-documentation/skia-debugger&#34;&gt;Skia debugger&lt;/a&gt; was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.&lt;/p&gt;

@@ -11,10 +11,10 @@
     
     <item>
       <title>Replacing FacesMessages with Growl alerts</title>
-      <link>http://wesleyhales.com/blog/2009/08/10/replacing-facesmessages-with-growl-alerts</link>
+      <link>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/08/10/replacing-facesmessages-with-growl-alerts</guid>
+      <guid>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
       <description>&lt;p&gt;I saw a tweet from(&lt;a href=&#34;http://twitter.com/maxandersen&#34;&gt;@maxandersen&lt;/a&gt;) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.&lt;/p&gt; 
 &lt;p&gt;This is really just javascript on the front end and can be used with any backend message generating system.&lt;/p&gt; 
 

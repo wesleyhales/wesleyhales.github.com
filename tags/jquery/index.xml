@@ -11,10 +11,10 @@
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>http://wesleyhales.com/blog/2011/02/16/going-mobile-with-richfaces-4---part-1</link>
+      <link>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/16/going-mobile-with-richfaces-4---part-1</guid>
+      <guid>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</guid>
       <description>&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/richfaces/&#34;&gt;Richfaces 4&lt;/a&gt; just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.&lt;br /&gt; 
 First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.&lt;/p&gt;&lt;/p&gt; 
 

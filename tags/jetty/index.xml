@@ -11,10 +11,10 @@
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://wesleyhales.com/blog/2012/01/20/pushing-cdi-events-to-the-browser-with-websockets</link>
+      <link>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/01/20/pushing-cdi-events-to-the-browser-with-websockets</guid>
+      <guid>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
       <description>&lt;p&gt;&lt;div class=&#34;notes&#34; &gt;
 Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&#34;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&#34;&gt;here&lt;/a&gt;.
 &lt;/div&gt;

@@ -11,10 +11,10 @@
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://wesleyhales.com/blog/2012/07/19/html5-is-booming-in-atlanta</link>
+      <link>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/07/19/html5-is-booming-in-atlanta</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
 &lt;br/&gt;
 &lt;div style=&#34;width:540px;margin: 0 auto&#34;&gt;
@@ -41,10 +41,10 @@
     
     <item>
       <title>Sharing Content with Web Intents</title>
-      <link>http://wesleyhales.com/blog/2012/07/11/sharing-content-with-web-intents</link>
+      <link>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/07/11/sharing-content-with-web-intents</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
 If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
@@ -214,10 +214,10 @@ Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#3
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://wesleyhales.com/blog/2012/01/20/pushing-cdi-events-to-the-browser-with-websockets</link>
+      <link>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/01/20/pushing-cdi-events-to-the-browser-with-websockets</guid>
+      <guid>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
       <description>&lt;p&gt;&lt;div class=&#34;notes&#34; &gt;
 Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&#34;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&#34;&gt;here&lt;/a&gt;.
 &lt;/div&gt;
@@ -301,10 +301,10 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-      <link>http://wesleyhales.com/blog/2011/08/29/fixing-ajax-on-mobile-devices-with-html5</link>
+      <link>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/29/fixing-ajax-on-mobile-devices-with-html5</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://twitter.com/#!/_boye/&#34;&gt;@_boye&lt;/a&gt; has created &lt;a href=&#34;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&#34;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
 &lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
@@ -350,10 +350,10 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>Replacing Photoshop With CSS3 - Creating Styles</title>
-      <link>http://wesleyhales.com/blog/2011/02/05/replacing-photoshop-with-css3---creating-styles</link>
+      <link>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</link>
       <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/05/replacing-photoshop-with-css3---creating-styles</guid>
+      <guid>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</guid>
       <description>&lt;p&gt;&lt;p&gt;One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).&lt;br /&gt; 
 This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with &lt;span class=&#34;caps&#34;&gt;CSS3&lt;/span&gt;. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused. Kind of like a &amp;#8220;style&amp;#8221; which can be applied to any element in Photoshop.&lt;/p&gt;&lt;br /&gt;
 &lt;p class=&#34;pTitle&#34;&gt;First off, this is how I would normally do it in Photoshop:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create the element &amp;#8211; a button in this case:&lt;br /&gt; 
