@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jank on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/jank/</link>
+    <link>http://wesleyhales.com/tags/jank/</link>
     <description>Recent content in Jank on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Oct 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/jank/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/jank/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jank Busting Apple&#39;s Home Page</title>
-      <link>http://wesleyhales.com:1313/blog/2013/10/26/jank-busting-apples-home-page</link>
+      <link>http://wesleyhales.com/blog/2013/10/26/jank-busting-apples-home-page</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/10/26/jank-busting-apples-home-page</guid>
+      <guid>http://wesleyhales.com/blog/2013/10/26/jank-busting-apples-home-page</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&#34;http://wesleyhales.com:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&#34;&gt;this article&lt;/a&gt; the other day which examines the
+&lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&#34;http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&#34;&gt;this article&lt;/a&gt; the other day which examines the
 performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
 Jake Archibald&amp;rsquo;s &lt;a href=&#34;http://jakearchibald.github.io/jank-invaders/&#34;&gt;Jank Invaders&lt;/a&gt; to hone my skills and save the universe from jank :)&lt;/p&gt;
 
 &lt;p&gt;So, I was on &lt;a href=&#34;http://apple.com&#34;&gt;Apple&amp;rsquo;s home page&lt;/a&gt; the other day and noticed some jank in their main carousel animation.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.home.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.home.PNG&#34; alt=&#34;apple home page&#34; style=&#34;width:50%&#34; class=&#34;margin10&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&#34; alt=&#34;apple home page&#34; style=&#34;width:50%&#34; class=&#34;margin10&#34;&gt;&lt;/a&gt;
 It wasn&amp;rsquo;t anything huge, but the
 animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
 Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a &lt;a href=&#34;https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events&#34;&gt;paint&lt;/a&gt; within chrome.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.jank.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
  handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka &lt;a href=&#34;http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/&#34;&gt;null transform hack&lt;/a&gt;).
  The problem with Apple&amp;rsquo;s site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
- &lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/composite.PNG&#34; alt=&#34;layer composite time&#34; class=&#34;margin10 max-width-100&#34;/&gt;
+ &lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/composite.PNG&#34; alt=&#34;layer composite time&#34; class=&#34;margin10 max-width-100&#34;/&gt;
  &lt;br/&gt;
  I wrote about this &lt;a href=&#34;http://www.html5rocks.com/en/mobile/optimization-and-performance/&#34;&gt;a while ago&lt;/a&gt;, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
  applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.&lt;/p&gt;
 
 &lt;p&gt;The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
  If we turn on &amp;ldquo;&lt;a href=&#34;http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode&#34;&gt;Continuous Page Repainting&lt;/a&gt;&amp;rdquo; in dev tools, we can see how the page is being painted and how many composited layers we have.
- &lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple-paint.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple-paint.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
  From there, I just disabled all the null transform hacks that were applied to nested elements.
- &lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.markup.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.markup.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
  below timeline.
- &lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.no.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.no.jank.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The yellow bars are the 7 second timer before each transition occurs, so this is expected.&lt;/p&gt;
 
@@ -66,10 +66,10 @@ Apple products. You can see this in the Frame analysis below. Each green line sh
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://wesleyhales.com:1313/blog/2013/10/23/basic-screen-updates-with-angular-and-requestanimationframe</link>
+      <link>http://wesleyhales.com/blog/2013/10/23/basic-screen-updates-with-angular-and-requestanimationframe</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/10/23/basic-screen-updates-with-angular-and-requestanimationframe</guid>
+      <guid>http://wesleyhales.com/blog/2013/10/23/basic-screen-updates-with-angular-and-requestanimationframe</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -88,18 +88,18 @@ If you want to read more about $scope.$apply check out &lt;a href=&#34;http://ji
 &lt;p&gt;For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
 the user know when it&amp;rsquo;s about to refresh the data.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn&amp;rsquo;t believe how much jank it was causing.
 There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
  check it out &lt;a href=&#34;http://www.youtube.com/watch?v=mSK70FwUz2A&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 Yep, That&amp;rsquo;s 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.&lt;/p&gt;
 
 &lt;p&gt;Also, if you look at the memory being consumed, we&amp;rsquo;re taking quite a hit for this little counter.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 We maintain around 25MB and then shoot up to 34 when the page does its refresh.
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
@@ -111,10 +111,10 @@ Here&amp;rsquo;s the code I put together:
 &lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/wesleyhales/59SeE/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;p&gt;And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Also the memory footprint is greatly reduced:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.&lt;/p&gt;
 
 &lt;p&gt;A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the
