@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="My New Hugo Site">
+        <meta property="og:title" content="My New Hugo Site">
+        <meta property="og:url" content="http://localhost:1313/1/01/2013-10-26-jank-busting-apples-home-page/">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="0001-01-01T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+        <title>Jank Busting Apple&#39;s Home Page &middot; My New Hugo Site </title>
+        <link rel="canonical" href="http://localhost:1313/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="stylesheet" type='text/css' href="http://localhost:1313/css/main.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    </head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://localhost:1313/" alt="My New Hugo Site"><h1 class="blog-title heading">My New Hugo Site</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">Jank Busting Apple&#39;s Home Page</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<p><br/></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote <a href="/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/">this article</a> the other day which examines the
+performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
+Jake Archibald&rsquo;s <a href="http://jakearchibald.github.io/jank-invaders/">Jank Invaders</a> to hone my skills and save the universe from jank :)</p>
+
+<p>So, I was on <a href="http://apple.com">Apple&rsquo;s home page</a> the other day and noticed some jank in their main carousel animation.
+<a href="/images/posts/2013-10-26/apple.home.PNG"><img src="/images/posts/2013-10-26/apple.home.PNG" alt="apple home page" style="width:50%" class="margin10"></a>
+It wasn&rsquo;t anything huge, but the
+animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
+Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a <a href="https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events">paint</a> within chrome.
+<a href="/images/posts/2013-10-26/apple.com.jank.PNG"><img src="/images/posts/2013-10-26/apple.com.jank.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a></p>
+
+<p>Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
+ handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka <a href="http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/">null transform hack</a>).
+ The problem with Apple&rsquo;s site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
+ <img src="/images/posts/2013-10-26/composite.PNG" alt="layer composite time" class="margin10 max-width-100"/>
+ <br/>
+ I wrote about this <a href="http://www.html5rocks.com/en/mobile/optimization-and-performance/">a while ago</a>, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
+ applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.</p>
+
+<p>The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
+ If we turn on &ldquo;<a href="http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode">Continuous Page Repainting</a>&rdquo; in dev tools, we can see how the page is being painted and how many composited layers we have.
+ <a href="/images/posts/2013-10-26/apple-paint.PNG"><img src="/images/posts/2013-10-26/apple-paint.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a></p>
+
+<p>By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
+ From there, I just disabled all the null transform hacks that were applied to nested elements.
+ <a href="/images/posts/2013-10-26/apple.markup.PNG"><img src="/images/posts/2013-10-26/apple.markup.PNG" alt="apple home page markup" class="marginTop10 max-width-100"></a></p>
+
+<p>After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
+ below timeline.
+ <a href="/images/posts/2013-10-26/apple.com.no.jank.PNG"><img src="/images/posts/2013-10-26/apple.com.no.jank.PNG" alt="apple home page markup" class="marginTop10 max-width-100"></a></p>
+
+<p>The yellow bars are the 7 second timer before each transition occurs, so this is expected.</p>
+
+<p>The animation on Apple.com isn&rsquo;t terrible as it stands in its current state, but as I stated at the beginning of this article, it&rsquo;s fun to fix jank :)</p>
+
+<p><br/>
+ <br/></p>
+
+<p><br/>
+<br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            
+            <p class="f-post-time"><time datetime="0001-01-01T00:00:00Z">January 1, 0001</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Jank%20Busting%20Apple%27s%20Home%20Page&url=http%3a%2f%2flocalhost%3a1313%2f1%2f01%2f2013-10-26-jank-busting-apples-home-page%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2f1%2f01%2f2013-10-26-jank-busting-apples-home-page%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2f1%2f01%2f2013-10-26-jank-busting-apples-home-page%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	jank
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://localhost:1313/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; <a href="http://localhost:1313/"></a> 2015 | All rights reserved</section>
+            <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://localhost:1313/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

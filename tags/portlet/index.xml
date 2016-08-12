@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portlet on Wesley Hales</title>
+    <link>http://localhost:1313/tags/portlet/</link>
+    <description>Recent content in Portlet on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Jan 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/portlet/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>JBoss Portlet Bridge Beta 6 Released!</title>
+      <link>http://localhost:1313/blog/2009/01/25/jboss-portlet-bridge-beta-6-released</link>
+      <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2009/01/25/jboss-portlet-bridge-beta-6-released</guid>
+      <description>&lt;p&gt;Read about it here: &lt;a href=&#34;http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html&#34;&gt;http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
+      <link>http://localhost:1313/blog/2008/08/06/developing-portlets-using-jsf-ajax-and-seam-part-1-of-3</link>
+      <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/08/06/developing-portlets-using-jsf-ajax-and-seam-part-1-of-3</guid>
+      <description>&lt;p&gt;InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!&lt;/p&gt; 
+&lt;br/&gt; 
+&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
+
+&lt;p&gt;This first part is about basic JSF development with an easy to follow tutorial and real world development tips. The next one will be about RichFaces and the final (about Seam) will be published right after the release of Beta 4 in early September.&lt;/p&gt; 
+
+&lt;p&gt;Enjoy!&lt;br/&gt; 
+&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&lt;/a&gt; 
+&lt;br/&gt;&lt;br/&gt;&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-2&#34;&gt;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-2&lt;/a&gt; 
+&lt;br/&gt; 
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JSF in a portlet has never been this easy!</title>
+      <link>http://localhost:1313/blog/2008/07/07/jsf-in-a-portlet-has-never-been-this-easy</link>
+      <pubDate>Mon, 07 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/07/07/jsf-in-a-portlet-has-never-been-this-easy</guid>
+      <description>&lt;p&gt;We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects. &lt;a href=&#34;http://www.jboss.org/files/portletbridge/docs/1.0.0.B3/en/html_single/index.html&#34;&gt;See the documentation for full details&lt;/a&gt;. 
+
+&lt;p&gt;For those that want to jump right in, you can run the following archetype and have it deployed on JBoss AS + Portal in minutes: 
+&lt;br&gt; 
+&lt;code&gt;&lt;pre&gt; 
+mvn archetype:generate -DarchetypeGroupId=org.jboss.portletbridge.archetypes -DarchetypeArtifactId=1.2-basic -DarchetypeVersion=1.0.0.B3 -DgroupId=org.whatever.project -DartifactId=myprojectname -DarchetypeRepository=http://repository.jboss.org/maven2/ -Dversion=1.0.0.B3 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;br/&gt; 
+&lt;code&gt;&lt;pre&gt; 
+mvn install cargo:start -Premote-portal -Dpc20 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;br/&gt; 
+&lt;code&gt;&lt;pre&gt; 
+mvn cargo:deploy -Premote-portal -Dpc20 
+&lt;/pre&gt;&lt;/code&gt; 
+&lt;br/&gt; 
+Visit &lt;a href=&#34;http://localhost:8080/simple-portal/demo/jsr-301.jsp&#34;&gt;http://localhost:8080/simple-portal/demo/jsr-301.jsp&lt;/a&gt; 
+&lt;/p&gt; 
+&lt;br/&gt; 
+&lt;br/&gt; 
+The majority of the code written for this release is internal to the portlet bridge project (refactoring, 301 spec updates and enhancements, bug fixes...). The next release (Beta 4 - early Sept) will be huge for the portlet bridge for the following reasons: 
+&lt;ul&gt;&lt;li&gt;The EG is currently discussing a lot of significant clarifications and improvements. For example, working with the JSF 2.0 EG to allow certain needs and working on Portlet 2.0 areas of the spec. 
+&lt;/li&gt;&lt;li&gt;There is currently a lot of discussion about navigation between portlet modes. Once this is nailed down in the spec, we will implement it. 
+&lt;/li&gt;&lt;li&gt;The Portlet 1.0 version should be getting close to public review.&lt;/li&gt;&lt;/ul&gt;Other than the spec related reasons for release schedule, we must work in unison with the latest Seam and RichFaces relases, make sure that we squash any bugs concerning the 3 integration points, handle features/improvements/refactorings, and try to test and give feedback to the 301 EG. And, of course we can&#39;t forget about JBoss Portal 2.7+! 
+
+There are soo many cool things going on right now within the JBoss Portal project, I would like to tell you about all of them but then this post wouldn&#39;t be about JBPB anymore. Just stay tuned to this blog... 
+
+With that said, here are a few tips for JSF portlet developers that concern this release: 
+&lt;ul&gt;&lt;li&gt;&lt;b id=&#34;lwur&#34;&gt;Namespacing&lt;/b&gt; 
+In situations where you need to use the id of an element in your JSF/xhtml markup, you would normally see something like &#39;form1:myBtn&#39; in the rendered markup. But now with the bridge namespacing you will see something similar to: &lt;p id=&#34;d0j41&#34;&gt;jbpns_2fdefault_2fNews_2fStories_2fStoryTemplateWindow12snpbj:_viewRoot:form1:myBtn&lt;/p&gt;&lt;p id=&#34;mxo:1&#34;&gt;To overcome this, you can use the following expression in your Facelets page to prepend the namespace to your javascript code: &lt;/p&gt;&lt;p&gt;document.getElementById(&#39;&amp;#35;{facesContext.externalContext.response.namespace}the_rest_of_JSF_ID&lt;/p&gt; since this uses the portletResponse, once you try to view this page on the servlet application side, you will get an exception. To avoid this, you need to check for the type of response in your backing bean and assign a new &#34;safe&#34; namespace variable for the UI. 
+
+&lt;/li&gt;&lt;li&gt;&lt;b id=&#34;lwur1&#34;&gt;Excluding Attributes from the Bridge Request Scope&lt;/b&gt; 
+When your application uses request attributes on a per request basis and you do not want that particular attribute to be managed in the extended bridge request scope, you must use the following configuration in your faces-config.xml. Below you will see that any attribute namespaced as foo.bar or any attribute beginning with foo.baz(wildcard) will be excluded from the bridge request scope and only be used per that application&#39;s request. 
+&lt;pre&gt;&lt;code&gt; 
+&amp;lt;application&amp;gt; 
+&amp;lt;application-extension&amp;gt; 
+&amp;lt;bridge:excluded-attributes&amp;gt; 
+&amp;lt;bridge:excluded-attribute&amp;gt;foo.bar&amp;lt;/bridge:excluded-attribute&amp;gt; 
+&amp;lt;bridge:excluded-attribute&amp;gt;foo.baz.*&amp;lt;/bridge:excluded-attribute&amp;gt; 
+&amp;lt;/bridge:excluded-attributes&amp;gt; 
+&amp;lt;/application-extension&amp;gt; 
+&amp;lt;/application&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ul&gt;For more information on this release or to find out more about the project, visit the &lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;project page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge Beta2 Released!</title>
+      <link>http://localhost:1313/blog/2008/04/11/jboss-portlet-bridge-beta2-released</link>
+      <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/04/11/jboss-portlet-bridge-beta2-released</guid>
+      <description>&lt;p&gt;The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&#34;http://blog.jboss-portal.org/2008/04/jboss-portlet-bridge-beta2-released.html&#34;&gt;Read more about what is included in this release.&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge project page.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge with Seam support released</title>
+      <link>http://localhost:1313/blog/2008/02/14/jboss-portlet-bridge-with-seam-support-released</link>
+      <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/02/14/jboss-portlet-bridge-with-seam-support-released</guid>
+      <description>&lt;p&gt;It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.&lt;/p&gt; 
+&lt;p&gt;The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://labs.jboss.com/portletbridge/&#34;&gt;See the project page&lt;/a&gt; for more details and a live demo.&lt;/p&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

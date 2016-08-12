@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phantomjs on Wesley Hales</title>
+    <link>http://localhost:1313/tags/phantomjs/</link>
+    <description>Recent content in Phantomjs on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/phantomjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Web Performance Testing With PhantomJS</title>
+      <link>http://localhost:1313/blog/2012/08/16/web-performance-testing-with-phantomjs</link>
+      <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2012/08/16/web-performance-testing-with-phantomjs</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
+are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
+rankings, higher conversion rates, and an overall reduction in bandwidth costs.&lt;/p&gt;
+
+&lt;p&gt;I recently took on the task of coming up with an accurate way to measure all the aforementioned things, in an effort to understand
+which performance tweaks improved page load times and which ones didn&amp;rsquo;t. But first, we needed a baseline to test how fast the page loads with both a clear-cache and primed-cache state; Enter PhantomJS.
+PhantomJS gives us a way to headlessly test page performance, and also gives us the automation we need for integration with any build system.
+For this article, I will explain the reporting tool I used and try to give you a starting point for testing your own site(s).&lt;/p&gt;
+
+&lt;p&gt;First off, I started with James Pierce&amp;rsquo;s &lt;a href=&#34;https://github.com/jamesgpearce/confess/&#34;&gt;confess.js&lt;/a&gt; which gives us the elapsed load
+time of a web page, the slowest and fastest resources, along with many other cool things like automatic generation of an appcache manifest. However, it did not give us
+the document.readyState=interactive/complete or window.onload times. Another thing I wanted to measure was before and after cache. So If at first,
+we have resources which are not far-future cached, what happens after we future cache these things? Also, how fast does our page load after
+ being cached?&lt;/p&gt;
+
+&lt;p&gt;With a few performance focused modifications to confess.js, we are able to gather the following results:
+&lt;ul&gt;
+&lt;li&gt;document.readyState&lt;/li&gt;
+&lt;li&gt;image filmstrip (how the page looks over load time)&lt;/li&gt;
+&lt;li&gt;page and resource load times after the user has a primed cache.&lt;/li&gt;
+&lt;li&gt;pretty effin cool charts with sparklines fed by knockout.js&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;This script is running live at &lt;a href=&#34;http://loadreport.wesleyhales.com/report.html&#34;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
+&lt;img src=&#34;http://localhost:1313/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&#34;http://twitter.com/ryanbridges&#34;&gt;@ryanbridges&lt;/a&gt; put together
+some awesome sparkline charts backed by knockout.js. Just click on the &amp;ldquo;Show Me Some Charts!&amp;rdquo; button to see &amp;lsquo;em.
+&lt;img src=&#34;http://localhost:1313/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Regarding cache performance, phantomjs has a &amp;ndash;disk-cahe=yes switch which is supposed to enable caching, but the results on the number
+of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with &amp;ndash;disk-cahe=yes, phantom returns
+over 2MB of resources, but if we run it with the same switch set to &amp;ldquo;no&amp;rdquo;, we get 858KB of resources - and both modes report the same number
+of resources being loaded (around 150).
+To bypass this bug, I&amp;rsquo;ve created my own caching mechanism which basically loads the same page twice (in the same phantom instance)
+ and returns more accurate results when compared with Chrome&amp;rsquo;s developer tools.&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&#34;http://phantomjs.org/&#34;&gt;phantomjs&lt;/a&gt; 1.6+, &lt;a href=&#34;https://github.com/wesleyhales/loadreport&#34;&gt;Get the script here&lt;/a&gt; and run this on your own build servers to make sure your UI screams.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://twitter.com/wesleyhales&#34;&gt;@wesleyhales&lt;/a&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

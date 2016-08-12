@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oss Management on Wesley Hales</title>
+    <link>http://localhost:1313/tags/oss-management/</link>
+    <description>Recent content in Oss Management on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/oss-management/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Decommissioning of Onslyde</title>
+      <link>http://localhost:1313/blog/2015/12/23/the-decommissioning-of-onslyde</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2015/12/23/the-decommissioning-of-onslyde</guid>
+      <description>&lt;p&gt;As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012,
+I started a web based, real-time feedback project called &lt;a href=&#34;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&#34;&gt;Onslyde&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-12-23/edge1-panel-detail-large-opt.png&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;To me the project was a huge success with many measurable results:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Massive amount of research with WebSockets and mobile devices.&lt;/li&gt;
+&lt;li&gt;Based on the code and research I was able to craft many talks for speaking engagements at conferences around the globe.&lt;/li&gt;
+&lt;li&gt;The Onslyde service was used at some of the most popular software engineering conferences. (e.g. EdgeConf 2013-2014)&lt;/li&gt;
+&lt;li&gt;I received an incredible job offer that I unfortunately had to turn down this time last year. massive salary, director title, bonus, everything&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of the above and much more were the result of an open source side project on github. Of course, I had a few big fails
+ along the way but overall I feel the project did something special that no one else was doing. It connected the audience with the
+ conversation that has always been a one way lecture.&lt;/p&gt;
+
+&lt;p&gt;Anywho, here&amp;rsquo;s to a great (almost) 4 year run for a project that I actually enjoyed working on. I may take the wisdom and lessons
+learned to a new similar project in 2016, so stay tuned.&lt;/p&gt;
+
+&lt;p&gt;Further Reading and Videos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&#34;&gt;Smashing Magazine Article&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&#34;&gt;Research on Audience Interaction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://labs.ft.com/2013/10/thoughts-from-edge-2/&#34;&gt;Onslyde in use at EdgeConf 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/&#34;&gt;Onslyde in use at Devnexus 2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.christianheilmann.com/2014/03/22/edgeconf-3-just-be-there-next-time-trust-me/&#34;&gt;Onslyde in use at EdgeConf 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://eventtech.co/2014/01/24/wesley-hales-creator-of-onslyde/&#34;&gt;EventTech podcast interview&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

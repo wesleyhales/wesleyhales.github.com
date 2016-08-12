@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Develop on Wesley Hales</title>
+    <link>http://localhost:1313/tags/develop/</link>
+    <description>Recent content in Develop on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>From Startup to Enterprise</title>
+      <link>http://localhost:1313/blog/2013/12/17/from-startup-to-enterprise</link>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2013/12/17/from-startup-to-enterprise</guid>
+      <description>
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee.
+For the past year I&amp;rsquo;ve been heads down on merging Apigee&amp;rsquo;s Usergrid and Mobile Analytics products using AngularJS.&lt;/p&gt;
+
+&lt;p&gt;For those interested: Usergrid, a
+Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.
+Developers use it to create a backend for their mobile apps amongst many other things like managing users, roles and permissions.
+The Mobile Analytics product is something I was partial to since I created the original UI - before it was acquired by Apigee. I wanted to carry it past
+the acquisition and endure the process of turning it into a full fledged enterprise offering.&lt;/p&gt;
+
+&lt;p&gt;This is a retrospective - carrying an idea from startup to enterprise product.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;let-s-start-with-the-design&#34;&gt;Let&amp;rsquo;s start with the design&lt;/h2&gt;
+
+&lt;p&gt;We started brainstorming for the new UI on February 1st. Originally we set out to only deliver a new analytics dashboard, but were soon asked to merge
+the existing UserGrid project into the fold.&lt;/p&gt;
+
+&lt;p&gt;Here are the first designs and wireframes we came up with. I purposely left everything greyscale to allow for a pure focus on the page data and layout.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;br class=&#34;clear-left&#34;/&gt;
+The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
+reformatting the data to appear more readable.&lt;/p&gt;
+
+&lt;p&gt;After the team was in agreement on how the pages should be structured, we then went into the finer design details. It&amp;rsquo;s kind of weird (and welcomed) being the designer
+AND developer for a given project. I mean, that&amp;rsquo;s what startups are all about - doing everything and playing all the roles - but when you get into larger
+companies and work with larger teams, people start to look at you a little funny and the criticism is a little heavier. And that&amp;rsquo;s totally expected and
+understandable, because as companies grow it only makes sense to hire these things out to design firms that are doing this stuff day in and day out.&lt;/p&gt;
+
+&lt;p&gt;So navigation design is always a fun topic amongst developers and designers. Especially when some products use a horizontal design and others choose vertical.
+It really depends on the usecase on which way you should go. We went with the vertical menu in this case because the end user (developers) would be
+building an app with our UI. It only made sense to see and understand each tool we were providing on a visual level, and not hidden away in a horizontal menu with
+drop downs.&lt;/p&gt;
+
+&lt;p&gt;This is the evolution of our menu design in chronological order from left to right. Design is an iterative process for me and
+I never get it right on the first go. And it really helps to have good feedback from other &amp;ldquo;design minded&amp;rdquo; folks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted to leave a lot of the original grey design from the mockups and not get too heavy handed with the colors. After all, we were
+building an analytics dashboard that needed to put heavy emphasis on errors, warnings, and other alerts.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;
+
+&lt;p&gt;By mid-April, we had most of the feedback implemented into the wireframes and were ready to move forward with development. During
+this month and in between feedback rounds, I was evaluating both Ember and AngularJS. I&amp;rsquo;m not going to turn this into
+a discussion of which framework I think is better - they both have their strengths and weaknesses - but I will tell you why I
+went with Angular.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Community - When I opt for a framework, it has to be strongly backed by the community.&lt;/li&gt;
+&lt;li&gt;Components - I like the web components approach that Angular has going with directives. And putting heavy emphasis on this from the start was a good move by the
+Angular team. Directives, love or hate, are a huge win for gaining community support and contributions. I&amp;rsquo;ve also recently seen a few conference speakers focus their entire
+session on directives. Sure, there&amp;rsquo;s a bit of a learning curve, but the concept is well received by most front-end devs.&lt;/li&gt;
+&lt;li&gt;Productivity - I liked being productive. This post is a testament to being productive, seeing that two developers could stand up an entire analytics and BaaS dashboard within 6 months.&lt;/li&gt;
+&lt;li&gt;Architecture - Angular sets forth the idea of a loosely coupled architecture for building large apps. The mechanisms for dependency injection and scope management were attractive to me.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On May 1st I had the markup and a beginning on the Angular architecture all pushed to github. From May into the late summer months we were
+busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
+one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On August 9th we had our first C-Level review of the beta version of the product. This is pretty significant seeing that two developers were
+able to produce a massive SPA in a little over 3 months. Not to mention managing vacation schedules and other things that arose. Of course,
+We still had a ways to go in polishing the application and not to mention testing, but overall we were able to get a lot done in a short
+amount of time.&lt;/p&gt;
+
+&lt;p&gt;Here are a couple of projects and articles that resulted from this work:
+&lt;li&gt;&lt;a href=&#34;https://github.com/wesleyhales/angular-charts&#34;&gt;Angular Charts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&#34;&gt;Basic Screen Updates with Angular and requestAnimationFrame&lt;/a&gt;&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;##Conclusion&lt;/p&gt;
+
+&lt;p&gt;There are many reasons I like Angular for 2013, 2014, and maybe even 2015. But another framework will come in &amp;lt;= 3 years time, and it will be even more productive and we&amp;rsquo;ll
+ be rewriting a new product all over again. That&amp;rsquo;s the nature of the beast and it&amp;rsquo;s very similar to many other 3 year life cycles we see in the tech industry. Bottom line: Don&amp;rsquo;t religiously buy into
+ any web framework. Use it at face value and always be prepared for the next one.&lt;/p&gt;
+
+&lt;p&gt;Along the way, I had brilliant input and help from many awesome folks. The product manager for this effort was &lt;a href=&#34;https://twitter.com/karlunho&#34;&gt;Alan Ho&lt;/a&gt;, and I would not
+have been able to forge a usable product without his vision of how things should come together. &lt;a href=&#34;https://twitter.com/edanuff&#34;&gt;Ed Anuff&lt;/a&gt;, the founder of Usergrid, was truly a pleasure
+to work with/for and receive guidance from during many frustrating times. &lt;a href=&#34;https://twitter.com/prabhatjha&#34;&gt;Prabhat Jha&lt;/a&gt;, my long time pal worked tirelessly to setup the RESTful
+endpoints I needed to get the job done (along with countless other backend pieces). And last but not least, &lt;a href=&#34;https://twitter.com/rockerston&#34;&gt;Rod Simpson&lt;/a&gt; who stepped in to help with the
+Backbone-to-Angular rewrite of the existing UserGrid product. Rod also has an impressive design background and helped/pushed me to design a better product
+when I hit blocks.&lt;/p&gt;
+
+&lt;p&gt;You can try the dashboard out for yourself &lt;a href=&#34;https://apigee.com/usergrid&#34;&gt;here&lt;/a&gt;. Lemme know what you think!
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

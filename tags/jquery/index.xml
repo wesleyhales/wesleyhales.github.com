@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jquery on Wesley Hales</title>
+    <link>http://localhost:1313/tags/jquery/</link>
+    <description>Recent content in Jquery on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Feb 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
+      <link>http://localhost:1313/blog/2011/02/16/going-mobile-with-richfaces-4---part-1</link>
+      <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2011/02/16/going-mobile-with-richfaces-4---part-1</guid>
+      <description>&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/richfaces/&#34;&gt;Richfaces 4&lt;/a&gt; just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.&lt;br /&gt; 
+First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;Today I am going to add touch support to the RF drag and drop component. We all know that touch events and gestures are not the same as a mouse click. So one must consider a couple of different approaches before implementing a final solution:&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;1) Override the default touch events with their mouse counterparts.&lt;br /&gt; 
+This is easy since you are basically overriding the default functionality of touch and gesture events. There are 3 mouse events to replace to get this component working:&lt;br /&gt; 
+touchstart,touchmove,touchend&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;2) Extend jQuery core components and add the “drag” functionality alongside “touch”&lt;br /&gt; 
+A little more difficult and fortunately the jQuery team is working on the mobile upgrade to ui.draggable &amp;#8211; so this should be available in the next few weeks/months.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;object width=&#34;480&#34; height=&#34;390&#34;&gt;&lt;param name=&#34;movie&#34; value=&#34;http://www.youtube.com/v/Exs1jumZ4yk?fs=1&amp;hl=en_US&#34;&gt;&lt;/param&gt;&lt;param name=&#34;allowFullScreen&#34; value=&#34;true&#34;&gt;&lt;/param&gt;&lt;param name=&#34;allowscriptaccess&#34; value=&#34;always&#34;&gt;&lt;/param&gt;&lt;embed src=&#34;http://www.youtube.com/v/Exs1jumZ4yk?fs=1&amp;hl=en_US&#34; type=&#34;application/x-shockwave-flash&#34; allowscriptaccess=&#34;always&#34; allowfullscreen=&#34;true&#34; width=&#34;480&#34; height=&#34;390&#34;&gt;&lt;/embed&gt;&lt;/object&gt;(tested on live iPhone4 and iOS simulator iPad)&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;I originally started out using the touch and gesture events to do the drag and drop. This allowed for a smoother UX but unfortunately, the internal plumbing of Richfaces required a complex extension/wrap of rf.ui.draggable (to add the new touch functions) and some custom bindings like rf.Event.bind(this.dragElement, &amp;#8216;touchstart&amp;#8216;+this.namespace&amp;#8230;.) in dnd-draggable.js.&lt;br /&gt; 
+In the end, it was just easier for me to use &lt;a href=&#34;https://github.com/furf/jquery-ui-touch-punch/blob/master/jquery.ui.touch-punch.js&#34;&gt;this script&lt;/a&gt; and re-map the 3 main touch events.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;I looked at many different approaches starting with SenchaTouch which btw is pointless if you are going to leverage existing jQuery, then moving to a few different jQuery utilities.&lt;br /&gt; 
+The basic question here, which can be applied to any component framework, is “What’s the best mobile approach for supporting product xyz?” Every product out there that touches the UI has to cross this gap. Touch interfaces today&amp;#8230; tangible UI’s tomorrow&amp;#8230; and the vicious cycle continues. And majority of the time, the best way to get started is to build an emulator so that your product can work today. This will buy you the time to build the native functionality that takes full advantage of the target platform.&lt;br /&gt; 
+Unfortunately the script I used here doesn’t always work and there are still a few more components in Richfaces that do not work with this duck punch approach. So I will try to make this a series and blog about &amp;#38; fix the other components on mobile platforms.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;&lt;p&gt;The old days of drag and drop are not as simple as they used to be. With multi touch surfaces you have the ability to accelerate your drag and throw it across the page, rotate it, and auto scrolling when you drag the object off the page, etc... Just something to think about when designing a similar component.&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

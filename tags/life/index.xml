@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Wesley Hales</title>
+    <link>http://localhost:1313/tags/life/</link>
+    <description>Recent content in Life on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I&#39;ll Sleep When I Die - All for HTML5</title>
+      <link>http://localhost:1313/blog/2012/11/01/ill-sleep-when-i-die---all-for-html5</link>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2012/11/01/ill-sleep-when-i-die---all-for-html5</guid>
+      <description>&lt;p&gt;The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book,
+gave up a secure job, and changed jobs 4 times. All to push myself, get uncomfortable, and better understand the challenges
+that front-end developers are facing in 2012 and beyond. I gained more than I ever thought possible.&lt;/p&gt;
+
+&lt;p&gt;Sometimes you have to give up everything to find something.&lt;/p&gt;
+
+&lt;p&gt;Almost one year ago (September 2011), I started the &lt;a href=&#34;http://www.meetup.com/AtlantaHTML5/&#34;&gt;HTML5 user group&lt;/a&gt; in Atlanta Georgia.
+This started as an experiment and outlet for me to practice my front-end related presentations. I really had no idea who
+would come or how fast the group would grow. But much to my surprise, the &lt;a href=&#34;http://www.meetup.com/AtlantaHTML5/events/29823121/&#34;&gt;first meetup&lt;/a&gt;
+brought out around 60 attendees. &lt;a href=&#34;http://wesleyhales.com/blog/2012/07/19/HTML5-in-Atlanta/&#34;&gt;One year later&lt;/a&gt;, the group has over 1200 members,
+5 awesome sponsors, and I am now connected to some of the coolest people, developers and thought leaders in the industry.
+I could write an entire blog post on this topic alone, but starting this group has been one of the most humbling experiences of my life.
+Many of the folks that come out to the meetups remind me of different stages that I’ve gone through in my career.
+Some are far ahead of me and are doing things that I really admire and others are just starting out and looking for work.
+Overall, I’ve learned that community creates technology. HTML5 and mobile have inspired developers and designers to think
+differently and do new amazing things, but in the end, it’s the developers and community who collectively see through the
+marketing hype of products and platforms to choose viable/useful solutions.&lt;/p&gt;
+
+&lt;p&gt;The month after starting Atlanta HTML5 (October 2011), &lt;a href=&#34;http://www.html5rocks.com/en/mobile/optimization-and-performance/&#34;&gt;an article that I’d been working on for months&lt;/a&gt;
+was finally published on html5rocks.com. It just so happened that the article went out the day before my presentation at JavaOne 2011.
+So everything aligned really nicely and the talk went well. This all leads up to me authoring a book.
+During my stay in SF, I was introduced to Meghan Blanchette who is an editor at O’Reilly. We started talking and I told
+her it would be cool to write a book. I casually agreed that I’d send her a proposal for a book that talks about
+HTML5 in the enterprise. After all, I come from a decade of heavy middleware stacks and server-side generated markup.
+So I thought my perspective might be valuable as developers make the transition to offline capable clients.&lt;/p&gt;
+
+&lt;p&gt;In November 2011, my proposal was accepted and I signed the O’Reilly contract for a book entitled “HTML5 Architecture”
+, which would later be renamed to &lt;a href=&#34;http://shop.oreilly.com/product/0636920024088.do&#34;&gt;“HTML5 and JavaScript Web Apps”&lt;/a&gt;.
+This was a huge personal step for me. At first it was very exciting and I was motivated to create the best HTML5 related
+book the world had ever seen. I committed to the fact that I would give up countless afternoons and weekends
+(away from my wife and kids) to research and write about the latest web technologies available to developers.
+I had this burning desire to understand how HTML5 would affect us both now and in the years to come.&lt;/p&gt;
+
+&lt;p&gt;So now, lets get back to reality and my day job. While I had grandiose visions of creating a kick ass book, I still had
+obligations and commitments to maintain for my employer, Red Hat. During this time I was involved with a new project,
+actually this was the second project I co-founded at JBoss -  we named it &lt;a href=&#34;http://aerogear.org/&#34;&gt;AeroGear&lt;/a&gt; and officially
+launched in February of 2012. AeroGear now employs some of the greatest developers of our time. It is truly an honor to
+say I was a part of this project and I will always admire and respect what the developers behind this project produce.&lt;/p&gt;
+
+&lt;p&gt;Not long after AeroGear was launched, and after I’d spent a few months researching and writing my book, I realised that
+I was out of touch with what developers were truly facing. It’s easy to write about what “you think” developers want and
+need. But it’s a completely different story when you’re in the trenches and in the real-world of day to day development
+activities. So, I gave up my 4+ year tenure at Red Hat and submitted my resignation. Trust me, this was not an easy thing
+to do. I had a really awesome job at Red Hat, I worked remote and the company fully supported me to evangelize whatever
+project I was working on. This means I got to work and travel all over the world, and work with the brightest developers
+in our industry. But, I wanted more on a personal level. Not just for my book, but because I had gotten way too comfortable
+with my day job. From what I’ve seen, as IT professionals, it hurts us to stay at a job longer than 4 or 5 years these days.
+imo unless you have some really nice golden handcuffs or are truly happy with your situation, depending on a company for retirement
+is suicide. So I took it upon myself to become uncomfortable and to get back out in the real world. The only way you can
+experience the problems and challenges developers face is to be one of them and work in their environment.&lt;/p&gt;
+
+&lt;p&gt;In March of 2012, I put in my 2 week notice at Red Hat and decided to become an independent consultant. I had interviewed
+at quite a few companies and decided the best route to take was the most uncomfortable one - a pair programming Ruby/UI developer.
+So I started a contract with a Cox owned property and experienced, first hand, the problems that professional developers face.
+Things like converting a six year old legacy B2B application from prototype.js to jQuery. Other front-end problems like
+jQuery architecture and writing plugins, strategies to bubble up DOM events, etc&amp;hellip; CSS formatting, preprocessor strategies
+and many more issues that your average corporate developers desire to get right. I was finally in the trenches with an audience
+that “I thought” I previously understood.&lt;/p&gt;
+
+&lt;p&gt;In the weeks/months before my consulting time at Cox/Manheim I had been engaged by Square, Google and Wikipedia for potential jobs offers.
+So I was rushing home in the afternoons to interview for positions that would move me out to the bay area. Unfortunately these
+opportunities didn’t work out for whatever reason, but honestly, putting myself out there and going through these grueling
+interview processes helped me out tremendously - as you will see.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2012-11-01/543116336.jpg&#34; alt=&#34;devnexus&#34; class=&#34;margin10&#34; style=&#34;max-width:50%&#34; align=&#34;left&#34;&gt;
+On a side note and speaking of &amp;ldquo;putting myself out there&amp;rdquo;, on March 21st I had agreed to do a talk at a local conference
+here in Atlanta called &lt;a href=&#34;http://www.devnexus.com/&#34;&gt;DevNexus&lt;/a&gt;. As I was creating the slides for my presentation, I kept thinking
+about how I would verbally survey the audience at certain points to get a feel for what their experience level was.
+“Raise your hand if&amp;hellip;” kind of thing&amp;hellip;Then I thought, hey! I can just write a simple HTML+CSS slide deck and create a
+WebSocket back end that will allow the audience to participate with their mobile phone. Cool! So I spent a week hacking
+on this and finally got a prototype up and running.
+I did the talk and the room was packed, people were &lt;a href=&#34;http://wesleyhales.com/images/posts/2012-11-01/c70jx.jpg&#34;&gt;spilling out into the hallways&lt;/a&gt; (ok, so it wasn’t exactly a HUGE room,
+but still it’s fun to say) Anyway, The talk went great and I had almost 100% audience participation. I was invited back
+the next day to give the same talk after another speaker backed out.&lt;/p&gt;
+
+&lt;p&gt;Now that I was an independent contractor, I had this feeling of, yes, you guessed it&amp;hellip; independence. I was getting paid Corp-2-Corp
+through whoever would hire me at a specified hourly rate. I was able to speak at conferences on organic, community topics and
+I wasn’t giving a sales pitch for a specific product or platform. I was a hired gun and making it on my own, paying high insurance
+costs for my family (and business), and making one hell of a commute.
+&lt;a href=&#34;http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2012-11-01/onslyde.jpg&#34; alt=&#34;devnexus&#34; class=&#34;margin10&#34; align=&#34;right&#34; style=&#34;max-width:50%&#34;&gt;&lt;/a&gt;
+So, my next bright idea was to enter Atlanta Startup Weekend in April of 2012, form a team of volunteers and pitch the presentation
+tool that I used at DevNexus as a startup idea.
+Unfortunately, the idea didn’t get picked, but I met 3 awesome developers who joined my team and those connections were huge wins. I
+also made connections with many other like minded entrepreneurs, so overall my first time joining an event like this was priceless.
+Again, &lt;a href=&#34;https://twitter.com/mikeschinkel/status/194207658033680384&#34;&gt;just putting myself out there&lt;/a&gt; was another way to level up&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;2 months into my contract at Cox (June), I was finally getting close to finishing my O’Reilly book. A lot of my effort was going
+into the code examples in the book and the ideas behind it. So in June, I finally launched &lt;a href=&#34;http://www.html5e.org&#34;&gt;html5e.org&lt;/a&gt;.
+This site contains a ton of examples and practical implementations of W3C and HTML5 apis. The basic idea behind html5e is to
+defragment the mobile (and desktop) browser space by using a core set of APIs. &lt;a href=&#34;http://www.html5e.org&#34;&gt;Read more here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;After 3 months with my consulting gig at Cox/Manheim, I received a call from the senior development director at CNN. He
+had attended the same talk I gave at DevNexus 2012 (where I used my presentation tool), and wanted to know if I’d be
+interested in joing the CNN.com development team. I was pretty happy with my contract at Cox, but after I asked what I’d
+be working on, I couldn’t turn the offer down. He told me that I’d be working on the responsive re-design of CNN.com or
+improving overall performance. Who wouldn’t jump at the chance to improve a site that gets 60 million uniques per day?
+To say the least, I had been “primed” for interviews after my experiences with Square, Google, and Wikipedia so I felt
+completely comfortable walking into my interview at CNN. Onsite, I took a 30 minute written exam and interviewed with 7
+people. CNN does a great job of screening candidates. Luckily I made it through the screen and started the contract on
+July 1st.&lt;/p&gt;
+
+&lt;p&gt;At this point, just the interview practice alone had given me a great idea on the bar that the world’s top technology companies
+set. It’s invaluable and I recommend everyone do it, especially if you’re a cocky, egotistical developer type who thinks
+he/she is the hottest thing since Honey Boo-Boo :)&lt;/p&gt;
+
+&lt;p&gt;Not sure if you notice the pattern here, but somehow I managed to start jobs at the beginning of each quarter. No real
+importance behind it, just thought it’s cool that it continues to happen throughout the entire year.&lt;/p&gt;
+
+&lt;p&gt;While I was working at CNN, I immediately took the initiative
+to look at how they were implementing their “share bar” or buttons that allowed visitors to share content through social media.
+I also wanted to understand how Web Intents could possibly fit into the picture here.
+&lt;a href=&#34;http://wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/&#34;&gt;My findings&lt;/a&gt; were interesting enough to get some of the top
+developers/authors/speakers in the industry to comment on my post. It really is motivating when you see your blog spike
+from roughly 100 unique visitors a week to 1000&amp;rsquo;s. I even got a &lt;a href=&#34;https://twitter.com/TwitterOSS/status/240912782000795649&#34;&gt;shout out&lt;/a&gt; on TwitterOSS :)
+&lt;img src=&#34;http://localhost:1313/images/posts/2012-11-01/blogstats.png&#34; alt=&#34;devnexus&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Next thing I worked on at CNN was page load performance. We started having meetings with CNN’s best and brightest to see what
+we could do to add performance improvements to CNN’s home page. The problem with making changes like these in most large
+organizations is that everything is product based. Therefore, you usually don’t have any internal sponsorship (or funds) to
+make these kinds of changes. Fortunately for me, I was willing to take afternoons and downtime to work on the performance issues.
+After taking a look at what could be done, we decided to break JQuery out of the concatenation process and far-future cache
+it. That simple change alone Improved CNN.com performance by 17% and saved almost 1TB of outgoing data per day. You see,
+CNN does regular interval releases like most folks and their main concatenated JS file is revved on each release. So users
+had to re-download that file upon each visit after release.
+Before we made the change, we had to have a way to measure the performance impact both before and after improvements were
+made. Enter &lt;a href=&#34;http://phantomjs.org/&#34;&gt;PhantomJS&lt;/a&gt; - With phantomjs, we were able to create a script (later named &lt;a href=&#34;http://loadreport.wesleyhales.com/&#34;&gt;loadreport.js&lt;/a&gt;)
+that would run for each development build. Thus, giving us a baseline for the changes we were making. For the full story behind loadreport.js,
+check out &lt;a href=&#34;http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/&#34;&gt;this post&lt;/a&gt;.
+On August 16th, loadreport was picked up in the &lt;a href=&#34;http://javascriptweekly.com/archive/92.html&#34;&gt;JavaScript weekly newsletter&lt;/a&gt; and again, blog spikes were abundant :)&lt;/p&gt;
+
+&lt;p&gt;The point is, I don’t give a damn who you’re working for and what you’re doing; just blog about it. If you want to get better, write about it.
+Find something to write about if you’re working on boring shit.&lt;/p&gt;
+
+&lt;p&gt;My time at CNN was a lot of fun and I met some really talented developers. I had no intentions of leaving this job and planned
+on staying there for my full contract length, BUT&amp;hellip;. one day I got a call. The call came from an good friend and colleague
+that I had previously helped to bootstrap a startup. I was actually the third co-founder of this startup, but I had to back out
+due to all the craziness that you just read about (and more). But I still had a vested interest in the company and we parted ways on good terms.
+So, I was told that they had just been &lt;a href=&#34;http://blog.apigee.com/apigee_acquires_instaops_embracing_the_apps_everywhere_world&#34;&gt;acquired&lt;/a&gt; by
+a startup in Palo Alto called &lt;a href=&#34;http://apigee.com&#34;&gt;Apigee&lt;/a&gt; and he wanted me to come pick up where I left off.
+On October 1, I started full time employment with Apigee and I couldn&amp;rsquo;t be happier. I had the opportunity of taking &lt;a href=&#34;http://wesleyhales.com/design/?p=design&#34;&gt;my original UI&lt;/a&gt;
+and integrating it with Apigee’s &lt;a href=&#34;http://apigee.com/about/mobile-analytics&#34;&gt;look and feel&lt;/a&gt; amongst many other things. This has
+really been the icing on top - the cherries come in the following section - of an incredible 1 year journey. I&amp;rsquo;m looking forward to
+doing many great things with Apigee&amp;rsquo;s technology and the future of the web applications.&lt;/p&gt;
+
+&lt;p&gt;Steve Jobs said it best in 2005, when he told those Stanford students to “Stay hungry. Stay foolish”. Even though I
+could stand to lose about 10-15 pounds. I have stayed foolish and I listened to my heart on what I should do. I constantly
+had butterflies in my stomach and was pushed to the very edge of the stress levels that I could handle. That is how I
+knew I was doing something worthwhile.&lt;/p&gt;
+
+&lt;p&gt;On October 26th, my O’Reilly book is done and was sent to the printer. It is now available as an &lt;a href=&#34;http://shop.oreilly.com/product/0636920024088.do&#34;&gt;ebook&lt;/a&gt;
+and will be available in print on November 12th.&lt;/p&gt;
+
+&lt;p&gt;On November 1st (today), the idea that I helped create and shape got it’s first &lt;a href=&#34;http://finance.yahoo.com/news/apigee-launches-first-real-time-120000461.html&#34;&gt;press release&lt;/a&gt;
+and &lt;a href=&#34;http://apigee.com/about/mobile-analytics&#34;&gt;official public launch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2012-11-01/apigee.png&#34; alt=&#34;apigee mobile analytics&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll be speaking at a few more conferences in November, &lt;a href=&#34;http://www.devoxx.com/display/DV12/Wesley+Hales&#34;&gt;Devoxx&lt;/a&gt;
+and &lt;a href=&#34;http://therichwebexperience.com/conference/speaker/wesley_hales&#34;&gt;RWX&lt;/a&gt;, and after that I’m going to lay low for a while.
+The amount of stress that I’ve undergone over the past year is not for the faint of heart. Imagine trying to prove yourself
+to a new team of developers and managers every 90 days. On top of that, they all knew that I authored a book, so some people
+expect you to shit rainbows at times. Managing expectations can be a bit tricky as well. So I have my acid reflux medicine now,
+I can sleep pretty well after a couple of beers, and I won’t have to pay for many more haircuts as my hair falls out at an even faster rate :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2011 Year In Review</title>
+      <link>http://localhost:1313/blog/2011/12/29/2011-year-in-review</link>
+      <pubDate>Thu, 29 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2011/12/29/2011-year-in-review</guid>
+      <description>&lt;p&gt;This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)&lt;/p&gt;
+
+&lt;p&gt;Published my first DZone Refcard “Mastering Portals with a Portlet Bridge”
+&lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Learned that CSS3 is replacing Photoshop
+&lt;a href=&#34;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&#34;&gt;http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Watched the entire Battlestar Galactica series on Netflix.&lt;/p&gt;
+
+&lt;p&gt;Mourned the loss of Stargate Universe&lt;/p&gt;
+
+&lt;p&gt;Posted this blog entry and later joined the RichFaces team because of it
+&lt;a href=&#34;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&#34;&gt;http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-Drag-and-Drop/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Realized that my motivation on the portlet bridge project was exhausted
+&lt;a href=&#34;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&#34;&gt;http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;However, I proudly took the project through passing the TCK
+&lt;a href=&#34;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&#34;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/09/26/jboss-portlet-bridge-passes-jsr-329-tck&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Had a lot of fun with @tech4j creating JBoss’ first mobile web demo
+&lt;a href=&#34;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&#34;&gt;http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Presented at JBoss World for the first time
+&lt;a href=&#34;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&#34;&gt;http://www.slideshare.net/wesleyhales/making-portals-cool-the-compelling-advantages-of-a-portlet-bridge&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read JavaScript The Good Parts (again)&lt;/p&gt;
+
+&lt;p&gt;Dressed up like a white bunny and had some fun with @burrsutter
+&lt;a href=&#34;http://topsy.com/vimeo.com/27534958&#34;&gt;http://topsy.com/vimeo.com/27534958&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Was in the right place at the right time at JBoss and took a new career path
+&lt;a href=&#34;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&#34;&gt;http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My wife gave birth to the sweetest, most beautiful baby girl in the whole world.&lt;/p&gt;
+
+&lt;p&gt;Formed Atlanta’s first HTML5 User Group
+&lt;a href=&#34;http://www.meetup.com/AtlantaHTML5/&#34;&gt;http://www.meetup.com/AtlantaHTML5/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Presented at JavaOne for the first time
+&lt;a href=&#34;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&#34;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/10/17/jboss-and-html5-at-javaone-2011&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Proposed a new way to handle AJAX on mobile devices
+&lt;a href=&#34;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&#34;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/08/28/fixing-ajax-on-mobile-devices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Wrote an article for HTML5Rocks.com
+&lt;a href=&#34;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&#34;&gt;http://www.html5rocks.com/en/mobile/optimization-and-performance.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Watched all episodes of Breaking Bad on Netflix&lt;/p&gt;
+
+&lt;p&gt;Lead the development of the RichFaces mobile effort
+&lt;a href=&#34;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&#34;&gt;http://community.jboss.org/people/wesleyhales/blog/2011/11/28/converting-existing-web-apps-for-mobile&lt;/a&gt;
+&lt;a href=&#34;http://vimeo.com/31616425&#34;&gt;http://vimeo.com/31616425&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Helped form Atlanta’s first JBoss User Group with long time friends from @shadowsoftnews
+&lt;a href=&#34;http://vimeo.com/33795907&#34;&gt;http://vimeo.com/33795907&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Signed a contract with O’Reilly Media to write a book called “HTML5 Architecture”
+&lt;em&gt;coming soon&lt;/em&gt;&amp;hellip; I hope ;)&lt;/p&gt;
+
+&lt;p&gt;Joined the native web apps community group @W3C
+&lt;a href=&#34;http://www.w3.org/community/native-web-apps/&#34;&gt;http://www.w3.org/community/native-web-apps/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Overall I want to thank the people who have supported me and helped me achieve these things. There are too many to list, but you know who you are. I’m starting to realize that technology and trends are irrelevant. The thing that matters most are the people and communities behind them.&lt;/p&gt;
+
+&lt;p&gt;2011 has been a mind blowing year and I’m looking forward to topping it in 2012.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My New Career Choice at Red Hat</title>
+      <link>http://localhost:1313/blog/2011/07/04/my-new-career-choice-at-red-hat</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2011/07/04/my-new-career-choice-at-red-hat</guid>
+      <description>&lt;p&gt;&lt;p&gt;July 1st marked my first day on the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;JBoss RichFaces&lt;/a&gt; team. I&#39;ve decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.&lt;/p&gt;&lt;p&gt;I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company. It’s usually the other way around - as you are either picked for your skills and talent to work on a specific team or for whatever reason you are just told to move to another team.&lt;/p&gt;&lt;p&gt;As for my new position, I have been designated to serve on JBoss’ mobile working group (see &lt;a href=&#34;http://en.wikipedia.org/wiki/Tiger_team&#34;&gt;Tiger Team&lt;/a&gt;). I will be part time on the actual RichFaces project (making the project work on mobile devices) and the other part heavily focused on HTML5 and the &lt;a href=&#34;http://en.wikipedia.org/wiki/Mobile_Web&#34;&gt;Mobile Web&lt;/a&gt;. This is a new frontier for developers as we try to create HTML5/CSS3 based web apps that not only match the native app feel but also answer the question “How can we make the mobile web faster using JBoss middleware?”.&lt;/p&gt;&lt;p&gt;As things grow, so will the project and the team. I find excitement in bringing grass roots projects &lt;a href=&#34;http://www.jboss.org/portletbridge&#34;&gt;from nothing into full blown enterprise supported products&lt;/a&gt; &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; Luckily I was in the right place at the right time and I must say that it was quite an honor to be allowed to make such a move. I’m looking forward to making good stuff happen.&lt;/p&gt;&lt;/p&gt; 
+
+&lt;p&gt;Stay tuned&amp;#8230;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2 years of blogging about java and my life, now what?</title>
+      <link>http://localhost:1313/blog/2008/12/07/2-years-of-blogging-about-java-and-my-life-now-what</link>
+      <pubDate>Sun, 07 Dec 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/12/07/2-years-of-blogging-about-java-and-my-life-now-what</guid>
+      <description>&lt;p&gt;It has been 2 years since I decided to write my first blog post and I am pretty happy I did so. When I first tossed the idea around about it (and this was back in 2006) I was thinking, man, blogging is so 2002 and why would anybody want to read about stuff I&#39;m doing. But much to my surprise, starting a blog is one of the best things I could&#39;ve done. Much better than joining any social network by far, and much better than thinking future employers will take my resume at face value.&lt;/p&gt; 
+&lt;p&gt;This year has been incredible, moving so fast that I have hardly had time to sit back and reflect. With around 30,000 total unique visitors since this time last year, &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=richfaces_loading_modal_with_a4j&#34;&gt;a4j:status&lt;/a&gt;, &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=maven_2_vs_ant_revisited&#34;&gt;maven vs ant&lt;/a&gt;, &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=jsf_component_developmment_with_the&#34;&gt;richfaces cdk&lt;/a&gt;, &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=converting_xhtml_to_pdf_or&#34;&gt;xhtml to pdf&lt;/a&gt;, and &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=running_seam_2_0_on&#34;&gt;seam tomcat&lt;/a&gt; are the top 5 keywords driving traffic. 
+&lt;/p&gt; 
+&lt;p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ANTHEM reaches 15,000 in its first week</title>
+      <link>http://localhost:1313/blog/2008/11/30/anthem-reaches-15000-in-its-first-week</link>
+      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/11/30/anthem-reaches-15000-in-its-first-week</guid>
+      <description>&lt;p&gt;&lt;p&gt;I recently created a &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627&#34;&gt;Firefox 3 theme&lt;/a&gt; out of curiosity and because I love to try new things that deal with design. Much to my surprise, &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627&#34;&gt;ANTHEM&lt;/a&gt; has been receiving a lot of attention over the past week since it has been released publicly on Mozilla.org. ANTHEM is named so because I consider it a hymn of praise or loyalty to my worshipful savior &lt;a href=&#34;http://www.allaboutgod.com/how-to-be-saved.htm&#34;&gt;Jesus Christ&lt;/a&gt;. I also consider it dedicated to my newborn son, my wonderful wife, and the woman who raised me to be the man I am, my beautiful mother. I know, it may sound funny that I am using a Firefox theme for all of this, and I tend to keep my religious/personal views out of the work place, but I always tell God &amp;ldquo;&amp;hellip;the more fame I receive, I will try my best to glorify you&amp;hellip;&amp;rdquo; So here it is, a song of praise, in its own sense.&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;In ANTHEM&amp;rsquo;s first week, it has received over 15,000 downloads and ranks in the top 10 of the most downloaded themes for Firefox.&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;Visit the project page here: &lt;a href=&#34;http://addons.mozilla.org/addon/9627&#34;&gt;http://addons.mozilla.org/addon/9627&lt;/a&gt; &lt;/p&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+SO MOTE IT BE&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1 year of blogging</title>
+      <link>http://localhost:1313/blog/2007/12/05/1-year-of-blogging</link>
+      <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/12/05/1-year-of-blogging</guid>
+      <description>&lt;p&gt;Today marks my 1 year anniversary of blogging. I started this blog to basically express my views and opinions, to give back to the open source community of whom so much has been taken, and for job credibility.&lt;/p&gt; 
+&lt;p&gt;Trying to write good articles is a lot of work. Sure anybody can write about a few buzzwords and get some hits, but an article with substance and that actually helps someone through a use case or problem is where the satisfaction comes from.&lt;/p&gt; 
+&lt;p&gt;I started using Google analytics on this blog around the first of October, and here are my stats since then: 
+&lt;ul&gt; 
+&lt;li&gt;4,835 Visits&lt;/li&gt; 
+&lt;li&gt;2,493 Absolute Unique Visitors&lt;/li&gt; 
+&lt;li&gt;7,112 Pageviews&lt;/li&gt; 
+&lt;li&gt;1.47 Average Pageviews&lt;/li&gt; 
+&lt;li&gt;00:01:39 Time on Site&lt;/li&gt; 
+&lt;li&gt;79.23% Bounce Rate&lt;/li&gt; 
+&lt;li&gt;47.22% New Visits&lt;/li&gt; 
+&lt;/ul&gt; 
+
+Not too bad for a 2 month time span, but what really matters is getting comments that ask questions or suggestions that add to the article&#39;s value. 
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Smokies</title>
+      <link>http://localhost:1313/blog/2007/11/06/the-smokies</link>
+      <pubDate>Tue, 06 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/11/06/the-smokies</guid>
+      <description>&lt;p&gt;I guess everybody has a place a few hours from home that they can go and relax and enjoy nature. One rednecktastic place I like to go is at the foothills of the Smoky Mountains in Tennessee. Gatlinburg is a trip, and if you like &lt;a href=&#34;http://www.dollyparton.com/&#34;&gt;Dolly Parton&lt;/a&gt;, well this is the place for you.&lt;/p&gt; 
+
+&lt;p&gt;&lt;a href=&#34;http://picasaweb.google.com/wesleyhales/Gatlinburg/photo?authkey=a7Wklk053VM#5129525253527558594&#34;&gt;&lt;img src=&#34;http://lh5.google.com/wesleyhales/Ry-8Cmrn2cI/AAAAAAAABEg/EdKLZSC1dSA/s400/DSC_2968_1.JPG&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I mainly enjoy the fresh mountain air, the beautiful scenery, and the below freezing temps at night. My wife and I usually rent a cabin on a mountain top and watch the time drift by for a few days.&lt;/p&gt; 
+
+&lt;p&gt;&lt;a href=&#34;http://picasaweb.google.com/wesleyhales/Gatlinburg/photo?authkey=a7Wklk053VM#5129731178861894914&#34;&gt;&lt;img src=&#34;http://lh4.google.com/wesleyhales/RzB3VCVPHQI/AAAAAAAABGE/c6ZzmKVkdTs/s400/DSC_2982_1.JPG&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There is something cool about this place, It&#39;s just one of those things where you have to be here to know what I&#39;m talking about. Anyway, it&#39;s nice to get away to a secluded place and collect your thoughts and think of innovative new ideas (All while eating funnel cake and watching your wife buy all kinds of &#34;usefull/less&#34; trinkets and decorations for Christmas ;)&lt;/p&gt; 
+
+&lt;p&gt;&lt;a href=&#34;http://picasaweb.google.com/wesleyhales/Gatlinburg/photo?authkey=a7Wklk053VM#5129523995102140818&#34;&gt;&lt;img src=&#34;http://lh4.google.com/wesleyhales/Ry-65Wrn2ZI/AAAAAAAABEI/y6e7-o79TS0/s400/DSC_3029.JPG&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Acceptance to Jboss Labs</title>
+      <link>http://localhost:1313/blog/2007/04/09/acceptance-to-jboss-labs</link>
+      <pubDate>Mon, 09 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/04/09/acceptance-to-jboss-labs</guid>
+      <description>&lt;p&gt;I woke this morning to find a very nice surprise in my email....&lt;/p&gt; 
+&lt;quote&gt; 
+&lt;pre&gt; 
+Dear Wesley Hales, 
+
+I am happy to inform you that your application to become 
+a contributor to JBoss has been accepted. Your name should 
+now be visible on the contributors list on labs.jboss.com. 
+
+The JBoss Labs team. 
+&lt;/pre&gt; 
+&lt;/quote&gt; 
+&lt;p&gt; 
+This is my first open source project so I am pretty stoked about it. Now I just have to keep myself from getting burnt-out ;). 
+&lt;/p&gt; 
+&lt;p&gt; 
+&lt;a href=&#34;http://labs.jboss.com/portal/developers/join&#34;&gt;This article&lt;/a&gt; from Jboss&#39; CTO is really interesting and well stated about joining open source projects. I highly recommend it to anyone looking to join a community/project. 
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My First Mountable Bass</title>
+      <link>http://localhost:1313/blog/2007/03/10/my-first-mountable-bass</link>
+      <pubDate>Sat, 10 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/03/10/my-first-mountable-bass</guid>
+      <description>&lt;p&gt;&lt;img style=&#34;float:right;&#34; src=&#34;src=&#34;/images/jroller/fishing_cropped.gif&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;Needless to say, not much coding was done today. This is definitely the largest freshwater fish I have ever reeled into shore. I caught it at my parent&amp;rsquo;s 5 acre lake in North Ga. The awesome fish (Spotted large mouth bass) weighed in right at 10.9 pounds!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;So after a nice &#34;persuading&#34; talk with my wife, she agreed with me on taking my trophy to the taxidermist for a beautiful driftwood mount. I joked with her about hanging it in between her &lt;a href=&#34;http://www.siddickens.com/en/tiles_new.php&#34;&gt;Memory Block&lt;/a&gt; collection :)&lt;/p&gt; 
+
+&lt;p&gt;&lt;br style=&#34;clear:both;&#34;/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

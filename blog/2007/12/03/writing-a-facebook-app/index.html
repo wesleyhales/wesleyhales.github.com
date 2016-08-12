@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://localhost:1313/blog/2007/12/03/writing-a-facebook-app">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2007-12-03T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+        <title>Writing a FaceBook app &middot; Wesley Hales </title>
+        <link rel="canonical" href="http://localhost:1313/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="stylesheet" type='text/css' href="http://localhost:1313/css/main.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    </head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://localhost:1313/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">Writing a FaceBook app</h3>
+    </header>
+
+    <section class="post-content">
+        <p>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven't really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven't followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next. Linking people to each other in some way, shape, or form based on interests, work , hobbies, etc. has been going since modern civilization began and the social internet is just one of the many channels to do it.</p> 
+<p>Now with the advent of <a href="http://code.google.com/apis/opensocial/">Open Social</a> I'm thinking that broadcasting to all of the different social networks is kind of riding the coat-tails of the fad, but is sure to bring out some interesting mutations in the social scene.</p> 
+<p>Open Social is supporting quite a few different scenes (Engage.com, Friendster, hi5, Hyves, imeem, LinkedIn, MySpace, Ning, Oracle, orkut, Plaxo, Salesforce.com, Six Apart, Tianji, Viadeo, and XING) but not FaceBook. I wonder why this is?</p> 
+<p>This is interesting stuff, but like I said, what is to come after "Social"? The basic concept won't change, people will always want to hook up and network. Anyway, the whole point of this article is just to explain how and why I wrote a FaceBook application.</p> 
+
+<p><p class="pTitle">iProject</p>
+<p>As I browsed through the available apps on Facebook, there were few that actually did anything useful for the professional minded. There are some that let you manage contacts and business card type things, but nothing that really stood out. All I wanted to do is extend the built in Group application so that I could put a summary of my group or project on my profile page, but also add links to things that pertain to the product or service my project represents along with other custom features that a professional group would want.</p>
+<p>This led me to the iProject application(I&rsquo;m still trying to think of a better name). It basically uses the Facebook api to gather information on a group, then it let&rsquo;s you extend the group by adding members, blog feeds, etc. It currently supports Jroller, Blogger(atom/feedburner), and Wordpress blogs. It &ldquo;will&rdquo; also be capable of adding members as &ldquo;core members&rdquo; of the project along with other features.</p>
+<p>So basically, if you are a member of an existing group on Facebook, you can extend it and make it better on your profile page. You can preview the beta on <a href="http://www.facebook.com/profile.php?id=534666343">my profile</a><p>
+<p>I used Seam and the Facebook java api along with commons httpclient to get the blog feeds. For the ui, I had to use a provided FBML (facebook markup language) dtd that&rsquo;s buried on Facebook&rsquo;s wiki so that I could use Facelets for the view. It was easy for me to use Seam just because I&rsquo;m so used to getting things done quickly with it. Furthermore, these types of extensions to the framework could bring in some interesting new advantages.</p><img align="center" src="/images/jroller/Picture4.jpg" alt=""/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2007-12-03T00:00:00Z">December 3, 2007</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Writing%20a%20FaceBook%20app&url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2007%2f12%2f03%2fwriting-a-facebook-app"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2007%2f12%2f03%2fwriting-a-facebook-app"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2007%2f12%2f03%2fwriting-a-facebook-app"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	Java, facebook, seam
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://localhost:1313/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2016 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://localhost:1313/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

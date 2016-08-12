@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firefox on Wesley Hales</title>
+    <link>http://localhost:1313/tags/firefox/</link>
+    <description>Recent content in Firefox on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Nov 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating (another) Firefox Theme</title>
+      <link>http://localhost:1313/blog/2009/11/22/creating-another-firefox-theme</link>
+      <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2009/11/22/creating-another-firefox-theme</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/recovery/ff3-theme-new-h-small.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/recovery/ff3-theme-new-h-small.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
+&lt;p&gt;I started laying down ideas for a new Firefox theme a few months ago and this is what emerged. I&amp;rsquo;m not sure why I can&amp;rsquo;t stay away from the darker themes. Maybe it&amp;rsquo;s the richness that black (and darker colors) allows on a monitor, but I tried to stay as far away from mainstream design on this as I could. I have already coded this into a downloadable theme, but I am still working out some glitches. Then I have to let it sit in the Mozilla incubator, as I did with ANTHEM.&lt;/p&gt;
+&lt;p&gt;Speaking of ANTHEM, I&amp;rsquo;m quite surprised that it has done so well. 780k downloads and counting in 1 year. But it is all in vain if I can&amp;rsquo;t &amp;ldquo;supply more blood&amp;rdquo; to this living organ (As &lt;a href=&#34;http://www.jroller.com/robwilliams/&#34;&gt;Rob W.&lt;/a&gt; likes to put it.) With that said, I&amp;rsquo;m thinking about starting an open source project for these themes, because quite honestly, I don&amp;rsquo;t have time to &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/creating_a_firefox_3_theme&#34;&gt;fix the bugs&lt;/a&gt;. Anybody wanna help? Comment with your email&amp;hellip;&lt;/p&gt;
+&lt;br/&gt;
+&lt;a href=&#34;http://localhost:1313/images/jroller/recovery/ff3-theme-new-h-bg.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/recovery/ff3-theme-new-h-bg-icon.jpg&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;a href=&#34;http://localhost:1313/images/jroller/recovery/ff3-theme-new-f.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/recovery/ff3-theme-new-f.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
+&lt;p&gt;I have been a bit indecisive about the the background on the toolbar on this one. What do you think? The first one at the top, or this one&amp;hellip; &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to make money off of a Firefox theme (or not)</title>
+      <link>http://localhost:1313/blog/2009/02/24/how-to-make-money-off-of-a-firefox-theme-or-not</link>
+      <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2009/02/24/how-to-make-money-off-of-a-firefox-theme-or-not</guid>
+      <description>&lt;p&gt;This weekend was quite an eye opener for me. Since the first public release of &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;ANTHEM&lt;/a&gt; (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.&lt;/p&gt; 
+&lt;p&gt;I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted. Then, I got the idea of adding a sponsor logo somewhere in the top banner like this (see top right corner):&lt;a href=&#34;http://localhost:1313/images/jroller/anthem-sponsor-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/anthem-sponsor-small.png&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;So I made the change and uploaded the new theme to the Mozilla Developer area. The next morning I awake to tons of emails and reviews on the Mozilla site with some seriously pissed off users. I knew I may get a little fallout, but not quite this bad. I guess I am guilty of falling prey to the big company mindset of caring about $$ more than the users of my product. But like I said on the Mozilla site, this was purely an experiment and the advertisement has been removed per the latest version (1.5.2).&lt;/p&gt; 
+&lt;p&gt;Today I received a message which is truly a great idea and I can&#39;t believe I did not think of it: 
+&lt;quote&gt;&lt;pre&gt; 
+Mate, 
+
+Excellent skin! That&#39;s been said many times but I saw something new 
+today that you gave away for free (and was a great opportunity!) 
+Donating without cause never gets a response (although it needs to 
+for the sake of others), but I think if you said people needed to
+donate 50c to remove the advert, you&#39;d be buying my motorcycles by 
+now, and by the dozen J. 
+
+All the best, 
+
+The Convicts 
+&lt;/pre&gt;&lt;/quote&gt; 
+Thank you Convict and all the best to your motorcycle company. Hopefully I will be able to buy one soon!&lt;/p&gt; 
+
+&lt;p&gt;I think I will either develop another skin much better than ANTHEM, or I may just work for free for the rest of my life and die a poor (but appreciated) man. I think it&#39;s easier to get into Heaven if we die poor, right? Ah, the life of open source. To me it really is worth it to use your talent and provide something that makes people&#39;s life better. I don&#39;t care what anybody says, you get it back (and usually doubled) at some point in your life.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ANTHEM reaches 15,000 in its first week</title>
+      <link>http://localhost:1313/blog/2008/11/30/anthem-reaches-15000-in-its-first-week</link>
+      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/11/30/anthem-reaches-15000-in-its-first-week</guid>
+      <description>&lt;p&gt;&lt;p&gt;I recently created a &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627&#34;&gt;Firefox 3 theme&lt;/a&gt; out of curiosity and because I love to try new things that deal with design. Much to my surprise, &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627&#34;&gt;ANTHEM&lt;/a&gt; has been receiving a lot of attention over the past week since it has been released publicly on Mozilla.org. ANTHEM is named so because I consider it a hymn of praise or loyalty to my worshipful savior &lt;a href=&#34;http://www.allaboutgod.com/how-to-be-saved.htm&#34;&gt;Jesus Christ&lt;/a&gt;. I also consider it dedicated to my newborn son, my wonderful wife, and the woman who raised me to be the man I am, my beautiful mother. I know, it may sound funny that I am using a Firefox theme for all of this, and I tend to keep my religious/personal views out of the work place, but I always tell God &amp;ldquo;&amp;hellip;the more fame I receive, I will try my best to glorify you&amp;hellip;&amp;rdquo; So here it is, a song of praise, in its own sense.&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;In ANTHEM&amp;rsquo;s first week, it has received over 15,000 downloads and ranks in the top 10 of the most downloaded themes for Firefox.&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;Visit the project page here: &lt;a href=&#34;http://addons.mozilla.org/addon/9627&#34;&gt;http://addons.mozilla.org/addon/9627&lt;/a&gt; &lt;/p&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+SO MOTE IT BE&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating a Firefox 3 theme</title>
+      <link>http://localhost:1313/blog/2008/08/26/creating-a-firefox-3-theme</link>
+      <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/08/26/creating-a-firefox-3-theme</guid>
+      <description>&lt;p&gt;&lt;div style=&#34;padding:5px; margin:5px; background-color:#f9f5ae; border:1px solid #b2ac4f;&#34;&gt;**UPDATE - This theme is now available on Mozilla.org here: &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34; style=&#34;color:#20aa30&#34;&gt;&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;https://addons.mozilla.org/en-US/firefox/addon/9627/&lt;/a&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;a href=&#34;http://localhost:1313/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/ff3-themeclose.gif&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
+&lt;p&gt;I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.&lt;/p&gt;
+&lt;p&gt;Of course this could be due to me actually having a day job and somewhat of a life. I think the overall css code for the layout is fairly simple. All you have to do is get your x,y coordinates right and you are golden. If anybody has any quick tips to make the process of placing the buttons a little simpler, please speak now! Or if someone wants to take on the task of completing this theme I will post the .psd files.&lt;/p&gt;
+&lt;br/&gt;
+&lt;a href=&#34;http://localhost:1313/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/ff3-theme-small.gif&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p&gt;One of the cooler things about this theme is that the icons are 100% original. We all know most themes take some form of Windows or *nix icons. I tried to take the old 1930&amp;rsquo;s cinema approach where I could. But I couldn&amp;rsquo;t come up with anything for the copy and paste buttons (C and V).&lt;/p&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
