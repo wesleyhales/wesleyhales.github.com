@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portal on Wesley Hales</title>
-    <link>http://localhost:1313/tags/portal/</link>
+    <link>http://wesleyhales.com:1313/tags/portal/</link>
     <description>Recent content in Portal on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Apr 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/portal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com:1313/tags/portal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Does Developing Portlets Make You a Better Developer?</title>
-      <link>http://localhost:1313/blog/2011/04/05/does-developing-portlets-make-you-a-better-developer</link>
+      <link>http://wesleyhales.com:1313/blog/2011/04/05/does-developing-portlets-make-you-a-better-developer</link>
       <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/04/05/does-developing-portlets-make-you-a-better-developer</guid>
+      <guid>http://wesleyhales.com:1313/blog/2011/04/05/does-developing-portlets-make-you-a-better-developer</guid>
       <description>&lt;p&gt;&lt;p&gt;Working with portlet technology is often discredited for it’s seemingly complex &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.&lt;br /&gt; 
 This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.&lt;/p&gt;&lt;/p&gt; 
 
@@ -22,18 +22,18 @@ This is all within the context of which servlet-based framework you might be wor
 
 &lt;p&gt;&lt;p&gt;I encourage (actually I dare you) to those who have never even touched a portal to take the JBoss Portlet Bridge for a test drive. It takes &lt;a href=&#34;http://downloads.sourceforge.net/project/jboss/GateIn/Portal/3.1.0-FINAL/GateIn-3.1.0-FINAL-jbossas.zip&#34;&gt;1 download (GateIn bundled with JBoss)&lt;/a&gt; and one maven archetype to get started. You can choose from any combination of plain &lt;span class=&#34;caps&#34;&gt;JSF&lt;/span&gt;, Richfaces, and Seam with&lt;br /&gt; 
 &lt;code style=&#34;color:white&#34;&gt;mvn archetype:generate -DarchetypeCatalog=http://bit.ly/jbossportletbridge&lt;/code&gt; from the command line.&lt;br /&gt; 
-&lt;img src=&#34;http://localhost:1313/images/jroller/jbw2011/archetype.gif&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;&lt;/p&gt; 
+&lt;img src=&#34;http://wesleyhales.com:1313/images/jroller/jbw2011/archetype.gif&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;&lt;/p&gt; 
 
 &lt;p&gt;&lt;p&gt;If you run into any questions or special usecases, we have 7 videos which demo and walk you through just about anything you could think up.&lt;br /&gt; 
-&lt;a href=&#34;http://vimeo.com/wesleyhales/videos/sort:date&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/jbw2011/vimeo.gif&#34; alt=&#34;&#34; align=&#34;center&#34;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt; 
+&lt;a href=&#34;http://vimeo.com/wesleyhales/videos/sort:date&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/jroller/jbw2011/vimeo.gif&#34; alt=&#34;&#34; align=&#34;center&#34;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt; 
 
-&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/jbw2011/refcard.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;And for those that like to have a refcard by their side, you can get all the information you need about the story of portal technology and configuration drill downs here: &lt;/p&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/jroller/jbw2011/refcard.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;And for those that like to have a refcard by their side, you can get all the information you need about the story of portal technology and configuration drill downs here: &lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;From &lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;“Mastering Portals with a Portlet Bridge”&lt;/a&gt; DZone Refcard:&lt;br /&gt; 
 “A portlet bridge allows you to run application frameworks like &lt;span class=&#34;caps&#34;&gt;JSF&lt;/span&gt; in a portal environment without needing to know anything about the underlying portlet &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; or portlet concepts.”&lt;br /&gt; 
 &lt;/p&gt;&lt;br /&gt; 
 &lt;br/&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-&lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/jbw2011/jbw-2011.gif&#34; alt=&#34;&#34; align=&#34;left&#34; style=&#34;margin:0 15px 25px 0&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/jroller/jbw2011/jbw-2011.gif&#34; alt=&#34;&#34; align=&#34;left&#34; style=&#34;margin:0 15px 25px 0&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 And if all that wasn’t enough, I will be giving a 50 minute talk at JBoss World titled &lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&#34;Making Portals Cool: The Compelling Advantages of a Portlet Bridge&#34;&lt;/a&gt; where you can come and personally track me down and specifically tell me about your problems, pains, or happiness with the project or the world in general &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; JBoss World will be located in Boston from May 3&amp;#8211;6.&lt;br /&gt; 
 I think &lt;a href=&#34;http://www.redhat.com/summit/rates/&#34;&gt;early bird pricing&lt;/a&gt; ends this Friday (April 8th), so you better hurry if you want to save a little cash.&lt;/p&gt; 
 
@@ -43,10 +43,10 @@ I think &lt;a href=&#34;http://www.redhat.com/summit/rates/&#34;&gt;early bird p
     
     <item>
       <title>Contextual PortletMode changes using the JBoss Portlet Bridge</title>
-      <link>http://localhost:1313/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</link>
+      <link>http://wesleyhales.com:1313/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</link>
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</guid>
+      <guid>http://wesleyhales.com:1313/blog/2009/12/10/contextual-portletmode-changes-using-the-jboss-portlet-bridge</guid>
       <description>&lt;p&gt;&lt;p&gt;By default, the JSR-&lt;sup&gt;301&lt;/sup&gt;&amp;frasl;&lt;sub&gt;329&lt;/sub&gt; portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.&lt;/p&gt;
 &lt;p class=&#34;pTitle&#34;&gt;Why use portlet modes instead of javascript widgets?&lt;/p&gt;
 &lt;p&gt;First I would like to give you a little justification of the beauty of this feature. Some people will argue the point of &amp;ldquo;Why do you need different modes like, Help and Edit?&amp;rdquo;, when you could add some cool &amp;ldquo;javascript of the week&amp;rdquo; that would dynamically display what you intended to present in one of the given modes. Well, you could develop your interactions either way but it really isn&amp;rsquo;t a question of why. It&amp;rsquo;s a question of &amp;ldquo;How?&amp;rdquo;. How do you want users to interact with your applications? And since you have already made the decision to invest in a portal solution, why not use the features that are built in and that stay consistent across the entire UI? Any UI Developer or Interaction Designer will tell you that adding cool javascript widgets adds another layer of complexity and maintenance, thus adding to developer time and bottom line ROI. In addition, when you develop any servlet based application to work within a portal environment, you are properly separating your concerns when you use these modes (without even realizing it in most cases). You are presenting distinguished flows for different trains of thought and making it easier for users to accomplish the task at hand.&lt;/p&gt;
@@ -114,11 +114,11 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Developing an OpenSocial Portlet</title>
-      <link>http://localhost:1313/blog/2008/10/12/developing-an-opensocial-portlet</link>
+      <link>http://wesleyhales.com:1313/blog/2008/10/12/developing-an-opensocial-portlet</link>
       <pubDate>Sun, 12 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/10/12/developing-an-opensocial-portlet</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/Picture-6.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/Picture-6-small.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;p&gt;I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:&lt;/p&gt;
+      <guid>http://wesleyhales.com:1313/blog/2008/10/12/developing-an-opensocial-portlet</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/jroller/Picture-6.jpg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/jroller/Picture-6-small.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;p&gt;I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Documentation is scarce when you want to roll you own OS container via Shindig&lt;/li&gt;
 &lt;li&gt;Luckily &lt;a href=&#34;http://chrisschalk.com/shindig_docs/io/shindig-io.html&#34;&gt;Chris Schalk&lt;/a&gt; did a good job providing some documentation on getting persistence setup on a mysql db&lt;/li&gt;
@@ -134,13 +134,13 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
-      <link>http://localhost:1313/blog/2008/08/06/developing-portlets-using-jsf-ajax-and-seam-part-1-of-3</link>
+      <link>http://wesleyhales.com:1313/blog/2008/08/06/developing-portlets-using-jsf-ajax-and-seam-part-1-of-3</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/08/06/developing-portlets-using-jsf-ajax-and-seam-part-1-of-3</guid>
+      <guid>http://wesleyhales.com:1313/blog/2008/08/06/developing-portlets-using-jsf-ajax-and-seam-part-1-of-3</guid>
       <description>&lt;p&gt;InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!&lt;/p&gt; 
 &lt;br/&gt; 
-&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
+&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
 
 &lt;p&gt;This first part is about basic JSF development with an easy to follow tutorial and real world development tips. The next one will be about RichFaces and the final (about Seam) will be published right after the release of Beta 4 in early September.&lt;/p&gt; 
 
@@ -154,10 +154,10 @@ So, Joe User starts to fill out his expense report in a 6 step wizard. He gets t
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://localhost:1313/blog/2007/11/15/seam-2.0ga-in-jboss-portal-in-5-minutes</link>
+      <link>http://wesleyhales.com:1313/blog/2007/11/15/seam-2.0ga-in-jboss-portal-in-5-minutes</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/11/15/seam-2.0ga-in-jboss-portal-in-5-minutes</guid>
+      <guid>http://wesleyhales.com:1313/blog/2007/11/15/seam-2.0ga-in-jboss-portal-in-5-minutes</guid>
       <description>&lt;p&gt;**Update - See &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam&#34;&gt;this article&lt;/a&gt; for more info.&lt;/p&gt;
 </description>
     </item>

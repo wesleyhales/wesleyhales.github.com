@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Balls on Wesley Hales</title>
-    <link>http://localhost:1313/tags/balls/</link>
+    <link>http://wesleyhales.com:1313/tags/balls/</link>
     <description>Recent content in Balls on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Oct 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/balls/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com:1313/tags/balls/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Another design</title>
-      <link>http://localhost:1313/blog/2007/10/29/another-design</link>
+      <link>http://wesleyhales.com:1313/blog/2007/10/29/another-design</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/29/another-design</guid>
+      <guid>http://wesleyhales.com:1313/blog/2007/10/29/another-design</guid>
       <description>&lt;p&gt;The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. &lt;/p&gt; 
 
 &lt;p&gt;Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)&lt;/p&gt; 
