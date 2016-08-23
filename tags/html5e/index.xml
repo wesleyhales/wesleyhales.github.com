@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html5e on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/html5e/</link>
+    <link>http://wesleyhales.com:1313/tags/html5e/</link>
     <description>Recent content in Html5e on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/html5e/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com:1313/tags/html5e/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-      <link>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
+      <link>http://wesleyhales.com:1313/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
+      <guid>http://wesleyhales.com:1313/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
       <description>&lt;p&gt;
 The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a&gt; had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:
   &lt;ul&gt;
@@ -26,7 +26,7 @@ The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a
 &lt;p&gt;
   Most front-end developers are familiar with &#34;jQuery callbacks and RESTful services&#34;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&#34;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&#34;&gt;&#34;POH5&#34; (Plain Old HTML5)&lt;/a&gt;
 &lt;/p&gt;
-&lt;img src=&#34;http://wesleyhales.com/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com:1313/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
 &lt;p&gt;
 So why another acronym? Why not just call it &#34;Plain Old Open Web&#34;? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or &#34;gear&#34; you need to get started quickly with the best possible solution.
 &lt;/p&gt;

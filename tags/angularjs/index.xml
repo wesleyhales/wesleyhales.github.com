@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angularjs on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/angularjs/</link>
+    <link>http://wesleyhales.com:1313/tags/angularjs/</link>
     <description>Recent content in Angularjs on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com:1313/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>From Startup to Enterprise</title>
-      <link>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</link>
+      <link>http://wesleyhales.com:1313/blog/2013/12/17/From-Startup-to-Enterprise</link>
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</guid>
+      <guid>http://wesleyhales.com:1313/blog/2013/12/17/From-Startup-to-Enterprise</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -41,9 +41,9 @@ the existing UserGrid project into the fold.&lt;/p&gt;
 
 &lt;p&gt;Here are the first designs and wireframes we came up with. I purposely left everything greyscale to allow for a pure focus on the page data and layout.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
 &lt;br class=&#34;clear-left&#34;/&gt;
 The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
 reformatting the data to appear more readable.&lt;/p&gt;
@@ -61,12 +61,12 @@ drop downs.&lt;/p&gt;
 &lt;p&gt;This is the evolution of our menu design in chronological order from left to right. Design is an iterative process for me and
 I never get it right on the first go. And it really helps to have good feedback from other &amp;ldquo;design minded&amp;rdquo; folks.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I wanted to leave a lot of the original grey design from the mockups and not get too heavy handed with the colors. After all, we were
 building an analytics dashboard that needed to put heavy emphasis on errors, warnings, and other alerts.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
 
@@ -92,7 +92,7 @@ session on directives. Sure, there&amp;rsquo;s a bit of a learning curve, but th
 busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
 one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;On August 9th we had our first C-Level review of the beta version of the product. This is pretty significant seeing that two developers were
 able to produce a massive SPA in a little over 3 months. Not to mention managing vacation schedules and other things that arose. Of course,
@@ -124,10 +124,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</link>
+      <link>http://wesleyhales.com:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</guid>
+      <guid>http://wesleyhales.com:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -146,18 +146,18 @@ If you want to read more about $scope.$apply check out &lt;a href=&#34;http://ji
 &lt;p&gt;For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
 the user know when it&amp;rsquo;s about to refresh the data.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn&amp;rsquo;t believe how much jank it was causing.
 There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
  check it out &lt;a href=&#34;http://www.youtube.com/watch?v=mSK70FwUz2A&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 Yep, That&amp;rsquo;s 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.&lt;/p&gt;
 
 &lt;p&gt;Also, if you look at the memory being consumed, we&amp;rsquo;re taking quite a hit for this little counter.
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 We maintain around 25MB and then shoot up to 34 when the page does its refresh.
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
@@ -169,10 +169,10 @@ Here&amp;rsquo;s the code I put together:
 &lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/wesleyhales/59SeE/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;p&gt;And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Also the memory footprint is greatly reduced:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.&lt;/p&gt;
 
 &lt;p&gt;A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the

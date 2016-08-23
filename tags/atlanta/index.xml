@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atlanta on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/atlanta/</link>
+    <link>http://wesleyhales.com:1313/tags/atlanta/</link>
     <description>Recent content in Atlanta on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/atlanta/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com:1313/tags/atlanta/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
+      <link>http://wesleyhales.com:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
+      <guid>http://wesleyhales.com:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
 &lt;br/&gt;
 &lt;div style=&#34;width:540px;margin: 0 auto&#34;&gt;
 &lt;a href=&#34;http://www.indeed.com/jobtrends&#34; title=&#34;HTML5 Job Trends&#34;&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Travisci on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/travisci/</link>
+    <link>http://wesleyhales.com:1313/tags/travisci/</link>
     <description>Recent content in Travisci on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Mar 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/travisci/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com:1313/tags/travisci/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Fun with Static Site Generators and Travis</title>
-      <link>http://wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</link>
+      <link>http://wesleyhales.com:1313/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</link>
       <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</guid>
+      <guid>http://wesleyhales.com:1313/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -59,7 +59,7 @@ We&amp;rsquo;ll top it all off with running &lt;a href=&#34;http://loadreport.we
 
 &lt;p&gt;First off, you must login to &lt;a href=&#34;https://travis-ci.org&#34;&gt;Travis CI&lt;/a&gt; with your github username and enable the travis service hook on the repository you wish to automate.
 For me, this is where my haml/sass/etc&amp;hellip; source is located.
-&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-03-29/travisci1.png&#34; alt=&#34;travis&#34; class=&#34;margin10&#34;/&gt;
+&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-03-29/travisci1.png&#34; alt=&#34;travis&#34; class=&#34;margin10&#34;/&gt;
 Next, we&amp;rsquo;ll create an OAuth token for your repository access :
 &lt;script src=&#34;https://gist.github.com/wesleyhales/5274538.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
@@ -99,12 +99,12 @@ it takes our site to load after each commit is made. This gives us a baseline fo
 &lt;p&gt;The source for this blog you are reading is stored on github &lt;a href=&#34;https://github.com/wesleyhales/wesleyhales.com&#34;&gt;here&lt;/a&gt;. When I do
 a git push, everything is automatically built with travis and pushed again to the &lt;a href=&#34;https://github.com/wesleyhales/wesleyhales.github.com&#34;&gt;github repo&lt;/a&gt; that is specially named to handle the
 mapping of my TLD (wesleyhales.com) to my username on github.
-&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-03-29/blog-ss.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-03-29/blog-ss.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Since I have 2 repositories, one for the preprocessor source and the other for the TLD mapping, I&amp;rsquo;m using the gh-pages branch on my
  source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
  The results of this test are automatically pushed and I can view them &lt;a href=&#34;http://wesleyhales.com/wesleyhales.com/&#34;&gt;here&lt;/a&gt;.
- &lt;a href=&#34;http://wesleyhales.com/wesleyhales.com/&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-03-29/perf-test.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/wesleyhales.com/&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-03-29/perf-test.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
  documentation along with other reports and assets. I&amp;rsquo;d eventually like to write a script to do a diff on only test the pages that were changed on the commit.&lt;/p&gt;
