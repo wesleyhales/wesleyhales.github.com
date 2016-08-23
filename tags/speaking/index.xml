@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speaking on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/speaking/</link>
+    <link>http://wesleyhales.com/tags/speaking/</link>
     <description>Recent content in Speaking on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Feb 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How Collective Wisdom Shapes a Talk</title>
-      <link>http://wesleyhales.com:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</link>
+      <link>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</link>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -41,7 +41,7 @@ Analytics were added and many bugs were fixed. I also integrated the tool with t
 
 &lt;h2 id=&#34;details-of-onslyde&#34;&gt;Details of onslyde&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde.arch.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde.arch.png&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;200px&#34; align=&#34;left&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;200px&#34; align=&#34;left&#34;&gt;&lt;/a&gt;
 At its core, the concept is simple. Attendees connect to a WebSocket server, the presenter sends them vote options at certain points during her
  presentation and whoever decides to connect can have anonymous interactions with the presenter. Participants may also give a
 &amp;ldquo;thumb up&amp;rdquo; or &amp;ldquo;thumb down&amp;rdquo; during any slide to show that they approve or disapprove of the content on a given slide. This allows for a
@@ -60,10 +60,10 @@ in order if &amp;ldquo;Red&amp;rdquo; wins the audience vote.
 * &lt;em&gt;class=&amp;ldquo;send&amp;rdquo;&lt;/em&gt; : specifies that we want to send this content to each connected remote&lt;/p&gt;
 
 &lt;p&gt;So, the above markup sets up the following slide deck and remote control options:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-1.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-1.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After all the votes are placed, the winning track is chosen based on the majority vote:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-2.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-2.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After the fork occurs, the presenter can choose to present slides in linear fashion, or ask another poll question. The framework is
 limited by only allowing for 2 options to be given and slides can only be forked once per question.&lt;/p&gt;
@@ -86,13 +86,13 @@ Google Analytics does not give us are timestamps, or when events occured at a fi
  or &amp;ldquo;WTF&amp;rdquo; button is pressed, I can see exactly which slide was being shown and when the button was pressed. There is a bit of a latency
  issue from the time the button is pressed until the time it actually shows up on the presenters screen, so capturing the TS at the server
  level gives a more accurate picture of how you performed on each slide, if the content made sense, etc.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/hypevreality.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/hypevreality.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;from-ga-and-custom-events&#34;&gt;From GA and Custom Events&lt;/h3&gt;
 
 &lt;p&gt;This is an overview of the device analytics. I didn&amp;rsquo;t want to reinvent the wheel on User Agent detection and keeping track of sessions, so I leveraged GA.
 The following data is from my talk, in the video above, given on February 18th.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/feb18Devnexus.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/feb18Devnexus.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 

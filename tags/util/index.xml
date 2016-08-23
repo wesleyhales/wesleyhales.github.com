@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Util on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/util/</link>
+    <link>http://wesleyhales.com/tags/util/</link>
     <description>Recent content in Util on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Dec 2006 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/util/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/util/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Preformatting html code blocks</title>
-      <link>http://wesleyhales.com:1313/blog/2006/12/05/Preformatting-html-code-blocks</link>
+      <link>http://wesleyhales.com/blog/2006/12/05/Preformatting-html-code-blocks</link>
       <pubDate>Tue, 05 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2006/12/05/Preformatting-html-code-blocks</guid>
+      <guid>http://wesleyhales.com/blog/2006/12/05/Preformatting-html-code-blocks</guid>
       <description>&lt;p&gt;&lt;p&gt;When the time comes to put html or xml settings as an example in your blog (or any html for that matter), this sed one-liner really helps out&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Replace the *** with an &amp;ldquo;&amp;amp;&amp;ldquo;&amp;hellip; the page example won&amp;rsquo;t render correctly if I use verbatim characters.&lt;/p&gt;
 &lt;code style=&#34;background-color:black;color:chartreuse;&#34;&gt;

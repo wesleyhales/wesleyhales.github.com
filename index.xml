@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/</link>
+    <link>http://wesleyhales.com/</link>
     <description>Recent content on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 Dec 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Decommissioning of Onslyde</title>
-      <link>http://wesleyhales.com:1313/blog/2015/12/23/The-Decommissioning-of-Onslyde</link>
+      <link>http://wesleyhales.com/blog/2015/12/23/The-Decommissioning-of-Onslyde</link>
       <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2015/12/23/The-Decommissioning-of-Onslyde</guid>
+      <guid>http://wesleyhales.com/blog/2015/12/23/The-Decommissioning-of-Onslyde</guid>
       <description>&lt;p&gt;As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012,
 I started a web based, real-time feedback project called &lt;a href=&#34;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&#34;&gt;Onslyde&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-12-23/edge1-panel-detail-large-opt.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-12-23/edge1-panel-detail-large-opt.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;To me the project was a huge success with many measurable results:&lt;/p&gt;
 
@@ -54,14 +54,14 @@ learned to a new similar project in 2016, so stay tuned.&lt;/p&gt;
     
     <item>
       <title>Simulated RUM testing with PhantomJS 2</title>
-      <link>http://wesleyhales.com:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</link>
+      <link>http://wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</link>
       <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
+      <guid>http://wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
       <description>&lt;p&gt;Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
 
 &lt;p&gt;The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using &lt;a href=&#34;https://github.com/wesleyhales/loadreport&#34;&gt;Loadreport.js&lt;/a&gt;.
-&lt;a href=&#34;https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-15-24/image05.png&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image05.png&#34;/&gt;&lt;/a&gt;
 &lt;div style=&#34;width:100%;text-align:center;font-style:italic;&#34;&gt;Loadreport data from 2012-2013 for CNN.com&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;I started the Loadreport project while working on the CNN homepage in 2012. It was one of the first PhantomJS scripts that was built solely to collect as many perf numbers from the DOM as possible.&lt;br /&gt;
@@ -87,13 +87,13 @@ I don’t know. It’s a frankenstein term where I’m trying to depict a remote
 &lt;p&gt;All of these requirements have been built into &lt;a href=&#34;http://speedgun.io&#34;&gt;speedgun.io&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;After starting development of speedgun with Docker I realized that this could be easily distributed to any geographic region as a virtualized RUM node. I wanted to execute on the idea that this testing tool could be setup on an old mac mini at grandma’s house with a DSL connection.
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-15-24/image00.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image00.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Or, with a &lt;a href=&#34;https://github.com/wesleyhales/speedgun/blob/master/server/README.md&#34;&gt;simple git clone and execution of one command&lt;/a&gt;, it can be run on Digital Ocean, AWS, and more environments in every region.
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-15-24/image01.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image01.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Today, there are 2 available nodes to run a Speedgun report, DigitalOcean SF and NY. Hopefully there will be more in the list by the time you read this ;)
-&lt;a href=&#34;http://speedgun.io&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-15-24/image04.png&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://speedgun.io&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image04.png&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##The Speedgun API
 There are 2 parts to the speedgun REST API&amp;hellip;&lt;/p&gt;
@@ -185,12 +185,12 @@ There are 2 parts to the speedgun REST API&amp;hellip;&lt;/p&gt;
 By default this is turned off. To start sending your beacon with system information to the central speedgun.io server, you only have to curl or load this url in your browser &lt;a href=&#34;http://localhost:8081/rest/beacon/init&#34;&gt;http://localhost:8081/rest/beacon/init&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The beacon sends the following data to the speedgun server every 60 seconds.
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-15-24/image03.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image03.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The only caveat to this working correctly is opening the required port on the firewall of the client machine’s network. You don’t have to open the port to send the beacon, only to allow speedgun reports to be ran by the centralized server.&lt;/p&gt;
 
 &lt;p&gt;Here’s a netgear router admin UI example:
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com:1313/images/posts/2015-15-24/image02.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image02.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;After you open up port 8081 on your firewall, speedgun reports can be remotely ran from anywhere. Currently the speedgun.io URL is hardcoded as the centralized server, this will soon be broken out to a configuration file.
 &lt;br/&gt;
@@ -229,10 +229,10 @@ I also want to give a quick shout out to all the other page testing services.&lt
     
     <item>
       <title>A More Better Conference Experience</title>
-      <link>http://wesleyhales.com:1313/blog/2014/02/26/A-More-Better-Conference-Experience</link>
+      <link>http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2014/02/26/A-More-Better-Conference-Experience</guid>
+      <guid>http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -254,7 +254,7 @@ and time. Sponsors could then choose a time and I would reserve it on a first-co
 attendees can vote on seeded questions that will allow sponsors to connect to those who are truly interested
 in their product or what they have to say.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_3.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_3.jpeg&#34; class=&#34;margin10 max-width-50 float-right&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&#34; class=&#34;margin10 max-width-50 float-right&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve already written about &lt;a href=&#34;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&#34;&gt;the disconnect between speakers and attendees&lt;/a&gt;, but what about the disconnect
 between sponsors and attendees? After all, these are the companies that shell out massive amounts of cash, setup up
@@ -297,7 +297,7 @@ a workshop track. So we needed 10 rooms to be setup with the RPis for live votin
 &lt;li&gt;VGA 2 way push-button splitter&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image.jpeg&#34; class=&#34;margin10 max-width-50 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/image.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/image.jpeg&#34; class=&#34;margin10 max-width-50 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The last item in the list above is what caused me a lot of trouble. Ultimately the hardware setup was solid and worked
 really well. But physically pushing the button to switch between voting and speakers ready to present was impossible to
@@ -320,7 +320,7 @@ current from the speaker and override the secondary Onslyde RPi signal. This is 
 handles this case, then I&amp;rsquo;m assuming it wouldn&amp;rsquo;t be hard to break out the soldering iron and rig something together.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_9.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_9.jpeg&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The Raspberry Pi&amp;rsquo;s boot to a stripped down Debian based operating system that goes straight into full screen Chromium. The browser then
@@ -349,7 +349,7 @@ interest and questions.&lt;/p&gt;&lt;/li&gt;
  how cool it will be, but until you get out and actually try it, you have no idea.&lt;/p&gt;
 
 &lt;p&gt;Below are &lt;a href=&#34;https://www.onslyde.com/#!/analytics?sessionID=555&#34;&gt;the results&lt;/a&gt; from one of the polls that was asked during a morning session:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/devnexus-voting.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/devnexus-voting.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;
 You can probably imagine, at this point, what you would do with this data as a sponsor. When each user votes they are required to oauth with their G+
 account. So we have names and email addresses that can be contacted after the fact.&lt;/p&gt;
 
@@ -364,10 +364,10 @@ the devices to boot into full screen Chromium and run Onslyde.&lt;/p&gt;
     
     <item>
       <title>From Startup to Enterprise</title>
-      <link>http://wesleyhales.com:1313/blog/2013/12/17/From-Startup-to-Enterprise</link>
+      <link>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</link>
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/12/17/From-Startup-to-Enterprise</guid>
+      <guid>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -394,9 +394,9 @@ the existing UserGrid project into the fold.&lt;/p&gt;
 
 &lt;p&gt;Here are the first designs and wireframes we came up with. I purposely left everything greyscale to allow for a pure focus on the page data and layout.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
 &lt;br class=&#34;clear-left&#34;/&gt;
 The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
 reformatting the data to appear more readable.&lt;/p&gt;
@@ -414,12 +414,12 @@ drop downs.&lt;/p&gt;
 &lt;p&gt;This is the evolution of our menu design in chronological order from left to right. Design is an iterative process for me and
 I never get it right on the first go. And it really helps to have good feedback from other &amp;ldquo;design minded&amp;rdquo; folks.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I wanted to leave a lot of the original grey design from the mockups and not get too heavy handed with the colors. After all, we were
 building an analytics dashboard that needed to put heavy emphasis on errors, warnings, and other alerts.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
 
@@ -445,7 +445,7 @@ session on directives. Sure, there&amp;rsquo;s a bit of a learning curve, but th
 busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
 one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;On August 9th we had our first C-Level review of the beta version of the product. This is pretty significant seeing that two developers were
 able to produce a massive SPA in a little over 3 months. Not to mention managing vacation schedules and other things that arose. Of course,
@@ -477,46 +477,46 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Jank Busting Apple&#39;s Home Page</title>
-      <link>http://wesleyhales.com:1313/blog/2013/10/26/Jank-Busting-Apples-Home-Page</link>
+      <link>http://wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/10/26/Jank-Busting-Apples-Home-Page</guid>
+      <guid>http://wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&#34;http://wesleyhales.com:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&#34;&gt;this article&lt;/a&gt; the other day which examines the
+&lt;p&gt;Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote &lt;a href=&#34;http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/&#34;&gt;this article&lt;/a&gt; the other day which examines the
 performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
 Jake Archibald&amp;rsquo;s &lt;a href=&#34;http://jakearchibald.github.io/jank-invaders/&#34;&gt;Jank Invaders&lt;/a&gt; to hone my skills and save the universe from jank :)&lt;/p&gt;
 
 &lt;p&gt;So, I was on &lt;a href=&#34;http://apple.com&#34;&gt;Apple&amp;rsquo;s home page&lt;/a&gt; the other day and noticed some jank in their main carousel animation.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.home.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.home.PNG&#34; alt=&#34;apple home page&#34; style=&#34;width:50%&#34; class=&#34;margin10&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.home.PNG&#34; alt=&#34;apple home page&#34; style=&#34;width:50%&#34; class=&#34;margin10&#34;&gt;&lt;/a&gt;
 It wasn&amp;rsquo;t anything huge, but the
 animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
 Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a &lt;a href=&#34;https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events&#34;&gt;paint&lt;/a&gt; within chrome.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.jank.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.jank.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
  handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka &lt;a href=&#34;http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/&#34;&gt;null transform hack&lt;/a&gt;).
  The problem with Apple&amp;rsquo;s site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
- &lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/composite.PNG&#34; alt=&#34;layer composite time&#34; class=&#34;margin10 max-width-100&#34;/&gt;
+ &lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/composite.PNG&#34; alt=&#34;layer composite time&#34; class=&#34;margin10 max-width-100&#34;/&gt;
  &lt;br/&gt;
  I wrote about this &lt;a href=&#34;http://www.html5rocks.com/en/mobile/optimization-and-performance/&#34;&gt;a while ago&lt;/a&gt;, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
  applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.&lt;/p&gt;
 
 &lt;p&gt;The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
  If we turn on &amp;ldquo;&lt;a href=&#34;http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode&#34;&gt;Continuous Page Repainting&lt;/a&gt;&amp;rdquo; in dev tools, we can see how the page is being painted and how many composited layers we have.
- &lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple-paint.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple-paint.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple-paint.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
  From there, I just disabled all the null transform hacks that were applied to nested elements.
- &lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.markup.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.markup.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.markup.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
  below timeline.
- &lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.no.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-26/apple.com.no.jank.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-26/apple.com.no.jank.PNG&#34; alt=&#34;apple home page markup&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The yellow bars are the 7 second timer before each transition occurs, so this is expected.&lt;/p&gt;
 
@@ -532,10 +532,10 @@ Apple products. You can see this in the Frame analysis below. Each green line sh
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://wesleyhales.com:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</link>
+      <link>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</guid>
+      <guid>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -554,18 +554,18 @@ If you want to read more about $scope.$apply check out &lt;a href=&#34;http://ji
 &lt;p&gt;For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
 the user know when it&amp;rsquo;s about to refresh the data.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn&amp;rsquo;t believe how much jank it was causing.
 There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
  check it out &lt;a href=&#34;http://www.youtube.com/watch?v=mSK70FwUz2A&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 Yep, That&amp;rsquo;s 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.&lt;/p&gt;
 
 &lt;p&gt;Also, if you look at the memory being consumed, we&amp;rsquo;re taking quite a hit for this little counter.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 We maintain around 25MB and then shoot up to 34 when the page does its refresh.
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
@@ -577,10 +577,10 @@ Here&amp;rsquo;s the code I put together:
 &lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/wesleyhales/59SeE/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;p&gt;And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Also the memory footprint is greatly reduced:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
 Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.&lt;/p&gt;
 
 &lt;p&gt;A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the
@@ -593,10 +593,10 @@ This is my first perf analysis of the framework and I plan on doing much more in
     
     <item>
       <title>Fun with Static Site Generators and Travis</title>
-      <link>http://wesleyhales.com:1313/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</link>
+      <link>http://wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</link>
       <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</guid>
+      <guid>http://wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -641,7 +641,7 @@ We&amp;rsquo;ll top it all off with running &lt;a href=&#34;http://loadreport.we
 
 &lt;p&gt;First off, you must login to &lt;a href=&#34;https://travis-ci.org&#34;&gt;Travis CI&lt;/a&gt; with your github username and enable the travis service hook on the repository you wish to automate.
 For me, this is where my haml/sass/etc&amp;hellip; source is located.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-03-29/travisci1.png&#34; alt=&#34;travis&#34; class=&#34;margin10&#34;/&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-03-29/travisci1.png&#34; alt=&#34;travis&#34; class=&#34;margin10&#34;/&gt;
 Next, we&amp;rsquo;ll create an OAuth token for your repository access :
 &lt;script src=&#34;https://gist.github.com/wesleyhales/5274538.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
@@ -681,12 +681,12 @@ it takes our site to load after each commit is made. This gives us a baseline fo
 &lt;p&gt;The source for this blog you are reading is stored on github &lt;a href=&#34;https://github.com/wesleyhales/wesleyhales.com&#34;&gt;here&lt;/a&gt;. When I do
 a git push, everything is automatically built with travis and pushed again to the &lt;a href=&#34;https://github.com/wesleyhales/wesleyhales.github.com&#34;&gt;github repo&lt;/a&gt; that is specially named to handle the
 mapping of my TLD (wesleyhales.com) to my username on github.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-03-29/blog-ss.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-03-29/blog-ss.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Since I have 2 repositories, one for the preprocessor source and the other for the TLD mapping, I&amp;rsquo;m using the gh-pages branch on my
  source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
  The results of this test are automatically pushed and I can view them &lt;a href=&#34;http://wesleyhales.com/wesleyhales.com/&#34;&gt;here&lt;/a&gt;.
- &lt;a href=&#34;http://wesleyhales.com/wesleyhales.com/&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-03-29/perf-test.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;a href=&#34;http://wesleyhales.com/wesleyhales.com/&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-03-29/perf-test.png&#34; class=&#34;margin10&#34; width=&#34;400px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
  documentation along with other reports and assets. I&amp;rsquo;d eventually like to write a script to do a diff on only test the pages that were changed on the commit.&lt;/p&gt;
@@ -698,10 +698,10 @@ mapping of my TLD (wesleyhales.com) to my username on github.
     
     <item>
       <title>How Collective Wisdom Shapes a Talk</title>
-      <link>http://wesleyhales.com:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</link>
+      <link>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</link>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -728,7 +728,7 @@ Analytics were added and many bugs were fixed. I also integrated the tool with t
 
 &lt;h2 id=&#34;details-of-onslyde&#34;&gt;Details of onslyde&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde.arch.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde.arch.png&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;200px&#34; align=&#34;left&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;200px&#34; align=&#34;left&#34;&gt;&lt;/a&gt;
 At its core, the concept is simple. Attendees connect to a WebSocket server, the presenter sends them vote options at certain points during her
  presentation and whoever decides to connect can have anonymous interactions with the presenter. Participants may also give a
 &amp;ldquo;thumb up&amp;rdquo; or &amp;ldquo;thumb down&amp;rdquo; during any slide to show that they approve or disapprove of the content on a given slide. This allows for a
@@ -747,10 +747,10 @@ in order if &amp;ldquo;Red&amp;rdquo; wins the audience vote.
 * &lt;em&gt;class=&amp;ldquo;send&amp;rdquo;&lt;/em&gt; : specifies that we want to send this content to each connected remote&lt;/p&gt;
 
 &lt;p&gt;So, the above markup sets up the following slide deck and remote control options:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-1.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-1.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After all the votes are placed, the winning track is chosen based on the majority vote:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-2.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/onslyde-2.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After the fork occurs, the presenter can choose to present slides in linear fashion, or ask another poll question. The framework is
 limited by only allowing for 2 options to be given and slides can only be forked once per question.&lt;/p&gt;
@@ -773,13 +773,13 @@ Google Analytics does not give us are timestamps, or when events occured at a fi
  or &amp;ldquo;WTF&amp;rdquo; button is pressed, I can see exactly which slide was being shown and when the button was pressed. There is a bit of a latency
  issue from the time the button is pressed until the time it actually shows up on the presenters screen, so capturing the TS at the server
  level gives a more accurate picture of how you performed on each slide, if the content made sense, etc.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/hypevreality.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/hypevreality.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;from-ga-and-custom-events&#34;&gt;From GA and Custom Events&lt;/h3&gt;
 
 &lt;p&gt;This is an overview of the device analytics. I didn&amp;rsquo;t want to reinvent the wheel on User Agent detection and keeping track of sessions, so I leveraged GA.
 The following data is from my talk, in the video above, given on February 18th.
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/feb18Devnexus.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-25/feb18Devnexus.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
@@ -837,10 +837,10 @@ This blog post is serving as the documentation for the project until I get some 
     
     <item>
       <title>Adventures with the Skia Debugger</title>
-      <link>http://wesleyhales.com:1313/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
+      <link>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;Debugging jank, reflows, etc&amp;hellip;&lt;/h3&gt;
 The &lt;a href=&#34;https://sites.google.com/site/skiadocs/developer-documentation/skia-debugger&#34;&gt;Skia debugger&lt;/a&gt; was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.&lt;/p&gt;
@@ -863,9 +863,9 @@ I will state upfront that there was a lot of pain that went into building both t
 &lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;Using the Debugger&lt;/h3&gt;
 The debugger is fairly straightforward to use once a picture is loaded in. You can step through different commands via the up and down keys and clicking on the command in the list. You can also pause execution of commands with the pause button in order to inspect the details of the command in the inspector tabs down below.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-18/skia-ss.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-18/skia-ss.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;
 Here are the available keyboard shortcuts for the debugger:
-&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2013-02-18/skia-commands.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-18/skia-commands.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;After playing around with the debugger, it’s nice to get a very low level snapshot of how long it takes a specific browser to draw the pictures necessary to present a web page.&lt;/p&gt;
 
@@ -876,10 +876,10 @@ Happy debugging!&lt;/p&gt;
     
     <item>
       <title>I&#39;ll Sleep When I Die - All for HTML5</title>
-      <link>http://wesleyhales.com:1313/blog/2012/11/01/Ill-Sleep-When-I-Die---All-for-HTML5</link>
+      <link>http://wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die---All-for-HTML5</link>
       <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/11/01/Ill-Sleep-When-I-Die---All-for-HTML5</guid>
+      <guid>http://wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die---All-for-HTML5</guid>
       <description>&lt;p&gt;The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book,
 gave up a secure job, and changed jobs 4 times. All to push myself, get uncomfortable, and better understand the challenges
 that front-end developers are facing in 2012 and beyond. I gained more than I ever thought possible.&lt;/p&gt;
@@ -944,7 +944,7 @@ So I was rushing home in the afternoons to interview for positions that would mo
 opportunities didn’t work out for whatever reason, but honestly, putting myself out there and going through these grueling
 interview processes helped me out tremendously - as you will see.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2012-11-01/543116336.jpg&#34; alt=&#34;devnexus&#34; class=&#34;margin10&#34; style=&#34;max-width:50%&#34; align=&#34;left&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2012-11-01/543116336.jpg&#34; alt=&#34;devnexus&#34; class=&#34;margin10&#34; style=&#34;max-width:50%&#34; align=&#34;left&#34;&gt;
 On a side note and speaking of &amp;ldquo;putting myself out there&amp;rdquo;, on March 21st I had agreed to do a talk at a local conference
 here in Atlanta called &lt;a href=&#34;http://www.devnexus.com/&#34;&gt;DevNexus&lt;/a&gt;. As I was creating the slides for my presentation, I kept thinking
 about how I would verbally survey the audience at certain points to get a feel for what their experience level was.
@@ -959,7 +959,7 @@ the next day to give the same talk after another speaker backed out.&lt;/p&gt;
 through whoever would hire me at a specified hourly rate. I was able to speak at conferences on organic, community topics and
 I wasn’t giving a sales pitch for a specific product or platform. I was a hired gun and making it on my own, paying high insurance
 costs for my family (and business), and making one hell of a commute.
-&lt;a href=&#34;http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2012-11-01/onslyde.jpg&#34; alt=&#34;devnexus&#34; class=&#34;margin10&#34; align=&#34;right&#34; style=&#34;max-width:50%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2012-11-01/onslyde.jpg&#34; alt=&#34;devnexus&#34; class=&#34;margin10&#34; align=&#34;right&#34; style=&#34;max-width:50%&#34;&gt;&lt;/a&gt;
 So, my next bright idea was to enter Atlanta Startup Weekend in April of 2012, form a team of volunteers and pitch the presentation
 tool that I used at DevNexus as a startup idea.
 Unfortunately, the idea didn’t get picked, but I met 3 awesome developers who joined my team and those connections were huge wins. I
@@ -994,7 +994,7 @@ I also wanted to understand how Web Intents could possibly fit into the picture 
 &lt;a href=&#34;http://wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/&#34;&gt;My findings&lt;/a&gt; were interesting enough to get some of the top
 developers/authors/speakers in the industry to comment on my post. It really is motivating when you see your blog spike
 from roughly 100 unique visitors a week to 1000&amp;rsquo;s. I even got a &lt;a href=&#34;https://twitter.com/TwitterOSS/status/240912782000795649&#34;&gt;shout out&lt;/a&gt; on TwitterOSS :)
-&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2012-11-01/blogstats.png&#34; alt=&#34;devnexus&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2012-11-01/blogstats.png&#34; alt=&#34;devnexus&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Next thing I worked on at CNN was page load performance. We started having meetings with CNN’s best and brightest to see what
 we could do to add performance improvements to CNN’s home page. The problem with making changes like these in most large
@@ -1035,7 +1035,7 @@ and will be available in print on November 12th.&lt;/p&gt;
 &lt;p&gt;On November 1st (today), the idea that I helped create and shape got it’s first &lt;a href=&#34;http://finance.yahoo.com/news/apigee-launches-first-real-time-120000461.html&#34;&gt;press release&lt;/a&gt;
 and &lt;a href=&#34;http://apigee.com/about/mobile-analytics&#34;&gt;official public launch&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2012-11-01/apigee.png&#34; alt=&#34;apigee mobile analytics&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2012-11-01/apigee.png&#34; alt=&#34;apigee mobile analytics&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;I’ll be speaking at a few more conferences in November, &lt;a href=&#34;http://www.devoxx.com/display/DV12/Wesley+Hales&#34;&gt;Devoxx&lt;/a&gt;
 and &lt;a href=&#34;http://therichwebexperience.com/conference/speaker/wesley_hales&#34;&gt;RWX&lt;/a&gt;, and after that I’m going to lay low for a while.
@@ -1048,11 +1048,11 @@ I can sleep pretty well after a couple of beers, and I won’t have to pay for m
     
     <item>
       <title>Web Performance Testing With PhantomJS</title>
-      <link>http://wesleyhales.com:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
+      <link>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+      <guid>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
 are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
@@ -1078,11 +1078,11 @@ we have resources which are not far-future cached, what happens after we future 
 &lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;This script is running live at &lt;a href=&#34;http://loadreport.wesleyhales.com/report.html&#34;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
-&lt;img src=&#34;http://wesleyhales.com:1313/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;re running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&#34;http://twitter.com/ryanbridges&#34;&gt;@ryanbridges&lt;/a&gt; put together
 some awesome sparkline charts backed by knockout.js. Just click on the &amp;ldquo;Show Me Some Charts!&amp;rdquo; button to see &amp;lsquo;em.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Regarding cache performance, phantomjs has a &amp;ndash;disk-cahe=yes switch which is supposed to enable caching, but the results on the number
 of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with &amp;ndash;disk-cahe=yes, phantom returns
@@ -1101,11 +1101,11 @@ To bypass this bug, I&amp;rsquo;ve created my own caching mechanism which basica
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://wesleyhales.com:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
+      <link>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
+      <guid>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
 &lt;br/&gt;
 &lt;div style=&#34;width:540px;margin: 0 auto&#34;&gt;
 &lt;a href=&#34;http://www.indeed.com/jobtrends&#34; title=&#34;HTML5 Job Trends&#34;&gt;
@@ -1131,10 +1131,10 @@ To bypass this bug, I&amp;rsquo;ve created my own caching mechanism which basica
     
     <item>
       <title>Sharing Content with Web Intents</title>
-      <link>http://wesleyhales.com:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
+      <link>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
 If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
@@ -1155,17 +1155,17 @@ be the input on a GET request to the provided share service.&lt;/p&gt;
 &lt;p&gt;For this example, I&amp;rsquo;ve taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains
 their specific resources to display a share button for the given service:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;First, I wanted a true measurement on all the resources and page load times without anything in the cache.
 So I cleared the browser cache and loaded a single test page (from the list above) for each share service provider. Here are the results:
 &lt;div id=&#34;container&#34; class=&#34;max-width-100&#34;&gt;&lt;/div&gt;
 I know&amp;hellip; seems pretty crazy that Facebook would have 11 HTTP requests and a 135KB payload (after compress/GZIP) for a share/like button.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
 LinkedIn is delivering 80KB of stuff, Twitter comes in right at 40KB, and although Google only serves up 2KB of resources, the data is broken up over 10 HTTP requests.&lt;/p&gt;
 
 &lt;p&gt;Keep in mind that we are on a desktop browser, so worrying about all the HTTP requests may be a little nonsensical. But, on a mobile
@@ -1216,8 +1216,8 @@ If you&amp;rsquo;re still struggling to wrap your head around Web Intents, you&a
 browser supporting the &lt;code&gt;WebKitIntent&lt;/code&gt; api is, you guessed it, WebKit. This includes Chrome versions &amp;gt;= 19. But, even though the tag is supported, you must install
 a Chrome extension to actually fulfill the intent.&lt;/p&gt;
 
-&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
+&lt;img src=&#34;http://wesleyhales.com/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;At this point you are probably wondering: How do we get the dialogue to show up in teh browser? How can we register an application to handle this request?
 The plan is to allow web applications to register themselves through a provided JavaScript api or HTML tag when the specification is
@@ -1280,7 +1280,7 @@ Read more about the details of Web Intents &lt;a href=&#34;http://webintents.org
 &lt;p&gt;*Note - Twitter has made the best attempt at an early implementation of Web Intents. The best thing service providers can do today, is follow &lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Twitter&amp;rsquo;s implementation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For a full example on how to create a Web Intent Chrome extension, run through the examples in &lt;a href=&#34;http://intentlab-io12.appspot.com/&#34;&gt;this Google IO lab at #IO12&lt;/a&gt;.
-Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
+Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h3&gt;Other references and good reads:&lt;/h3&gt;
@@ -1298,16 +1298,16 @@ Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#3
 &lt;script src=&#34;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&#34; type=&#34;text/javascript&#34; defer&gt;&lt;/script&gt;
 &lt;script src=&#34;http://code.highcharts.com/highcharts.js&#34; defer&gt;&lt;/script&gt;
 &lt;script src=&#34;http://code.highcharts.com/modules/exporting.js&#34; defer&gt;&lt;/script&gt;
-&lt;script src=&#34;http://wesleyhales.com:1313/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;script src=&#34;http://wesleyhales.com/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Sniffing IE9 features while in compatibility mode</title>
-      <link>http://wesleyhales.com:1313/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode</link>
+      <link>http://wesleyhales.com/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode</link>
       <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode</guid>
+      <guid>http://wesleyhales.com/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode</guid>
       <description>&lt;p&gt;Getting the browser version from the User Agent string is one thing. But, when you
 force compatibility mode in IE, you get whatever version you&amp;rsquo;re forcing to. e.g&amp;hellip;
 &lt;code&gt;&lt;pre&gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=EmulateIE8&amp;quot;/&amp;gt;&lt;/pre&gt;&lt;code&gt;&lt;/p&gt;
@@ -1338,13 +1338,13 @@ var val = Math.sin(x);
     
     <item>
       <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-      <link>http://wesleyhales.com:1313/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap</link>
+      <link>http://wesleyhales.com/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap</link>
       <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap</guid>
+      <guid>http://wesleyhales.com/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap</guid>
       <description>&lt;p&gt;I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
 Apparently, there is a problem with older browsers using CSS3 selectors like &lt;code&gt;div[style*=&amp;lsquo;foo&amp;rsquo;]&lt;/code&gt; in combination with other DOM elements.
-&lt;a href=&#34;http://wesleyhales.com/iscroll&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/iscroll.PNG&#34; width=150 alt=&#34;iscroll&#34; align=&#34;left&#34; style=&#34;margin:20px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wesleyhales.com/iscroll&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/iscroll.PNG&#34; width=150 alt=&#34;iscroll&#34; align=&#34;left&#34; style=&#34;margin:20px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://wesleyhales.com/iscroll&#34;&gt;test case&lt;/a&gt; was a little tricky to create, seeing that pinpointing this problem required mucho testing.
 However, I minimized the markup and CSS to only a few classes and DOM elements. The choppy scrolling is caused by a combination of inline

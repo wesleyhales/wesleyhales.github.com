@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rpi on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/rpi/</link>
+    <link>http://wesleyhales.com/tags/rpi/</link>
     <description>Recent content in Rpi on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/rpi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/rpi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A More Better Conference Experience</title>
-      <link>http://wesleyhales.com:1313/blog/2014/02/26/A-More-Better-Conference-Experience</link>
+      <link>http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2014/02/26/A-More-Better-Conference-Experience</guid>
+      <guid>http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -36,7 +36,7 @@ and time. Sponsors could then choose a time and I would reserve it on a first-co
 attendees can vote on seeded questions that will allow sponsors to connect to those who are truly interested
 in their product or what they have to say.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_3.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_3.jpeg&#34; class=&#34;margin10 max-width-50 float-right&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_3.jpeg&#34; class=&#34;margin10 max-width-50 float-right&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve already written about &lt;a href=&#34;http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/&#34;&gt;the disconnect between speakers and attendees&lt;/a&gt;, but what about the disconnect
 between sponsors and attendees? After all, these are the companies that shell out massive amounts of cash, setup up
@@ -79,7 +79,7 @@ a workshop track. So we needed 10 rooms to be setup with the RPis for live votin
 &lt;li&gt;VGA 2 way push-button splitter&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image.jpeg&#34; class=&#34;margin10 max-width-50 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/image.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/image.jpeg&#34; class=&#34;margin10 max-width-50 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The last item in the list above is what caused me a lot of trouble. Ultimately the hardware setup was solid and worked
 really well. But physically pushing the button to switch between voting and speakers ready to present was impossible to
@@ -102,7 +102,7 @@ current from the speaker and override the secondary Onslyde RPi signal. This is 
 handles this case, then I&amp;rsquo;m assuming it wouldn&amp;rsquo;t be hard to break out the soldering iron and rig something together.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_9.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/image_9.jpeg&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/image_9.jpeg&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The Raspberry Pi&amp;rsquo;s boot to a stripped down Debian based operating system that goes straight into full screen Chromium. The browser then
@@ -131,7 +131,7 @@ interest and questions.&lt;/p&gt;&lt;/li&gt;
  how cool it will be, but until you get out and actually try it, you have no idea.&lt;/p&gt;
 
 &lt;p&gt;Below are &lt;a href=&#34;https://www.onslyde.com/#!/analytics?sessionID=555&#34;&gt;the results&lt;/a&gt; from one of the polls that was asked during a morning session:
-&lt;a href=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/devnexus-voting.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/posts/2014-02-26/devnexus-voting.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2014-02-26/devnexus-voting.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;
 You can probably imagine, at this point, what you would do with this data as a sponsor. When each user votes they are required to oauth with their G+
 account. So we have names and email addresses that can be contacted after the fact.&lt;/p&gt;
 

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html5 on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/html5/</link>
+    <link>http://wesleyhales.com/tags/html5/</link>
     <description>Recent content in Html5 on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/html5/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://wesleyhales.com:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
+      <link>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
+      <guid>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
 &lt;br/&gt;
 &lt;div style=&#34;width:540px;margin: 0 auto&#34;&gt;
 &lt;a href=&#34;http://www.indeed.com/jobtrends&#34; title=&#34;HTML5 Job Trends&#34;&gt;
@@ -41,10 +41,10 @@
     
     <item>
       <title>Sharing Content with Web Intents</title>
-      <link>http://wesleyhales.com:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
+      <link>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
 If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
@@ -65,17 +65,17 @@ be the input on a GET request to the provided share service.&lt;/p&gt;
 &lt;p&gt;For this example, I&amp;rsquo;ve taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains
 their specific resources to display a share button for the given service:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;First, I wanted a true measurement on all the resources and page load times without anything in the cache.
 So I cleared the browser cache and loaded a single test page (from the list above) for each share service provider. Here are the results:
 &lt;div id=&#34;container&#34; class=&#34;max-width-100&#34;&gt;&lt;/div&gt;
 I know&amp;hellip; seems pretty crazy that Facebook would have 11 HTTP requests and a 135KB payload (after compress/GZIP) for a share/like button.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
 LinkedIn is delivering 80KB of stuff, Twitter comes in right at 40KB, and although Google only serves up 2KB of resources, the data is broken up over 10 HTTP requests.&lt;/p&gt;
 
 &lt;p&gt;Keep in mind that we are on a desktop browser, so worrying about all the HTTP requests may be a little nonsensical. But, on a mobile
@@ -126,8 +126,8 @@ If you&amp;rsquo;re still struggling to wrap your head around Web Intents, you&a
 browser supporting the &lt;code&gt;WebKitIntent&lt;/code&gt; api is, you guessed it, WebKit. This includes Chrome versions &amp;gt;= 19. But, even though the tag is supported, you must install
 a Chrome extension to actually fulfill the intent.&lt;/p&gt;
 
-&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
+&lt;img src=&#34;http://wesleyhales.com/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;At this point you are probably wondering: How do we get the dialogue to show up in teh browser? How can we register an application to handle this request?
 The plan is to allow web applications to register themselves through a provided JavaScript api or HTML tag when the specification is
@@ -190,7 +190,7 @@ Read more about the details of Web Intents &lt;a href=&#34;http://webintents.org
 &lt;p&gt;*Note - Twitter has made the best attempt at an early implementation of Web Intents. The best thing service providers can do today, is follow &lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Twitter&amp;rsquo;s implementation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For a full example on how to create a Web Intent Chrome extension, run through the examples in &lt;a href=&#34;http://intentlab-io12.appspot.com/&#34;&gt;this Google IO lab at #IO12&lt;/a&gt;.
-Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
+Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h3&gt;Other references and good reads:&lt;/h3&gt;
@@ -208,22 +208,22 @@ Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#3
 &lt;script src=&#34;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&#34; type=&#34;text/javascript&#34; defer&gt;&lt;/script&gt;
 &lt;script src=&#34;http://code.highcharts.com/highcharts.js&#34; defer&gt;&lt;/script&gt;
 &lt;script src=&#34;http://code.highcharts.com/modules/exporting.js&#34; defer&gt;&lt;/script&gt;
-&lt;script src=&#34;http://wesleyhales.com:1313/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;script src=&#34;http://wesleyhales.com/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://wesleyhales.com:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
+      <link>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
+      <guid>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
       <description>&lt;p&gt;&lt;div class=&#34;notes&#34; &gt;
 Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&#34;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&#34;&gt;here&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div class=&#34;download&#34;&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
@@ -301,10 +301,10 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-      <link>http://wesleyhales.com:1313/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
+      <link>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://twitter.com/#!/_boye/&#34;&gt;@_boye&lt;/a&gt; has created &lt;a href=&#34;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&#34;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
 &lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
@@ -350,22 +350,22 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>Replacing Photoshop With CSS3 - Creating Styles</title>
-      <link>http://wesleyhales.com:1313/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</link>
+      <link>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</link>
       <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</guid>
+      <guid>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</guid>
       <description>&lt;p&gt;&lt;p&gt;One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).&lt;br /&gt; 
 This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with &lt;span class=&#34;caps&#34;&gt;CSS3&lt;/span&gt;. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused. Kind of like a &amp;#8220;style&amp;#8221; which can be applied to any element in Photoshop.&lt;/p&gt;&lt;br /&gt;
 &lt;p class=&#34;pTitle&#34;&gt;First off, this is how I would normally do it in Photoshop:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create the element &amp;#8211; a button in this case:&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com:1313/images/jroller/css3post/button.PNG&#34;/&gt;&lt;/li&gt;&lt;br /&gt; 
+&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/button.PNG&#34;/&gt;&lt;/li&gt;&lt;br /&gt; 
 &lt;li&gt;Create your gradient. Gradients that are hardly gradients seem to give a nice appearance and body to the design. Meaning you start with a base color like #6c291f and move up the scale to #e42a00.&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com:1313/images/jroller/css3post/gardient-setup.PNG&#34;/&gt;&lt;br /&gt; 
+&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/gardient-setup.PNG&#34;/&gt;&lt;br /&gt; 
 &lt;/li&gt;&lt;br /&gt; 
 &lt;li&gt;Next you add an inner shadow to give it a glow like effect. Again this too is based on your gradient color.&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com:1313/images/jroller/css3post/innerglow.PNG&#34;/&gt;&lt;br /&gt; 
+&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/innerglow.PNG&#34;/&gt;&lt;br /&gt; 
 &lt;/li&gt;&lt;br /&gt; 
 &lt;li&gt;Here is the end result (from Photoshop):&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com:1313/images/jroller/css3post/red.button.photoshop.PNG&#34;/&gt;&lt;br /&gt; 
+&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/red.button.photoshop.PNG&#34;/&gt;&lt;br /&gt; 
 &lt;/li&gt;&lt;/ol&gt;&lt;/p&gt; 
 &lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;Now, let&#39;s do the exact same thing in CSS3 with 1 step.&lt;/p&gt;&lt;p&gt;This tested fine across all the latest browsers (Firefox 3.6+, Latest Safari, Latest Chrome, and who cares about IE &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Simply use the brightest part of the gradient color from above (#e42a00) and substitute it as the background color below:&lt;br /&gt; 
 &lt;pre style=&#34;line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;&#34;&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;button&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;red&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; {&lt;br /&gt; 
@@ -380,7 +380,7 @@ This used to be a pain in the royal ass to implement with html/css2, but now is 
 &lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;10 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;webkit&lt;/del&gt;box-shadow&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;inset&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;br /&gt; 
 &lt;/li&gt;&lt;br /&gt; 
 &lt;li&gt;Here is the end result (from Firefox):&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com:1313/images/jroller/css3post/red.button.css.PNG&#34;&gt;&lt;/li&gt;&lt;br /&gt; 
+&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/red.button.css.PNG&#34;&gt;&lt;/li&gt;&lt;br /&gt; 
 &lt;/ol&gt;&lt;/p&gt; 
 &lt;p&gt;&lt;p&gt;Notice from the css code that we are only using one color? This is so we can easily create a super class that allows us to override its functionality. In the end all you would need is one line of code for background color to create a button for every color that exists with the same style from above applied to it.&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;Now to create a button using the same &amp;#8220;style&amp;#8221;, you would only have to create a class that defines the background color and inner shadow highlight. i.e&amp;#8230;.&lt;br /&gt; 
@@ -389,7 +389,7 @@ This used to be a pain in the royal ass to implement with html/css2, but now is 
 &lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;3 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;moz&lt;/del&gt;box-shadow&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;55&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;243&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;inset&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
 &lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;4 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;This would give you a button like this:&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com:1313/images/jroller/css3post/blue.button.css.PNG&#34;/&gt;&lt;/p&gt;&lt;br /&gt; 
+&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/blue.button.css.PNG&#34;/&gt;&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;The only part that isn&#39;t really flexible is the inner shadow feathering. It is currently set to blur the shadow by a fixed pixel. It would be awesome if you could blur by percent as this would allow the gradient filled element to be resized dynamically and maintain the aspect of inner glow.&lt;/p&gt;&lt;/p&gt;
 </description>
     </item>

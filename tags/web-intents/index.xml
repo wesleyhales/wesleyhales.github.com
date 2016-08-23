@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Intents on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/web-intents/</link>
+    <link>http://wesleyhales.com/tags/web-intents/</link>
     <description>Recent content in Web Intents on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/web-intents/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/web-intents/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sharing Content with Web Intents</title>
-      <link>http://wesleyhales.com:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
+      <link>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
+      <guid>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
 If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
@@ -35,17 +35,17 @@ be the input on a GET request to the provided share service.&lt;/p&gt;
 &lt;p&gt;For this example, I&amp;rsquo;ve taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains
 their specific resources to display a share button for the given service:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;First, I wanted a true measurement on all the resources and page load times without anything in the cache.
 So I cleared the browser cache and loaded a single test page (from the list above) for each share service provider. Here are the results:
 &lt;div id=&#34;container&#34; class=&#34;max-width-100&#34;&gt;&lt;/div&gt;
 I know&amp;hellip; seems pretty crazy that Facebook would have 11 HTTP requests and a 135KB payload (after compress/GZIP) for a share/like button.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
 LinkedIn is delivering 80KB of stuff, Twitter comes in right at 40KB, and although Google only serves up 2KB of resources, the data is broken up over 10 HTTP requests.&lt;/p&gt;
 
 &lt;p&gt;Keep in mind that we are on a desktop browser, so worrying about all the HTTP requests may be a little nonsensical. But, on a mobile
@@ -96,8 +96,8 @@ If you&amp;rsquo;re still struggling to wrap your head around Web Intents, you&a
 browser supporting the &lt;code&gt;WebKitIntent&lt;/code&gt; api is, you guessed it, WebKit. This includes Chrome versions &amp;gt;= 19. But, even though the tag is supported, you must install
 a Chrome extension to actually fulfill the intent.&lt;/p&gt;
 
-&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
-&lt;img src=&#34;http://wesleyhales.com:1313/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
+&lt;img src=&#34;http://wesleyhales.com/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;At this point you are probably wondering: How do we get the dialogue to show up in teh browser? How can we register an application to handle this request?
 The plan is to allow web applications to register themselves through a provided JavaScript api or HTML tag when the specification is
@@ -160,7 +160,7 @@ Read more about the details of Web Intents &lt;a href=&#34;http://webintents.org
 &lt;p&gt;*Note - Twitter has made the best attempt at an early implementation of Web Intents. The best thing service providers can do today, is follow &lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Twitter&amp;rsquo;s implementation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For a full example on how to create a Web Intent Chrome extension, run through the examples in &lt;a href=&#34;http://intentlab-io12.appspot.com/&#34;&gt;this Google IO lab at #IO12&lt;/a&gt;.
-Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com:1313/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
+Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;h3&gt;Other references and good reads:&lt;/h3&gt;
@@ -178,7 +178,7 @@ Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#3
 &lt;script src=&#34;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&#34; type=&#34;text/javascript&#34; defer&gt;&lt;/script&gt;
 &lt;script src=&#34;http://code.highcharts.com/highcharts.js&#34; defer&gt;&lt;/script&gt;
 &lt;script src=&#34;http://code.highcharts.com/modules/exporting.js&#34; defer&gt;&lt;/script&gt;
-&lt;script src=&#34;http://wesleyhales.com:1313/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;script src=&#34;http://wesleyhales.com/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     

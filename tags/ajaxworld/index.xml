@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ajaxworld on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/ajaxworld/</link>
+    <link>http://wesleyhales.com/tags/ajaxworld/</link>
     <description>Recent content in Ajaxworld on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Oct 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/ajaxworld/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/ajaxworld/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AjaxWorld West &#39;08 Recap</title>
-      <link>http://wesleyhales.com:1313/blog/2008/10/22/AjaxWorld-West-08-Recap</link>
+      <link>http://wesleyhales.com/blog/2008/10/22/AjaxWorld-West-08-Recap</link>
       <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2008/10/22/AjaxWorld-West-08-Recap</guid>
+      <guid>http://wesleyhales.com/blog/2008/10/22/AjaxWorld-West-08-Recap</guid>
       <description>&lt;p&gt;This week, I attended/spoke at the &lt;a href=&#34;http://ajaxworld.com/&#34;&gt;AjaxWorld&lt;/a&gt; conference in San Jose. The cool thing for me is that this was my &lt;a href=&#34;http://www.slideshare.net/wesleyhales/ajax-in-enterprise-portals-presentation/&#34;&gt;first public speaking appearance&lt;/a&gt;. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.&lt;/p&gt; 
 &lt;p&gt;I was able to pull &lt;a href=&#34;http://chrisschalk.com/blog/&#34;&gt;Chris Schalk&lt;/a&gt; aside and talk to him about how we can incorporate OpenSocial/Shindig into JBoss Portal. I also wanted to get a good understanding of exactly what ShinDig is doing. My idea is to make a service available via some js lib and leverage one of the huge bullet points of portals... Personalization. With social capabilities in portal, users activities (like updating a wiki article) can be published to their &#34;group&#34; - how you define the group can be done systematically via existing infrastructure or letting users subscribe to social groups. For now, this is just a bunch crazy ideas flying around, I need to get something coded.&lt;/p&gt; 
 &lt;p&gt;I talked to Ted Goddard and Steve Maryka from &lt;a href=&#34;http://www.icefaces.org/main/home/index.jsp&#34;&gt;IceFaces&lt;/a&gt;, and they seemed very excited about getting IceFaces support into the JBoss 301 bridge. Maybe we can squeeze it into the &lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; GA.&lt;/p&gt; 

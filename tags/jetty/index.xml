@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jetty on Wesley Hales</title>
-    <link>http://wesleyhales.com:1313/tags/jetty/</link>
+    <link>http://wesleyhales.com/tags/jetty/</link>
     <description>Recent content in Jetty on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jan 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com:1313/tags/jetty/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/jetty/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://wesleyhales.com:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
+      <link>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
+      <guid>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
       <description>&lt;p&gt;&lt;div class=&#34;notes&#34; &gt;
 Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&#34;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&#34;&gt;here&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div class=&#34;download&#34;&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://wesleyhales.com:1313/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
