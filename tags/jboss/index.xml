@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jboss on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/jboss/</link>
+    <link>http://localhost:1313/tags/jboss/</link>
     <description>Recent content in Jboss on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-      <link>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
+      <link>http://localhost:1313/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
+      <guid>http://localhost:1313/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
       <description>&lt;p&gt;
 The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a&gt; had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:
   &lt;ul&gt;
@@ -26,7 +26,7 @@ The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a
 &lt;p&gt;
   Most front-end developers are familiar with &#34;jQuery callbacks and RESTful services&#34;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&#34;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&#34;&gt;&#34;POH5&#34; (Plain Old HTML5)&lt;/a&gt;
 &lt;/p&gt;
-&lt;img src=&#34;http://wesleyhales.com/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
+&lt;img src=&#34;http://localhost:1313/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
 &lt;p&gt;
 So why another acronym? Why not just call it &#34;Plain Old Open Web&#34;? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or &#34;gear&#34; you need to get started quickly with the best possible solution.
 &lt;/p&gt;
@@ -41,16 +41,16 @@ We&#39;re just getting started... For now, we have a &lt;a href=&#34;https://git
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
+      <link>http://localhost:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
+      <guid>http://localhost:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
       <description>&lt;p&gt;&lt;div class=&#34;notes&#34; &gt;
 Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&#34;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&#34;&gt;here&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div class=&#34;download&#34;&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
@@ -128,10 +128,10 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>My New Career Choice at Red Hat</title>
-      <link>http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat</link>
+      <link>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat</link>
       <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat</guid>
+      <guid>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat</guid>
       <description>&lt;p&gt;&lt;p&gt;July 1st marked my first day on the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;JBoss RichFaces&lt;/a&gt; team. I&#39;ve decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.&lt;/p&gt;&lt;p&gt;I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company. It’s usually the other way around - as you are either picked for your skills and talent to work on a specific team or for whatever reason you are just told to move to another team.&lt;/p&gt;&lt;p&gt;As for my new position, I have been designated to serve on JBoss’ mobile working group (see &lt;a href=&#34;http://en.wikipedia.org/wiki/Tiger_team&#34;&gt;Tiger Team&lt;/a&gt;). I will be part time on the actual RichFaces project (making the project work on mobile devices) and the other part heavily focused on HTML5 and the &lt;a href=&#34;http://en.wikipedia.org/wiki/Mobile_Web&#34;&gt;Mobile Web&lt;/a&gt;. This is a new frontier for developers as we try to create HTML5/CSS3 based web apps that not only match the native app feel but also answer the question “How can we make the mobile web faster using JBoss middleware?”.&lt;/p&gt;&lt;p&gt;As things grow, so will the project and the team. I find excitement in bringing grass roots projects &lt;a href=&#34;http://www.jboss.org/portletbridge&#34;&gt;from nothing into full blown enterprise supported products&lt;/a&gt; &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; Luckily I was in the right place at the right time and I must say that it was quite an honor to be allowed to make such a move. I’m looking forward to making good stuff happen.&lt;/p&gt;&lt;/p&gt; 
 
 &lt;p&gt;Stay tuned&amp;#8230;&lt;/p&gt;
@@ -140,13 +140,13 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
-      <link>http://wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</link>
+      <link>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</guid>
+      <guid>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</guid>
       <description>&lt;p&gt;InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!&lt;/p&gt; 
 &lt;br/&gt; 
-&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
+&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
 
 &lt;p&gt;This first part is about basic JSF development with an easy to follow tutorial and real world development tips. The next one will be about RichFaces and the final (about Seam) will be published right after the release of Beta 4 in early September.&lt;/p&gt; 
 
@@ -160,22 +160,22 @@ As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
+      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
+      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
       <description>&lt;p&gt;I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and&#34;&gt;this one&lt;/a&gt; over a year ago when Ajax4JSF was still on java.net&lt;/p&gt; 
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website. The cool thing about a modal window is that the user doesn&#39;t feel like they are being redirected to another page. They can still keep their focus on the content at hand while multitasking and spawning another workflow.&lt;/p&gt; 
 
-&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
+&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://localhost:1313/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
 &lt;/p&gt; 
 
 &lt;p&gt; 
 This is a component based modal. It basically blocks out the activated component per ajax request.&lt;br/&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
 This demo is already setup and ready to go, check it out &lt;a href=&#34;http://code.google.com/p/seam-2-sandbox/&#34;&gt;here&lt;/a&gt; and the instructions on getting it running are in the home page description. This is the same demo I used in my previous &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/running_seam_2_0_on&#34;&gt;Running Seam on Tomcat...&lt;/a&gt; article - now updated to the latest version of Seam and cleaned up a bit (and also put it under Google code vcs).&lt;/p&gt; 
 
 &lt;p&gt;And that&#39;s not all! To make life even easier I wrapped the modal(s) up in a nice and neat Facelets component. The modals also allow for unlimited modals-per-page. Meaning that you can have 10000 modals on one page without conflicts ;). Here&#39;s how you use it:&lt;/p&gt; 
@@ -215,10 +215,10 @@ This demo is already setup and ready to go, check it out &lt;a href=&#34;http://
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</link>
+      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</guid>
+      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</guid>
       <description>&lt;p&gt;**Update - See &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam&#34;&gt;this article&lt;/a&gt; for more info.&lt;/p&gt;
 </description>
     </item>

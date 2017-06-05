@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richfaces on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/richfaces/</link>
+    <link>http://localhost:1313/tags/richfaces/</link>
     <description>Recent content in Richfaces on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Aug 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/richfaces/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/richfaces/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>RichFaces Mobile Designs - Day 3</title>
-      <link>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</link>
+      <link>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</link>
       <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</guid>
+      <guid>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</guid>
       <description>&lt;p&gt;&lt;p&gt;So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.&lt;/p&gt;&lt;p&gt;&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 3: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have another phone based design broke out into 3 pages.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;The first page&lt;/a&gt; is a standard menu so not much to say there. The bottom menu bar is a little different from &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;my first design&lt;/a&gt; &amp;#8211; following the lead of the native twitter iPhone app.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;The first page&lt;/a&gt; is a standard menu so not much to say there. The bottom menu bar is a little different from &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;my first design&lt;/a&gt; &amp;#8211; following the lead of the native twitter iPhone app.&lt;br /&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page1.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-As you can see with the &lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;second page&lt;/a&gt; (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&amp;#8216;t make a ton of sense to me on limited screen real estate.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+As you can see with the &lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;second page&lt;/a&gt; (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&amp;#8216;t make a ton of sense to me on limited screen real estate.&lt;br /&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page2.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-So after you go through the menu options and decide on a component, you are taken to the &lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;detail/demo screen&lt;/a&gt;(below) where you can play around with your component of choice.&lt;/p&gt; 
+So after you go through the menu options and decide on a component, you are taken to the &lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;detail/demo screen&lt;/a&gt;(below) where you can play around with your component of choice.&lt;/p&gt; 
 
 &lt;p&gt;Note the small orange page marker dots at the bottom. The user would have the ability to flip through each component in the given section by swiping horizontally.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page3.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
 &lt;/p&gt;&lt;/p&gt;
 </description>
@@ -37,22 +37,22 @@ So after you go through the menu options and decide on a component, you are take
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
+      <link>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
+      <guid>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
       <description>&lt;p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
 
 &lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
 
 &lt;p&gt;2) Similar to the iPad Mail.app, it&amp;#8216;s almost like you are designing 2 different UI&amp;#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1.jpg&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1-small.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page1.jpg&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;225px&#34; src=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page1-small.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 2: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&amp;#8216;t all that exciting.&lt;/p&gt; 
 
 &lt;p&gt;Notice how, unlike the &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;iphone design from Day 1&lt;/a&gt;, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user&#39;s attention focused on the app itself.&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2.jpg&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; align=&#34;left&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2-small.JPG&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page2.jpg&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; align=&#34;left&#34; width=&#34;225px&#34; src=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page2-small.JPG&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
 
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
 The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.&lt;/p&gt; 
@@ -68,13 +68,13 @@ The second page is what you see after selecting a menu item from page 1 (click t
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
+      <link>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
+      <guid>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
       <description>&lt;p&gt;&lt;p&gt;Today marks an important day in the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;RichFaces project&lt;/a&gt; as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.&lt;br /&gt; 
 So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. &lt;/p&gt;&lt;p&gt;I will announce each new design (both for tablet and phone) via &lt;a href=&#34;https://twitter.com/#!/richfaces&#34;&gt;twitter&lt;/a&gt; with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://localhost:1313/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 1: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have what could be the RichFaces component showcase skin. This is what I will be posting a new version of each day this week.&lt;/p&gt; 
 
@@ -90,12 +90,12 @@ Here we have what could be the RichFaces component showcase skin. This is what I
     
     <item>
       <title>Runtime Type Detection and Usage with Weld</title>
-      <link>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
+      <link>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
+      <guid>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
       <description>&lt;p&gt;&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;About TweetStream&lt;/p&gt;&lt;br /&gt; 
-&lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
+&lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://localhost:1313/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
 A little bit about the usecase: The &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; application is an app that Jay Balunas and I developed over the past few months for our presentation at &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt; web application (which runs on Android and iOS devices) with things like scalable data grid, &lt;span class=&#34;caps&#34;&gt;JMS&lt;/span&gt;, JSF2, &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt;/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.&lt;br /&gt; 
 So, we had 2 scenarios &amp;#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.&lt;br /&gt; 
 So we got our tweet data from the true source (twitter4j) during our &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, and then from the data grid during the keynote. We could have used &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; alternatives, but I wanted a true solution with no &lt;span class=&#34;caps&#34;&gt;XML&lt;/span&gt; configuration and runtime detection.&lt;br /&gt; 
@@ -248,10 +248,10 @@ So we have 2 Qualifier Types:&lt;br /&gt;
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</link>
+      <link>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</guid>
+      <guid>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</guid>
       <description>&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/richfaces/&#34;&gt;Richfaces 4&lt;/a&gt; just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.&lt;br /&gt; 
 First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.&lt;/p&gt;&lt;/p&gt; 
 
@@ -279,10 +279,10 @@ Unfortunately the script I used here doesn’t always work and there are still a
     
     <item>
       <title>Replacing FacesMessages with Growl alerts</title>
-      <link>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
+      <link>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
+      <guid>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
       <description>&lt;p&gt;I saw a tweet from(&lt;a href=&#34;http://twitter.com/maxandersen&#34;&gt;@maxandersen&lt;/a&gt;) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.&lt;/p&gt; 
 &lt;p&gt;This is really just javascript on the front end and can be used with any backend message generating system.&lt;/p&gt; 
 
@@ -337,16 +337,16 @@ showError();
 &lt;/p&gt; 
 
 &lt;p&gt;Here is a live screen shot of the script in action using a generate h:message. 
-&lt;img src=&#34;http://wesleyhales.com/images/jroller/jgrowl.gif&#34; align=&#34;center&#34;/&gt;&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/images/jroller/jgrowl.gif&#34; align=&#34;center&#34;/&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>JBoss Portlet Bridge Beta2 Released!</title>
-      <link>http://wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released</link>
+      <link>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released</link>
       <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released</guid>
+      <guid>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released</guid>
       <description>&lt;p&gt;The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.&lt;/p&gt; 
 &lt;p&gt;&lt;a href=&#34;http://blog.jboss-portal.org/2008/04/jboss-portlet-bridge-beta2-released.html&#34;&gt;Read more about what is included in this release.&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;&lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge project page.&lt;/a&gt;&lt;/p&gt;
@@ -355,10 +355,10 @@ showError();
     
     <item>
       <title>JBoss Portlet Bridge with Seam support released</title>
-      <link>http://wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</link>
+      <link>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</link>
       <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</guid>
+      <guid>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released</guid>
       <description>&lt;p&gt;It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.&lt;/p&gt; 
 &lt;p&gt;The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.&lt;/p&gt; 
 
@@ -369,22 +369,22 @@ showError();
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
+      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
+      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
       <description>&lt;p&gt;I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and&#34;&gt;this one&lt;/a&gt; over a year ago when Ajax4JSF was still on java.net&lt;/p&gt; 
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website. The cool thing about a modal window is that the user doesn&#39;t feel like they are being redirected to another page. They can still keep their focus on the content at hand while multitasking and spawning another workflow.&lt;/p&gt; 
 
-&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
+&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://localhost:1313/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
 &lt;/p&gt; 
 
 &lt;p&gt; 
 This is a component based modal. It basically blocks out the activated component per ajax request.&lt;br/&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
 This demo is already setup and ready to go, check it out &lt;a href=&#34;http://code.google.com/p/seam-2-sandbox/&#34;&gt;here&lt;/a&gt; and the instructions on getting it running are in the home page description. This is the same demo I used in my previous &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/running_seam_2_0_on&#34;&gt;Running Seam on Tomcat...&lt;/a&gt; article - now updated to the latest version of Seam and cleaned up a bit (and also put it under Google code vcs).&lt;/p&gt; 
 
 &lt;p&gt;And that&#39;s not all! To make life even easier I wrapped the modal(s) up in a nice and neat Facelets component. The modals also allow for unlimited modals-per-page. Meaning that you can have 10000 modals on one page without conflicts ;). Here&#39;s how you use it:&lt;/p&gt; 
@@ -424,10 +424,10 @@ This demo is already setup and ready to go, check it out &lt;a href=&#34;http://
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</link>
+      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</guid>
+      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</guid>
       <description>&lt;p&gt;**Update - See &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam&#34;&gt;this article&lt;/a&gt; for more info.&lt;/p&gt;
 </description>
     </item>

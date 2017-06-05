@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trinidad on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/trinidad/</link>
+    <link>http://localhost:1313/tags/trinidad/</link>
     <description>Recent content in Trinidad on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Aug 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/trinidad/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/trinidad/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My first Seam 2.0 app</title>
-      <link>http://wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app</link>
+      <link>http://localhost:1313/blog/2007/08/01/My-first-Seam-2.0-app</link>
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app</guid>
+      <guid>http://localhost:1313/blog/2007/08/01/My-first-Seam-2.0-app</guid>
       <description>&lt;p&gt;Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.&lt;/p&gt; 
 
 &lt;p&gt;This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)&lt;/p&gt; 

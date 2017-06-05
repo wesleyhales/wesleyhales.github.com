@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oss Management on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/oss-management/</link>
+    <link>http://localhost:1313/tags/oss-management/</link>
     <description>Recent content in Oss Management on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Dec 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/oss-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/oss-management/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Decommissioning of Onslyde</title>
-      <link>http://wesleyhales.com/blog/2015/12/23/The-Decommissioning-of-Onslyde</link>
-      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/blog/2016/12/23/The-Decommissioning-of-Onslyde</link>
+      <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2015/12/23/The-Decommissioning-of-Onslyde</guid>
+      <guid>http://localhost:1313/blog/2016/12/23/The-Decommissioning-of-Onslyde</guid>
       <description>&lt;p&gt;As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012,
 I started a web based, real-time feedback project called &lt;a href=&#34;http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/&#34;&gt;Onslyde&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-12-23/edge1-panel-detail-large-opt.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-12-23/edge1-panel-detail-large-opt.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;To me the project was a huge success with many measurable results:&lt;/p&gt;
 
