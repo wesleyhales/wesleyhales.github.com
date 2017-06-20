@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cargo on Wesley Hales</title>
-    <link>http://localhost:1313/tags/cargo/</link>
+    <link>http://wesleyhales.com/tags/cargo/</link>
     <description>Recent content in Cargo on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Oct 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cargo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/cargo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo</title>
-      <link>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</link>
+      <link>http://wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</link>
       <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo</guid>
       <description>&lt;p&gt;In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. &lt;/p&gt; 
 
 &lt;p&gt;It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.&lt;/p&gt; 

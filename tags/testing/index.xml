@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on Wesley Hales</title>
-    <link>http://localhost:1313/tags/testing/</link>
+    <link>http://wesleyhales.com/tags/testing/</link>
     <description>Recent content in Testing on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Aug 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Web Performance Testing With PhantomJS</title>
-      <link>http://localhost:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
+      <link>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+      <guid>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
 are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
@@ -41,11 +41,11 @@ we have resources which are not far-future cached, what happens after we future 
 &lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;This script is running live at &lt;a href=&#34;http://loadreport.wesleyhales.com/report.html&#34;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
-&lt;img src=&#34;http://localhost:1313/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;re running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&#34;http://twitter.com/ryanbridges&#34;&gt;@ryanbridges&lt;/a&gt; put together
 some awesome sparkline charts backed by knockout.js. Just click on the &amp;ldquo;Show Me Some Charts!&amp;rdquo; button to see &amp;lsquo;em.
-&lt;img src=&#34;http://localhost:1313/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Regarding cache performance, phantomjs has a &amp;ndash;disk-cahe=yes switch which is supposed to enable caching, but the results on the number
 of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with &amp;ndash;disk-cahe=yes, phantom returns

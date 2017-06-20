@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anniversary on Wesley Hales</title>
-    <link>http://localhost:1313/tags/anniversary/</link>
+    <link>http://wesleyhales.com/tags/anniversary/</link>
     <description>Recent content in Anniversary on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Dec 2007 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/anniversary/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/anniversary/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>1 year of blogging</title>
-      <link>http://localhost:1313/blog/2007/12/05/1-year-of-blogging</link>
+      <link>http://wesleyhales.com/blog/2007/12/05/1-year-of-blogging</link>
       <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/12/05/1-year-of-blogging</guid>
+      <guid>http://wesleyhales.com/blog/2007/12/05/1-year-of-blogging</guid>
       <description>&lt;p&gt;Today marks my 1 year anniversary of blogging. I started this blog to basically express my views and opinions, to give back to the open source community of whom so much has been taken, and for job credibility.&lt;/p&gt; 
 &lt;p&gt;Trying to write good articles is a lot of work. Sure anybody can write about a few buzzwords and get some hits, but an article with substance and that actually helps someone through a use case or problem is where the satisfaction comes from.&lt;/p&gt; 
 &lt;p&gt;I started using Google analytics on this blog around the first of October, and here are my stats since then: 

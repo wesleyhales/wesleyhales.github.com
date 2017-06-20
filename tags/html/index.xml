@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on Wesley Hales</title>
-    <link>http://localhost:1313/tags/html/</link>
+    <link>http://wesleyhales.com/tags/html/</link>
     <description>Recent content in Html on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Feb 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Adventures with the Skia Debugger</title>
-      <link>http://localhost:1313/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
+      <link>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
+      <guid>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
       <description>&lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;Debugging jank, reflows, etc&amp;hellip;&lt;/h3&gt;
 The &lt;a href=&#34;https://sites.google.com/site/skiadocs/developer-documentation/skia-debugger&#34;&gt;Skia debugger&lt;/a&gt; was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.&lt;/p&gt;
@@ -37,9 +37,9 @@ I will state upfront that there was a lot of pain that went into building both t
 &lt;p&gt;&lt;br/&gt;
 &lt;h3&gt;Using the Debugger&lt;/h3&gt;
 The debugger is fairly straightforward to use once a picture is loaded in. You can step through different commands via the up and down keys and clicking on the command in the list. You can also pause execution of commands with the pause button in order to inspect the details of the command in the inspector tabs down below.
-&lt;img src=&#34;http://localhost:1313/images/posts/2013-02-18/skia-ss.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-18/skia-ss.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;
 Here are the available keyboard shortcuts for the debugger:
-&lt;img src=&#34;http://localhost:1313/images/posts/2013-02-18/skia-commands.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-18/skia-commands.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;After playing around with the debugger, it’s nice to get a very low level snapshot of how long it takes a specific browser to draw the pictures necessary to present a web page.&lt;/p&gt;
 

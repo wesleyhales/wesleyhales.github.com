@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Wesley Hales</title>
-    <link>http://localhost:1313/tags/design/</link>
+    <link>http://wesleyhales.com/tags/design/</link>
     <description>Recent content in Design on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>From Startup to Enterprise</title>
-      <link>http://localhost:1313/blog/2013/12/17/From-Startup-to-Enterprise</link>
+      <link>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</link>
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/12/17/From-Startup-to-Enterprise</guid>
+      <guid>http://wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise</guid>
       <description>
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
@@ -41,9 +41,9 @@ the existing UserGrid project into the fold.&lt;/p&gt;
 
 &lt;p&gt;Here are the first designs and wireframes we came up with. I purposely left everything greyscale to allow for a pure focus on the page data and layout.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-a-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-a.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-b-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-b.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-c-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/first-design-c.png&#34; class=&#34;margin10 max-width-100 float-left&#34;&gt;&lt;/a&gt;
 &lt;br class=&#34;clear-left&#34;/&gt;
 The layouts above took around 1 month to deliver, and many of the UI elements were reworked from the old UI. Most of the work went into the new look and feel and
 reformatting the data to appear more readable.&lt;/p&gt;
@@ -61,12 +61,12 @@ drop downs.&lt;/p&gt;
 &lt;p&gt;This is the evolution of our menu design in chronological order from left to right. Design is an iterative process for me and
 I never get it right on the first go. And it really helps to have good feedback from other &amp;ldquo;design minded&amp;rdquo; folks.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/menus-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/menus-large.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I wanted to leave a lot of the original grey design from the mockups and not get too heavy handed with the colors. After all, we were
 building an analytics dashboard that needed to put heavy emphasis on errors, warnings, and other alerts.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/app-erros.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/app-erros.png&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The style guide is still in the works. Luckily Apigee already had one, so I leveraged all the existing colors and fonts.&lt;/p&gt;
 
@@ -92,7 +92,7 @@ session on directives. Sure, there&amp;rsquo;s a bit of a learning curve, but th
 busting ass trying to get this dashboard completed. I was mainly working on the global parts of the app along with the monitoring dashboard, and we had
 one other developer focusing on rewriting the existing Usergrid Backbone application into Angular.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-12-17/github.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-12-17/github.png&#34; style=&#34;width: 500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;On August 9th we had our first C-Level review of the beta version of the product. This is pretty significant seeing that two developers were
 able to produce a massive SPA in a little over 3 months. Not to mention managing vacation schedules and other things that arose. Of course,
@@ -124,16 +124,16 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Creating a Firefox 3 theme</title>
-      <link>http://localhost:1313/blog/2008/08/26/Creating-a-Firefox-3-theme</link>
+      <link>http://wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme</link>
       <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/08/26/Creating-a-Firefox-3-theme</guid>
+      <guid>http://wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme</guid>
       <description>&lt;p&gt;&lt;div style=&#34;padding:5px; margin:5px; background-color:#f9f5ae; border:1px solid #b2ac4f;&#34;&gt;**UPDATE - This theme is now available on Mozilla.org here: &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34; style=&#34;color:#20aa30&#34;&gt;&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;https://addons.mozilla.org/en-US/firefox/addon/9627/&lt;/a&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;a href=&#34;http://localhost:1313/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/ff3-themeclose.gif&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/ff3-themeclose.gif&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
 &lt;p&gt;I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.&lt;/p&gt;
 &lt;p&gt;Of course this could be due to me actually having a day job and somewhat of a life. I think the overall css code for the layout is fairly simple. All you have to do is get your x,y coordinates right and you are golden. If anybody has any quick tips to make the process of placing the buttons a little simpler, please speak now! Or if someone wants to take on the task of completing this theme I will post the .psd files.&lt;/p&gt;
 &lt;br/&gt;
-&lt;a href=&#34;http://localhost:1313/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/ff3-theme-small.gif&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/ff3-theme-small.gif&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;p&gt;One of the cooler things about this theme is that the icons are 100% original. We all know most themes take some form of Windows or *nix icons. I tried to take the old 1930&amp;rsquo;s cinema approach where I could. But I couldn&amp;rsquo;t come up with anything for the copy and paste buttons (C and V).&lt;/p&gt;
@@ -145,10 +145,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Another design</title>
-      <link>http://localhost:1313/blog/2007/10/29/Another-design</link>
+      <link>http://wesleyhales.com/blog/2007/10/29/Another-design</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/29/Another-design</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/29/Another-design</guid>
       <description>&lt;p&gt;The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. &lt;/p&gt; 
 
 &lt;p&gt;Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)&lt;/p&gt; 
@@ -159,10 +159,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Another design</title>
-      <link>http://localhost:1313/blog/2007/10/29/Another-design</link>
+      <link>http://wesleyhales.com/blog/2007/10/29/Another-design</link>
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/29/Another-design</guid>
+      <guid>http://wesleyhales.com/blog/2007/10/29/Another-design</guid>
       <description>&lt;p&gt;The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. &lt;/p&gt; 
 
 &lt;p&gt;Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)&lt;/p&gt; 
@@ -173,10 +173,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>Another blog layout</title>
-      <link>http://localhost:1313/blog/2007/03/11/Another-blog-layout</link>
+      <link>http://wesleyhales.com/blog/2007/03/11/Another-blog-layout</link>
       <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/03/11/Another-blog-layout</guid>
+      <guid>http://wesleyhales.com/blog/2007/03/11/Another-blog-layout</guid>
       <description>&lt;p&gt;&lt;p&gt;So my current design is serving the purpose, but it seems a little &amp;ldquo;bland&amp;rdquo;. I finally nailed down a design that is a little more frameworked. What I mean is, most of the time websites are designed to serve the content at hand. Which is fine in most cases, but I am looking for something more than just a &amp;ldquo;nice look&amp;rdquo; out of my designs. For some reason I can&amp;rsquo;t get away from grey and other neutral colors. Maybe cause it&amp;rsquo;s just the trend right now, but it seems to work and no matter what other colors I try in my designs, I always come back to grey. Also, the graphite pattern on the banner is kind of in style now (although it has been for the past 6 months), but by the time I code the css for this and integrate it into jroller - it will be time to do another design ?!?!&lt;/p&gt;
 &lt;div style=&#34;width:100%; text-align:center;&#34;&gt;
 &lt;a href=&#34;src=&#34;/images/jroller/new-layout2.jpg&#34;&gt;&lt;img src=&#34;src=&#34;/images/jroller/new-layout2_small.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt;
@@ -186,10 +186,10 @@ when I hit blocks.&lt;/p&gt;
     
     <item>
       <title>My Jroller Blog Extreme Makeover</title>
-      <link>http://localhost:1313/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover</link>
+      <link>http://wesleyhales.com/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover</link>
       <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover</guid>
+      <guid>http://wesleyhales.com/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover</guid>
       <description>&lt;p&gt;I need a new design badly (the little British car in the tunnel is getting old, quick), and after coding for x number of months, I feel like my design skillz are getting a little stale. So here are the candidates for my new look.&lt;/p&gt; 
 
 &lt;p class=&#34;pTitle&#34;&gt;Layout #1&lt;/p&gt; 
