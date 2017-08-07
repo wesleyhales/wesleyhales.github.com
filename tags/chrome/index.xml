@@ -51,8 +51,8 @@ All we need to worry about is to make sure the tests are written using the WebDr
 
 &lt;p&gt;There are four main components to the underlying testing infrastructure, which I quickly summarize below. The good news
 is that there are no configuration files to write and everything is used out of box from the official Docker repositories
-of each project. The goal of my setup is to be as disposable as poossible. Everything is to be reproducible without any
-glue code or unecessary abstraction layers.&lt;/p&gt;
+of each project. The goal of my setup is to be as disposable as possible. Everything is to be reproducible without any
+glue code or unnecessary abstraction layers.&lt;/p&gt;
 
 &lt;h5 id=&#34;quick-component-summary&#34;&gt;Quick Component Summary&lt;/h5&gt;
 
@@ -88,7 +88,7 @@ something is wrong. And debugging this setup is a whole other blog post.&lt;/li&
 
 &lt;h3 id=&#34;selenium-node-machine-setup&#34;&gt;Selenium Node - Machine Setup&lt;/h3&gt;
 
-&lt;p&gt;Now we&amp;rsquo;ll setup the first Chrome Node that will connect to the Hub. You&amp;rsquo;ll need to create anouther CoreOS VM, this time with
+&lt;p&gt;Now we&amp;rsquo;ll setup the first Chrome Node that will connect to the Hub. You&amp;rsquo;ll need to create another CoreOS VM, this time with
 a minimum of 2 processors and 4GB of memory. Also, make a note of the hostname of this machine by using the following command.
 The hostname is normally defined within the hosting provider&amp;rsquo;s UI. If not, you can can change it (if needed) once you SSH into the instance:&lt;/p&gt;
 
@@ -113,7 +113,7 @@ Selenium Chrome client on the Node machine you just setup. Remember everything w
 &lt;pre&gt;&lt;code&gt;docker service create --network selenium-grid --name selenium-node-chrome-sfo --constraint &#39;node.hostname==sfo1-node-01&#39; -p 5560:5560 --mount type=bind,src=/dev/shm,dst=/dev/shm -e HUB_PORT_4444_TCP_ADDR=hub -e HUB_PORT_4444_TCP_PORT=4444 -e NODE_MAX_INSTANCES=1 -e NODE_MAX_SESSION=1 --replicas 1 selenium/node-chrome bash -c &#39;SE_OPTS=&amp;quot;-browser applicationName=sfo1-node,browserName=chrome,maxInstances=1 -host $HOSTNAME -port 5560&amp;quot; /opt/bin/entry_point.sh&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;That&amp;rsquo;s a hefty command and you might be wondering what all of the switched and paramters are for. I&amp;rsquo;ll attempt to break it
+&lt;p&gt;That&amp;rsquo;s a hefty command and you might be wondering what all of the switched and parameters are for. I&amp;rsquo;ll attempt to break it
  down for you here:&lt;/p&gt;
 
 &lt;p&gt;1) &lt;code&gt;node.hostname==sfo1-node-01&lt;/code&gt;&lt;/p&gt;
@@ -129,7 +129,7 @@ white glove environment.&lt;/li&gt;
 &lt;p&gt;2) &lt;code&gt;SE_OPTS=-browser applicationName=sfo1-node&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;This paramter gives our test script a hook so that it will run on this specific SFO node.&lt;/li&gt;
+&lt;li&gt;This parameter gives our test script a hook so that it will run on this specific SFO node.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;3) &lt;code&gt;--name selenium-node-chrome-sfo&lt;/code&gt;&lt;/p&gt;
@@ -154,7 +154,7 @@ white glove environment.&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Server logging basically tells you when the test execution began and when it ended.&lt;/li&gt;
-&lt;li&gt;Performce Logging gives us more information around frame navigation. We&amp;rsquo;ll be able to corellate this later with navigation and Resource timing APIs.&lt;/li&gt;
+&lt;li&gt;Performance Logging gives us more information around frame navigation. We&amp;rsquo;ll be able to correlate this later with navigation and Resource timing APIs.&lt;/li&gt;
 &lt;li&gt;For all loggin configuration options see &lt;a href=&#34;https://github.com/SeleniumHQ/selenium/wiki/Logging&#34;&gt;https://github.com/SeleniumHQ/selenium/wiki/Logging&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
