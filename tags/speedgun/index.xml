@@ -15,15 +15,7 @@
       <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
       
       <guid>http://wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
-      <description>&lt;!-- /188949341/TEST-1 --&gt;
-
-&lt;div id=&#39;div-gpt-ad-1481300454345-0&#39; style=&#39;height:60px; width:468px;&#39;&gt;
-&lt;script&gt;
-googletag.cmd.push(function() { googletag.display(&#39;div-gpt-ad-1481300454345-0&#39;); });
-&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
+      <description>&lt;p&gt;Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
 
 &lt;p&gt;The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using &lt;a href=&#34;https://github.com/wesleyhales/loadreport&#34;&gt;Loadreport.js&lt;/a&gt;.
 &lt;a href=&#34;https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image05.png&#34;/&gt;&lt;/a&gt;
