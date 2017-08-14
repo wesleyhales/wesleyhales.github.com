@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Modal on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/modal/</link>
+    <link>http://localhost:1313/tags/modal/</link>
     <description>Recent content in Modal on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Jan 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/modal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/modal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
+      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
+      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
       <description>&lt;p&gt;I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and&#34;&gt;this one&lt;/a&gt; over a year ago when Ajax4JSF was still on java.net&lt;/p&gt; 
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website. The cool thing about a modal window is that the user doesn&#39;t feel like they are being redirected to another page. They can still keep their focus on the content at hand while multitasking and spawning another workflow.&lt;/p&gt; 
 
-&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
+&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://localhost:1313/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
 &lt;/p&gt; 
 
 &lt;p&gt; 
 This is a component based modal. It basically blocks out the activated component per ajax request.&lt;br/&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
+&lt;a href=&#34;http://localhost:1313/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
 This demo is already setup and ready to go, check it out &lt;a href=&#34;http://code.google.com/p/seam-2-sandbox/&#34;&gt;here&lt;/a&gt; and the instructions on getting it running are in the home page description. This is the same demo I used in my previous &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/running_seam_2_0_on&#34;&gt;Running Seam on Tomcat...&lt;/a&gt; article - now updated to the latest version of Seam and cleaned up a bit (and also put it under Google code vcs).&lt;/p&gt; 
 
 &lt;p&gt;And that&#39;s not all! To make life even easier I wrapped the modal(s) up in a nice and neat Facelets component. The modals also allow for unlimited modals-per-page. Meaning that you can have 10000 modals on one page without conflicts ;). Here&#39;s how you use it:&lt;/p&gt; 

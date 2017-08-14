@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>File on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/file/</link>
+    <link>http://localhost:1313/tags/file/</link>
     <description>Recent content in File on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Mar 2009 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/file/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/file/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Recovering deleted files from Windows and Linux... and a little forensics</title>
-      <link>http://wesleyhales.com/blog/2009/03/01/Recovering-deleted-files-from-Windows-and-Linux...-and-a-little-forensics</link>
+      <link>http://localhost:1313/blog/2009/03/01/Recovering-deleted-files-from-Windows-and-Linux...-and-a-little-forensics</link>
       <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/03/01/Recovering-deleted-files-from-Windows-and-Linux...-and-a-little-forensics</guid>
+      <guid>http://localhost:1313/blog/2009/03/01/Recovering-deleted-files-from-Windows-and-Linux...-and-a-little-forensics</guid>
       <description>&lt;p&gt;I got one of those &#34;tech support&#34; phone calls from a family member this weekend, asking if I could help him undelete some files that were deleted by some ghost that snuck into his office ;) You gotta love it when people say they have no idea how an entire folder got deleted and they swear they&#39;ve been hacked.&lt;/p&gt; 
 &lt;p&gt;So I scoured the web to see what exists. For *nix based utils, I think &lt;A href=&#34;http://www.sleuthkit.org/&#34;&gt;sleuthkit&lt;/a&gt; with the autopsy forensics browser is the best out there (that&#39;s open source).&lt;/p&gt; 
 &lt;p&gt;But of course this user was on a Windows box. I finally found a really nice free tool for recovering files from NTFS. &lt;a href=&#34;http://ntfsundelete.com/&#34;&gt;NTFSUndelete&lt;/a&gt; does exactly what the titles says. Saved the day for me and the person who &#34;got hacked&#34; ;) &lt;/p&gt; 

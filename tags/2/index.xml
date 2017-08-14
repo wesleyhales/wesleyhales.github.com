@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/2/</link>
+    <link>http://localhost:1313/tags/2/</link>
     <description>Recent content in 2 on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 10 Aug 2009 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Replacing FacesMessages with Growl alerts</title>
-      <link>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
+      <link>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
+      <guid>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
       <description>&lt;p&gt;I saw a tweet from(&lt;a href=&#34;http://twitter.com/maxandersen&#34;&gt;@maxandersen&lt;/a&gt;) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.&lt;/p&gt; 
 &lt;p&gt;This is really just javascript on the front end and can be used with any backend message generating system.&lt;/p&gt; 
 
@@ -69,7 +69,7 @@ showError();
 &lt;/p&gt; 
 
 &lt;p&gt;Here is a live screen shot of the script in action using a generate h:message. 
-&lt;img src=&#34;http://wesleyhales.com/images/jroller/jgrowl.gif&#34; align=&#34;center&#34;/&gt;&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/images/jroller/jgrowl.gif&#34; align=&#34;center&#34;/&gt;&lt;/p&gt;
 </description>
     </item>
     

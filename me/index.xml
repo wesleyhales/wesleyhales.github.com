@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mes on Wesley Hales</title>
+    <link>http://localhost:1313/me/</link>
+    <description>Recent content in Mes on Wesley Hales</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/me/resume/</link>
+      <pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/me/resume/</guid>
+      <description>
+
+&lt;p&gt;(wesleyhales@gmail.com)&lt;/p&gt;
+
+&lt;p&gt;My overall objective is to improve top line revenue through field sales. I am a proven technical leader, who understands the full lifecycle of selling early-stage technology products. I like to grapple with hard engineering problems that most people assume are impossible to solve. I enjoy leading by example and getting my hands dirty. I have worked in many spaces, from the forefront of large digital publishers to cutting edge cyber security startups.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I am the founder and chief architect of the world&amp;rsquo;s first audience feedback platform, &lt;a href=&#34;https://www.smashingmagazine.com/2013/11/reinventing-the-tech-conference-experience/&#34;&gt;Onslyde&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m the author of a book written at the forefront of the HTML5 revolution in 2011 called &lt;a href=&#34;https://www.amazon.com/HTML5-JavaScript-Web-Apps-Bridging/dp/1449320511&#34;&gt;HTML5 and JavaScript Web Apps&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I created the first headless web performance testing script originally named Loadreport but since has been rebranded and upgraded to &lt;a href=&#34;http://speedgun.io&#34;&gt;Speedgun&lt;/a&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am a strong leader and have excellent communication skills (both verbal and written). I occasionally give talks explaining and evangelizing web based technologies I have worked on.&lt;/p&gt;
+
+&lt;h3 id=&#34;work-history&#34;&gt;Work History&lt;/h3&gt;
+
+&lt;h4 id=&#34;head-of-technical-services-instart-logic-feb-2017-present&#34;&gt;Head of Technical Services // Instart Logic // FEB 2017 - Present&lt;/h4&gt;
+
+&lt;p&gt;Currently leading the following teams for Instart&amp;rsquo;s Digital Advertising business unit (Ad Integrity):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pre Sales Engineering&lt;/li&gt;
+&lt;li&gt;Customer Onboarding&lt;/li&gt;
+&lt;li&gt;Customer Success&lt;/li&gt;
+&lt;li&gt;Ad Operations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;sales-engineering-instart-logic-feb-2016-feb-2017&#34;&gt;Sales Engineering // Instart Logic // FEB 2016 - Feb 2017&lt;/h4&gt;
+
+&lt;p&gt;Provided pre sales support for all major global accounts.&lt;/p&gt;
+
+&lt;h4 id=&#34;sales-engineering-shape-security-oct-2014-feb-2016&#34;&gt;Sales Engineering // Shape Security // OCT 2014 - FEB 2016&lt;/h4&gt;
+
+&lt;p&gt;Lead sales engineer on all major accounts including Banking, Retail, and Travel.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Led the creation of Shape&amp;rsquo;s first Proof-Of-Concept platform in AWS.&lt;/li&gt;
+&lt;li&gt;Significantly architected and changed how the product worked with numerous security improvements and features while working with customers.&lt;/li&gt;
+&lt;li&gt;Sole inventor on 2 patents. Co-authored 3 others.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;software-engineering-lead-shape-security-jan-2014-oct-2016&#34;&gt;Software Engineering Lead // Shape Security // JAN 2014 - OCT 2016&lt;/h4&gt;
+
+&lt;p&gt;Led the team who created the core technology behind the ShapeShifter botwall.&lt;/p&gt;
+
+&lt;h4 id=&#34;software-engineering-lead-apigee-oct-2012-jan-2014&#34;&gt;Software Engineering Lead // Apigee // OCT 2012 - JAN 2014&lt;/h4&gt;
+
+&lt;p&gt;Apigee acquired a startup that I helped build in 2012. Along with 2 other founders, we brought a fledgling SDK and Analytics dashboard from a startup idea into a full blown open source/enterprise offering. Apigee IPO&amp;rsquo;d in 2015 and I&amp;rsquo;m proud to say that I significantly contributed to that milestone.&lt;/p&gt;
+
+&lt;p&gt;Some details of my contributions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Led the design and development of Apigee&amp;rsquo;s App Services product (&lt;a href=&#34;http://apigee.com/usergrid&#34;&gt;http://apigee.com/usergrid&lt;/a&gt;), an AngularJS based analytics dashboard.&lt;/li&gt;
+&lt;li&gt;Developed the front-end architecture using Angular JS and implemented an advanced analytics dashboard with Angular (shown below).&lt;/li&gt;
+&lt;li&gt;Created the user interface for the project along with handling all user experience aspects.&lt;/li&gt;
+&lt;li&gt;Created the backend for chart creation (HighCharts) and reporting on mobile analytics data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;web-performance-consultant-cnn-jul-2012-oct-2012&#34;&gt;Web Performance Consultant // CNN // JUL 2012 - OCT 2012&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Worked directly on the performance of CNN.com home page. Improved page loading by 17% by writing a phatomjs script to measure loading performance. We then added JavaScript loading improvements which allowed for far future caching of standard libraries.&lt;/li&gt;
+&lt;li&gt;Worked on the CNN Video team during the 2012 elections. Added functionality for listening to twitter keywords during presidential debates.&lt;/li&gt;
+&lt;li&gt;Created open source project loadreport.js (&lt;a href=&#34;http://loadreport.wesleyhales.com&#34;&gt;http://loadreport.wesleyhales.com&lt;/a&gt;) while improving CNN.com performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;software-engineering-consultant-manheim-mar-2012-jul-2012&#34;&gt;Software Engineering Consultant // Manheim // MAR 2012 - JUL 2012&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Worked on the core engineering team (RoR) delivering core product features.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;software-engineering-lead-jboss-by-red-hat-sep-2007-mar-2012&#34;&gt;Software Engineering Lead // JBoss by Red Hat // SEP 2007 - MAR 2012&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Co-founded the AeroGear project, the mobile enterprise initiative for JBoss. Responsible for developing RESTful endpoints and tying to front end JavaScript frameworks (backbone, jQuery, etc..)&lt;/li&gt;
+&lt;li&gt;Created HTML5 based reference projects (&lt;a href=&#34;https://github.com/aerogear&#34;&gt;https://github.com/aerogear&lt;/a&gt;) for responsive design and converting existing applications to work on mobile devices. (used minifcation projects like WRO4J, and creating frontend development approaches using jQuery, yepnope, modernizr, and underscore.&lt;/li&gt;
+&lt;li&gt;Led the conversion of RichFaces components to Mobile Web compatibility. Converted the RichFaces component framework and showcase application to responsive design format using Media Queries. Wrote components to minify JavaScript and CSS requests on the fly.&lt;/li&gt;
+&lt;li&gt;Founded and led the JBoss Portlet Bridge community project (&lt;a href=&#34;https://github.com/jbossportletbridge&#34;&gt;https://github.com/jbossportletbridge&lt;/a&gt;), which was later packaged as a supported enterprise project. (this was not only my first project where I was responsible for implementing a Java Specifcation Request (JSR) and passing the TCK, but it also served as my prototype for creating and nurturing an OSS community.&lt;/li&gt;
+&lt;li&gt;Led the redesign and UI/UX direction of multiple product refreshes within JBoss including the community image for JBoss Portal and the enterprise product offerings, EPP5 and EAP6&lt;/li&gt;
+&lt;li&gt;Provided support on user forums, created all documentation, and wiki articles related to the projects I owned.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;sr-software-engineer-autotrader-com-jul-2006-sep-2007&#34;&gt;Sr. Software Engineer // Autotrader.com // JUL 2006 - SEP 2007&lt;/h4&gt;
+
+&lt;h4 id=&#34;software-engineering-manager-compucredit-aug-2005-jul-2006&#34;&gt;Software Engineering Manager // CompuCredit // AUG 2005 - JUL 2006&lt;/h4&gt;
+
+&lt;h4 id=&#34;software-engineer-catalyst-networks-aug-2002-jul-2005&#34;&gt;Software Engineer // Catalyst Networks // AUG 2002 - JUL 2005&lt;/h4&gt;
+
+&lt;h4 id=&#34;software-engineer-bank-of-america-mar-2000-oct-2002&#34;&gt;Software Engineer // Bank of America // MAR 2000 - OCT 2002&lt;/h4&gt;
+
+&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;United States Marine Corps (1996 - 2000)&lt;/li&gt;
+&lt;li&gt;Life University 1997-2001
+
+&lt;ul&gt;
+&lt;li&gt;Computer Science&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;invited-talks&#34;&gt;Invited Talks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;ve spoken at over 30 conferences related to software engineering.
+
+&lt;ul&gt;
+&lt;li&gt;More well known conferences include:&lt;/li&gt;
+&lt;li&gt;JavaOne&lt;/li&gt;
+&lt;li&gt;Devoxx&lt;/li&gt;
+&lt;li&gt;Fluent&lt;/li&gt;
+&lt;li&gt;Velocity&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;book&#34;&gt;Book&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m the author of a book written at the forefront of the HTML5 revolution in 2011 called &lt;a href=&#34;https://www.amazon.com/HTML5-JavaScript-Web-Apps-Bridging/dp/1449320511&#34;&gt;HTML5 and JavaScript Web Apps&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;other-interests-and-activities&#34;&gt;Other Interests and Activities&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I am married (Kristen), have 3 kids (Adam, Stella, and Slayter), and one french bulldog (Priscilla)&lt;/li&gt;
+&lt;li&gt;I enjoy trail running, running, or any workout which causes short term pain and long term happiness and mental health.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
