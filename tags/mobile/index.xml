@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mobile on Wesley Hales</title>
-    <link>http://localhost:1313/tags/mobile/</link>
+    <link>http://wesleyhales.com/tags/mobile/</link>
     <description>Recent content in Mobile on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-      <link>http://localhost:1313/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
+      <link>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
+      <guid>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
       <description>&lt;p&gt;
 The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a&gt; had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:
   &lt;ul&gt;
@@ -26,7 +26,7 @@ The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a
 &lt;p&gt;
   Most front-end developers are familiar with &#34;jQuery callbacks and RESTful services&#34;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&#34;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&#34;&gt;&#34;POH5&#34; (Plain Old HTML5)&lt;/a&gt;
 &lt;/p&gt;
-&lt;img src=&#34;http://localhost:1313/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
 &lt;p&gt;
 So why another acronym? Why not just call it &#34;Plain Old Open Web&#34;? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or &#34;gear&#34; you need to get started quickly with the best possible solution.
 &lt;/p&gt;
@@ -41,25 +41,25 @@ We&#39;re just getting started... For now, we have a &lt;a href=&#34;https://git
     
     <item>
       <title>RichFaces Mobile Designs - Day 3</title>
-      <link>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</link>
+      <link>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</link>
       <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</guid>
       <description>&lt;p&gt;&lt;p&gt;So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.&lt;/p&gt;&lt;p&gt;&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 3: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have another phone based design broke out into 3 pages.&lt;br /&gt; 
-&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;The first page&lt;/a&gt; is a standard menu so not much to say there. The bottom menu bar is a little different from &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;my first design&lt;/a&gt; &amp;#8211; following the lead of the native twitter iPhone app.&lt;br /&gt; 
-&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page1.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;The first page&lt;/a&gt; is a standard menu so not much to say there. The bottom menu bar is a little different from &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;my first design&lt;/a&gt; &amp;#8211; following the lead of the native twitter iPhone app.&lt;br /&gt; 
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-As you can see with the &lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;second page&lt;/a&gt; (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&amp;#8216;t make a ton of sense to me on limited screen real estate.&lt;br /&gt; 
-&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page2.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+As you can see with the &lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;second page&lt;/a&gt; (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&amp;#8216;t make a ton of sense to me on limited screen real estate.&lt;br /&gt; 
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-So after you go through the menu options and decide on a component, you are taken to the &lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;detail/demo screen&lt;/a&gt;(below) where you can play around with your component of choice.&lt;/p&gt; 
+So after you go through the menu options and decide on a component, you are taken to the &lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;detail/demo screen&lt;/a&gt;(below) where you can play around with your component of choice.&lt;/p&gt; 
 
 &lt;p&gt;Note the small orange page marker dots at the bottom. The user would have the ability to flip through each component in the given section by swiping horizontally.&lt;br /&gt; 
-&lt;a href=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://localhost:1313/images/jroller/rf.phone.day3.page3.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
 &lt;/p&gt;&lt;/p&gt;
 </description>
@@ -67,22 +67,22 @@ So after you go through the menu options and decide on a component, you are take
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
+      <link>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
       <description>&lt;p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
 
 &lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
 
 &lt;p&gt;2) Similar to the iPad Mail.app, it&amp;#8216;s almost like you are designing 2 different UI&amp;#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page1.jpg&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;225px&#34; src=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page1-small.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1.jpg&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1-small.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 2: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&amp;#8216;t all that exciting.&lt;/p&gt; 
 
 &lt;p&gt;Notice how, unlike the &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;iphone design from Day 1&lt;/a&gt;, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user&#39;s attention focused on the app itself.&lt;/p&gt;&lt;br /&gt; 
 &lt;p&gt;&lt;br /&gt; 
-&lt;a href=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page2.jpg&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; align=&#34;left&#34; width=&#34;225px&#34; src=&#34;http://localhost:1313/images/jroller/rf.tablet.day2.page2-small.JPG&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2.jpg&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; align=&#34;left&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2-small.JPG&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
 
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
 The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.&lt;/p&gt; 
@@ -98,13 +98,13 @@ The second page is what you see after selecting a menu item from page 1 (click t
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
+      <link>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
+      <guid>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
       <description>&lt;p&gt;&lt;p&gt;Today marks an important day in the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;RichFaces project&lt;/a&gt; as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.&lt;br /&gt; 
 So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. &lt;/p&gt;&lt;p&gt;I will announce each new design (both for tablet and phone) via &lt;a href=&#34;https://twitter.com/#!/richfaces&#34;&gt;twitter&lt;/a&gt; with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://localhost:1313/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
+&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
 &lt;p class=&#34;pTitle&#34;&gt;Day 1: About The Design&lt;/p&gt;&lt;br /&gt; 
 Here we have what could be the RichFaces component showcase skin. This is what I will be posting a new version of each day this week.&lt;/p&gt; 
 

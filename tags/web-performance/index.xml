@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Performance on Wesley Hales</title>
-    <link>http://localhost:1313/tags/web-performance/</link>
+    <link>http://wesleyhales.com/tags/web-performance/</link>
     <description>Recent content in Web Performance on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Apr 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web-performance/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/web-performance/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Simulated RUM testing with PhantomJS 2</title>
-      <link>http://localhost:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</link>
+      <link>http://wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</link>
       <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
+      <guid>http://wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2</guid>
       <description>&lt;p&gt;Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.&lt;/p&gt;
 
 &lt;p&gt;The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using &lt;a href=&#34;https://github.com/wesleyhales/loadreport&#34;&gt;Loadreport.js&lt;/a&gt;.
-&lt;a href=&#34;https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-15-24/image05.png&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image05.png&#34;/&gt;&lt;/a&gt;
 &lt;div style=&#34;width:100%;text-align:center;font-style:italic;&#34;&gt;Loadreport data from 2012-2013 for CNN.com&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;I started the Loadreport project while working on the CNN homepage in 2012. It was one of the first PhantomJS scripts that was built solely to collect as many perf numbers from the DOM as possible.&lt;br /&gt;
@@ -44,13 +44,13 @@ I don’t know. It’s a frankenstein term where I’m trying to depict a remote
 &lt;p&gt;All of these requirements have been built into &lt;a href=&#34;http://speedgun.io&#34;&gt;speedgun.io&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;After starting development of speedgun with Docker I realized that this could be easily distributed to any geographic region as a virtualized RUM node. I wanted to execute on the idea that this testing tool could be setup on an old mac mini at grandma’s house with a DSL connection.
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-15-24/image00.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image00.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Or, with a &lt;a href=&#34;https://github.com/wesleyhales/speedgun/blob/master/server/README.md&#34;&gt;simple git clone and execution of one command&lt;/a&gt;, it can be run on Digital Ocean, AWS, and more environments in every region.
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-15-24/image01.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image01.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Today, there are 2 available nodes to run a Speedgun report, DigitalOcean SF and NY. Hopefully there will be more in the list by the time you read this ;)
-&lt;a href=&#34;http://speedgun.io&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-15-24/image04.png&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://speedgun.io&#34;&gt;&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image04.png&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;##The Speedgun API
 There are 2 parts to the speedgun REST API&amp;hellip;&lt;/p&gt;
@@ -142,12 +142,12 @@ There are 2 parts to the speedgun REST API&amp;hellip;&lt;/p&gt;
 By default this is turned off. To start sending your beacon with system information to the central speedgun.io server, you only have to curl or load this url in your browser &lt;a href=&#34;http://localhost:8081/rest/beacon/init&#34;&gt;http://localhost:8081/rest/beacon/init&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The beacon sends the following data to the speedgun server every 60 seconds.
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-15-24/image03.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image03.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The only caveat to this working correctly is opening the required port on the firewall of the client machine’s network. You don’t have to open the port to send the beacon, only to allow speedgun reports to be ran by the centralized server.&lt;/p&gt;
 
 &lt;p&gt;Here’s a netgear router admin UI example:
-&lt;img style=&#34;max-width:90%&#34; src=&#34;http://localhost:1313/images/posts/2015-15-24/image02.png&#34;/&gt;&lt;/p&gt;
+&lt;img style=&#34;max-width:90%&#34; src=&#34;http://wesleyhales.com/images/posts/2015-15-24/image02.png&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;After you open up port 8081 on your firewall, speedgun reports can be remotely ran from anywhere. Currently the speedgun.io URL is hardcoded as the centralized server, this will soon be broken out to a configuration file.
 &lt;br/&gt;
@@ -186,11 +186,11 @@ I also want to give a quick shout out to all the other page testing services.&lt
     
     <item>
       <title>Web Performance Testing With PhantomJS</title>
-      <link>http://localhost:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
+      <link>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+      <guid>http://wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/phantomjs.png&#34; alt=&#34;phantomjs&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
 are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
@@ -216,11 +216,11 @@ we have resources which are not far-future cached, what happens after we future 
 &lt;/ul&gt;&lt;/p&gt;
 
 &lt;p&gt;This script is running live at &lt;a href=&#34;http://loadreport.wesleyhales.com/report.html&#34;&gt;loadreport.wesleyhales.com/report.html&lt;/a&gt;
-&lt;img src=&#34;http://localhost:1313/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/loadreport.js.png&#34; alt=&#34;loadreport.js&#34; align=&#34;left&#34; class=&#34;max-width-100&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;re running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, &lt;a href=&#34;http://twitter.com/ryanbridges&#34;&gt;@ryanbridges&lt;/a&gt; put together
 some awesome sparkline charts backed by knockout.js. Just click on the &amp;ldquo;Show Me Some Charts!&amp;rdquo; button to see &amp;lsquo;em.
-&lt;img src=&#34;http://localhost:1313/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://wesleyhales.com/images/loadreport-charts.png&#34; alt=&#34;loadreport-charts&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Regarding cache performance, phantomjs has a &amp;ndash;disk-cahe=yes switch which is supposed to enable caching, but the results on the number
 of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with &amp;ndash;disk-cahe=yes, phantom returns

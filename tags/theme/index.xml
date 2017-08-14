@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theme on Wesley Hales</title>
-    <link>http://localhost:1313/tags/theme/</link>
+    <link>http://wesleyhales.com/tags/theme/</link>
     <description>Recent content in Theme on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Feb 2009 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://wesleyhales.com/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to make money off of a Firefox theme (or not)</title>
-      <link>http://localhost:1313/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</link>
+      <link>http://wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</link>
       <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</guid>
+      <guid>http://wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</guid>
       <description>&lt;p&gt;This weekend was quite an eye opener for me. Since the first public release of &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;ANTHEM&lt;/a&gt; (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.&lt;/p&gt; 
-&lt;p&gt;I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted. Then, I got the idea of adding a sponsor logo somewhere in the top banner like this (see top right corner):&lt;a href=&#34;http://localhost:1313/images/jroller/anthem-sponsor-large.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/anthem-sponsor-small.png&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted. Then, I got the idea of adding a sponsor logo somewhere in the top banner like this (see top right corner):&lt;a href=&#34;http://wesleyhales.com/images/jroller/anthem-sponsor-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/anthem-sponsor-small.png&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;So I made the change and uploaded the new theme to the Mozilla Developer area. The next morning I awake to tons of emails and reviews on the Mozilla site with some seriously pissed off users. I knew I may get a little fallout, but not quite this bad. I guess I am guilty of falling prey to the big company mindset of caring about $$ more than the users of my product. But like I said on the Mozilla site, this was purely an experiment and the advertisement has been removed per the latest version (1.5.2).&lt;/p&gt; 
 &lt;p&gt;Today I received a message which is truly a great idea and I can&#39;t believe I did not think of it: 
 &lt;quote&gt;&lt;pre&gt; 
@@ -41,16 +41,16 @@ Thank you Convict and all the best to your motorcycle company. Hopefully I will 
     
     <item>
       <title>Creating a Firefox 3 theme</title>
-      <link>http://localhost:1313/blog/2008/08/26/Creating-a-Firefox-3-theme</link>
+      <link>http://wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme</link>
       <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/08/26/Creating-a-Firefox-3-theme</guid>
+      <guid>http://wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme</guid>
       <description>&lt;p&gt;&lt;div style=&#34;padding:5px; margin:5px; background-color:#f9f5ae; border:1px solid #b2ac4f;&#34;&gt;**UPDATE - This theme is now available on Mozilla.org here: &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34; style=&#34;color:#20aa30&#34;&gt;&lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;https://addons.mozilla.org/en-US/firefox/addon/9627/&lt;/a&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;a href=&#34;http://localhost:1313/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/ff3-themeclose.gif&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/ff3-themeclose.gif&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
 &lt;p&gt;I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.&lt;/p&gt;
 &lt;p&gt;Of course this could be due to me actually having a day job and somewhat of a life. I think the overall css code for the layout is fairly simple. All you have to do is get your x,y coordinates right and you are golden. If anybody has any quick tips to make the process of placing the buttons a little simpler, please speak now! Or if someone wants to take on the task of completing this theme I will post the .psd files.&lt;/p&gt;
 &lt;br/&gt;
-&lt;a href=&#34;http://localhost:1313/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/jroller/ff3-theme-small.gif&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;http://wesleyhales.com/images/jroller/ff3-theme-large.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/ff3-theme-small.gif&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;p&gt;One of the cooler things about this theme is that the icons are 100% original. We all know most themes take some form of Windows or *nix icons. I tried to take the old 1930&amp;rsquo;s cinema approach where I could. But I couldn&amp;rsquo;t come up with anything for the copy and paste buttons (C and V).&lt;/p&gt;
