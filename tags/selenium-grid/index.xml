@@ -6,15 +6,126 @@
     <description>Recent content in Selenium Grid on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://wesleyhales.com/tags/selenium-grid/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Browser Automation At Scale - Part 2</title>
+      <link>http://wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/</guid>
+      <description>
+
+&lt;p&gt;In &lt;a href=&#34;http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/&#34;&gt;Part 1&lt;/a&gt;, I reviewed the gory details of the foundation required to run synthetic browser testing at scale.
+Now that we have a framework for building out our tests, we can move forward with wrapping
+our test runner in a web application so that the metrics we care about can be gathered and viewed through a decent UI.&lt;/p&gt;
+
+&lt;p&gt;For this example, I&amp;rsquo;m going to use the Alexa top 12 news sites and execute a test over each one with the latest Chrome web browser. It will
+open the page and grab the resource timing information along with a screenshot as shown here:
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-09-03/site_runner.png&#34; alt=&#34;&#34; /&gt;
+The &lt;a href=&#34;https://github.com/wesleyhales/site_runner&#34;&gt;demo web application&lt;/a&gt; that we&amp;rsquo;re about to setup will store the above screenshots and timing information in Postgres.
+The screenshots are base64 and a bit large compression wise, but that issue can be conquered at a later date. For now, all we
+care about is to get things running and to scale our tests into every geography with a datacenter that supports CoreOS.
+Let&amp;rsquo;s review the core architecture:
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-09-03/swarm_setup.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-up-site-runner&#34;&gt;Setting up site_runner&lt;/h3&gt;
+
+&lt;p&gt;If you followed along in &lt;a href=&#34;http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/&#34;&gt;Part 1&lt;/a&gt;, you can use your own Docker Swarm infrastructure to run your tests. For this
+article, I&amp;rsquo;m only going to review the simple web application used to run and manage the tests - &lt;a href=&#34;https://github.com/wesleyhales/site_runner&#34;&gt;site_runner&lt;/a&gt;.
+If you haven&amp;rsquo;t already, go ahead and clone the repository. You can run this within your local docker environment or
+on another hosted CoreOS instance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:wesleyhales/site_runner.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;database-setup&#34;&gt;Database Setup&lt;/h4&gt;
+
+&lt;p&gt;Next, we&amp;rsquo;ll setup a Postgres database. This will be used to store all of our test data and screenshots (in JSON format and queryable).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run -p 5432:5432 --name siterunner_pg -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we need to login to the database and set things up:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run -it --rm --link siterunner_pg:postgres postgres psql -h postgres -U postgres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will run the Postgres client and will ask for a password (mysecretpassword).
+After successful login, copy and paste the following and hit enter:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE DATABASE SITERUNNER;
+\c siterunner;
+CREATE EXTENSION citext;
+  CREATE TABLE timingdata (
+    id serial primary key,
+    data jsonb,
+    image text,
+    email citext unique
+  );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;web-application-setup&#34;&gt;Web Application Setup&lt;/h4&gt;
+
+&lt;p&gt;The site_runner web application is a custom test runner built to give simple reporting and an API for the tests
+ that need to be ran. Open a new terminal window and navigate to the repository you cloned at the beginning of this article and run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; docker build -t wesleyhales/site_runner .
+ docker run -p 3000:3000 --link siterunner_pg:postgres -d wesleyhales/site_runner
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will start your application at &lt;a href=&#34;http://localhost:3000&#34;&gt;http://localhost:3000&lt;/a&gt;. Visit the URL and ensure you see a page with a link and some table headers.
+There won&amp;rsquo;t be any data to review yet, which brings us to the next step&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;The site_runner demo application
+uses /delete to clear the database and /startTest to start the tests (pretty simple, right?). startTest requires a query parameter
+for which region you&amp;rsquo;d like your tests to be ran.  If you followed along in Part 1, you would use sf1-node as your query paramter argument.
+For this article, I&amp;rsquo;ve added another node in New York, so an HTTP request to the following will kick off your tests in that region:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:3000/startTest?nodeName=ny3-node&#34;&gt;http://localhost:3000/startTest?nodeName=ny3-node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If everything goes as planned, you will see the following response from hitting that URL:
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-09-03/test_response.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s also get a tail on our web server logs so you can see the messages as each test runs:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker logs -f [your container ID]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When each test finishes (and you refresh the page), you&amp;rsquo;ll see the screenshot and some other simple data about when and where the
+test was ran.
+&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-09-03/test_result.png&#34; alt=&#34;&#34; /&gt;
+If tests aren&amp;rsquo;t running, check the Selenium hub &lt;a href=&#34;http://165.227.123.79:4444/grid/console&#34;&gt;console page&lt;/a&gt; to see how many requests are currently queued. Or stop being lazy and go setup
+everything in &lt;a href=&#34;http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/&#34;&gt;Part 1&lt;/a&gt; and manage your own testing infrastructure! ;-)&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re just following along and don&amp;rsquo;t have time to set all this up, you can view a temporary site_runner report &lt;a href=&#34;http://165.227.123.79:3000/?account=Alexa%20Top%2012%20News&#34;&gt;here&lt;/a&gt;.
+Hover over the screenshot to get a zoomed in view and examine any visual defects.
+(It would be cool to get &lt;a href=&#34;https://huddle.github.io/Resemble.js/&#34;&gt;Resemble.js&lt;/a&gt; integrated to handle image analysis and comparison at some point)&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;d like to change the test sites, you can do so in &lt;a href=&#34;https://github.com/wesleyhales/site_runner/blob/master/model/AllSites.js&#34;&gt;this file&lt;/a&gt;.
+Other things you might want to change are the data that is harvested during each page run. Here, in
+&lt;a href=&#34;https://github.com/wesleyhales/site_runner/blob/master/selenium/siterunner.js#L55&#34;&gt;siterunner.js&lt;/a&gt;, you can see where
+I&amp;rsquo;ve written a few wait commands that eventually execute JavaScript on the page that is loaded. This allows you
+to harvest any required metrics or inspect things to see what is being used on the page.&lt;/p&gt;
+
+&lt;p&gt;In Part 3, We&amp;rsquo;ll advance our webdriver script to crawl an entire site, add a few more nodes across the globe and look at a few open source and pay for monitoring tools that
+ will give us health visibility into our nodes and testing infrastructure. Part 4 will probably go into adding headless Chrome and Firefox to the mix.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Andy Davies for the &lt;a href=&#34;https://github.com/andydavies/waterfall&#34;&gt;ResourceTiming waterfall component&lt;/a&gt;!
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Browser Automation At Scale - Part 1</title>
-      <link>http://wesleyhales.com/blog/2017/08/07/Browser-Automation-At-Scale---Part-1</link>
+      <link>http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</link>
       <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2017/08/07/Browser-Automation-At-Scale---Part-1</guid>
+      <guid>http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</guid>
       <description>
 
 &lt;h4 id=&#34;docker-swarm-and-selenium&#34;&gt;Docker Swarm and Selenium&lt;/h4&gt;
