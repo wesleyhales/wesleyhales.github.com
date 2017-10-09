@@ -6,8 +6,126 @@
     <description>Recent content on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://wesleyhales.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Browser Automation At Scale - DevSecOps and the Equifax Breach</title>
+      <link>http://wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</guid>
+      <description>
+
+&lt;p&gt;If you’ve been following along in &lt;a href=&#34;http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/&#34;&gt;Part 1&lt;/a&gt; and &lt;a href=&#34;http://wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/&#34;&gt;Part 2&lt;/a&gt;, you already have the basic framework to implement a globally distributed Browser Automation Network. Now, we can easily write a few lines of JavaScript and augment it to create a sophisticated security scanner that will fly under the radar of most security tools and check for application level vulnerabilities - exactly like the one found at Equifax.com a few weeks back. This article covers how to run a scanner that could’ve prevented the Equifax breach if deployed in a &lt;a href=&#34;http://www.devsecops.org/&#34;&gt;DevSecOps&lt;/a&gt; mindset.&lt;/p&gt;
+
+&lt;p&gt;In the Web Performance world, you have two types of tests that allow for metrics gathering: Synthetic and Real User. The goal of Synthetic testing is to monitor the user experience in a web browser, from any geography, continuously and in an automated fashion. This is done by having a crafted script navigate through the app in a manner that simulates a real user, and ensuring the performance measurements of those actions are within target goals. This level of monitoring is critical to operations for detecting issues at runtime, experimental features, or how assets are being delivered to the browser.&lt;/p&gt;
+
+&lt;p&gt;Real User Monitoring gives a more accurate view of what users actually experienced on your site by taking live performance samples during the user session. This data is gathered from the same browser APIs that Synthetic tests use, but it’s actual data from a live user in the wild dealing with all sorts of variables that synthetic testing cannot recreate. This perf data is sent through an XHR request back to a web server and is used for key business decisions within the enterprise (it’s critical to the executive team). In short, Synthetic testing analytics is used in Ops and RUM data is used at the business level.&lt;/p&gt;
+
+&lt;p&gt;In cyber security, data is gathered and used almost exactly the same way. You have Synthetic testing to scan applications for vulnerabilities and you have Real User (or Attacker) Monitoring for analyzing browser signals that can be used to fingerprint attack groups and to create new JavaScript or browser based countermeasures. Real Attacker Monitoring or RAM data will be analyzed offline to identify where the attack is coming from and steps for mitigation will be determined by the organization’s security team (I’ll cover this topic in depth in a later article).&lt;/p&gt;
+
+&lt;p&gt;Unlike performance data, which can be tied to actual revenue, attack data does not get the same executive-level visibility unless of course, there’s been a breach.&lt;/p&gt;
+
+&lt;p&gt;In the past year, the Struts framework has received some bad press due to the libraries that were included in older versions of the project.  For example, &lt;a href=&#34;http://struts.apache.org/announce.html&#34;&gt;all but one &lt;/a&gt;of the project’s official 2017 announcements contained a security vulnerability.&lt;/p&gt;
+
+&lt;p&gt;The unfortunate thing is that every open source project (like Struts) depends on standard utility libraries that allow project authors to not have to reinvent the wheel. E.g. Object serialization, parsing, and so on. Dependency (or 3rd party) vulnerabilities like this will continue to rise and be a thorn in the side of every organization on the web.&lt;/p&gt;
+
+&lt;p&gt;The attack vector utilized in Equifax’s case is a massive industry wide problem for older web applications that are no longer maintained, or newer ones that are simply unaware that a known vulnerability exists.&lt;/p&gt;
+
+&lt;h3 id=&#34;security-is-everyone-s-responsibility&#34;&gt;Security is Everyone’s Responsibility&lt;/h3&gt;
+
+&lt;p&gt;If you’re not familiar with the concepts of DevSecOps, take 5 minutes and read the &lt;a href=&#34;http://www.zdnet.com/article/devsecops-what-it-is-and-how-it-can-help-you-innovate-in-cybersecurity/&#34;&gt;manifesto&lt;/a&gt;. Here’s a quick blurb from the third paragraph:&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;We won&amp;rsquo;t simply rely on scanners and reports to make code better. We will attack products and services like an outsider to help you defend what you&amp;rsquo;ve created. We will learn the loopholes, look for weaknesses, and we will work with you to provide remediation actions instead of long lists of problems for you to solve on your own.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;There are many types of tools, scanners, and commercial products that try to watch, block or detect attacks within enterprise web applications:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Web Application Firewall - HTTP Header inspection&lt;/li&gt;
+&lt;li&gt;Automation Detection - Browser Signals&lt;/li&gt;
+&lt;li&gt;Inline Commercial Solutions (Application and Network Security)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I’m sure most readers of this article already work for a company that implements one of the above. For those that don’t have an enterprise level security solution in place, &lt;a href=&#34;https://github.com/theonemule/docker-waf&#34;&gt;nginx+modsecurity&lt;/a&gt; in front of your origin is a great place to start for a WAF. From there add the &lt;a href=&#34;https://www.netnea.com/cms/apache-tutorial-7_including-modsecurity-core-rules/&#34;&gt;owasp core ruleset configuration&lt;/a&gt; and you have a product that most companies offer as an enterprise level WAF solution.&lt;/p&gt;
+
+&lt;p&gt;To launch our attack on the enterprise, we’re going to need a few pieces of information before getting started.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gather a List of Web Applications&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Knowing the entire list of web applications is a gruesome task for some enterprises due to geographic growth, siloed business units, marketing campaigns and ownership through acquisitions - along with rogue environments that were stood up by a no longer employed, 10x developer a few years back.&lt;/li&gt;
+&lt;li&gt;For this article, the scope of my analysis is all web applications indexed by Google. I performed a search for all sites that use the well known Struts .action or .do file extension. e.g. &amp;ldquo;filetype:action doupload&amp;rdquo; or “filetype: do”&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Understand Potential Vulnerabilities&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After you create the site list, you should document the framework and versions of each web application. This is especially important for older deployments that have long been out of mind. This list will allow you to compare and keep tabs on vulnerabilities as &lt;a href=&#34;https://nvd.nist.gov/vuln/data-feeds&#34;&gt;they’re announced&lt;/a&gt; by each &lt;a href=&#34;http://struts.apache.org/announce.html#a20170905&#34;&gt;project&lt;/a&gt; and version.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create the Attack&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;With a headline breach, it’s fairly easy to find the specific &lt;a href=&#34;http://blog.talosintelligence.com/2017/03/apache-0-day-exploited.html&#34;&gt;source code&lt;/a&gt; that is vulnerable and how to replicate the attack. Tools like metasploit and github can yield attack reproduction code based on the CVE and other tools like Shodan or Censys might also come in handy if the application can be identified by &lt;a href=&#34;https://en.wikipedia.org/wiki/Banner_grabbing&#34;&gt;banner&lt;/a&gt; or ports.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Know Your Current Security Stack&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Which (if any) commercial products and/or Open Source tools are currently deployed to protect your Web Applications? Do you need to whitelist your attack scanner with the security team? Since we’re attacking from the front door, I don’t really consider this task a &amp;ldquo;must do&amp;rdquo;. If you stick with the DevSecOps ideals, the goal is to fly under the radar of your current security stack. I’m pretty sure that attackers will not ask your security team to whitelist them.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remediation Steps&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the case of the Struts exploit, you must patch the code or upgrade to a new version of the framework - expensive options for many companies. The official solution provided by Apache suggested either upgrading to a patched version or switching to a different multipart parse implementation. An upgrade can be a long process that involves backups, testing, and server reboots.&lt;/li&gt;
+&lt;li&gt;You could also use a WAF to block the explicit attack header by creating a rule to detect the malicious header - time consuming and can be expensive with false positives. This tuning would typically take weeks and analyzing each header and parsing for the pattern has a specific cost based on the size of the header and your RPS (requests per second).&lt;/li&gt;
+&lt;li&gt;With the right combination of inspecting application dependencies for known vulnerabilities, HTTP level header analysis, and runtime monitoring of the APIs that are implicitly exposed in a web browser, applications can safely be protected from adversaries. Finding the right combination can be challenging and it’s a challenge that I enjoy. Feel free to reach out to me directly at &lt;a href=&#34;mailto:wesley@tcell.io&#34;&gt;wesley@tcell.io&lt;/a&gt; if you’d like to discuss.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step-1-the-target&#34;&gt;Step 1 - The Target&lt;/h3&gt;
+
+&lt;p&gt;For this example, I’m going to use the &lt;a href=&#34;http://apache.mirrors.tds.net/struts/2.5.10/&#34;&gt;Struts showcase application&lt;/a&gt; to run my scanner against. You can also find a list of Struts target sites through Google by searching for the following &lt;a href=&#34;https://www.google.com/search?q=filetype%3Aaction+doupload&#34;&gt;pattern&lt;/a&gt;. There are roughly 700 sites that could possibly be affected by this vulnerability and to my surprise, running this scanner on the first few results shows that they are in fact vulnerable. This also speaks to how massive vulnerabilities like this are and seven months after the initial announcement are still exposed through a public web server.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_0.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you wanted to harvest all of Google’s search results in an automated fashion, you can run the following JavaScript from Chrome’s developer tools:&lt;/p&gt;
+
+&lt;p&gt;var nodesArray = [].slice.call(document.querySelectorAll(&amp;ldquo;h3.r a&amp;rdquo;));(nodesArray.forEach(function(item){console.log(&amp;rsquo;\&amp;rdquo; + item.href + &amp;lsquo;\&amp;lsquo;,&amp;rsquo;)}))&lt;/p&gt;
+
+&lt;p&gt;This will produce the URL’s of each target so they can be easily pasted in the &lt;a href=&#34;https://github.com/wesleyhales/site_runner/blob/scanner/model/AllSites.js&#34;&gt;list of sites&lt;/a&gt; to scan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_1.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;step-2-attack-setup&#34;&gt;Step 2 - Attack Setup&lt;/h3&gt;
+
+&lt;p&gt;There are multiple ways to launch &lt;a href=&#34;https://cwiki.apache.org/confluence/display/WW/S2-046&#34;&gt;this type of attack&lt;/a&gt; since it’s just a matter of adding data to a header and sending a POST request. In short, the payload of this attack is sent through an HTTP header to an API that uses the Jakarta Multipart parser. You might also use cURL, metasploit or some other tool that can send an HTTP request with the attack header. Here I’m using Chrome for a few reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I’m loading the page and executing JavaScript in a real web browser. This already checks the box on many commercial security tools who are asking &amp;ldquo;Is this a real user or a bot?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;I’m using the browser’s XHR implementation to make the attack request. This gives me implicit access to cookies and any other request signing that needs to happen from a security standpoint.&lt;/li&gt;
+&lt;li&gt;It’s easy to maintain this (along with many other tests) as a single test script that can be executed with a suite.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;See source code &lt;a href=&#34;https://github.com/wesleyhales/site_runner/blob/scanner/selenium/crawl-search.js&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_2.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First, the above script opens a web page and looks for all the forms in the DOM. This is part of the scanning for susceptible targets within the web app. For each form action URL found, we launch the attack through an XHR request.&lt;/p&gt;
+
+&lt;p&gt;If the target is vulnerable, the report JSON data will be stored and shown in the scanning overview:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_3.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If this grid of scanners were running on a regular basis when new vulnerabilities are &lt;a href=&#34;https://nvd.nist.gov/vuln/data-feeds&#34;&gt;released&lt;/a&gt;, then we’d have a bit more visibility into how vulnerable our web apps really are. In the case of breaches like Equifax, it may be that the enterprise already knows about the vulnerability and merely did not prioritize the effort to patch the problem or it was simply a process issue. With a tool like this, which can help security teams cut down on time to assess vulns in the wild, priority and process will be flattened for issues found on your live production sites.&lt;/p&gt;
+
+&lt;h2 id=&#34;shout-outs&#34;&gt;Shout Outs&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://www.linkedin.com/in/cchio&#34;&gt;Clarence Chio&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/in/boris-chen-4b118a1/&#34;&gt;Boris Chen&lt;/a&gt; for their valuable review and feedback.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Browser Automation At Scale - Part 2</title>
@@ -1415,179 +1533,6 @@ To bypass this bug, I&amp;rsquo;ve created my own caching mechanism which basica
 &lt;p&gt;&lt;a href=&#34;http://twitter.com/wesleyhales&#34;&gt;@wesleyhales&lt;/a&gt;
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Sharing Content with Web Intents</title>
-      <link>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</link>
-      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents</guid>
-      <description>&lt;p&gt;&lt;br/&gt;
-&lt;h3&gt;The Intent of Sharing&lt;/h3&gt;
-If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying
-to make your content social. Allowing users to take action on your specific content and &amp;ldquo;share&amp;rdquo; it is a common task.
-Much like linking HTML documents together, we are now linking apps together that are capable of
- pushing content to a receiving service via the user. This action or intent of &amp;ldquo;sharing&amp;rdquo; content across different apps
- has recently been identified in a &lt;a href=&#34;http://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html&#34;&gt;W3C Editors Draft called Web Intents&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I recently took a job working on &lt;a href=&#34;http://cnn.com&#34;&gt;CNN.com&lt;/a&gt; and I&amp;rsquo;m sure you can imagine that the weight and performance of social sharing is pretty serious &amp;lsquo;round these parts.
-So I will break down the current state of sharing as it exists today, then jump into an examination of Web Intents.
-&lt;br/&gt;
-&lt;h3&gt;Why do we need Web Intents? &lt;/h3&gt;
-In today&amp;rsquo;s world of sharing we have limited options.
-(Note that the &amp;ldquo;share&amp;rdquo; intent is one of many. You can also edit, save, etc&amp;hellip; but this article is focused on sharing)
-We are forced to pull a JavaScript file and load a share button dynamically for the user, or we can encode a query string that will
-be the input on a GET request to the provided share service.&lt;/p&gt;
-
-&lt;p&gt;For this example, I&amp;rsquo;ve taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains
-their specific resources to display a share button for the given service:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/twitter/&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/google/&#34;&gt;Google+&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/fb/&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wesleyhales.com/_examples/shares/linkedin/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-
-&lt;p&gt;First, I wanted a true measurement on all the resources and page load times without anything in the cache.
-So I cleared the browser cache and loaded a single test page (from the list above) for each share service provider. Here are the results:
-&lt;div id=&#34;container&#34; class=&#34;max-width-100&#34;&gt;&lt;/div&gt;
-I know&amp;hellip; seems pretty crazy that Facebook would have 11 HTTP requests and a 135KB payload (after compress/GZIP) for a share/like button.
-&lt;img src=&#34;http://wesleyhales.com/images/design/share-buttons/facebook.PNG&#34; alt=&#34;Facebook resources&#34; class=&#34;max-width-100 margin10&#34;&gt;
-LinkedIn is delivering 80KB of stuff, Twitter comes in right at 40KB, and although Google only serves up 2KB of resources, the data is broken up over 10 HTTP requests.&lt;/p&gt;
-
-&lt;p&gt;Keep in mind that we are on a desktop browser, so worrying about all the HTTP requests may be a little nonsensical. But, on a mobile
-browser this is definitely something you should be concerned about.
-The previous no-cache scenario is a unique, one time case for our users. And chances are, your user&amp;rsquo;s browser may have already
-cached this content from another site using the same button resources.&lt;/p&gt;
-
-&lt;p&gt;So, after we load all the resources for the first time, surely those will be better cached via local/sessionStorage and
-optimized for fast load times and modern browsers, right? WRONG!&lt;/p&gt;
-
-&lt;p&gt;On page refresh we get the following results:
-&lt;div id=&#34;container2&#34; class=&#34;max-width-100&#34;&gt;&lt;/div&gt;
-Here we see that there are no files being cached outside of the browsers default capabilities. Render times are still staying fairly consistent with the previous times, with the exception of Twitter, which
-was cut down to more than half of it&amp;rsquo;s no-cache onload time.
-HTTP requests remain mostly the same, and sizes are a little better, but LinkedIn is still chiming in at 45KB&amp;hellip; on each page load/refresh.&lt;/p&gt;
-
-&lt;p&gt;Lastly, when we click the share button for each provider, we get the following:
-&lt;div id=&#34;container3&#34; class=&#34;max-width-100&#34;&gt;&lt;/div&gt;
-Ok, so we see something interesting here. Google is the only one who did lazy loading! \o/ Thanks Google! The additional 2KB
-of downloaded content creates the Google+ UI on the fly, but at a cost of 29 HTTP requests. Yes, that&amp;rsquo;s right, 29.
-I didn&amp;rsquo;t look very closely as to why LinkedIn updates the parent DOM, but your page has been abused pretty badly at
-this point so it probably doesn&amp;rsquo;t matter too much :)&lt;/p&gt;
-
-&lt;p&gt;So with all of this data, we can clearly see that today&amp;rsquo;s DIY sharing intents are raping our applications pretty hard. We have no idea what
-those resources are doing and they come at a high cost. Aside from the issues of resource weight, back doors, and inefficient architecture of sharing services, there are many other issues
- with the current ways we handle the sharing of data.
-&lt;br/&gt;
-&lt;h3&gt;Alternatives&lt;/h3&gt;
-The best alternative that works across browsers today is a simple share URL. Throw in some kick ass, responsive &lt;a href=&#34;http://gregoryloucas.github.com/Font-Awesome-More/#all-icons&#34;&gt;font icons&lt;/a&gt;
- and we have a performant way to share content. But there are still a few problems with this approach:
-&lt;ol&gt;
-&lt;li&gt;We are faced with a potential list of
-social networks and options that our users may not even use or care about. We&amp;rsquo;ve all seen it before, it&amp;rsquo;s the typical &amp;ldquo;share bar&amp;rdquo; found on most major
-news sites and blogs.&lt;/li&gt;
-&lt;li&gt;We don&amp;rsquo;t have any way of receiving a callback on whether the post/share was successful or not. The only way to get this data is through async analytics
-by emedding a unique identifier in the URL. Then hope the referrer surfaces in next months usage reports.&lt;/li&gt;
-&lt;/ol&gt;
-Here are the corresponding share URLs from the providers analyzed above.
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.linkedin.com/documents/share-linkedin&#34;&gt;LinkedIn:&lt;/a&gt; &lt;a href=&#34;http://www.linkedin.com/shareArticle?mini=true&amp;amp;url={articleUrl}&amp;amp;title={articleTitle}&amp;amp;summary={articleSummary}&amp;amp;source={articleSource&#34;&gt;http://www.linkedin.com/shareArticle?mini=true&amp;amp;url={articleUrl}&amp;amp;title={articleTitle}&amp;amp;summary={articleSummary}&amp;amp;source={articleSource&lt;/a&gt;}&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Twitter:&lt;/a&gt; &lt;a href=&#34;https://twitter.com/intent/tweet?url={articleURL&#34;&gt;https://twitter.com/intent/tweet?url={articleURL&lt;/a&gt;} &amp;lt;&amp;ndash; Notice the &amp;ldquo;/intent/&amp;rdquo;? We&amp;rsquo;ll get to that in a bit.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Facebook:&lt;/a&gt; &lt;a href=&#34;http://www.facebook.com/sharer.php?u={url&#34;&gt;http://www.facebook.com/sharer.php?u={url&lt;/a&gt; to share}&amp;amp;t={title of content}&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Google+:&lt;/a&gt; &lt;a href=&#34;https://plus.google.com/share?url={articleURL&#34;&gt;https://plus.google.com/share?url={articleURL&lt;/a&gt;}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br/&gt;
-&lt;h3&gt;Web Intents&lt;/h3&gt;
-If you&amp;rsquo;re still struggling to wrap your head around Web Intents, you&amp;rsquo;re not alone. I had to sit down and run through the latest &lt;a href=&#34;http://intentlab-io12.appspot.com/&#34;&gt;Google IO 2012 code exercises&lt;/a&gt;, &lt;a href=&#34;http://www.youtube.com/watch?v=O1YjdKh-rPg&amp;amp;feature=player_embedded#!&#34;&gt;videos&lt;/a&gt;, and &lt;a href=&#34;http://www.smartjava.org/content/html5-web-intents-share-information-between-web-apps&#34;&gt;articles&lt;/a&gt; on Web Intents to really see how it is currently implemented and what it takes to make it work. As of this writing, the only
-browser supporting the &lt;code&gt;WebKitIntent&lt;/code&gt; api is, you guessed it, WebKit. This includes Chrome versions &amp;gt;= 19. But, even though the tag is supported, you must install
-a Chrome extension to actually fulfill the intent.&lt;/p&gt;
-
-&lt;p&gt;Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
-&lt;img src=&#34;http://wesleyhales.com/images/design/webintent-pick.PNG&#34; alt=&#34;web intent pick&#34; class=&#34;max-width-100 margin10&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;At this point you are probably wondering: How do we get the dialogue to show up in teh browser? How can we register an application to handle this request?
-The plan is to allow web applications to register themselves through a provided JavaScript api or HTML tag when the specification is
-final. For now, we must use a Chrome extension.&lt;/p&gt;
-
-&lt;p&gt;This is a section pulled from the manifest file in the extension I&amp;rsquo;m using.
-&lt;div class=&#34;full-width clear&#34;&gt;
-&lt;code&gt;
-&lt;pre&gt;
-&amp;ldquo;intents&amp;rdquo;: {
-      &amp;ldquo;&lt;a href=&#34;http://webintents.org/save&amp;quot;&#34;&gt;http://webintents.org/save&amp;quot;&lt;/a&gt; : {
-      &amp;ldquo;type&amp;rdquo;: [&amp;ldquo;image/jpg&amp;rdquo;, &amp;ldquo;image/jpeg&amp;rdquo;, &amp;ldquo;image/png&amp;rdquo;, &amp;ldquo;image/gif&amp;rdquo;],
-      &amp;ldquo;title&amp;rdquo;: &amp;ldquo;PicStore&amp;rdquo;,
-      &amp;ldquo;path&amp;rdquo;: &amp;ldquo;save.html&amp;rdquo;,
-      &amp;ldquo;disposition&amp;rdquo;: &amp;ldquo;inline&amp;rdquo;
-    },
-&lt;/pre&gt;
-&lt;/code&gt;
-&lt;/div&gt;
-To put it simply, this is how you register an application (Chrome extension) to be used as a Web Intent today. By using the namespace
-defined on the first line &amp;ldquo;&lt;a href=&#34;http://webintents.org/save&amp;quot;&#34;&gt;http://webintents.org/save&amp;quot;&lt;/a&gt;, we can assign our intent to be handled by any app who has this namespace and accepts the supplied &amp;ldquo;type&amp;rdquo;.
-The &amp;ldquo;path&amp;rdquo; is just another HTML file which is included in my extension and the code on that page will handle the intent.&lt;/p&gt;
-
-&lt;p&gt;In our client application, where the intent originates from, we call the following code onclick to allow the user to choose an application
-to fulfill this intent.
-&lt;div class=&#34;full-width clear&#34;&gt;
-&lt;code&gt;&lt;pre&gt;
-function invoke() {
-    var intent = new WebKitIntent({
-        &amp;ldquo;action&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://webintents.org/save&amp;quot;&#34;&gt;http://webintents.org/save&amp;quot;&lt;/a&gt;,
-        &amp;ldquo;type&amp;rdquo;:&amp;ldquo;image/*&amp;ldquo;,
-        &amp;ldquo;suggestions&amp;rdquo;:[&amp;ldquo;&lt;a href=&#34;http://webintents.org/save&amp;quot;,&amp;quot;http://webintents.org/pick&amp;quot;&#34;&gt;http://webintents.org/save&amp;quot;,&amp;quot;http://webintents.org/pick&amp;quot;&lt;/a&gt;],
-        &amp;ldquo;data&amp;rdquo;:location.href});&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;var onSuccess = function(data) { alert(data) };
-var onError = function(data) { alert(data) };
-
-window.navigator.webkitStartActivity(intent, onSuccess, onError);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-&lt;/pre&gt;&lt;/code&gt;
-&lt;/div&gt;
-Web Intents are a really good solution to the problems I mentioned in the first part of this article. I&amp;rsquo;m sure there are many kinks
-which will be ironed out in upcoming revisions to the spec, but overall it seems like a nice fit as we transition to the &amp;ldquo;browser as a platform&amp;rdquo;
-and find new ways of linking data and applications.
-As I said earlier, the plan is to allow any web application to register itself in the browser/UserAgent and I&amp;rsquo;m assuming some kind of user approval will go along with that.
-The proposed way of registering an application is with the &lt;code&gt;&amp;lt;intent&amp;gt;&lt;/code&gt; tag:
-&lt;code&gt;&lt;pre&gt;
-&amp;lt;intent
-  action=&amp;ldquo;&lt;a href=&#34;http://webintents.org/share&amp;quot;&#34;&gt;http://webintents.org/share&amp;quot;&lt;/a&gt;
-  type=&amp;ldquo;image/*&amp;rdquo;
-  href=&amp;ldquo;share.html&amp;rdquo;
-  disposition=&amp;ldquo;window|inline&amp;rdquo;
- /&amp;gt;
-&lt;/pre&gt;&lt;/code&gt;
-Until this is implemented across browsers, all we have is the Chrome Web Store and extensions to take advantage of this technology.
-Read more about the details of Web Intents &lt;a href=&#34;http://webintents.org&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;*Note - Twitter has made the best attempt at an early implementation of Web Intents. The best thing service providers can do today, is follow &lt;a href=&#34;https://dev.twitter.com/docs/intents&#34;&gt;Twitter&amp;rsquo;s implementation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For a full example on how to create a Web Intent Chrome extension, run through the examples in &lt;a href=&#34;http://intentlab-io12.appspot.com/&#34;&gt;this Google IO lab at #IO12&lt;/a&gt;.
-Or you can try it out with Chrome 19+ and the simple demo I wrote &lt;a href=&#34;http://wesleyhales.com/_examples/shares/intent/&#34;&gt;here&lt;/a&gt;.
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;h3&gt;Other references and good reads:&lt;/h3&gt;
-&lt;a href=&#34;http://benlog.com/articles/2012/02/09/a-simpler-webbier-approach-to-web-intents-or-activities/&#34;&gt;Web Activities&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tantek.com/2011/220/b1/web-actions-a-new-building-block&#34;&gt;Web Actions&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.smartjava.org/content/html5-web-intents-share-information-between-web-apps&#34;&gt;Dev article&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://plus.google.com/116171619992010691739/posts&#34;&gt;+WebIntents&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=O1YjdKh-rPg&amp;feature=player_embedded#!&#34;&gt;Intro video from Google IO 2012&lt;/a&gt;
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;script src=&#34;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&#34; type=&#34;text/javascript&#34; defer&gt;&lt;/script&gt;
-&lt;script src=&#34;http://code.highcharts.com/highcharts.js&#34; defer&gt;&lt;/script&gt;
-&lt;script src=&#34;http://code.highcharts.com/modules/exporting.js&#34; defer&gt;&lt;/script&gt;
-&lt;script src=&#34;http://wesleyhales.com/js/sharing-web-intents-charts.js&#34; defer&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     
