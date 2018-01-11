@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2009-05-28T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>ul horizontal tab menus, cross browser, with no hacks &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">ul horizontal tab menus, cross browser, with no hacks</h3>
+    </header>
+
+    <section class="post-content">
+        <p>There are too many times when I need a nice horizontal tab menu, using semantic html, and with cool graphics all at the same time. So this post is more for my personal reference and will shave a few hours off any ones html prototype. This is cross browser valid css 2.1 on IE6, IE7, FF3, Chrome and Safari without using any hacks.</p> 
+
+<p>The end result: 
+<img src="/images/jroller/tabs.jpg" alt=""/></p> 
+<style type="text/css"> 
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; } 
+.s0 { color: rgb(0,0,128); font-weight: bold; } 
+.s1 { } 
+.s2 { color: rgb(0,0,255); font-weight: bold; } 
+.s3 { color: rgb(0,0,255); } 
+.s4 { color: #4c5d89; font-weight: bold; } 
+.s5 { color: rgb(128,128,128); font-style: italic; } 
+</style> 
+<p>To start with, here is the css: 
+<pre> 
+<a name="l151"></span><span class="s5">/*----------------------Navigation*/</span><span class="s1"> 
+
+<a name="l152"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav </span><span class="s1">{ 
+<a name="l153"> </span><span class="s2">margin</span><span class="s1">: </span><span class="s3">45</span><span class="s4">px </span><span class="s3">0 0 236</span><span class="s4">px</span><span class="s1">; 
+<a name="l154"> </span><span class="s2">white-space</span><span class="s1">: </span><span class="s4">nowrap</span><span class="s1">; 
+<a name="l155"> </span><span class="s2">display</span><span class="s1">: </span><span class="s4">inline</span><span class="s1">; 
+<a name="l156"> </span><span class="s2">float</span><span class="s1">: </span><span class="s4">left</span><span class="s1">; 
+<a name="l157">} 
+<a name="l158"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li </span><span class="s1">{ 
+<a name="l159"></span><span class="s5">/*setup the container for tab divs*/</span><span class="s1"> 
+<a name="l160"> </span><span class="s2">list-style</span><span class="s1">: </span><span class="s4">none</span><span class="s1">; 
+<a name="l161"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l162"> </span><span class="s2">display</span><span class="s1">: </span><span class="s4">inline</span><span class="s1">; 
+<a name="l163"> </span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.2</span><span class="s4">em</span><span class="s1">; 
+<a name="l164"> </span><span class="s2">margin</span><span class="s1">: </span><span class="s3">0</span><span class="s1">; 
+<a name="l165"> </span><span class="s2">position</span><span class="s1">: </span><span class="s4">relative</span><span class="s1">; 
+<a name="l166">} 
+<a name="l167"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li div </span><span class="s1">{ 
+<a name="l168"></span><span class="s5">/*float all divs containing tab images left*/</span><span class="s1"> 
+<a name="l169"> </span><span class="s2">float</span><span class="s1">: </span><span class="s4">left</span><span class="s1">; 
+<a name="l170">} 
+<a name="l171"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav a </span><span class="s1">{
+<a name="l172"> </span><span class="s2">color</span><span class="s1">: </span><span class="s0">#777</span><span class="s1">; 
+<a name="l173"> </span><span class="s2">text-decoration</span><span class="s1">: </span><span class="s4">none</span><span class="s1">; 
+<a name="l174"> </span><span class="s2">font-weight</span><span class="s1">: </span><span class="s3">700</span><span class="s1">; 
+<a name="l175">} 
+<a name="l176"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">selected div</span><span class="s1">.</span><span class="s0">tab-main a </span><span class="s1">{ 
+<a name="l177"> </span><span class="s2">color</span><span class="s1">: </span><span class="s0">#fff</span><span class="s1">; 
+<a name="l178">} 
+<a name="l179"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li div</span><span class="s1">.</span><span class="s0">tab </span><span class="s1">{ 
+<a name="l180"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l181"> </span><span class="s5">/*-5 on margin will give us the overlap look*/</span><span class="s1"> 
+<a name="l182"> </span><span class="s2">margin</span><span class="s1">: </span><span class="s3">0 </span><span class="s1">-</span><span class="s3">5</span><span class="s4">px </span><span class="s3">0 0</span><span class="s1">; 
+<a name="l183">} 
+<a name="l184"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-main</span><span class="s1">, 
+<a name="l185"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">selected div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-main </span><span class="s1">{ 
+<a name="l186"> </span><span class="s2">float</span><span class="s1">: </span><span class="s4">left</span><span class="s1">; 
+<a name="l187"> </span><span class="s2">padding</span><span class="s1">: </span><span class="s3">5</span><span class="s4">px </span><span class="s3">15</span><span class="s4">px </span><span class="s3">0 10</span><span class="s4">px</span><span class="s1">; 
+<a name="l188"> </span><span class="s2">text-align</span><span class="s1">: </span><span class="s4">center</span><span class="s1">; 
+<a name="l189"> </span><span class="s2">margin</span><span class="s1">: </span><span class="s3">0 </span><span class="s4">auto </span><span class="s3">0 </span><span class="s4">auto</span><span class="s1">; 
+<a name="l190">} 
+<a name="l191"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">last</span><span class="s1">, 
+<a name="l192"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">selected div</span><span class="s1">.</span><span class="s0">tab-last div</span><span class="s1">.</span><span class="s0">last </span><span class="s1">{ 
+<a name="l193"> </span><span class="s2">float</span><span class="s1">: </span><span class="s4">left</span><span class="s1">; 
+<a name="l194"> </span><span class="s2">padding</span><span class="s1">: </span><span class="s3">5</span><span class="s4">px </span><span class="s3">10</span><span class="s4">px </span><span class="s3">0 10</span><span class="s4">px</span><span class="s1">; 
+<a name="l195"> </span><span class="s2">text-align</span><span class="s1">: </span><span class="s4">center</span><span class="s1">; 
+<a name="l196"> </span><span class="s2">margin</span><span class="s1">: </span><span class="s3">0 </span><span class="s4">auto </span><span class="s3">0 </span><span class="s4">auto</span><span class="s1">; 
+<a name="l197">} 
+<a name="l198"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">inactive div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-main </span><span class="s1">{ 
+<a name="l199"> </span><span class="s2">background</span><span class="s1">: </span><span class="s0">url</span><span class="s1">(</span><span class="s4">../images/nav/nav-bg-center-inactive.gif</span><span class="s1">) </span><span class="s4">repeat-x left top</span><span class="s1">; 
+<a name="l200"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l201">} 
+<a name="l202"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">inactive div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-left </span><span class="s1">{ 
+<a name="l203"> </span><span class="s2">width</span><span class="s1">: </span><span class="s3">2</span><span class="s4">px</span><span class="s1">; 
+<a name="l204"> </span><span class="s2">background</span><span class="s1">: </span><span class="s0">url</span><span class="s1">(</span><span class="s4">../images/nav/nav-bg-left-inactive.gif</span><span class="s1">) </span><span class="s4">no-repeat left top</span><span class="s1">; 
+<a name="l205"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l206">} 
+<a name="l207"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">inactive div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-right </span><span class="s1">{ 
+<a name="l208"> </span><span class="s2">width</span><span class="s1">: </span><span class="s3">2</span><span class="s4">px</span><span class="s1">; 
+<a name="l209"> </span><span class="s2">background</span><span class="s1">: </span><span class="s0">url</span><span class="s1">(</span><span class="s4">../images/nav/nav-bg-right-inactive.gif</span><span class="s1">) </span><span class="s4">no-repeat right top</span><span class="s1">; 
+<a name="l210"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l211">} 
+<a name="l212"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">selected div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-main </span><span class="s1">{ 
+<a name="l213"> </span><span class="s2">background</span><span class="s1">: </span><span class="s0">url</span><span class="s1">(</span><span class="s4">../images/nav/nav-bg-center-active.gif</span><span class="s1">) </span><span class="s4">repeat-x left top</span><span class="s1">; 
+<a name="l214"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l215">} 
+<a name="l216"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">selected div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-left </span><span class="s1">{ 
+<a name="l217"> </span><span class="s2">background</span><span class="s1">: </span><span class="s4">transparent </span><span class="s0">url</span><span class="s1">(</span><span class="s4">../images/nav/nav-bg-left-active.gif</span><span class="s1">) </span><span class="s4">no-repeat left top</span><span class="s1">; 
+<a name="l218"> </span><span class="s2">width</span><span class="s1">: </span><span class="s3">4</span><span class="s4">px</span><span class="s1">; 
+<a name="l219"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+<a name="l220">} 
+<a name="l221"></span><span class="s0">div</span><span class="s1">.</span><span class="s0">nav-container ul</span><span class="s1">.</span><span class="s0">primary-nav li</span><span class="s1">.</span><span class="s0">selected div</span><span class="s1">.</span><span class="s0">tab div</span><span class="s1">.</span><span class="s0">tab-right </span><span class="s1">{ 
+<a name="l222"> </span><span class="s2">background-image</span><span class="s1">: </span><span class="s0">url</span><span class="s1">(</span><span class="s4">../images/nav/nav-bg-right-active.gif</span><span class="s1">); 
+<a name="l223"> </span><span class="s2">width</span><span class="s1">: </span><span class="s3">4</span><span class="s4">px</span><span class="s1">; 
+<a name="l224"> </span><span class="s2">height</span><span class="s1">: </span><span class="s3">28</span><span class="s4">px</span><span class="s1">; 
+}</span> 
+</pre> 
+</p> 
+
+<p>And finally the html: 
+<code><pre> 
+<a name="l31"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;nav-container&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l32"> </span><span class="s0">&lt;</span><span class="s4">ul </span><span class="s1">class=</span><span class="s2">&quot;primary-nav &quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l33"> </span><span class="s0">&lt;</span><span class="s4">li </span><span class="s1">class=</span><span class="s2">&quot;selected&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l34"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l35"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-left&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l36"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-main&quot;</span><span class="s0">&gt;&lt;</span><span class="s4">a </span><span class="s1">href=</span><span class="s2">&quot;#&quot;</span><span class="s0">&gt;</span><span class="s3">Home</span><span class="s0">&lt;/</span><span class="s4">a</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l37"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-right&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l38"> </span><span class="s0">&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l39"> </span><span class="s0">&lt;/</span><span class="s4">li</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l40"> </span><span class="s0">&lt;</span><span class="s4">li </span><span class="s1">class=</span><span class="s2">&quot;inactive&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l41"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l42"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-left&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l43"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-main&quot;</span><span class="s0">&gt;&lt;</span><span class="s4">a </span><span class="s1">href=</span><span class="s2">&quot;#&quot;</span><span class="s0">&gt;</span><span class="s3">Profile</span><span class="s0">&lt;/</span><span class="s4">a</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l44"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-right&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l45"> </span><span class="s0">&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l46"> </span><span class="s0">&lt;/</span><span class="s4">li</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l47"> </span><span class="s0">&lt;</span><span class="s4">li </span><span class="s1">class=</span><span class="s2">&quot;inactive&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l48"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l49"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-left&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l50"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-main&quot;</span><span class="s0">&gt;&lt;</span><span class="s4">a </span><span class="s1">href=</span><span class="s2">&quot;#&quot;</span><span class="s0">&gt;</span><span class="s3">About Us</span><span class="s0">&lt;/</span><span class="s4">a</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l51"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-right&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l52"> </span><span class="s0">&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l53"> </span><span class="s0">&lt;/</span><span class="s4">li</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l54"> </span><span class="s0">&lt;</span><span class="s4">li </span><span class="s1">class=</span><span class="s2">&quot;inactive&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l55"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab&quot;</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l56"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-left&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l57"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-main last&quot;</span><span class="s0">&gt;&lt;</span><span class="s4">a </span><span class="s1">href=</span><span class="s2">&quot;#&quot;</span><span class="s0">&gt;</span><span class="s3">Help</span><span class="s0">&lt;/</span><span class="s4">a</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l58"> </span><span class="s0">&lt;</span><span class="s4">div </span><span class="s1">class=</span><span class="s2">&quot;tab-right&quot;</span><span class="s0">&gt;&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l59"> </span><span class="s0">&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l60"> </span><span class="s0">&lt;/</span><span class="s4">li</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l61"> </span><span class="s0">&lt;/</span><span class="s4">ul</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l62"> </span><span class="s0">&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span><span class="s3"> 
+<a name="l63"> </span><span class="s0">&lt;/</span><span class="s4">div</span><span class="s0">&gt;</span> 
+
+</pre></code> 
+</p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2009-05-28T00:00:00Z">May 28, 2009</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=ul%20horizontal%20tab%20menus%2c%20cross%20browser%2c%20with%20no%20hacks&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2009%2f05%2f28%2ful-horizontal-tab-menus-cross-browser-with-no-hacks"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2009%2f05%2f28%2ful-horizontal-tab-menus-cross-browser-with-no-hacks"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2009%2f05%2f28%2ful-horizontal-tab-menus-cross-browser-with-no-hacks"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	Java
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

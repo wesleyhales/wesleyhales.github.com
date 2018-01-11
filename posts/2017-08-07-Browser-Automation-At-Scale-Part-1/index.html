@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2017-08-07T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>Browser Automation At Scale - Part 1 &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">Browser Automation At Scale - Part 1</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<h4 id="docker-swarm-and-selenium">Docker Swarm and Selenium</h4>
+
+<p>Both Docker and Selenium are pretty much household names these days in the world of software engineering. I&rsquo;ve been fascinated
+with Docker since its inception and have been using it for side projects and in my day job for a few years now.
+I recently came across the need to test a Chrome extension and load a web page while that extension is installed.
+This test would load the page, wait for it to load, check some JS variables and APIs and then spit out a screenshot
+and any needed metrics. In the end, each test would run from multiple geographies and produce a report on performance
+and visual defects to be viewed at any point in time.</p>
+
+<p>Here&rsquo;s the End-to-End Architecture:</p>
+
+<ul>
+<li>Docker Swarm underlying connectivity across all nodes</li>
+<li>Selenium (Grid) network with single centralized hub for test queuing</li>
+<li>Selenium nodes per geography. Dedicated 4GB (minimum) CoreOS instance for Chrome sessions managed by Selenium.</li>
+<li>Navigation and Resource timing data along with Screenshots stored in linked postgres DB container.</li>
+<li>Centralized web application to manage test reporting and test data storage.</li>
+</ul>
+
+<p>For this first installment, we&rsquo;re going to setup Selenium Grid on top of Docker Swarm, run a test and get some visibility into the DOM
+and how things work. The connectivity and orchestration will be managed by Swarm and Selenium will open the browser
+(Chrome for this example) and run our tests.
+What I&rsquo;m about to show you, in this and upcoming installments, is extremely powerful and should only be used for good legitimate browser testing
+against sites you own or are responsible for ;-)
+I&rsquo;m going to scale everything back to the simplest
+setup possible and we&rsquo;ll expand for world domination in later tutorials.</p>
+
+<p>Other (Headless) browsers such as Firefox, PhantomJS and Headless Chrome can be plugged in or substituted at any time.
+All we need to worry about is to make sure the tests are written using the WebDriver API.</p>
+
+<h4 id="setup-docker-swarm-along-with-the-selenium-grid-hub-and-node">Setup Docker Swarm along with the Selenium Grid, Hub and Node</h4>
+
+<p>There are four main components to the underlying testing infrastructure, which I quickly summarize below. The good news
+is that there are no configuration files to write and everything is used out of box from the official Docker repositories
+of each project. The goal of my setup is to be as disposable as possible. Everything is to be reproducible without any
+glue code or unnecessary abstraction layers.</p>
+
+<h5 id="quick-component-summary">Quick Component Summary</h5>
+
+<ul>
+<li>For Docker Swarm information, check out <a href="https://docs.docker.com/engine/swarm/">the docs</a> for the full rundown. It&rsquo;s the underlying
+networking, provisioning, and orchestration layer for docker containers.</li>
+<li><a href="http://www.seleniumhq.org/docs/07_selenium_grid.jsp">Selenium Grid</a> allows you run your tests on different machines against
+different browsers in parallel. A grid consists of a single hub, and one or more nodes, Hub and Node are the two main elements
+that you come across when creating a grid.</li>
+<li>The <a href="https://hub.docker.com/r/selenium/hub/">Selenium Hub</a> instance will find an available node that matches the criteria we send in with our test parameters.
+Once it finds a machine that matches a browser version you want to run against, the hub reroutes the test to the desired node.</li>
+<li>The <a href="https://hub.docker.com/r/selenium/node-chrome/">Selenium Node</a> used for this example is Google Chrome.</li>
+</ul>
+
+<h4 id="swarm-and-hub-machine-setup">Swarm and Hub - Machine Setup</h4>
+
+<p>The first thing you need to do is login to your favorite hosting provider that can provision CoreOS instances. For the hub
+I&rsquo;ve been using a 1 processor 2GB CoreOS machine. In my testing, I ran into problems with anything less that 2GB of memory for the hub.</p>
+
+<p>SSH into the newly created instance and run the following:</p>
+
+<pre><code>docker swarm init --advertise-addr [your external IP]
+docker network create -d overlay selenium-grid
+docker service create --network selenium-grid --name hub -p 4444:4444 selenium/hub
+</code></pre>
+
+<ul>
+<li>Here we&rsquo;re initializing Docker Swarm, the Selenium Grid networking layer and the Selenium Hub Service.</li>
+<li>Using this machine&rsquo;s IP address, visit this url (http://[your ip]:4444/grid/console#) to view the Selenium Grid Console. If you cant see it,
+something is wrong. And debugging this setup is a whole other blog post.</li>
+<li>Leave this terminal window open. We&rsquo;ll be back in a sec.</li>
+</ul>
+
+<h3 id="selenium-node-machine-setup">Selenium Node - Machine Setup</h3>
+
+<p>Now we&rsquo;ll setup the first Chrome Node that will connect to the Hub. You&rsquo;ll need to create another CoreOS VM, this time with
+a minimum of 2 processors and 4GB of memory. Also, make a note of the hostname of this machine by using the following command.
+The hostname is normally defined within the hosting provider&rsquo;s UI. If not, you can can change it (if needed) once you SSH into the instance:</p>
+
+<pre><code> hostnamectl
+</code></pre>
+
+<p>Now it&rsquo;s time to join this Node to the Swarm.
+The join command was given to you when you executed docker init above. If you lost it,
+run <code>docker swarm join-token worker</code> from the hub instance again and copy and paste it into this Node instance.</p>
+
+<pre><code>docker swarm join --token [token] [ip]:[port]
+</code></pre>
+
+<p>That&rsquo;s it for this machine. Everything else will be orchestrated from the hub (until part two of this series
+where I show you how to install a Chrome extension on the fly)</p>
+
+<h3 id="selenium-node-service-deployment">Selenium Node - Service Deployment</h3>
+
+<p>Go back into the main hub instance from the first step. Let&rsquo;s deploy the Selenium Node Docker service. This will start the
+Selenium Chrome client on the Node machine you just setup. Remember everything will be deployed and managed from the hub.</p>
+
+<pre><code>docker service create --network selenium-grid --name selenium-node-chrome-sfo --constraint 'node.hostname==sfo1-node-01' -p 5560:5560 --mount type=bind,src=/dev/shm,dst=/dev/shm -e HUB_PORT_4444_TCP_ADDR=hub -e HUB_PORT_4444_TCP_PORT=4444 -e NODE_MAX_INSTANCES=1 -e NODE_MAX_SESSION=1 --replicas 1 selenium/node-chrome bash -c 'SE_OPTS=&quot;-browser applicationName=sfo1-node,browserName=chrome,maxInstances=1 -host $HOSTNAME -port 5560&quot; /opt/bin/entry_point.sh'
+</code></pre>
+
+<p>That&rsquo;s a hefty command and you might be wondering what all of the switched and parameters are for. I&rsquo;ll attempt to break it
+ down for you here:</p>
+
+<p>1) <code>node.hostname==sfo1-node-01</code></p>
+
+<ul>
+<li>This is the hostname of the actual CoreOS instance. We&rsquo;re using it to constrain the selenium environment to only run on this CoreOS vm.
+This way, we won&rsquo;t have to worry about other tests running in parallel and messing with memory or CPU usage. This is meant to be a pristine,
+white glove environment.</li>
+<li>If you&rsquo;re creating an instance for another region, you&rsquo;ll want to replace &lsquo;sfo&rsquo; above with that region&rsquo;s airport or country code.
+<br /></li>
+</ul>
+
+<p>2) <code>SE_OPTS=-browser applicationName=sfo1-node</code></p>
+
+<ul>
+<li>This parameter gives our test script a hook so that it will run on this specific SFO node.</li>
+</ul>
+
+<p>3) <code>--name selenium-node-chrome-sfo</code></p>
+
+<ul>
+<li>This is just a name to identify this machine within docker. Should be kept in some kind of naming convention order.</li>
+</ul>
+
+<p>4) <code>--mount type=bind,src=/dev/shm,dst=/dev/shm</code></p>
+
+<ul>
+<li>This command forces Docker to use the host&rsquo;s memory. When Chrome continually (or randomly) crashed during test runs, this command seemed to solve the issue.
+<br /></li>
+</ul>
+
+<p>5) <code>-e NODE_MAX_INSTANCES=1 -e NODE_MAX_SESSION=1 --replicas 1</code></p>
+
+<h4 id="the-test-script">The Test Script</h4>
+
+<p>To get started, we&rsquo;ll setup some basic logging so we can see the test execute and hopefully use it for debugging purposes later.
+<script src="https://gist.github.com/wesleyhales/ca2b8f8844061b4b4d70c82ecb744ea3.js"></script></p>
+
+<ul>
+<li>Server logging basically tells you when the test execution began and when it ended.</li>
+<li>Performance Logging gives us more information around frame navigation. We&rsquo;ll be able to correlate this later with navigation and Resource timing APIs.</li>
+<li>For all loggin configuration options see <a href="https://github.com/SeleniumHQ/selenium/wiki/Logging">https://github.com/SeleniumHQ/selenium/wiki/Logging</a></li>
+</ul>
+
+<p>In the following snippet, we&rsquo;re adding more criteria for our test and actually sending log messages that we setup earlier to console.log:
+<script src="https://gist.github.com/wesleyhales/83d2ae26df603b1b08c74cfbb8c8fee8.js"></script></p>
+
+<ul>
+<li>The first few lines specify which node we&rsquo;re going to run this test on. Later we&rsquo;ll parameterize this to handle more regions.</li>
+<li>This is followed by the actual WebDriver initialization and setup. Make sure you add your hub IP address from the first step above.</li>
+<li>Finally you see the console statements for the native WebDriver logging.</li>
+</ul>
+
+<p>And finally, we get to the meat of this exercise:
+<script src="https://gist.github.com/wesleyhales/ee1a3d298830d6dbc50fb0a8be6b6a1d.js"></script></p>
+
+<ul>
+<li>First we setup the screen size for the browser window and then actually perform the GET request.</li>
+<li>Then we see the driver.wait command. I&rsquo;m using this a a fail safe to ensure the browser has time to populate the Resource Timing entries for perf measurements.</li>
+<li>Next we take a screenshot and save it to the filesystem.</li>
+</ul>
+
+<p>When this script executes, you&rsquo;ll see all of our logging entries print out to the main terminal window. Since all
+this data is in JSON format, it makes it easy for us to setup a database and store it on each run. In the next article
+I&rsquo;ll show you how to wrap this script in a node web application and store the JSON in Postgres (along with the screenshot) on each run.
+In Part 3 we&rsquo;ll look at scaling out to support more regions, look at why nodes seem to fail randomly, and how to add multiple
+nodes from different hosting providers e.g. AWS, Digital Ocean, etc&hellip;</p>
+
+<p><br/>
+<br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2017-08-07T00:00:00Z">August 7, 2017</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Browser%20Automation%20At%20Scale%20-%20Part%201&url=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-08-07-Browser-Automation-At-Scale-Part-1%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-08-07-Browser-Automation-At-Scale-Part-1%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-08-07-Browser-Automation-At-Scale-Part-1%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	docker swarm, selenium hub, selenium grid, chrome
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

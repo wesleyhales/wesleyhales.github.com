@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2013-10-23T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>Basic Screen Updates with Angular and requestAnimationFrame &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">Basic Screen Updates with Angular and requestAnimationFrame</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<p><br/></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using <a href="http://jsfiddle.net/IgorMinar/ZSBhg/2/">setInterval</a> and
+Angular&rsquo;s builtin <a href="http://jsfiddle.net/ganarajpr/LQGE2/">$timeout</a>.</p>
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/IgorMinar/ZSBhg/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p>Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change
+is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout).
+If you want to read more about $scope.$apply check out <a href="http://jimhoskins.com/2012/12/17/angularjs-and-apply.html">this article</a>.</p>
+
+<p>For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
+the user know when it&rsquo;s about to refresh the data.</p>
+
+<p><a href="https://apigee.com/usergrid/dash/app/index-ma.html"><img src="/images/posts/2013-10-23/dashboard.PNG" alt="apigee app services dashboard" class="marginTop10 max-width-100"></a></p>
+
+<p>I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn&rsquo;t believe how much jank it was causing.
+There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
+ check it out <a href="http://www.youtube.com/watch?v=mSK70FwUz2A">here</a>.</p>
+
+<p>If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
+<a href="/images/posts/2013-10-23/bad-fps.PNG"><img src="/images/posts/2013-10-23/bad-fps.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a>
+Yep, That&rsquo;s 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.</p>
+
+<p>Also, if you look at the memory being consumed, we&rsquo;re taking quite a hit for this little counter.
+<a href="/images/posts/2013-10-23/bad-memory.PNG"><img src="/images/posts/2013-10-23/bad-memory.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a>
+We maintain around 25MB and then shoot up to 34 when the page does its refresh.
+<br/>
+<br/></p>
+
+<h2 id="raf-to-the-rescue">rAF to the rescue!</h2>
+
+<p>I&rsquo;m still trying to bring requestAnimationFrame into my dev thought process, and this was a fine chance to see if it could save the day.
+Here&rsquo;s the code I put together:
+<iframe width="100%" height="300" src="http://jsfiddle.net/wesleyhales/59SeE/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+
+<p>And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
+<a href="/images/posts/2013-10-23/good-fps.PNG"><img src="/images/posts/2013-10-23/good-fps.PNG" alt="good fps" class="marginTop10 max-width-100"></a></p>
+
+<p>Also the memory footprint is greatly reduced:
+<a href="/images/posts/2013-10-23/good-memory.PNG"><img src="/images/posts/2013-10-23/good-memory.PNG" alt="good fps" class="marginTop10 max-width-100"></a>
+Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.</p>
+
+<p>A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the
+framework lifecycle. I need to get a baseline on the AngularJS runtime before I can make any assumptions (or point fingers).
+This is my first perf analysis of the framework and I plan on doing much more in the coming months.
+<br/>
+<br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2013-10-23T00:00:00Z">October 23, 2013</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Basic%20Screen%20Updates%20with%20Angular%20and%20requestAnimationFrame&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2013%2f10%2f23%2fBasic-Screen-Updates-with-Angular-and-requestAnimationFrame"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2013%2f10%2f23%2fBasic-Screen-Updates-with-Angular-and-requestAnimationFrame"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2013%2f10%2f23%2fBasic-Screen-Updates-with-Angular-and-requestAnimationFrame"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	rAF, requestAnimationFrame, angular, angularjs, setinterval, settimeout, jank
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

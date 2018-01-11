@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2017-10-09T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>Browser Automation At Scale - DevSecOps and the Equifax Breach &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">Browser Automation At Scale - DevSecOps and the Equifax Breach</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<p>If you’ve been following along in <a href="http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a> and <a href="http://wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/">Part 2</a>, you already have the basic framework to implement a globally distributed Browser Automation Network. Now, we can easily write a few lines of JavaScript and augment it to create a sophisticated security scanner that will fly under the radar of most security tools and check for application level vulnerabilities - exactly like the one found at Equifax.com a few weeks back. This article covers how to run a scanner that could’ve prevented the Equifax breach if deployed in a <a href="http://www.devsecops.org/">DevSecOps</a> mindset.</p>
+
+<p>In the Web Performance world, you have two types of tests that allow for metrics gathering: Synthetic and Real User. The goal of Synthetic testing is to monitor the user experience in a web browser, from any geography, continuously and in an automated fashion. This is done by having a crafted script navigate through the app in a manner that simulates a real user, and ensuring the performance measurements of those actions are within target goals. This level of monitoring is critical to operations for detecting issues at runtime, experimental features, or how assets are being delivered to the browser.</p>
+
+<p>Real User Monitoring gives a more accurate view of what users actually experienced on your site by taking live performance samples during the user session. This data is gathered from the same browser APIs that Synthetic tests use, but it’s actual data from a live user in the wild dealing with all sorts of variables that synthetic testing cannot recreate. This perf data is sent through an XHR request back to a web server and is used for key business decisions within the enterprise (it’s critical to the executive team). In short, Synthetic testing analytics is used in Ops and RUM data is used at the business level.</p>
+
+<p>In cyber security, data is gathered and used almost exactly the same way. You have Synthetic testing to scan applications for vulnerabilities and you have Real User (or Attacker) Monitoring for analyzing browser signals that can be used to fingerprint attack groups and to create new JavaScript or browser based countermeasures. Real Attacker Monitoring or RAM data will be analyzed offline to identify where the attack is coming from and steps for mitigation will be determined by the organization’s security team (I’ll cover this topic in depth in a later article).</p>
+
+<p>Unlike performance data, which can be tied to actual revenue, attack data does not get the same executive-level visibility unless of course, there’s been a breach.</p>
+
+<p>In the past year, the Struts framework has received some bad press due to the libraries that were included in older versions of the project.  For example, <a href="http://struts.apache.org/announce.html">all but one </a>of the project’s official 2017 announcements contained a security vulnerability.</p>
+
+<p>The unfortunate thing is that every open source project (like Struts) depends on standard utility libraries that allow project authors to not have to reinvent the wheel. E.g. Object serialization, parsing, and so on. Dependency (or 3rd party) vulnerabilities like this will continue to rise and be a thorn in the side of every organization on the web.</p>
+
+<p>The attack vector utilized in Equifax’s case is a massive industry wide problem for older web applications that are no longer maintained, or newer ones that are simply unaware that a known vulnerability exists.</p>
+
+<h3 id="security-is-everyone-s-responsibility">Security is Everyone’s Responsibility</h3>
+
+<p>If you’re not familiar with the concepts of DevSecOps, take 5 minutes and read the <a href="http://www.zdnet.com/article/devsecops-what-it-is-and-how-it-can-help-you-innovate-in-cybersecurity/">manifesto</a>. Here’s a quick blurb from the third paragraph:</p>
+
+<p>&ldquo;We won&rsquo;t simply rely on scanners and reports to make code better. We will attack products and services like an outsider to help you defend what you&rsquo;ve created. We will learn the loopholes, look for weaknesses, and we will work with you to provide remediation actions instead of long lists of problems for you to solve on your own.&rdquo;</p>
+
+<p>There are many types of tools, scanners, and commercial products that try to watch, block or detect attacks within enterprise web applications:</p>
+
+<ol>
+<li>Web Application Firewall - HTTP Header inspection</li>
+<li>Automation Detection - Browser Signals</li>
+<li>Inline Commercial Solutions (Application and Network Security)</li>
+</ol>
+
+<p>I’m sure most readers of this article already work for a company that implements one of the above. For those that don’t have an enterprise level security solution in place, <a href="https://github.com/theonemule/docker-waf">nginx+modsecurity</a> in front of your origin is a great place to start for a WAF. From there add the <a href="https://www.netnea.com/cms/apache-tutorial-7_including-modsecurity-core-rules/">owasp core ruleset configuration</a> and you have a product that most companies offer as an enterprise level WAF solution.</p>
+
+<p>To launch our attack on the enterprise, we’re going to need a few pieces of information before getting started.</p>
+
+<ul>
+<li><strong>Gather a List of Web Applications</strong>
+
+<ul>
+<li>Knowing the entire list of web applications is a gruesome task for some enterprises due to geographic growth, siloed business units, marketing campaigns and ownership through acquisitions - along with rogue environments that were stood up by a no longer employed, 10x developer a few years back.</li>
+<li>For this article, the scope of my analysis is all web applications indexed by Google. I performed a search for all sites that use the well known Struts .action or .do file extension. e.g. &ldquo;filetype:action doupload&rdquo; or “filetype: do”</li>
+</ul></li>
+<li><strong>Understand Potential Vulnerabilities</strong>
+
+<ul>
+<li>After you create the site list, you should document the framework and versions of each web application. This is especially important for older deployments that have long been out of mind. This list will allow you to compare and keep tabs on vulnerabilities as <a href="https://nvd.nist.gov/vuln/data-feeds">they’re announced</a> by each <a href="http://struts.apache.org/announce.html#a20170905">project</a> and version.</li>
+</ul></li>
+<li><strong>Create the Attack</strong>
+
+<ul>
+<li>With a headline breach, it’s fairly easy to find the specific <a href="http://blog.talosintelligence.com/2017/03/apache-0-day-exploited.html">source code</a> that is vulnerable and how to replicate the attack. Tools like metasploit and github can yield attack reproduction code based on the CVE and other tools like Shodan or Censys might also come in handy if the application can be identified by <a href="https://en.wikipedia.org/wiki/Banner_grabbing">banner</a> or ports.</li>
+</ul></li>
+<li><strong>Know Your Current Security Stack</strong>
+
+<ul>
+<li>Which (if any) commercial products and/or Open Source tools are currently deployed to protect your Web Applications? Do you need to whitelist your attack scanner with the security team? Since we’re attacking from the front door, I don’t really consider this task a &ldquo;must do&rdquo;. If you stick with the DevSecOps ideals, the goal is to fly under the radar of your current security stack. I’m pretty sure that attackers will not ask your security team to whitelist them.</li>
+</ul></li>
+<li><strong>Remediation Steps</strong>
+
+<ul>
+<li>In the case of the Struts exploit, you must patch the code or upgrade to a new version of the framework - expensive options for many companies. The official solution provided by Apache suggested either upgrading to a patched version or switching to a different multipart parse implementation. An upgrade can be a long process that involves backups, testing, and server reboots.</li>
+<li>You could also use a WAF to block the explicit attack header by creating a rule to detect the malicious header - time consuming and can be expensive with false positives. This tuning would typically take weeks and analyzing each header and parsing for the pattern has a specific cost based on the size of the header and your RPS (requests per second).</li>
+<li>With the right combination of inspecting application dependencies for known vulnerabilities, HTTP level header analysis, and runtime monitoring of the APIs that are implicitly exposed in a web browser, applications can safely be protected from adversaries. Finding the right combination can be challenging and it’s a challenge that I enjoy. Feel free to reach out to me directly at <a href="mailto:wesley@tcell.io">wesley@tcell.io</a> if you’d like to discuss.</li>
+</ul></li>
+</ul>
+
+<h3 id="step-1-the-target">Step 1 - The Target</h3>
+
+<p>For this example, I’m going to use the <a href="http://apache.mirrors.tds.net/struts/2.5.10/">Struts showcase application</a> to run my scanner against. You can also find a list of Struts target sites through Google by searching for the following <a href="https://www.google.com/search?q=filetype%3Aaction+doupload">pattern</a>. There are roughly 700 sites that could possibly be affected by this vulnerability and to my surprise, running this scanner on the first few results shows that they are in fact vulnerable. This also speaks to how massive vulnerabilities like this are and seven months after the initial announcement are still exposed through a public web server.</p>
+
+<p><img src="/images/posts/2017-10-09/image_0.png" alt="image alt text" /></p>
+
+<p>If you wanted to harvest all of Google’s search results in an automated fashion, you can run the following JavaScript from Chrome’s developer tools:</p>
+
+<p>var nodesArray = [].slice.call(document.querySelectorAll(&ldquo;h3.r a&rdquo;));(nodesArray.forEach(function(item){console.log(&rsquo;\&rdquo; + item.href + &lsquo;\&lsquo;,&rsquo;)}))</p>
+
+<p>This will produce the URL’s of each target so they can be easily pasted in the <a href="https://github.com/wesleyhales/site_runner/blob/scanner/model/AllSites.js">list of sites</a> to scan.</p>
+
+<p><img src="/images/posts/2017-10-09/image_1.png" alt="image alt text" /></p>
+
+<h3 id="step-2-attack-setup">Step 2 - Attack Setup</h3>
+
+<p>There are multiple ways to launch <a href="https://cwiki.apache.org/confluence/display/WW/S2-046">this type of attack</a> since it’s just a matter of adding data to a header and sending a POST request. In short, the payload of this attack is sent through an HTTP header to an API that uses the Jakarta Multipart parser. You might also use cURL, metasploit or some other tool that can send an HTTP request with the attack header. Here I’m using Chrome for a few reasons:</p>
+
+<ol>
+<li>I’m loading the page and executing JavaScript in a real web browser. This already checks the box on many commercial security tools who are asking &ldquo;Is this a real user or a bot?&rdquo;</li>
+<li>I’m using the browser’s XHR implementation to make the attack request. This gives me implicit access to cookies and any other request signing that needs to happen from a security standpoint.</li>
+<li>It’s easy to maintain this (along with many other tests) as a single test script that can be executed with a suite.</li>
+</ol>
+
+<p>See source code <a href="https://github.com/wesleyhales/site_runner/blob/scanner/selenium/crawl-search.js">here</a>.</p>
+
+<p><img src="/images/posts/2017-10-09/image_2.png" alt="image alt text" /></p>
+
+<p>First, the above script opens a web page and looks for all the forms in the DOM. This is part of the scanning for susceptible targets within the web app. For each form action URL found, we launch the attack through an XHR request.</p>
+
+<p>If the target is vulnerable, the report JSON data will be stored and shown in the scanning overview:</p>
+
+<p><img src="/images/posts/2017-10-09/image_3.png" alt="image alt text" /></p>
+
+<p>If this grid of scanners were running on a regular basis when new vulnerabilities are <a href="https://nvd.nist.gov/vuln/data-feeds">released</a>, then we’d have a bit more visibility into how vulnerable our web apps really are. In the case of breaches like Equifax, it may be that the enterprise already knows about the vulnerability and merely did not prioritize the effort to patch the problem or it was simply a process issue. With a tool like this, which can help security teams cut down on time to assess vulns in the wild, priority and process will be flattened for issues found on your live production sites.</p>
+
+<h2 id="shout-outs">Shout Outs</h2>
+
+<p>Thanks to <a href="https://www.linkedin.com/in/cchio">Clarence Chio</a> and <a href="https://www.linkedin.com/in/boris-chen-4b118a1/">Boris Chen</a> for their valuable review and feedback.</p>
+
+<p><br/>
+<br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2017-10-09T00:00:00Z">October 9, 2017</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Browser%20Automation%20At%20Scale%20-%20DevSecOps%20and%20the%20Equifax%20Breach&url=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	devsecops, secops, automation, chrome, rasp, equifax
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

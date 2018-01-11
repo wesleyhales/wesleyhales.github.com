@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2017-09-01T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>Browser Automation At Scale - Part 2 &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">Browser Automation At Scale - Part 2</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<p>In <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a>, I reviewed the gory details of the foundation required to run synthetic browser testing at scale.
+Now that we have a framework for building out our tests, we can move forward with wrapping
+our test runner in a web application so that the metrics we care about can be gathered and viewed through a decent UI.</p>
+
+<p>For this example, I&rsquo;m going to use the Alexa top 12 news sites and execute a test over each one with the latest Chrome web browser. It will
+open the page and grab the resource timing information along with a screenshot as shown here:
+<img src="/images/posts/2017-09-03/site_runner.png" alt="" />
+The <a href="https://github.com/wesleyhales/site_runner">demo web application</a> that we&rsquo;re about to setup will store the above screenshots and timing information in Postgres.
+The screenshots are base64 and a bit large compression wise, but that issue can be conquered at a later date. For now, all we
+care about is to get things running and to scale our tests into every geography with a datacenter that supports CoreOS.
+Let&rsquo;s review the core architecture:
+<img src="/images/posts/2017-09-03/swarm_setup.png" alt="" /></p>
+
+<h3 id="setting-up-site-runner">Setting up site_runner</h3>
+
+<p>If you followed along in <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a>, you can use your own Docker Swarm infrastructure to run your tests. For this
+article, I&rsquo;m only going to review the simple web application used to run and manage the tests - <a href="https://github.com/wesleyhales/site_runner">site_runner</a>.
+If you haven&rsquo;t already, go ahead and clone the repository. You can run this within your local docker environment or
+on another hosted CoreOS instance.</p>
+
+<pre><code>git clone git@github.com:wesleyhales/site_runner.git
+</code></pre>
+
+<h4 id="database-setup">Database Setup</h4>
+
+<p>Next, we&rsquo;ll setup a Postgres database. This will be used to store all of our test data and screenshots (in JSON format and queryable).</p>
+
+<pre><code>docker run -p 5432:5432 --name siterunner_pg -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+</code></pre>
+
+<p>Now we need to login to the database and set things up:</p>
+
+<pre><code>docker run -it --rm --link siterunner_pg:postgres postgres psql -h postgres -U postgres
+</code></pre>
+
+<p>This command will run the Postgres client and will ask for a password (mysecretpassword).
+After successful login, copy and paste the following and hit enter:</p>
+
+<pre><code>CREATE DATABASE SITERUNNER;
+\c siterunner;
+CREATE EXTENSION citext;
+  CREATE TABLE timingdata (
+    id serial primary key,
+    data jsonb,
+    image text,
+    email citext unique
+  );
+</code></pre>
+
+<h4 id="web-application-setup">Web Application Setup</h4>
+
+<p>The site_runner web application is a custom test runner built to give simple reporting and an API for the tests
+ that need to be ran. Open a new terminal window and navigate to the repository you cloned at the beginning of this article and run:</p>
+
+<pre><code> docker build -t wesleyhales/site_runner .
+ docker run -p 3000:3000 --link siterunner_pg:postgres -d wesleyhales/site_runner
+</code></pre>
+
+<p>This will start your application at <a href="http://localhost:3000">http://localhost:3000</a>. Visit the URL and ensure you see a page with a link and some table headers.
+There won&rsquo;t be any data to review yet, which brings us to the next step&hellip;</p>
+
+<p>The site_runner demo application
+uses /delete to clear the database and /startTest to start the tests (pretty simple, right?). startTest requires a query parameter
+for which region you&rsquo;d like your tests to be ran.  If you followed along in Part 1, you would use sf1-node as your query paramter argument.
+For this article, I&rsquo;ve added another node in New York, so an HTTP request to the following will kick off your tests in that region:</p>
+
+<ul>
+<li><a href="http://localhost:3000/startTest?nodeName=ny3-node">http://localhost:3000/startTest?nodeName=ny3-node</a></li>
+</ul>
+
+<p>If everything goes as planned, you will see the following response from hitting that URL:
+<img src="/images/posts/2017-09-03/test_response.png" alt="" /></p>
+
+<p>Let&rsquo;s also get a tail on our web server logs so you can see the messages as each test runs:</p>
+
+<pre><code>docker logs -f [your container ID]
+</code></pre>
+
+<p>When each test finishes (and you refresh the page), you&rsquo;ll see the screenshot and some other simple data about when and where the
+test was ran.
+<img src="/images/posts/2017-09-03/test_result.png" alt="" />
+If tests aren&rsquo;t running, check the Selenium hub <a href="http://165.227.123.79:4444/grid/console">console page</a> to see how many requests are currently queued. Or stop being lazy and go setup
+everything in <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a> and manage your own testing infrastructure! ;-)</p>
+
+<p>If you&rsquo;re just following along and don&rsquo;t have time to set all this up, you can view a temporary site_runner report <a href="http://165.227.123.79:3000/?account=Alexa%20Top%2012%20News">here</a>.
+Hover over the screenshot to get a zoomed in view and examine any visual defects.
+(It would be cool to get <a href="https://huddle.github.io/Resemble.js/">Resemble.js</a> integrated to handle image analysis and comparison at some point)</p>
+
+<p>If you&rsquo;d like to change the test sites, you can do so in <a href="https://github.com/wesleyhales/site_runner/blob/master/model/AllSites.js">this file</a>.
+Other things you might want to change are the data that is harvested during each page run. Here, in
+<a href="https://github.com/wesleyhales/site_runner/blob/master/selenium/siterunner.js#L55">siterunner.js</a>, you can see where
+I&rsquo;ve written a few wait commands that eventually execute JavaScript on the page that is loaded. This allows you
+to harvest any required metrics or inspect things to see what is being used on the page.</p>
+
+<p>In Part 3, We&rsquo;ll advance our webdriver script to crawl an entire site, add a few more nodes across the globe and look at a few open source and pay for monitoring tools that
+ will give us health visibility into our nodes and testing infrastructure. Part 4 will probably go into adding headless Chrome and Firefox to the mix.</p>
+
+<p>Thanks to Andy Davies for the <a href="https://github.com/andydavies/waterfall">ResourceTiming waterfall component</a>!
+<br/>
+<br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2017-09-01T00:00:00Z">September 1, 2017</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Browser%20Automation%20At%20Scale%20-%20Part%202&url=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-09-03-Browser-Automation-At-Scale-Part-2%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-09-03-Browser-Automation-At-Scale-Part-2%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fposts%2f2017-09-03-Browser-Automation-At-Scale-Part-2%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	docker swarm, selenium hub, selenium grid, chrome
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2014-02-26T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>A More Better Conference Experience &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">A More Better Conference Experience</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<p><br/></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>I&rsquo;ve been working on an open source project called <a href="https://www.onslyde.com/">Onslyde</a> for almost 2 years. If you want to know the
+details behind it you can read articles <a href="http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/">here</a>, <a href="http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/">here</a> or <a href="http://eventtech.co/2014/01/24/wesley-hales-creator-of-onslyde/">watch a recent interview</a>.</p>
+
+<p>This year, at <a href="http://devnexus.com/">Devnexus 2014</a>, I wanted to take Onslyde a bit further by offering a way for sponsors to
+ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and
+didn&rsquo;t create a web interface for reserving sponsored slots. I simply created a <a href="https://docs.google.com/spreadsheet/ccc?key=0AnSCILK6XyYLdHVEdndSY1VCM2NSOFowNzZrb284a3c&amp;usp=drive_web#gid=0">spreadsheet</a> with speaker name, session title,
+and time. Sponsors could then choose a time and I would reserve it on a first-come-first-serve basis.
+<br/></p>
+
+<h2 id="the-idea">The Idea</h2>
+
+<p>At it&rsquo;s core, Onslyde is a tool that allows people to connect and give their opinion within seconds. Now,
+attendees can vote on seeded questions that will allow sponsors to connect to those who are truly interested
+in their product or what they have to say.</p>
+
+<p><a href="/images/posts/2014-02-26/image_3.jpeg"><img src="/images/posts/2014-02-26/image_3.jpeg" class="margin10 max-width-50 float-right"></a></p>
+
+<p>I&rsquo;ve already written about <a href="http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/">the disconnect between speakers and attendees</a>, but what about the disconnect
+between sponsors and attendees? After all, these are the companies that shell out massive amounts of cash, setup up
+a booth, and wait for attendees to visit them in hopes of gaining a lead, recruiting a new employee, or making a sell.
+Why not proactively give them true leads that don&rsquo;t require a stop by the ol&rsquo; exhibit floor booth?</p>
+
+<p>This all sounds great in theory, but I had no idea how hard this would be to put together and manage throughout
+a 2 day conference with around 1200 attendees. So let&rsquo;s look at the details behind the implementation and
+challenges that were faced.</p>
+
+<ul>
+<li><p>Devnexus had around 30 sponsors this year. This included Red Hat, GitHub, Twilio, and many others. I wanted a
+way for them to communicate with attendees who are interested in what they have to say on the screen.</p></li>
+
+<li><p>We started out by allowing each sponsor to ask one question, and then charging a fee for additional questions.
+However, and I&rsquo;m happy about it now, zero paid slots were sold. But almost all the sponsors took advantage of their one free question, so a week before the
+conference we ended up giving all the slots away for free.
+I quickly learned that trying to sell the empty slots was the wrong approach - mainly because it requires up front sales.
+Either myself or someone else would need to try and up sell sponsors on question slots. It was too much selling without proven results.</p></li>
+</ul>
+
+<p>In hindsight, I should&rsquo;ve given sponsors a limit of 10 questions/slots and then found a way to expose the voting
+data in a freemium model.
+<br/></p>
+
+<h2 id="the-hardware">The Hardware</h2>
+
+<p>I used a fairly cheap hardware setup powered by Raspberry Pis (or RPi). For around $80, we had a complete Onslyde powered device
+that could be placed in any of the rooms. Devnexus had 10 simultaneous tracks, or rooms where someone was speaking, plus
+a workshop track. So we needed 10 rooms to be setup with the RPis for live voting.</p>
+
+<p>The hardware setup consisted of the following:</p>
+
+<ul>
+<li>Raspberry Pi (model B)</li>
+<li>16GB SD Card</li>
+<li>Edimax wifi USB device</li>
+<li>HDMI to VGA converter dongle</li>
+<li>3ft VGA cable</li>
+<li>VGA 2 way push-button splitter</li>
+</ul>
+
+<p><a href="/images/posts/2014-02-26/image.jpeg"><img src="/images/posts/2014-02-26/image.jpeg" class="margin10 max-width-50 float-left"></a></p>
+
+<p>The last item in the list above is what caused me a lot of trouble. Ultimately the hardware setup was solid and worked
+really well. But physically pushing the button to switch between voting and speakers ready to present was impossible to
+handle manually.</p>
+
+<p>Remember we&rsquo;re talking about 10 tracks spread throughout a very large conference center, so after each session the
+halls would be packed with people and I was weaving in and out of a stream of attendees trying to get to the next room. I would
+have literally needed a volunteer in each room pressing buttons as sessions rotate.</p>
+
+<p>The next section will go over all the challenges I faced, but the main point I want to make here is that it&rsquo;s pretty incredible
+to power one of the largest developer conferences in the South East with a $45 piece of hardware and a little bit of open source.
+<br/></p>
+
+<h2 id="challenges">Challenges</h2>
+
+<ul>
+<li>As I just mentioned, the physical aspect of pushing a button to switch video streams limited how many sponsored questions
+were actually seen and voted on. The only way around this would be to create a video switcher that would automatically detect the video
+current from the speaker and override the secondary Onslyde RPi signal. This is definitely doable and if something doesn&rsquo;t exist that already
+handles this case, then I&rsquo;m assuming it wouldn&rsquo;t be hard to break out the soldering iron and rig something together.</li>
+</ul>
+
+<p><a href="/images/posts/2014-02-26/image_9.jpeg"><img src="/images/posts/2014-02-26/image_9.jpeg" class="margin10 max-width-100 float-left"></a></p>
+
+<ul>
+<li><p>The Raspberry Pi&rsquo;s boot to a stripped down Debian based operating system that goes straight into full screen Chromium. The browser then
+loads a unique onslyde address with the RPis network interface (wlan0) mac address as a query parameter. This was the most generic
+way of identifying the device from my server and keeping track of its location. So, this obviously requires internet access but the conference
+center required authentication before making it out to the internet.
+Overall the staff at this particular venue were super helpful, so I asked if I could have the 10 mac addresses for the RPis whitelisted. This
+would allow them to access the internet without authentication. It was totally doable, but they wanted $200 per mac address to do it! I luckily
+talked them into doing it for $200 for all 10, but it&rsquo;s crazy to see the hoops that conference organizers have to jump through at the last minute.</p></li>
+
+<li><p>Working with the A/V team wasn&rsquo;t too much of a challenge, but I had to prepare ahead of time for longer VGA cables. They ran
+extra long VGA cables from the projector and the podium to the back of the room. This allowed easy access to each Onslyde device as I ran
+in each room switching the projector to the Onslyde screen, and then switching it back 15 minutes later to the presenter.</p></li>
+
+<li><p>One thing that would&rsquo;ve been nice is a web UI to handle the scheduling and input of sponsored questions. Since I was trying to prove the
+idea, there wasn&rsquo;t much of a reason to invest in the development until I knew it worked. But, if sponsors could come to a page, login,
+and see documentation and videos about the advantages of the product, then it would&rsquo;ve prevented any doubt and probably would&rsquo;ve secured more
+interest and questions.</p></li>
+</ul>
+
+<p><br/></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Overall, I can honestly say that I learned a ton from this experience. We all have these grand ideas of how something should work and
+ how cool it will be, but until you get out and actually try it, you have no idea.</p>
+
+<p>Below are <a href="https://www.onslyde.com/#!/analytics?sessionID=555">the results</a> from one of the polls that was asked during a morning session:
+<a href="/images/posts/2014-02-26/devnexus-voting.png"><img src="/images/posts/2014-02-26/devnexus-voting.png" class="margin10 max-width-100"></a>
+You can probably imagine, at this point, what you would do with this data as a sponsor. When each user votes they are required to oauth with their G+
+account. So we have names and email addresses that can be contacted after the fact.</p>
+
+<p>My plans for the future are to investigate if this is worth continuing and make the bootable Onslyde Debian image freely available.
+Feel free to <a href="https://docs.google.com/document/d/1STZ6gzOBLPnUypwHtFGZQY9ME7lYK__DpoQcKFzeLV0/edit#heading=h.hnil29ggb4vc">review my notes</a> on the exact hardware I used and how I setup
+the devices to boot into full screen Chromium and run Onslyde.</p>
+
+<p><br/>
+<br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2014-02-26T00:00:00Z">February 26, 2014</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=A%20More%20Better%20Conference%20Experience&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2014%2f02%2f26%2fA-More-Better-Conference-Experience"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2014%2f02%2f26%2fA-More-Better-Conference-Experience"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2014%2f02%2f26%2fA-More-Better-Conference-Experience"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	devnexus, onslyde, raspberry pi, rpi
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

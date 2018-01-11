@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2013-02-25T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>How Collective Wisdom Shapes a Talk &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">How Collective Wisdom Shapes a Talk</h3>
+    </header>
+
+    <section class="post-content">
+        
+
+<p><br/></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Exactly one year ago, I started working on a WebSocket prototype that would give audiences the power to control
+my talks. I <a href="http://wesleyhales.com/images/posts/2012-11-01/c70jx.jpg">used it for the first time</a> at DevNexus 2012 in Atlanta, GA and it produced great engagement results. At that time,
+ the only analytics I had built into the server were through logging, and the results were motivating enough to continue using the prototype.<br/>
+Over the span of 2012, I spent many late nights in hotel rooms preparing my slides for talks and working out bugs of
+this tool which I named &ldquo;onslyde&rdquo;. The following video is a talk I gave on February 18th, 2013 at the same conference one year later.
+Analytics were added and many bugs were fixed. I also integrated the tool with the reveal.js presentation framework. I had originally
+ built a simple HTML+CSS slide deck, and by integrating with reveal.js, I was able to see that my code would integrate nicely with other
+  presentation frameworks.<br/><br/>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/n-7Xu75T2bU" frameborder="0" allowfullscreen></iframe>
+<br/><br/>
+<em>Points in the talk where the audience voted:</em></p>
+
+<p><li><a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=n-7Xu75T2bU#t=101s">Vote 1</a></li>
+<li><a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=n-7Xu75T2bU#t=583s">Vote 2</a></li>
+<li><a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=n-7Xu75T2bU#t=1571s">Vote 3</a></li>
+<li><a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=n-7Xu75T2bU#t=1762s">Vote 4</a></li>
+<li><a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=n-7Xu75T2bU#t=3451s">Vote 5</a></li></p>
+
+<h2 id="details-of-onslyde">Details of onslyde</h2>
+
+<p><a href="/images/posts/2013-02-25/onslyde.arch.png"><img src="/images/posts/2013-02-25/onslyde.arch.png" alt="onslyde architecture" class="margin10" width="200px" align="left"></a>
+At its core, the concept is simple. Attendees connect to a WebSocket server, the presenter sends them vote options at certain points during her
+ presentation and whoever decides to connect can have anonymous interactions with the presenter. Participants may also give a
+&ldquo;thumb up&rdquo; or &ldquo;thumb down&rdquo; during any slide to show that they approve or disapprove of the content on a given slide. This allows for a
+very fine grained level of anonymous interaction.</p>
+
+<p>Beyond the simplistic parts of interacting with the slide deck, I wanted the presenter to actually have the ability of tailoring their
+talk to the &ldquo;collective wisdom&rdquo; of the audience. So, the presenter has the ability of forking their slides and providing 2 tracks of
+content based on the audience vote. The poll and tracks are setup declaratively as follows:
+<br/><br style="clear:left"/>
+<script src="https://gist.github.com/wesleyhales/5014482.js"></script>
+<br/>
+* <em>data-option=&ldquo;master&rdquo;</em> : denotes a master slide where the bar graph will be displayed
+* <em>data-option=&ldquo;Blue&rdquo;</em> : is one of the 2 polling options
+* <em>data-option=&ldquo;Red&rdquo;</em> : is one of the 2 polling options, also notice that we have multiple &ldquo;Red&rdquo; sections. These slides will be presented
+in order if &ldquo;Red&rdquo; wins the audience vote.
+* <em>class=&ldquo;send&rdquo;</em> : specifies that we want to send this content to each connected remote</p>
+
+<p>So, the above markup sets up the following slide deck and remote control options:
+<a href="/images/posts/2013-02-25/onslyde-1.PNG"><img src="/images/posts/2013-02-25/onslyde-1.PNG" alt="onslyde architecture" class="margin10" width="500px"></a></p>
+
+<p>After all the votes are placed, the winning track is chosen based on the majority vote:
+<a href="/images/posts/2013-02-25/onslyde-2.PNG"><img src="/images/posts/2013-02-25/onslyde-2.PNG" alt="onslyde architecture" class="margin10" width="500px"></a></p>
+
+<p>After the fork occurs, the presenter can choose to present slides in linear fashion, or ask another poll question. The framework is
+limited by only allowing for 2 options to be given and slides can only be forked once per question.</p>
+
+<p>As stated earlier, everything is declarative and setup through HTML markup. So there&rsquo;s no need for the presenter to setup a server or mess
+with JavaScript. The deck can work without an internet connection as a fallback, or you could run the server on your laptop and bring
+a router/hotspot for the audience to connect to.
+<br/></p>
+
+<h2 id="analytics">Analytics</h2>
+
+<p>Mid last year, I started capturing audience data into a database. I also added Google analytics (with custom events) to the remotes so I could get a
+good understaning on audience devices and usage. The following data is from the video above.
+<br/></p>
+
+<h3 id="from-mysql">From MySQL</h3>
+
+<p>Here, we&rsquo;re capturing votes on the options and how many times the &ldquo;Nice&rdquo; and &ldquo;WTF&rdquo; buttons were pressed during this track. One thing that
+Google Analytics does not give us are timestamps, or when events occured at a fine grained level. By capturing the time when each &ldquo;Nice&rdquo;
+ or &ldquo;WTF&rdquo; button is pressed, I can see exactly which slide was being shown and when the button was pressed. There is a bit of a latency
+ issue from the time the button is pressed until the time it actually shows up on the presenters screen, so capturing the TS at the server
+ level gives a more accurate picture of how you performed on each slide, if the content made sense, etc.
+<a href="/images/posts/2013-02-25/hypevreality.PNG"><img src="/images/posts/2013-02-25/hypevreality.PNG" alt="onslyde architecture" class="margin10 max-width-100"></a></p>
+
+<h3 id="from-ga-and-custom-events">From GA and Custom Events</h3>
+
+<p>This is an overview of the device analytics. I didn&rsquo;t want to reinvent the wheel on User Agent detection and keeping track of sessions, so I leveraged GA.
+The following data is from my talk, in the video above, given on February 18th.
+<a href="/images/posts/2013-02-25/feb18Devnexus.PNG"><img src="/images/posts/2013-02-25/feb18Devnexus.PNG" alt="onslyde architecture" class="margin10 max-width-100"></a></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><em>Become a better speaker</em> <br/>
+I know that I&rsquo;m not a &ldquo;great&rdquo; public speaker. Sure I can hold my own, but I still have a lot to learn. And every person who gives a presentation
+is different. We all have different personalities, views, and ways of moving about the stage - we all have an idea of what we think the audience wants
+ to know. But allowing the audience to guide the speaker and to anonymously give their input is huge. You won&rsquo;t get that kind of feedback verbally or
+ by asking the audience to raise their hand for a given question. Nor will you get this type of fine grained feedback in a survey form at the end of your talk.<br/>
+You might not be able to tell it, but in the video above, every time I ask the audience to vote on something and I look up at the
+responses coming in, it gives me a huge boost of confidence. Not just because the tool is actually being used, but I feel like I&rsquo;m
+about to go down a road that is actually useful to them. At that point I adjust and tailor everything I say from the results that
+came in.</p>
+
+<p><em>Make the conversation go both ways</em> <br/>
+When an individual feels that they can control the presentation&rsquo;s future, it&rsquo;s a powerful thing. It&rsquo;s one thing just to poll the audience
+and get feedback, but to have a number of slides prepared for the results of that poll is another thing.
+Also, with the capabilities of mobile browsers today, we can make the presentation experience much richer. With this tool,
+I can send each person the notes and other information which relates to the slide I&rsquo;m currently on. I can also send the ones who voted but didn&rsquo;t win the track selection, the slides or
+notes that I didn&rsquo;t show. So many possibilities to this&hellip;</p>
+
+<p><a href="http://www.flickr.com/photos/bejug/8190387932/sizes/l/in/set-72157632019400699/"><img src="http://farm9.staticflickr.com/8348/8190387932_37343f3e53_n.jpg" alt="onslyde architecture" target="_blank" class="margin10 max-width-100" align="left"></a>
+Fortunately, I&rsquo;ve had the chance to test this code/concept out in many different talks over the past year. From 10 people in a room to 100&rsquo;s,
+ the feeling of having everyone dialed into what you&rsquo;re saying is invaluable.</p>
+
+<p><em>Crowdsourcing and forming some kind of collective wisdom</em> <br/>
+Using this tool at a conference allows for a limited number of attendees to participate, but taken to a larger scale (webinar), the combined thoughts
+of the audience on a given topic can be surprising. Not just to the presenter for tailoring his next steps, but to the data collected behind
+ the scenes. Because my interests lie in the mobile web and HTML5, I get really interesting stats for devices and browsers with each talk I give.
+ But, if I were a presenter introducing a new product (outside of the tech realm) and trying to sell it to the audience, I would have
+ a huge advantage by allowing for impulse buys and fine grained sales throughout my talk. Basically, content would be spoon fed and the
+ chance of missed opportunities would be slim.
+<br/><br/></p>
+
+<h2 id="open-source">Open Source</h2>
+
+<p>This presentation tool is open source. If you&rsquo;d like to signup for the beta and give it a spin, I would greatly appreciate your feedback.
+This blog post is serving as the documentation for the project until I get some time to improve.</p>
+
+<ul>
+<li><a href="http://onslyde.com" target="_blank">Signup here</a> and get a session ID. Make a note of your assigned "session ID". The UI sucks right now, so after you hit the submit button it will show up in a barely visible green box above the name input.</li>
+<li>Follow the directions <a href="http://onslyde.com/example-deck.html" target="_blank">mentioned in this slide deck</a>. Basically just save the HTML to disk somewhere.</li>
+<li>Go to line 317 in the HTML file you just saved and replace the current sessionID value (103) with the one from your signup.</li>
+<li>You now have a private session for your presentation.</li>
+<li><a href="https://github.com/wesleyhales/onslyde">Come help out with the project</a></li>
+</ul>
+
+<p>If you run into bugs, report them <a href="https://github.com/wesleyhales/onslyde/issues">here</a> please.</p>
+
+<p>Thanks!!</p>
+
+<p><br style="clear:left"/>
+<br/><br/></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2013-02-25T00:00:00Z">February 25, 2013</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=How%20Collective%20Wisdom%20Shapes%20a%20Talk&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2013%2f02%2f25%2fHow-Collective-Wisdom-Shapes-a-Talk"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2013%2f02%2f25%2fHow-Collective-Wisdom-Shapes-a-Talk"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2013%2f02%2f25%2fHow-Collective-Wisdom-Shapes-a-Talk"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	websockets, speaking, audience engagement
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>

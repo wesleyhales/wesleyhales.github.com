@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="Wesley Hales">
+        <meta property="og:title" content="Wesley Hales">
+        <meta property="og:url" content="http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2012-01-20T00:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.16" />
+  <title>Pushing CDI Events to the Browser with WebSockets &middot; Wesley Hales </title>
+  <link rel="canonical" href="http://wesleyhales.com/"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link rel="stylesheet" type='text/css' href="http://wesleyhales.com/css/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="http://wesleyhales.com/" alt="Wesley Hales"><h1 class="blog-title heading">Wesley Hales</h1></a>
+            <p class="blog-description"></p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="old">
+	<header class="post-header">
+        <h3 class="p-post-title">Pushing CDI Events to the Browser with WebSockets</h3>
+    </header>
+
+    <section class="post-content">
+        <p><div class="notes" >
+Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers <a href="http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/">here</a>.
+</div>
+<div class="download">
+  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket" title="Fork me on github"><img src="/images/icons/github-icon.jpg" width="48" height="48" alt="Github Icon"></a>
+  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war" title="download the .war"><img src="/images/icons/download.png" width="48" height="48" alt="Download"></a>
+</div>
+<div style="clear:both;"></div>
+<p></p>
+
+<p>Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</p>
+<iframe src="http://player.vimeo.com/video/35433707?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<p>  
+With WebSockets, we have a new development model for server side applications; event based programming. There are 3 out-of-box events associated with WebSockets: onopen, onmessage, and onclose. For starters, we must wire up these three listeners to utilize the core functionality that the WebSocket specification gives us. The open event is fired when the WebSocket connection is opened successfully. The message event is fired when the server sends data. The close event is fired when the WebSocket connection is closed.
+</p>
+
+<script src="https://gist.github.com/1651079.js?file=websocketBasic.js"></script>
+
+<p>
+But sending messages in the form of strings over raw WebSockets isn't very appealing when we're wanting to develop advanced web applications. Obviously, we're going to be using JSON to transfer data to and from the server. But how do we propagate our CDI events which are fired on the server and have them bubble up on the client?
+</p>
+<p>
+First, we'll start with the server. I'm using the <a href="http://www.jboss.org/jbossas/downloads/">JBoss AS7 application server</a> and embedding <a href="http://eclipse.org/jetty/">Jetty</a> within my web application. Thanks to <a href="http://angelozerr.wordpress.com/2011/07/26/websockets_jetty_step4/">this article</a>, I was able to easily add the latest Jetty server to my maven project (dependencies below) to get everything up and running in a few minutes.
+</p>
+<p>
+A few things worth noting:
+</p>
+<ul>
+<li>Security: Since our WebSocket server is running on a different port (8081) than our AS7 server (8080), we must account for not having the ability to share cookies, etc...</li>
+<li>Proxies: As if proxy servers weren't already a huge problem for running WebSockets and HTTP over the same port, we are now running the separately (but I have a semi-solution for this below)</li>
+<li>Threading: Since we're observing/listening for CDI events, we must perform some thread same operations and connection sharing.</li>
+</ul>
+<p>
+So, if you're still reading ;) let's get on with the code.
+</p>
+<p>
+Download the latest <a href="http://www.jboss.org/jbossas/downloads/">JBoss AS7 (7.1.0.CR1b as of this writing)</a>
+</p>
+<p>
+Add the Jetty maven dependencies to your project. This demo is based off of the <a href="https://github.com/jbossas/quickstart/tree/master/html5-mobile">original html5-mobile quickstart for JBoss AS7</a>.
+</p>
+<script src="https://gist.github.com/1651079.js?file=pom.xml"></script>
+
+<p>
+Next we setup the WebSocket server using Jetty's WebSocketHandler and embedding it inside a ServletContextListener.
+Here we're sharing a synchronized set of WebSocket connections across threads. Using the synchronized keyword, we ensure that only a single thread can execute a method or block at one time. The ChatWebSocketHandler contains a global Set of webSocket connections and adds each new connection as it's made within the Jetty server
+<a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/tree/master/src/main/java/org/jboss/as/quickstarts/html5_mobile/websockets">View complete source here.</a>
+</p>
+<script src="https://gist.github.com/1651079.js?file=ChatWebSocketHandler.java"></script>
+<script src="https://gist.github.com/1651079.js?file=ChatServerServletContextListener.java"></script>
+
+<p>
+Now we'll create a method to observe CDI events and send the fired "Member" events to all active connections.
+</p>
+<script src="https://gist.github.com/1651079.js?file=ChatWebSocketHandler-observer.java"></script>
+
+<p>
+The above code will observe the following event when a new Member is registered through the web interface.
+</p>
+<script src="https://gist.github.com/1651079.js?file=MemberService.java"></script>
+
+<p>
+Finally, we setup our WebSocket JavaScript client and safely avoid using the eval() method to execute the received JavaScript.
+</p>
+<script src="https://gist.github.com/1651079.js?file=websocketclient.js"></script>
+
+<p>
+Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code. (This is the alert popup seen in the video above.)
+</p>
+<script src="https://gist.github.com/1651079.js?file=cdiJavascriptListener.js"></script> 
+
+<p>One additional piece I added to this approach is the use of HAProxy. This gives us a reverse-proxy on the WebSocket port (8081), in the end allowing all traffic (HTTP and ws/wss) to be sent across a central port - 8080 in this case. </p>
+<script src="https://gist.github.com/1651079.js?file=haproxy.config"></script>
+
+<p>
+As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol. There's probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
+</p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Wesley Hales</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2012-01-20T00:00:00Z">January 20, 2012</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Pushing%20CDI%20Events%20to%20the%20Browser%20with%20WebSockets&url=http%3a%2f%2fwesleyhales.com%2fblog%2f2012%2f01%2f20%2fPushing-CDI-Events-to-the-Browser-with-WebSockets"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwesleyhales.com%2fblog%2f2012%2f01%2f20%2fPushing-CDI-Events-to-the-Browser-with-WebSockets"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fwesleyhales.com%2fblog%2f2012%2f01%2f20%2fPushing-CDI-Events-to-the-Browser-with-WebSockets"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	html5, websocket, jboss, jetty, cdi
+            	</span>
+            
+        </section>
+                
+        <section id="comments">
+            <div id="disqus_thread" class="post-comments"></div>
+            <script type="text/javascript">
+              if (window.location.hostname != "localhost") {
+                var disqus_shortname = 'wesleyhales';
+                (function() {
+                  var dsq = document.createElement('script');
+                  dsq.type = 'text/javascript';
+                  dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              }
+            </script>
+            <noscript>
+              Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </section>
+                
+    </footer>
+</article>
+	</div>
+</main>
+    <footer id="site-footer">
+        <div class="container">
+            <a href="http://wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+            <section>&copy; Wesley Hales 2017 | All rights reserved</section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="http://wesleyhales.com/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+        
+        ga('provide', 'adblockTracker', function(tracker, opts) {
+            var ad = document.createElement('ins');
+            ad.className = 'AdSense';
+            ad.style.display = 'block';
+            ad.style.position = 'absolute';
+            ad.style.top = '-1px';
+            ad.style.height = '1px';
+            document.body.appendChild(ad);
+            tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+            document.body.removeChild(ad);
+        });
+
+        ga('create', 'UA-1241000-10', 'auto');
+        
+        
+
+        var dimensionValue = '1';
+        ga('set', 'dimension1', dimensionValue);
+
+        ga('send', 'pageview');
+
+
+    </script>
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>
