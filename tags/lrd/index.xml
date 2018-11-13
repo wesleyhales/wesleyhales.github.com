@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lrd on Wesley Hales</title>
-    <link>http://localhost:1313/tags/lrd/</link>
+    <link>//wesleyhales.com/tags/lrd/</link>
     <description>Recent content in Lrd on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Oct 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/lrd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/lrd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Maven 2 vs. Ant (revisited)</title>
-      <link>http://localhost:1313/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</link>
+      <link>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</link>
       <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
+      <guid>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
       <description>Almost a year since I made this entry and I think Maven is great for open source and commercial apps. Sure, there may be a few things you want to do that don&#39;t fit into the &#34;Maven way&#34; but for the most part, it is a great build system. Also, any one that uses IntelliJ Idea will fall in love with Maven on first use (I guess it handles Eclipse project files just as well).</description>
     </item>
     

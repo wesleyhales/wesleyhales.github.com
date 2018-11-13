@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jquery on Wesley Hales</title>
-    <link>http://localhost:1313/tags/jquery/</link>
+    <link>//wesleyhales.com/tags/jquery/</link>
     <description>Recent content in Jquery on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 16 Feb 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
+      <link>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
+      <guid>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
       <description>Richfaces 4 just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.
 First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</description>
     </item>

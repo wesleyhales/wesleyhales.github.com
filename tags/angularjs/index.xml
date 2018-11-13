@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angularjs on Wesley Hales</title>
-    <link>http://localhost:1313/tags/angularjs/</link>
+    <link>//wesleyhales.com/tags/angularjs/</link>
     <description>Recent content in Angularjs on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Dec 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>From Startup to Enterprise</title>
-      <link>http://localhost:1313/blog/2013/12/17/From-Startup-to-Enterprise/</link>
+      <link>//wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise/</link>
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/12/17/From-Startup-to-Enterprise/</guid>
+      <guid>//wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise/</guid>
       <description>Overview At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee. For the past year I&amp;rsquo;ve been heads down on merging Apigee&amp;rsquo;s Usergrid and Mobile Analytics products using AngularJS.
 For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.</description>
     </item>
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://localhost:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</link>
+      <link>//wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</guid>
+      <guid>//wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</guid>
       <description>Overview Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using setInterval and Angular&amp;rsquo;s builtin $timeout.
  Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout). If you want to read more about $scope.$apply check out this article.</description>
     </item>

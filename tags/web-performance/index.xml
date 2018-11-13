@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Performance on Wesley Hales</title>
-    <link>http://localhost:1313/tags/web-performance/</link>
+    <link>//wesleyhales.com/tags/web-performance/</link>
     <description>Recent content in Web Performance on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Apr 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/web-performance/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/web-performance/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Simulated RUM testing with PhantomJS 2</title>
-      <link>http://localhost:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</link>
+      <link>//wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</link>
       <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</guid>
+      <guid>//wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</guid>
       <description>Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.
 The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.  Loadreport data from 2012-2013 for CNN.</description>
     </item>
     
     <item>
       <title>Web Performance Testing With PhantomJS</title>
-      <link>http://localhost:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS/</link>
+      <link>//wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS/</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS/</guid>
+      <guid>//wesleyhales.com/blog/2012/08/16/Web-Performance-Testing-With-PhantomJS/</guid>
       <description>HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine rankings, higher conversion rates, and an overall reduction in bandwidth costs.
 I recently took on the task of coming up with an accurate way to measure all the aforementioned things, in an effort to understand which performance tweaks improved page load times and which ones didn&amp;rsquo;t.</description>
     </item>

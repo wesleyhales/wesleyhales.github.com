@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stats on Wesley Hales</title>
-    <link>http://localhost:1313/tags/stats/</link>
+    <link>//wesleyhales.com/tags/stats/</link>
     <description>Recent content in Stats on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Jul 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/stats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/stats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sharing Content with Web Intents</title>
-      <link>http://localhost:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents/</link>
+      <link>//wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents/</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/07/11/Sharing-Content-with-Web-Intents/</guid>
+      <guid>//wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents/</guid>
       <description>The Intent of Sharing If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying to make your content social. Allowing users to take action on your specific content and &amp;ldquo;share&amp;rdquo; it is a common task. Much like linking HTML documents together, we are now linking apps together that are capable of pushing content to a receiving service via the user.</description>
     </item>
     

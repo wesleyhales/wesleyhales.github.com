@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automation on Wesley Hales</title>
-    <link>http://localhost:1313/tags/automation/</link>
+    <link>//wesleyhales.com/tags/automation/</link>
     <description>Recent content in Automation on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Browser Automation At Scale - DevSecOps and the Equifax Breach</title>
-      <link>http://localhost:1313/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</link>
+      <link>//wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</link>
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</guid>
+      <guid>//wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</guid>
       <description>If you’ve been following along in Part 1 and Part 2, you already have the basic framework to implement a globally distributed Browser Automation Network. Now, we can easily write a few lines of JavaScript and augment it to create a sophisticated security scanner that will fly under the radar of most security tools and check for application level vulnerabilities - exactly like the one found at Equifax.com a few weeks back.</description>
     </item>
     

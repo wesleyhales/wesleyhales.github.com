@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2011 on Wesley Hales</title>
-    <link>http://localhost:1313/tags/2011/</link>
+    <link>//wesleyhales.com/tags/2011/</link>
     <description>Recent content in 2011 on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Dec 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/2011/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/2011/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2011 Year In Review</title>
-      <link>http://localhost:1313/blog/2011/12/29/2011-Year-In-Review/</link>
+      <link>//wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/</link>
       <pubDate>Thu, 29 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/12/29/2011-Year-In-Review/</guid>
+      <guid>//wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/</guid>
       <description>This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)
 Published my first DZone Refcard “Mastering Portals with a Portlet Bridge” http://refcardz.dzone.com/refcardz/mastering-portals-portlet
 Learned that CSS3 is replacing Photoshop http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/

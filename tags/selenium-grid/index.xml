@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Selenium Grid on Wesley Hales</title>
-    <link>http://localhost:1313/tags/selenium-grid/</link>
+    <link>//wesleyhales.com/tags/selenium-grid/</link>
     <description>Recent content in Selenium Grid on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/selenium-grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/selenium-grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Browser Automation At Scale - Part 2</title>
-      <link>http://localhost:1313/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/</link>
+      <link>//wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/</link>
       <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/</guid>
+      <guid>//wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/</guid>
       <description>In Part 1, I reviewed the gory details of the foundation required to run synthetic browser testing at scale. Now that we have a framework for building out our tests, we can move forward with wrapping our test runner in a web application so that the metrics we care about can be gathered and viewed through a decent UI.
 For this example, I&amp;rsquo;m going to use the Alexa top 12 news sites and execute a test over each one with the latest Chrome web browser.</description>
     </item>
     
     <item>
       <title>Browser Automation At Scale - Part 1</title>
-      <link>http://localhost:1313/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</link>
+      <link>//wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</link>
       <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</guid>
+      <guid>//wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</guid>
       <description>Docker Swarm and Selenium Both Docker and Selenium are pretty much household names these days in the world of software engineering. I&amp;rsquo;ve been fascinated with Docker since its inception and have been using it for side projects and in my day job for a few years now. I recently came across the need to test a Chrome extension and load a web page while that extension is installed. This test would load the page, wait for it to load, check some JS variables and APIs and then spit out a screenshot and any needed metrics.</description>
     </item>
     

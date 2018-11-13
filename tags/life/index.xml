@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on Wesley Hales</title>
-    <link>http://localhost:1313/tags/life/</link>
+    <link>//wesleyhales.com/tags/life/</link>
     <description>Recent content in Life on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Nov 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>I&#39;ll Sleep When I Die - All for HTML5</title>
-      <link>http://localhost:1313/blog/2012/11/01/Ill-Sleep-When-I-Die-All-for-HTML5/</link>
+      <link>//wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die-All-for-HTML5/</link>
       <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/11/01/Ill-Sleep-When-I-Die-All-for-HTML5/</guid>
+      <guid>//wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die-All-for-HTML5/</guid>
       <description>The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book, gave up a secure job, and changed jobs 4 times. All to push myself, get uncomfortable, and better understand the challenges that front-end developers are facing in 2012 and beyond. I gained more than I ever thought possible.
 Sometimes you have to give up everything to find something.</description>
     </item>
     
     <item>
       <title>2011 Year In Review</title>
-      <link>http://localhost:1313/blog/2011/12/29/2011-Year-In-Review/</link>
+      <link>//wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/</link>
       <pubDate>Thu, 29 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/12/29/2011-Year-In-Review/</guid>
+      <guid>//wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/</guid>
       <description>This year has been a personal best form me. I’ll spare you the long winded summary and get straight to what I actually produced :)
 Published my first DZone Refcard “Mastering Portals with a Portlet Bridge” http://refcardz.dzone.com/refcardz/mastering-portals-portlet
 Learned that CSS3 is replacing Photoshop http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/
@@ -37,48 +37,48 @@ Posted this blog entry and later joined the RichFaces team because of it http://
     
     <item>
       <title>My New Career Choice at Red Hat</title>
-      <link>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</link>
+      <link>//wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</link>
       <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</guid>
+      <guid>//wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</guid>
       <description>July 1st marked my first day on the JBoss RichFaces team. I&#39;ve decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.
 I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company.</description>
     </item>
     
     <item>
       <title>2 years of blogging about java and my life, now what?</title>
-      <link>http://localhost:1313/blog/2008/12/07/2-years-of-blogging-about-java-and-my-life-now-what/</link>
+      <link>//wesleyhales.com/blog/2008/12/07/2-years-of-blogging-about-java-and-my-life-now-what/</link>
       <pubDate>Sun, 07 Dec 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/12/07/2-years-of-blogging-about-java-and-my-life-now-what/</guid>
+      <guid>//wesleyhales.com/blog/2008/12/07/2-years-of-blogging-about-java-and-my-life-now-what/</guid>
       <description>It has been 2 years since I decided to write my first blog post and I am pretty happy I did so. When I first tossed the idea around about it (and this was back in 2006) I was thinking, man, blogging is so 2002 and why would anybody want to read about stuff I&#39;m doing. But much to my surprise, starting a blog is one of the best things I could&#39;ve done.</description>
     </item>
     
     <item>
       <title>ANTHEM reaches 15,000 in its first week</title>
-      <link>http://localhost:1313/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</link>
+      <link>//wesleyhales.com/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</link>
       <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</guid>
+      <guid>//wesleyhales.com/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</guid>
       <description>I recently created a Firefox 3 theme out of curiosity and because I love to try new things that deal with design. Much to my surprise, ANTHEM has been receiving a lot of attention over the past week since it has been released publicly on Mozilla.org. ANTHEM is named so because I consider it a hymn of praise or loyalty to my worshipful savior Jesus Christ. I also consider it dedicated to my newborn son, my wonderful wife, and the woman who raised me to be the man I am, my beautiful mother.</description>
     </item>
     
     <item>
       <title>1 year of blogging</title>
-      <link>http://localhost:1313/blog/2007/12/05/1-year-of-blogging/</link>
+      <link>//wesleyhales.com/blog/2007/12/05/1-year-of-blogging/</link>
       <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/12/05/1-year-of-blogging/</guid>
+      <guid>//wesleyhales.com/blog/2007/12/05/1-year-of-blogging/</guid>
       <description>Today marks my 1 year anniversary of blogging. I started this blog to basically express my views and opinions, to give back to the open source community of whom so much has been taken, and for job credibility.
 Trying to write good articles is a lot of work. Sure anybody can write about a few buzzwords and get some hits, but an article with substance and that actually helps someone through a use case or problem is where the satisfaction comes from.</description>
     </item>
     
     <item>
       <title>The Smokies</title>
-      <link>http://localhost:1313/blog/2007/11/06/The-Smokies/</link>
+      <link>//wesleyhales.com/blog/2007/11/06/The-Smokies/</link>
       <pubDate>Tue, 06 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/11/06/The-Smokies/</guid>
+      <guid>//wesleyhales.com/blog/2007/11/06/The-Smokies/</guid>
       <description>I guess everybody has a place a few hours from home that they can go and relax and enjoy nature. One rednecktastic place I like to go is at the foothills of the Smoky Mountains in Tennessee. Gatlinburg is a trip, and if you like Dolly Parton, well this is the place for you.
 
 I mainly enjoy the fresh mountain air, the beautiful scenery, and the below freezing temps at night.</description>
@@ -86,20 +86,20 @@ I mainly enjoy the fresh mountain air, the beautiful scenery, and the below free
     
     <item>
       <title>Acceptance to Jboss Labs</title>
-      <link>http://localhost:1313/blog/2007/04/09/Acceptance-to-Jboss-Labs/</link>
+      <link>//wesleyhales.com/blog/2007/04/09/Acceptance-to-Jboss-Labs/</link>
       <pubDate>Mon, 09 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/04/09/Acceptance-to-Jboss-Labs/</guid>
+      <guid>//wesleyhales.com/blog/2007/04/09/Acceptance-to-Jboss-Labs/</guid>
       <description>I woke this morning to find a very nice surprise in my email....
   Dear Wesley Hales, I am happy to inform you that your application to become a contributor to JBoss has been accepted. Your name should now be visible on the contributors list on labs.jboss.com. The JBoss Labs team.    This is my first open source project so I am pretty stoked about it. Now I just have to keep myself from getting burnt-out ;).</description>
     </item>
     
     <item>
       <title>My First Mountable Bass</title>
-      <link>http://localhost:1313/blog/2007/03/10/My-First-Mountable-Bass/</link>
+      <link>//wesleyhales.com/blog/2007/03/10/My-First-Mountable-Bass/</link>
       <pubDate>Sat, 10 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/03/10/My-First-Mountable-Bass/</guid>
+      <guid>//wesleyhales.com/blog/2007/03/10/My-First-Mountable-Bass/</guid>
       <description>Needless to say, not much coding was done today. This is definitely the largest freshwater fish I have ever reeled into shore. I caught it at my parent&amp;rsquo;s 5 acre lake in North Ga. The awesome fish (Spotted large mouth bass) weighed in right at 10.9 pounds!
 So after a nice &#34;persuading&#34; talk with my wife, she agreed with me on taking my trophy to the taxidermist for a beautiful driftwood mount.</description>
     </item>

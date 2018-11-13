@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Wesley Hales</title>
-    <link>http://localhost:1313/tags/web/</link>
+    <link>//wesleyhales.com/tags/web/</link>
     <description>Recent content in Web on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Aug 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</link>
+      <link>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
+      <guid>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
       <description>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:
 1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)
 2) Similar to the iPad Mail.</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</link>
+      <link>//wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
+      <guid>//wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
       <description>Today marks an important day in the RichFaces project as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.
 So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. I will announce each new design (both for tablet and phone) via twitter with a link back to this article.</description>
     </item>

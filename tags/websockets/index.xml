@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Websockets on Wesley Hales</title>
-    <link>http://localhost:1313/tags/websockets/</link>
+    <link>//wesleyhales.com/tags/websockets/</link>
     <description>Recent content in Websockets on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Feb 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/websockets/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/websockets/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How Collective Wisdom Shapes a Talk</title>
-      <link>http://localhost:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</link>
+      <link>//wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</link>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</guid>
+      <guid>//wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</guid>
       <description>Overview Exactly one year ago, I started working on a WebSocket prototype that would give audiences the power to control my talks. I used it for the first time at DevNexus 2012 in Atlanta, GA and it produced great engagement results. At that time, the only analytics I had built into the server were through logging, and the results were motivating enough to continue using the prototype. Over the span of 2012, I spent many late nights in hotel rooms preparing my slides for talks and working out bugs of this tool which I named &amp;ldquo;onslyde&amp;rdquo;.</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vacation on Wesley Hales</title>
-    <link>http://localhost:1313/tags/vacation/</link>
+    <link>//wesleyhales.com/tags/vacation/</link>
     <description>Recent content in Vacation on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Nov 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/vacation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/vacation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Smokies</title>
-      <link>http://localhost:1313/blog/2007/11/06/The-Smokies/</link>
+      <link>//wesleyhales.com/blog/2007/11/06/The-Smokies/</link>
       <pubDate>Tue, 06 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/11/06/The-Smokies/</guid>
+      <guid>//wesleyhales.com/blog/2007/11/06/The-Smokies/</guid>
       <description>I guess everybody has a place a few hours from home that they can go and relax and enjoy nature. One rednecktastic place I like to go is at the foothills of the Smoky Mountains in Tennessee. Gatlinburg is a trip, and if you like Dolly Parton, well this is the place for you.
 
 I mainly enjoy the fresh mountain air, the beautiful scenery, and the below freezing temps at night.</description>

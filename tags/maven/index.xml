@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maven on Wesley Hales</title>
-    <link>http://localhost:1313/tags/maven/</link>
+    <link>//wesleyhales.com/tags/maven/</link>
     <description>Recent content in Maven on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Oct 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Maven 2 vs. Ant (revisited)</title>
-      <link>http://localhost:1313/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</link>
+      <link>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</link>
       <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
+      <guid>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
       <description>Almost a year since I made this entry and I think Maven is great for open source and commercial apps. Sure, there may be a few things you want to do that don&#39;t fit into the &#34;Maven way&#34; but for the most part, it is a great build system. Also, any one that uses IntelliJ Idea will fall in love with Maven on first use (I guess it handles Eclipse project files just as well).</description>
     </item>
     
     <item>
       <title>Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo</title>
-      <link>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</link>
+      <link>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</link>
       <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
+      <guid>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
       <description>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Onslyde on Wesley Hales</title>
-    <link>http://localhost:1313/tags/onslyde/</link>
+    <link>//wesleyhales.com/tags/onslyde/</link>
     <description>Recent content in Onslyde on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/onslyde/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/onslyde/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A More Better Conference Experience</title>
-      <link>http://localhost:1313/blog/2014/02/26/A-More-Better-Conference-Experience/</link>
+      <link>//wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2014/02/26/A-More-Better-Conference-Experience/</guid>
+      <guid>//wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/</guid>
       <description>Overview I&amp;rsquo;ve been working on an open source project called Onslyde for almost 2 years. If you want to know the details behind it you can read articles here, here or watch a recent interview.
 This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and didn&amp;rsquo;t create a web interface for reserving sponsored slots.</description>
     </item>

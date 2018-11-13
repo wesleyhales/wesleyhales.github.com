@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richfaces on Wesley Hales</title>
-    <link>http://localhost:1313/tags/richfaces/</link>
+    <link>//wesleyhales.com/tags/richfaces/</link>
     <description>Recent content in Richfaces on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Aug 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/richfaces/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/richfaces/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>RichFaces Mobile Designs - Day 3</title>
-      <link>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</link>
+      <link>//wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</link>
       <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</guid>
+      <guid>//wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</guid>
       <description>So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.
 
 Day 3: About The Design
@@ -26,10 +26,10 @@ The first page is a standard menu so not much to say there. The bottom menu bar 
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</link>
+      <link>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
+      <guid>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
       <description>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:
 1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)
 2) Similar to the iPad Mail.</description>
@@ -37,20 +37,20 @@ The first page is a standard menu so not much to say there. The bottom menu bar 
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</link>
+      <link>//wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
+      <guid>//wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
       <description>Today marks an important day in the RichFaces project as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.
 So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. I will announce each new design (both for tablet and phone) via twitter with a link back to this article.</description>
     </item>
     
     <item>
       <title>Runtime Type Detection and Usage with Weld</title>
-      <link>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</link>
+      <link>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</link>
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
+      <guid>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
       <description>About TweetStream
 In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
 A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
@@ -58,20 +58,20 @@ A little bit about the usecase: The TweetStream application is an app that Jay B
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
+      <link>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
+      <guid>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
       <description>Richfaces 4 just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.
 First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</description>
     </item>
     
     <item>
       <title>Replacing FacesMessages with Growl alerts</title>
-      <link>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</link>
+      <link>//wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</link>
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</guid>
+      <guid>//wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</guid>
       <description>I saw a tweet from(@maxandersen) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.
 This is really just javascript on the front end and can be used with any backend message generating system.
 Code Used:
@@ -81,20 +81,20 @@ Code Used:
     
     <item>
       <title>JBoss Portlet Bridge Beta2 Released!</title>
-      <link>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</link>
+      <link>//wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</link>
       <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</guid>
+      <guid>//wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</guid>
       <description>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.
 Read more about what is included in this release.</description>
     </item>
     
     <item>
       <title>JBoss Portlet Bridge with Seam support released</title>
-      <link>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</link>
+      <link>//wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</link>
       <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
+      <guid>//wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
       <description>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.
 The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.
 See the project page for more details and a live demo.</description>
@@ -102,10 +102,10 @@ See the project page for more details and a live demo.</description>
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
+      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
+      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
       <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
 
 Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>
@@ -113,10 +113,10 @@ Due to an overwhelming interest in the previous article I decided to spend some 
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
+      <link>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
+      <guid>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
       <description>**Update - See this article for more info.</description>
     </item>
     

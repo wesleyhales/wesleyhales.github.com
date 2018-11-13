@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Phonegap on Wesley Hales</title>
-    <link>http://localhost:1313/tags/phonegap/</link>
+    <link>//wesleyhales.com/tags/phonegap/</link>
     <description>Recent content in Phonegap on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Apr 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/phonegap/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/phonegap/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Choppy scrolling on iOS with iscroll and PhoneGap</title>
-      <link>http://localhost:1313/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap/</link>
+      <link>//wesleyhales.com/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap/</link>
       <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap/</guid>
+      <guid>//wesleyhales.com/blog/2012/04/09/Choppy-scrolling-on-iOS-with-iscroll-and-PhoneGap/</guid>
       <description>I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x. Apparently, there is a problem with older browsers using CSS3 selectors like div[style*=&amp;lsquo;foo&amp;rsquo;] in combination with other DOM elements. 
 The test case was a little tricky to create, seeing that pinpointing this problem required mucho testing. However, I minimized the markup and CSS to only a few classes and DOM elements.</description>
     </item>

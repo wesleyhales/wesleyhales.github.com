@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oss Management on Wesley Hales</title>
-    <link>http://localhost:1313/tags/oss-management/</link>
+    <link>//wesleyhales.com/tags/oss-management/</link>
     <description>Recent content in Oss Management on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Dec 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/oss-management/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/oss-management/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Decommissioning of Onslyde</title>
-      <link>http://localhost:1313/blog/2016/12/23/The-Decommissioning-of-Onslyde/</link>
+      <link>//wesleyhales.com/blog/2016/12/23/The-Decommissioning-of-Onslyde/</link>
       <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/12/23/The-Decommissioning-of-Onslyde/</guid>
+      <guid>//wesleyhales.com/blog/2016/12/23/The-Decommissioning-of-Onslyde/</guid>
       <description>As a creator and overseer of an Open Source project, we must make tough decisions on when to pull the plug and move on. In 2012, I started a web based, real-time feedback project called Onslyde.
 To me the project was a huge success with many measurable results:
  Massive amount of research with WebSockets and mobile devices. Based on the code and research I was able to craft many talks for speaking engagements at conferences around the globe.</description>

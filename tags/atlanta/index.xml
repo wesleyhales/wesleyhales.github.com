@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atlanta on Wesley Hales</title>
-    <link>http://localhost:1313/tags/atlanta/</link>
+    <link>//wesleyhales.com/tags/atlanta/</link>
     <description>Recent content in Atlanta on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/atlanta/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/atlanta/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://localhost:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</link>
+      <link>//wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</guid>
+      <guid>//wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</guid>
       <description>So, all I can say is that the Atlanta HTML5 community is awesome. Today the @atlhtml5 user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns.</description>
     </item>
     

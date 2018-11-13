@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Framework on Wesley Hales</title>
-    <link>http://localhost:1313/tags/framework/</link>
+    <link>//wesleyhales.com/tags/framework/</link>
     <description>Recent content in Framework on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Aug 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/framework/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSS Framework</title>
-      <link>http://localhost:1313/blog/2007/08/14/CSS-Framework/</link>
+      <link>//wesleyhales.com/blog/2007/08/14/CSS-Framework/</link>
       <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/08/14/CSS-Framework/</guid>
+      <guid>//wesleyhales.com/blog/2007/08/14/CSS-Framework/</guid>
       <description>There are several possible ways to go about building a CSS framework. The framework I mention here is suited for myself and the group of developers I work with. It has proven successful on the past 3 projects I have been on. Once everyone knows about a base set of styles it&#39;s amazing how much more productive the team is. Not only do you have a &#34;master&#34; type of stylesheet to work from, everyone can edit the code and make changes faster because they are aware of the framework in use.</description>
     </item>
     

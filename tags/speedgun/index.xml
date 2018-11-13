@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speedgun on Wesley Hales</title>
-    <link>http://localhost:1313/tags/speedgun/</link>
+    <link>//wesleyhales.com/tags/speedgun/</link>
     <description>Recent content in Speedgun on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Apr 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/speedgun/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/speedgun/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Simulated RUM testing with PhantomJS 2</title>
-      <link>http://localhost:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</link>
+      <link>//wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</link>
       <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</guid>
+      <guid>//wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</guid>
       <description>Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.
 The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.  Loadreport data from 2012-2013 for CNN.</description>
     </item>

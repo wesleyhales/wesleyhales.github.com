@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jank on Wesley Hales</title>
-    <link>http://localhost:1313/tags/jank/</link>
+    <link>//wesleyhales.com/tags/jank/</link>
     <description>Recent content in Jank on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Oct 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/jank/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/jank/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jank Busting Apple&#39;s Home Page</title>
-      <link>http://localhost:1313/blog/2013/10/26/Jank-Busting-Apples-Home-Page/</link>
+      <link>//wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/10/26/Jank-Busting-Apples-Home-Page/</guid>
+      <guid>//wesleyhales.com/blog/2013/10/26/Jank-Busting-Apples-Home-Page/</guid>
       <description>Overview Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote this article the other day which examines the performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing Jake Archibald&amp;rsquo;s Jank Invaders to hone my skills and save the universe from jank :)
 So, I was on Apple&amp;rsquo;s home page the other day and noticed some jank in their main carousel animation.</description>
     </item>
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://localhost:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</link>
+      <link>//wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</guid>
+      <guid>//wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</guid>
       <description>Overview Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using setInterval and Angular&amp;rsquo;s builtin $timeout.
  Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout). If you want to read more about $scope.$apply check out this article.</description>
     </item>

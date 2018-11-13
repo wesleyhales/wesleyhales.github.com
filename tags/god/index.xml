@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>God on Wesley Hales</title>
-    <link>http://localhost:1313/tags/god/</link>
+    <link>//wesleyhales.com/tags/god/</link>
     <description>Recent content in God on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Nov 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/god/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/god/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ANTHEM reaches 15,000 in its first week</title>
-      <link>http://localhost:1313/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</link>
+      <link>//wesleyhales.com/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</link>
       <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</guid>
+      <guid>//wesleyhales.com/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</guid>
       <description>I recently created a Firefox 3 theme out of curiosity and because I love to try new things that deal with design. Much to my surprise, ANTHEM has been receiving a lot of attention over the past week since it has been released publicly on Mozilla.org. ANTHEM is named so because I consider it a hymn of praise or loyalty to my worshipful savior Jesus Christ. I also consider it dedicated to my newborn son, my wonderful wife, and the woman who raised me to be the man I am, my beautiful mother.</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo on Wesley Hales</title>
-    <link>http://localhost:1313/tags/demo/</link>
+    <link>//wesleyhales.com/tags/demo/</link>
     <description>Recent content in Demo on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Jan 2008 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
+      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
+      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
       <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
 
 Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>

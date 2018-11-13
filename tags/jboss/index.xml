@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jboss on Wesley Hales</title>
-    <link>http://localhost:1313/tags/jboss/</link>
+    <link>//wesleyhales.com/tags/jboss/</link>
     <description>Recent content in Jboss on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-      <link>http://localhost:1313/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</link>
+      <link>//wesleyhales.com/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</link>
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</guid>
+      <guid>//wesleyhales.com/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</guid>
       <description>The AeroGear project had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:  Education - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers. Innovation - Many of AeroGear&#39;s primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based. Community - We already have several community members contributing examples, demos, and other useful resources.</description>
     </item>
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://localhost:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</link>
+      <link>//wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</guid>
+      <guid>//wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</guid>
       <description>Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers here.      
 Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</description>
     </item>
     
     <item>
       <title>My New Career Choice at Red Hat</title>
-      <link>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</link>
+      <link>//wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</link>
       <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</guid>
+      <guid>//wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</guid>
       <description>July 1st marked my first day on the JBoss RichFaces team. I&#39;ve decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.
 I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company.</description>
     </item>
     
     <item>
       <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
-      <link>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</link>
+      <link>//wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</guid>
+      <guid>//wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</guid>
       <description>InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!
   This first part is about basic JSF development with an easy to follow tutorial and real world development tips.</description>
     </item>
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
+      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
+      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
       <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
 
 Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>
@@ -63,10 +63,10 @@ Due to an overwhelming interest in the previous article I decided to spend some 
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
+      <link>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
+      <guid>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
       <description>**Update - See this article for more info.</description>
     </item>
     

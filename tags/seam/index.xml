@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seam on Wesley Hales</title>
-    <link>http://localhost:1313/tags/seam/</link>
+    <link>//wesleyhales.com/tags/seam/</link>
     <description>Recent content in Seam on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 May 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/seam/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/seam/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Runtime Type Detection and Usage with Weld</title>
-      <link>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</link>
+      <link>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</link>
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
+      <guid>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
       <description>About TweetStream
 In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
 A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
@@ -24,29 +24,29 @@ A little bit about the usecase: The TweetStream application is an app that Jay B
     
     <item>
       <title>Contextual PortletMode changes using the JBoss Portlet Bridge</title>
-      <link>http://localhost:1313/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</link>
+      <link>//wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</link>
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</guid>
+      <guid>//wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</guid>
       <description>By default, the JSR-301&amp;frasl;329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</description>
     </item>
     
     <item>
       <title>JBoss Portlet Bridge Beta2 Released!</title>
-      <link>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</link>
+      <link>//wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</link>
       <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</guid>
+      <guid>//wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</guid>
       <description>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.
 Read more about what is included in this release.</description>
     </item>
     
     <item>
       <title>JBoss Portlet Bridge with Seam support released</title>
-      <link>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</link>
+      <link>//wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</link>
       <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
+      <guid>//wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
       <description>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.
 The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.
 See the project page for more details and a live demo.</description>
@@ -54,47 +54,47 @@ See the project page for more details and a live demo.</description>
     
     <item>
       <title>XHTML to PDF with a Seam filter</title>
-      <link>http://localhost:1313/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</link>
+      <link>//wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</link>
       <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</guid>
+      <guid>//wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</guid>
       <description>After reading this article showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.
 First off, generated markup from any given JSF component is not guaranteed to be good markup.</description>
     </item>
     
     <item>
       <title>Writing a FaceBook app</title>
-      <link>http://localhost:1313/blog/2007/12/03/Writing-a-FaceBook-app/</link>
+      <link>//wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app/</link>
       <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/12/03/Writing-a-FaceBook-app/</guid>
+      <guid>//wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app/</guid>
       <description>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven&#39;t really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven&#39;t followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next.</description>
     </item>
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
+      <link>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
+      <guid>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
       <description>**Update - See this article for more info.</description>
     </item>
     
     <item>
       <title>Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo</title>
-      <link>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</link>
+      <link>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</link>
       <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
+      <guid>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
       <description>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.</description>
     </item>
     
     <item>
       <title>My first Seam 2.0 app</title>
-      <link>http://localhost:1313/blog/2007/08/01/My-first-Seam-2.0-app/</link>
+      <link>//wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app/</link>
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2007/08/01/My-first-Seam-2.0-app/</guid>
+      <guid>//wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app/</guid>
       <description>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.
 This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)</description>
     </item>
