@@ -2,150 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Audience Engagement on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/audience-engagement/</link>
+    <link>http://localhost:1313/tags/audience-engagement/</link>
     <description>Recent content in Audience Engagement on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Feb 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/audience-engagement/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/audience-engagement/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How Collective Wisdom Shapes a Talk</title>
-      <link>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</link>
+      <link>http://localhost:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</link>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk</guid>
-      <description>
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;Exactly one year ago, I started working on a WebSocket prototype that would give audiences the power to control
-my talks. I &lt;a href=&#34;http://wesleyhales.com/images/posts/2012-11-01/c70jx.jpg&#34;&gt;used it for the first time&lt;/a&gt; at DevNexus 2012 in Atlanta, GA and it produced great engagement results. At that time,
- the only analytics I had built into the server were through logging, and the results were motivating enough to continue using the prototype.&lt;br/&gt;
-Over the span of 2012, I spent many late nights in hotel rooms preparing my slides for talks and working out bugs of
-this tool which I named &amp;ldquo;onslyde&amp;rdquo;. The following video is a talk I gave on February 18th, 2013 at the same conference one year later.
-Analytics were added and many bugs were fixed. I also integrated the tool with the reveal.js presentation framework. I had originally
- built a simple HTML+CSS slide deck, and by integrating with reveal.js, I was able to see that my code would integrate nicely with other
-  presentation frameworks.&lt;br/&gt;&lt;br/&gt;
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;http://www.youtube.com/embed/n-7Xu75T2bU&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;br/&gt;&lt;br/&gt;
-&lt;em&gt;Points in the talk where the audience voted:&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=101s&#34;&gt;Vote 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=583s&#34;&gt;Vote 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=1571s&#34;&gt;Vote 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=1762s&#34;&gt;Vote 4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=n-7Xu75T2bU#t=3451s&#34;&gt;Vote 5&lt;/a&gt;&lt;/li&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;details-of-onslyde&#34;&gt;Details of onslyde&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde.arch.png&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;200px&#34; align=&#34;left&#34;&gt;&lt;/a&gt;
-At its core, the concept is simple. Attendees connect to a WebSocket server, the presenter sends them vote options at certain points during her
- presentation and whoever decides to connect can have anonymous interactions with the presenter. Participants may also give a
-&amp;ldquo;thumb up&amp;rdquo; or &amp;ldquo;thumb down&amp;rdquo; during any slide to show that they approve or disapprove of the content on a given slide. This allows for a
-very fine grained level of anonymous interaction.&lt;/p&gt;
-
-&lt;p&gt;Beyond the simplistic parts of interacting with the slide deck, I wanted the presenter to actually have the ability of tailoring their
-talk to the &amp;ldquo;collective wisdom&amp;rdquo; of the audience. So, the presenter has the ability of forking their slides and providing 2 tracks of
-content based on the audience vote. The poll and tracks are setup declaratively as follows:
-&lt;br/&gt;&lt;br style=&#34;clear:left&#34;/&gt;
-&lt;script src=&#34;https://gist.github.com/wesleyhales/5014482.js&#34;&gt;&lt;/script&gt;
-&lt;br/&gt;
-* &lt;em&gt;data-option=&amp;ldquo;master&amp;rdquo;&lt;/em&gt; : denotes a master slide where the bar graph will be displayed
-* &lt;em&gt;data-option=&amp;ldquo;Blue&amp;rdquo;&lt;/em&gt; : is one of the 2 polling options
-* &lt;em&gt;data-option=&amp;ldquo;Red&amp;rdquo;&lt;/em&gt; : is one of the 2 polling options, also notice that we have multiple &amp;ldquo;Red&amp;rdquo; sections. These slides will be presented
-in order if &amp;ldquo;Red&amp;rdquo; wins the audience vote.
-* &lt;em&gt;class=&amp;ldquo;send&amp;rdquo;&lt;/em&gt; : specifies that we want to send this content to each connected remote&lt;/p&gt;
-
-&lt;p&gt;So, the above markup sets up the following slide deck and remote control options:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-1.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After all the votes are placed, the winning track is chosen based on the majority vote:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/onslyde-2.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10&#34; width=&#34;500px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After the fork occurs, the presenter can choose to present slides in linear fashion, or ask another poll question. The framework is
-limited by only allowing for 2 options to be given and slides can only be forked once per question.&lt;/p&gt;
-
-&lt;p&gt;As stated earlier, everything is declarative and setup through HTML markup. So there&amp;rsquo;s no need for the presenter to setup a server or mess
-with JavaScript. The deck can work without an internet connection as a fallback, or you could run the server on your laptop and bring
-a router/hotspot for the audience to connect to.
-&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;analytics&#34;&gt;Analytics&lt;/h2&gt;
-
-&lt;p&gt;Mid last year, I started capturing audience data into a database. I also added Google analytics (with custom events) to the remotes so I could get a
-good understaning on audience devices and usage. The following data is from the video above.
-&lt;br/&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;from-mysql&#34;&gt;From MySQL&lt;/h3&gt;
-
-&lt;p&gt;Here, we&amp;rsquo;re capturing votes on the options and how many times the &amp;ldquo;Nice&amp;rdquo; and &amp;ldquo;WTF&amp;rdquo; buttons were pressed during this track. One thing that
-Google Analytics does not give us are timestamps, or when events occured at a fine grained level. By capturing the time when each &amp;ldquo;Nice&amp;rdquo;
- or &amp;ldquo;WTF&amp;rdquo; button is pressed, I can see exactly which slide was being shown and when the button was pressed. There is a bit of a latency
- issue from the time the button is pressed until the time it actually shows up on the presenters screen, so capturing the TS at the server
- level gives a more accurate picture of how you performed on each slide, if the content made sense, etc.
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/hypevreality.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;from-ga-and-custom-events&#34;&gt;From GA and Custom Events&lt;/h3&gt;
-
-&lt;p&gt;This is an overview of the device analytics. I didn&amp;rsquo;t want to reinvent the wheel on User Agent detection and keeping track of sessions, so I leveraged GA.
-The following data is from my talk, in the video above, given on February 18th.
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-25/feb18Devnexus.PNG&#34; alt=&#34;onslyde architecture&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Become a better speaker&lt;/em&gt; &lt;br/&gt;
-I know that I&amp;rsquo;m not a &amp;ldquo;great&amp;rdquo; public speaker. Sure I can hold my own, but I still have a lot to learn. And every person who gives a presentation
-is different. We all have different personalities, views, and ways of moving about the stage - we all have an idea of what we think the audience wants
- to know. But allowing the audience to guide the speaker and to anonymously give their input is huge. You won&amp;rsquo;t get that kind of feedback verbally or
- by asking the audience to raise their hand for a given question. Nor will you get this type of fine grained feedback in a survey form at the end of your talk.&lt;br/&gt;
-You might not be able to tell it, but in the video above, every time I ask the audience to vote on something and I look up at the
-responses coming in, it gives me a huge boost of confidence. Not just because the tool is actually being used, but I feel like I&amp;rsquo;m
-about to go down a road that is actually useful to them. At that point I adjust and tailor everything I say from the results that
-came in.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Make the conversation go both ways&lt;/em&gt; &lt;br/&gt;
-When an individual feels that they can control the presentation&amp;rsquo;s future, it&amp;rsquo;s a powerful thing. It&amp;rsquo;s one thing just to poll the audience
-and get feedback, but to have a number of slides prepared for the results of that poll is another thing.
-Also, with the capabilities of mobile browsers today, we can make the presentation experience much richer. With this tool,
-I can send each person the notes and other information which relates to the slide I&amp;rsquo;m currently on. I can also send the ones who voted but didn&amp;rsquo;t win the track selection, the slides or
-notes that I didn&amp;rsquo;t show. So many possibilities to this&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/bejug/8190387932/sizes/l/in/set-72157632019400699/&#34;&gt;&lt;img src=&#34;http://farm9.staticflickr.com/8348/8190387932_37343f3e53_n.jpg&#34; alt=&#34;onslyde architecture&#34; target=&#34;_blank&#34; class=&#34;margin10 max-width-100&#34; align=&#34;left&#34;&gt;&lt;/a&gt;
-Fortunately, I&amp;rsquo;ve had the chance to test this code/concept out in many different talks over the past year. From 10 people in a room to 100&amp;rsquo;s,
- the feeling of having everyone dialed into what you&amp;rsquo;re saying is invaluable.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Crowdsourcing and forming some kind of collective wisdom&lt;/em&gt; &lt;br/&gt;
-Using this tool at a conference allows for a limited number of attendees to participate, but taken to a larger scale (webinar), the combined thoughts
-of the audience on a given topic can be surprising. Not just to the presenter for tailoring his next steps, but to the data collected behind
- the scenes. Because my interests lie in the mobile web and HTML5, I get really interesting stats for devices and browsers with each talk I give.
- But, if I were a presenter introducing a new product (outside of the tech realm) and trying to sell it to the audience, I would have
- a huge advantage by allowing for impulse buys and fine grained sales throughout my talk. Basically, content would be spoon fed and the
- chance of missed opportunities would be slim.
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;open-source&#34;&gt;Open Source&lt;/h2&gt;
-
-&lt;p&gt;This presentation tool is open source. If you&amp;rsquo;d like to signup for the beta and give it a spin, I would greatly appreciate your feedback.
-This blog post is serving as the documentation for the project until I get some time to improve.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://onslyde.com&#34; target=&#34;_blank&#34;&gt;Signup here&lt;/a&gt; and get a session ID. Make a note of your assigned &#34;session ID&#34;. The UI sucks right now, so after you hit the submit button it will show up in a barely visible green box above the name input.&lt;/li&gt;
-&lt;li&gt;Follow the directions &lt;a href=&#34;http://onslyde.com/example-deck.html&#34; target=&#34;_blank&#34;&gt;mentioned in this slide deck&lt;/a&gt;. Basically just save the HTML to disk somewhere.&lt;/li&gt;
-&lt;li&gt;Go to line 317 in the HTML file you just saved and replace the current sessionID value (103) with the one from your signup.&lt;/li&gt;
-&lt;li&gt;You now have a private session for your presentation.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/wesleyhales/onslyde&#34;&gt;Come help out with the project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you run into bugs, report them &lt;a href=&#34;https://github.com/wesleyhales/onslyde/issues&#34;&gt;here&lt;/a&gt; please.&lt;/p&gt;
-
-&lt;p&gt;Thanks!!&lt;/p&gt;
-
-&lt;p&gt;&lt;br style=&#34;clear:left&#34;/&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</guid>
+      <description>Overview Exactly one year ago, I started working on a WebSocket prototype that would give audiences the power to control my talks. I used it for the first time at DevNexus 2012 in Atlanta, GA and it produced great engagement results. At that time, the only analytics I had built into the server were through logging, and the results were motivating enough to continue using the prototype. Over the span of 2012, I spent many late nights in hotel rooms preparing my slides for talks and working out bugs of this tool which I named &amp;ldquo;onslyde&amp;rdquo;.</description>
     </item>
     
   </channel>

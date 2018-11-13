@@ -2,41 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atlanta on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/atlanta/</link>
+    <link>http://localhost:1313/tags/atlanta/</link>
     <description>Recent content in Atlanta on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/atlanta/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/atlanta/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>HTML5 is Booming in Atlanta</title>
-      <link>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</link>
+      <link>http://localhost:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/atlhtml5.jpg&#34; alt=&#34;atlanta html5&#34; align=&#34;left&#34; class=&#34;max-width-100 margin10&#34;&gt;So, all I can say is that the Atlanta HTML5 community is awesome. Today the &lt;a href=&#34;http://twitter.com/atlhtml5&#34;&gt;@atlhtml5&lt;/a&gt; user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don&amp;rsquo;t fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
-&lt;br/&gt;
-&lt;div style=&#34;width:540px;margin: 0 auto&#34;&gt;
-&lt;a href=&#34;http://www.indeed.com/jobtrends&#34; title=&#34;HTML5 Job Trends&#34;&gt;
-&lt;img width=&#34;540&#34; height=&#34;300&#34; src=&#34;http://www.indeed.com/trendgraph/jobgraph.png?q=HTML5&#34; border=&#34;0&#34; alt=&#34;HTML5 Job Trends graph&#34;&gt;
-&lt;/a&gt;
-&lt;table width=&#34;100%&#34; cellpadding=&#34;6&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; style=&#34;font-size:80%&#34;&gt;&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.indeed.com/jobtrends&#34;&gt;HTML5 Job Trends&lt;/a&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;&lt;a href=&#34;http://www.indeed.com/jobs?q=Html5&#34;&gt;Html5 jobs&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;When I started this user group exactly 11 months ago, I wasn&amp;rsquo;t sure how far it would grow and had no idea who would be the following month&amp;rsquo;s speaker. When you start a group (or any venture for that matter) completely unaware of who will show up and who will continue to come, regardless of the subject&amp;rsquo;s popularity, it&amp;rsquo;s easy to become a little unsure of yourself. Luckily, I had awesome friends and supporters from day one who helped the group become what it is.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m a firm believer in open source and giving everything away. It all comes back to you in multiple ways in the end. On that note, this group will never charge for an event or sell out as a platform for selling a product or service. I have turned down many cash offers from quite a few promoters/sales people who wish to use this community for their benefit and not give anything back to it. However, we will accept sponsorship of any company that wishes to help us bring in bigger speakers or generally support the group for equipment and other costs.&lt;/p&gt;
-
-&lt;p&gt;So thanks to all who have supported the &lt;a href=&#34;http://www.meetup.com/AtlantaHTML5/&#34;&gt;Atlanta HTML5 User Group&lt;/a&gt;. I&amp;rsquo;m not sure what will happen when HTML6 comes out, but we will have to think of another clever name ;)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://twitter.com/wesleyhales&#34;&gt;@wesleyhales&lt;/a&gt;
-&lt;br/&gt;
-&lt;br/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</guid>
+      <description>So, all I can say is that the Atlanta HTML5 community is awesome. Today the @atlhtml5 user group has reached it&amp;rsquo;s 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns.</description>
     </item>
     
   </channel>

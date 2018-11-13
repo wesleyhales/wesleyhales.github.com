@@ -2,32 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conferences on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/conferences/</link>
+    <link>http://localhost:1313/tags/conferences/</link>
     <description>Recent content in Conferences on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Jun 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Jazoon 2010 Overview</title>
-      <link>http://wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview</link>
+      <link>http://localhost:1313/blog/2010/06/07/Jazoon-2010-Overview/</link>
       <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview</guid>
-      <description>&lt;p&gt;&lt;p&gt;I&#39;ve always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&amp;#45;up of talented speakers/developers.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;I was pleasantly surprised to see soo many talks about portal technologies. And people weren&#39;t talking about the spec or the technology itself, but about specific usecases &amp;#45; which is really cool. However, Andy Bosch did an excellent job of explaining the JSR&amp;#45;301/329 portlet bridge. &lt;a href=&#34;http://www.slideshare.net/wesleyhales/if-you-know-jsf-you-know-portals-and-portlets&#34;&gt;My talk&lt;/a&gt; was more vendor specific on the &lt;a href=&#34;http://jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; and the features that we offer with Seam and RichFaces, so it was great to have someone there to explain the spec in detail and give a non&amp;#45;vendor specific view.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;Andrew Lombardi announced his love for JSF and that the Wicket folks may/will begin to focus on a better component library community. I hate to mention JSF within the same paragraph as Wicket &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; but when a developer at XYZ corporation wants to implement some usecase that makes use of a lot of different components, 99% of the time they will look to JSF and its many component libraries/communities. Not to get into a holy war here, because of course Wicket has a different way of handling it&#39;s components &amp;#45; and an overall different (better) way of handling the model and binding of components. The one thing that is missing from Wicket (in my mind) is heavy focus on polished component libraries and communities.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;Matthew McCullough put on a great show with his Maven 3 presentation. The use of screenflow and his rate of speech were right on the money. It has inspired me to try just a little bit harder with my talks.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;The Arquillian talk by Dan Allen and Aslak Knutsen ended as a great talk and shirt throwing fun. Of course, a few of the audience members had to pay the price of Dan&#39;s throwing arm &amp;#45; aim at the back row, but hit someone in the middle row with alot of force :D In all seriousness, Arquillian is taking the testing world by storm so you better jump on the train or get out of the way.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;There were many other great talks given by other speakers. So, it was definitely a good knowledge sharing event.&lt;br /&gt; 
-Overall, I had a great time and met a lot of people whom I have only talked to through twitter and email. For me, it is soo much easier to blast or praise someone online when you have sat down and had a beer with them &amp;#45; but that&amp;#8216;s just me.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2010/06/07/Jazoon-2010-Overview/</guid>
+      <description>I&#39;ve always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&amp;#45;up of talented speakers/developers.
+I was pleasantly surprised to see soo many talks about portal technologies. And people weren&#39;t talking about the spec or the technology itself, but about specific usecases &amp;#45; which is really cool.</description>
     </item>
     
   </channel>

@@ -2,28 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ajaxworld on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/ajaxworld/</link>
+    <link>http://localhost:1313/tags/ajaxworld/</link>
     <description>Recent content in Ajaxworld on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Oct 2008 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/ajaxworld/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/ajaxworld/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>AjaxWorld West &#39;08 Recap</title>
-      <link>http://wesleyhales.com/blog/2008/10/22/AjaxWorld-West-08-Recap</link>
+      <link>http://localhost:1313/blog/2008/10/22/AjaxWorld-West-08-Recap/</link>
       <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/10/22/AjaxWorld-West-08-Recap</guid>
-      <description>&lt;p&gt;This week, I attended/spoke at the &lt;a href=&#34;http://ajaxworld.com/&#34;&gt;AjaxWorld&lt;/a&gt; conference in San Jose. The cool thing for me is that this was my &lt;a href=&#34;http://www.slideshare.net/wesleyhales/ajax-in-enterprise-portals-presentation/&#34;&gt;first public speaking appearance&lt;/a&gt;. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.&lt;/p&gt; 
-&lt;p&gt;I was able to pull &lt;a href=&#34;http://chrisschalk.com/blog/&#34;&gt;Chris Schalk&lt;/a&gt; aside and talk to him about how we can incorporate OpenSocial/Shindig into JBoss Portal. I also wanted to get a good understanding of exactly what ShinDig is doing. My idea is to make a service available via some js lib and leverage one of the huge bullet points of portals... Personalization. With social capabilities in portal, users activities (like updating a wiki article) can be published to their &#34;group&#34; - how you define the group can be done systematically via existing infrastructure or letting users subscribe to social groups. For now, this is just a bunch crazy ideas flying around, I need to get something coded.&lt;/p&gt; 
-&lt;p&gt;I talked to Ted Goddard and Steve Maryka from &lt;a href=&#34;http://www.icefaces.org/main/home/index.jsp&#34;&gt;IceFaces&lt;/a&gt;, and they seemed very excited about getting IceFaces support into the JBoss 301 bridge. Maybe we can squeeze it into the &lt;a href=&#34;http://www.jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; GA.&lt;/p&gt; 
-&lt;p&gt;Jonas Jacobi and John Fallows presented some &lt;a href=&#34;http://www.kaazing.com/content/view/57/93/&#34;&gt;very cool technology&lt;/a&gt; that I would also like to prototype into JBoss Portal. WebSockets, Server Side Events, and full-duplex communication between various protocols is another up and coming tech that I really want to play around with and see where it would be a good fit in portals.&lt;/p&gt; 
-&lt;p&gt;I hung out with Matt Quilan from &lt;a href=&#34;http://www.appcelerator.org/index.html&#34;&gt;Appcelerator&lt;/a&gt; and soon to be employee of {company_name_here}. I see where Appcelerator is going and if they can hook up with the something like the guys from nextDB.net are doing, I think it could be something cool.&lt;/p&gt; 
-&lt;p&gt;During the open bar (and after a few beers), I got a chance to talk to Geoff from &lt;a href=&#34;http://nextdb.net/&#34;&gt;nextDB.net&lt;/a&gt;. These guys are thinking on a fairly radical level and I like it. I think people forget the power of small-medium sized business market websites. I joked with the guys about reading 2600 and their product is just screaming &#34;Hack Me&#34; and I hope they push it to the limits to show their front-end encryption really is secure to hold vital customer info. Maybe they will show up at the next DefCon wearing a &#34;I dare you to Hack Me&#34; t-shirt.&lt;/p&gt; 
-&lt;p&gt;Last but not least, thanks to all the people who showed up and withstood my portal presentation. I learned a lot, and judging from the folks that asked the questions during Q&amp;A I feel pretty good about it. Out of all the presentations I went to, mine had the most questions at the end... don&#39;t know if that&#39;s good or bad ;)&lt;/p&gt; 
-&lt;p&gt;I guess the more you put into meeting people and talking to them, the more you get out of conferences like this. Some of the folks I talked to thought the turnout was a little scarce, and that is probably just a sign of the times. Overall I had a good time and met some good people.&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2008/10/22/AjaxWorld-West-08-Recap/</guid>
+      <description>This week, I attended/spoke at the AjaxWorld conference in San Jose. The cool thing for me is that this was my first public speaking appearance. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.</description>
     </item>
     
   </channel>

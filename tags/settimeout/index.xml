@@ -2,72 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Settimeout on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/settimeout/</link>
+    <link>http://localhost:1313/tags/settimeout/</link>
     <description>Recent content in Settimeout on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 Oct 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/settimeout/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/settimeout/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Basic Screen Updates with Angular and requestAnimationFrame</title>
-      <link>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</link>
+      <link>http://localhost:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame</guid>
-      <description>
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using &lt;a href=&#34;http://jsfiddle.net/IgorMinar/ZSBhg/2/&#34;&gt;setInterval&lt;/a&gt; and
-Angular&amp;rsquo;s builtin &lt;a href=&#34;http://jsfiddle.net/ganarajpr/LQGE2/&#34;&gt;$timeout&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/IgorMinar/ZSBhg/2/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change
-is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout).
-If you want to read more about $scope.$apply check out &lt;a href=&#34;http://jimhoskins.com/2012/12/17/angularjs-and-apply.html&#34;&gt;this article&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
-the user know when it&amp;rsquo;s about to refresh the data.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://apigee.com/usergrid/dash/app/index-ma.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/dashboard.PNG&#34; alt=&#34;apigee app services dashboard&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn&amp;rsquo;t believe how much jank it was causing.
-There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
- check it out &lt;a href=&#34;http://www.youtube.com/watch?v=mSK70FwUz2A&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If we look at the frame rate on the recommended way of using setInterval, we see horrible performance:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-fps.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
-Yep, That&amp;rsquo;s 1 FPS spikes with a continuous stream of 9 frames per second. Ouch.&lt;/p&gt;
-
-&lt;p&gt;Also, if you look at the memory being consumed, we&amp;rsquo;re taking quite a hit for this little counter.
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/bad-memory.PNG&#34; alt=&#34;bad fps jank&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
-We maintain around 25MB and then shoot up to 34 when the page does its refresh.
-&lt;br/&gt;
-&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;raf-to-the-rescue&#34;&gt;rAF to the rescue!&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m still trying to bring requestAnimationFrame into my dev thought process, and this was a fine chance to see if it could save the day.
-Here&amp;rsquo;s the code I put together:
-&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/wesleyhales/59SeE/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;And now, when we look at our frame rate in Chrome dev tools we get a fairly consistent 60 FPS:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-fps.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Also the memory footprint is greatly reduced:
-&lt;a href=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-10-23/good-memory.PNG&#34; alt=&#34;good fps&#34; class=&#34;marginTop10 max-width-100&#34;&gt;&lt;/a&gt;
-Cruising at 9.3MB instead of the 25MB we were getting before bringing in rAF.&lt;/p&gt;
-
-&lt;p&gt;A lot of the performance overhead is based on the AngularJS framework itself. It could be stuff I need to refactor and make better or it might just be the
-framework lifecycle. I need to get a baseline on the AngularJS runtime before I can make any assumptions (or point fingers).
-This is my first perf analysis of the framework and I plan on doing much more in the coming months.
-&lt;br/&gt;
-&lt;br/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/</guid>
+      <description>Overview Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using setInterval and Angular&amp;rsquo;s builtin $timeout.
+ Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout). If you want to read more about $scope.$apply check out this article.</description>
     </item>
     
   </channel>

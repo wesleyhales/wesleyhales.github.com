@@ -2,129 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Secops on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/secops/</link>
+    <link>http://localhost:1313/tags/secops/</link>
     <description>Recent content in Secops on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Oct 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/secops/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/secops/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Browser Automation At Scale - DevSecOps and the Equifax Breach</title>
-      <link>http://wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</link>
+      <link>http://localhost:1313/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</link>
       <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</guid>
-      <description>
-
-&lt;p&gt;If you’ve been following along in &lt;a href=&#34;http://wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/&#34;&gt;Part 1&lt;/a&gt; and &lt;a href=&#34;http://wesleyhales.com/posts/2017-09-03-Browser-Automation-At-Scale-Part-2/&#34;&gt;Part 2&lt;/a&gt;, you already have the basic framework to implement a globally distributed Browser Automation Network. Now, we can easily write a few lines of JavaScript and augment it to create a sophisticated security scanner that will fly under the radar of most security tools and check for application level vulnerabilities - exactly like the one found at Equifax.com a few weeks back. This article covers how to run a scanner that could’ve prevented the Equifax breach if deployed in a &lt;a href=&#34;http://www.devsecops.org/&#34;&gt;DevSecOps&lt;/a&gt; mindset.&lt;/p&gt;
-
-&lt;p&gt;In the Web Performance world, you have two types of tests that allow for metrics gathering: Synthetic and Real User. The goal of Synthetic testing is to monitor the user experience in a web browser, from any geography, continuously and in an automated fashion. This is done by having a crafted script navigate through the app in a manner that simulates a real user, and ensuring the performance measurements of those actions are within target goals. This level of monitoring is critical to operations for detecting issues at runtime, experimental features, or how assets are being delivered to the browser.&lt;/p&gt;
-
-&lt;p&gt;Real User Monitoring gives a more accurate view of what users actually experienced on your site by taking live performance samples during the user session. This data is gathered from the same browser APIs that Synthetic tests use, but it’s actual data from a live user in the wild dealing with all sorts of variables that synthetic testing cannot recreate. This perf data is sent through an XHR request back to a web server and is used for key business decisions within the enterprise (it’s critical to the executive team). In short, Synthetic testing analytics is used in Ops and RUM data is used at the business level.&lt;/p&gt;
-
-&lt;p&gt;In cyber security, data is gathered and used almost exactly the same way. You have Synthetic testing to scan applications for vulnerabilities and you have Real User (or Attacker) Monitoring for analyzing browser signals that can be used to fingerprint attack groups and to create new JavaScript or browser based countermeasures. Real Attacker Monitoring or RAM data will be analyzed offline to identify where the attack is coming from and steps for mitigation will be determined by the organization’s security team (I’ll cover this topic in depth in a later article).&lt;/p&gt;
-
-&lt;p&gt;Unlike performance data, which can be tied to actual revenue, attack data does not get the same executive-level visibility unless of course, there’s been a breach.&lt;/p&gt;
-
-&lt;p&gt;In the past year, the Struts framework has received some bad press due to the libraries that were included in older versions of the project.  For example, &lt;a href=&#34;http://struts.apache.org/announce.html&#34;&gt;all but one &lt;/a&gt;of the project’s official 2017 announcements contained a security vulnerability.&lt;/p&gt;
-
-&lt;p&gt;The unfortunate thing is that every open source project (like Struts) depends on standard utility libraries that allow project authors to not have to reinvent the wheel. E.g. Object serialization, parsing, and so on. Dependency (or 3rd party) vulnerabilities like this will continue to rise and be a thorn in the side of every organization on the web.&lt;/p&gt;
-
-&lt;p&gt;The attack vector utilized in Equifax’s case is a massive industry wide problem for older web applications that are no longer maintained, or newer ones that are simply unaware that a known vulnerability exists.&lt;/p&gt;
-
-&lt;h3 id=&#34;security-is-everyone-s-responsibility&#34;&gt;Security is Everyone’s Responsibility&lt;/h3&gt;
-
-&lt;p&gt;If you’re not familiar with the concepts of DevSecOps, take 5 minutes and read the &lt;a href=&#34;http://www.zdnet.com/article/devsecops-what-it-is-and-how-it-can-help-you-innovate-in-cybersecurity/&#34;&gt;manifesto&lt;/a&gt;. Here’s a quick blurb from the third paragraph:&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;We won&amp;rsquo;t simply rely on scanners and reports to make code better. We will attack products and services like an outsider to help you defend what you&amp;rsquo;ve created. We will learn the loopholes, look for weaknesses, and we will work with you to provide remediation actions instead of long lists of problems for you to solve on your own.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;There are many types of tools, scanners, and commercial products that try to watch, block or detect attacks within enterprise web applications:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Web Application Firewall - HTTP Header inspection&lt;/li&gt;
-&lt;li&gt;Automation Detection - Browser Signals&lt;/li&gt;
-&lt;li&gt;Inline Commercial Solutions (Application and Network Security)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I’m sure most readers of this article already work for a company that implements one of the above. For those that don’t have an enterprise level security solution in place, &lt;a href=&#34;https://github.com/theonemule/docker-waf&#34;&gt;nginx+modsecurity&lt;/a&gt; in front of your origin is a great place to start for a WAF. From there add the &lt;a href=&#34;https://www.netnea.com/cms/apache-tutorial-7_including-modsecurity-core-rules/&#34;&gt;owasp core ruleset configuration&lt;/a&gt; and you have a product that most companies offer as an enterprise level WAF solution.&lt;/p&gt;
-
-&lt;p&gt;To launch our attack on the enterprise, we’re going to need a few pieces of information before getting started.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Gather a List of Web Applications&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Knowing the entire list of web applications is a gruesome task for some enterprises due to geographic growth, siloed business units, marketing campaigns and ownership through acquisitions - along with rogue environments that were stood up by a no longer employed, 10x developer a few years back.&lt;/li&gt;
-&lt;li&gt;For this article, the scope of my analysis is all web applications indexed by Google. I performed a search for all sites that use the well known Struts .action or .do file extension. e.g. &amp;ldquo;filetype:action doupload&amp;rdquo; or “filetype: do”&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Understand Potential Vulnerabilities&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;After you create the site list, you should document the framework and versions of each web application. This is especially important for older deployments that have long been out of mind. This list will allow you to compare and keep tabs on vulnerabilities as &lt;a href=&#34;https://nvd.nist.gov/vuln/data-feeds&#34;&gt;they’re announced&lt;/a&gt; by each &lt;a href=&#34;http://struts.apache.org/announce.html#a20170905&#34;&gt;project&lt;/a&gt; and version.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create the Attack&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;With a headline breach, it’s fairly easy to find the specific &lt;a href=&#34;http://blog.talosintelligence.com/2017/03/apache-0-day-exploited.html&#34;&gt;source code&lt;/a&gt; that is vulnerable and how to replicate the attack. Tools like metasploit and github can yield attack reproduction code based on the CVE and other tools like Shodan or Censys might also come in handy if the application can be identified by &lt;a href=&#34;https://en.wikipedia.org/wiki/Banner_grabbing&#34;&gt;banner&lt;/a&gt; or ports.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Know Your Current Security Stack&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Which (if any) commercial products and/or Open Source tools are currently deployed to protect your Web Applications? Do you need to whitelist your attack scanner with the security team? Since we’re attacking from the front door, I don’t really consider this task a &amp;ldquo;must do&amp;rdquo;. If you stick with the DevSecOps ideals, the goal is to fly under the radar of your current security stack. I’m pretty sure that attackers will not ask your security team to whitelist them.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Remediation Steps&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In the case of the Struts exploit, you must patch the code or upgrade to a new version of the framework - expensive options for many companies. The official solution provided by Apache suggested either upgrading to a patched version or switching to a different multipart parse implementation. An upgrade can be a long process that involves backups, testing, and server reboots.&lt;/li&gt;
-&lt;li&gt;You could also use a WAF to block the explicit attack header by creating a rule to detect the malicious header - time consuming and can be expensive with false positives. This tuning would typically take weeks and analyzing each header and parsing for the pattern has a specific cost based on the size of the header and your RPS (requests per second).&lt;/li&gt;
-&lt;li&gt;With the right combination of inspecting application dependencies for known vulnerabilities, HTTP level header analysis, and runtime monitoring of the APIs that are implicitly exposed in a web browser, applications can safely be protected from adversaries. Finding the right combination can be challenging and it’s a challenge that I enjoy. Feel free to reach out to me directly at &lt;a href=&#34;mailto:wesley@tcell.io&#34;&gt;wesley@tcell.io&lt;/a&gt; if you’d like to discuss.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;step-1-the-target&#34;&gt;Step 1 - The Target&lt;/h3&gt;
-
-&lt;p&gt;For this example, I’m going to use the &lt;a href=&#34;http://apache.mirrors.tds.net/struts/2.5.10/&#34;&gt;Struts showcase application&lt;/a&gt; to run my scanner against. You can also find a list of Struts target sites through Google by searching for the following &lt;a href=&#34;https://www.google.com/search?q=filetype%3Aaction+doupload&#34;&gt;pattern&lt;/a&gt;. There are roughly 700 sites that could possibly be affected by this vulnerability and to my surprise, running this scanner on the first few results shows that they are in fact vulnerable. This also speaks to how massive vulnerabilities like this are and seven months after the initial announcement are still exposed through a public web server.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_0.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you wanted to harvest all of Google’s search results in an automated fashion, you can run the following JavaScript from Chrome’s developer tools:&lt;/p&gt;
-
-&lt;p&gt;var nodesArray = [].slice.call(document.querySelectorAll(&amp;ldquo;h3.r a&amp;rdquo;));(nodesArray.forEach(function(item){console.log(&amp;rsquo;\&amp;rdquo; + item.href + &amp;lsquo;\&amp;lsquo;,&amp;rsquo;)}))&lt;/p&gt;
-
-&lt;p&gt;This will produce the URL’s of each target so they can be easily pasted in the &lt;a href=&#34;https://github.com/wesleyhales/site_runner/blob/scanner/model/AllSites.js&#34;&gt;list of sites&lt;/a&gt; to scan.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_1.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;step-2-attack-setup&#34;&gt;Step 2 - Attack Setup&lt;/h3&gt;
-
-&lt;p&gt;There are multiple ways to launch &lt;a href=&#34;https://cwiki.apache.org/confluence/display/WW/S2-046&#34;&gt;this type of attack&lt;/a&gt; since it’s just a matter of adding data to a header and sending a POST request. In short, the payload of this attack is sent through an HTTP header to an API that uses the Jakarta Multipart parser. You might also use cURL, metasploit or some other tool that can send an HTTP request with the attack header. Here I’m using Chrome for a few reasons:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;I’m loading the page and executing JavaScript in a real web browser. This already checks the box on many commercial security tools who are asking &amp;ldquo;Is this a real user or a bot?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;I’m using the browser’s XHR implementation to make the attack request. This gives me implicit access to cookies and any other request signing that needs to happen from a security standpoint.&lt;/li&gt;
-&lt;li&gt;It’s easy to maintain this (along with many other tests) as a single test script that can be executed with a suite.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;See source code &lt;a href=&#34;https://github.com/wesleyhales/site_runner/blob/scanner/selenium/crawl-search.js&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_2.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;First, the above script opens a web page and looks for all the forms in the DOM. This is part of the scanning for susceptible targets within the web app. For each form action URL found, we launch the attack through an XHR request.&lt;/p&gt;
-
-&lt;p&gt;If the target is vulnerable, the report JSON data will be stored and shown in the scanning overview:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://wesleyhales.com/images/posts/2017-10-09/image_3.png&#34; alt=&#34;image alt text&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If this grid of scanners were running on a regular basis when new vulnerabilities are &lt;a href=&#34;https://nvd.nist.gov/vuln/data-feeds&#34;&gt;released&lt;/a&gt;, then we’d have a bit more visibility into how vulnerable our web apps really are. In the case of breaches like Equifax, it may be that the enterprise already knows about the vulnerability and merely did not prioritize the effort to patch the problem or it was simply a process issue. With a tool like this, which can help security teams cut down on time to assess vulns in the wild, priority and process will be flattened for issues found on your live production sites.&lt;/p&gt;
-
-&lt;h2 id=&#34;shout-outs&#34;&gt;Shout Outs&lt;/h2&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&#34;https://www.linkedin.com/in/cchio&#34;&gt;Clarence Chio&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/in/boris-chen-4b118a1/&#34;&gt;Boris Chen&lt;/a&gt; for their valuable review and feedback.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;
-&lt;br/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</guid>
+      <description>If you’ve been following along in Part 1 and Part 2, you already have the basic framework to implement a globally distributed Browser Automation Network. Now, we can easily write a few lines of JavaScript and augment it to create a sophisticated security scanner that will fly under the radar of most security tools and check for application level vulnerabilities - exactly like the one found at Equifax.com a few weeks back.</description>
     </item>
     
   </channel>

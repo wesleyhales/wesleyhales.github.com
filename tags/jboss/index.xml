@@ -2,225 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jboss on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/jboss/</link>
+    <link>http://localhost:1313/tags/jboss/</link>
     <description>Recent content in Jboss on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>AeroGear - Mobile, HTML5, and Auwesome</title>
-      <link>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</link>
+      <link>http://localhost:1313/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</link>
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/02/08/AeroGear---Mobile-HTML5-and-Auwesome</guid>
-      <description>&lt;p&gt;
-The &lt;a href=&#34;http://www.jboss.org/aerogear&#34;&gt;AeroGear project&lt;/a&gt; had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;https://community.jboss.org/wiki/AeroGearServerSideResources&#34;&gt;Education&lt;/a&gt; - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers.&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;https://community.jboss.org/wiki/AeroGearHTML5ExtensionConcepts&#34;&gt;Innovation&lt;/a&gt; - Many of AeroGear&#39;s primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based.&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;https://community.jboss.org/wiki/ContributingToAeroGear&#34;&gt;Community&lt;/a&gt; - We already have several community members contributing examples, demos, and other useful resources. We want to hear from &lt;a href=&#34;https://community.jboss.org/en/aerogear?view=discussions&#34;&gt;you&lt;/a&gt;! We&#39;re here for the community.&#39;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  Most front-end developers are familiar with &#34;jQuery callbacks and RESTful services&#34;, but all developers should be familiar with how this architecture affects their end of the stack. So we put together the following diagram which explains the concept of &lt;a href=&#34;https://community.jboss.org/wiki/POH5PlainOldHTML5Applications&#34;&gt;&#34;POH5&#34; (Plain Old HTML5)&lt;/a&gt;
-&lt;/p&gt;
-&lt;img src=&#34;http://wesleyhales.com/images/design/poh5.flow.expanded.png&#34; alt=&#34;Poh5.Flow.Expanded&#34; class=&#34;max-width-100&#34;&gt;
-&lt;p&gt;
-So why another acronym? Why not just call it &#34;Plain Old Open Web&#34;? The HTML5 revolution causes developers to think differently about their overall architecture, with more JavaScript and CSS on the client-side and RESTful endpoints on the server-side. AeroGear hopes to bridge this gap and provide the tools or &#34;gear&#34; you need to get started quickly with the best possible solution.
-&lt;/p&gt;
-&lt;p&gt;
-We&#39;re just getting started... For now, we have a &lt;a href=&#34;https://github.com/aerogear/as-quickstarts/tree/master/kitchensink-html5-mobile&#34;&gt;quickstart application&lt;/a&gt; which &lt;a href&#34;https://community.jboss.org/wiki/GetStartedWithHTML5MobileWebDevelopmentWithJBoss#Prerequisites&#34;&gt;fully examines&lt;/a&gt; each piece of the POH5 architecture. Take it for a spin with the &lt;a href=&#34;http://poh5-aerogear.rhcloud.com/&#34;&gt;live demo&lt;/a&gt;.
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://community.jboss.org/en/aerogear?view=documents&#34;&gt;Join Us&lt;/a&gt;! or come hang out on &lt;a href=&#34;irc://irc.freenode.net/aerogear&#34;&gt;freenode #aerogear&lt;/a&gt;.
-&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</guid>
+      <description>The AeroGear project had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:  Education - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers. Innovation - Many of AeroGear&#39;s primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based. Community - We already have several community members contributing examples, demos, and other useful resources.</description>
     </item>
     
     <item>
       <title>Pushing CDI Events to the Browser with WebSockets</title>
-      <link>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</link>
+      <link>http://localhost:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</link>
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;notes&#34; &gt;
-Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers &lt;a href=&#34;http://webtide.intalio.com/2011/09/cometd-2-4-0-websocket-benchmarks/&#34;&gt;here&lt;/a&gt;.
-&lt;/div&gt;
-&lt;div class=&#34;download&#34;&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket&#34; title=&#34;Fork me on github&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/github-icon.jpg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Github Icon&#34;&gt;&lt;/a&gt;
-  &lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war&#34; title=&#34;download the .war&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/icons/download.png&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;Download&#34;&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.&lt;/p&gt;
-&lt;iframe src=&#34;http://player.vimeo.com/video/35433707?title=0&amp;amp;byline=0&amp;amp;portrait=0&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;  
-With WebSockets, we have a new development model for server side applications; event based programming. There are 3 out-of-box events associated with WebSockets: onopen, onmessage, and onclose. For starters, we must wire up these three listeners to utilize the core functionality that the WebSocket specification gives us. The open event is fired when the WebSocket connection is opened successfully. The message event is fired when the server sends data. The close event is fired when the WebSocket connection is closed.
-&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=websocketBasic.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-But sending messages in the form of strings over raw WebSockets isn&#39;t very appealing when we&#39;re wanting to develop advanced web applications. Obviously, we&#39;re going to be using JSON to transfer data to and from the server. But how do we propagate our CDI events which are fired on the server and have them bubble up on the client?
-&lt;/p&gt;
-&lt;p&gt;
-First, we&#39;ll start with the server. I&#39;m using the &lt;a href=&#34;http://www.jboss.org/jbossas/downloads/&#34;&gt;JBoss AS7 application server&lt;/a&gt; and embedding &lt;a href=&#34;http://eclipse.org/jetty/&#34;&gt;Jetty&lt;/a&gt; within my web application. Thanks to &lt;a href=&#34;http://angelozerr.wordpress.com/2011/07/26/websockets_jetty_step4/&#34;&gt;this article&lt;/a&gt;, I was able to easily add the latest Jetty server to my maven project (dependencies below) to get everything up and running in a few minutes.
-&lt;/p&gt;
-&lt;p&gt;
-A few things worth noting:
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Security: Since our WebSocket server is running on a different port (8081) than our AS7 server (8080), we must account for not having the ability to share cookies, etc...&lt;/li&gt;
-&lt;li&gt;Proxies: As if proxy servers weren&#39;t already a huge problem for running WebSockets and HTTP over the same port, we are now running the separately (but I have a semi-solution for this below)&lt;/li&gt;
-&lt;li&gt;Threading: Since we&#39;re observing/listening for CDI events, we must perform some thread same operations and connection sharing.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-So, if you&#39;re still reading ;) let&#39;s get on with the code.
-&lt;/p&gt;
-&lt;p&gt;
-Download the latest &lt;a href=&#34;http://www.jboss.org/jbossas/downloads/&#34;&gt;JBoss AS7 (7.1.0.CR1b as of this writing)&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Add the Jetty maven dependencies to your project. This demo is based off of the &lt;a href=&#34;https://github.com/jbossas/quickstart/tree/master/html5-mobile&#34;&gt;original html5-mobile quickstart for JBoss AS7&lt;/a&gt;.
-&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=pom.xml&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-Next we setup the WebSocket server using Jetty&#39;s WebSocketHandler and embedding it inside a ServletContextListener.
-Here we&#39;re sharing a synchronized set of WebSocket connections across threads. Using the synchronized keyword, we ensure that only a single thread can execute a method or block at one time. The ChatWebSocketHandler contains a global Set of webSocket connections and adds each new connection as it&#39;s made within the Jetty server
-&lt;a href=&#34;https://github.com/wesleyhales/HTML5-Mobile-WebSocket/tree/master/src/main/java/org/jboss/as/quickstarts/html5_mobile/websockets&#34;&gt;View complete source here.&lt;/a&gt;
-&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=ChatWebSocketHandler.java&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=ChatServerServletContextListener.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-Now we&#39;ll create a method to observe CDI events and send the fired &#34;Member&#34; events to all active connections.
-&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=ChatWebSocketHandler-observer.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-The above code will observe the following event when a new Member is registered through the web interface.
-&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=MemberService.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-Finally, we setup our WebSocket JavaScript client and safely avoid using the eval() method to execute the received JavaScript.
-&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=websocketclient.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code. (This is the alert popup seen in the video above.)
-&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=cdiJavascriptListener.js&#34;&gt;&lt;/script&gt; 
-
-&lt;p&gt;One additional piece I added to this approach is the use of HAProxy. This gives us a reverse-proxy on the WebSocket port (8081), in the end allowing all traffic (HTTP and ws/wss) to be sent across a central port - 8080 in this case. &lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/1651079.js?file=haproxy.config&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;
-As you can see, this is a very prototyped approach to achieve $SUBJECT, but it&#39;s a step forward in adding a usable programming layer on top of the WebSocket protocol. There&#39;s probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
-&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</guid>
+      <description>Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers here.      
+Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</description>
     </item>
     
     <item>
       <title>My New Career Choice at Red Hat</title>
-      <link>http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat</link>
+      <link>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</link>
       <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat</guid>
-      <description>&lt;p&gt;&lt;p&gt;July 1st marked my first day on the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;JBoss RichFaces&lt;/a&gt; team. I&#39;ve decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.&lt;/p&gt;&lt;p&gt;I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company. It’s usually the other way around - as you are either picked for your skills and talent to work on a specific team or for whatever reason you are just told to move to another team.&lt;/p&gt;&lt;p&gt;As for my new position, I have been designated to serve on JBoss’ mobile working group (see &lt;a href=&#34;http://en.wikipedia.org/wiki/Tiger_team&#34;&gt;Tiger Team&lt;/a&gt;). I will be part time on the actual RichFaces project (making the project work on mobile devices) and the other part heavily focused on HTML5 and the &lt;a href=&#34;http://en.wikipedia.org/wiki/Mobile_Web&#34;&gt;Mobile Web&lt;/a&gt;. This is a new frontier for developers as we try to create HTML5/CSS3 based web apps that not only match the native app feel but also answer the question “How can we make the mobile web faster using JBoss middleware?”.&lt;/p&gt;&lt;p&gt;As things grow, so will the project and the team. I find excitement in bringing grass roots projects &lt;a href=&#34;http://www.jboss.org/portletbridge&#34;&gt;from nothing into full blown enterprise supported products&lt;/a&gt; &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; Luckily I was in the right place at the right time and I must say that it was quite an honor to be allowed to make such a move. I’m looking forward to making good stuff happen.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;Stay tuned&amp;#8230;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/07/04/My-New-Career-Choice-at-Red-Hat/</guid>
+      <description>July 1st marked my first day on the JBoss RichFaces team. I&#39;ve decided to push myself and get out of my comfort zone. It seems that a developer only has so many years that he or she can sustain the same position doing the same thing and dealing with the same technology.
+I’ve been with Red Hat almost 4 years now and have enjoyed every second of it, and this is the first time in my career that I have chosen the position for myself while working within a company.</description>
     </item>
     
     <item>
       <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
-      <link>http://wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</link>
+      <link>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3</guid>
-      <description>&lt;p&gt;InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!&lt;/p&gt; 
-&lt;br/&gt; 
-&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/infoq-thumb.jpg&#34; alt=&#34;&#34;/&gt;&lt;/a&gt; 
-
-&lt;p&gt;This first part is about basic JSF development with an easy to follow tutorial and real world development tips. The next one will be about RichFaces and the final (about Seam) will be published right after the release of Beta 4 in early September.&lt;/p&gt; 
-
-&lt;p&gt;Enjoy!&lt;br/&gt; 
-&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&#34;&gt;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-1&lt;/a&gt; 
-&lt;br/&gt;&lt;br/&gt;&lt;a href=&#34;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-2&#34;&gt;http://www.infoq.com/articles/jsf-ajax-seam-portlets-pt-2&lt;/a&gt; 
-&lt;br/&gt; 
-&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</guid>
+      <description>InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!
+  This first part is about basic JSF development with an easy to follow tutorial and real world development tips.</description>
     </item>
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</link>
+      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j</guid>
-      <description>&lt;p&gt;I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written &lt;a href=&#34;http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and&#34;&gt;this one&lt;/a&gt; over a year ago when Ajax4JSF was still on java.net&lt;/p&gt; 
+      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
+      <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/page-modal-small.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website. The cool thing about a modal window is that the user doesn&#39;t feel like they are being redirected to another page. They can still keep their focus on the content at hand while multitasking and spawning another workflow.&lt;/p&gt; 
-
-&lt;p&gt;So what about component based modals? We know good and well what a &lt;a href=&#34;http://wesleyhales.com/images/jroller/page-modal.gif&#34;&gt;page-locking modal&lt;/a&gt; is, but has anyone tried to implement a modal that only covers the area of the active ajax component? 
-&lt;/p&gt; 
-
-&lt;p&gt; 
-This is a component based modal. It basically blocks out the activated component per ajax request.&lt;br/&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/component-modal.gif&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/component-modal-small.gif&#34; alt=&#34;&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;br/&gt; 
-This demo is already setup and ready to go, check it out &lt;a href=&#34;http://code.google.com/p/seam-2-sandbox/&#34;&gt;here&lt;/a&gt; and the instructions on getting it running are in the home page description. This is the same demo I used in my previous &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/running_seam_2_0_on&#34;&gt;Running Seam on Tomcat...&lt;/a&gt; article - now updated to the latest version of Seam and cleaned up a bit (and also put it under Google code vcs).&lt;/p&gt; 
-
-&lt;p&gt;And that&#39;s not all! To make life even easier I wrapped the modal(s) up in a nice and neat Facelets component. The modals also allow for unlimited modals-per-page. Meaning that you can have 10000 modals on one page without conflicts ;). Here&#39;s how you use it:&lt;/p&gt; 
-
-&lt;p&gt;&lt;pre&gt;
-&lt;a name=&#34;l65&#34;&gt;
-&lt;/a&gt;&lt;a name=&#34;l66&#34;&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;hc:modal &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;modalId=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;loading-modal&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;modalContainerId=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;loading-modal-msg&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;hidden=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;true&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;width=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;129px&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l67&#34;&gt; &lt;span class=&#34;s9&#34;&gt;Content that you want in the modal goes here&amp;hellip;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l68&#34;&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;hc:modal&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l69&#34;&gt;
-&lt;/a&gt;
-&lt;/pre&gt;
-&lt;br/&gt;
-&lt;p&gt;&amp;hellip; then put the a4j:status tag inside of an a4j:region. Note the javascript methods being called. You could use these in any onclick event that needs to present a modal.
-&lt;/p&gt;
-&lt;br/&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-&lt;pre&gt;
-&lt;a name=&#34;l141&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;a4j:status &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;for=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;stat1&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;forceId=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;true&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;ajaxStatus&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l142&#34;&gt; &lt;span class=&#34;s2&#34;&gt;onstart=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;alertModal(&lt;/span&gt;&lt;span class=&#34;s8&#34;&gt;&amp;lsquo;loading-modal&amp;rsquo;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s8&#34;&gt;&amp;lsquo;loading-modal-msg&amp;rsquo;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l143&#34;&gt; &lt;span class=&#34;s2&#34;&gt;onstop=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;hideContentModal(&lt;/span&gt;&lt;span class=&#34;s8&#34;&gt;&amp;lsquo;loading-modal&amp;rsquo;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s8&#34;&gt;&amp;lsquo;loading-modal-msg&amp;rsquo;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l144&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;f:facet &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;start&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l145&#34;&gt;
-&lt;/a&gt;&lt;a name=&#34;l146&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;f:facet&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l147&#34;&gt; &lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;a4j:status&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;
-&lt;/pre&gt;
-&lt;/code&gt;
-&lt;br/&gt;
-&lt;p&gt;This is a work in progress and maybe some day I will cleanup my js, explain why I did things the way I did them, and package this up in a component jar. For now this is it.&lt;/p&gt;&lt;/p&gt;
-</description>
+Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>
     </item>
     
     <item>
       <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
-      <link>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</link>
+      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes</guid>
-      <description>&lt;p&gt;**Update - See &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/jboss_portlet_bridge_with_seam&#34;&gt;this article&lt;/a&gt; for more info.&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
+      <description>**Update - See this article for more info.</description>
     </item>
     
   </channel>

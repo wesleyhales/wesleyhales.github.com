@@ -2,845 +2,448 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/java/</link>
+    <link>http://localhost:1313/tags/java/</link>
     <description>Recent content in Java on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Aug 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Fixing Ajax on Mobile Devices (with HTML5)</title>
-      <link>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</link>
+      <link>http://localhost:1313/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://twitter.com/#!/_boye/&#34;&gt;@_boye&lt;/a&gt; has created &lt;a href=&#34;http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe&#34;&gt;a perf test which shows the performance of this solution&lt;/a&gt;. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.&lt;/p&gt;
-&lt;p&gt;3 or 4 years have passed since many folks raised their concerns with innerHTML:&lt;/p&gt;
-&lt;p&gt;From Javascript The Good Parts:&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;If the HTML text contains a &amp;lt;script&amp;gt; tag or its equivalent, then an evil script will run. .. This danger is a direct consequence of JavaScript&amp;rsquo;s global object which is far and away the worst part of JavaScript&amp;rsquo;s many bad parts.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Not only is innerHTML bad, it is the root cause of many problems... from &lt;a href=&#34;http://www.julienlecomte.net/blog/2007/12/38/&#34;&gt;browser memory leaks&lt;/a&gt; (it destroys/replaces existing elements that may have event handlers attached) to &lt;a href=&#34;http://martinkou.blogspot.com/2011/05/alternative-workaround-for-mobile.html&#34;&gt;failing completely&lt;/a&gt; on iOS&amp;rsquo;s Mobile Safari. Yes, that&#39;s right, it just flakes out.&lt;/p&gt;
-&lt;p&gt;So even if you use &lt;a href=&#34;http://javascript.crockford.com/memory/leak.html&#34;&gt;Crockford&amp;rsquo;s purge&lt;/a&gt; method to fix the memory leaks and sanitize your response string returned from the server, you still have a showstopping flaw when running any mobile web solution that uses innerHTML on iOS devices &lt;/p&gt;
-
-&lt;p&gt;Just to name a few mobile frameworks that use this flawed innerHTML approach:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://api.jquery.com/html/&#34;&gt;JQuery Mobile&lt;/a&gt; (uses jQuery&amp;rsquo;s .html() wich is a wrapper for innerHTML)&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;active_link&#34; href=&#34;http://wiki.phonegap.com/w/page/42450600/PhoneGap%20Ajax%20Sample&#34;&gt;Phone Gap&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.sencha.com/forum/showthread.php?122591-List-rendering-race-condition&#34;&gt;Sencha&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A possible solution:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We all know that innerHTML is a favorite for it&amp;rsquo;s speed and ease of use but speed doesn&amp;rsquo;t really matter when it doesn&amp;rsquo;t work at all. So one solution is through use of some new features in HTML5 and the DOM api:&lt;/p&gt;
-
-&lt;p&gt;Let&#39;s start with the scenario that you&#39;ve made your XHR and received the responseText. &lt;/p&gt;
-&lt;p&gt;First thing we&#39;ll do is create a temporary iFrame element. This isn&#39;t any ordinary iframe, it received a major security enhancement with HTML5 and we have some new sanitizing features with the &#34;sandbox&#34; attribute. &lt;/p&gt;
-
-&lt;p&gt;From the &lt;a href=&#34;http://dev.w3.org/html5/spec-author-view/the-iframe-element.html#attr-iframe-sandbox&#34;&gt;spec&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #808080;&#34;&gt;The sandbox attribute, when specified, enables a set of extra restrictions on any content hosted by the iframe. Its value must be an unordered set of unique space-separated tokens that are ASCII case-insensitive. The allowed values are allow-forms, allow-same-origin, allow-scripts, and allow-top-navigation. When the attribute is set, the content is treated as being from a unique origin, forms and scripts are disabled, links are prevented from targeting other browsing contexts, and plugins are disabled. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;color: #ff0000;&#34;&gt;To limit the damage that can be caused by hostile HTML content, it should be served using the &lt;strong&gt;text/html-sandboxed&lt;/strong&gt; MIME type.&lt;/span&gt;&lt;/p&gt;
-
-&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt;function getFrame() {&lt;/p&gt;&lt;p&gt;    var frame = document.getElementById(&#34;temp-frame&#34;);&lt;/p&gt;&lt;p&gt;    if (!frame) {&lt;/p&gt;&lt;p&gt;        // create frame&lt;/p&gt;&lt;p&gt;        frame = document.createElement(&#34;iframe&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;id&#34;, &#34;temp-frame&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;name&#34;, &#34;temp-frame&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;seamless&#34;, &#34;&#34;);&lt;/p&gt;&lt;p&gt;        frame.setAttribute(&#34;sandbox&#34;, &#34;&#34;);&lt;/p&gt;&lt;p&gt;        frame.style.display = &#39;none&#39;;&lt;/p&gt;&lt;p&gt;        document.documentElement.appendChild(frame);&lt;/p&gt;&lt;p&gt;    }&lt;/p&gt;&lt;p&gt;    return frame.contentDocument;&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now, we get our ajax response and write it to the iframe:&lt;/p&gt;
-
-&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt;var frame = getFrame();&lt;/p&gt;&lt;p&gt;frame.write(responseText);&lt;/p&gt;&lt;/pre&gt;
-
-&lt;p&gt;The beauty of this solution is the fact that we don&#39;t have to deal with a &lt;a href=&#34;http://ejohn.org/blog/pure-javascript-html-parser&#34;&gt;javascript text to DOM parser&lt;/a&gt;. We&#39;re allowing the browser to do what it does best... parse the HTML and build a DOM. And we don&#39;t have to worry about parsing the response and removing a blacklist of prohibited security risk elements and other XSS hacking pitas.&lt;/p&gt;
-
-&lt;p&gt;After writing the response to the iframe, you now have a ready to use sanitized DOM. Next you can use the DOM API to grab any part of the new document.&lt;/p&gt;
-
-&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt; var incomingElements = frame.getElementsByClassName(&#39;elementClassName&#39;);&lt;/p&gt;&lt;/pre&gt;
-
-&lt;p&gt;Safari correctly refuses to implicitly move a node from one document to another. An error is raised if the new child node was created in a different document. So here we use adoptNode to add the incomingElements to our existing page.&lt;/p&gt;
-
-&lt;pre class=&#34;jive_text_macro jive_macro_code&#34; jivemacro=&#34;code&#34; ___default_attr=&#34;java&#34;&gt;&lt;p&gt; document.getElementById(elementId).appendChild(document.adoptNode(incomingElements));&lt;/p&gt;&lt;/pre&gt;
-
-&lt;p&gt;The only thing left to do now is benchmarking. As I said earlier, working with the DOM has been notably slower than using innerHTML in the past. So there may be a derivative of this proposed solution that is faster? or there may not be a huge difference in execution time? Let me know....&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</guid>
+      <description>Update: @_boye has created a perf test which shows the performance of this solution. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.
+The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.</description>
     </item>
     
     <item>
       <title>RichFaces Mobile Designs - Day 3</title>
-      <link>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</link>
+      <link>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</link>
       <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs---Day-3</guid>
-      <description>&lt;p&gt;&lt;p&gt;So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.&lt;/p&gt;&lt;p&gt;&lt;br /&gt; 
-&lt;p class=&#34;pTitle&#34;&gt;Day 3: About The Design&lt;/p&gt;&lt;br /&gt; 
-Here we have another phone based design broke out into 3 pages.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;The first page&lt;/a&gt; is a standard menu so not much to say there. The bottom menu bar is a little different from &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;my first design&lt;/a&gt; &amp;#8211; following the lead of the native twitter iPhone app.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page1.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;br /&gt; 
-As you can see with the &lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;second page&lt;/a&gt; (below), this is not a standard accordion panel type of component. When you touch an option from page one, the accordion expands on a different page and only focuses on that specific panel. Not sure if it could work, but accordion collapse/expand style of components don&amp;#8216;t make a ton of sense to me on limited screen real estate.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page2.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;br /&gt; 
-So after you go through the menu options and decide on a component, you are taken to the &lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;detail/demo screen&lt;/a&gt;(below) where you can play around with your component of choice.&lt;/p&gt; 
+      <guid>http://localhost:1313/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</guid>
+      <description>So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.
 
-&lt;p&gt;Note the small orange page marker dots at the bottom. The user would have the ability to flip through each component in the given section by swiping horizontally.&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.phone.day3.page3.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
-&lt;/p&gt;&lt;/p&gt;
-</description>
+Day 3: About The Design
+Here we have another phone based design broke out into 3 pages.
+The first page is a standard menu so not much to say there. The bottom menu bar is a little different from my first design &amp;#8211; following the lead of the native twitter iPhone app.</description>
     </item>
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day2</title>
-      <link>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</link>
+      <link>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</link>
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals---Day2</guid>
-      <description>&lt;p&gt;&lt;p&gt;Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:&lt;/p&gt; 
-
-&lt;p&gt;1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)&lt;/p&gt; 
-
-&lt;p&gt;2) Similar to the iPad Mail.app, it&amp;#8216;s almost like you are designing 2 different UI&amp;#8216;s for landscape and portrait modes. For portrait you need more drop down menus, and for landscape you can try to fit everything on one page without the drop downs.&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1.jpg&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page1-small.JPG&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
-&lt;p class=&#34;pTitle&#34;&gt;Day 2: About The Design&lt;/p&gt;&lt;br /&gt; 
-Here we have the interaction broken out into 2 pages. The first page shows the primary menu and isn&amp;#8216;t all that exciting.&lt;/p&gt; 
-
-&lt;p&gt;Notice how, unlike the &lt;a href=&#34;http://www.wesleyhales.com/entry/going_mobile_with_richfaces_we&#34;&gt;iphone design from Day 1&lt;/a&gt;, I left the browser button overrides within the app itself. Tablet web apps are completely use case driven so this will vary. But since we have so much more real estate, we can play around with standard navigation options that keep the user&#39;s attention focused on the app itself.&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;br /&gt; 
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2.jpg&#34;&gt;&lt;img style=&#34;margin:0 7px 0 0;&#34; alt=&#34;RichFace Mobile Skin1&#34; align=&#34;left&#34; width=&#34;225px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf.tablet.day2.page2-small.JPG&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br /&gt; 
-The second page is what you see after selecting a menu item from page 1 (click to enlarge). Here we have the title bar at the top left with a built in back button which takes the user back to the first screen.&lt;/p&gt; 
-
-&lt;p&gt;To the right of the title you see the secondary menu represented by rounded rectangles. Next is the main content of the page broken out into content and actionable panels.&lt;/p&gt;
-
-&lt;p&gt;And finally you have the big arrows to the right and left. These arrows are &amp;#8220;thumb reachable&amp;#8221; which is a common usability pattern in portrait mode tablets. It provides an easy page flip access to all of the RichFaces components within the top level category.&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;The great thing about CSS3 transitions is that you can really make a UI like this scream and flow seamlessly. So you can imagine how tapping an arrow with your thumb will slide in a new component demo and gracefully highlight the secondary menu option at the top.&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;So this concludes our design for Day 2. As I said earlier, this is more of a use case driven design. WE could spawn a very minimalistic skin and component look and feel from this. However, It would be more to display the power behind RichFaces ajax and templating features as the user moves through the app.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
+      <description>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:
+1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)
+2) Similar to the iPad Mail.</description>
     </item>
     
     <item>
       <title>Going Mobile With RichFaces! Design Proposals - Day1</title>
-      <link>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</link>
+      <link>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</link>
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals---Day1</guid>
-      <description>&lt;p&gt;&lt;p&gt;Today marks an important day in the &lt;a href=&#34;http://www.jboss.org/richfaces&#34;&gt;RichFaces project&lt;/a&gt; as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.&lt;br /&gt; 
-So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. &lt;/p&gt;&lt;p&gt;I will announce each new design (both for tablet and phone) via &lt;a href=&#34;https://twitter.com/#!/richfaces&#34;&gt;twitter&lt;/a&gt; with a link back to this article. I will try my best to pick apart each design and describe why I did what I did, and hope you can give me some real world feedback. We want this project to actually make sense and be usable to what you guys are facing in the real world. Without further adieu....&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1.JPG&#34;&gt;&lt;img alt=&#34;RichFace Mobile Skin1&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/rf-mobile-skin1-small.jpg&#34;/&gt;&lt;/a&gt;Our first task is to tackle the RichFaces showcase of components. Classifying what is mobile ready and which components may need a little work.&lt;br /&gt; 
-&lt;p class=&#34;pTitle&#34;&gt;Day 1: About The Design&lt;/p&gt;&lt;br /&gt; 
-Here we have what could be the RichFaces component showcase skin. This is what I will be posting a new version of each day this week.&lt;/p&gt; 
-
-&lt;p&gt;In this design we have the standard browser “functionality take over” at the top header. The custom back button is essential to mobile web design and must be overridden here &amp;#8211; following the pattern of previous designs.&lt;/p&gt; 
-
-&lt;p&gt;Nothing too different about the standard menu options and detail options (center stage). Following convention here as well. One thing I am adhering too are the usability guidelines set forth by Jakob Nielsen&amp;#8216;s &lt;a href=&#34;http://www.nngroup.com/reports/mobile/ipad/&#34;&gt;Usability of iPad Apps and Websites&lt;/a&gt;&lt;/p&gt; 
-
-&lt;p&gt;To get the full tab bar at the bottom (and to replicate the native feel) the user must bookmark the application. I think it makes sense for this menu to be contextual to the app and provide other alternate routes.&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
+      <description>Today marks an important day in the RichFaces project as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.
+So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. I will announce each new design (both for tablet and phone) via twitter with a link back to this article.</description>
     </item>
     
     <item>
       <title>Runtime Type Detection and Usage with Weld</title>
-      <link>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</link>
+      <link>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</link>
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;About TweetStream&lt;/p&gt;&lt;br /&gt; 
-&lt;img alt=&#34;tweetstream&#34; align=&#34;right&#34; width=&#34;200px&#34; src=&#34;http://wesleyhales.com/images/jroller/tweetstream-phone.png&#34;/&gt;In developing the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; demo for the JBoss World keynote and &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, I wanted to use &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; gives you the power to do this.&lt;br /&gt; 
-A little bit about the usecase: The &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;TweetStream&lt;/a&gt; application is an app that Jay Balunas and I developed over the past few months for our presentation at &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con and JBoss World 2011. It was purposely developed with a myriad of JBoss community projects to showcase how you can build a mobile &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt; web application (which runs on Android and iOS devices) with things like scalable data grid, &lt;span class=&#34;caps&#34;&gt;JMS&lt;/span&gt;, JSF2, &lt;span class=&#34;caps&#34;&gt;HTML5&lt;/span&gt;/CSS3 and other middleware technologies. This application (TweetStream) was also chosen to be part of the literally incredible JBoss World 2011 keynote.&lt;br /&gt; 
-So, we had 2 scenarios &amp;#8211; 1) for our presentation we needed a mobile app that could run solely on it’s own so that users could pull the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;, see how we did things, and run it. 2) For the keynote, we had to make our app integrate with the Infinispan datagrid that was already setup as part of the keynote demo. The data stored on this grid utilized Drools and complex event processing as part of the keynote, so our app had to consume that data for that environment.&lt;br /&gt; 
-So we got our tweet data from the true source (twitter4j) during our &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con presentation, and then from the data grid during the keynote. We could have used &lt;span class=&#34;caps&#34;&gt;CDI&lt;/span&gt; alternatives, but I wanted a true solution with no &lt;span class=&#34;caps&#34;&gt;XML&lt;/span&gt; configuration and runtime detection.&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;The Code...&lt;/p&gt;&lt;br /&gt; 
-So we have 2 Qualifier Types:&lt;br /&gt; 
-@TwitterLocal for the &lt;span class=&#34;caps&#34;&gt;JUD&lt;/span&gt;Con demo impl&lt;br /&gt; 
-@TwitterServer for the keynote impl&lt;/p&gt; 
-
-&lt;p&gt;We used infinispan in both instances, but our @TwitterLocal is a single node caching a direct twitter stream from Twitter4J.&lt;/p&gt; 
-
-&lt;p&gt;Now that we have our types defined as follows&amp;#8230;&lt;/p&gt; 
-
-&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;@Qualifier&lt;br /&gt; 
-&lt;br /&gt; 
-@Retention&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;RetentionPolicy.&lt;span style=&#34;color: #006633;&#34;&gt;RUNTIME&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-@Target&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;PARAMETER&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; @&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterServer&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-@Qualifier&lt;br /&gt; 
-&lt;br /&gt; 
-@Retention&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;RetentionPolicy.&lt;span style=&#34;color: #006633;&#34;&gt;RUNTIME&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-@Target&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color: #006633;&#34;&gt;PARAMETER&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; @&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterLocal&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;/p&gt; 
-
-&lt;p&gt;We need not only an implementation of each, but also a deciding bean that tells us which type to use.&lt;/p&gt; 
-
-&lt;p&gt;First, our implementation of each Type implements an interface:&lt;/p&gt; 
-
-&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;interface&lt;/span&gt; TwitterSource &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;void&lt;/span&gt; init&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-…&lt;/div&gt;&lt;/p&gt; 
-
-&lt;p&gt;And our implementations have a different usage of the init method. &lt;code&gt;TwitterLocal starts the stream coming from twitter and updates the infinispan cache. &lt;/code&gt;TwitterServer starts a method which allows us to start receiving data from the keynote which uses complex event processing and a datagrid with 6&amp;#8211;8 nodes.&lt;/p&gt; 
-
-&lt;p&gt;So now, how do we decide which Type to use? There are a few different ways to do it, but in the case of this being a demo and not a lot of time on my part. I used this approach:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;java&#34; style=&#34;font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;&#34;&gt;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TweetStream &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; @Inject&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; @&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aany+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;Any&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;br /&gt; 
-&amp;nbsp; Instance&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterSource&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; twitterSource&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TwitterLocalQualifier &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;extends&lt;/span&gt; AnnotationLiteral&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterLocal&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;implements&lt;/span&gt; TwitterLocal&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;class&lt;/span&gt; TwitterServerQualifier &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;extends&lt;/span&gt; AnnotationLiteral&lt;span style=&#34;color: #339933;&#34;&gt;&lt;&lt;/span&gt;TwitterServer&lt;span style=&#34;color: #339933;&#34;&gt;&gt;&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;implements&lt;/span&gt; TwitterServer&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;boolean&lt;/span&gt; initialCheck &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;boolean&lt;/span&gt; demoexists &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; @PostConstruct&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;void&lt;/span&gt; init&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp;getTwitterSource&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;init&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; @Produces&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;public&lt;/span&gt; TwitterSource getTwitterSource&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;initialCheck&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;try&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;Class&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;forName&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;org.jboss.jbw2011.keynote.demo.model.TweetAggregate&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;log.&lt;span style=&#34;color: #006633;&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;Running in JBW2011 Demo Mode.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;demoexists &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aclassnotfoundexception+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;ClassNotFoundException&lt;/span&gt;&lt;/a&gt; ex&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;log.&lt;span style=&#34;color: #006633;&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&amp;quot;Running in local JUDCon2011 Demo Mode.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; initialCheck &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #000066; font-weight: bold;&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;a style=&#34;color: #000060;&#34; href=&#34;http://www.google.com/search?hl=en&amp;q=allinurl%3Aannotation+java.sun.com&amp;btnI=I%27m%20Feeling%20Lucky&#34;&gt;&lt;span style=&#34;color: #003399;&#34;&gt;Annotation&lt;/span&gt;&lt;/a&gt; qualifier &lt;span style=&#34;color: #339933;&#34;&gt;=&lt;/span&gt; demoexists &lt;span style=&#34;color: #339933;&#34;&gt;?&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;new&lt;/span&gt; TwitterServerQualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&#34;color: #339933;&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;new&lt;/span&gt; TwitterLocalQualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&#34;color: #000000; font-weight: bold;&#34;&gt;return&lt;/span&gt; twitterSource.&lt;span style=&#34;color: #006633;&#34;&gt;select&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;qualifier&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&#34;color: #006633;&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&#34;color: #009900;&#34;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&#34;color: #339933;&#34;&gt;;&lt;/span&gt;&lt;br /&gt; 
-&lt;br /&gt; 
-&amp;nbsp; &lt;span style=&#34;color: #009900;&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;/p&gt; 
-
-&lt;p&gt;This is all in the &lt;a href=&#34;https://github.com/richfaces/tweetstream&#34;&gt;source code&lt;/a&gt;. Feel free to pull it and make improvements or run it to see it in action. There are many more blog posts to come from this demo, so stay tuned&amp;#8230;&lt;br /&gt; 
-&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
+      <description>About TweetStream
+In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
+A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
     </item>
     
     <item>
       <title>Does Developing Portlets Make You a Better Developer?</title>
-      <link>http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer</link>
+      <link>http://localhost:1313/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</link>
       <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer</guid>
-      <description>&lt;p&gt;&lt;p&gt;Working with portlet technology is often discredited for it’s seemingly complex &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.&lt;br /&gt; 
-This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;What if you didn’t have to worry about portlet development gotchas anymore? What if you could develop portlets with the ease and hassle free life that you have with good ol’ servlets? Well, I’m here to tell you that this can be partly achieved with JSR-301 portlet bridge technology.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;I encourage (actually I dare you) to those who have never even touched a portal to take the JBoss Portlet Bridge for a test drive. It takes &lt;a href=&#34;http://downloads.sourceforge.net/project/jboss/GateIn/Portal/3.1.0-FINAL/GateIn-3.1.0-FINAL-jbossas.zip&#34;&gt;1 download (GateIn bundled with JBoss)&lt;/a&gt; and one maven archetype to get started. You can choose from any combination of plain &lt;span class=&#34;caps&#34;&gt;JSF&lt;/span&gt;, Richfaces, and Seam with&lt;br /&gt; 
-&lt;code style=&#34;color:white&#34;&gt;mvn archetype:generate -DarchetypeCatalog=http://bit.ly/jbossportletbridge&lt;/code&gt; from the command line.&lt;br /&gt; 
-&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/archetype.gif&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;If you run into any questions or special usecases, we have 7 videos which demo and walk you through just about anything you could think up.&lt;br /&gt; 
-&lt;a href=&#34;http://vimeo.com/wesleyhales/videos/sort:date&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/vimeo.gif&#34; alt=&#34;&#34; align=&#34;center&#34;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/refcard.gif&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;And for those that like to have a refcard by their side, you can get all the information you need about the story of portal technology and configuration drill downs here: &lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;From &lt;a href=&#34;http://refcardz.dzone.com/refcardz/mastering-portals-portlet&#34;&gt;“Mastering Portals with a Portlet Bridge”&lt;/a&gt; DZone Refcard:&lt;br /&gt; 
-“A portlet bridge allows you to run application frameworks like &lt;span class=&#34;caps&#34;&gt;JSF&lt;/span&gt; in a portal environment without needing to know anything about the underlying portlet &lt;span class=&#34;caps&#34;&gt;API&lt;/span&gt; or portlet concepts.”&lt;br /&gt; 
-&lt;/p&gt;&lt;br /&gt; 
-&lt;br/&gt;&lt;br /&gt; 
-&lt;p&gt;&lt;br /&gt; 
-&lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/jbw2011/jbw-2011.gif&#34; alt=&#34;&#34; align=&#34;left&#34; style=&#34;margin:0 15px 25px 0&#34;/&gt;&lt;/a&gt;&lt;br /&gt; 
-And if all that wasn’t enough, I will be giving a 50 minute talk at JBoss World titled &lt;a href=&#34;http://www.redhat.com/summit/sessions/jboss.html&#34;&gt;&#34;Making Portals Cool: The Compelling Advantages of a Portlet Bridge&#34;&lt;/a&gt; where you can come and personally track me down and specifically tell me about your problems, pains, or happiness with the project or the world in general &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; JBoss World will be located in Boston from May 3&amp;#8211;6.&lt;br /&gt; 
-I think &lt;a href=&#34;http://www.redhat.com/summit/rates/&#34;&gt;early bird pricing&lt;/a&gt; ends this Friday (April 8th), so you better hurry if you want to save a little cash.&lt;/p&gt; 
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</guid>
+      <description>Working with portlet technology is often discredited for it’s seemingly complex API and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.
+This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.</description>
     </item>
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</link>
+      <link>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4---Part-1</guid>
-      <description>&lt;p&gt;&lt;p&gt;&lt;a href=&#34;http://www.jboss.org/richfaces/&#34;&gt;Richfaces 4&lt;/a&gt; just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.&lt;br /&gt; 
-First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;Today I am going to add touch support to the RF drag and drop component. We all know that touch events and gestures are not the same as a mouse click. So one must consider a couple of different approaches before implementing a final solution:&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;1) Override the default touch events with their mouse counterparts.&lt;br /&gt; 
-This is easy since you are basically overriding the default functionality of touch and gesture events. There are 3 mouse events to replace to get this component working:&lt;br /&gt; 
-touchstart,touchmove,touchend&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;2) Extend jQuery core components and add the “drag” functionality alongside “touch”&lt;br /&gt; 
-A little more difficult and fortunately the jQuery team is working on the mobile upgrade to ui.draggable &amp;#8211; so this should be available in the next few weeks/months.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;object width=&#34;480&#34; height=&#34;390&#34;&gt;&lt;param name=&#34;movie&#34; value=&#34;http://www.youtube.com/v/Exs1jumZ4yk?fs=1&amp;hl=en_US&#34;&gt;&lt;/param&gt;&lt;param name=&#34;allowFullScreen&#34; value=&#34;true&#34;&gt;&lt;/param&gt;&lt;param name=&#34;allowscriptaccess&#34; value=&#34;always&#34;&gt;&lt;/param&gt;&lt;embed src=&#34;http://www.youtube.com/v/Exs1jumZ4yk?fs=1&amp;hl=en_US&#34; type=&#34;application/x-shockwave-flash&#34; allowscriptaccess=&#34;always&#34; allowfullscreen=&#34;true&#34; width=&#34;480&#34; height=&#34;390&#34;&gt;&lt;/embed&gt;&lt;/object&gt;(tested on live iPhone4 and iOS simulator iPad)&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;I originally started out using the touch and gesture events to do the drag and drop. This allowed for a smoother UX but unfortunately, the internal plumbing of Richfaces required a complex extension/wrap of rf.ui.draggable (to add the new touch functions) and some custom bindings like rf.Event.bind(this.dragElement, &amp;#8216;touchstart&amp;#8216;+this.namespace&amp;#8230;.) in dnd-draggable.js.&lt;br /&gt; 
-In the end, it was just easier for me to use &lt;a href=&#34;https://github.com/furf/jquery-ui-touch-punch/blob/master/jquery.ui.touch-punch.js&#34;&gt;this script&lt;/a&gt; and re-map the 3 main touch events.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;I looked at many different approaches starting with SenchaTouch which btw is pointless if you are going to leverage existing jQuery, then moving to a few different jQuery utilities.&lt;br /&gt; 
-The basic question here, which can be applied to any component framework, is “What’s the best mobile approach for supporting product xyz?” Every product out there that touches the UI has to cross this gap. Touch interfaces today&amp;#8230; tangible UI’s tomorrow&amp;#8230; and the vicious cycle continues. And majority of the time, the best way to get started is to build an emulator so that your product can work today. This will buy you the time to build the native functionality that takes full advantage of the target platform.&lt;br /&gt; 
-Unfortunately the script I used here doesn’t always work and there are still a few more components in Richfaces that do not work with this duck punch approach. So I will try to make this a series and blog about &amp;#38; fix the other components on mobile platforms.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;The old days of drag and drop are not as simple as they used to be. With multi touch surfaces you have the ability to accelerate your drag and throw it across the page, rotate it, and auto scrolling when you drag the object off the page, etc... Just something to think about when designing a similar component.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
+      <description>Richfaces 4 just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.
+First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</description>
     </item>
     
     <item>
       <title>Replacing Photoshop With CSS3 - Creating Styles</title>
-      <link>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</link>
+      <link>http://localhost:1313/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</link>
       <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3---Creating-Styles</guid>
-      <description>&lt;p&gt;&lt;p&gt;One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).&lt;br /&gt; 
-This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with &lt;span class=&#34;caps&#34;&gt;CSS3&lt;/span&gt;. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused. Kind of like a &amp;#8220;style&amp;#8221; which can be applied to any element in Photoshop.&lt;/p&gt;&lt;br /&gt;
-&lt;p class=&#34;pTitle&#34;&gt;First off, this is how I would normally do it in Photoshop:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create the element &amp;#8211; a button in this case:&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/button.PNG&#34;/&gt;&lt;/li&gt;&lt;br /&gt; 
-&lt;li&gt;Create your gradient. Gradients that are hardly gradients seem to give a nice appearance and body to the design. Meaning you start with a base color like #6c291f and move up the scale to #e42a00.&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/gardient-setup.PNG&#34;/&gt;&lt;br /&gt; 
-&lt;/li&gt;&lt;br /&gt; 
-&lt;li&gt;Next you add an inner shadow to give it a glow like effect. Again this too is based on your gradient color.&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/innerglow.PNG&#34;/&gt;&lt;br /&gt; 
-&lt;/li&gt;&lt;br /&gt; 
-&lt;li&gt;Here is the end result (from Photoshop):&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/red.button.photoshop.PNG&#34;/&gt;&lt;br /&gt; 
-&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;p class=&#34;pTitle&#34;&gt;Now, let&#39;s do the exact same thing in CSS3 with 1 step.&lt;/p&gt;&lt;p&gt;This tested fine across all the latest browsers (Firefox 3.6+, Latest Safari, Latest Chrome, and who cares about IE &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Simply use the brightest part of the gradient color from above (#e42a00) and substitute it as the background color below:&lt;br /&gt; 
-&lt;pre style=&#34;line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;&#34;&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 1 &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;button&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;red&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; {&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 2 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;background&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;#e42a00&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;moz&lt;/del&gt;linear-gradient&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;90&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;deg&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;.3&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;33&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;%, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;.1&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;123&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;%)&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 3 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;background&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;#e42a00&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;webkit&lt;/del&gt;gradient&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;linear&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;left&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;top&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;left&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;bottom&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;from&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;.1&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;)), &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;to&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;, &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;.3&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;text-decoration:underline;color:#cccccc&#34;&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;)))&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 4 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;border-radius&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 5 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;moz&lt;/del&gt;border-radius&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 6 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;webkit&lt;/del&gt;border-radius&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;7&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 7 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;border&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;none&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 8 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;box-shadow&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;inset&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt; 9 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;moz&lt;/del&gt;box-shadow&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;inset&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;10 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;webkit&lt;/del&gt;box-shadow&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;102&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;inset&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;br /&gt; 
-&lt;/li&gt;&lt;br /&gt; 
-&lt;li&gt;Here is the end result (from Firefox):&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/red.button.css.PNG&#34;&gt;&lt;/li&gt;&lt;br /&gt; 
-&lt;/ol&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;p&gt;Notice from the css code that we are only using one color? This is so we can easily create a super class that allows us to override its functionality. In the end all you would need is one line of code for background color to create a button for every color that exists with the same style from above applied to it.&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;Now to create a button using the same &amp;#8220;style&amp;#8221;, you would only have to create a class that defines the background color and inner shadow highlight. i.e&amp;#8230;.&lt;br /&gt; 
-&lt;pre style=&#34;line-height: 100%;font-family:monospace;background-color:#ffffff; border-width:0.01mm; border-color:#000000; border-style:solid;padding:4px;font-size:10px;&#34;&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;1 &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;button&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;lightblue&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; {&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;2 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;background-color&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;#41b6ff&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;3 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;font-weight:bold;&#34;&gt;&lt;del&gt;moz&lt;/del&gt;box-shadow&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;: &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;px&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000080;background-color:#ffffff;font-weight:bold;&#34;&gt;rgba&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;55&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;243&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;255&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000ff;background-color:#ffffff;&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;) &lt;/span&gt;&lt;span style=&#34;color:#008000;background-color:#ffffff;font-weight:bold;&#34;&gt;inset&lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;;&lt;br /&gt; 
-&lt;/span&gt;&lt;span style=&#34;color:#800000;background-color:#f0f0f0;&#34;&gt;4 &lt;/span&gt;&lt;span style=&#34;background-color:#ffffff;&#34;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;This would give you a button like this:&lt;br /&gt; 
-&lt;img alt=&#34;&#34; src=&#34;http://wesleyhales.com/images/jroller/css3post/blue.button.css.PNG&#34;/&gt;&lt;/p&gt;&lt;br /&gt; 
-&lt;p&gt;The only part that isn&#39;t really flexible is the inner shadow feathering. It is currently set to blur the shadow by a fixed pixel. It would be awesome if you could blur by percent as this would allow the gradient filled element to be resized dynamically and maintain the aspect of inner glow.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</guid>
+      <description>One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).
+This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with CSS3. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused.</description>
     </item>
     
     <item>
       <title>Jazoon 2010 Overview</title>
-      <link>http://wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview</link>
+      <link>http://localhost:1313/blog/2010/06/07/Jazoon-2010-Overview/</link>
       <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview</guid>
-      <description>&lt;p&gt;&lt;p&gt;I&#39;ve always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&amp;#45;up of talented speakers/developers.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;I was pleasantly surprised to see soo many talks about portal technologies. And people weren&#39;t talking about the spec or the technology itself, but about specific usecases &amp;#45; which is really cool. However, Andy Bosch did an excellent job of explaining the JSR&amp;#45;301/329 portlet bridge. &lt;a href=&#34;http://www.slideshare.net/wesleyhales/if-you-know-jsf-you-know-portals-and-portlets&#34;&gt;My talk&lt;/a&gt; was more vendor specific on the &lt;a href=&#34;http://jboss.org/portletbridge/&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; and the features that we offer with Seam and RichFaces, so it was great to have someone there to explain the spec in detail and give a non&amp;#45;vendor specific view.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;Andrew Lombardi announced his love for JSF and that the Wicket folks may/will begin to focus on a better component library community. I hate to mention JSF within the same paragraph as Wicket &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; but when a developer at XYZ corporation wants to implement some usecase that makes use of a lot of different components, 99% of the time they will look to JSF and its many component libraries/communities. Not to get into a holy war here, because of course Wicket has a different way of handling it&#39;s components &amp;#45; and an overall different (better) way of handling the model and binding of components. The one thing that is missing from Wicket (in my mind) is heavy focus on polished component libraries and communities.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;Matthew McCullough put on a great show with his Maven 3 presentation. The use of screenflow and his rate of speech were right on the money. It has inspired me to try just a little bit harder with my talks.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;The Arquillian talk by Dan Allen and Aslak Knutsen ended as a great talk and shirt throwing fun. Of course, a few of the audience members had to pay the price of Dan&#39;s throwing arm &amp;#45; aim at the back row, but hit someone in the middle row with alot of force :D In all seriousness, Arquillian is taking the testing world by storm so you better jump on the train or get out of the way.&lt;/p&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;p&gt;There were many other great talks given by other speakers. So, it was definitely a good knowledge sharing event.&lt;br /&gt; 
-Overall, I had a great time and met a lot of people whom I have only talked to through twitter and email. For me, it is soo much easier to blast or praise someone online when you have sat down and had a beer with them &amp;#45; but that&amp;#8216;s just me.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2010/06/07/Jazoon-2010-Overview/</guid>
+      <description>I&#39;ve always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&amp;#45;up of talented speakers/developers.
+I was pleasantly surprised to see soo many talks about portal technologies. And people weren&#39;t talking about the spec or the technology itself, but about specific usecases &amp;#45; which is really cool.</description>
     </item>
     
     <item>
       <title>The Ultimate Guide For Developer Screencasts</title>
-      <link>http://wesleyhales.com/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts</link>
+      <link>http://localhost:1313/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts/</link>
       <pubDate>Wed, 17 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;JBoss Portlet Bridge Logo&#34; align=&#34;right&#34; src=&#34;http://wesleyhales.com/images/jroller/jbossportletbridge_logo.gif&#34;/&gt; About a year ago, I decided to start creating screen casts for the &lt;a href=&#34;http://jboss.org/portletbridge&#34; target=&#34;_blank&#34;&gt;JBoss Portlet Bridge&lt;/a&gt; open source project. As a manager of a relatively small, niche project, it is easy for me to try new things that can only improve the community around the project &amp;#45; or serve as a learning lesson for myself. Screencasts are nothing new to the development scene, but my goal was to liven it up a bit and make the outcome seem more professional and well produced. At the same time, covering all the important facets of managing a community like community member recognition, to getting started, and so on.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Coming up with a topic&lt;/p&gt; 
-&lt;p&gt;This doesn&#39;t seem like a hard task, but it can make or break your idea. You don&#39;t want to base your topic on generic phrases or buzzwords. Of course, to get someone interested in your project, you may need to use a mainstream keyword in your title. But don&#39;t be untrue to your viewers. This is your name and reputation on the line, so give the community what they want by evaluating forum topics, in&amp;#45;house support requests, wiki articles, or current blog posts about your project.&lt;/p&gt; 
-
-&lt;p&gt;Take a look at this: 
-&lt;img alt=&#34;Screencast Title&#34; align=&#34;middle&#34; src=&#34;http://wesleyhales.com/images/jroller/screencast-title.gif&#34; /&gt; 
-You might say, &#34;Why not just use the core topic and tag the basic stuff?&#34; &amp;#45; Well, tags are cool and all, but they are platform dependent, so I use a double&amp;#45;fallback with the title. Of course I still use tags, but when you post the title in your blog, twitter and wherever else, you will need the all&amp;#45;in&amp;#45;one, &#34;Google friendly&#34; title. 
-&lt;/p&gt; 
-
-&lt;p&gt;And lastly in choosing your topic, remember we all have roots as an end user of someone&#39;s framework or product, so I always envision myself as the user. This is best done by creating a screencast for a common customer support request or forum question, heck you could even use your FAQs as &#34;season 1&#34; for your screencasts &lt;img src=&#34;http://www.jroller.com/images/smileys/smile.gif&#34; class=&#34;smiley&#34; alt=&#34;:)&#34; title=&#34;:)&#34; /&gt;&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;The Introduction&lt;/p&gt; 
-&lt;p&gt;&lt;a href=&#34;http://www.vimeo.com/8752541&#34;&gt;&lt;img alt=&#34;Screencast Intro&#34; align=&#34;right&#34; src=&#34;http://wesleyhales.com/images/jroller/intro-ss.gif&#34; style=&#34;padding:3px&#34;/&gt;&lt;/a&gt;As an open source project manager, developer, community promoter, marketer, designer, etc… we have many hats to wear. Since I have a design background, I like to fire up After Effects, Blender, and other cool video creation programs and make a kick&amp;#45;ass intro. Most developers don&#39;t have this capability/luxury, so it&#39;s up to you on how far you want to take your intro. Typically, just some kind of view with your logo and a background image will do.&lt;/p&gt; 
-&lt;p&gt;If you know how to use After Effects, or want to use the intro I created for &lt;a href=&#34;http://www.vimeo.com/8752541&#34;&gt;this video&lt;/a&gt;, I have uploaded the &lt;a href=&#34;http://rapidshare.com/files/364251565/BridgeIntro.zip.html&#34;&gt;source .aep&lt;/a&gt; file for you. Feel free to use whatever parts from it you want.&lt;/p&gt; 
-&lt;p&gt;I also use music and different sound effects, (even extracting the vocals if necessary) to get the right effect. There are some great creative commons/open source music sources like: 
-&lt;ul&gt; 
-&lt;li&gt;&lt;a href=&#34;http://ccmixter.org&#34;&gt;http://ccmixter.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jamendo.com&#34;&gt;http://www.jamendo.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://creativecommons.org/audio/&#34;&gt;http://creativecommons.org/audio/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://opsound.org/music&#34;&gt;http://opsound.org/music&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt; 
-I have learned to limit my intro to 10&amp;#45;15 seconds. Just something short and sweet to give your screencast some character.
-&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;The Audience&lt;/p&gt; 
-&lt;p&gt;Just like writing a book or article, this may be a first time user of your project, or it may be a seasoned developer. So know your target audience. If you plan on doing a series of ongoing screencasts, definitely make your first episode at a very beginner level. This will allow you to reference it in the future with more advanced screencasts.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Prerequisites&lt;/p&gt; 
-&lt;p&gt;Explain the preparation steps clearly &amp;#45; environment variables, 3rd party downloads, utilities, etc.. Create a wiki or blog post listing all the requirements for users to follow along with. Show a screenshot of that article which you just created in your video before you get started.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Branding&lt;/p&gt;&lt;p&gt;I always start my screencast with a view of the project home page and a brief explanation of navigation and making your way around the project site. You want to drill this page into your users head and this is the best way to do it. You may have great forums and FAQs, but your users may have a hard time finding it... this is your chance to train the community on the hard work you have put into your project.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Be Realistic&lt;/p&gt; 
-&lt;p&gt;Go through a dry run, but don&#39;t make it &#34;too&#34; perfect. You are guaranteed that many viewers will have some kind of problem while running through your demo, so when it happens to you in the screencast, don&#39;t edit it out &amp;#45; leave it. This is important because it&#39;s something every viewer can relate too. At the same time you want to keep in mind NOT to leave in your (or too many) mistakes. There is a fine line here of confusing your audience vs. letting them know that you are human and may face their same problems.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Create a script (if you need it)&lt;/p&gt; 
-&lt;p&gt;For some folks, adlib and free handing this kind of stuff comes natural. Not for me. While going through a dry&amp;#45;run and making sure the screen cast is going to work as planned, jot down the notes that come to mind as you&#39;re working. This is important because you will often be too focused on speaking clearly and getting your point across during the actual recording. It&#39;s nice to have a set of reminders to look at.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Open Source and Commercial Tools&lt;/p&gt; 
-&lt;p&gt;Onto the fun stuff, so now you have everything prepared and you&#39;re ready to start the recording. First, you need to get yourself a screen recorder and depending on your OS, I have listed a few options below.&lt;/p&gt; 
-
-&lt;dl&gt; 
-&lt;dt&gt;Mac&lt;/dt&gt; 
-&lt;dd&gt;If you are lucky enough to own/use a mac for your screen casting projects then I highly recommend using &lt;a href=&#34;http://www.telestream.net/screen-flow/overview.htm&#34;&gt;ScreenFlow&lt;/a&gt;. The intuitive UI and ease of creating powerful animations make it worth the money. Amongst all the screen casting tools available, this is hands down the best one I have seen. A trial version is available, but it will watermark your video on export.&lt;br/&gt; 
-However, the very kind folks at ScreenFlow hooked me up with a coupon code for the readers of this article. It will give you 10% off the original $99 price tag, saving you $10! Use discount code &lt;strong&gt;CPN9040717399&lt;/strong&gt; to receive and extra 10% off your purchase. Thanks Christine!&lt;/dd&gt; 
-&lt;dt&gt;Windows&lt;/dt&gt; 
-&lt;dd&gt;I used CamStudio &lt;a href=&#34;http://sourceforge.net/projects/camstudio/&#34;&gt;http://sourceforge.net/projects/camstudio/&lt;/a&gt; for a short project quite a few years ago, and I have no idea what is out there on the free &amp; open source scene today.&lt;/dd&gt; 
-&lt;dt&gt;Linux&lt;/dt&gt; 
-&lt;dd&gt;A quick google search revealed a few (mostly ffmpeg based) but I&#39;m sure there are more out there, so please let me know in the comments if you know of a good one. 
-&lt;ul&gt; 
-&lt;li&gt;&lt;a href=&#34;http://live.gnome.org/Istanbul&#34;&gt;http://live.gnome.org/Istanbul&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://xvidcap.sourceforge.net&#34;&gt;http://xvidcap.sourceforge.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt; 
-&lt;/dd&gt; 
-&lt;/dl&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Here are a few more tips and recommendations for recording and publishing:&lt;/p&gt; 
-&lt;ul&gt; 
-&lt;li&gt;I bought a decent set of headphones with a microphone which seems to put me in &#34;the zone&#34; a bit more than using my built in laptop microphone.&lt;/li&gt; 
-&lt;li&gt;&lt;img alt=&#34;&#34; align=&#34;right&#34; src=&#34;http://wesleyhales.com/images/jroller/you-video.gif&#34;/&gt;I think it&#39;s cool to actually record video of yourself usually for the first introductory video or at the beginning when it is mostly you talking. People are not going to be watching you talk, they are watching your screen actions. Be sensible about when to use video of yourself talking.&lt;/li&gt; 
-&lt;li&gt;If you mess up or get tongue tied, don&#39;t stop the recording. Just take a deep breath and allow a few noticeable seconds to pass, then start over. You will see your pause in your wave form visualizer and you can go back and cut it out when you are doing your final editing.&lt;/li&gt; 
-&lt;li&gt;Keep your rate of speech just a bit above or at conversation level. I made the mistake of not keeping a script nearby in my first few videos and it is definitely noticeable that I am thinking about my next steps while I&#39;m talking in the screencast. It&#39;s not fun to listen to and makes you sound like an amateur. 
-&lt;/li&gt; 
-&lt;li&gt;&lt;img alt=&#34;&#34; align=&#34;left&#34; src=&#34;http://wesleyhales.com/images/jroller/waveform.gif&#34; style=&#34;padding:0 20px 0 0&#34;/&gt;Cut out as much white space as you can when doing final editing and keep your screen transitions smooth when doing multiple takes or pausing while your wife screams at you to take out the trash or to answer the phone. Don&#39;t make your audience sit there while you wait for a server to start up. Cut out startups and any other tasks that are repetitive and boring. Every second counts and you don&#39;t want to end up with an hour&amp;#45;long screencast. 
-&lt;/li&gt; 
-&lt;li&gt;Make jokes and make fun of yourself. Sure you are offering value by allowing your viewers to get tips and tricks first hand from you &amp;#45; the expert &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; But simple entertainment and your character can increase your viewing audience, or simply make you more approachable when speaking at conferences, etc...&lt;/li&gt; 
-&lt;li&gt;&lt;img alt=&#34;&#34; align=&#34;right&#34; src=&#34;http://wesleyhales.com/images/jroller/timemark.gif&#34;/&gt;Use time&amp;#45;bookmarking features in the comments. I think this is the greatest feature of screencasting and may even replace user guides or other documentation in the future. Unfortunately, the platform (vimeo) that I use limits this feature. Youtube does a great job at it and allows you to link to a specific time, down to the second, in a video &amp;#45; even external linking is allowed. With vimeo, all you must do in the comments is find the minute/second you want to mark and insert it into the comments as (7:31) &amp;#45; with the parentheses. This tells vimeo to render a link for that marker, but the big drawback is the entire video must load first, and you cannot access this marker with a GET parameter like youtube.&lt;/li&gt; 
-&lt;li&gt;And since youtube only allows 10 minutes or less for the length of your video, I have been using vimeo to publish all of my screencasts. Here are the export settings I use in &lt;a href=&#34;http://www.telestream.net/screen-flow/overview.htm&#34;&gt;ScreenFlow&lt;/a&gt; to allow users to view my video in HD format: 
-&lt;ul&gt; 
-&lt;li&gt;H.264 codec&lt;/li&gt; 
-&lt;li&gt;dimensions 1280×720&lt;/li&gt; 
-&lt;li&gt;bit rate 3000 kbits/sec (optimized for “download”),&lt;/li&gt; 
-&lt;li&gt; 
-key frame every 30 frames (frame reordering on), using whatever frame rate you shot in.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;/li&gt; 
-&lt;li&gt;As for ScreenFlow tutorials, you can find out how to use all of the functions and features here &lt;a href=&#34;http://www.telestream.net/screen-flow/demos.htm&#34;&gt;http://www.telestream.net/screen-flow/demos.htm&lt;/a&gt;.&lt;/li&gt; 
-&lt;/ul&gt; 
-
-&lt;p&gt;The rest is up to you. Whatever tutorial or product review you are trying to get across to your audience, remember to be punctual, upbeat, and funny! As of this writing, you can view the following screencast where I attempted to apply the concepts mentioned here &lt;a href=&#34;http://www.vimeo.com/8752541&#34;&gt;http://www.vimeo.com/8752541&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts/</guid>
+      <description>About a year ago, I decided to start creating screen casts for the JBoss Portlet Bridge open source project. As a manager of a relatively small, niche project, it is easy for me to try new things that can only improve the community around the project &amp;#45; or serve as a learning lesson for myself. Screencasts are nothing new to the development scene, but my goal was to liven it up a bit and make the outcome seem more professional and well produced.</description>
     </item>
     
     <item>
       <title>Contextual PortletMode changes using the JBoss Portlet Bridge</title>
-      <link>http://wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge</link>
+      <link>http://localhost:1313/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</link>
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge</guid>
-      <description>&lt;p&gt;&lt;p&gt;By default, the JSR-&lt;sup&gt;301&lt;/sup&gt;&amp;frasl;&lt;sub&gt;329&lt;/sub&gt; portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.&lt;/p&gt;
-&lt;p class=&#34;pTitle&#34;&gt;Why use portlet modes instead of javascript widgets?&lt;/p&gt;
-&lt;p&gt;First I would like to give you a little justification of the beauty of this feature. Some people will argue the point of &amp;ldquo;Why do you need different modes like, Help and Edit?&amp;rdquo;, when you could add some cool &amp;ldquo;javascript of the week&amp;rdquo; that would dynamically display what you intended to present in one of the given modes. Well, you could develop your interactions either way but it really isn&amp;rsquo;t a question of why. It&amp;rsquo;s a question of &amp;ldquo;How?&amp;rdquo;. How do you want users to interact with your applications? And since you have already made the decision to invest in a portal solution, why not use the features that are built in and that stay consistent across the entire UI? Any UI Developer or Interaction Designer will tell you that adding cool javascript widgets adds another layer of complexity and maintenance, thus adding to developer time and bottom line ROI. In addition, when you develop any servlet based application to work within a portal environment, you are properly separating your concerns when you use these modes (without even realizing it in most cases). You are presenting distinguished flows for different trains of thought and making it easier for users to accomplish the task at hand.&lt;/p&gt;
-&lt;p class=&#34;pTitle&#34;&gt;The Usecase&lt;/p&gt;
-&lt;p&gt;Ok, off the soap box and onto the use case. Let&amp;rsquo;s say your user is filling out a beloved expense report. It&amp;rsquo;s probably one of his top 5 things that he loves most about his job &lt;img src=&#34;http://www.jroller.com/images/smileys/wink.gif&#34; class=&#34;smiley&#34; alt=&#34;;)&#34; title=&#34;;)&#34; /&gt; Seriously, his IT department just launched a new intranet portal using the latest and greatest &lt;a href=&#34;http://jboss.org/gatein&#34;&gt;GateIn&lt;/a&gt; platform and they completely revamped their old Seam application that was used for expense report submissions to run as a portlet.&lt;/p&gt;
-&lt;p&gt;
-So, Joe User starts to fill out his expense report in a 6 step wizard. He gets through the first few steps and arrives at a screen asking for his cost center and other details that he has no idea about. Behold the beautiful question mark(help mode) in the top right hand corner of his portlet window! Joe clicks the button and sees exactly the information he needs, and he also sees a link at the bottom of the screen that says &amp;#8220;add this to the form&amp;#8221;. Joe clicks it, and is returned to his expense report with all of the details pre-populated in his form. Not only was the help screen easy to understand, but it was just a basic .xhtml page that can be templated and maintained by any UI developer without any special javascript kung fu.
-&lt;/p&gt;
-&lt;p&gt;The next screen (in view mode), asks him to itemize each receipt and expense. Since he took a trip to Euro-land, all of his receipts are in Euros. And since he recently just got his internet privileges suspended (and no, he won&amp;rsquo;t tell us why) he has no idea what the current conversion rates are. Once again, Joe clicks the help button and is presented with a clickable table of currency options. Not only that, but the finance department has placed some important notifications on this page via CMS. Joe reads the notifications and clicks on &amp;ldquo;Euros&amp;rdquo; and is taken back to a modified input table that auto converts his itemized euro(€) values to USD($).&lt;/p&gt;
-&lt;p&gt;As you can see, these are just random examples of possibilities of detecting PortletMode changes with GateIn, Seam, and RichFaces. The real beauty of this code is detecting the actual mode change and providing contextual help. This is not currently provided by the bridge as a default behavior, so here is the code to do it:&lt;/p&gt;
-&lt;p class=&#34;pTitle&#34;&gt;The Code&lt;/p&gt;
-&lt;p&gt;First create a simple session bean with the following code. This will allow us to get a handle on the current mode.&lt;/p&gt;
-&lt;code&gt;&lt;pre&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&#34;l46&#34;&gt; &lt;span class=&#34;s2&#34;&gt;private &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;String mode;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l47&#34;&gt;
-&lt;/a&gt;&lt;a name=&#34;l48&#34;&gt; &lt;span class=&#34;s2&#34;&gt;public &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;String getMode()
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l49&#34;&gt; {
-&lt;/a&gt;&lt;a name=&#34;l50&#34;&gt; Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest();
-&lt;/a&gt;&lt;a name=&#34;l51&#34;&gt; &lt;span class=&#34;s2&#34;&gt;if &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(responseObject &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;instanceof &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;RenderRequest) {&lt;/p&gt;
-
-&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l52&#34;&gt; RenderRequest renderRequest = (RenderRequest)responseObject;
-&lt;/a&gt;&lt;a name=&#34;l53&#34;&gt; &lt;span class=&#34;s2&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(renderRequest.getPortletMode().toString().equals(mode)){
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l54&#34;&gt; mode = &lt;span class=&#34;s2&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l55&#34;&gt; }&lt;span class=&#34;s2&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l56&#34;&gt; mode = renderRequest.getPortletMode().toString();
-&lt;/a&gt;&lt;a name=&#34;l57&#34;&gt; }&lt;/p&gt;
-
-&lt;p&gt;&lt;/a&gt;&lt;a name=&#34;l58&#34;&gt; }
-&lt;/a&gt;&lt;a name=&#34;l59&#34;&gt; &lt;span class=&#34;s2&#34;&gt;return &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;mode;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l60&#34;&gt; }
-&lt;/a&gt;&lt;a name=&#34;l61&#34;&gt;
-&lt;/a&gt;&lt;a name=&#34;l62&#34;&gt; &lt;span class=&#34;s2&#34;&gt;public &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;String getFromView() {
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l63&#34;&gt; PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(&lt;span class=&#34;s2&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;);
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l64&#34;&gt; String viewId = (String)portletSession.getAttribute(&lt;span class=&#34;s4&#34;&gt;&amp;ldquo;javax.portlet.faces.viewIdHistory.view&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;);&lt;/p&gt;
-
-&lt;p&gt;&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l65&#34;&gt; viewId = viewId.substring(&lt;span class=&#34;s5&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;,viewId.indexOf(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;rdquo;?&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;));
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l66&#34;&gt; &lt;span class=&#34;s2&#34;&gt;return &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;viewId;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l67&#34;&gt; }
-&lt;/a&gt;&lt;a name=&#34;l68&#34;&gt;
-&lt;/a&gt;&lt;a name=&#34;l69&#34;&gt; &lt;span class=&#34;s2&#34;&gt;public void &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;setMode(String mode)
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l70&#34;&gt; {&lt;/p&gt;
-
-&lt;p&gt;&lt;/a&gt;&lt;a name=&#34;l71&#34;&gt; &lt;span class=&#34;s2&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.mode = mode;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l72&#34;&gt; }
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/pre&gt;&lt;/code&gt;
-&lt;p class=&#34;pTitle&#34;&gt;Next add something similar to this in pages.xml&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;a name=&#34;l8&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;page &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;view-id=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;rdquo;/expenseWizard/*&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;action=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&amp;#35;{mode.getMode()}&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l9&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;navigation&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l10&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;rule &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;if-outcome=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;help&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;if=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&amp;#35;{mode.getFromView() == &amp;lsquo;/expenseWizard/step3.xhtml&amp;rsquo;}&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l11&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;render &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;view-id=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;rdquo;/helpPages/step3help.xhtml&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l12&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;rule&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l13&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;rule &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;if-outcome=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;help&amp;rdquo; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;if=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;ldquo;&amp;#35;{mode.getFromView() == &amp;lsquo;/expenseWizard/step4.xhtml&amp;rsquo;}&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l14&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;render &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;view-id=&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;&amp;rdquo;/helpPages/step4help.xhtml&amp;rdquo;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l15&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;rule&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l16&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;navigation&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;&lt;a name=&#34;l17&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;page&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;
-&lt;/span&gt;&lt;/a&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</guid>
+      <description>By default, the JSR-301&amp;frasl;329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</description>
     </item>
     
     <item>
       <title>Creating (another) Firefox Theme</title>
-      <link>http://wesleyhales.com/blog/2009/11/22/Creating-another-Firefox-Theme</link>
+      <link>http://localhost:1313/blog/2009/11/22/Creating-another-Firefox-Theme/</link>
       <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/11/22/Creating-another-Firefox-Theme</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-h-small.jpg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-h-small.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
-&lt;p&gt;I started laying down ideas for a new Firefox theme a few months ago and this is what emerged. I&amp;rsquo;m not sure why I can&amp;rsquo;t stay away from the darker themes. Maybe it&amp;rsquo;s the richness that black (and darker colors) allows on a monitor, but I tried to stay as far away from mainstream design on this as I could. I have already coded this into a downloadable theme, but I am still working out some glitches. Then I have to let it sit in the Mozilla incubator, as I did with ANTHEM.&lt;/p&gt;
-&lt;p&gt;Speaking of ANTHEM, I&amp;rsquo;m quite surprised that it has done so well. 780k downloads and counting in 1 year. But it is all in vain if I can&amp;rsquo;t &amp;ldquo;supply more blood&amp;rdquo; to this living organ (As &lt;a href=&#34;http://www.jroller.com/robwilliams/&#34;&gt;Rob W.&lt;/a&gt; likes to put it.) With that said, I&amp;rsquo;m thinking about starting an open source project for these themes, because quite honestly, I don&amp;rsquo;t have time to &lt;a href=&#34;http://www.jroller.com/wesleyhales/entry/creating_a_firefox_3_theme&#34;&gt;fix the bugs&lt;/a&gt;. Anybody wanna help? Comment with your email&amp;hellip;&lt;/p&gt;
-&lt;br/&gt;
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-h-bg.jpg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-h-bg-icon.jpg&#34; style=&#34;&#34; border=&#34;0&#34;/&gt;&lt;/a&gt;
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;a href=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-f.jpg&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/recovery/ff3-theme-new-f.jpg&#34; style=&#34;margin:5px;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;
-&lt;p&gt;I have been a bit indecisive about the the background on the toolbar on this one. What do you think? The first one at the top, or this one&amp;hellip; &lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;
-&lt;br/&gt;
-&lt;br/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2009/11/22/Creating-another-Firefox-Theme/</guid>
+      <description>I started laying down ideas for a new Firefox theme a few months ago and this is what emerged. I&amp;rsquo;m not sure why I can&amp;rsquo;t stay away from the darker themes. Maybe it&amp;rsquo;s the richness that black (and darker colors) allows on a monitor, but I tried to stay as far away from mainstream design on this as I could. I have already coded this into a downloadable theme, but I am still working out some glitches.</description>
     </item>
     
     <item>
       <title>Replacing FacesMessages with Growl alerts</title>
-      <link>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</link>
+      <link>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</link>
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts</guid>
-      <description>&lt;p&gt;I saw a tweet from(&lt;a href=&#34;http://twitter.com/maxandersen&#34;&gt;@maxandersen&lt;/a&gt;) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.&lt;/p&gt; 
-&lt;p&gt;This is really just javascript on the front end and can be used with any backend message generating system.&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Code Used:&lt;/p&gt; 
-&lt;p&gt; 
-&lt;ul&gt; 
-&lt;li&gt;&lt;a href=&#34;http://jboss.org/jbossrichfaces/&#34;&gt;RichFaces 3.3.1.GA&lt;/a&gt;&lt;/li&gt; 
-&lt;li&gt;&lt;a href=&#34;http://stanlemon.net/projects/jgrowl.html&#34;&gt;jGrowl (latest)&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Include the scripts in the head:&lt;/p&gt; 
-&lt;p&gt; 
-Note the loading of jquery in the Richfaces page... 
-&lt;code&gt;&lt;pre&gt; 
-&lt;a name=&#34;l1&#34;&gt;&lt;span class=&#34;s0&#34;&gt; 
-&lt;a name=&#34;l5&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;a4j:loadScript &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;src=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;resource://jquery.js&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;/&amp;gt;&lt;/span&gt; 
-&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;link &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;rel=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;stylesheet&amp;quot; &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;/css/jquery-plugins/jquery.jgrowl.css&amp;quot; &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;type=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt; 
-&lt;a name=&#34;l4&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;script &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;type=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;text/javascript&amp;quot; &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;src=&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;&amp;quot;/js/jquery-plugins/jquery.jgrowl.js&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt; 
-&lt;span class=&#34;s0&#34;&gt; 
-&lt;/span&gt; &lt;/span&gt;&lt;/a&gt; 
-&lt;/pre&gt;&lt;/code&gt; 
-&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;Write a simple script to extract the message:&lt;/p&gt; 
-&lt;p&gt; 
-... and add any customizations you may need to jGrowl. One thing to take note of here is that you cannot use the $ sign for jQuery in a Richfaces app. This is because of the RF framework using prototype.js by default and it too uses the $ sign. So every 3rd party jQuery script that you use, you must s/$/jQuery/g (find and replace all usages of &#39;$&#39; with &#39;jQuery&#39;) 
-&lt;code&gt;&lt;pre&gt; 
-function showError() 
-{ 
-jQuery.jGrowl.defaults.position = &#39;center&#39;; 
-if (document.getElementById(&#39;errorMessage&#39;) != null) 
-{ 
-jQuery.jGrowl(jQuery(&#39;#errorMessage&#39;).html(), { 
-sticky: false, 
-life: 10000 
-}) 
-} 
-} 
-&lt;/pre&gt;&lt;/code&gt; 
-&lt;/p&gt; 
-
-&lt;p class=&#34;pTitle&#34;&gt;And tell the script to run after page load:&lt;/p&gt; 
-&lt;p&gt; 
-jQuery has a simple statement that checks the document and waits until it&#39;s ready to be manipulated, known as the ready event: 
-&lt;code&gt;&lt;pre&gt; 
-$(document).ready(function(){ 
-showError(); 
-}); 
-
-&lt;/pre&gt;&lt;/code&gt; 
-&lt;/p&gt; 
-
-&lt;p&gt;Here is a live screen shot of the script in action using a generate h:message. 
-&lt;img src=&#34;http://wesleyhales.com/images/jroller/jgrowl.gif&#34; align=&#34;center&#34;/&gt;&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</guid>
+      <description>I saw a tweet from(@maxandersen) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.
+This is really just javascript on the front end and can be used with any backend message generating system.
+Code Used:
+  RichFaces 3.3.1.GA jGrowl (latest)  Include the scripts in the head:
+ Note the loading of jquery in the Richfaces page.</description>
     </item>
     
     <item>
       <title>ul horizontal tab menus, cross browser, with no hacks</title>
-      <link>http://wesleyhales.com/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks</link>
+      <link>http://localhost:1313/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks/</link>
       <pubDate>Thu, 28 May 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks</guid>
-      <description>&lt;p&gt;There are too many times when I need a nice horizontal tab menu, using semantic html, and with cool graphics all at the same time. So this post is more for my personal reference and will shave a few hours off any ones html prototype. This is cross browser valid css 2.1 on IE6, IE7, FF3, Chrome and Safari without using any hacks.&lt;/p&gt; 
-
-&lt;p&gt;The end result: 
-&lt;img src=&#34;http://wesleyhales.com/images/jroller/tabs.jpg&#34; alt=&#34;&#34;/&gt;&lt;/p&gt; 
-&lt;style type=&#34;text/css&#34;&gt; 
-.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; } 
-.s0 { color: rgb(0,0,128); font-weight: bold; } 
-.s1 { } 
-.s2 { color: rgb(0,0,255); font-weight: bold; } 
-.s3 { color: rgb(0,0,255); } 
-.s4 { color: #4c5d89; font-weight: bold; } 
-.s5 { color: rgb(128,128,128); font-style: italic; } 
-&lt;/style&gt; 
-&lt;p&gt;To start with, here is the css: 
-&lt;pre&gt; 
-&lt;a name=&#34;l151&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;/*----------------------Navigation*/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; 
-
-&lt;a name=&#34;l152&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l153&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;45&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 0 236&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l154&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;white-space&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;nowrap&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l155&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;inline&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l156&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l157&#34;&gt;} 
-&lt;a name=&#34;l158&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l159&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;/*setup the container for tab divs*/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; 
-&lt;a name=&#34;l160&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;list-style&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;none&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l161&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l162&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;inline&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l163&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;font-size&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;1.2&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;em&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l164&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l165&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;relative&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l166&#34;&gt;} 
-&lt;a name=&#34;l167&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l168&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;/*float all divs containing tab images left*/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; 
-&lt;a name=&#34;l169&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l170&#34;&gt;} 
-&lt;a name=&#34;l171&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav a &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{
-&lt;a name=&#34;l172&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;#777&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l173&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;text-decoration&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;none&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l174&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;700&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l175&#34;&gt;} 
-&lt;a name=&#34;l176&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;selected div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-main a &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l177&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;#fff&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l178&#34;&gt;} 
-&lt;a name=&#34;l179&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l180&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l181&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s5&#34;&gt;/*-5 on margin will give us the overlap look*/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; 
-&lt;a name=&#34;l182&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 0&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l183&#34;&gt;} 
-&lt;a name=&#34;l184&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-main&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;, 
-&lt;a name=&#34;l185&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;selected div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-main &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l186&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l187&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;padding&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 10&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l188&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;text-align&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l189&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;auto &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l190&#34;&gt;} 
-&lt;a name=&#34;l191&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;last&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;, 
-&lt;a name=&#34;l192&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;selected div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-last div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;last &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l193&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l194&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;padding&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 10&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l195&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;text-align&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l196&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;auto &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;0 &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l197&#34;&gt;} 
-&lt;a name=&#34;l198&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;inactive div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-main &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l199&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;../images/nav/nav-bg-center-inactive.gif&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;) &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;repeat-x left top&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l200&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l201&#34;&gt;} 
-&lt;a name=&#34;l202&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;inactive div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-left &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l203&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l204&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;../images/nav/nav-bg-left-inactive.gif&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;) &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;no-repeat left top&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l205&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l206&#34;&gt;} 
-&lt;a name=&#34;l207&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;inactive div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-right &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l208&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l209&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;../images/nav/nav-bg-right-inactive.gif&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;) &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;no-repeat right top&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l210&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l211&#34;&gt;} 
-&lt;a name=&#34;l212&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;selected div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-main &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l213&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;../images/nav/nav-bg-center-active.gif&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;) &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;repeat-x left top&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l214&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l215&#34;&gt;} 
-&lt;a name=&#34;l216&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;selected div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-left &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l217&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;transparent &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;../images/nav/nav-bg-left-active.gif&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;) &lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;no-repeat left top&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l218&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l219&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l220&#34;&gt;} 
-&lt;a name=&#34;l221&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;nav-container ul&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;primary-nav li&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;selected div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab div&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;tab-right &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;{ 
-&lt;a name=&#34;l222&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;background-image&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;../images/nav/nav-bg-right-active.gif&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;); 
-&lt;a name=&#34;l223&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-&lt;a name=&#34;l224&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; 
-}&lt;/span&gt; 
-&lt;/pre&gt; 
-&lt;/p&gt; 
-
-&lt;p&gt;And finally the html: 
-&lt;code&gt;&lt;pre&gt; 
-&lt;a name=&#34;l31&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;nav-container&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l32&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;ul &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;primary-nav &amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l33&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;selected&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l34&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l35&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-left&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l36&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-main&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;Home&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l37&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-right&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l38&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l39&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l40&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l41&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l42&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-left&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l43&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-main&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;Profile&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l44&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-right&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l45&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l46&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l47&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l48&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l49&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-left&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l50&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-main&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;About Us&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l51&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-right&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l52&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l53&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l54&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;inactive&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l55&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l56&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-left&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l57&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-main last&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt;Help&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l58&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;class=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;tab-right&amp;quot;&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l59&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l60&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l61&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l62&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s3&#34;&gt; 
-&lt;a name=&#34;l63&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;s4&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;s0&#34;&gt;&amp;gt;&lt;/span&gt; 
-
-&lt;/pre&gt;&lt;/code&gt; 
-&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks/</guid>
+      <description>There are too many times when I need a nice horizontal tab menu, using semantic html, and with cool graphics all at the same time. So this post is more for my personal reference and will shave a few hours off any ones html prototype. This is cross browser valid css 2.1 on IE6, IE7, FF3, Chrome and Safari without using any hacks.
+The end result: .ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; } .</description>
     </item>
     
     <item>
       <title>How to make money off of a Firefox theme (or not)</title>
-      <link>http://wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</link>
+      <link>http://localhost:1313/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not/</link>
       <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not</guid>
-      <description>&lt;p&gt;This weekend was quite an eye opener for me. Since the first public release of &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/9627/&#34;&gt;ANTHEM&lt;/a&gt; (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.&lt;/p&gt; 
-&lt;p&gt;I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted. Then, I got the idea of adding a sponsor logo somewhere in the top banner like this (see top right corner):&lt;a href=&#34;http://wesleyhales.com/images/jroller/anthem-sponsor-large.png&#34;&gt;&lt;img src=&#34;http://wesleyhales.com/images/jroller/anthem-sponsor-small.png&#34; alt=&#34;&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;So I made the change and uploaded the new theme to the Mozilla Developer area. The next morning I awake to tons of emails and reviews on the Mozilla site with some seriously pissed off users. I knew I may get a little fallout, but not quite this bad. I guess I am guilty of falling prey to the big company mindset of caring about $$ more than the users of my product. But like I said on the Mozilla site, this was purely an experiment and the advertisement has been removed per the latest version (1.5.2).&lt;/p&gt; 
-&lt;p&gt;Today I received a message which is truly a great idea and I can&#39;t believe I did not think of it: 
-&lt;quote&gt;&lt;pre&gt; 
-Mate, 
+      <guid>http://localhost:1313/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not/</guid>
+      <description>This weekend was quite an eye opener for me. Since the first public release of ANTHEM (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.
+I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted.</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge Beta 6 Released!</title>
+      <link>http://localhost:1313/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released/</link>
+      <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released/</guid>
+      <description>Read about it here: http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html</description>
+    </item>
+    
+    <item>
+      <title>AjaxWorld West &#39;08 Recap</title>
+      <link>http://localhost:1313/blog/2008/10/22/AjaxWorld-West-08-Recap/</link>
+      <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/10/22/AjaxWorld-West-08-Recap/</guid>
+      <description>This week, I attended/spoke at the AjaxWorld conference in San Jose. The cool thing for me is that this was my first public speaking appearance. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.</description>
+    </item>
+    
+    <item>
+      <title>AJAX in Enterprise Portals at AjaxWorld</title>
+      <link>http://localhost:1313/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld/</link>
+      <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld/</guid>
+      <description>I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don&#39;t be a stranger!  Check out the sessions here. **Update with slides:</description>
+    </item>
+    
+    <item>
+      <title>Developing an OpenSocial Portlet</title>
+      <link>http://localhost:1313/blog/2008/10/12/Developing-an-OpenSocial-Portlet/</link>
+      <pubDate>Sun, 12 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/10/12/Developing-an-OpenSocial-Portlet/</guid>
+      <description>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:
+ Documentation is scarce when you want to roll you own OS container via Shindig Luckily Chris Schalk did a good job providing some documentation on getting persistence setup on a mysql db Unfortunately, due to the bleeding edge of this technology, some of (the few) demos that exist don&amp;rsquo;t work with today&amp;rsquo;s Shindig trunk I was able to quickly learn Google widgeting and am on my way to being a &amp;ldquo;widget master&amp;rdquo; Next on the list is to mess around with Google Data APIs in OpenSocial Apps The transition/integration of Shindig into a standard webapp/portlet was a huge pita.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Firefox 3 theme</title>
+      <link>http://localhost:1313/blog/2008/08/26/Creating-a-Firefox-3-theme/</link>
+      <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/08/26/Creating-a-Firefox-3-theme/</guid>
+      <description>**UPDATE - This theme is now available on Mozilla.org here: https://addons.mozilla.org/en-US/firefox/addon/9627/  I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.</description>
+    </item>
+    
+    <item>
+      <title>Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)</title>
+      <link>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</link>
+      <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</guid>
+      <description>InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!
+  This first part is about basic JSF development with an easy to follow tutorial and real world development tips.</description>
+    </item>
+    
+    <item>
+      <title>JSF in a portlet has never been this easy!</title>
+      <link>http://localhost:1313/blog/2008/07/07/JSF-in-a-portlet-has-never-been-this-easy/</link>
+      <pubDate>Mon, 07 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/07/07/JSF-in-a-portlet-has-never-been-this-easy/</guid>
+      <description>We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects. See the documentation for full details. For those that want to jump right in, you can run the following archetype and have it deployed on JBoss AS + Portal in minutes:  mvn archetype:generate -DarchetypeGroupId=org.jboss.portletbridge.archetypes -DarchetypeArtifactId=1.2-basic -DarchetypeVersion=1.0.0.B3 -DgroupId=org.whatever.project -DartifactId=myprojectname -DarchetypeRepository=http://repository.jboss.org/maven2/ -Dversion=1.0.0.B3    mvn install cargo:start -Premote-portal -Dpc20    mvn cargo:deploy -Premote-portal -Dpc20   Visit http://localhost:8080/simple-portal/demo/jsr-301.</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge Beta2 Released!</title>
+      <link>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</link>
+      <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</guid>
+      <description>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.
+Read more about what is included in this release.</description>
+    </item>
+    
+    <item>
+      <title>My 4 month old MacBook Pro Hardrive is skippping... badly</title>
+      <link>http://localhost:1313/blog/2008/03/31/My-4-month-old-MacBook-Pro-Hardrive-is-skippping...-badly/</link>
+      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/03/31/My-4-month-old-MacBook-Pro-Hardrive-is-skippping...-badly/</guid>
+      <description>It&#39;s never a good thing when your hard drive starts making that funny little skipping noise. But, it&#39;s really not good when you push the power button and all you hear are loud ass clicks and you can feel the vibration of each click on the keyboard.
+In all my wise &#39;ol years in the IT industry, I have never had this happen to me. Sure, I&#39;ve had old hd&#39;s that eventually wear out and start skipping.</description>
+    </item>
+    
+    <item>
+      <title>JBoss Portlet Bridge with Seam support released</title>
+      <link>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</link>
+      <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
+      <description>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.
+The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.
+See the project page for more details and a live demo.</description>
+    </item>
+    
+    <item>
+      <title>Page and Component Modal with a4j&amp;#58;status</title>
+      <link>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
+      <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
+      <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
 
-Excellent skin! That&#39;s been said many times but I saw something new 
-today that you gave away for free (and was a great opportunity!) 
-Donating without cause never gets a response (although it needs to 
-for the sake of others), but I think if you said people needed to
-donate 50c to remove the advert, you&#39;d be buying my motorcycles by 
-now, and by the dozen J. 
+Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>
+    </item>
+    
+    <item>
+      <title>XHTML to PDF with a Seam filter</title>
+      <link>http://localhost:1313/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</link>
+      <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</guid>
+      <description>After reading this article showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.
+First off, generated markup from any given JSF component is not guaranteed to be good markup.</description>
+    </item>
+    
+    <item>
+      <title>Writing a FaceBook app</title>
+      <link>http://localhost:1313/blog/2007/12/03/Writing-a-FaceBook-app/</link>
+      <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/12/03/Writing-a-FaceBook-app/</guid>
+      <description>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven&#39;t really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven&#39;t followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next.</description>
+    </item>
+    
+    <item>
+      <title>Seam 2.0GA in JBoss Portal (in 5 minutes)</title>
+      <link>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</link>
+      <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
+      <description>**Update - See this article for more info.</description>
+    </item>
+    
+    <item>
+      <title>Maven 2 vs. Ant (revisited)</title>
+      <link>http://localhost:1313/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</link>
+      <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
+      <description>Almost a year since I made this entry and I think Maven is great for open source and commercial apps. Sure, there may be a few things you want to do that don&#39;t fit into the &#34;Maven way&#34; but for the most part, it is a great build system. Also, any one that uses IntelliJ Idea will fall in love with Maven on first use (I guess it handles Eclipse project files just as well).</description>
+    </item>
+    
+    <item>
+      <title>Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo</title>
+      <link>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</link>
+      <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
+      <description>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.</description>
+    </item>
+    
+    <item>
+      <title>CSS Framework</title>
+      <link>http://localhost:1313/blog/2007/08/14/CSS-Framework/</link>
+      <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/08/14/CSS-Framework/</guid>
+      <description>There are several possible ways to go about building a CSS framework. The framework I mention here is suited for myself and the group of developers I work with. It has proven successful on the past 3 projects I have been on. Once everyone knows about a base set of styles it&#39;s amazing how much more productive the team is. Not only do you have a &#34;master&#34; type of stylesheet to work from, everyone can edit the code and make changes faster because they are aware of the framework in use.</description>
+    </item>
+    
+    <item>
+      <title>My first Seam 2.0 app</title>
+      <link>http://localhost:1313/blog/2007/08/01/My-first-Seam-2.0-app/</link>
+      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/08/01/My-first-Seam-2.0-app/</guid>
+      <description>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.
+This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)</description>
+    </item>
+    
+    <item>
+      <title>iPhone Web Development</title>
+      <link>http://localhost:1313/blog/2007/07/05/iPhone-Web-Development/</link>
+      <pubDate>Thu, 05 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/07/05/iPhone-Web-Development/</guid>
+      <description>I broke down and got my 8gig iPhone on Tuesday. I have been using it pretty heavily and in just a sec, I will start with my list o&amp;rsquo; let downs. But first, I gotta say that whoever designed the Optimizing Web Applications and Content for iPhone page from Apple has obviously not done a lot of open-source or ANY development for that matter. Yes, it is good content, BUT This may or may not be one of the weak links for apple because there is really no organization to the content, important bits of information are scattered here an there, and frankly for something &amp;ldquo;so revolutionary&amp;rdquo; - they are not supporting the people who will make or break this thing (us - the developer) with good documentation very well.</description>
+    </item>
+    
+    <item>
+      <title>JSF components with the Ajax4jsf cdk</title>
+      <link>http://localhost:1313/blog/2007/03/14/JSF-components-with-the-Ajax4jsf-cdk/</link>
+      <pubDate>Wed, 14 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/03/14/JSF-components-with-the-Ajax4jsf-cdk/</guid>
+      <description>The Ajax4jsf cdk (component development kit) from the Richfaces/Ajax4jsf development team makes the monotonous coding and complexities of developing JSF components for both JSP and Facelets almost non-existent. With a small amount of setup and a little framework knowledge (covered below), you can generate a complete JSF component that allows the developer to focus on what is most important to them.
+Getting Started  Make sure you are using the latest version of Maven (I&#39;m on 2.</description>
+    </item>
+    
+    <item>
+      <title>JSF, Ajax, and the Back Button</title>
+      <link>http://localhost:1313/blog/2007/02/21/JSF-Ajax-and-the-Back-Button/</link>
+      <pubDate>Wed, 21 Feb 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/02/21/JSF-Ajax-and-the-Back-Button/</guid>
+      <description>For the last few weeks I have been trying to integrate back button support into a JSF/Ajax app as an &#34;Undo&#34; feature. I have been using 2 approaches, 1) g4jsf (a subproject of Ajax4JSF) to enable use of GWT, and 2) dojo.undo.browser.
+Currently, any engineer interacting with the back button through javascript only has access to a few methods. window.history.current, window.history.next, window.history.previous, and an array of history items with window.history[]. Gwt and dojo give us a much more accessible way to deal with these same methods through Java and javascript .</description>
+    </item>
+    
+    <item>
+      <title>JSF AjaxSlider Component</title>
+      <link>http://localhost:1313/blog/2007/01/07/JSF-AjaxSlider-Component/</link>
+      <pubDate>Sun, 07 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2007/01/07/JSF-AjaxSlider-Component/</guid>
+      <description>This is the first release of my AjaxSlider component. This version works with JSP and Facelets and also extends FacesEvent to provide it&#39;s own event/listener. Many thanks to Jonas Jacobi and John Fallows for putting together a great book (Pro JSF and Ajax).
+I&#39;m also using the slider functions from the Script.aculo.us library
 
-All the best, 
-
-The Convicts 
-&lt;/pre&gt;&lt;/quote&gt; 
-Thank you Convict and all the best to your motorcycle company. Hopefully I will be able to buy one soon!&lt;/p&gt; 
-
-&lt;p&gt;I think I will either develop another skin much better than ANTHEM, or I may just work for free for the rest of my life and die a poor (but appreciated) man. I think it&#39;s easier to get into Heaven if we die poor, right? Ah, the life of open source. To me it really is worth it to use your talent and provide something that makes people&#39;s life better. I don&#39;t care what anybody says, you get it back (and usually doubled) at some point in your life.&lt;/p&gt;
-</description>
+ This component in hardly complete and bug free, so any help in debugging is appreciated</description>
+    </item>
+    
+    <item>
+      <title>JSF Ajax Filter/Slider with UIData</title>
+      <link>http://localhost:1313/blog/2006/12/31/JSF-Ajax-Filter-Slider-with-UIData/</link>
+      <pubDate>Sun, 31 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/31/JSF-Ajax-Filter-Slider-with-UIData/</guid>
+      <description>In any RIA where h:dataTable is used, probably 90% of the time, you will need a filter in the same view/page as the dataTable. A Filter can be anything from a list of links, a select many list, or in this example, a slider.
+At first, I thought about just creating the component and have it add the value of the slider to a request parameter so that the backing bean could have access to the value.</description>
+    </item>
+    
+    <item>
+      <title>Ajax4Jsf Modal Loading Windows</title>
+      <link>http://localhost:1313/blog/2006/12/26/Ajax4Jsf-Modal-Loading-Windows/</link>
+      <pubDate>Tue, 26 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/26/Ajax4Jsf-Modal-Loading-Windows/</guid>
+      <description>Ajax4Jsf&#39;s status tag (a4j:status) has alot of potential, but currently it&#39;s functionality is limited. With the combination of Lightbox 2.0, or basically any javascript developed to build the dom, you can achieve the look of any modal &#34;Loading...&#34; window.
+Since the status tag does not include capability to fire javascript events(as of yet), we will use the modified lightbox script to go ahead and write everything to the dom, then let the a4j:status tag to hide it until we make an Ajax call.</description>
+    </item>
+    
+    <item>
+      <title>Using Facelets TagHandlers and Adding multiple listeners</title>
+      <link>http://localhost:1313/blog/2006/12/18/Using-Facelets-TagHandlers-and-Adding-multiple-listeners/</link>
+      <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/18/Using-Facelets-TagHandlers-and-Adding-multiple-listeners/</guid>
+      <description>ComponentHandler, HtmlComponentHandler, or TagHandler. So I think I finally have a handle on what each of these are used for. Okay the first 2 are easy, HtmlComponentHandler extends ComponentHandler. But what is a MetaRuleset and what can it do for my components? It looks to mee like it is just a method binding passthrough for the component when you call MetaRuleset.addRule(typeTagRule);?  TagHandler ended up saving the day for me, and after spending hours/days trying to get the first 2 to do what I was wanting, this one took me like 5 minutes.</description>
+    </item>
+    
+    <item>
+      <title>JSF Chart Creator - now with ImageMaps!</title>
+      <link>http://localhost:1313/blog/2006/12/16/JSF-Chart-Creator-now-with-ImageMaps/</link>
+      <pubDate>Sat, 16 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/16/JSF-Chart-Creator-now-with-ImageMaps/</guid>
+      <description>I recently updated the JSF-Comp Chart Creator component to include image map support. All charts now have capabilties for custom links on each section of the chart. All customization can be handled through the tag atributes.
+New attributes:  action series section  The usemap attribute must start with a # (i.e. usemap=&#34;#myMap&#34;). For action, just input the page to link to, section and series are just parameters that are built into jfreeChart.</description>
+    </item>
+    
+    <item>
+      <title>Maven 2 vs Ant - Which is better for commercial apps</title>
+      <link>http://localhost:1313/blog/2006/12/10/Maven-2-vs-Ant-Which-is-better-for-commercial-apps/</link>
+      <pubDate>Sun, 10 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/10/Maven-2-vs-Ant-Which-is-better-for-commercial-apps/</guid>
+      <description>Currently I am working on a extreme RIA which is to use the code base of an existing project and rewrite were needed. Because of the strict time line, no one is attempting to rewrite the existing code base, and we are looking over problems that need to be fixed just to get things working. However, we have made the appropriate steps to create a Maven archetype for the new part of the app, and to get the ball rolling away from the old ant build.</description>
+    </item>
+    
+    <item>
+      <title>Ajax4Jsf vs AjaxAnywhere&amp;#58; The t&amp;#58;dataTable and t&amp;#58;dataScroller</title>
+      <link>http://localhost:1313/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere-58-The-t-58dataTable-and-t-58dataScroller/</link>
+      <pubDate>Thu, 07 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere-58-The-t-58dataTable-and-t-58dataScroller/</guid>
+      <description>Submitting with Ajax4Jsf
+On Dec 6, Ajax4Jsf released a maintenance release (ajax4jsf-1.0.4MR1.jar which fixed an IE javascript problem not in this post) - But the framework is still a little buggy dealing with the datascroller components. On a good note, Adrian Mitev gave his custom ajaxDataScroller  to the A4J project and will hopefully get everything working in both browsers. ***UPDATE - Here is the latest version of the datascroller from Adrian.</description>
+    </item>
+    
+    <item>
+      <title>JSF Component Library Integration</title>
+      <link>http://localhost:1313/blog/2006/12/06/JSF-Component-Library-Integration/</link>
+      <pubDate>Wed, 06 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2006/12/06/JSF-Component-Library-Integration/</guid>
+      <description>Integrating multiple component libraries can provide a project many advantages but can also be a challenge to make all components live and work in harmony. This article explains how to integrate many popular component libraries into one app. Combining libraries gives developers an array of components to pick and choose from. But, knowing which components play well together and which ones don?t, will save you time and I will explain the pros and cons of each here.</description>
     </item>
     
   </channel>

@@ -2,50 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on Wesley Hales</title>
-    <link>http://wesleyhales.com/tags/html/</link>
+    <link>http://localhost:1313/tags/html/</link>
     <description>Recent content in Html on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Feb 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wesleyhales.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://localhost:1313/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Adventures with the Skia Debugger</title>
-      <link>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</link>
+      <link>http://localhost:1313/blog/2013/02/18/Adventures-with-the-Skia-Debugger/</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://wesleyhales.com/blog/2013/02/18/Adventures-with-the-Skia-Debugger</guid>
-      <description>&lt;p&gt;&lt;br/&gt;
-&lt;h3&gt;Debugging jank, reflows, etc&amp;hellip;&lt;/h3&gt;
-The &lt;a href=&#34;https://sites.google.com/site/skiadocs/developer-documentation/skia-debugger&#34;&gt;Skia debugger&lt;/a&gt; was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.&lt;/p&gt;
-
-&lt;p&gt;If you haven’t watched &lt;a href=&#34;http://www.youtube.com/watch?v=3-WYu_p5rdU&#34;&gt;this video&lt;/a&gt;, I recommend you take a few minutes and watch the first part to understand the context of why the Skia debugger was mentioned and where it might be useful. For the impatient, there was a lot of talk around image decoding and scrolling. This morphed into a discussion about bounce rates and how scrolling really matters from an experience standpoint. Basically, if you’re scrolling sucks, users do a lot less and bounce quicker.&lt;/p&gt;
-
-&lt;p&gt;Overall, it sparked my curiosity to see if I could get a visual understanding of reflow happening on web sites/apps&amp;hellip; much like this FF3 reflow video from a few years ago.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;http://www.youtube.com/embed/ZTnIxIA5KGw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-Although the Skia debugger doesn&amp;rsquo;t give us a nice video with animations (like shown above), it does give some really good info on how graphics are drawn into the browser.
-This &lt;a href=&#34;http://blog.mozilla.org/gen/2009/04/09/how-to-make-your-own-gecko-reflow-video/&#34;&gt;blog post&lt;/a&gt; explains how the above video was created with FF 3.1, but I’m not sure if anyone has attempted it with the latest Firefox build&amp;hellip; and there is no visual debugger afaik. I did hear one of the panel members mention a Firefox “jank mode” but a short Google search turned up little results that don’t work on the latest version.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;
-&lt;h3&gt;Building the debugger from source&lt;/h3&gt;
-I will state upfront that there was a lot of pain that went into building both the debugger and chromium from source, but as you will see, it was worth it.&lt;/p&gt;
-
-&lt;p&gt;Here are my build notes for OSX 10.7.5:
-&lt;script src=&#34;https://gist.github.com/wesleyhales/4980385.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;
-&lt;h3&gt;Using the Debugger&lt;/h3&gt;
-The debugger is fairly straightforward to use once a picture is loaded in. You can step through different commands via the up and down keys and clicking on the command in the list. You can also pause execution of commands with the pause button in order to inspect the details of the command in the inspector tabs down below.
-&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-18/skia-ss.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;
-Here are the available keyboard shortcuts for the debugger:
-&lt;img src=&#34;http://wesleyhales.com/images/posts/2013-02-18/skia-commands.PNG&#34; alt=&#34;skia&#34; class=&#34;margin10 max-width-100&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;After playing around with the debugger, it’s nice to get a very low level snapshot of how long it takes a specific browser to draw the pictures necessary to present a web page.&lt;/p&gt;
-
-&lt;p&gt;P.S. I plan on uploading my produced binaries (somewhere), so if you&amp;rsquo;re on a Mac around version 10.7.5, hit me up @wesleyhales. Hopefully I can save a few poor souls a weekend full of building from sources ;)
-Happy debugging!&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2013/02/18/Adventures-with-the-Skia-Debugger/</guid>
+      <description>Debugging jank, reflows, etc&amp;hellip; The Skia debugger was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.
+If you haven’t watched this video, I recommend you take a few minutes and watch the first part to understand the context of why the Skia debugger was mentioned and where it might be useful.</description>
     </item>
     
   </channel>
