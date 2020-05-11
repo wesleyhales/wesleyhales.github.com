@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2012-11-01T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>I&#39;ll Sleep When I Die - All for HTML5 &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -54,9 +54,7 @@
         <p>The following post is a long-winded summary of my experiences over the past year. I started a user group, wrote a book,
 gave up a secure job, and changed jobs 4 times. All to push myself, get uncomfortable, and better understand the challenges
 that front-end developers are facing in 2012 and beyond. I gained more than I ever thought possible.</p>
-
 <p>Sometimes you have to give up everything to find something.</p>
-
 <p>Almost one year ago (September 2011), I started the <a href="http://www.meetup.com/AtlantaHTML5/">HTML5 user group</a> in Atlanta Georgia.
 This started as an experiment and outlet for me to practice my front-end related presentations. I really had no idea who
 would come or how fast the group would grow. But much to my surprise, the <a href="http://www.meetup.com/AtlantaHTML5/events/29823121/">first meetup</a>
@@ -68,7 +66,6 @@ Some are far ahead of me and are doing things that I really admire and others ar
 Overall, I’ve learned that community creates technology. HTML5 and mobile have inspired developers and designers to think
 differently and do new amazing things, but in the end, it’s the developers and community who collectively see through the
 marketing hype of products and platforms to choose viable/useful solutions.</p>
-
 <p>The month after starting Atlanta HTML5 (October 2011), <a href="http://www.html5rocks.com/en/mobile/optimization-and-performance/">an article that I’d been working on for months</a>
 was finally published on html5rocks.com. It just so happened that the article went out the day before my presentation at JavaOne 2011.
 So everything aligned really nicely and the talk went well. This all leads up to me authoring a book.
@@ -76,20 +73,17 @@ During my stay in SF, I was introduced to Meghan Blanchette who is an editor at 
 her it would be cool to write a book. I casually agreed that I’d send her a proposal for a book that talks about
 HTML5 in the enterprise. After all, I come from a decade of heavy middleware stacks and server-side generated markup.
 So I thought my perspective might be valuable as developers make the transition to offline capable clients.</p>
-
 <p>In November 2011, my proposal was accepted and I signed the O’Reilly contract for a book entitled “HTML5 Architecture”
 , which would later be renamed to <a href="http://shop.oreilly.com/product/0636920024088.do">“HTML5 and JavaScript Web Apps”</a>.
 This was a huge personal step for me. At first it was very exciting and I was motivated to create the best HTML5 related
 book the world had ever seen. I committed to the fact that I would give up countless afternoons and weekends
 (away from my wife and kids) to research and write about the latest web technologies available to developers.
 I had this burning desire to understand how HTML5 would affect us both now and in the years to come.</p>
-
 <p>So now, lets get back to reality and my day job. While I had grandiose visions of creating a kick ass book, I still had
 obligations and commitments to maintain for my employer, Red Hat. During this time I was involved with a new project,
 actually this was the second project I co-founded at JBoss -  we named it <a href="http://aerogear.org/">AeroGear</a> and officially
 launched in February of 2012. AeroGear now employs some of the greatest developers of our time. It is truly an honor to
 say I was a part of this project and I will always admire and respect what the developers behind this project produce.</p>
-
 <p>Not long after AeroGear was launched, and after I’d spent a few months researching and writing my book, I realised that
 I was out of touch with what developers were truly facing. It’s easy to write about what “you think” developers want and
 need. But it’s a completely different story when you’re in the trenches and in the real-world of day to day development
@@ -101,7 +95,6 @@ with my day job. From what I’ve seen, as IT professionals, it hurts us to stay
 imo unless you have some really nice golden handcuffs or are truly happy with your situation, depending on a company for retirement
 is suicide. So I took it upon myself to become uncomfortable and to get back out in the real world. The only way you can
 experience the problems and challenges developers face is to be one of them and work in their environment.</p>
-
 <p>In March of 2012, I put in my 2 week notice at Red Hat and decided to become an independent consultant. I had interviewed
 at quite a few companies and decided the best route to take was the most uncomfortable one - a pair programming Ruby/UI developer.
 So I started a contract with a Cox owned property and experienced, first hand, the problems that professional developers face.
@@ -109,39 +102,25 @@ Things like converting a six year old legacy B2B application from prototype.js t
 jQuery architecture and writing plugins, strategies to bubble up DOM events, etc&hellip; CSS formatting, preprocessor strategies
 and many more issues that your average corporate developers desire to get right. I was finally in the trenches with an audience
 that “I thought” I previously understood.</p>
-
 <p>In the weeks/months before my consulting time at Cox/Manheim I had been engaged by Square, Google and Wikipedia for potential jobs offers.
 So I was rushing home in the afternoons to interview for positions that would move me out to the bay area. Unfortunately these
 opportunities didn’t work out for whatever reason, but honestly, putting myself out there and going through these grueling
 interview processes helped me out tremendously - as you will see.</p>
-
-<p><img src="/images/posts/2012-11-01/543116336.jpg" alt="devnexus" class="margin10" style="max-width:50%" align="left">
-On a side note and speaking of &ldquo;putting myself out there&rdquo;, on March 21st I had agreed to do a talk at a local conference
-here in Atlanta called <a href="http://www.devnexus.com/">DevNexus</a>. As I was creating the slides for my presentation, I kept thinking
-about how I would verbally survey the audience at certain points to get a feel for what their experience level was.
-“Raise your hand if&hellip;” kind of thing&hellip;Then I thought, hey! I can just write a simple HTML+CSS slide deck and create a
-WebSocket back end that will allow the audience to participate with their mobile phone. Cool! So I spent a week hacking
-on this and finally got a prototype up and running.
-I did the talk and the room was packed, people were <a href="http://wesleyhales.com/images/posts/2012-11-01/c70jx.jpg">spilling out into the hallways</a> (ok, so it wasn’t exactly a HUGE room,
-but still it’s fun to say) Anyway, The talk went great and I had almost 100% audience participation. I was invited back
-the next day to give the same talk after another speaker backed out.</p>
-
+<!-- raw HTML omitted -->
 <p>Now that I was an independent contractor, I had this feeling of, yes, you guessed it&hellip; independence. I was getting paid Corp-2-Corp
 through whoever would hire me at a specified hourly rate. I was able to speak at conferences on organic, community topics and
 I wasn’t giving a sales pitch for a specific product or platform. I was a hired gun and making it on my own, paying high insurance
 costs for my family (and business), and making one hell of a commute.
-<a href="http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/"><img src="/images/posts/2012-11-01/onslyde.jpg" alt="devnexus" class="margin10" align="right" style="max-width:50%"></a>
+<a href="http://www.flickr.com/photos/highgroove/6958058518/sizes/o/in/photostream/"><!-- raw HTML omitted --></a>
 So, my next bright idea was to enter Atlanta Startup Weekend in April of 2012, form a team of volunteers and pitch the presentation
 tool that I used at DevNexus as a startup idea.
 Unfortunately, the idea didn’t get picked, but I met 3 awesome developers who joined my team and those connections were huge wins. I
 also made connections with many other like minded entrepreneurs, so overall my first time joining an event like this was priceless.
 Again, <a href="https://twitter.com/mikeschinkel/status/194207658033680384">just putting myself out there</a> was another way to level up&hellip;</p>
-
 <p>2 months into my contract at Cox (June), I was finally getting close to finishing my O’Reilly book. A lot of my effort was going
 into the code examples in the book and the ideas behind it. So in June, I finally launched <a href="http://www.html5e.org">html5e.org</a>.
 This site contains a ton of examples and practical implementations of W3C and HTML5 apis. The basic idea behind html5e is to
 defragment the mobile (and desktop) browser space by using a core set of APIs. <a href="http://www.html5e.org">Read more here</a>.</p>
-
 <p>After 3 months with my consulting gig at Cox/Manheim, I received a call from the senior development director at CNN. He
 had attended the same talk I gave at DevNexus 2012 (where I used my presentation tool), and wanted to know if I’d be
 interested in joing the CNN.com development team. I was pretty happy with my contract at Cox, but after I asked what I’d
@@ -151,22 +130,18 @@ To say the least, I had been “primed” for interviews after my experiences wi
 completely comfortable walking into my interview at CNN. Onsite, I took a 30 minute written exam and interviewed with 7
 people. CNN does a great job of screening candidates. Luckily I made it through the screen and started the contract on
 July 1st.</p>
-
 <p>At this point, just the interview practice alone had given me a great idea on the bar that the world’s top technology companies
 set. It’s invaluable and I recommend everyone do it, especially if you’re a cocky, egotistical developer type who thinks
 he/she is the hottest thing since Honey Boo-Boo :)</p>
-
 <p>Not sure if you notice the pattern here, but somehow I managed to start jobs at the beginning of each quarter. No real
 importance behind it, just thought it’s cool that it continues to happen throughout the entire year.</p>
-
 <p>While I was working at CNN, I immediately took the initiative
 to look at how they were implementing their “share bar” or buttons that allowed visitors to share content through social media.
 I also wanted to understand how Web Intents could possibly fit into the picture here.
 <a href="http://wesleyhales.com/blog/2012/07/11/Sharing-With-Web-Intents-Today/">My findings</a> were interesting enough to get some of the top
 developers/authors/speakers in the industry to comment on my post. It really is motivating when you see your blog spike
 from roughly 100 unique visitors a week to 1000&rsquo;s. I even got a <a href="https://twitter.com/TwitterOSS/status/240912782000795649">shout out</a> on TwitterOSS :)
-<img src="/images/posts/2012-11-01/blogstats.png" alt="devnexus" class="margin10 max-width-100"></p>
-
+<!-- raw HTML omitted --></p>
 <p>Next thing I worked on at CNN was page load performance. We started having meetings with CNN’s best and brightest to see what
 we could do to add performance improvements to CNN’s home page. The problem with making changes like these in most large
 organizations is that everything is product based. Therefore, you usually don’t have any internal sponsorship (or funds) to
@@ -180,10 +155,8 @@ made. Enter <a href="http://phantomjs.org/">PhantomJS</a> - With phantomjs, we w
 that would run for each development build. Thus, giving us a baseline for the changes we were making. For the full story behind loadreport.js,
 check out <a href="http://wesleyhales.com/blog/2012/08/16/Site-Load-Time-Testing-with-PhantomJS/">this post</a>.
 On August 16th, loadreport was picked up in the <a href="http://javascriptweekly.com/archive/92.html">JavaScript weekly newsletter</a> and again, blog spikes were abundant :)</p>
-
 <p>The point is, I don’t give a damn who you’re working for and what you’re doing; just blog about it. If you want to get better, write about it.
 Find something to write about if you’re working on boring shit.</p>
-
 <p>My time at CNN was a lot of fun and I met some really talented developers. I had no intentions of leaving this job and planned
 on staying there for my full contract length, BUT&hellip;. one day I got a call. The call came from an good friend and colleague
 that I had previously helped to bootstrap a startup. I was actually the third co-founder of this startup, but I had to back out
@@ -194,20 +167,15 @@ On October 1, I started full time employment with Apigee and I couldn&rsquo;t be
 and integrating it with Apigee’s <a href="http://apigee.com/about/mobile-analytics">look and feel</a> amongst many other things. This has
 really been the icing on top - the cherries come in the following section - of an incredible 1 year journey. I&rsquo;m looking forward to
 doing many great things with Apigee&rsquo;s technology and the future of the web applications.</p>
-
 <p>Steve Jobs said it best in 2005, when he told those Stanford students to “Stay hungry. Stay foolish”. Even though I
 could stand to lose about 10-15 pounds. I have stayed foolish and I listened to my heart on what I should do. I constantly
 had butterflies in my stomach and was pushed to the very edge of the stress levels that I could handle. That is how I
 knew I was doing something worthwhile.</p>
-
 <p>On October 26th, my O’Reilly book is done and was sent to the printer. It is now available as an <a href="http://shop.oreilly.com/product/0636920024088.do">ebook</a>
 and will be available in print on November 12th.</p>
-
 <p>On November 1st (today), the idea that I helped create and shape got it’s first <a href="http://finance.yahoo.com/news/apigee-launches-first-real-time-120000461.html">press release</a>
 and <a href="http://apigee.com/about/mobile-analytics">official public launch</a>.</p>
-
-<p><img src="/images/posts/2012-11-01/apigee.png" alt="apigee mobile analytics" class="margin10 max-width-100"></p>
-
+<!-- raw HTML omitted -->
 <p>I’ll be speaking at a few more conferences in November, <a href="http://www.devoxx.com/display/DV12/Wesley+Hales">Devoxx</a>
 and <a href="http://therichwebexperience.com/conference/speaker/wesley_hales">RWX</a>, and after that I’m going to lay low for a while.
 The amount of stress that I’ve undergone over the past year is not for the faint of heart. Imagine trying to prove yourself
@@ -285,8 +253,7 @@ I can sleep pretty well after a couple of beers, and I won’t have to pay for m
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -304,5 +271,5 @@ I can sleep pretty well after a couple of beers, and I won’t have to pay for m
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

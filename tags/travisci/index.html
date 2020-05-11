@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -22,8 +22,8 @@
     
         <meta property="og:type" content="website" />
     
-        <meta name="generator" content="Hugo 0.51" />
-        <title>Travisci &middot; Wesley Hales</title>
+        <meta name="generator" content="Hugo 0.70.0" />
+        <title>travisci &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="//wesleyhales.com/tags/travisci/index.xml">
         <link rel="stylesheet" type="text/css" href="//wesleyhales.com/css/main.css"/>
@@ -51,9 +51,10 @@
     </header>
     
     <section class="post-excerpt">
-        <p>Overview If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.
-The manual workflow goes something like this:
- code your site using asciidoc/markdown/haml/sass/less/etc preprocessor (or build) generates static site (locally on your machine) copy static site to your local gh-pages or username.github.com repo/branch git push new site done  Now, with a little scripting we can have:</p>
+        <p>The manual workflow goes something like this:
+Now, with a little scripting we can have:
+Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.
+With our new workflow, we let Travis CI do the work for us in a bash script.</p>
     </section>
 
     <footer class="post-footer">
@@ -79,8 +80,7 @@ The manual workflow goes something like this:
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -97,5 +97,5 @@ The manual workflow goes something like this:
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

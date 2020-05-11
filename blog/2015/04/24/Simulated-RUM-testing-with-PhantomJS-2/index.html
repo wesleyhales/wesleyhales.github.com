@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2015-04-24T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Simulated RUM testing with PhantomJS 2 &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -52,55 +52,39 @@
 
     <section class="post-content">
         <p>Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.</p>
-
 <p>The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using <a href="https://github.com/wesleyhales/loadreport">Loadreport.js</a>.
-<a href="https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs"><img style="max-width:90%" src="/images/posts/2015-15-24/image05.png"/></a>
-<div style="width:100%;text-align:center;font-style:italic;">Loadreport data from 2012-2013 for CNN.com</div></p>
-
-<p>I started the Loadreport project while working on the CNN homepage in 2012. It was one of the first PhantomJS scripts that was built solely to collect as many perf numbers from the DOM as possible.<br />
+<a href="https://speakerdeck.com/wesleyhales/a-baseline-for-web-performance-with-phantomjs"><!-- raw HTML omitted --></a></p>
+<!-- raw HTML omitted -->
+<p>I started the Loadreport project while working on the CNN homepage in 2012. It was one of the first PhantomJS scripts that was built solely to collect as many perf numbers from the DOM as possible.<br>
 However, the performance numbers collected from events like DOMContentLoaded, onload, and others are all based around old, inaccurate or poorly measured JavaScript APIs provided by the DOM.</p>
-
-<p>These measurements were a great start and gave us some kind of baseline, but as the Web Performance industry has grown over the last several years, more understanding has been gained and better tools and dashboards are being written.<br />
-Now, <a href="http://en.wikipedia.org/wiki/Real_user_monitoring">Real User Monitoring (RUM)</a>, <a href="http://en.wikipedia.org/wiki/Synthetic_monitoring">Synthetic Monitoring</a>, <a href="https://www.google.com/search?q=client+side+performance&amp;oq=client+side+performance&amp;aqs=chrome..69i57j0l5.347j0j7&amp;sourceid=chrome&amp;es_sm=91&amp;ie=UTF-8">Client Side Performance</a> and many more terms seek to describe this way of capturing web performance and providing some kind of actionable insights around the data.<br />
-<br/>
+<p>These measurements were a great start and gave us some kind of baseline, but as the Web Performance industry has grown over the last several years, more understanding has been gained and better tools and dashboards are being written.<br>
+Now, <a href="http://en.wikipedia.org/wiki/Real_user_monitoring">Real User Monitoring (RUM)</a>, <a href="http://en.wikipedia.org/wiki/Synthetic_monitoring">Synthetic Monitoring</a>, <a href="https://www.google.com/search?q=client+side+performance&amp;oq=client+side+performance&amp;aqs=chrome..69i57j0l5.347j0j7&amp;sourceid=chrome&amp;es_sm=91&amp;ie=UTF-8">Client Side Performance</a> and many more terms seek to describe this way of capturing web performance and providing some kind of actionable insights around the data.<br>
+<!-- raw HTML omitted -->
 ##Enter Speedgun
 PhantomJS 2, released this year with a newer version of WebKit, implements the <a href="http://www.w3.org/TR/2012/REC-navigation-timing-20121217/#sec-navigation-timing-interface">Navigation Timing API</a> specification giving us the ability to measure page performance in an automated fashion. Now we have microsecond precision around a much more robust set of APIs. This is why I rewrote Loadreport.js and named it Speedgun - to utilize the newer APIs and refactor a lot of things that didn’t work quite right… and because the Loadreport name was not super cool. It’s the classic story of rebranding an open source project :)
-The rest of this article reviews the details of how speedgun.js extracts and stores performance data across many different regions and nodes to achieve a Simulated RUM environment.<br />
-<br/>
+The rest of this article reviews the details of how speedgun.js extracts and stores performance data across many different regions and nodes to achieve a Simulated RUM environment.<br>
+<!-- raw HTML omitted -->
 ##What is Simulated RUM?
 I don’t know. It’s a frankenstein term where I’m trying to depict a remote control environment that represents real users. This environment should have:</p>
-
 <ol>
 <li>The ability to execute a script (PhantomJS in this case) in a controlled, one at a time manner.</li>
 <li>A REST api that allows master/slave communication and is publicly accessible.</li>
 <li>A beacon that sends it’s availability to a centralized(parent) server.</li>
 <li>Data storage of reports in a db that treats JSON as a first class citizen.</li>
 </ol>
-
 <p>All of these requirements have been built into <a href="http://speedgun.io">speedgun.io</a>.</p>
-
 <p>After starting development of speedgun with Docker I realized that this could be easily distributed to any geographic region as a virtualized RUM node. I wanted to execute on the idea that this testing tool could be setup on an old mac mini at grandma’s house with a DSL connection.
-<img style="max-width:90%" src="/images/posts/2015-15-24/image00.png"/></p>
-
+<!-- raw HTML omitted --></p>
 <p>Or, with a <a href="https://github.com/wesleyhales/speedgun/blob/master/server/README.md">simple git clone and execution of one command</a>, it can be run on Digital Ocean, AWS, and more environments in every region.
-<img style="max-width:90%" src="/images/posts/2015-15-24/image01.png"/></p>
-
+<!-- raw HTML omitted --></p>
 <p>Today, there are 2 available nodes to run a Speedgun report, DigitalOcean SF and NY. Hopefully there will be more in the list by the time you read this ;)
-<a href="http://speedgun.io"><img style="max-width:90%" src="/images/posts/2015-15-24/image04.png"/></a></p>
-
+<a href="http://speedgun.io"><!-- raw HTML omitted --></a></p>
 <p>##The Speedgun API
 There are 2 parts to the speedgun REST API&hellip;</p>
-
-<p>1) Creating and retrieving reports
-<table cellpadding="0" cellspacing="0" class="table">
-    <tbody>
-    <tr class="c13">
-        <td class="c15" colspan="2" rowspan="1"><p class="c2"><span class="c17 c14">Start a report</span></p></td>
-    </tr>
-    <tr class="c3">
-        <td class="c9" colspan="1" rowspan="1"><p class="c2"><span class="c8a">Method</span></p></td>
-        <td class="c9" colspan="1" rowspan="1"><p class="c2"><span><a href="http://localhost:8081/rest/performance/go">http://localhost:8081/rest/performance/go</a></span></p></p>
-
+<ol>
+<li>Creating and retrieving reports</li>
+</ol>
+<!-- raw HTML omitted -->
 <pre><code>        &lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;Parameters:&lt;/span&gt;&lt;/p&gt;
 
         &lt;p class=&quot;c5 c0&quot;&gt;&lt;span class=&quot;c8&quot;&gt;url, cached, email&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
@@ -138,75 +122,34 @@ There are 2 parts to the speedgun REST API&hellip;</p>
 &lt;/tr&gt;
 &lt;/tbody&gt;
 </code></pre>
-
-<p></table></p>
-
-<p><br/>
-2) Beacon service
-<table cellpadding="0" cellspacing="0" class="table">
-    <tbody>
-    <tr class="c13">
-        <td class="c15" colspan="2" rowspan="1"><p class="c2"><span class="c14 c17">Start the beacon</span></p></td>
-    </tr>
-    <tr class="c3">
-        <td class="c9" colspan="1" rowspan="1"><p class="c2 c10"><span class="c8a">Method</span></p></td>
-        <td class="c9" colspan="1" rowspan="1"><p class="c0 c5"><span class="c8"><a href="http://localhost:8081/rest/beacon/init">http://localhost:8081/rest/beacon/init</a></span></p>
-        </td>
-    </tr>
-    <tr class="c3">
-        <td class="c9" colspan="1" rowspan="1"><p class="c2 c10"><span class="c8a">Response</span></p></td>
-        <td class="c9" colspan="1" rowspan="1"><p class="c5 c0"><span class="c8">text/plain Notification message</span></p></td>
-    </tr>
-    <tr class="c13">
-        <td class="c15" colspan="2" rowspan="1"><p class="c2"><span class="c17 c14">Retrieve list of available RUM nodes</span></p>
-        </td>
-    </tr>
-    <tr class="c3">
-        <td class="c9" colspan="1" rowspan="1"><p class="c2"><span class="c8a">Method</span></p></td>
-        <td class="c9" colspan="1" rowspan="1"><p class="c5 c0"><span><a href="http://speedgun.io/rest/beacon/">http://speedgun.io/rest/beacon/</a></span><span
-                class="c8">getlist</span></p></td>
-    </tr>
-    <tr class="c3">
-        <td class="c9" colspan="1" rowspan="1"><p class="c2"><span class="c8a">Response</span></p></td>
-        <td class="c9" colspan="1" rowspan="1"><p class="c2"><span class="c8">JSON - This gives us the JSON data for displaying available clients on the UI.</span>
-        </p></td>
-    </tr>
-    </tbody>
-</table>
-<br/><br/>
-###About the beacon service
-By default this is turned off. To start sending your beacon with system information to the central speedgun.io server, you only have to curl or load this url in your browser <a href="http://localhost:8081/rest/beacon/init">http://localhost:8081/rest/beacon/init</a>.</p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>The beacon sends the following data to the speedgun server every 60 seconds.
-<img style="max-width:90%" src="/images/posts/2015-15-24/image03.png"/></p>
-
+<!-- raw HTML omitted --></p>
 <p>The only caveat to this working correctly is opening the required port on the firewall of the client machine’s network. You don’t have to open the port to send the beacon, only to allow speedgun reports to be ran by the centralized server.</p>
-
 <p>Here’s a netgear router admin UI example:
-<img style="max-width:90%" src="/images/posts/2015-15-24/image02.png"/></p>
-
+<!-- raw HTML omitted --></p>
 <p>After you open up port 8081 on your firewall, speedgun reports can be remotely ran from anywhere. Currently the speedgun.io URL is hardcoded as the centralized server, this will soon be broken out to a configuration file.
-<br/>
+<!-- raw HTML omitted -->
 ##Why?
 Why on earth would I want to set this up or standup a speedgun node? A few good reasons…. First, having a consistent and stable environment to run browser performance testing is a must. Second, having the ability to run multiple tests from many different geographic locations with varying connections speeds is hard to simulate.
 Speedgun gives us both of these.
-<br/>
+<!-- raw HTML omitted -->
 ##Futures
 <a href="https://github.com/wesleyhales/speedgun/issues">The issues list</a> will give you an idea of where the project is heading. If you have any ideas or input feel free to leave them there.
-<br/>
+<!-- raw HTML omitted -->
 ##Contributors
 It was also an honor to have a few performance gurus from the community helping out with this. Thanks goes to:
 Peter Hedgenskog who created <a href="http://www.sitespeed.io/">sitespeed.io</a> and speaks at a ton of conferences about web performance. And Jarrod Overson author of <a href="http://jsoverson.github.io/plato/examples/jquery/">Plato</a> and the new O’Reilly <a href="http://www.amazon.com/Developing-Web-Components-jQuery-Polymer/dp/1491949023">Web Components book</a>!
-<br/>
+<!-- raw HTML omitted -->
 ##Other Page Testing Services
 I also want to give a quick shout out to all the other page testing services.</p>
-
 <ul>
 <li><a href="https://speedcurve.com/">Speedcurve</a></li>
 <li><a href="http://www.webpagetest.org/">WebPageTest.org</a></li>
 <li><a href="http://www.sitespeed.io/">Sitespeed.io</a></li>
 <li>and many others&hellip;
-<br/>
+<!-- raw HTML omitted -->
 ###References:</li>
 <li>Nav timing 2012 <a href="http://www.w3.org/TR/2012/REC-navigation-timing-20121217/#sec-navigation-timing-interface">http://www.w3.org/TR/2012/REC-navigation-timing-20121217/#sec-navigation-timing-interface</a></li>
 <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now</a></li>
@@ -214,9 +157,7 @@ I also want to give a quick shout out to all the other page testing services.</p
 <li>MDN Nav timing <a href="https://developer.mozilla.org/en-US/docs/Navigation_timing">https://developer.mozilla.org/en-US/docs/Navigation_timing</a></li>
 <li>Resource timing confusion <a href="http://www.stevesouders.com/blog/2014/11/25/serious-confusion-with-resource-timing/">http://www.stevesouders.com/blog/2014/11/25/serious-confusion-with-resource-timing/</a></li>
 </ul>
-
-<p><br/>
-<br/></p>
+<!-- raw HTML omitted -->
 
     </section>
 
@@ -288,8 +229,7 @@ I also want to give a quick shout out to all the other page testing services.</p
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -307,5 +247,5 @@ I also want to give a quick shout out to all the other page testing services.</p
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

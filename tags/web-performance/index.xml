@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web Performance on Wesley Hales</title>
+    <title>web performance on Wesley Hales</title>
     <link>//wesleyhales.com/tags/web-performance/</link>
-    <description>Recent content in Web Performance on Wesley Hales</description>
+    <description>Recent content in web performance on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Apr 2015 00:00:00 +0000</lastBuildDate>
@@ -18,7 +18,7 @@
       
       <guid>//wesleyhales.com/blog/2015/04/24/Simulated-RUM-testing-with-PhantomJS-2/</guid>
       <description>Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.
-The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.  Loadreport data from 2012-2013 for CNN.</description>
+The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.</description>
     </item>
     
     <item>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Util on Wesley Hales</title>
+    <title>util on Wesley Hales</title>
     <link>//wesleyhales.com/tags/util/</link>
-    <description>Recent content in Util on Wesley Hales</description>
+    <description>Recent content in util on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Dec 2006 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2009 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//wesleyhales.com/tags/util/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,9 +17,7 @@
       <pubDate>Tue, 05 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/05/Preformatting-html-code-blocks/</guid>
-      <description>When the time comes to put html or xml settings as an example in your blog (or any html for that matter), this sed one-liner really helps out&amp;hellip;
-Replace the *** with an &amp;ldquo;&amp;amp;&amp;ldquo;&amp;hellip; the page example won&amp;rsquo;t render correctly if I use verbatim characters.
-cat -v article.xhtml | sed -e &amp;ldquo;s/^*lt;/\&amp;lt;/g&amp;rdquo; -e &amp;ldquo;s/&amp;gt;/\*gt;/g&amp;rdquo; &amp;gt; article.code.xhtml</description>
+      <description></description>
     </item>
     
   </channel>

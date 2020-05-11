@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jsf on Wesley Hales</title>
-    <link>//wesleyhales.com/tags/jsf/</link>
-    <description>Recent content in Jsf on Wesley Hales</description>
+    <title>JSF on Wesley Hales</title>
+    <link>//wesleyhales.com/tags/JSF/</link>
+    <description>Recent content in JSF on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Aug 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//wesleyhales.com/tags/jsf/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/JSF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,9 +17,7 @@
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
-      <description>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:
-1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)
-2) Similar to the iPad Mail.</description>
+      <description></description>
     </item>
     
     <item>
@@ -28,8 +26,7 @@
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
-      <description>Today marks an important day in the RichFaces project as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.
-So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. I will announce each new design (both for tablet and phone) via twitter with a link back to this article.</description>
+      <description></description>
     </item>
     
     <item>
@@ -38,9 +35,7 @@ So each day this week, I will come up with a new proposed design/theme for RichF
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
-      <description>About TweetStream
-In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
-A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
+      <description></description>
     </item>
     
     <item>
@@ -49,18 +44,16 @@ A little bit about the usecase: The TweetStream application is an app that Jay B
       <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</guid>
-      <description>Working with portlet technology is often discredited for it’s seemingly complex API and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.
-This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.</description>
+      <description></description>
     </item>
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
+      <link>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1#58-Drag-and-Drop/</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
-      <description>Richfaces 4 just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.
-First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</description>
+      <guid>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1#58-Drag-and-Drop/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -69,11 +62,7 @@ First off, Richfaces 4 currently does not offer mobile support but it is definit
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</guid>
-      <description>I saw a tweet from(@maxandersen) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.
-This is really just javascript on the front end and can be used with any backend message generating system.
-Code Used:
-  RichFaces 3.3.1.GA jGrowl (latest)  Include the scripts in the head:
- Note the loading of jquery in the Richfaces page.</description>
+      <description></description>
     </item>
     
     <item>
@@ -82,7 +71,7 @@ Code Used:
       <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released/</guid>
-      <description>Read about it here: http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html</description>
+      <description>Read about it here: http://blog.</description>
     </item>
     
     <item>
@@ -91,8 +80,7 @@ Code Used:
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</guid>
-      <description>InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!
-  This first part is about basic JSF development with an easy to follow tutorial and real world development tips.</description>
+      <description></description>
     </item>
     
     <item>
@@ -101,7 +89,8 @@ Code Used:
       <pubDate>Mon, 07 Jul 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/07/07/JSF-in-a-portlet-has-never-been-this-easy/</guid>
-      <description>We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects. See the documentation for full details. For those that want to jump right in, you can run the following archetype and have it deployed on JBoss AS + Portal in minutes:  mvn archetype:generate -DarchetypeGroupId=org.jboss.portletbridge.archetypes -DarchetypeArtifactId=1.2-basic -DarchetypeVersion=1.0.0.B3 -DgroupId=org.whatever.project -DartifactId=myprojectname -DarchetypeRepository=http://repository.jboss.org/maven2/ -Dversion=1.0.0.B3    mvn install cargo:start -Premote-portal -Dpc20    mvn cargo:deploy -Premote-portal -Dpc20   Visit http://localhost:8080/simple-portal/demo/jsr-301.</description>
+      <description>There are soo many cool things going on right now within the JBoss Portal project, I would like to tell you about all of them but then this post wouldn&amp;rsquo;t be about JBPB anymore. Just stay tuned to this blog&amp;hellip;
+With that said, here are a few tips for JSF portlet developers that concern this release:</description>
     </item>
     
     <item>
@@ -110,9 +99,7 @@ Code Used:
       <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
-      <description>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.
-The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.
-See the project page for more details and a live demo.</description>
+      <description></description>
     </item>
     
     <item>
@@ -121,8 +108,7 @@ See the project page for more details and a live demo.</description>
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app/</guid>
-      <description>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.
-This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)</description>
+      <description></description>
     </item>
     
     <item>
@@ -131,7 +117,7 @@ This article is about an application that is relatively simple (to start). A rep
       <pubDate>Wed, 06 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/06/JSF-Component-Library-Integration/</guid>
-      <description>Integrating multiple component libraries can provide a project many advantages but can also be a challenge to make all components live and work in harmony. This article explains how to integrate many popular component libraries into one app. Combining libraries gives developers an array of components to pick and choose from. But, knowing which components play well together and which ones don?t, will save you time and I will explain the pros and cons of each here.</description>
+      <description>Web.xmlfaces-config.xmlWeb.xml</description>
     </item>
     
   </channel>

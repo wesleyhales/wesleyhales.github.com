@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cdi on Wesley Hales</title>
+    <title>cdi on Wesley Hales</title>
     <link>//wesleyhales.com/tags/cdi/</link>
-    <description>Recent content in Cdi on Wesley Hales</description>
+    <description>Recent content in cdi on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jan 2012 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</guid>
-      <description>Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers here.      
-Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,9 +26,7 @@ Here is the demo in action. As you can see on the right, I have 2 chat windows o
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
-      <description>About TweetStream
-In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
-A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
+      <description></description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ajax on Wesley Hales</title>
+    <title>ajax on Wesley Hales</title>
     <link>//wesleyhales.com/tags/ajax/</link>
-    <description>Recent content in Ajax on Wesley Hales</description>
+    <description>Recent content in ajax on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Aug 2011 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</guid>
-      <description>Update: @_boye has created a perf test which shows the performance of this solution. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.
-The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@ The most common approach for receiving markup from an Ajax request is to use inn
       <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld/</guid>
-      <description>I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don&#39;t be a stranger!  Check out the sessions here. **Update with slides:</description>
+      <description></description>
     </item>
     
   </channel>

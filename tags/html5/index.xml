@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Html5 on Wesley Hales</title>
+    <title>html5 on Wesley Hales</title>
     <link>//wesleyhales.com/tags/html5/</link>
-    <description>Recent content in Html5 on Wesley Hales</description>
+    <description>Recent content in html5 on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2012 00:00:00 +0000</lastBuildDate>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents/</guid>
-      <description>The Intent of Sharing If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying to make your content social. Allowing users to take action on your specific content and &amp;ldquo;share&amp;rdquo; it is a common task. Much like linking HTML documents together, we are now linking apps together that are capable of pushing content to a receiving service via the user.</description>
+      <description>I recently took a job working on CNN.com and I&amp;rsquo;m sure you can imagine that the weight and performance of social sharing is pretty serious &amp;lsquo;round these parts. So I will break down the current state of sharing as it exists today, then jump into an examination of Web Intents. For this example, I&amp;rsquo;ve taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains their specific resources to display a share button for the given service:</description>
     </item>
     
     <item>
@@ -35,8 +35,7 @@
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</guid>
-      <description>Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers here.      
-Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</description>
+      <description></description>
     </item>
     
     <item>
@@ -45,8 +44,7 @@ Here is the demo in action. As you can see on the right, I have 2 chat windows o
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</guid>
-      <description>Update: @_boye has created a perf test which shows the performance of this solution. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.
-The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.</description>
+      <description></description>
     </item>
     
     <item>
@@ -55,8 +53,7 @@ The most common approach for receiving markup from an Ajax request is to use inn
       <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</guid>
-      <description>One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).
-This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with CSS3. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused.</description>
+      <description></description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hibernate on Wesley Hales</title>
+    <title>hibernate on Wesley Hales</title>
     <link>//wesleyhales.com/tags/hibernate/</link>
-    <description>Recent content in Hibernate on Wesley Hales</description>
+    <description>Recent content in hibernate on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Aug 2007 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app/</guid>
-      <description>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.
-This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)</description>
+      <description></description>
     </item>
     
   </channel>

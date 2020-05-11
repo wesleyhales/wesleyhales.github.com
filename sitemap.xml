@@ -1,9 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//wesleyhales.com/tags/automation/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/posts/2017-10-09-Browser-Automation-At-Scale-Part-3-DevSecOps-and-Equifax/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/chrome/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/devsecops/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/equifax/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/posts/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/rasp/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/secops/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/</loc>
+    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/</loc>
     <lastmod>2017-10-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -13,8 +58,33 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/docker-swarm/</loc>
+    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/selenium-grid/</loc>
+    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/selenium-hub/</loc>
+    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/</loc>
     <lastmod>2017-08-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/old/</loc>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/oss-management/</loc>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,13 +98,73 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/speedgun/</loc>
+    <lastmod>2015-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/web/</loc>
+    <lastmod>2015-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/web-performance/</loc>
+    <lastmod>2015-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/</loc>
     <lastmod>2014-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/devnexus/</loc>
+    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/onslyde/</loc>
+    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/raspberry-pi/</loc>
+    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/rpi/</loc>
+    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/angular/</loc>
+    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/angularjs/</loc>
+    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/Design/</loc>
+    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/develop/</loc>
+    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise/</loc>
     <lastmod>2013-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jank/</loc>
+    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,12 +178,72 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/rAF/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/requestAnimationFrame/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/setinterval/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/settimeout/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/awestruct/</loc>
+    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis/</loc>
     <lastmod>2013-03-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/loadreportjs/</loc>
+    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/preprocessor/</loc>
+    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/travisci/</loc>
+    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/audience-engagement/</loc>
+    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/</loc>
+    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/speaking/</loc>
+    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/websocket/</loc>
+    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/websockets/</loc>
     <lastmod>2013-02-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,8 +253,48 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/css/</loc>
+    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/debug/</loc>
+    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/frontend/</loc>
+    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/graphics/</loc>
+    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/html/</loc>
+    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2012/11/01/Ill-Sleep-When-I-Die-All-for-HTML5/</loc>
     <lastmod>2012-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/Life/</loc>
+    <lastmod>2012-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/phantomjs/</loc>
+    <lastmod>2012-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/testing/</loc>
+    <lastmod>2012-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -73,13 +303,53 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/atlanta/</loc>
+    <lastmod>2012-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/html5/</loc>
+    <lastmod>2012-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2012/07/19/HTML5-is-Booming-in-Atlanta/</loc>
     <lastmod>2012-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/share/</loc>
+    <lastmod>2012-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents/</loc>
     <lastmod>2012-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/stats/</loc>
+    <lastmod>2012-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/web-intents/</loc>
+    <lastmod>2012-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/features/</loc>
+    <lastmod>2012-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/ie/</loc>
+    <lastmod>2012-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/sniffing/</loc>
+    <lastmod>2012-06-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -93,8 +363,53 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/css3/</loc>
+    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/iscroll/</loc>
+    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/phonegap/</loc>
+    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/aerogear/</loc>
+    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</loc>
     <lastmod>2012-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/html5e/</loc>
+    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jboss/</loc>
+    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/mobile/</loc>
+    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/cdi/</loc>
+    <lastmod>2012-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jetty/</loc>
+    <lastmod>2012-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -103,13 +418,43 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/2/</loc>
+    <lastmod>2011-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/2011/</loc>
+    <lastmod>2011-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2011/12/29/2011-Year-In-Review/</loc>
     <lastmod>2011-12-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/ajax/</loc>
+    <lastmod>2011-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</loc>
     <lastmod>2011-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/innerhtml/</loc>
+    <lastmod>2011-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/Java/</loc>
+    <lastmod>2011-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/richfaces/</loc>
+    <lastmod>2011-08-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -119,6 +464,11 @@
   
   <url>
     <loc>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</loc>
+    <lastmod>2011-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/JSF/</loc>
     <lastmod>2011-08-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -133,7 +483,32 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/hornetq/</loc>
+    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/infinispan/</loc>
+    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jms/</loc>
+    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</loc>
+    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/seam/</loc>
+    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/weld/</loc>
     <lastmod>2011-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,13 +518,43 @@
   </url>
   
   <url>
-    <loc>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</loc>
+    <loc>//wesleyhales.com/tags/portal/</loc>
+    <lastmod>2011-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/portlet/</loc>
+    <lastmod>2011-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/portlets/</loc>
+    <lastmod>2011-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1#58-Drag-and-Drop/</loc>
+    <lastmod>2011-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jquery/</loc>
     <lastmod>2011-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>//wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</loc>
     <lastmod>2011-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/conferences/</loc>
+    <lastmod>2010-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jazoon/</loc>
+    <lastmod>2010-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -173,6 +578,16 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/firefox/</loc>
+    <lastmod>2009-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/growl/</loc>
+    <lastmod>2009-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</loc>
     <lastmod>2009-08-10T00:00:00+00:00</lastmod>
   </url>
@@ -183,13 +598,53 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/file/</loc>
+    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/forensics/</loc>
+    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2009/03/01/Recovering-deleted-files-from-Windows-and-Linux...-and-a-little-forensics/</loc>
+    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/recovery/</loc>
+    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/undelete/</loc>
+    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/util/</loc>
+    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/Utils/</loc>
     <lastmod>2009-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>//wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not/</loc>
     <lastmod>2009-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/theme/</loc>
+    <lastmod>2009-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/bridge/</loc>
+    <lastmod>2009-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -203,8 +658,33 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/ant/</loc>
+    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/anthem/</loc>
+    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2008/11/30/ANTHEM-reaches-15000-in-its-first-week/</loc>
     <lastmod>2008-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/god/</loc>
+    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jesus/</loc>
+    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/ajaxworld/</loc>
+    <lastmod>2008-10-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -218,7 +698,22 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/enterprise/</loc>
+    <lastmod>2008-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/portals/</loc>
+    <lastmod>2008-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2008/10/12/Developing-an-OpenSocial-Portlet/</loc>
+    <lastmod>2008-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/opensocial/</loc>
     <lastmod>2008-10-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -228,7 +723,22 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/301/</loc>
+    <lastmod>2008-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/container/</loc>
+    <lastmod>2008-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</loc>
+    <lastmod>2008-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/jsr/</loc>
     <lastmod>2008-08-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -243,6 +753,21 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/bad/</loc>
+    <lastmod>2008-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/drive/</loc>
+    <lastmod>2008-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/hard/</loc>
+    <lastmod>2008-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2008/03/31/My-4-month-old-MacBook-Pro-Hardrive-is-skippping...-badly/</loc>
     <lastmod>2008-03-31T00:00:00+00:00</lastmod>
   </url>
@@ -253,8 +778,23 @@
   </url>
   
   <url>
-    <loc>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</loc>
+    <loc>//wesleyhales.com/tags/demo/</loc>
     <lastmod>2008-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/modal/</loc>
+    <lastmod>2008-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j#58status/</loc>
+    <lastmod>2008-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/pdf/</loc>
+    <lastmod>2007-12-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -265,6 +805,21 @@
   <url>
     <loc>//wesleyhales.com/blog/2007/12/05/1-year-of-blogging/</loc>
     <lastmod>2007-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/anniversary/</loc>
+    <lastmod>2007-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/blog/</loc>
+    <lastmod>2007-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/facebook/</loc>
+    <lastmod>2007-12-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -283,6 +838,21 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/vacation/</loc>
+    <lastmod>2007-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/lrd/</loc>
+    <lastmod>2007-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/maven/</loc>
+    <lastmod>2007-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</loc>
     <lastmod>2007-10-30T00:00:00+00:00</lastmod>
   </url>
@@ -293,7 +863,27 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/balls/</loc>
+    <lastmod>2007-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/kick/</loc>
+    <lastmod>2007-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/cargo/</loc>
+    <lastmod>2007-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</loc>
+    <lastmod>2007-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/tomcat/</loc>
     <lastmod>2007-10-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -303,7 +893,32 @@
   </url>
   
   <url>
+    <loc>//wesleyhales.com/tags/framework/</loc>
+    <lastmod>2007-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/flying/</loc>
+    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/hibernate/</loc>
+    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app/</loc>
+    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/saucer/</loc>
+    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wesleyhales.com/tags/trinidad/</loc>
     <lastmod>2007-08-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -343,7 +958,7 @@
   </url>
   
   <url>
-    <loc>//wesleyhales.com/blog/2006/12/31/JSF-Ajax-Filter-Slider-with-UIData/</loc>
+    <loc>//wesleyhales.com/blog/2006/12/31/JSF-Ajax-Filter/Slider-with-UIData/</loc>
     <lastmod>2006-12-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -373,7 +988,7 @@
   </url>
   
   <url>
-    <loc>//wesleyhales.com/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere-58-The-t-58dataTable-and-t-58dataScroller/</loc>
+    <loc>//wesleyhales.com/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere#58-The-t%2358dataTable-and-t%2358dataScroller/</loc>
     <lastmod>2006-12-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -388,746 +1003,7 @@
   </url>
   
   <url>
-    <loc>//wesleyhales.com/tags/2/</loc>
-    <lastmod>2009-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/2011/</loc>
-    <lastmod>2011-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/301/</loc>
-    <lastmod>2008-08-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/aerogear/</loc>
-    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/ajax/</loc>
-    <lastmod>2011-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/ajaxworld/</loc>
-    <lastmod>2008-10-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/angular/</loc>
-    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/angularjs/</loc>
-    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/anniversary/</loc>
-    <lastmod>2007-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/ant/</loc>
-    <lastmod>2007-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/anthem/</loc>
-    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/atlanta/</loc>
-    <lastmod>2012-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/audience-engagement/</loc>
-    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/automation/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/awestruct/</loc>
-    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/bad/</loc>
-    <lastmod>2008-03-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/balls/</loc>
-    <lastmod>2007-10-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/blog/</loc>
-    <lastmod>2007-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/bridge/</loc>
-    <lastmod>2009-01-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/cargo/</loc>
-    <lastmod>2007-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//wesleyhales.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/cdi/</loc>
-    <lastmod>2012-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/chrome/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/conferences/</loc>
-    <lastmod>2010-06-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/container/</loc>
-    <lastmod>2008-08-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/css/</loc>
-    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/css3/</loc>
-    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/debug/</loc>
-    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/demo/</loc>
-    <lastmod>2008-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/design/</loc>
-    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/develop/</loc>
-    <lastmod>2013-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/devnexus/</loc>
-    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/devsecops/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/docker-swarm/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/drive/</loc>
-    <lastmod>2008-03-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/enterprise/</loc>
-    <lastmod>2008-10-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/equifax/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/facebook/</loc>
-    <lastmod>2007-12-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/features/</loc>
-    <lastmod>2012-06-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/file/</loc>
-    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/firefox/</loc>
-    <lastmod>2009-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/flying/</loc>
-    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/forensics/</loc>
-    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/framework/</loc>
-    <lastmod>2007-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/frontend/</loc>
-    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/god/</loc>
-    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/graphics/</loc>
-    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/growl/</loc>
-    <lastmod>2009-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/hard/</loc>
-    <lastmod>2008-03-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/hibernate/</loc>
-    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/hornetq/</loc>
-    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/html/</loc>
-    <lastmod>2013-02-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/html5/</loc>
-    <lastmod>2012-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/html5e/</loc>
-    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/ie/</loc>
-    <lastmod>2012-06-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/infinispan/</loc>
-    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/innerhtml/</loc>
-    <lastmod>2011-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/iscroll/</loc>
-    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jank/</loc>
-    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/java/</loc>
-    <lastmod>2011-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jazoon/</loc>
-    <lastmod>2010-06-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jboss/</loc>
-    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jesus/</loc>
-    <lastmod>2008-11-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jetty/</loc>
-    <lastmod>2012-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jms/</loc>
-    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jquery/</loc>
-    <lastmod>2011-02-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jsf/</loc>
-    <lastmod>2011-08-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/jsr/</loc>
-    <lastmod>2008-08-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/kick/</loc>
-    <lastmod>2007-10-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/life/</loc>
-    <lastmod>2012-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/loadreportjs/</loc>
-    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/lrd/</loc>
-    <lastmod>2007-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/maven/</loc>
-    <lastmod>2007-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/mobile/</loc>
-    <lastmod>2012-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/modal/</loc>
-    <lastmod>2008-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/old/</loc>
-    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/onslyde/</loc>
-    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/opensocial/</loc>
-    <lastmod>2008-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/oss-management/</loc>
-    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/pdf/</loc>
-    <lastmod>2007-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/phantomjs/</loc>
-    <lastmod>2012-08-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/phonegap/</loc>
-    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/portal/</loc>
-    <lastmod>2011-04-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/portals/</loc>
-    <lastmod>2008-10-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/portlet/</loc>
-    <lastmod>2009-01-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/portlets/</loc>
-    <lastmod>2011-04-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/posts/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/preprocessor/</loc>
-    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/raf/</loc>
-    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/rasp/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/raspberry-pi/</loc>
-    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/recovery/</loc>
-    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/requestanimationframe/</loc>
-    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/richfaces/</loc>
-    <lastmod>2011-08-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/rpi/</loc>
-    <lastmod>2014-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/saucer/</loc>
-    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/seam/</loc>
-    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/secops/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/selenium-grid/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/selenium-hub/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/setinterval/</loc>
-    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/settimeout/</loc>
-    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/share/</loc>
-    <lastmod>2012-07-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/sniffing/</loc>
-    <lastmod>2012-06-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/speaking/</loc>
-    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/speedgun/</loc>
-    <lastmod>2015-04-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/stats/</loc>
-    <lastmod>2012-07-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/</loc>
-    <lastmod>2009-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/testing/</loc>
-    <lastmod>2012-08-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/theme/</loc>
-    <lastmod>2009-02-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/tomcat/</loc>
-    <lastmod>2007-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/travisci/</loc>
-    <lastmod>2013-03-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/trinidad/</loc>
-    <lastmod>2007-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/undelete/</loc>
-    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/util/</loc>
-    <lastmod>2006-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/utils/</loc>
-    <lastmod>2009-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/vacation/</loc>
-    <lastmod>2007-11-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/web/</loc>
-    <lastmod>2011-08-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/web-intents/</loc>
-    <lastmod>2012-07-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/web-performance/</loc>
-    <lastmod>2015-04-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/websocket/</loc>
-    <lastmod>2012-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/websockets/</loc>
-    <lastmod>2013-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/tags/weld/</loc>
-    <lastmod>2011-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wesleyhales.com/</loc>
-    <lastmod>2017-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

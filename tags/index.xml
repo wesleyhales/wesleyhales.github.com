@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Wesley Hales</title>
@@ -6,15 +6,546 @@
     <description>Recent content in Tags on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2009 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//wesleyhales.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>automation</title>
+      <link>//wesleyhales.com/tags/automation/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>//wesleyhales.com/tags/chrome/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devsecops</title>
+      <link>//wesleyhales.com/tags/devsecops/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/devsecops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>equifax</title>
+      <link>//wesleyhales.com/tags/equifax/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/equifax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rasp</title>
+      <link>//wesleyhales.com/tags/rasp/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/rasp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>secops</title>
+      <link>//wesleyhales.com/tags/secops/</link>
+      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/secops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker swarm</title>
+      <link>//wesleyhales.com/tags/docker-swarm/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/docker-swarm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium grid</title>
+      <link>//wesleyhales.com/tags/selenium-grid/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/selenium-grid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium hub</title>
+      <link>//wesleyhales.com/tags/selenium-hub/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/selenium-hub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oss management</title>
+      <link>//wesleyhales.com/tags/oss-management/</link>
+      <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/oss-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speedgun</title>
+      <link>//wesleyhales.com/tags/speedgun/</link>
+      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/speedgun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>//wesleyhales.com/tags/web/</link>
+      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web performance</title>
+      <link>//wesleyhales.com/tags/web-performance/</link>
+      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/web-performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devnexus</title>
+      <link>//wesleyhales.com/tags/devnexus/</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/devnexus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>onslyde</title>
+      <link>//wesleyhales.com/tags/onslyde/</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/onslyde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry pi</title>
+      <link>//wesleyhales.com/tags/raspberry-pi/</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rpi</title>
+      <link>//wesleyhales.com/tags/rpi/</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/rpi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>//wesleyhales.com/tags/angular/</link>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angularjs</title>
+      <link>//wesleyhales.com/tags/angularjs/</link>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/angularjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>//wesleyhales.com/tags/Design/</link>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/Design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>develop</title>
+      <link>//wesleyhales.com/tags/develop/</link>
+      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/develop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jank</title>
+      <link>//wesleyhales.com/tags/jank/</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jank/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rAF</title>
+      <link>//wesleyhales.com/tags/rAF/</link>
+      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/rAF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>requestAnimationFrame</title>
+      <link>//wesleyhales.com/tags/requestAnimationFrame/</link>
+      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/requestAnimationFrame/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setinterval</title>
+      <link>//wesleyhales.com/tags/setinterval/</link>
+      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/setinterval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>settimeout</title>
+      <link>//wesleyhales.com/tags/settimeout/</link>
+      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/settimeout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>awestruct</title>
+      <link>//wesleyhales.com/tags/awestruct/</link>
+      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/awestruct/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>loadreportjs</title>
+      <link>//wesleyhales.com/tags/loadreportjs/</link>
+      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/loadreportjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>preprocessor</title>
+      <link>//wesleyhales.com/tags/preprocessor/</link>
+      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/preprocessor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travisci</title>
+      <link>//wesleyhales.com/tags/travisci/</link>
+      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/travisci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>audience engagement</title>
+      <link>//wesleyhales.com/tags/audience-engagement/</link>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/audience-engagement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speaking</title>
+      <link>//wesleyhales.com/tags/speaking/</link>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/speaking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>websocket</title>
+      <link>//wesleyhales.com/tags/websocket/</link>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/websocket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>websockets</title>
+      <link>//wesleyhales.com/tags/websockets/</link>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/websockets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>//wesleyhales.com/tags/css/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debug</title>
+      <link>//wesleyhales.com/tags/debug/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/debug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frontend</title>
+      <link>//wesleyhales.com/tags/frontend/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphics</title>
+      <link>//wesleyhales.com/tags/graphics/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>//wesleyhales.com/tags/html/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>//wesleyhales.com/tags/Life/</link>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/Life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phantomjs</title>
+      <link>//wesleyhales.com/tags/phantomjs/</link>
+      <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/phantomjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>//wesleyhales.com/tags/testing/</link>
+      <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atlanta</title>
+      <link>//wesleyhales.com/tags/atlanta/</link>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/atlanta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html5</title>
+      <link>//wesleyhales.com/tags/html5/</link>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>share</title>
+      <link>//wesleyhales.com/tags/share/</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/share/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stats</title>
+      <link>//wesleyhales.com/tags/stats/</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/stats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web intents</title>
+      <link>//wesleyhales.com/tags/web-intents/</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/web-intents/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>features</title>
+      <link>//wesleyhales.com/tags/features/</link>
+      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/features/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ie</title>
+      <link>//wesleyhales.com/tags/ie/</link>
+      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/ie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sniffing</title>
+      <link>//wesleyhales.com/tags/sniffing/</link>
+      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/sniffing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css3</title>
+      <link>//wesleyhales.com/tags/css3/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/css3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iscroll</title>
+      <link>//wesleyhales.com/tags/iscroll/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/iscroll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phonegap</title>
+      <link>//wesleyhales.com/tags/phonegap/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/phonegap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aerogear</title>
+      <link>//wesleyhales.com/tags/aerogear/</link>
+      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/aerogear/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html5e</title>
+      <link>//wesleyhales.com/tags/html5e/</link>
+      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/html5e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jboss</title>
+      <link>//wesleyhales.com/tags/jboss/</link>
+      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jboss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile</title>
+      <link>//wesleyhales.com/tags/mobile/</link>
+      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cdi</title>
+      <link>//wesleyhales.com/tags/cdi/</link>
+      <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/cdi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jetty</title>
+      <link>//wesleyhales.com/tags/jetty/</link>
+      <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jetty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>2</title>
       <link>//wesleyhales.com/tags/2/</link>
-      <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/tags/2/</guid>
       <description></description>
@@ -30,6 +561,312 @@
     </item>
     
     <item>
+      <title>ajax</title>
+      <link>//wesleyhales.com/tags/ajax/</link>
+      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>innerhtml</title>
+      <link>//wesleyhales.com/tags/innerhtml/</link>
+      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/innerhtml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>//wesleyhales.com/tags/Java/</link>
+      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/Java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>richfaces</title>
+      <link>//wesleyhales.com/tags/richfaces/</link>
+      <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/richfaces/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSF</title>
+      <link>//wesleyhales.com/tags/JSF/</link>
+      <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/JSF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hornetq</title>
+      <link>//wesleyhales.com/tags/hornetq/</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/hornetq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infinispan</title>
+      <link>//wesleyhales.com/tags/infinispan/</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/infinispan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jms</title>
+      <link>//wesleyhales.com/tags/jms/</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seam</title>
+      <link>//wesleyhales.com/tags/seam/</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/seam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weld</title>
+      <link>//wesleyhales.com/tags/weld/</link>
+      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/weld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portal</title>
+      <link>//wesleyhales.com/tags/portal/</link>
+      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/portal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portlet</title>
+      <link>//wesleyhales.com/tags/portlet/</link>
+      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/portlet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portlets</title>
+      <link>//wesleyhales.com/tags/portlets/</link>
+      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/portlets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>//wesleyhales.com/tags/jquery/</link>
+      <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conferences</title>
+      <link>//wesleyhales.com/tags/conferences/</link>
+      <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jazoon</title>
+      <link>//wesleyhales.com/tags/jazoon/</link>
+      <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jazoon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>//wesleyhales.com/tags/firefox/</link>
+      <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>growl</title>
+      <link>//wesleyhales.com/tags/growl/</link>
+      <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/growl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>file</title>
+      <link>//wesleyhales.com/tags/file/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forensics</title>
+      <link>//wesleyhales.com/tags/forensics/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/forensics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recovery</title>
+      <link>//wesleyhales.com/tags/recovery/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>undelete</title>
+      <link>//wesleyhales.com/tags/undelete/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/undelete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>util</title>
+      <link>//wesleyhales.com/tags/util/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/util/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Utils</title>
+      <link>//wesleyhales.com/tags/Utils/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/Utils/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>//wesleyhales.com/tags/theme/</link>
+      <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bridge</title>
+      <link>//wesleyhales.com/tags/bridge/</link>
+      <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/bridge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ant</title>
+      <link>//wesleyhales.com/tags/ant/</link>
+      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/ant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anthem</title>
+      <link>//wesleyhales.com/tags/anthem/</link>
+      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/anthem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>god</title>
+      <link>//wesleyhales.com/tags/god/</link>
+      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/god/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jesus</title>
+      <link>//wesleyhales.com/tags/jesus/</link>
+      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/jesus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ajaxworld</title>
+      <link>//wesleyhales.com/tags/ajaxworld/</link>
+      <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/ajaxworld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>enterprise</title>
+      <link>//wesleyhales.com/tags/enterprise/</link>
+      <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/enterprise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portals</title>
+      <link>//wesleyhales.com/tags/portals/</link>
+      <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/portals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensocial</title>
+      <link>//wesleyhales.com/tags/opensocial/</link>
+      <pubDate>Sun, 12 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/opensocial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>301</title>
       <link>//wesleyhales.com/tags/301/</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
@@ -39,187 +876,7 @@
     </item>
     
     <item>
-      <title>Aerogear</title>
-      <link>//wesleyhales.com/tags/aerogear/</link>
-      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/aerogear/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ajax</title>
-      <link>//wesleyhales.com/tags/ajax/</link>
-      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/ajax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ajaxworld</title>
-      <link>//wesleyhales.com/tags/ajaxworld/</link>
-      <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/ajaxworld/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular</title>
-      <link>//wesleyhales.com/tags/angular/</link>
-      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/angular/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angularjs</title>
-      <link>//wesleyhales.com/tags/angularjs/</link>
-      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/angularjs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Anniversary</title>
-      <link>//wesleyhales.com/tags/anniversary/</link>
-      <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/anniversary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ant</title>
-      <link>//wesleyhales.com/tags/ant/</link>
-      <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/ant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Anthem</title>
-      <link>//wesleyhales.com/tags/anthem/</link>
-      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/anthem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Atlanta</title>
-      <link>//wesleyhales.com/tags/atlanta/</link>
-      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/atlanta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Audience Engagement</title>
-      <link>//wesleyhales.com/tags/audience-engagement/</link>
-      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/audience-engagement/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Automation</title>
-      <link>//wesleyhales.com/tags/automation/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/automation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Awestruct</title>
-      <link>//wesleyhales.com/tags/awestruct/</link>
-      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/awestruct/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bad</title>
-      <link>//wesleyhales.com/tags/bad/</link>
-      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/bad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Balls</title>
-      <link>//wesleyhales.com/tags/balls/</link>
-      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/balls/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>//wesleyhales.com/tags/blog/</link>
-      <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bridge</title>
-      <link>//wesleyhales.com/tags/bridge/</link>
-      <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/bridge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cargo</title>
-      <link>//wesleyhales.com/tags/cargo/</link>
-      <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/cargo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cdi</title>
-      <link>//wesleyhales.com/tags/cdi/</link>
-      <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/cdi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chrome</title>
-      <link>//wesleyhales.com/tags/chrome/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/chrome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conferences</title>
-      <link>//wesleyhales.com/tags/conferences/</link>
-      <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/conferences/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Container</title>
+      <title>container</title>
       <link>//wesleyhales.com/tags/container/</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
@@ -228,385 +885,7 @@
     </item>
     
     <item>
-      <title>Css</title>
-      <link>//wesleyhales.com/tags/css/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css3</title>
-      <link>//wesleyhales.com/tags/css3/</link>
-      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/css3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debug</title>
-      <link>//wesleyhales.com/tags/debug/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/debug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>//wesleyhales.com/tags/demo/</link>
-      <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design</title>
-      <link>//wesleyhales.com/tags/design/</link>
-      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Develop</title>
-      <link>//wesleyhales.com/tags/develop/</link>
-      <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/develop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Devnexus</title>
-      <link>//wesleyhales.com/tags/devnexus/</link>
-      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/devnexus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Devsecops</title>
-      <link>//wesleyhales.com/tags/devsecops/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/devsecops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker Swarm</title>
-      <link>//wesleyhales.com/tags/docker-swarm/</link>
-      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/docker-swarm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Drive</title>
-      <link>//wesleyhales.com/tags/drive/</link>
-      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/drive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Enterprise</title>
-      <link>//wesleyhales.com/tags/enterprise/</link>
-      <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/enterprise/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Equifax</title>
-      <link>//wesleyhales.com/tags/equifax/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/equifax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Facebook</title>
-      <link>//wesleyhales.com/tags/facebook/</link>
-      <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/facebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Features</title>
-      <link>//wesleyhales.com/tags/features/</link>
-      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/features/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>File</title>
-      <link>//wesleyhales.com/tags/file/</link>
-      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/file/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Firefox</title>
-      <link>//wesleyhales.com/tags/firefox/</link>
-      <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/firefox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Flying</title>
-      <link>//wesleyhales.com/tags/flying/</link>
-      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/flying/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forensics</title>
-      <link>//wesleyhales.com/tags/forensics/</link>
-      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/forensics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Framework</title>
-      <link>//wesleyhales.com/tags/framework/</link>
-      <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/framework/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>//wesleyhales.com/tags/frontend/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>God</title>
-      <link>//wesleyhales.com/tags/god/</link>
-      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/god/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Graphics</title>
-      <link>//wesleyhales.com/tags/graphics/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/graphics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Growl</title>
-      <link>//wesleyhales.com/tags/growl/</link>
-      <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/growl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hard</title>
-      <link>//wesleyhales.com/tags/hard/</link>
-      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/hard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hibernate</title>
-      <link>//wesleyhales.com/tags/hibernate/</link>
-      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/hibernate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hornetq</title>
-      <link>//wesleyhales.com/tags/hornetq/</link>
-      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/hornetq/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html</title>
-      <link>//wesleyhales.com/tags/html/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html5</title>
-      <link>//wesleyhales.com/tags/html5/</link>
-      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/html5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html5e</title>
-      <link>//wesleyhales.com/tags/html5e/</link>
-      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/html5e/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ie</title>
-      <link>//wesleyhales.com/tags/ie/</link>
-      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/ie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Infinispan</title>
-      <link>//wesleyhales.com/tags/infinispan/</link>
-      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/infinispan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Innerhtml</title>
-      <link>//wesleyhales.com/tags/innerhtml/</link>
-      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/innerhtml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Iscroll</title>
-      <link>//wesleyhales.com/tags/iscroll/</link>
-      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/iscroll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jank</title>
-      <link>//wesleyhales.com/tags/jank/</link>
-      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jank/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>//wesleyhales.com/tags/java/</link>
-      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jazoon</title>
-      <link>//wesleyhales.com/tags/jazoon/</link>
-      <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jazoon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jboss</title>
-      <link>//wesleyhales.com/tags/jboss/</link>
-      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jboss/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jesus</title>
-      <link>//wesleyhales.com/tags/jesus/</link>
-      <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jesus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jetty</title>
-      <link>//wesleyhales.com/tags/jetty/</link>
-      <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jetty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jms</title>
-      <link>//wesleyhales.com/tags/jms/</link>
-      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jquery</title>
-      <link>//wesleyhales.com/tags/jquery/</link>
-      <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jquery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jsf</title>
-      <link>//wesleyhales.com/tags/jsf/</link>
-      <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/jsf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jsr</title>
+      <title>jsr</title>
       <link>//wesleyhales.com/tags/jsr/</link>
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
@@ -615,61 +894,43 @@
     </item>
     
     <item>
-      <title>Kick</title>
-      <link>//wesleyhales.com/tags/kick/</link>
-      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
+      <title>bad</title>
+      <link>//wesleyhales.com/tags/bad/</link>
+      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/kick/</guid>
+      <guid>//wesleyhales.com/tags/bad/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Life</title>
-      <link>//wesleyhales.com/tags/life/</link>
-      <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
+      <title>drive</title>
+      <link>//wesleyhales.com/tags/drive/</link>
+      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/life/</guid>
+      <guid>//wesleyhales.com/tags/drive/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Loadreportjs</title>
-      <link>//wesleyhales.com/tags/loadreportjs/</link>
-      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
+      <title>hard</title>
+      <link>//wesleyhales.com/tags/hard/</link>
+      <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/loadreportjs/</guid>
+      <guid>//wesleyhales.com/tags/hard/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Lrd</title>
-      <link>//wesleyhales.com/tags/lrd/</link>
-      <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
+      <title>demo</title>
+      <link>//wesleyhales.com/tags/demo/</link>
+      <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/lrd/</guid>
+      <guid>//wesleyhales.com/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Maven</title>
-      <link>//wesleyhales.com/tags/maven/</link>
-      <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/maven/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobile</title>
-      <link>//wesleyhales.com/tags/mobile/</link>
-      <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/mobile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Modal</title>
+      <title>modal</title>
       <link>//wesleyhales.com/tags/modal/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
@@ -678,34 +939,7 @@
     </item>
     
     <item>
-      <title>Onslyde</title>
-      <link>//wesleyhales.com/tags/onslyde/</link>
-      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/onslyde/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Opensocial</title>
-      <link>//wesleyhales.com/tags/opensocial/</link>
-      <pubDate>Sun, 12 Oct 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/opensocial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oss Management</title>
-      <link>//wesleyhales.com/tags/oss-management/</link>
-      <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/oss-management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pdf</title>
+      <title>pdf</title>
       <link>//wesleyhales.com/tags/pdf/</link>
       <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
       
@@ -714,313 +948,34 @@
     </item>
     
     <item>
-      <title>Phantomjs</title>
-      <link>//wesleyhales.com/tags/phantomjs/</link>
-      <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
+      <title>anniversary</title>
+      <link>//wesleyhales.com/tags/anniversary/</link>
+      <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/phantomjs/</guid>
+      <guid>//wesleyhales.com/tags/anniversary/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Phonegap</title>
-      <link>//wesleyhales.com/tags/phonegap/</link>
-      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      <title>blog</title>
+      <link>//wesleyhales.com/tags/blog/</link>
+      <pubDate>Wed, 05 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/phonegap/</guid>
+      <guid>//wesleyhales.com/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Portal</title>
-      <link>//wesleyhales.com/tags/portal/</link>
-      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
+      <title>facebook</title>
+      <link>//wesleyhales.com/tags/facebook/</link>
+      <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/portal/</guid>
+      <guid>//wesleyhales.com/tags/facebook/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Portals</title>
-      <link>//wesleyhales.com/tags/portals/</link>
-      <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/portals/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Portlet</title>
-      <link>//wesleyhales.com/tags/portlet/</link>
-      <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/portlet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Portlets</title>
-      <link>//wesleyhales.com/tags/portlets/</link>
-      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/portlets/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Preprocessor</title>
-      <link>//wesleyhales.com/tags/preprocessor/</link>
-      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/preprocessor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raf</title>
-      <link>//wesleyhales.com/tags/raf/</link>
-      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/raf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rasp</title>
-      <link>//wesleyhales.com/tags/rasp/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/rasp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi</title>
-      <link>//wesleyhales.com/tags/raspberry-pi/</link>
-      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recovery</title>
-      <link>//wesleyhales.com/tags/recovery/</link>
-      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/recovery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Requestanimationframe</title>
-      <link>//wesleyhales.com/tags/requestanimationframe/</link>
-      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/requestanimationframe/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Richfaces</title>
-      <link>//wesleyhales.com/tags/richfaces/</link>
-      <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/richfaces/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rpi</title>
-      <link>//wesleyhales.com/tags/rpi/</link>
-      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/rpi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Saucer</title>
-      <link>//wesleyhales.com/tags/saucer/</link>
-      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/saucer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Seam</title>
-      <link>//wesleyhales.com/tags/seam/</link>
-      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/seam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Secops</title>
-      <link>//wesleyhales.com/tags/secops/</link>
-      <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/secops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Selenium Grid</title>
-      <link>//wesleyhales.com/tags/selenium-grid/</link>
-      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/selenium-grid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Selenium Hub</title>
-      <link>//wesleyhales.com/tags/selenium-hub/</link>
-      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/selenium-hub/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Setinterval</title>
-      <link>//wesleyhales.com/tags/setinterval/</link>
-      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/setinterval/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Settimeout</title>
-      <link>//wesleyhales.com/tags/settimeout/</link>
-      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/settimeout/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Share</title>
-      <link>//wesleyhales.com/tags/share/</link>
-      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/share/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sniffing</title>
-      <link>//wesleyhales.com/tags/sniffing/</link>
-      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/sniffing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Speaking</title>
-      <link>//wesleyhales.com/tags/speaking/</link>
-      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/speaking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Speedgun</title>
-      <link>//wesleyhales.com/tags/speedgun/</link>
-      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/speedgun/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stats</title>
-      <link>//wesleyhales.com/tags/stats/</link>
-      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/stats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Testing</title>
-      <link>//wesleyhales.com/tags/testing/</link>
-      <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme</title>
-      <link>//wesleyhales.com/tags/theme/</link>
-      <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tomcat</title>
-      <link>//wesleyhales.com/tags/tomcat/</link>
-      <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/tomcat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Travisci</title>
-      <link>//wesleyhales.com/tags/travisci/</link>
-      <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/travisci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Trinidad</title>
-      <link>//wesleyhales.com/tags/trinidad/</link>
-      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/trinidad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Undelete</title>
-      <link>//wesleyhales.com/tags/undelete/</link>
-      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/undelete/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Util</title>
-      <link>//wesleyhales.com/tags/util/</link>
-      <pubDate>Tue, 05 Dec 2006 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/util/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Utils</title>
-      <link>//wesleyhales.com/tags/utils/</link>
-      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/tags/utils/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vacation</title>
+      <title>vacation</title>
       <link>//wesleyhales.com/tags/vacation/</link>
       <pubDate>Tue, 06 Nov 2007 00:00:00 +0000</pubDate>
       
@@ -1029,56 +984,101 @@
     </item>
     
     <item>
-      <title>Web</title>
-      <link>//wesleyhales.com/tags/web/</link>
-      <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
+      <title>lrd</title>
+      <link>//wesleyhales.com/tags/lrd/</link>
+      <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/web/</guid>
+      <guid>//wesleyhales.com/tags/lrd/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Web Intents</title>
-      <link>//wesleyhales.com/tags/web-intents/</link>
-      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      <title>maven</title>
+      <link>//wesleyhales.com/tags/maven/</link>
+      <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/web-intents/</guid>
+      <guid>//wesleyhales.com/tags/maven/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Web Performance</title>
-      <link>//wesleyhales.com/tags/web-performance/</link>
-      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
+      <title>balls</title>
+      <link>//wesleyhales.com/tags/balls/</link>
+      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/web-performance/</guid>
+      <guid>//wesleyhales.com/tags/balls/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Websocket</title>
-      <link>//wesleyhales.com/tags/websocket/</link>
-      <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
+      <title>kick</title>
+      <link>//wesleyhales.com/tags/kick/</link>
+      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/websocket/</guid>
+      <guid>//wesleyhales.com/tags/kick/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Websockets</title>
-      <link>//wesleyhales.com/tags/websockets/</link>
-      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
+      <title>cargo</title>
+      <link>//wesleyhales.com/tags/cargo/</link>
+      <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/websockets/</guid>
+      <guid>//wesleyhales.com/tags/cargo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Weld</title>
-      <link>//wesleyhales.com/tags/weld/</link>
-      <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
+      <title>tomcat</title>
+      <link>//wesleyhales.com/tags/tomcat/</link>
+      <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/tags/weld/</guid>
+      <guid>//wesleyhales.com/tags/tomcat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>framework</title>
+      <link>//wesleyhales.com/tags/framework/</link>
+      <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flying</title>
+      <link>//wesleyhales.com/tags/flying/</link>
+      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/flying/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hibernate</title>
+      <link>//wesleyhales.com/tags/hibernate/</link>
+      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/hibernate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>saucer</title>
+      <link>//wesleyhales.com/tags/saucer/</link>
+      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/saucer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trinidad</title>
+      <link>//wesleyhales.com/tags/trinidad/</link>
+      <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>//wesleyhales.com/tags/trinidad/</guid>
       <description></description>
     </item>
     

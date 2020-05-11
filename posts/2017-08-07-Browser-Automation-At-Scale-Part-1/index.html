@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2017-08-07T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Browser Automation At Scale - Part 1 &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -51,19 +51,14 @@
     </header>
 
     <section class="post-content">
-        
-
-<h4 id="docker-swarm-and-selenium">Docker Swarm and Selenium</h4>
-
+        <h4 id="docker-swarm-and-selenium">Docker Swarm and Selenium</h4>
 <p>Both Docker and Selenium are pretty much household names these days in the world of software engineering. I&rsquo;ve been fascinated
 with Docker since its inception and have been using it for side projects and in my day job for a few years now.
 I recently came across the need to test a Chrome extension and load a web page while that extension is installed.
 This test would load the page, wait for it to load, check some JS variables and APIs and then spit out a screenshot
 and any needed metrics. In the end, each test would run from multiple geographies and produce a report on performance
 and visual defects to be viewed at any point in time.</p>
-
 <p>Here&rsquo;s the End-to-End Architecture:</p>
-
 <ul>
 <li>Docker Swarm underlying connectivity across all nodes</li>
 <li>Selenium (Grid) network with single centralized hub for test queuing</li>
@@ -71,7 +66,6 @@ and visual defects to be viewed at any point in time.</p>
 <li>Navigation and Resource timing data along with Screenshots stored in linked postgres DB container.</li>
 <li>Centralized web application to manage test reporting and test data storage.</li>
 </ul>
-
 <p>For this first installment, we&rsquo;re going to setup Selenium Grid on top of Docker Swarm, run a test and get some visibility into the DOM
 and how things work. The connectivity and orchestration will be managed by Swarm and Selenium will open the browser
 (Chrome for this example) and run our tests.
@@ -79,19 +73,14 @@ What I&rsquo;m about to show you, in this and upcoming installments, is extremel
 against sites you own or are responsible for ;-)
 I&rsquo;m going to scale everything back to the simplest
 setup possible and we&rsquo;ll expand for world domination in later tutorials.</p>
-
 <p>Other (Headless) browsers such as Firefox, PhantomJS and Headless Chrome can be plugged in or substituted at any time.
 All we need to worry about is to make sure the tests are written using the WebDriver API.</p>
-
 <h4 id="setup-docker-swarm-along-with-the-selenium-grid-hub-and-node">Setup Docker Swarm along with the Selenium Grid, Hub and Node</h4>
-
 <p>There are four main components to the underlying testing infrastructure, which I quickly summarize below. The good news
 is that there are no configuration files to write and everything is used out of box from the official Docker repositories
 of each project. The goal of my setup is to be as disposable as possible. Everything is to be reproducible without any
 glue code or unnecessary abstraction layers.</p>
-
 <h5 id="quick-component-summary">Quick Component Summary</h5>
-
 <ul>
 <li>For Docker Swarm information, check out <a href="https://docs.docker.com/engine/swarm/">the docs</a> for the full rundown. It&rsquo;s the underlying
 networking, provisioning, and orchestration layer for docker containers.</li>
@@ -102,124 +91,94 @@ that you come across when creating a grid.</li>
 Once it finds a machine that matches a browser version you want to run against, the hub reroutes the test to the desired node.</li>
 <li>The <a href="https://hub.docker.com/r/selenium/node-chrome/">Selenium Node</a> used for this example is Google Chrome.</li>
 </ul>
-
-<h4 id="swarm-and-hub-machine-setup">Swarm and Hub - Machine Setup</h4>
-
+<h4 id="swarm-and-hub---machine-setup">Swarm and Hub - Machine Setup</h4>
 <p>The first thing you need to do is login to your favorite hosting provider that can provision CoreOS instances. For the hub
 I&rsquo;ve been using a 1 processor 2GB CoreOS machine. In my testing, I ran into problems with anything less that 2GB of memory for the hub.</p>
-
 <p>SSH into the newly created instance and run the following:</p>
-
 <pre><code>docker swarm init --advertise-addr [your external IP]
 docker network create -d overlay selenium-grid
 docker service create --network selenium-grid --name hub -p 4444:4444 selenium/hub
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>Here we&rsquo;re initializing Docker Swarm, the Selenium Grid networking layer and the Selenium Hub Service.</li>
 <li>Using this machine&rsquo;s IP address, visit this url (http://[your ip]:4444/grid/console#) to view the Selenium Grid Console. If you cant see it,
 something is wrong. And debugging this setup is a whole other blog post.</li>
 <li>Leave this terminal window open. We&rsquo;ll be back in a sec.</li>
 </ul>
-
-<h3 id="selenium-node-machine-setup">Selenium Node - Machine Setup</h3>
-
+<h3 id="selenium-node---machine-setup">Selenium Node - Machine Setup</h3>
 <p>Now we&rsquo;ll setup the first Chrome Node that will connect to the Hub. You&rsquo;ll need to create another CoreOS VM, this time with
 a minimum of 2 processors and 4GB of memory. Also, make a note of the hostname of this machine by using the following command.
 The hostname is normally defined within the hosting provider&rsquo;s UI. If not, you can can change it (if needed) once you SSH into the instance:</p>
-
 <pre><code> hostnamectl
-</code></pre>
-
-<p>Now it&rsquo;s time to join this Node to the Swarm.
+</code></pre><p>Now it&rsquo;s time to join this Node to the Swarm.
 The join command was given to you when you executed docker init above. If you lost it,
 run <code>docker swarm join-token worker</code> from the hub instance again and copy and paste it into this Node instance.</p>
-
 <pre><code>docker swarm join --token [token] [ip]:[port]
-</code></pre>
-
-<p>That&rsquo;s it for this machine. Everything else will be orchestrated from the hub (until part two of this series
+</code></pre><p>That&rsquo;s it for this machine. Everything else will be orchestrated from the hub (until part two of this series
 where I show you how to install a Chrome extension on the fly)</p>
-
-<h3 id="selenium-node-service-deployment">Selenium Node - Service Deployment</h3>
-
+<h3 id="selenium-node---service-deployment">Selenium Node - Service Deployment</h3>
 <p>Go back into the main hub instance from the first step. Let&rsquo;s deploy the Selenium Node Docker service. This will start the
 Selenium Chrome client on the Node machine you just setup. Remember everything will be deployed and managed from the hub.</p>
-
 <pre><code>docker service create --network selenium-grid --name selenium-node-chrome-sfo --constraint 'node.hostname==sfo1-node-01' -p 5560:5560 --mount type=bind,src=/dev/shm,dst=/dev/shm -e HUB_PORT_4444_TCP_ADDR=hub -e HUB_PORT_4444_TCP_PORT=4444 -e NODE_MAX_INSTANCES=1 -e NODE_MAX_SESSION=1 --replicas 1 selenium/node-chrome bash -c 'SE_OPTS=&quot;-browser applicationName=sfo1-node,browserName=chrome,maxInstances=1 -host $HOSTNAME -port 5560&quot; /opt/bin/entry_point.sh'
-</code></pre>
-
-<p>That&rsquo;s a hefty command and you might be wondering what all of the switched and parameters are for. I&rsquo;ll attempt to break it
- down for you here:</p>
-
-<p>1) <code>node.hostname==sfo1-node-01</code></p>
-
+</code></pre><p>That&rsquo;s a hefty command and you might be wondering what all of the switched and parameters are for. I&rsquo;ll attempt to break it
+down for you here:</p>
+<ol>
+<li><code>node.hostname==sfo1-node-01</code></li>
+</ol>
 <ul>
 <li>This is the hostname of the actual CoreOS instance. We&rsquo;re using it to constrain the selenium environment to only run on this CoreOS vm.
 This way, we won&rsquo;t have to worry about other tests running in parallel and messing with memory or CPU usage. This is meant to be a pristine,
 white glove environment.</li>
-<li>If you&rsquo;re creating an instance for another region, you&rsquo;ll want to replace &lsquo;sfo&rsquo; above with that region&rsquo;s airport or country code.
-<br /></li>
+<li>If you&rsquo;re creating an instance for another region, you&rsquo;ll want to replace &lsquo;sfo&rsquo; above with that region&rsquo;s airport or country code.</li>
 </ul>
-
-<p>2) <code>SE_OPTS=-browser applicationName=sfo1-node</code></p>
-
+<ol start="2">
+<li><code>SE_OPTS=-browser applicationName=sfo1-node</code></li>
+</ol>
 <ul>
 <li>This parameter gives our test script a hook so that it will run on this specific SFO node.</li>
 </ul>
-
-<p>3) <code>--name selenium-node-chrome-sfo</code></p>
-
+<ol start="3">
+<li><code>--name selenium-node-chrome-sfo</code></li>
+</ol>
 <ul>
 <li>This is just a name to identify this machine within docker. Should be kept in some kind of naming convention order.</li>
 </ul>
-
-<p>4) <code>--mount type=bind,src=/dev/shm,dst=/dev/shm</code></p>
-
+<ol start="4">
+<li><code>--mount type=bind,src=/dev/shm,dst=/dev/shm</code></li>
+</ol>
 <ul>
-<li>This command forces Docker to use the host&rsquo;s memory. When Chrome continually (or randomly) crashed during test runs, this command seemed to solve the issue.
-<br /></li>
+<li>This command forces Docker to use the host&rsquo;s memory. When Chrome continually (or randomly) crashed during test runs, this command seemed to solve the issue.</li>
 </ul>
-
-<p>5) <code>-e NODE_MAX_INSTANCES=1 -e NODE_MAX_SESSION=1 --replicas 1</code></p>
-
+<ol start="5">
+<li><code> -e NODE_MAX_INSTANCES=1 -e NODE_MAX_SESSION=1 --replicas 1</code></li>
+</ol>
 <h4 id="the-test-script">The Test Script</h4>
-
-<p>To get started, we&rsquo;ll setup some basic logging so we can see the test execute and hopefully use it for debugging purposes later.
-<script src="https://gist.github.com/wesleyhales/ca2b8f8844061b4b4d70c82ecb744ea3.js"></script></p>
-
+<p>To get started, we&rsquo;ll setup some basic logging so we can see the test execute and hopefully use it for debugging purposes later.</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>Server logging basically tells you when the test execution began and when it ended.</li>
 <li>Performance Logging gives us more information around frame navigation. We&rsquo;ll be able to correlate this later with navigation and Resource timing APIs.</li>
 <li>For all loggin configuration options see <a href="https://github.com/SeleniumHQ/selenium/wiki/Logging">https://github.com/SeleniumHQ/selenium/wiki/Logging</a></li>
 </ul>
-
-<p>In the following snippet, we&rsquo;re adding more criteria for our test and actually sending log messages that we setup earlier to console.log:
-<script src="https://gist.github.com/wesleyhales/83d2ae26df603b1b08c74cfbb8c8fee8.js"></script></p>
-
+<p>In the following snippet, we&rsquo;re adding more criteria for our test and actually sending log messages that we setup earlier to console.log:</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>The first few lines specify which node we&rsquo;re going to run this test on. Later we&rsquo;ll parameterize this to handle more regions.</li>
 <li>This is followed by the actual WebDriver initialization and setup. Make sure you add your hub IP address from the first step above.</li>
 <li>Finally you see the console statements for the native WebDriver logging.</li>
 </ul>
-
-<p>And finally, we get to the meat of this exercise:
-<script src="https://gist.github.com/wesleyhales/ee1a3d298830d6dbc50fb0a8be6b6a1d.js"></script></p>
-
+<p>And finally, we get to the meat of this exercise:</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>First we setup the screen size for the browser window and then actually perform the GET request.</li>
 <li>Then we see the driver.wait command. I&rsquo;m using this a a fail safe to ensure the browser has time to populate the Resource Timing entries for perf measurements.</li>
 <li>Next we take a screenshot and save it to the filesystem.</li>
 </ul>
-
 <p>When this script executes, you&rsquo;ll see all of our logging entries print out to the main terminal window. Since all
 this data is in JSON format, it makes it easy for us to setup a database and store it on each run. In the next article
 I&rsquo;ll show you how to wrap this script in a node web application and store the JSON in Postgres (along with the screenshot) on each run.
 In Part 3 we&rsquo;ll look at scaling out to support more regions, look at why nodes seem to fail randomly, and how to add multiple
 nodes from different hosting providers e.g. AWS, Digital Ocean, etc&hellip;</p>
-
-<p><br/>
-<br/></p>
+<!-- raw HTML omitted -->
 
     </section>
 
@@ -291,8 +250,7 @@ nodes from different hosting providers e.g. AWS, Digital Ocean, etc&hellip;</p>
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -310,5 +268,5 @@ nodes from different hosting providers e.g. AWS, Digital Ocean, etc&hellip;</p>
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

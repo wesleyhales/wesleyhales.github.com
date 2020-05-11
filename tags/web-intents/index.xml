@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web Intents on Wesley Hales</title>
+    <title>web intents on Wesley Hales</title>
     <link>//wesleyhales.com/tags/web-intents/</link>
-    <description>Recent content in Web Intents on Wesley Hales</description>
+    <description>Recent content in web intents on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Jul 2012 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/07/11/Sharing-Content-with-Web-Intents/</guid>
-      <description>The Intent of Sharing If you employ share buttons on your site, then you might already be aware of the increased load that comes with trying to make your content social. Allowing users to take action on your specific content and &amp;ldquo;share&amp;rdquo; it is a common task. Much like linking HTML documents together, we are now linking apps together that are capable of pushing content to a receiving service via the user.</description>
+      <description>I recently took a job working on CNN.com and I&amp;rsquo;m sure you can imagine that the weight and performance of social sharing is pretty serious &amp;lsquo;round these parts. So I will break down the current state of sharing as it exists today, then jump into an examination of Web Intents. For this example, I&amp;rsquo;ve taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains their specific resources to display a share button for the given service:</description>
     </item>
     
   </channel>

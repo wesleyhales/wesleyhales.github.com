@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2012-08-16T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Web Performance Testing With PhantomJS &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -51,50 +51,36 @@
     </header>
 
     <section class="post-content">
-        <p><img src="/images/icons/phantomjs.png" alt="phantomjs" align="left" class="max-width-100 margin10"></p>
-
+        <!-- raw HTML omitted -->
 <p>HTTP requests, heavy/unminified resources, and UI thread blocking should be on the mind of every front-end developer. These
 are just a few issues that can cause serious bottlenecks in page load times. Having a faster load time equals better search engine
 rankings, higher conversion rates, and an overall reduction in bandwidth costs.</p>
-
 <p>I recently took on the task of coming up with an accurate way to measure all the aforementioned things, in an effort to understand
 which performance tweaks improved page load times and which ones didn&rsquo;t. But first, we needed a baseline to test how fast the page loads with both a clear-cache and primed-cache state; Enter PhantomJS.
 PhantomJS gives us a way to headlessly test page performance, and also gives us the automation we need for integration with any build system.
 For this article, I will explain the reporting tool I used and try to give you a starting point for testing your own site(s).</p>
-
 <p>First off, I started with James Pierce&rsquo;s <a href="https://github.com/jamesgpearce/confess/">confess.js</a> which gives us the elapsed load
 time of a web page, the slowest and fastest resources, along with many other cool things like automatic generation of an appcache manifest. However, it did not give us
 the document.readyState=interactive/complete or window.onload times. Another thing I wanted to measure was before and after cache. So If at first,
 we have resources which are not far-future cached, what happens after we future cache these things? Also, how fast does our page load after
- being cached?</p>
-
-<p>With a few performance focused modifications to confess.js, we are able to gather the following results:
-<ul>
-<li>document.readyState</li>
-<li>image filmstrip (how the page looks over load time)</li>
-<li>page and resource load times after the user has a primed cache.</li>
-<li>pretty effin cool charts with sparklines fed by knockout.js</li>
-</ul></p>
-
+being cached?</p>
+<p>With a few performance focused modifications to confess.js, we are able to gather the following results:</p>
+<!-- raw HTML omitted -->
 <p>This script is running live at <a href="http://loadreport.wesleyhales.com/report.html">loadreport.wesleyhales.com/report.html</a>
-<img src="/images/loadreport.js.png" alt="loadreport.js" align="left" class="max-width-100"></p>
-
+<!-- raw HTML omitted --></p>
 <p>We&rsquo;re running the test 5 times in a row, to give an average of your best load times and to see where spikes occur. Also, <a href="http://twitter.com/ryanbridges">@ryanbridges</a> put together
 some awesome sparkline charts backed by knockout.js. Just click on the &ldquo;Show Me Some Charts!&rdquo; button to see &lsquo;em.
-<img src="/images/loadreport-charts.png" alt="loadreport-charts" align="left" class="max-width-100 margin10"></p>
-
+<!-- raw HTML omitted --></p>
 <p>Regarding cache performance, phantomjs has a &ndash;disk-cahe=yes switch which is supposed to enable caching, but the results on the number
 of resources loaded and their size seem to be reversed. For example, if we run this script against cnn.com with &ndash;disk-cahe=yes, phantom returns
 over 2MB of resources, but if we run it with the same switch set to &ldquo;no&rdquo;, we get 858KB of resources - and both modes report the same number
 of resources being loaded (around 150).
 To bypass this bug, I&rsquo;ve created my own caching mechanism which basically loads the same page twice (in the same phantom instance)
- and returns more accurate results when compared with Chrome&rsquo;s developer tools.</p>
-
+and returns more accurate results when compared with Chrome&rsquo;s developer tools.</p>
 <p>Install <a href="http://phantomjs.org/">phantomjs</a> 1.6+, <a href="https://github.com/wesleyhales/loadreport">Get the script here</a> and run this on your own build servers to make sure your UI screams.</p>
-
 <p><a href="http://twitter.com/wesleyhales">@wesleyhales</a>
-<br/>
-<br/></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
 
     </section>
 
@@ -166,8 +152,7 @@ To bypass this bug, I&rsquo;ve created my own caching mechanism which basically 
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -185,5 +170,5 @@ To bypass this bug, I&rsquo;ve created my own caching mechanism which basically 
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

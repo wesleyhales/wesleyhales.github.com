@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2013-10-26T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Jank Busting Apple&#39;s Home Page &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -51,52 +51,33 @@
     </header>
 
     <section class="post-content">
-        
-
-<p><br/></p>
-
-<h2 id="overview">Overview</h2>
-
-<p>Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote <a href="/blog/2013/10/23/Basic-Screen-Updates-with-Angular-and-requestAnimationFrame/">this article</a> the other day which examines the
-performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
-Jake Archibald&rsquo;s <a href="http://jakearchibald.github.io/jank-invaders/">Jank Invaders</a> to hone my skills and save the universe from jank :)</p>
-
+        <!-- raw HTML omitted -->
 <p>So, I was on <a href="http://apple.com">Apple&rsquo;s home page</a> the other day and noticed some jank in their main carousel animation.
-<a href="/images/posts/2013-10-26/apple.home.PNG"><img src="/images/posts/2013-10-26/apple.home.PNG" alt="apple home page" style="width:50%" class="margin10"></a>
+<a href="/images/posts/2013-10-26/apple.home.PNG"><!-- raw HTML omitted --></a>
 It wasn&rsquo;t anything huge, but the
 animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
 Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a <a href="https://developers.google.com/chrome-developer-tools/docs/timeline#painting_events">paint</a> within chrome.
-<a href="/images/posts/2013-10-26/apple.com.jank.PNG"><img src="/images/posts/2013-10-26/apple.com.jank.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a></p>
-
+<a href="/images/posts/2013-10-26/apple.com.jank.PNG"><!-- raw HTML omitted --></a></p>
 <p>Digging deeper, we can see that a large amount of time is being taken for the hardware compositing. This is where we force elements to be accelerated and
- handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka <a href="http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/">null transform hack</a>).
- The problem with Apple&rsquo;s site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
- <img src="/images/posts/2013-10-26/composite.PNG" alt="layer composite time" class="margin10 max-width-100"/>
- <br/>
- I wrote about this <a href="http://www.html5rocks.com/en/mobile/optimization-and-performance/">a while ago</a>, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
- applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.</p>
-
+handled by the GPU with translate3D(0,0,0) or translateZ(0) (aka <a href="http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/">null transform hack</a>).
+The problem with Apple&rsquo;s site and the reason why paints are spiking before each animation is because too many layers (or divs) have the null transform applied.
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+I wrote about this <a href="http://www.html5rocks.com/en/mobile/optimization-and-performance/">a while ago</a>, but the basic point is that too much of a good thing is often a bad thing. In this case, too many elements have translateZ(0)
+applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.</p>
 <p>The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
- If we turn on &ldquo;<a href="http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode">Continuous Page Repainting</a>&rdquo; in dev tools, we can see how the page is being painted and how many composited layers we have.
- <a href="/images/posts/2013-10-26/apple-paint.PNG"><img src="/images/posts/2013-10-26/apple-paint.PNG" alt="bad fps jank" class="marginTop10 max-width-100"></a></p>
-
+If we turn on &ldquo;<a href="http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode">Continuous Page Repainting</a>&rdquo; in dev tools, we can see how the page is being painted and how many composited layers we have.
+<a href="/images/posts/2013-10-26/apple-paint.PNG"><!-- raw HTML omitted --></a></p>
 <p>By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
- From there, I just disabled all the null transform hacks that were applied to nested elements.
- <a href="/images/posts/2013-10-26/apple.markup.PNG"><img src="/images/posts/2013-10-26/apple.markup.PNG" alt="apple home page markup" class="marginTop10 max-width-100"></a></p>
-
+From there, I just disabled all the null transform hacks that were applied to nested elements.
+<a href="/images/posts/2013-10-26/apple.markup.PNG"><!-- raw HTML omitted --></a></p>
 <p>After doing this and fixing one other tiny CSS bug of one element having two different backgrounds, we get much better performance as you can see in the
- below timeline.
- <a href="/images/posts/2013-10-26/apple.com.no.jank.PNG"><img src="/images/posts/2013-10-26/apple.com.no.jank.PNG" alt="apple home page markup" class="marginTop10 max-width-100"></a></p>
-
+below timeline.
+<a href="/images/posts/2013-10-26/apple.com.no.jank.PNG"><!-- raw HTML omitted --></a></p>
 <p>The yellow bars are the 7 second timer before each transition occurs, so this is expected.</p>
-
 <p>The animation on Apple.com isn&rsquo;t terrible as it stands in its current state, but as I stated at the beginning of this article, it&rsquo;s fun to fix jank :)</p>
-
-<p><br/>
- <br/></p>
-
-<p><br/>
-<br/></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     </section>
 
@@ -168,8 +149,7 @@ Apple products. You can see this in the Frame analysis below. Each green line sh
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -187,5 +167,5 @@ Apple products. You can see this in the Frame analysis below. Each green line sh
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

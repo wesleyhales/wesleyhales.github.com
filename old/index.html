@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -22,7 +22,7 @@
     
         <meta property="og:type" content="website" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Olds &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="//wesleyhales.com/old/index.xml">
@@ -77,7 +77,7 @@ To me the project was a huge success with many measurable results:
     
     <section class="post-excerpt">
         <p>Today, many companies are synthetically measuring web performance with various scripts and services. Now that everyone is able to measure those performance numbers and visualize the problem areas, it’s time to raise the bar in terms of scalability, portability and the use of newer DOM APIs.
-The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.  Loadreport data from 2012-2013 for CNN.</p>
+The following charts show a snapshot of data collected over the period of one year (2012-2013) from the CNN.com home page using Loadreport.js.</p>
     </section>
 
     <footer class="post-footer">
@@ -100,8 +100,7 @@ The following charts show a snapshot of data collected over the period of one ye
     </header>
     
     <section class="post-excerpt">
-        <p>Overview I&rsquo;ve been working on an open source project called Onslyde for almost 2 years. If you want to know the details behind it you can read articles here, here or watch a recent interview.
-This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and didn&rsquo;t create a web interface for reserving sponsored slots.</p>
+        <p>This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and didn&rsquo;t create a web interface for reserving sponsored slots. I simply created a spreadsheet with speaker name, session title, and time. Sponsors could then choose a time and I would reserve it on a first-come-first-serve basis.</p>
     </section>
 
     <footer class="post-footer">
@@ -124,8 +123,7 @@ This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering 
     </header>
     
     <section class="post-excerpt">
-        <p>Overview At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee. For the past year I&rsquo;ve been heads down on merging Apigee&rsquo;s Usergrid and Mobile Analytics products using AngularJS.
-For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.</p>
+        <p>For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts. Developers use it to create a backend for their mobile apps amongst many other things like managing users, roles and permissions. The Mobile Analytics product is something I was partial to since I created the original UI - before it was acquired by Apigee.</p>
     </section>
 
     <footer class="post-footer">
@@ -148,8 +146,7 @@ For those interested: Usergrid, a Backend as a Service, was acquired by Apigee i
     </header>
     
     <section class="post-excerpt">
-        <p>Overview Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I wrote this article the other day which examines the performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing Jake Archibald&rsquo;s Jank Invaders to hone my skills and save the universe from jank :)
-So, I was on Apple&rsquo;s home page the other day and noticed some jank in their main carousel animation.</p>
+        <p>So, I was on Apple&rsquo;s home page the other day and noticed some jank in their main carousel animation.  It wasn&rsquo;t anything huge, but the animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different Apple products. You can see this in the Frame analysis below. Each green line shooting to 0 FPS is a paint within chrome.</p>
     </section>
 
     <footer class="post-footer">
@@ -172,8 +169,8 @@ So, I was on Apple&rsquo;s home page the other day and noticed some jank in thei
     </header>
     
     <section class="post-excerpt">
-        <p>Overview Some of the best known approaches for running a countdown or count-up timer in AngularJS are shown on JSFiddle using setInterval and Angular&rsquo;s builtin $timeout.
- Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout). If you want to read more about $scope.$apply check out this article.</p>
+        <p>Both approaches require the use of $scope.$apply, which is completely normal. It forces the page/bindings to update when a change is made outside of the AngularJS lifecycle (like inside a setInterval or setTimeout). If you want to read more about $scope.$apply check out this article.
+For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets the user know when it&rsquo;s about to refresh the data.</p>
     </section>
 
     <footer class="post-footer">
@@ -196,9 +193,10 @@ So, I was on Apple&rsquo;s home page the other day and noticed some jank in thei
     </header>
     
     <section class="post-excerpt">
-        <p>Overview If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.
-The manual workflow goes something like this:
- code your site using asciidoc/markdown/haml/sass/less/etc preprocessor (or build) generates static site (locally on your machine) copy static site to your local gh-pages or username.github.com repo/branch git push new site done  Now, with a little scripting we can have:</p>
+        <p>The manual workflow goes something like this:
+Now, with a little scripting we can have:
+Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.
+With our new workflow, we let Travis CI do the work for us in a bash script.</p>
     </section>
 
     <footer class="post-footer">
@@ -221,7 +219,7 @@ The manual workflow goes something like this:
     </header>
     
     <section class="post-excerpt">
-        <p>Overview Exactly one year ago, I started working on a WebSocket prototype that would give audiences the power to control my talks. I used it for the first time at DevNexus 2012 in Atlanta, GA and it produced great engagement results. At that time, the only analytics I had built into the server were through logging, and the results were motivating enough to continue using the prototype. Over the span of 2012, I spent many late nights in hotel rooms preparing my slides for talks and working out bugs of this tool which I named &ldquo;onslyde&rdquo;.</p>
+        <p>Details of onslyde  At its core, the concept is simple. Attendees connect to a WebSocket server, the presenter sends them vote options at certain points during her presentation and whoever decides to connect can have anonymous interactions with the presenter. Participants may also give a &ldquo;thumb up&rdquo; or &ldquo;thumb down&rdquo; during any slide to show that they approve or disapprove of the content on a given slide. This allows for a very fine grained level of anonymous interaction.</p>
     </section>
 
     <footer class="post-footer">
@@ -244,8 +242,7 @@ The manual workflow goes something like this:
     </header>
     
     <section class="post-excerpt">
-        <p>Debugging jank, reflows, etc&hellip; The Skia debugger was mentioned a few weeks ago at EdgeConf as a way to examine how the DOM is loaded and processed in the Chromium web browser. Skia is the open source C++ graphics library backing Chromium/Chrome. It comes with a graphical tool used to step through and analyze the contents of the skia picture format.
-If you haven’t watched this video, I recommend you take a few minutes and watch the first part to understand the context of why the Skia debugger was mentioned and where it might be useful.</p>
+        <p>If you haven’t watched this video, I recommend you take a few minutes and watch the first part to understand the context of why the Skia debugger was mentioned and where it might be useful. For the impatient, there was a lot of talk around image decoding and scrolling. This morphed into a discussion about bounce rates and how scrolling really matters from an experience standpoint. Basically, if you’re scrolling sucks, users do a lot less and bounce quicker.</p>
     </section>
 
     <footer class="post-footer">
@@ -305,8 +302,7 @@ Sometimes you have to give up everything to find something.</p>
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -323,5 +319,5 @@ Sometimes you have to give up everything to find something.</p>
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

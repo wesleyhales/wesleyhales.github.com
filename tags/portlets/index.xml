@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Portlets on Wesley Hales</title>
+    <title>portlets on Wesley Hales</title>
     <link>//wesleyhales.com/tags/portlets/</link>
-    <description>Recent content in Portlets on Wesley Hales</description>
+    <description>Recent content in portlets on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Apr 2011 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</guid>
-      <description>Working with portlet technology is often discredited for it’s seemingly complex API and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.
-This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,7 +26,11 @@ This is all within the context of which servlet-based framework you might be wor
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</guid>
-      <description>By default, the JSR-301&amp;frasl;329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</description>
+      <description>private String mode; public String getMode() { Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest(); if (responseObject instanceof RenderRequest) {
+RenderRequest renderRequest = (RenderRequest)responseObject; if(renderRequest.getPortletMode().toString().equals(mode)){ mode = null; }else{ mode = renderRequest.getPortletMode().toString(); }
+} return mode; } public String getFromView() { PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(false); String viewId = (String)portletSession.getAttribute(&amp;quot;javax.portlet.faces.viewIdHistory.view&amp;quot;);
+viewId = viewId.substring(0,viewId.indexOf(&amp;rdquo;?&amp;ldquo;)); return viewId; } public void setMode(String mode) {
+this.mode = mode; } </description>
     </item>
     
     <item>
@@ -36,8 +39,7 @@ This is all within the context of which servlet-based framework you might be wor
       <pubDate>Sun, 12 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/10/12/Developing-an-OpenSocial-Portlet/</guid>
-      <description>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:
- Documentation is scarce when you want to roll you own OS container via Shindig Luckily Chris Schalk did a good job providing some documentation on getting persistence setup on a mysql db Unfortunately, due to the bleeding edge of this technology, some of (the few) demos that exist don&amp;rsquo;t work with today&amp;rsquo;s Shindig trunk I was able to quickly learn Google widgeting and am on my way to being a &amp;ldquo;widget master&amp;rdquo; Next on the list is to mess around with Google Data APIs in OpenSocial Apps The transition/integration of Shindig into a standard webapp/portlet was a huge pita.</description>
+      <description>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:</description>
     </item>
     
   </channel>

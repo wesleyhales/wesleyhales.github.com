@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -17,15 +17,15 @@
 	
         <meta property="og:site_name" content="Wesley Hales">
         <meta property="og:title" content="Wesley Hales">
-        <meta property="og:url" content="//wesleyhales.com/tags/java/">
+        <meta property="og:url" content="//wesleyhales.com/tags/Java/">
         <meta property="og:description" content="">
     
         <meta property="og:type" content="website" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Java &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="//wesleyhales.com/tags/java/index.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="//wesleyhales.com/tags/Java/index.xml">
         <link rel="stylesheet" type="text/css" href="//wesleyhales.com/css/main.css"/>
         <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -51,7 +51,11 @@
     </header>
     
     <section class="post-excerpt">
-        <p>By default, the JSR-301&frasl;329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &ldquo;view&rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</p>
+        <p>private String mode; public String getMode() { Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest(); if (responseObject instanceof RenderRequest) {
+RenderRequest renderRequest = (RenderRequest)responseObject; if(renderRequest.getPortletMode().toString().equals(mode)){ mode = null; }else{ mode = renderRequest.getPortletMode().toString(); }
+} return mode; } public String getFromView() { PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(false); String viewId = (String)portletSession.getAttribute(&quot;javax.portlet.faces.viewIdHistory.view&quot;);
+viewId = viewId.substring(0,viewId.indexOf(&rdquo;?&ldquo;)); return viewId; } public void setMode(String mode) {
+this.mode = mode; } </p>
     </section>
 
     <footer class="post-footer">
@@ -74,7 +78,7 @@
     </header>
     
     <section class="post-excerpt">
-        <p>I started laying down ideas for a new Firefox theme a few months ago and this is what emerged. I&rsquo;m not sure why I can&rsquo;t stay away from the darker themes. Maybe it&rsquo;s the richness that black (and darker colors) allows on a monitor, but I tried to stay as far away from mainstream design on this as I could. I have already coded this into a downloadable theme, but I am still working out some glitches.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -97,11 +101,7 @@
     </header>
     
     <section class="post-excerpt">
-        <p>I saw a tweet from(@maxandersen) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.
-This is really just javascript on the front end and can be used with any backend message generating system.
-Code Used:
-  RichFaces 3.3.1.GA jGrowl (latest)  Include the scripts in the head:
- Note the loading of jquery in the Richfaces page.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -124,8 +124,7 @@ Code Used:
     </header>
     
     <section class="post-excerpt">
-        <p>There are too many times when I need a nice horizontal tab menu, using semantic html, and with cool graphics all at the same time. So this post is more for my personal reference and will shave a few hours off any ones html prototype. This is cross browser valid css 2.1 on IE6, IE7, FF3, Chrome and Safari without using any hacks.
-The end result: .ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; } .</p>
+        <p>div.nav-container ul.primary-nav { margin: 45px 0 0 236px; white-space: nowrap; display: inline; float: left; } div.nav-container ul.primary-nav li { /setup the container for tab divs/list-style: none; height: 28px; display: inline; font-size: 1.2em; margin: 0; position: relative; } div.nav-container ul.primary-nav li div { /float all divs containing tab images left/float: left; } div.nav-container ul.primary-nav a { color: #777; text-decoration: none; font-weight: 700; } div.nav-container ul.primary-nav li.selected div.tab-main a { color: #fff; } div.</p>
     </section>
 
     <footer class="post-footer">
@@ -148,8 +147,8 @@ The end result: .ln { color: rgb(0,0,0); font-weight: normal; font-style: normal
     </header>
     
     <section class="post-excerpt">
-        <p>This weekend was quite an eye opener for me. Since the first public release of ANTHEM (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.
-I started out with a Paypal donate button which helped a little, but wasn't really doing what I wanted.</p>
+        <p>Excellent skin! That&rsquo;s been said many times but I saw something new today that you gave away for free (and was a great opportunity!) Donating without cause never gets a response (although it needs to for the sake of others), but I think if you said people needed to donate 50c to remove the advert, you&rsquo;d be buying my motorcycles by now, and by the dozen J.
+All the best,</p>
     </section>
 
     <footer class="post-footer">
@@ -172,7 +171,7 @@ I started out with a Paypal donate button which helped a little, but wasn't real
     </header>
     
     <section class="post-excerpt">
-        <p>Read about it here: http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html</p>
+        <p>Read about it here: http://blog.</p>
     </section>
 
     <footer class="post-footer">
@@ -195,7 +194,7 @@ I started out with a Paypal donate button which helped a little, but wasn't real
     </header>
     
     <section class="post-excerpt">
-        <p>This week, I attended/spoke at the AjaxWorld conference in San Jose. The cool thing for me is that this was my first public speaking appearance. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -218,7 +217,7 @@ I started out with a Paypal donate button which helped a little, but wasn't real
     </header>
     
     <section class="post-excerpt">
-        <p>I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don't be a stranger!  Check out the sessions here. **Update with slides:</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -241,8 +240,7 @@ I started out with a Paypal donate button which helped a little, but wasn't real
     </header>
     
     <section class="post-excerpt">
-        <p>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:
- Documentation is scarce when you want to roll you own OS container via Shindig Luckily Chris Schalk did a good job providing some documentation on getting persistence setup on a mysql db Unfortunately, due to the bleeding edge of this technology, some of (the few) demos that exist don&rsquo;t work with today&rsquo;s Shindig trunk I was able to quickly learn Google widgeting and am on my way to being a &ldquo;widget master&rdquo; Next on the list is to mess around with Google Data APIs in OpenSocial Apps The transition/integration of Shindig into a standard webapp/portlet was a huge pita.</p>
+        <p>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:</p>
     </section>
 
     <footer class="post-footer">
@@ -265,7 +263,7 @@ I started out with a Paypal donate button which helped a little, but wasn't real
     </header>
     
     <section class="post-excerpt">
-        <p>**UPDATE - This theme is now available on Mozilla.org here: https://addons.mozilla.org/en-US/firefox/addon/9627/  I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&rsquo;t been back to finish the theme since.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -284,13 +282,13 @@ I started out with a Paypal donate button which helped a little, but wasn't real
 	
 <nav role="pagination" class="pagination">
   
-  <a href="/tags/java/" class="newer-posts">
+  <a href="/tags/Java/" class="newer-posts">
     <i class="fa fa-angle-double-left"></i>&nbsp;Newer&nbsp;
   </a>
   
 	<span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 5</span>
 
-  <a href="/tags/java/page/3/" class="older-posts">
+  <a href="/tags/Java/page/3/" class="older-posts">
     &nbsp;Older&nbsp;<i class="fa fa-angle-double-right"></i>
   </a>
 
@@ -305,8 +303,7 @@ I started out with a Paypal donate button which helped a little, but wasn't real
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -323,5 +320,5 @@ I started out with a Paypal donate button which helped a little, but wasn't real
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

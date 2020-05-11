@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2013-03-29T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Fun with Static Site Generators and Travis &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -51,102 +51,54 @@
     </header>
 
     <section class="post-content">
-        
-
-<p><br/></p>
-
-<h2 id="overview">Overview</h2>
-
-<p>If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.</p>
-
+        <!-- raw HTML omitted -->
 <p>The manual workflow goes something like this:</p>
-
-<ol>
-<li>code your site using asciidoc/markdown/haml/sass/less/etc</li>
-<li>preprocessor (or build) generates static site (locally on your machine)</li>
-<li>copy static site to your local gh-pages or username.github.com repo/branch</li>
-<li>git push new site</li>
-<li>done</li>
-</ol>
-
+<!-- raw HTML omitted -->
 <p>Now, with a little scripting we can have:</p>
-
-<ol>
-<li>code your site using asciidoc/markdown/haml/sass/less/etc</li>
-<li>git push to source repo</li>
-<li>done (with so many other cool features at our fingertips)</li>
-</ol>
-
+<!-- raw HTML omitted -->
 <p>Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.</p>
-
 <p>With our new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation greatness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
 to test how each new commit loads (over time) in a web browser - giving us a baseline for site performance.</p>
-
 <p>This post is going to review the basics of setting up your github OAuth token, encryption with travis, and finally pushing your website to github pages with an automated travisci build.
 We&rsquo;ll top it all off with running <a href="http://loadreport.wesleyhales.com">loadreport.js</a> after each check in to understand how a single commit can affect site performance. So let&rsquo;s go&hellip;
-<br/></p>
-
+<!-- raw HTML omitted --></p>
 <h2 id="github-hosting-setup">Github hosting setup</h2>
-
 <p>If you&rsquo;re unfamiliar with github pages or how to host your own top-level domain (yourdomain.com) under your github account, then read <a href="https://help.github.com/articles/what-are-github-pages">this</a>, <a href="https://help.github.com/articles/creating-project-pages-manually">then this</a> first.
-<br/></p>
-
+<!-- raw HTML omitted --></p>
 <h2 id="github-travis-and-oauth">Github, Travis, and OAuth</h2>
-
 <p>First off, you must login to <a href="https://travis-ci.org">Travis CI</a> with your github username and enable the travis service hook on the repository you wish to automate.
 For me, this is where my haml/sass/etc&hellip; source is located.
-<img src="/images/posts/2013-03-29/travisci1.png" alt="travis" class="margin10"/>
-Next, we&rsquo;ll create an OAuth token for your repository access :
-<script src="https://gist.github.com/wesleyhales/5274538.js"></script></p>
-
-<p>Pluck the <b>&ldquo;token&rdquo;:</b> string value from the generated json and encrypt it. Pro tip: this token is basically the same thing as your password. So don&rsquo;t push it out to a public repository.
-<script src="https://gist.github.com/wesleyhales/5274559.js"></script></p>
-
-<p>To encrypt, we must install the travis gem and encrypt the token string from above with:
-<script src="https://gist.github.com/wesleyhales/5274580.js"></script>
-..this will create a string in your console and we&rsquo;ll paste it below, so keep it close by&hellip;</p>
-
+<!-- raw HTML omitted -->
+Next, we&rsquo;ll create an OAuth token for your repository access :</p>
+<!-- raw HTML omitted -->
+<p>Pluck the <!-- raw HTML omitted -->&quot;token&rdquo;:<!-- raw HTML omitted --> string value from the generated json and encrypt it. Pro tip: this token is basically the same thing as your password. So don&rsquo;t push it out to a public repository.</p>
+<!-- raw HTML omitted -->
+<p>To encrypt, we must install the travis gem and encrypt the token string from above with:</p>
+<!-- raw HTML omitted -->
+<p>..this will create a string in your console and we&rsquo;ll paste it below, so keep it close by&hellip;</p>
 <p>Now, we can create the gh-pages branch for this repository <a href="https://help.github.com/articles/creating-project-pages-manually">following these instructions</a>. This gh-pages branch can host your generated site or artifacts. Since I have a TLD mapped to my wesleyhales.github.com
 repository, I&rsquo;m using the gh-pages branch under my source account for load testing reports. For my blog, I&rsquo;m mapping a domain name over by simply forwarding a TLD like wesleyhales.com, with an A record pointing to 204.232.175.78.
 Then I added a <a href="https://github.com/wesleyhales/wesleyhales.github.com/blob/master/CNAME">CNAME file</a> to the repo so github DNS knows where to forward to.</p>
-
-<p><br/></p>
-
-<h2 id="the-build-config">The Build Config</h2>
-
-<p>Finally, we&rsquo;re ready to update our .travis.yml.
-<script src="https://gist.github.com/wesleyhales/5274500.js"></script>
-<a href="http://awestruct.org/getting_started/">Awestruct</a> is a ruby based preprocessor, so this project is setup with the travis ruby config (above).</p>
-
-<p>Note the <b>before_script</b> and <b>script</b> configs:</p>
-
-<p><b>before_script</b> runs the awestruct build and then the post_build.sh script. post_build.sh pushes our newly generated public facing website to github pages. This is where github kindly serves up our static content at username.github.com (for free).</p>
-
-<script src="https://gist.github.com/wesleyhales/5274512.js"></script>
-
-<p>And finally, <b>script</b> will run gh-pages-report.sh. This allows us to run <a href="http://loadreport.wesleyhales.com">loadreport.js</a> and send the generated report to our source gh-pages branch.
+<!-- raw HTML omitted -->
+<p>Note the <!-- raw HTML omitted -->before_script<!-- raw HTML omitted --> and <!-- raw HTML omitted -->script<!-- raw HTML omitted --> configs:</p>
+<p><!-- raw HTML omitted -->before_script<!-- raw HTML omitted --> runs the awestruct build and then the post_build.sh script. post_build.sh pushes our newly generated public facing website to github pages. This is where github kindly serves up our static content at username.github.com (for free).</p>
+<!-- raw HTML omitted -->
+<p>And finally, <!-- raw HTML omitted -->script<!-- raw HTML omitted --> will run gh-pages-report.sh. This allows us to run <a href="http://loadreport.wesleyhales.com">loadreport.js</a> and send the generated report to our source gh-pages branch.
 Travis CI provides an instance of phantomjs during our build, so all we have to do is call it. This is basically a build report (or artifact from the build). It measures how long
-it takes our site to load after each commit is made. This gives us a baseline for measuring performance.
-<script src="https://gist.github.com/wesleyhales/5274517.js"></script></p>
-
-<p><br/>
-##The Results</p>
-
+it takes our site to load after each commit is made. This gives us a baseline for measuring performance.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>The source for this blog you are reading is stored on github <a href="https://github.com/wesleyhales/wesleyhales.com">here</a>. When I do
 a git push, everything is automatically built with travis and pushed again to the <a href="https://github.com/wesleyhales/wesleyhales.github.com">github repo</a> that is specially named to handle the
 mapping of my TLD (wesleyhales.com) to my username on github.
-<img src="/images/posts/2013-03-29/blog-ss.png" class="margin10" width="400px"></p>
-
+<!-- raw HTML omitted --></p>
 <p>Since I have 2 repositories, one for the preprocessor source and the other for the TLD mapping, I&rsquo;m using the gh-pages branch on my
- source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
- The results of this test are automatically pushed and I can view them <a href="http://wesleyhales.com/wesleyhales.com/">here</a>.
- <a href="http://wesleyhales.com/wesleyhales.com/"><img src="/images/posts/2013-03-29/perf-test.png" class="margin10" width="400px"></a></p>
-
+source repository for reporting. With PhantomJS and loadreport.js, I run a test on every commit to see how I affected my sites loading performance.
+The results of this test are automatically pushed and I can view them <a href="http://wesleyhales.com/wesleyhales.com/">here</a>.
+<a href="http://wesleyhales.com/wesleyhales.com/"><!-- raw HTML omitted --></a></p>
 <p>From a UI polish perspective, I have a ton left to do. But the concept stays the same for any build. Use it to build and push out project
- documentation along with other reports and assets. I&rsquo;d eventually like to write a script to do a diff on only test the pages that were changed on the commit.</p>
-
-<p><br/>
- <br/></p>
+documentation along with other reports and assets. I&rsquo;d eventually like to write a script to do a diff on only test the pages that were changed on the commit.</p>
+<!-- raw HTML omitted -->
 
     </section>
 
@@ -218,8 +170,7 @@ mapping of my TLD (wesleyhales.com) to my username on github.
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -237,5 +188,5 @@ mapping of my TLD (wesleyhales.com) to my username on github.
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

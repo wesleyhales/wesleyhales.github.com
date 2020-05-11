@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Develop on Wesley Hales</title>
+    <title>develop on Wesley Hales</title>
     <link>//wesleyhales.com/tags/develop/</link>
-    <description>Recent content in Develop on Wesley Hales</description>
+    <description>Recent content in develop on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Dec 2013 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise/</guid>
-      <description>Overview At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee. For the past year I&amp;rsquo;ve been heads down on merging Apigee&amp;rsquo;s Usergrid and Mobile Analytics products using AngularJS.
-For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.</description>
+      <description>For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts. Developers use it to create a backend for their mobile apps amongst many other things like managing users, roles and permissions. The Mobile Analytics product is something I was partial to since I created the original UI - before it was acquired by Apigee.</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Modal on Wesley Hales</title>
+    <title>modal on Wesley Hales</title>
     <link>//wesleyhales.com/tags/modal/</link>
-    <description>Recent content in Modal on Wesley Hales</description>
+    <description>Recent content in modal on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Jan 2008 00:00:00 +0000</lastBuildDate>
@@ -13,13 +13,11 @@
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
+      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j#58status/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
-      <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
-
-Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>
+      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j#58status/</guid>
+      <description>onstart=&amp;quot;alertModal(&#39;loading-modal&#39;,&#39;loading-modal-msg&#39;);&amp;quot;onstop=&amp;quot;hideContentModal(&#39;loading-modal&#39;,&#39;loading-modal-msg&#39;);&amp;quot;&amp;gt;&amp;lt;f:facet name=&amp;quot;start&amp;quot;&amp;gt;&amp;lt;/f:facet&amp;gt;&amp;lt;/a4j:status&amp;gt;</description>
     </item>
     
   </channel>

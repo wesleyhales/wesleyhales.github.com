@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Awestruct on Wesley Hales</title>
+    <title>awestruct on Wesley Hales</title>
     <link>//wesleyhales.com/tags/awestruct/</link>
-    <description>Recent content in Awestruct on Wesley Hales</description>
+    <description>Recent content in awestruct on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Mar 2013 00:00:00 +0000</lastBuildDate>
@@ -17,9 +17,10 @@
       <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2013/03/29/Fun-with-Static-Site-Generators-and-Travis/</guid>
-      <description>Overview If you use a static website generator, then you may be aware of the pain that goes into getting everything automated and pushed out to github pages on each commit.
-The manual workflow goes something like this:
- code your site using asciidoc/markdown/haml/sass/less/etc preprocessor (or build) generates static site (locally on your machine) copy static site to your local gh-pages or username.github.com repo/branch git push new site done  Now, with a little scripting we can have:</description>
+      <description>The manual workflow goes something like this:
+Now, with a little scripting we can have:
+Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.
+With our new workflow, we let Travis CI do the work for us in a bash script.</description>
     </item>
     
   </channel>

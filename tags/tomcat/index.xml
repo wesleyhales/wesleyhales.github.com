@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tomcat on Wesley Hales</title>
+    <title>tomcat on Wesley Hales</title>
     <link>//wesleyhales.com/tags/tomcat/</link>
-    <description>Recent content in Tomcat on Wesley Hales</description>
+    <description>Recent content in tomcat on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Oct 2007 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
-      <description>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.</description>
+      <description>&amp;lt;goals&amp;gt;&amp;lt;goal&amp;gt;start&amp;lt;/goal&amp;gt;&amp;lt;/goals&amp;gt;&amp;lt;/execution&amp;gt;&amp;lt;execution&amp;gt;&amp;lt;id&amp;gt;deploy-app&amp;lt;/id&amp;gt;&amp;lt;phase&amp;gt;install&amp;lt;/phase&amp;gt;&amp;lt;goals&amp;gt;&amp;lt;goal&amp;gt;deployer-deploy&amp;lt;/goal&amp;gt;&amp;lt;/goals&amp;gt;&amp;lt;/execution&amp;gt;&amp;lt;/executions&amp;gt;</description>
     </item>
     
   </channel>

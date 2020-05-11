@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Devnexus on Wesley Hales</title>
+    <title>devnexus on Wesley Hales</title>
     <link>//wesleyhales.com/tags/devnexus/</link>
-    <description>Recent content in Devnexus on Wesley Hales</description>
+    <description>Recent content in devnexus on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2014/02/26/A-More-Better-Conference-Experience/</guid>
-      <description>Overview I&amp;rsquo;ve been working on an open source project called Onslyde for almost 2 years. If you want to know the details behind it you can read articles here, here or watch a recent interview.
-This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and didn&amp;rsquo;t create a web interface for reserving sponsored slots.</description>
+      <description>This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and didn&amp;rsquo;t create a web interface for reserving sponsored slots. I simply created a spreadsheet with speaker name, session title, and time. Sponsors could then choose a time and I would reserve it on a first-come-first-serve basis.</description>
     </item>
     
   </channel>

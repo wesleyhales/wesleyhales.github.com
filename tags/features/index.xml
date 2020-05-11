@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Features on Wesley Hales</title>
+    <title>features on Wesley Hales</title>
     <link>//wesleyhales.com/tags/features/</link>
-    <description>Recent content in Features on Wesley Hales</description>
+    <description>Recent content in features on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Jun 2012 00:00:00 +0000</lastBuildDate>
@@ -17,10 +17,8 @@
       <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/06/08/Sniffing-IE9-features-while-in-compatibility-mode/</guid>
-      <description>Getting the browser version from the User Agent string is one thing. But, when you force compatibility mode in IE, you get whatever version you&amp;rsquo;re forcing to. e.g&amp;hellip; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=EmulateIE8&amp;quot;/&amp;gt;
-in IE9 will cause jQuery&amp;rsquo;s
-($.browser.version, 10)
-to return &amp;ldquo;8&amp;rdquo; :(
+      <description>Getting the browser version from the User Agent string is one thing. But, when you force compatibility mode in IE, you get whatever version you&amp;rsquo;re forcing to. e.g&amp;hellip; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=EmulateIE8&amp;quot;/&amp;gt;in IE9 will cause jQuery&amp;rsquo;s
+($.browser.version, 10)to return &amp;ldquo;8&amp;rdquo; :(
 I started digging through some msdn docs to find various ways of sniffing the actual browser we&amp;rsquo;re using, even when compatibility mode is forced. This led me to this doc Which talks about how IE9&amp;rsquo;s Chakra JavaScript engine processes math precision differently (and faster) than the old IE8 JScript engine.</description>
     </item>
     

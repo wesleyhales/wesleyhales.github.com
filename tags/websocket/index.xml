@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Websocket on Wesley Hales</title>
+    <title>websocket on Wesley Hales</title>
     <link>//wesleyhales.com/tags/websocket/</link>
-    <description>Recent content in Websocket on Wesley Hales</description>
+    <description>Recent content in websocket on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Jan 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Feb 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//wesleyhales.com/tags/websocket/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,8 +17,7 @@
       <pubDate>Fri, 20 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/01/20/Pushing-CDI-Events-to-the-Browser-with-WebSockets/</guid>
-      <description>Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket connections. You can see some true performance numbers here.      
-Here is the demo in action. As you can see on the right, I have 2 chat windows open and on the left we have a member registration. Users are chatting across a raw WebSocket connection and when another user registers, the CDI event is fired all the way through to the browser as a JavaScript alert via the connected WebSocket clients.</description>
+      <description></description>
     </item>
     
   </channel>

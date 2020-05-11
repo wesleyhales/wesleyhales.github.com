@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Wesley Hales</title>
-    <link>//wesleyhales.com/tags/design/</link>
+    <link>//wesleyhales.com/tags/Design/</link>
     <description>Recent content in Design on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Dec 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//wesleyhales.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/Design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,7 @@
       <pubDate>Tue, 17 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2013/12/17/From-Startup-to-Enterprise/</guid>
-      <description>Overview At the beginning of 2013 I was given the incredible opportunity to start with an empty canvas and come up with a completely new web application for Apigee. For the past year I&amp;rsquo;ve been heads down on merging Apigee&amp;rsquo;s Usergrid and Mobile Analytics products using AngularJS.
-For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts.</description>
+      <description>For those interested: Usergrid, a Backend as a Service, was acquired by Apigee in early 2012 and has served as the core tool of all Apigee trainings and developer outreach efforts. Developers use it to create a backend for their mobile apps amongst many other things like managing users, roles and permissions. The Mobile Analytics product is something I was partial to since I created the original UI - before it was acquired by Apigee.</description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@ For those interested: Usergrid, a Backend as a Service, was acquired by Apigee i
       <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme/</guid>
-      <description>**UPDATE - This theme is now available on Mozilla.org here: https://addons.mozilla.org/en-US/firefox/addon/9627/  I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.</description>
+      <description></description>
     </item>
     
     <item>
@@ -36,16 +35,7 @@ For those interested: Usergrid, a Backend as a Service, was acquired by Apigee i
       <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/10/29/Another-design/</guid>
-      <description>The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)</description>
-    </item>
-    
-    <item>
-      <title>Another design</title>
-      <link>//wesleyhales.com/blog/2007/10/29/Another-design/</link>
-      <pubDate>Mon, 29 Oct 2007 00:00:00 +0000</pubDate>
-      
-      <guid>//wesleyhales.com/blog/2007/10/29/Another-design/</guid>
-      <description>The designer inside me just won&#39;t give up. I have tried and tried to put down the Photoshop paint brush and embrace development only, but it just isn&#39;t going to happen. I care just as much about semantic HTML and css/designer stuff as I do about hard core Java development. Some say it&#39;s easy to be a jack of all trades and a master of none. But I am naturally forced to slap that theory in the face and then kick it in the balls ;-)</description>
+      <description></description>
     </item>
     
     <item>
@@ -54,7 +44,7 @@ For those interested: Usergrid, a Backend as a Service, was acquired by Apigee i
       <pubDate>Sun, 11 Mar 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/03/11/Another-blog-layout/</guid>
-      <description>So my current design is serving the purpose, but it seems a little &amp;ldquo;bland&amp;rdquo;. I finally nailed down a design that is a little more frameworked. What I mean is, most of the time websites are designed to serve the content at hand. Which is fine in most cases, but I am looking for something more than just a &amp;ldquo;nice look&amp;rdquo; out of my designs. For some reason I can&amp;rsquo;t get away from grey and other neutral colors.</description>
+      <description></description>
     </item>
     
     <item>
@@ -63,10 +53,7 @@ For those interested: Usergrid, a Backend as a Service, was acquired by Apigee i
       <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/18/My-Jroller-Blog-Extreme-Makeover/</guid>
-      <description>I need a new design badly (the little British car in the tunnel is getting old, quick), and after coding for x number of months, I feel like my design skillz are getting a little stale. So here are the candidates for my new look.
-Layout #1
-
-Layout #2</description>
+      <description></description>
     </item>
     
   </channel>

@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2017-09-01T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>Browser Automation At Scale - Part 2 &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -51,46 +51,30 @@
     </header>
 
     <section class="post-content">
-        
-
-<p>In <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a>, I reviewed the gory details of the foundation required to run synthetic browser testing at scale.
+        <p>In <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a>, I reviewed the gory details of the foundation required to run synthetic browser testing at scale.
 Now that we have a framework for building out our tests, we can move forward with wrapping
 our test runner in a web application so that the metrics we care about can be gathered and viewed through a decent UI.</p>
-
 <p>For this example, I&rsquo;m going to use the Alexa top 12 news sites and execute a test over each one with the latest Chrome web browser. It will
 open the page and grab the resource timing information along with a screenshot as shown here:
-<img src="/images/posts/2017-09-03/site_runner.png" alt="" />
+<img src="/images/posts/2017-09-03/site_runner.png" alt="">
 The <a href="https://github.com/wesleyhales/site_runner">demo web application</a> that we&rsquo;re about to setup will store the above screenshots and timing information in Postgres.
 The screenshots are base64 and a bit large compression wise, but that issue can be conquered at a later date. For now, all we
 care about is to get things running and to scale our tests into every geography with a datacenter that supports CoreOS.
 Let&rsquo;s review the core architecture:
-<img src="/images/posts/2017-09-03/swarm_setup.png" alt="" /></p>
-
-<h3 id="setting-up-site-runner">Setting up site_runner</h3>
-
+<img src="/images/posts/2017-09-03/swarm_setup.png" alt=""></p>
+<h3 id="setting-up-site_runner">Setting up site_runner</h3>
 <p>If you followed along in <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a>, you can use your own Docker Swarm infrastructure to run your tests. For this
 article, I&rsquo;m only going to review the simple web application used to run and manage the tests - <a href="https://github.com/wesleyhales/site_runner">site_runner</a>.
 If you haven&rsquo;t already, go ahead and clone the repository. You can run this within your local docker environment or
 on another hosted CoreOS instance.</p>
-
 <pre><code>git clone git@github.com:wesleyhales/site_runner.git
-</code></pre>
-
-<h4 id="database-setup">Database Setup</h4>
-
+</code></pre><h4 id="database-setup">Database Setup</h4>
 <p>Next, we&rsquo;ll setup a Postgres database. This will be used to store all of our test data and screenshots (in JSON format and queryable).</p>
-
 <pre><code>docker run -p 5432:5432 --name siterunner_pg -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-</code></pre>
-
-<p>Now we need to login to the database and set things up:</p>
-
+</code></pre><p>Now we need to login to the database and set things up:</p>
 <pre><code>docker run -it --rm --link siterunner_pg:postgres postgres psql -h postgres -U postgres
-</code></pre>
-
-<p>This command will run the Postgres client and will ask for a password (mysecretpassword).
+</code></pre><p>This command will run the Postgres client and will ask for a password (mysecretpassword).
 After successful login, copy and paste the following and hit enter:</p>
-
 <pre><code>CREATE DATABASE SITERUNNER;
 \c siterunner;
 CREATE EXTENSION citext;
@@ -100,59 +84,42 @@ CREATE EXTENSION citext;
     image text,
     email citext unique
   );
-</code></pre>
-
-<h4 id="web-application-setup">Web Application Setup</h4>
-
+</code></pre><h4 id="web-application-setup">Web Application Setup</h4>
 <p>The site_runner web application is a custom test runner built to give simple reporting and an API for the tests
- that need to be ran. Open a new terminal window and navigate to the repository you cloned at the beginning of this article and run:</p>
-
-<pre><code> docker build -t wesleyhales/site_runner .
- docker run -p 3000:3000 --link siterunner_pg:postgres -d wesleyhales/site_runner
-</code></pre>
-
-<p>This will start your application at <a href="http://localhost:3000">http://localhost:3000</a>. Visit the URL and ensure you see a page with a link and some table headers.
+that need to be ran. Open a new terminal window and navigate to the repository you cloned at the beginning of this article and run:</p>
+<pre><code>docker build -t wesleyhales/site_runner .
+docker run -p 3000:3000 --link siterunner_pg:postgres -d wesleyhales/site_runner
+</code></pre><p>This will start your application at http://localhost:3000. Visit the URL and ensure you see a page with a link and some table headers.
 There won&rsquo;t be any data to review yet, which brings us to the next step&hellip;</p>
-
 <p>The site_runner demo application
 uses /delete to clear the database and /startTest to start the tests (pretty simple, right?). startTest requires a query parameter
 for which region you&rsquo;d like your tests to be ran.  If you followed along in Part 1, you would use sf1-node as your query paramter argument.
 For this article, I&rsquo;ve added another node in New York, so an HTTP request to the following will kick off your tests in that region:</p>
-
 <ul>
-<li><a href="http://localhost:3000/startTest?nodeName=ny3-node">http://localhost:3000/startTest?nodeName=ny3-node</a></li>
+<li>http://localhost:3000/startTest?nodeName=ny3-node</li>
 </ul>
-
 <p>If everything goes as planned, you will see the following response from hitting that URL:
-<img src="/images/posts/2017-09-03/test_response.png" alt="" /></p>
-
+<img src="/images/posts/2017-09-03/test_response.png" alt=""></p>
 <p>Let&rsquo;s also get a tail on our web server logs so you can see the messages as each test runs:</p>
-
 <pre><code>docker logs -f [your container ID]
-</code></pre>
-
-<p>When each test finishes (and you refresh the page), you&rsquo;ll see the screenshot and some other simple data about when and where the
+</code></pre><p>When each test finishes (and you refresh the page), you&rsquo;ll see the screenshot and some other simple data about when and where the
 test was ran.
-<img src="/images/posts/2017-09-03/test_result.png" alt="" />
+<img src="/images/posts/2017-09-03/test_result.png" alt="">
 If tests aren&rsquo;t running, check the Selenium hub <a href="http://165.227.123.79:4444/grid/console">console page</a> to see how many requests are currently queued. Or stop being lazy and go setup
 everything in <a href="/posts/2017-08-07-Browser-Automation-At-Scale-Part-1/">Part 1</a> and manage your own testing infrastructure! ;-)</p>
-
 <p>If you&rsquo;re just following along and don&rsquo;t have time to set all this up, you can view a temporary site_runner report <a href="http://165.227.123.79:3000/?account=Alexa%20Top%2012%20News">here</a>.
 Hover over the screenshot to get a zoomed in view and examine any visual defects.
 (It would be cool to get <a href="https://huddle.github.io/Resemble.js/">Resemble.js</a> integrated to handle image analysis and comparison at some point)</p>
-
 <p>If you&rsquo;d like to change the test sites, you can do so in <a href="https://github.com/wesleyhales/site_runner/blob/master/model/AllSites.js">this file</a>.
 Other things you might want to change are the data that is harvested during each page run. Here, in
 <a href="https://github.com/wesleyhales/site_runner/blob/master/selenium/siterunner.js#L55">siterunner.js</a>, you can see where
 I&rsquo;ve written a few wait commands that eventually execute JavaScript on the page that is loaded. This allows you
 to harvest any required metrics or inspect things to see what is being used on the page.</p>
-
 <p>In Part 3, We&rsquo;ll advance our webdriver script to crawl an entire site, add a few more nodes across the globe and look at a few open source and pay for monitoring tools that
- will give us health visibility into our nodes and testing infrastructure. Part 4 will probably go into adding headless Chrome and Firefox to the mix.</p>
-
+will give us health visibility into our nodes and testing infrastructure. Part 4 will probably go into adding headless Chrome and Firefox to the mix.</p>
 <p>Thanks to Andy Davies for the <a href="https://github.com/andydavies/waterfall">ResourceTiming waterfall component</a>!
-<br/>
-<br/></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
 
     </section>
 
@@ -224,8 +191,7 @@ to harvest any required metrics or inspect things to see what is being used on t
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -243,5 +209,5 @@ to harvest any required metrics or inspect things to see what is being used on t
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

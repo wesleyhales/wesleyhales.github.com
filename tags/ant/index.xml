@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ant on Wesley Hales</title>
+    <title>ant on Wesley Hales</title>
     <link>//wesleyhales.com/tags/ant/</link>
-    <description>Recent content in Ant on Wesley Hales</description>
+    <description>Recent content in ant on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Oct 2007 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Nov 2008 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//wesleyhales.com/tags/ant/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
       <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
-      <description>Almost a year since I made this entry and I think Maven is great for open source and commercial apps. Sure, there may be a few things you want to do that don&#39;t fit into the &#34;Maven way&#34; but for the most part, it is a great build system. Also, any one that uses IntelliJ Idea will fall in love with Maven on first use (I guess it handles Eclipse project files just as well).</description>
+      <description>&amp;lt;/activation&amp;gt;&amp;lt;build&amp;gt;&amp;lt;filters&amp;gt;&amp;lt;filter&amp;gt;src/main/filters/tomcat.properties&amp;lt;/filter&amp;gt;&amp;lt;/filters&amp;gt;&amp;lt;resources&amp;gt;&amp;lt;resource&amp;gt;&amp;lt;directory&amp;gt;${basedir}/src/main/resources&amp;lt;/directory&amp;gt;&amp;lt;filtering&amp;gt;true&amp;lt;/filtering&amp;gt;&amp;lt;targetPath&amp;gt;../${build.finalName}/META-INF&amp;lt;/targetPath&amp;gt;&amp;lt;includes&amp;gt;&amp;lt;include&amp;gt;context.xml&amp;lt;/include&amp;gt;&amp;lt;/includes&amp;gt;&amp;lt;/resource&amp;gt;&amp;lt;/resources&amp;gt;</description>
     </item>
     
   </channel>

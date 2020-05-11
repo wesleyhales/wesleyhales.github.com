@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Weld on Wesley Hales</title>
+    <title>weld on Wesley Hales</title>
     <link>//wesleyhales.com/tags/weld/</link>
-    <description>Recent content in Weld on Wesley Hales</description>
+    <description>Recent content in weld on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 May 2011 00:00:00 +0000</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
-      <description>About TweetStream
-In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
-A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
+      <description></description>
     </item>
     
   </channel>

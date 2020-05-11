@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <meta property="og:article:author" content="Wesley Hales" />
         <meta property="og:article:published_time" content="2007-12-17T00:00:00Z" />
     
-        <meta name="generator" content="Hugo 0.51" />
+        <meta name="generator" content="Hugo 0.70.0" />
         <title>XHTML to PDF with a Seam filter &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
@@ -51,31 +51,8 @@
     </header>
 
     <section class="post-content">
-        <p>After reading <a href="http://today.java.net/pub/a/today/2006/10/31/combine-facelets-and-flying-saucer-renderer.html">this article</a> showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.</p> 
-<p>First off, generated markup from any given JSF component is not guaranteed to be good markup. So I had to make use of cyberneko html parser. The servlet filter parses the generated response and then neko cleans up any non standard xhtml elements.</p> 
-<p>One huge css tip is make sure you declare <code>media="print"</code> or <code>media="screen,print"</code> on your xhmtl css reference. Naturally it would be good to split the 2 style sheets but laziness forced me to use one for both.</p> 
-
-<p class="pTitle">An Example Application</p> 
-<p><a href="http://www.littlebear-canton.com"><img src="/images/jroller/Picture-1.jpg" align="right"/></a>A few months ago, I wrote a simple website for the neighborhood I live in using Seam. I tried to start out writing this site using Ruby on Rails but I just wasn't impressed compared to what Seam offers. (Even for a small one-off website)</p> 
-<p>So below are 2 live links that show the code in action and parsing a real world example. Enjoy...</p> 
-<p> 
-<ul> 
-<li><a href="http://www.littlebear-canton.com/littlebear/index.seam?RenderOutputType=pdf">View the front page as PDF</a></li> 
-<li><a href="http://www.littlebear-canton.com/littlebear/index.seam?RenderOutputType=image&height=900&width=800">View the front page as PNG</a></li> 
-</ul> 
-</p> 
-<br/> 
-<p class="pTitle">The Code</p> 
-<p>It's pretty cool not having to define a servlet filter in your web.xml. Just add the @Filter annotation to the top of the class and wala. I had to add the <code>within="org.jboss.seam.web.ajax4jsfFilter"</code> attribute to the annotation so FS could render the RichFaces images/resources. 
-<ul> 
-<li><a href="/wesleyhales/resource/xhtml2pdf.zip.jar">Flying Saucer Seam component (source)</a></li> 
-<li>Dependencies 
-<ul> 
-<li>nekohtml</li> 
-<li>All flying saucer jars</li></ul> 
-</li> 
-</ul> 
-</p>
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     </section>
 
@@ -147,8 +124,7 @@
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -166,5 +142,5 @@
     </script>
 
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

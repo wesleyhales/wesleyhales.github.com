@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pdf on Wesley Hales</title>
+    <title>pdf on Wesley Hales</title>
     <link>//wesleyhales.com/tags/pdf/</link>
-    <description>Recent content in Pdf on Wesley Hales</description>
+    <description>Recent content in pdf on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Dec 2007 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,7 @@
       <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</guid>
-      <description>After reading this article showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.
-First off, generated markup from any given JSF component is not guaranteed to be good markup.</description>
+      <description></description>
     </item>
     
   </channel>

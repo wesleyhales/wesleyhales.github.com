@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aerogear on Wesley Hales</title>
+    <title>aerogear on Wesley Hales</title>
     <link>//wesleyhales.com/tags/aerogear/</link>
-    <description>Recent content in Aerogear on Wesley Hales</description>
+    <description>Recent content in aerogear on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Feb 2012 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2012/02/08/AeroGear-Mobile-HTML5-and-Auwesome/</guid>
-      <description>The AeroGear project had it&#39;s official launch last week and I want to review what we&#39;re doing and where we&#39;re headed. For starters, AeroGear is focused on:  Education - Screencasts, Tutorials, and Quickstarts for running any (HTML5, Hybrid, Native) mobile solution with JBoss projects and app servers. Innovation - Many of AeroGear&#39;s primary goals are to provide HTML5 extensions for web applications, both mobile and desktop based. Community - We already have several community members contributing examples, demos, and other useful resources.</description>
+      <description></description>
     </item>
     
   </channel>

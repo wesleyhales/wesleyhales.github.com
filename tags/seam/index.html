@@ -4,7 +4,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
+    <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
                 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
@@ -22,8 +22,8 @@
     
         <meta property="og:type" content="website" />
     
-        <meta name="generator" content="Hugo 0.51" />
-        <title>Seam &middot; Wesley Hales</title>
+        <meta name="generator" content="Hugo 0.70.0" />
+        <title>seam &middot; Wesley Hales</title>
         <link rel="canonical" href="//wesleyhales.com/" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="//wesleyhales.com/tags/seam/index.xml">
         <link rel="stylesheet" type="text/css" href="//wesleyhales.com/css/main.css"/>
@@ -51,9 +51,7 @@
     </header>
     
     <section class="post-excerpt">
-        <p>About TweetStream
-In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
-A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -76,7 +74,11 @@ A little bit about the usecase: The TweetStream application is an app that Jay B
     </header>
     
     <section class="post-excerpt">
-        <p>By default, the JSR-301&frasl;329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &ldquo;view&rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</p>
+        <p>private String mode; public String getMode() { Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest(); if (responseObject instanceof RenderRequest) {
+RenderRequest renderRequest = (RenderRequest)responseObject; if(renderRequest.getPortletMode().toString().equals(mode)){ mode = null; }else{ mode = renderRequest.getPortletMode().toString(); }
+} return mode; } public String getFromView() { PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(false); String viewId = (String)portletSession.getAttribute(&quot;javax.portlet.faces.viewIdHistory.view&quot;);
+viewId = viewId.substring(0,viewId.indexOf(&rdquo;?&ldquo;)); return viewId; } public void setMode(String mode) {
+this.mode = mode; } </p>
     </section>
 
     <footer class="post-footer">
@@ -99,8 +101,7 @@ A little bit about the usecase: The TweetStream application is an app that Jay B
     </header>
     
     <section class="post-excerpt">
-        <p>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.
-Read more about what is included in this release.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -123,9 +124,7 @@ Read more about what is included in this release.</p>
     </header>
     
     <section class="post-excerpt">
-        <p>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.
-The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.
-See the project page for more details and a live demo.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -148,8 +147,7 @@ See the project page for more details and a live demo.</p>
     </header>
     
     <section class="post-excerpt">
-        <p>After reading this article showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.
-First off, generated markup from any given JSF component is not guaranteed to be good markup.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -172,7 +170,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
     </header>
     
     <section class="post-excerpt">
-        <p>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven't really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven't followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -195,7 +193,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
     </header>
     
     <section class="post-excerpt">
-        <p>**Update - See this article for more info.</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -218,7 +216,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
     </header>
     
     <section class="post-excerpt">
-        <p>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. It's great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user's life a little easier also.</p>
+        <p>&lt;goals&gt;&lt;goal&gt;start&lt;/goal&gt;&lt;/goals&gt;&lt;/execution&gt;&lt;execution&gt;&lt;id&gt;deploy-app&lt;/id&gt;&lt;phase&gt;install&lt;/phase&gt;&lt;goals&gt;&lt;goal&gt;deployer-deploy&lt;/goal&gt;&lt;/goals&gt;&lt;/execution&gt;&lt;/executions&gt;</p>
     </section>
 
     <footer class="post-footer">
@@ -241,8 +239,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
     </header>
     
     <section class="post-excerpt">
-        <p>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.
-This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn't have any requirements to start, I thought I would list a few of my own here ;)</p>
+        <p></p>
     </section>
 
     <footer class="post-footer">
@@ -268,8 +265,7 @@ This article is about an application that is relatively simple (to start). A rep
           
           
           <a href="//wesleyhales.com/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2017 | All rights reserved</section>
-          <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</section>
+          <section>&copy; <a href="//wesleyhales.com/">Wesley Hales</a> 2020 | All rights reserved</section>
         </div>
     </footer>
 
@@ -286,5 +282,5 @@ This article is about an application that is relatively simple (to start). A rep
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 
-<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</body>
 </html>

@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Wesley Hales</title>
-    <link>//wesleyhales.com/tags/java/</link>
+    <link>//wesleyhales.com/tags/Java/</link>
     <description>Recent content in Java on Wesley Hales</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Aug 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//wesleyhales.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wesleyhales.com/tags/Java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,7 @@
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/29/Fixing-Ajax-on-Mobile-Devices-with-HTML5/</guid>
-      <description>Update: @_boye has created a perf test which shows the performance of this solution. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.
-The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it&#39;s still being recommended and used not only on desktop browsers but mobile ones as well.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,11 +26,7 @@ The most common approach for receiving markup from an Ajax request is to use inn
       <pubDate>Wed, 03 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/03/RichFaces-Mobile-Designs-Day-3/</guid>
-      <description>So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.
-
-Day 3: About The Design
-Here we have another phone based design broke out into 3 pages.
-The first page is a standard menu so not much to say there. The bottom menu bar is a little different from my first design &amp;#8211; following the lead of the native twitter iPhone app.</description>
+      <description></description>
     </item>
     
     <item>
@@ -40,9 +35,7 @@ The first page is a standard menu so not much to say there. The bottom menu bar 
       <pubDate>Tue, 02 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/02/Going-Mobile-With-RichFaces-Design-Proposals-Day2/</guid>
-      <description>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:
-1) Your design sits on the fine line between desktop and mobile. You are designing your app for a max 1024 pixel resolution (in landscape mode) but you must also take advantage of mobile usability (which you will see in page2)
-2) Similar to the iPad Mail.</description>
+      <description></description>
     </item>
     
     <item>
@@ -51,8 +44,7 @@ The first page is a standard menu so not much to say there. The bottom menu bar 
       <pubDate>Mon, 01 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/08/01/Going-Mobile-With-RichFaces-Design-Proposals-Day1/</guid>
-      <description>Today marks an important day in the RichFaces project as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.
-So each day this week, I will come up with a new proposed design/theme for RichFaces Mobile and we want to hear your feedback. I will announce each new design (both for tablet and phone) via twitter with a link back to this article.</description>
+      <description></description>
     </item>
     
     <item>
@@ -61,9 +53,7 @@ So each day this week, I will come up with a new proposed design/theme for RichF
       <pubDate>Wed, 04 May 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/05/04/Runtime-Type-Detection-and-Usage-with-Weld/</guid>
-      <description>About TweetStream
-In developing the TweetStream demo for the JBoss World keynote and JUDCon presentation, I wanted to use CDI in a way that would choose the implementation of a given type at runtime. With Qualifiers and Producers, CDI gives you the power to do this.
-A little bit about the usecase: The TweetStream application is an app that Jay Balunas and I developed over the past few months for our presentation at JUDCon and JBoss World 2011.</description>
+      <description></description>
     </item>
     
     <item>
@@ -72,18 +62,16 @@ A little bit about the usecase: The TweetStream application is an app that Jay B
       <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/04/05/Does-Developing-Portlets-Make-You-a-Better-Developer/</guid>
-      <description>Working with portlet technology is often discredited for it’s seemingly complex API and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.
-This is all within the context of which servlet-based framework you might be working with, but overall things are a bit easier when dealing with one request and response.</description>
+      <description></description>
     </item>
     
     <item>
       <title>Going Mobile With RichFaces 4 - Part 1&amp;#58; Drag and Drop</title>
-      <link>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</link>
+      <link>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1#58-Drag-and-Drop/</link>
       <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1-58-Drag-and-Drop/</guid>
-      <description>Richfaces 4 just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.
-First off, Richfaces 4 currently does not offer mobile support but it is definitely the direction they are heading. And the RF team has taken all the necessary steps to allow the client side code to be extended and improved by way of jQuery.</description>
+      <guid>//wesleyhales.com/blog/2011/02/16/Going-Mobile-With-RichFaces-4-Part-1#58-Drag-and-Drop/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -92,8 +80,7 @@ First off, Richfaces 4 currently does not offer mobile support but it is definit
       <pubDate>Sat, 05 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2011/02/05/Replacing-Photoshop-With-CSS3-Creating-Styles/</guid>
-      <description>One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&amp;#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).
-This used to be a pain in the royal ass to implement with html/css2, but now is amazingly simple with CSS3. Not only is it simple, but you can also create a sort of &amp;#8220;gradient template&amp;#8220; to be reused.</description>
+      <description></description>
     </item>
     
     <item>
@@ -102,8 +89,7 @@ This used to be a pain in the royal ass to implement with html/css2, but now is 
       <pubDate>Mon, 07 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2010/06/07/Jazoon-2010-Overview/</guid>
-      <description>I&#39;ve always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&amp;#45;up of talented speakers/developers.
-I was pleasantly surprised to see soo many talks about portal technologies. And people weren&#39;t talking about the spec or the technology itself, but about specific usecases &amp;#45; which is really cool.</description>
+      <description></description>
     </item>
     
     <item>
@@ -112,7 +98,7 @@ I was pleasantly surprised to see soo many talks about portal technologies. And 
       <pubDate>Wed, 17 Mar 2010 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2010/03/17/The-Ultimate-Guide-For-Developer-Screencasts/</guid>
-      <description>About a year ago, I decided to start creating screen casts for the JBoss Portlet Bridge open source project. As a manager of a relatively small, niche project, it is easy for me to try new things that can only improve the community around the project &amp;#45; or serve as a learning lesson for myself. Screencasts are nothing new to the development scene, but my goal was to liven it up a bit and make the outcome seem more professional and well produced.</description>
+      <description></description>
     </item>
     
     <item>
@@ -121,7 +107,11 @@ I was pleasantly surprised to see soo many talks about portal technologies. And 
       <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/12/10/Contextual-PortletMode-changes-using-the-JBoss-Portlet-Bridge/</guid>
-      <description>By default, the JSR-301&amp;frasl;329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet &amp;ldquo;view&amp;rdquo; mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</description>
+      <description>private String mode; public String getMode() { Object responseObject = FacesContext.getCurrentInstance().getExternalContext().getRequest(); if (responseObject instanceof RenderRequest) {
+RenderRequest renderRequest = (RenderRequest)responseObject; if(renderRequest.getPortletMode().toString().equals(mode)){ mode = null; }else{ mode = renderRequest.getPortletMode().toString(); }
+} return mode; } public String getFromView() { PortletSession portletSession = (PortletSession)FacesContext.getCurrentInstance().getExternalContext().getSession(false); String viewId = (String)portletSession.getAttribute(&amp;quot;javax.portlet.faces.viewIdHistory.view&amp;quot;);
+viewId = viewId.substring(0,viewId.indexOf(&amp;rdquo;?&amp;ldquo;)); return viewId; } public void setMode(String mode) {
+this.mode = mode; } </description>
     </item>
     
     <item>
@@ -130,7 +120,7 @@ I was pleasantly surprised to see soo many talks about portal technologies. And 
       <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/11/22/Creating-another-Firefox-Theme/</guid>
-      <description>I started laying down ideas for a new Firefox theme a few months ago and this is what emerged. I&amp;rsquo;m not sure why I can&amp;rsquo;t stay away from the darker themes. Maybe it&amp;rsquo;s the richness that black (and darker colors) allows on a monitor, but I tried to stay as far away from mainstream design on this as I could. I have already coded this into a downloadable theme, but I am still working out some glitches.</description>
+      <description></description>
     </item>
     
     <item>
@@ -139,11 +129,7 @@ I was pleasantly surprised to see soo many talks about portal technologies. And 
       <pubDate>Mon, 10 Aug 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/08/10/Replacing-FacesMessages-with-Growl-alerts/</guid>
-      <description>I saw a tweet from(@maxandersen) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.
-This is really just javascript on the front end and can be used with any backend message generating system.
-Code Used:
-  RichFaces 3.3.1.GA jGrowl (latest)  Include the scripts in the head:
- Note the loading of jquery in the Richfaces page.</description>
+      <description></description>
     </item>
     
     <item>
@@ -152,8 +138,7 @@ Code Used:
       <pubDate>Thu, 28 May 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/05/28/ul-horizontal-tab-menus-cross-browser-with-no-hacks/</guid>
-      <description>There are too many times when I need a nice horizontal tab menu, using semantic html, and with cool graphics all at the same time. So this post is more for my personal reference and will shave a few hours off any ones html prototype. This is cross browser valid css 2.1 on IE6, IE7, FF3, Chrome and Safari without using any hacks.
-The end result: .ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; } .</description>
+      <description>div.nav-container ul.primary-nav { margin: 45px 0 0 236px; white-space: nowrap; display: inline; float: left; } div.nav-container ul.primary-nav li { /setup the container for tab divs/list-style: none; height: 28px; display: inline; font-size: 1.2em; margin: 0; position: relative; } div.nav-container ul.primary-nav li div { /float all divs containing tab images left/float: left; } div.nav-container ul.primary-nav a { color: #777; text-decoration: none; font-weight: 700; } div.nav-container ul.primary-nav li.selected div.tab-main a { color: #fff; } div.</description>
     </item>
     
     <item>
@@ -162,8 +147,8 @@ The end result: .ln { color: rgb(0,0,0); font-weight: normal; font-style: normal
       <pubDate>Tue, 24 Feb 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/02/24/How-to-make-money-off-of-a-Firefox-theme-or-not/</guid>
-      <description>This weekend was quite an eye opener for me. Since the first public release of ANTHEM (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.
-I started out with a Paypal donate button which helped a little, but wasn&#39;t really doing what I wanted.</description>
+      <description>Excellent skin! That&amp;rsquo;s been said many times but I saw something new today that you gave away for free (and was a great opportunity!) Donating without cause never gets a response (although it needs to for the sake of others), but I think if you said people needed to donate 50c to remove the advert, you&amp;rsquo;d be buying my motorcycles by now, and by the dozen J.
+All the best,</description>
     </item>
     
     <item>
@@ -172,7 +157,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Sun, 25 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2009/01/25/JBoss-Portlet-Bridge-Beta-6-Released/</guid>
-      <description>Read about it here: http://blog.jboss-portal.org/2009/01/jboss-portlet-bridge-beta-6-released.html</description>
+      <description>Read about it here: http://blog.</description>
     </item>
     
     <item>
@@ -181,7 +166,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/10/22/AjaxWorld-West-08-Recap/</guid>
-      <description>This week, I attended/spoke at the AjaxWorld conference in San Jose. The cool thing for me is that this was my first public speaking appearance. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.</description>
+      <description></description>
     </item>
     
     <item>
@@ -190,7 +175,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Sun, 19 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/10/19/AJAX-in-Enterprise-Portals-at-AjaxWorld/</guid>
-      <description>I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don&#39;t be a stranger!  Check out the sessions here. **Update with slides:</description>
+      <description></description>
     </item>
     
     <item>
@@ -199,8 +184,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Sun, 12 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/10/12/Developing-an-OpenSocial-Portlet/</guid>
-      <description>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:
- Documentation is scarce when you want to roll you own OS container via Shindig Luckily Chris Schalk did a good job providing some documentation on getting persistence setup on a mysql db Unfortunately, due to the bleeding edge of this technology, some of (the few) demos that exist don&amp;rsquo;t work with today&amp;rsquo;s Shindig trunk I was able to quickly learn Google widgeting and am on my way to being a &amp;ldquo;widget master&amp;rdquo; Next on the list is to mess around with Google Data APIs in OpenSocial Apps The transition/integration of Shindig into a standard webapp/portlet was a huge pita.</description>
+      <description>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:</description>
     </item>
     
     <item>
@@ -209,7 +193,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Tue, 26 Aug 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/08/26/Creating-a-Firefox-3-theme/</guid>
-      <description>**UPDATE - This theme is now available on Mozilla.org here: https://addons.mozilla.org/en-US/firefox/addon/9627/  I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design the skin and slice up all the images for theme creation. But once it came to laying down the Firefox CSS, I have to say that I was a little overwhelmed and haven&amp;rsquo;t been back to finish the theme since.</description>
+      <description></description>
     </item>
     
     <item>
@@ -218,8 +202,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Wed, 06 Aug 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/08/06/Developing-Portlets-using-JSF-Ajax-and-Seam-Part-1-of-3/</guid>
-      <description>InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!
-  This first part is about basic JSF development with an easy to follow tutorial and real world development tips.</description>
+      <description></description>
     </item>
     
     <item>
@@ -228,7 +211,8 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Mon, 07 Jul 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/07/07/JSF-in-a-portlet-has-never-been-this-easy/</guid>
-      <description>We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects. See the documentation for full details. For those that want to jump right in, you can run the following archetype and have it deployed on JBoss AS + Portal in minutes:  mvn archetype:generate -DarchetypeGroupId=org.jboss.portletbridge.archetypes -DarchetypeArtifactId=1.2-basic -DarchetypeVersion=1.0.0.B3 -DgroupId=org.whatever.project -DartifactId=myprojectname -DarchetypeRepository=http://repository.jboss.org/maven2/ -Dversion=1.0.0.B3    mvn install cargo:start -Premote-portal -Dpc20    mvn cargo:deploy -Premote-portal -Dpc20   Visit http://localhost:8080/simple-portal/demo/jsr-301.</description>
+      <description>There are soo many cool things going on right now within the JBoss Portal project, I would like to tell you about all of them but then this post wouldn&amp;rsquo;t be about JBPB anymore. Just stay tuned to this blog&amp;hellip;
+With that said, here are a few tips for JSF portlet developers that concern this release:</description>
     </item>
     
     <item>
@@ -237,8 +221,7 @@ I started out with a Paypal donate button which helped a little, but wasn&#39;t 
       <pubDate>Fri, 11 Apr 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/04/11/JBoss-Portlet-Bridge-Beta2-Released/</guid>
-      <description>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.
-Read more about what is included in this release.</description>
+      <description></description>
     </item>
     
     <item>
@@ -247,8 +230,7 @@ Read more about what is included in this release.</description>
       <pubDate>Mon, 31 Mar 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/03/31/My-4-month-old-MacBook-Pro-Hardrive-is-skippping...-badly/</guid>
-      <description>It&#39;s never a good thing when your hard drive starts making that funny little skipping noise. But, it&#39;s really not good when you push the power button and all you hear are loud ass clicks and you can feel the vibration of each click on the keyboard.
-In all my wise &#39;ol years in the IT industry, I have never had this happen to me. Sure, I&#39;ve had old hd&#39;s that eventually wear out and start skipping.</description>
+      <description></description>
     </item>
     
     <item>
@@ -257,20 +239,16 @@ In all my wise &#39;ol years in the IT industry, I have never had this happen to
       <pubDate>Thu, 14 Feb 2008 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2008/02/14/JBoss-Portlet-Bridge-with-Seam-support-released/</guid>
-      <description>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.
-The JBoss Portlet Bridge is an implementation of the JSR-301 specification to support JSF within a portlet and with added enhancements to support other web frameworks. Currently the bridge supports any combination of JSF, Seam, and RichFaces to run inside a portlet.
-See the project page for more details and a live demo.</description>
+      <description></description>
     </item>
     
     <item>
       <title>Page and Component Modal with a4j&amp;#58;status</title>
-      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</link>
+      <link>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j#58status/</link>
       <pubDate>Sun, 20 Jan 2008 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j-58status/</guid>
-      <description>I haven&#39;t really had a chance to look at RichFaces OOB modal, but I had written this one over a year ago when Ajax4JSF was still on java.net
-
-Due to an overwhelming interest in the previous article I decided to spend some time developing this modal into a demo application and to add some new features. Modals are good to some and hated by others, they have their place and can certainly add some cleaner usability to any website.</description>
+      <guid>//wesleyhales.com/blog/2008/01/20/Page-and-Component-Modal-with-a4j#58status/</guid>
+      <description>onstart=&amp;quot;alertModal(&#39;loading-modal&#39;,&#39;loading-modal-msg&#39;);&amp;quot;onstop=&amp;quot;hideContentModal(&#39;loading-modal&#39;,&#39;loading-modal-msg&#39;);&amp;quot;&amp;gt;&amp;lt;f:facet name=&amp;quot;start&amp;quot;&amp;gt;&amp;lt;/f:facet&amp;gt;&amp;lt;/a4j:status&amp;gt;</description>
     </item>
     
     <item>
@@ -279,8 +257,7 @@ Due to an overwhelming interest in the previous article I decided to spend some 
       <pubDate>Mon, 17 Dec 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/12/17/XHTML-to-PDF-with-a-Seam-filter/</guid>
-      <description>After reading this article showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.
-First off, generated markup from any given JSF component is not guaranteed to be good markup.</description>
+      <description></description>
     </item>
     
     <item>
@@ -289,7 +266,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
       <pubDate>Mon, 03 Dec 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/12/03/Writing-a-FaceBook-app/</guid>
-      <description>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven&#39;t really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven&#39;t followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next.</description>
+      <description></description>
     </item>
     
     <item>
@@ -298,7 +275,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
       <pubDate>Thu, 15 Nov 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/11/15/Seam-2.0GA-in-JBoss-Portal-in-5-minutes/</guid>
-      <description>**Update - See this article for more info.</description>
+      <description></description>
     </item>
     
     <item>
@@ -307,7 +284,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
       <pubDate>Tue, 30 Oct 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/10/30/Maven-2-vs.-Ant-revisited/</guid>
-      <description>Almost a year since I made this entry and I think Maven is great for open source and commercial apps. Sure, there may be a few things you want to do that don&#39;t fit into the &#34;Maven way&#34; but for the most part, it is a great build system. Also, any one that uses IntelliJ Idea will fall in love with Maven on first use (I guess it handles Eclipse project files just as well).</description>
+      <description>&amp;lt;/activation&amp;gt;&amp;lt;build&amp;gt;&amp;lt;filters&amp;gt;&amp;lt;filter&amp;gt;src/main/filters/tomcat.properties&amp;lt;/filter&amp;gt;&amp;lt;/filters&amp;gt;&amp;lt;resources&amp;gt;&amp;lt;resource&amp;gt;&amp;lt;directory&amp;gt;${basedir}/src/main/resources&amp;lt;/directory&amp;gt;&amp;lt;filtering&amp;gt;true&amp;lt;/filtering&amp;gt;&amp;lt;targetPath&amp;gt;../${build.finalName}/META-INF&amp;lt;/targetPath&amp;gt;&amp;lt;includes&amp;gt;&amp;lt;include&amp;gt;context.xml&amp;lt;/include&amp;gt;&amp;lt;/includes&amp;gt;&amp;lt;/resource&amp;gt;&amp;lt;/resources&amp;gt;</description>
     </item>
     
     <item>
@@ -316,7 +293,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
       <pubDate>Fri, 12 Oct 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/10/12/Running-Seam-2.0-on-TomcatEJB3-using-Maven-and-Cargo/</guid>
-      <description>In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2. It&#39;s great to see Seam move to Maven because tracking and installing all those dependencies in a local repository was a pain in the ass! This project is moving fast, and if you wanted to keep up with the latest version, it was a lot of work. So now that my life is easier, I thought I would make the Seam+EJB+Tomcat user&#39;s life a little easier also.</description>
+      <description>&amp;lt;goals&amp;gt;&amp;lt;goal&amp;gt;start&amp;lt;/goal&amp;gt;&amp;lt;/goals&amp;gt;&amp;lt;/execution&amp;gt;&amp;lt;execution&amp;gt;&amp;lt;id&amp;gt;deploy-app&amp;lt;/id&amp;gt;&amp;lt;phase&amp;gt;install&amp;lt;/phase&amp;gt;&amp;lt;goals&amp;gt;&amp;lt;goal&amp;gt;deployer-deploy&amp;lt;/goal&amp;gt;&amp;lt;/goals&amp;gt;&amp;lt;/execution&amp;gt;&amp;lt;/executions&amp;gt;</description>
     </item>
     
     <item>
@@ -325,7 +302,19 @@ First off, generated markup from any given JSF component is not guaranteed to be
       <pubDate>Tue, 14 Aug 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/08/14/CSS-Framework/</guid>
-      <description>There are several possible ways to go about building a CSS framework. The framework I mention here is suited for myself and the group of developers I work with. It has proven successful on the past 3 projects I have been on. Once everyone knows about a base set of styles it&#39;s amazing how much more productive the team is. Not only do you have a &#34;master&#34; type of stylesheet to work from, everyone can edit the code and make changes faster because they are aware of the framework in use.</description>
+      <description>.align-center-margin { margin: 0 auto 0 auto; }
+.float-left { float: left; }
+.float-right { float: right; }
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.half-width { width: 49%; }
+.quarter-width { width: 24.9%; }
+.three-quarter-width { width: 74.9%; }
+.full-width { width: 100%; }
+.third-width { width: 32.9%; }
+.two-third-width { width: 65.9%; }
+.tenpx-top-bottom { margin: 10px 0 10px 0; }
+.clear { clear: both; }</description>
     </item>
     
     <item>
@@ -334,8 +323,7 @@ First off, generated markup from any given JSF component is not guaranteed to be
       <pubDate>Wed, 01 Aug 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/08/01/My-first-Seam-2.0-app/</guid>
-      <description>Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF 1.1/1.2(Myfaces) and the extended EL alone, makes Seam a worthwhile choice.
-This article is about an application that is relatively simple (to start). A report with customer information that has pretty charts and graphs and is printable to PDF. Since I didn&#39;t have any requirements to start, I thought I would list a few of my own here ;)</description>
+      <description></description>
     </item>
     
     <item>
@@ -344,7 +332,7 @@ This article is about an application that is relatively simple (to start). A rep
       <pubDate>Thu, 05 Jul 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/07/05/iPhone-Web-Development/</guid>
-      <description>I broke down and got my 8gig iPhone on Tuesday. I have been using it pretty heavily and in just a sec, I will start with my list o&amp;rsquo; let downs. But first, I gotta say that whoever designed the Optimizing Web Applications and Content for iPhone page from Apple has obviously not done a lot of open-source or ANY development for that matter. Yes, it is good content, BUT This may or may not be one of the weak links for apple because there is really no organization to the content, important bits of information are scattered here an there, and frankly for something &amp;ldquo;so revolutionary&amp;rdquo; - they are not supporting the people who will make or break this thing (us - the developer) with good documentation very well.</description>
+      <description></description>
     </item>
     
     <item>
@@ -353,8 +341,7 @@ This article is about an application that is relatively simple (to start). A rep
       <pubDate>Wed, 14 Mar 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/03/14/JSF-components-with-the-Ajax4jsf-cdk/</guid>
-      <description>The Ajax4jsf cdk (component development kit) from the Richfaces/Ajax4jsf development team makes the monotonous coding and complexities of developing JSF components for both JSP and Facelets almost non-existent. With a small amount of setup and a little framework knowledge (covered below), you can generate a complete JSF component that allows the developer to focus on what is most important to them.
-Getting Started  Make sure you are using the latest version of Maven (I&#39;m on 2.</description>
+      <description>Project Setup and Installation&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -363,8 +350,7 @@ Getting Started  Make sure you are using the latest version of Maven (I&#39;m on
       <pubDate>Wed, 21 Feb 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/02/21/JSF-Ajax-and-the-Back-Button/</guid>
-      <description>For the last few weeks I have been trying to integrate back button support into a JSF/Ajax app as an &#34;Undo&#34; feature. I have been using 2 approaches, 1) g4jsf (a subproject of Ajax4JSF) to enable use of GWT, and 2) dojo.undo.browser.
-Currently, any engineer interacting with the back button through javascript only has access to a few methods. window.history.current, window.history.next, window.history.previous, and an array of history items with window.history[]. Gwt and dojo give us a much more accessible way to deal with these same methods through Java and javascript .</description>
+      <description></description>
     </item>
     
     <item>
@@ -373,20 +359,16 @@ Currently, any engineer interacting with the back button through javascript only
       <pubDate>Sun, 07 Jan 2007 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2007/01/07/JSF-AjaxSlider-Component/</guid>
-      <description>This is the first release of my AjaxSlider component. This version works with JSP and Facelets and also extends FacesEvent to provide it&#39;s own event/listener. Many thanks to Jonas Jacobi and John Fallows for putting together a great book (Pro JSF and Ajax).
-I&#39;m also using the slider functions from the Script.aculo.us library
-
- This component in hardly complete and bug free, so any help in debugging is appreciated</description>
+      <description></description>
     </item>
     
     <item>
       <title>JSF Ajax Filter/Slider with UIData</title>
-      <link>//wesleyhales.com/blog/2006/12/31/JSF-Ajax-Filter-Slider-with-UIData/</link>
+      <link>//wesleyhales.com/blog/2006/12/31/JSF-Ajax-Filter/Slider-with-UIData/</link>
       <pubDate>Sun, 31 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/blog/2006/12/31/JSF-Ajax-Filter-Slider-with-UIData/</guid>
-      <description>In any RIA where h:dataTable is used, probably 90% of the time, you will need a filter in the same view/page as the dataTable. A Filter can be anything from a list of links, a select many list, or in this example, a slider.
-At first, I thought about just creating the component and have it add the value of the slider to a request parameter so that the backing bean could have access to the value.</description>
+      <guid>//wesleyhales.com/blog/2006/12/31/JSF-Ajax-Filter/Slider-with-UIData/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -395,8 +377,11 @@ At first, I thought about just creating the component and have it add the value 
       <pubDate>Tue, 26 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/26/Ajax4Jsf-Modal-Loading-Windows/</guid>
-      <description>Ajax4Jsf&#39;s status tag (a4j:status) has alot of potential, but currently it&#39;s functionality is limited. With the combination of Lightbox 2.0, or basically any javascript developed to build the dom, you can achieve the look of any modal &#34;Loading...&#34; window.
-Since the status tag does not include capability to fire javascript events(as of yet), we will use the modified lightbox script to go ahead and write everything to the dom, then let the a4j:status tag to hide it until we make an Ajax call.</description>
+      <description>&amp;lt;script type=&amp;quot;text/javascript&amp;rdquo; src=&amp;rdquo;/facelet-sandbox/js/scriptaculous-js-1.6.5/lib/prototype.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&amp;quot;text/javascript&amp;rdquo; src=&amp;rdquo;/facelet-sandbox/js/scriptaculous-js-1.6.5/src/scriptaculous.js?load=effects&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&amp;quot;text/javascript&amp;rdquo; src=&amp;rdquo;/facelet-sandbox/js/modal.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;@import &amp;rdquo;/facelet-sandbox/css/modal.css&amp;quot;; &amp;lt;/style&amp;gt;&amp;lt;a4j:region id=&amp;quot;stat1&amp;quot;&amp;gt;&amp;lt;a4j:outputPanel id=&amp;quot;list-body&amp;quot;&amp;gt;&amp;lt;t:dataTable id=&amp;quot;carIndex&amp;quot;&amp;hellip;&amp;lt;/t:dataTable&amp;gt;&amp;lt;/a4j:outputPanel&amp;gt;&amp;lt;ac:ajaxDataScroller id=&amp;quot;scroll_1&amp;quot;for=&amp;quot;carList&amp;quot;maxPages=&amp;quot;9&amp;quot;&amp;gt;&amp;lt;/ac:ajaxDataScroller&amp;gt;&amp;lt;a4j:status for=&amp;quot;stat1&amp;rdquo; forceId=&amp;quot;true&amp;rdquo; id=&amp;quot;ajaxStatus&amp;quot;&amp;gt;&amp;lt;f:facet name=&amp;quot;start&amp;quot;&amp;gt;&amp;lt;div id=&amp;quot;loading-modal&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/f:facet&amp;gt;&amp;lt;/a4j:status&amp;gt;&amp;lt;/a4j:region&amp;gt;/**************************************************************//Modal Window/#modal { background-color: #eee; padding: 10px;
+border-bottom: 2px solid #666; border-right: 2px solid #666; } #modal-details { font-size: 8px; /* originally 8px */padding-top: 4px; }
+} #modal img { border: none; clear: both; } #overlay img {
+border: none; } #overlay { background-image: url(/facelet-sandbox/images/modal/overlay-black.png); }
+} /**************************************************************/</description>
     </item>
     
     <item>
@@ -405,7 +390,9 @@ Since the status tag does not include capability to fire javascript events(as of
       <pubDate>Mon, 18 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/18/Using-Facelets-TagHandlers-and-Adding-multiple-listeners/</guid>
-      <description>ComponentHandler, HtmlComponentHandler, or TagHandler. So I think I finally have a handle on what each of these are used for. Okay the first 2 are easy, HtmlComponentHandler extends ComponentHandler. But what is a MetaRuleset and what can it do for my components? It looks to mee like it is just a method binding passthrough for the component when you call MetaRuleset.addRule(typeTagRule);?  TagHandler ended up saving the day for me, and after spending hours/days trying to get the first 2 to do what I was wanting, this one took me like 5 minutes.</description>
+      <description>// helper methodthis.var = this.getAttribute(&amp;quot;var&amp;quot;); } * Threadsafe Method for controlling evaluation of * its child tags, represented by &amp;ldquo;nextHandler&amp;rdquo; */public void apply(FaceletContext ctx, UIComponent parent) throws IOException, FacesException, ELException { boolean b = this.test.getBoolean(ctx);
+if (!addedMap.containsKey(test.getValue())){ SliderSource sliderSource = (SliderSource)parent; SliderListener listener = createSliderListener(test.getValue()); addedMap.put(test.getValue(),true); sliderSource.addSliderListener(listener); } if (this.var != null) { ctx.setAttribute(var.getValue(ctx), new Boolean(b)); } if (b) { this.nextHandler.apply(ctx, parent);
+} } </description>
     </item>
     
     <item>
@@ -414,8 +401,7 @@ Since the status tag does not include capability to fire javascript events(as of
       <pubDate>Sat, 16 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/16/JSF-Chart-Creator-now-with-ImageMaps/</guid>
-      <description>I recently updated the JSF-Comp Chart Creator component to include image map support. All charts now have capabilties for custom links on each section of the chart. All customization can be handled through the tag atributes.
-New attributes:  action series section  The usemap attribute must start with a # (i.e. usemap=&#34;#myMap&#34;). For action, just input the page to link to, section and series are just parameters that are built into jfreeChart.</description>
+      <description></description>
     </item>
     
     <item>
@@ -424,17 +410,17 @@ New attributes:  action series section  The usemap attribute must start with a #
       <pubDate>Sun, 10 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/10/Maven-2-vs-Ant-Which-is-better-for-commercial-apps/</guid>
-      <description>Currently I am working on a extreme RIA which is to use the code base of an existing project and rewrite were needed. Because of the strict time line, no one is attempting to rewrite the existing code base, and we are looking over problems that need to be fixed just to get things working. However, we have made the appropriate steps to create a Maven archetype for the new part of the app, and to get the ball rolling away from the old ant build.</description>
+      <description></description>
     </item>
     
     <item>
       <title>Ajax4Jsf vs AjaxAnywhere&amp;#58; The t&amp;#58;dataTable and t&amp;#58;dataScroller</title>
-      <link>//wesleyhales.com/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere-58-The-t-58dataTable-and-t-58dataScroller/</link>
+      <link>//wesleyhales.com/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere#58-The-t%2358dataTable-and-t%2358dataScroller/</link>
       <pubDate>Thu, 07 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>//wesleyhales.com/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere-58-The-t-58dataTable-and-t-58dataScroller/</guid>
-      <description>Submitting with Ajax4Jsf
-On Dec 6, Ajax4Jsf released a maintenance release (ajax4jsf-1.0.4MR1.jar which fixed an IE javascript problem not in this post) - But the framework is still a little buggy dealing with the datascroller components. On a good note, Adrian Mitev gave his custom ajaxDataScroller  to the A4J project and will hopefully get everything working in both browsers. ***UPDATE - Here is the latest version of the datascroller from Adrian.</description>
+      <guid>//wesleyhales.com/blog/2006/12/07/Ajax4Jsf-vs-AjaxAnywhere#58-The-t%2358dataTable-and-t%2358dataScroller/</guid>
+      <description>&amp;lt;a4j:region id=&amp;quot;stat1&amp;quot;&amp;gt;&amp;lt;a4j:outputPanel id=&amp;quot;list-body&amp;quot;&amp;gt;&amp;lt;t:dataTable&amp;hellip;&amp;gt;&amp;lt;/a4j:outputPanel&amp;gt;&amp;lt;a4j:status for=&amp;quot;stat1&amp;rdquo; forceId=&amp;quot;true&amp;rdquo; id=&amp;quot;ajaxStatus&amp;quot;&amp;hellip;&amp;gt;&amp;lt;/a4j:region&amp;gt;&amp;lt;t:dataScroller id=&amp;quot;scroll_1&amp;quot;&amp;hellip;&amp;gt;&amp;lt;/aa:zoneJSF&amp;gt;&amp;lt;/h:form&amp;gt;&amp;lt;script type=&amp;quot;text/JavaScript&amp;rdquo; src=&amp;rdquo;/facelet-sandbox/aa.js&amp;quot;/&amp;gt;&amp;lt;script type=&amp;quot;text/JavaScript&amp;quot;&amp;gt;ajaxAnywhere.getZonesToReload = function(url, submitButton) {
+return &#39;dataTableZone&#39;; } ajaxAnywhere.formName = &#39;mainForm&#39;; ajaxAnywhere.substituteFormSubmitFunction(); ajaxAnywhere.substituteSubmitButtonsBehavior(true);</description>
     </item>
     
     <item>
@@ -443,7 +429,7 @@ On Dec 6, Ajax4Jsf released a maintenance release (ajax4jsf-1.0.4MR1.jar which f
       <pubDate>Wed, 06 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>//wesleyhales.com/blog/2006/12/06/JSF-Component-Library-Integration/</guid>
-      <description>Integrating multiple component libraries can provide a project many advantages but can also be a challenge to make all components live and work in harmony. This article explains how to integrate many popular component libraries into one app. Combining libraries gives developers an array of components to pick and choose from. But, knowing which components play well together and which ones don?t, will save you time and I will explain the pros and cons of each here.</description>
+      <description>Web.xmlfaces-config.xmlWeb.xml</description>
     </item>
     
   </channel>
